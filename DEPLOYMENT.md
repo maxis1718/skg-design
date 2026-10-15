@@ -31,14 +31,15 @@ Use a separate branch/worktree for simultaneous Codex/Claude tasks; do not have 
 
 ## GitHub Pages option
 
-`.github/workflows/pages.yml` builds/checks every main push. Publication is explicitly disabled until the repository variable `PUBLISH_SITE` equals `true`, so a push alone does not accidentally expose a private floor plan.
+The user confirmed on 2026-10-16 that anyone with the website URL may view it; the repository stays private. `.github/workflows/pages.yml` builds/checks every main push, detects whether Pages is enabled, and deploys automatically once it is. No repository variable or deployment secret is needed.
 
-To enable, after the website audience is settled:
+One-time setup:
 
 1. Settings → Pages → Source: GitHub Actions.
-2. Settings → Secrets and variables → Actions → Variables → `PUBLISH_SITE=true`.
-3. Run `Build and deploy design atlas` or push the next approved change.
-4. Verify the successful deployment's returned URL; do not infer success from the expected URL alone.
+2. Run `Build and deploy design atlas` from Actions, choosing Re-run all jobs if a setup-only run already completed, or push the next approved change.
+3. Verify the successful deployment's returned URL; do not infer success from the expected URL alone.
+
+Until Pages is enabled, build/check still pass and the deployment job is skipped with a setup note in the workflow summary. The GitHub connector can submit source but cannot change Pages settings. The standard Actions token cannot enable Pages itself; complete the setting once using the owner account. If GitHub requests a paid plan for this private repo, use another static host rather than making the repo public.
 
 GitHub Free permits Pages from public repos; publishing from a private repo requires a supported paid GitHub plan. A personal-repo Pages site is normally public even if the repository is private. Do not change this repository to public to work around eligibility.
 

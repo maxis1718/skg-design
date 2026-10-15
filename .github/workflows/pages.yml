@@ -13,6 +13,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_enabled: ${{ steps.pages-state.outputs.enabled }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,14 +22,24 @@ jobs:
           node-version: '22'
       - run: npm run build
       - run: npm run check
+      - name: Check Pages setup
+        id: pages-state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          enabled=$(gh api "repos/${{ github.repository }}" --jq '.has_pages')
+          echo "enabled=$enabled" >> "$GITHUB_OUTPUT"
+          if [ "$enabled" != "true" ]; then
+            echo 'Pages is not enabled yet. Select GitHub Actions in Settings → Pages, then rerun this workflow.' >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/configure-pages@v5
-        if: vars.PUBLISH_SITE == 'true'
+        if: steps.pages-state.outputs.enabled == 'true'
       - uses: actions/upload-pages-artifact@v3
-        if: vars.PUBLISH_SITE == 'true'
+        if: steps.pages-state.outputs.enabled == 'true'
         with:
           path: dist
   deploy:
-    if: vars.PUBLISH_SITE == 'true'
+    if: needs.build.outputs.pages_enabled == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
