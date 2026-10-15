@@ -1,0 +1,117 @@
+{
+  "source_coordinate_system": "PDF points, top-left origin",
+  "rigid_only": false,
+  "guest_mirror_from_kid": {
+    "method": "Reflect horizontal coordinates, align original Kid left interior wall to Guest right interior wall; retain y coordinates.",
+    "transform": {
+      "x_sign": -1,
+      "x_offset": 693.36,
+      "y_sign": 1,
+      "y_offset": 0
+    },
+    "room_width_difference_cm": 2.96,
+    "notes": "Guest is about 3 cm narrower than Kid. Furniture keeps source scale and fits. Margin absorbs width difference. Do not transform source walls, door or window. Door is already on left in Guest.",
+    "objects": [
+      {
+        "id": "guest-bed",
+        "source_id": "kid-bed",
+        "source_bounds_pt": [
+          276.24,
+          153.28,
+          330.36,
+          196.36
+        ],
+        "target_bounds_pt": [
+          363,
+          153.28,
+          417.12,
+          196.36
+        ],
+        "status": "proposed-rigid-mirror"
+      },
+      {
+        "id": "guest-wardrobe",
+        "source_id": "kid-wardrobe",
+        "source_bounds_pt": [
+          273.36,
+          212.8,
+          307.44,
+          229.84
+        ],
+        "target_bounds_pt": [
+          385.92,
+          212.8,
+          420,
+          229.84
+        ],
+        "status": "proposed-rigid-mirror",
+        "source_annotated_width_cm": 120,
+        "source_annotated_depth_cm": 60
+      }
+    ],
+    "remove_original_guest_furniture": [
+      "guest-original-desk",
+      "guest-original-cabinet"
+    ]
+  },
+  "study_rotate_180_from_original_study": {
+    "method": "Rotate source desk and lower cabinet together by 180 degrees; align source right wall to target left wall and source top/window inner line to target bottom/window inner line.",
+    "transform": {
+      "x_sign": -1,
+      "x_offset": 693.36,
+      "y_sign": -1,
+      "y_offset": 496.52
+    },
+    "status": "authorized-design-fit",
+    "room_depth_difference_cm": 10.16,
+    "notes": "User authorized fitting new Study. Preserve120x60cm cabinet; shorten desk length from240cm to≈230cm and retain actual source depth≈50cm. Original desk front edge405.72 is physical;400.8 was an annotation line. All other furniture including chairs retains rigid180-degree transform x=693.36−x,y=496.52−y.",
+    "objects": [
+      {
+        "id": "study-desk",
+        "source_id": "guest-original-desk",
+        "source_bounds_pt": [
+          405.72,
+          144.76,
+          420,
+          212.8
+        ],
+        "target_bounds_pt": [
+          273.36,
+          283.72,
+          287.64,
+          348.88
+        ],
+        "status": "proposed-authorized-fit",
+        "source_annotated_length_cm": 240,
+        "scaled_depth_cm": 50.4,
+        "proposed_length_cm": 229.9,
+        "proposed_depth_cm": 50.4
+      },
+      {
+        "id": "study-lower-cabinet",
+        "source_id": "guest-original-cabinet",
+        "source_bounds_pt": [
+          385.92,
+          212.8,
+          420,
+          229.84
+        ],
+        "target_bounds_pt": [
+          273.36,
+          266.68,
+          307.44,
+          283.72
+        ],
+        "status": "proposed-rigid-rotation",
+        "source_annotated_width_cm": 120,
+        "scaled_depth_cm": 60.11,
+        "collision_bounds_pt": null
+      }
+    ],
+    "remove_original_study_furniture": [
+      "study-original-bed",
+      "study-wardrobe"
+    ]
+  },
+  "exception": "User authorized desk length adjustment to fit new Study; all other geometry remains rigid."
+}

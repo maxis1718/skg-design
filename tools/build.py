@@ -1,0 +1,48 @@
+"""Build the self-contained deliverable from focused, indexed sources."""
+from pathlib import Path
+import json,base64,re,hashlib
+ROOT=Path(__file__).resolve().parents[1]
+src=ROOT/'src'
+def read(name):return (src/name).read_text(encoding='utf8')
+def data_image(name):return 'data:image/png;base64,'+base64.b64encode((ROOT/'assets'/name).read_bytes()).decode()
+project=json.loads(read('project.json'))
+assert len(project['rooms'])==7
+assert len({o['id'] for o in project['objects']})==len(project['objects'])
+assert all(o['room_id'] in {r['id'] for r in project['rooms']} for o in project['objects'])
+for o in project['objects']:
+    assert all(o['dimensions'][k]['cm']>0 for k in ('w','d'))
+    assert o['bounds_pt'][0]<o['bounds_pt'][2] and o['bounds_pt'][1]<o['bounds_pt'][3]
+kid=read('furniture-kid.svg')
+old_study=read('furniture-guest.svg')
+# Original desk physical front is source path129. Retain chairs/cabinet with a rigid 180° move.
+study=re.sub(r'<path\b[^>]*data-source-path="129"[^>]*/>','',old_study)
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid}</g>\n<g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">{study}</g>\n<path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/>'
+html=read('shell.html')
+plan=read('plan-paths.svg')
+sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)
+hob=re.findall(r'<path\b[^>]*data-source-path="(?:78\d|79\d|80[0-6])"[^>]*/>',plan)
+assert len(sink)==27 and len(hob)==27
+for fragment in sink+hob:plan=plan.replace(fragment,'')
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g>'
+replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
+for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
+html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
+assert not re.search(r'/\*__[A-Z_]+__\*/',html),'Unresolved template slot'
+assert not re.search(r'<(?:script|link)\b[^>]*(?:src|href)="https?://',html),'Standalone file must not depend on network'
+out=ROOT/'dist'/'index.html';out.parent.mkdir(exist_ok=True);out.write_text(html,encoding='utf8')
+manifest={'output':'dist/index.html','sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'size_bytes':out.stat().st_size,'rooms':len(project['rooms']),'objects':len(project['objects'])}
+(ROOT/'qa'/'build-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
+source_manifest=[]
+for filename,page in [('Floor plan scale.pdf',1),('Summary.pdf',4)]:
+    p=ROOT.parent/filename
+    if p.exists():source_manifest.append({'file':filename,'used_page':page,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+(ROOT/'qa'/'source-manifest.json').write_text(json.dumps(source_manifest,indent=2),encoding='utf8')
+lines=['# Focused record index','', 'Source: `src/project.json`. Retrieve a single record with `python tools/records.py show room study` or `python tools/records.py show object fridge`. Edit sources; rebuild `dist/index.html` with `python tools/build.py`.','','## Rooms','','| ID | 名稱 | 主要區尺寸 cm |','| --- | --- | --- |']
+for r in project['rooms']:
+    p=r['parts'][0];lines.append(f'| `{r["id"]}` | {r["name"]} | ≈ {p["horizontal_cm"]} × {p["vertical_cm"]} |')
+lines+=['','## Objects','','| Code | Stable ID | 名稱 | 圖面 W × D cm |','| --- | --- | --- | --- |']
+for o in project['objects']:
+    w=o['dimensions']['w']['cm'];d=o['dimensions']['d']['cm'];lines.append(f'| {o["code"]} | `{o["id"]}` | {o["name"]} | {w} × {d} |')
+lines+=['','All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.','','Geometry edits:','- Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).','- Study rigid move: `tools/build.py`, `data-layout="study-rotated"`, matrix(-1,0,0,-1,693.36,496.52).','- Study fitted desk face: `tools/build.py`, `data-layout="study-desk-fit"`, x287.64 / y283.72 to348.88. Original path129 omitted.','- Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.']
+(ROOT/'RECORD_INDEX.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+print(json.dumps(manifest))

@@ -1,0 +1,1229 @@
+{
+  "schema_version": 1,
+  "source": "Floor plan scale.pdf",
+  "page": 1,
+  "page_size_pt": [
+    842,
+    595
+  ],
+  "coordinate_system": "PDF points, origin top-left, x right, y down",
+  "scale": {
+    "title": "1:100 (A4)",
+    "nominal_cm_per_pt": 3.5277777777777777,
+    "least_squares_cm_per_pt": 3.5259203372877765,
+    "calibration_refs": 16,
+    "decision": "Use nominal 1:100 with source dimensions overriding estimates. PDF physical sheet is approximately A3; A4 title does not justify resizing the geometry.",
+    "rounding": "Display scaled room/object estimates to whole cm with approx symbol; source annotated cm may retain half cm.",
+    "limitations": "Drawing explicitly says subject to site measurement. PDF line placement/rounding is not site accuracy. Suggested ±2cm pertains reading/scaling only and excludes construction/site deviations."
+  },
+  "dimensions": [
+    {
+      "id": "kid-wardrobe-width",
+      "cm": 120,
+      "endpoints_pt": [
+        [
+          273.36,
+          207.76
+        ],
+        [
+          307.44,
+          207.76
+        ]
+      ],
+      "pt": 34.079999999999984,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kid-wardrobe-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          313.2,
+          212.8
+        ],
+        [
+          313.2,
+          229.84
+        ]
+      ],
+      "pt": 17.039999999999992,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "guest-original-cabinet-width",
+      "cm": 120,
+      "endpoints_pt": [
+        [
+          385.92,
+          208.72
+        ],
+        [
+          420,
+          208.72
+        ]
+      ],
+      "pt": 34.079999999999984,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-1-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          196.8,
+          256.96
+        ],
+        [
+          213.84,
+          256.96
+        ]
+      ],
+      "pt": 17.039999999999992,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-1-width",
+      "cm": 90,
+      "endpoints_pt": [
+        [
+          219.84,
+          263.8
+        ],
+        [
+          219.84,
+          289.36
+        ]
+      ],
+      "pt": 25.560000000000002,
+      "cm_per_pt": 3.52112676056338,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-2-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          250.68,
+          256.96
+        ],
+        [
+          267.72,
+          256.96
+        ]
+      ],
+      "pt": 17.04000000000002,
+      "cm_per_pt": 3.521126760563376,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-2-width",
+      "cm": 90,
+      "endpoints_pt": [
+        [
+          242.28,
+          263.8
+        ],
+        [
+          242.28,
+          289.36
+        ]
+      ],
+      "pt": 25.560000000000002,
+      "cm_per_pt": 3.52112676056338,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "guest-original-desk-length",
+      "cm": 240,
+      "endpoints_pt": [
+        [
+          400.8,
+          144.76
+        ],
+        [
+          400.8,
+          212.8
+        ]
+      ],
+      "pt": 68.04000000000002,
+      "cm_per_pt": 3.527336860670193,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "living-cabinet-length",
+      "cm": 190,
+      "endpoints_pt": [
+        [
+          425.64,
+          259
+        ],
+        [
+          479.52,
+          259
+        ]
+      ],
+      "pt": 53.879999999999995,
+      "cm_per_pt": 3.526354862657758,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "piano-length",
+      "cm": 130,
+      "endpoints_pt": [
+        [
+          504,
+          259.36
+        ],
+        [
+          540.84,
+          259.36
+        ]
+      ],
+      "pt": 36.84000000000003,
+      "cm_per_pt": 3.5287730727470112,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "tv-console-length",
+      "cm": 240,
+      "endpoints_pt": [
+        [
+          565.68,
+          185.92
+        ],
+        [
+          565.68,
+          253.96
+        ]
+      ],
+      "pt": 68.04000000000002,
+      "cm_per_pt": 3.527336860670193,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "tv-upper-space",
+      "cm": 50,
+      "endpoints_pt": [
+        [
+          565.8,
+          171.64
+        ],
+        [
+          565.8,
+          185.92
+        ]
+      ],
+      "pt": 14.280000000000001,
+      "cm_per_pt": 3.501400560224089,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "living-right-length",
+      "cm": 387.5,
+      "endpoints_pt": [
+        [
+          604.92,
+          171.64
+        ],
+        [
+          604.92,
+          281.56
+        ]
+      ],
+      "pt": 109.92000000000002,
+      "cm_per_pt": 3.5252911208151376,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kitchen-upper-worktop-length",
+      "cm": 167.5,
+      "endpoints_pt": [
+        [
+          503.52,
+          307.6
+        ],
+        [
+          551.04,
+          307.6
+        ]
+      ],
+      "pt": 47.51999999999998,
+      "cm_per_pt": 3.524831649831651,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kitchen-span",
+      "cm": 320.5,
+      "endpoints_pt": [
+        [
+          460.2,
+          328.84
+        ],
+        [
+          551.04,
+          328.84
+        ]
+      ],
+      "pt": 90.83999999999997,
+      "cm_per_pt": 3.528181417877588,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "entry-clear-width",
+      "cm": 110,
+      "endpoints_pt": [
+        [
+          553.2,
+          292.12
+        ],
+        [
+          584.4,
+          292.12
+        ]
+      ],
+      "pt": 31.199999999999932,
+      "cm_per_pt": 3.5256410256410335,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "piano-tv-slant-clearance",
+      "cm": 111.9,
+      "endpoints_pt": null,
+      "pt": null,
+      "cm_per_pt": null,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "kid",
+      "source_label": "BEDROOM 2",
+      "polygon_pt": [
+        [
+          273.36,
+          144.76
+        ],
+        [
+          344.28,
+          144.76
+        ],
+        [
+          344.28,
+          229.84
+        ],
+        [
+          273.36,
+          229.84
+        ]
+      ],
+      "bounds_pt": [
+        273.36,
+        144.76,
+        344.28,
+        229.84
+      ],
+      "parts": [
+        {
+          "label": "interior including wardrobe footprint",
+          "bounds_pt": [
+            273.36,
+            144.76,
+            344.28,
+            229.84
+          ],
+          "horizontal_cm": 250.2,
+          "vertical_cm": 300.1
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Window room-facing line used. Door threshold shown at bottom. User rename to KID ROOM."
+    },
+    {
+      "id": "guest",
+      "source_label": "STUDY ROOM",
+      "polygon_pt": [
+        [
+          349.92,
+          144.76
+        ],
+        [
+          420,
+          144.76
+        ],
+        [
+          420,
+          229.84
+        ],
+        [
+          349.92,
+          229.84
+        ]
+      ],
+      "bounds_pt": [
+        349.92,
+        144.76,
+        420,
+        229.84
+      ],
+      "parts": [
+        {
+          "label": "interior including original desk and cabinet footprints",
+          "bounds_pt": [
+            349.92,
+            144.76,
+            420,
+            229.84
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 300.1
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "User rename to GUEST ROOM. Existing crossed cabinet at bottom-right is 120 x 60 cm; user requests wardrobe matching Kid. Proposed replacement must be labelled proposed, not measured installed furniture."
+    },
+    {
+      "id": "study",
+      "source_label": "BEDROOM 3",
+      "polygon_pt": [
+        [
+          273.36,
+          266.68
+        ],
+        [
+          344.28,
+          266.68
+        ],
+        [
+          344.28,
+          348.88
+        ],
+        [
+          273.36,
+          348.88
+        ]
+      ],
+      "bounds_pt": [
+        273.36,
+        266.68,
+        344.28,
+        348.88
+      ],
+      "parts": [
+        {
+          "label": "interior including wardrobe footprint",
+          "bounds_pt": [
+            273.36,
+            266.68,
+            344.28,
+            348.88
+          ],
+          "horizontal_cm": 250.2,
+          "vertical_cm": 290.0
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Window room-facing line used. User rename to STUDY."
+    },
+    {
+      "id": "master",
+      "source_label": "MASTER BEDROOM",
+      "polygon_pt": [
+        [
+          185.52,
+          185.92
+        ],
+        [
+          267.72,
+          185.92
+        ],
+        [
+          267.72,
+          232.6
+        ],
+        [
+          301.68,
+          232.6
+        ],
+        [
+          301.68,
+          263.8
+        ],
+        [
+          267.72,
+          263.8
+        ],
+        [
+          267.72,
+          289.36
+        ],
+        [
+          196.8,
+          289.36
+        ],
+        [
+          196.8,
+          263.8
+        ],
+        [
+          185.52,
+          263.8
+        ]
+      ],
+      "bounds_pt": [
+        185.52,
+        185.92,
+        301.68,
+        289.36
+      ],
+      "parts": [
+        {
+          "label": "main sleeping rectangle",
+          "bounds_pt": [
+            185.52,
+            185.92,
+            267.72,
+            263.8
+          ],
+          "horizontal_cm": 290.0,
+          "vertical_cm": 274.7
+        },
+        {
+          "label": "east door recess",
+          "bounds_pt": [
+            267.72,
+            232.6,
+            301.68,
+            263.8
+          ],
+          "horizontal_cm": 119.8,
+          "vertical_cm": 110.1
+        },
+        {
+          "label": "south dressing band including wardrobes",
+          "bounds_pt": [
+            196.8,
+            263.8,
+            267.72,
+            289.36
+          ],
+          "horizontal_cm": 250.2,
+          "vertical_cm": 90.2
+        },
+        {
+          "label": "dressing clear aisle between wardrobes",
+          "bounds_pt": [
+            213.84,
+            263.8,
+            250.68,
+            289.36
+          ],
+          "horizontal_cm": 130.0,
+          "vertical_cm": 90.2
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Irregular room. Bounds must never be presented as rectangular room dimensions or used for area. South conceptual zone boundary follows wardrobe ends; en-suite continues below and is excluded."
+    },
+    {
+      "id": "helper",
+      "source_label": "MAID'S ROOM",
+      "polygon_pt": [
+        [
+          425.64,
+          283.72
+        ],
+        [
+          457.32,
+          283.72
+        ],
+        [
+          457.32,
+          341.8
+        ],
+        [
+          427.08,
+          341.8
+        ],
+        [
+          427.08,
+          299.32
+        ],
+        [
+          425.64,
+          299.32
+        ]
+      ],
+      "bounds_pt": [
+        425.64,
+        283.72,
+        457.32,
+        341.8
+      ],
+      "parts": [
+        {
+          "label": "main internal rectangle",
+          "bounds_pt": [
+            427.08,
+            283.72,
+            457.32,
+            341.8
+          ],
+          "horizontal_cm": 106.7,
+          "vertical_cm": 204.9
+        },
+        {
+          "label": "top wider strip",
+          "bounds_pt": [
+            425.64,
+            283.72,
+            457.32,
+            299.32
+          ],
+          "horizontal_cm": 111.8,
+          "vertical_cm": 55.0
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Left inner wall steps inward 1.44 pt at y299.32. New partition room-side face x457.32. Interior width is about107cm in main section,112cm at head."
+    },
+    {
+      "id": "kitchen",
+      "source_label": "KITCHEN",
+      "polygon_pt": [
+        [
+          460.2,
+          283.72
+        ],
+        [
+          551.04,
+          283.72
+        ],
+        [
+          551.04,
+          351.76
+        ],
+        [
+          460.2,
+          351.76
+        ]
+      ],
+      "bounds_pt": [
+        460.2,
+        283.72,
+        551.04,
+        351.76
+      ],
+      "parts": [
+        {
+          "label": "interior envelope including counters/appliances",
+          "bounds_pt": [
+            460.2,
+            283.72,
+            551.04,
+            351.76
+          ],
+          "horizontal_cm": 320.5,
+          "vertical_cm": 240.0
+        },
+        {
+          "label": "central clear aisle at main worktop section",
+          "bounds_pt": [
+            503.52,
+            302.08,
+            551.04,
+            333.28
+          ],
+          "horizontal_cm": 167.6,
+          "vertical_cm": 110.1
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "320.5 cm transverse span is source annotated. Open to entry at right; rectangle is kitchen functional envelope, not a fully enclosed room. Worktop face to face aisle about110cm."
+    },
+    {
+      "id": "living",
+      "source_label": "LIVING/ DINING",
+      "polygon_pt": [
+        [
+          425.64,
+          171.64
+        ],
+        [
+          584.4,
+          171.64
+        ],
+        [
+          584.4,
+          404.2
+        ],
+        [
+          543.24,
+          404.2
+        ],
+        [
+          543.24,
+          355.96
+        ],
+        [
+          553.2,
+          355.96
+        ],
+        [
+          553.2,
+          281.56
+        ],
+        [
+          503.52,
+          281.56
+        ],
+        [
+          503.52,
+          263.8
+        ],
+        [
+          479.52,
+          263.8
+        ],
+        [
+          479.52,
+          283.72
+        ],
+        [
+          425.64,
+          283.72
+        ],
+        [
+          425.64,
+          263.8
+        ],
+        [
+          304.56,
+          263.8
+        ],
+        [
+          304.56,
+          232.6
+        ],
+        [
+          425.64,
+          232.6
+        ]
+      ],
+      "bounds_pt": [
+        304.56,
+        171.64,
+        584.4,
+        404.2
+      ],
+      "parts": [
+        {
+          "label": "main rectangular living-dining zone",
+          "bounds_pt": [
+            425.64,
+            171.64,
+            584.4,
+            263.8
+          ],
+          "horizontal_cm": 560.1,
+          "vertical_cm": 325.1
+        },
+        {
+          "label": "right wall referenced span",
+          "bounds_pt": [
+            584.4,
+            171.64,
+            584.4,
+            281.56
+          ],
+          "horizontal_cm": 0.0,
+          "vertical_cm": 387.8
+        },
+        {
+          "label": "bedroom circulation strip",
+          "bounds_pt": [
+            304.56,
+            232.6,
+            425.64,
+            263.8
+          ],
+          "horizontal_cm": 427.1,
+          "vertical_cm": 110.1
+        },
+        {
+          "label": "entry throat",
+          "bounds_pt": [
+            553.2,
+            281.56,
+            584.4,
+            355.96
+          ],
+          "horizontal_cm": 110.1,
+          "vertical_cm": 262.5
+        },
+        {
+          "label": "lower entry hall",
+          "bounds_pt": [
+            543.24,
+            355.96,
+            584.4,
+            404.2
+          ],
+          "horizontal_cm": 145.2,
+          "vertical_cm": 170.2
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Composite functional highlight; excludes crossed structural shaft479.52–503.52/y263.8–283.72. Balcony sliding threshold stepped between y167.44 and171.64; conservative room-side baseline y171.64 used. Main rectangular zone is about560x325cm. Right-wall387.5cm dimension includes deeper piano recess. Do not use full bounding box as room size/area. Entry-door inner line404.2 is conceptual endpoint; outside vestibule excluded."
+    }
+  ],
+  "objects": [
+    {
+      "id": "kid-wardrobe",
+      "room_id": "kid",
+      "label": "Existing wardrobe",
+      "bounds_pt": [
+        273.36,
+        212.8,
+        307.44,
+        229.84
+      ],
+      "plan_horizontal_cm": 120.2,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 120,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Width120/depth60cm are explicitly dimensioned."
+    },
+    {
+      "id": "study-wardrobe",
+      "room_id": "study",
+      "label": "Existing wardrobe",
+      "bounds_pt": [
+        273.36,
+        266.68,
+        307.44,
+        283.72
+      ],
+      "plan_horizontal_cm": 120.2,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 120,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "Same vector spans as annotated Kid wardrobe, but this object itself has no dimension arrows."
+    },
+    {
+      "id": "guest-original-cabinet",
+      "room_id": "guest",
+      "label": "Original crossed cabinet",
+      "bounds_pt": [
+        385.92,
+        212.8,
+        420,
+        229.84
+      ],
+      "plan_horizontal_cm": 120.2,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 120,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated-width",
+      "uncertainty_cm": null,
+      "notes": "Width120cm annotated; depth≈60cm from geometry. Function of crossed symbol is unlabelled."
+    },
+    {
+      "id": "master-wardrobe-left",
+      "room_id": "master",
+      "label": "Existing wardrobe left",
+      "bounds_pt": [
+        196.8,
+        263.8,
+        213.84,
+        289.36
+      ],
+      "plan_horizontal_cm": 60.1,
+      "plan_vertical_cm": 90.2,
+      "nominal_width_cm": 90,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm."
+    },
+    {
+      "id": "master-wardrobe-right",
+      "room_id": "master",
+      "label": "Existing wardrobe right",
+      "bounds_pt": [
+        250.68,
+        263.8,
+        267.72,
+        289.36
+      ],
+      "plan_horizontal_cm": 60.1,
+      "plan_vertical_cm": 90.2,
+      "nominal_width_cm": 90,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm."
+    },
+    {
+      "id": "master-unlabelled-cross-cabinet",
+      "room_id": "master",
+      "label": "Unlabelled crossed object",
+      "bounds_pt": [
+        185.52,
+        265.96,
+        194.76,
+        315.04
+      ],
+      "plan_horizontal_cm": 32.6,
+      "plan_vertical_cm": 173.1,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "Approximately33x173cm footprint; unlabelled. Do not call this a wardrobe/shaft without confirmation."
+    },
+    {
+      "id": "guest-original-desk",
+      "room_id": "guest",
+      "label": "Original desk",
+      "bounds_pt": [
+        405.72,
+        144.76,
+        420,
+        212.8
+      ],
+      "plan_horizontal_cm": 50.4,
+      "plan_vertical_cm": 240,
+      "nominal_width_cm": 240,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length240cm annotated; actual desk front edge is physical drawing129 x405.72, therefore depth50.4cm. Dimension line877 atx400.8 must not be used as object boundary.",
+      "physical_drawing_indices": [
+        129
+      ]
+    },
+    {
+      "id": "living-cabinet",
+      "room_id": "living",
+      "label": "Unlabelled living cabinet",
+      "bounds_pt": [
+        425.64,
+        263.8,
+        479.52,
+        280.84
+      ],
+      "plan_horizontal_cm": 190.1,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 190,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length190cm annotated; depth≈60cm scaled. Crossed cabinet symbol, actual function/material not given."
+    },
+    {
+      "id": "piano",
+      "room_id": "living",
+      "label": "Piano",
+      "bounds_pt": [
+        504,
+        263.68,
+        540.84,
+        281.08
+      ],
+      "plan_horizontal_cm": 130.0,
+      "plan_vertical_cm": 61.4,
+      "nominal_width_cm": 130,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Width130cm annotated; drawn depth≈61cm. Model and height unknown."
+    },
+    {
+      "id": "tv-console",
+      "room_id": "living",
+      "label": "TV console",
+      "bounds_pt": [
+        570.24,
+        185.92,
+        581.52,
+        253.96
+      ],
+      "plan_horizontal_cm": 39.8,
+      "plan_vertical_cm": 240.0,
+      "nominal_width_cm": 240,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length240cm source annotated; console front x570.24 to physical rear furniture line581.52 gives39.8cm depth. Original wall inner face584.4 yields50.0cm total projection from wall. Rear line581.52 is physical drawing56, not a dimension. Function of10.2cm band behind rear line is unconfirmed; keep as separate clearance/detail.",
+      "physical_drawing_indices": [
+        56,
+        616,
+        617,
+        618,
+        619
+      ],
+      "wall_to_front_projection_cm": 50.0,
+      "rear_band_to_wall_cm": 10.2
+    },
+    {
+      "id": "sofa",
+      "room_id": "living",
+      "label": "Sofa",
+      "bounds_pt": [
+        500.76,
+        179.92,
+        523.44,
+        235.24
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 195.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About195cm long x80cm deep; plan symbol, not product dimensions."
+    },
+    {
+      "id": "dining-table",
+      "room_id": "living",
+      "label": "Dining table",
+      "bounds_pt": [
+        451.2,
+        174.16,
+        473.88,
+        230.92
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 200.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About200cm long x80cm wide; excludes chairs. Style/material unknown.",
+      "physical_drawing_indices": [
+        543
+      ]
+    },
+    {
+      "id": "kid-bed",
+      "room_id": "kid",
+      "label": "Bed",
+      "bounds_pt": [
+        276.24,
+        153.28,
+        330.36,
+        196.36
+      ],
+      "plan_horizontal_cm": 190.9,
+      "plan_vertical_cm": 152.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About191x152cm horizontal/vertical footprint; no product model."
+    },
+    {
+      "id": "study-original-bed",
+      "room_id": "study",
+      "label": "Original bed",
+      "bounds_pt": [
+        276.24,
+        296.08,
+        330.36,
+        339.16
+      ],
+      "plan_horizontal_cm": 190.9,
+      "plan_vertical_cm": 152.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About191x152cm horizontal/vertical footprint; user changing room to Study does not establish whether bed will stay."
+    },
+    {
+      "id": "master-bed",
+      "room_id": "master",
+      "label": "King size bed",
+      "bounds_pt": [
+        185.52,
+        192.16,
+        242.16,
+        244.6
+      ],
+      "plan_horizontal_cm": 199.8,
+      "plan_vertical_cm": 185.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About200cm long x185cm wide; king-size label is source text, not verified mattress size.",
+      "physical_drawing_indices": [
+        329,
+        331
+      ]
+    },
+    {
+      "id": "helper-bed",
+      "room_id": "helper",
+      "label": "Bed",
+      "bounds_pt": [
+        427.08,
+        285.04,
+        457.32,
+        341.8
+      ],
+      "plan_horizontal_cm": 106.7,
+      "plan_vertical_cm": 200.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "Complete footprint about107x200cm includes10cm headboard drawing727. Body drawing714 alone is107x190cm. Actual bed model/height unknown.",
+      "physical_drawing_indices": [
+        714,
+        727
+      ]
+    },
+    {
+      "id": "washer-dryer",
+      "room_id": "kitchen",
+      "label": "W/D",
+      "bounds_pt": [
+        460.56,
+        284.56,
+        477.48,
+        303.04
+      ],
+      "plan_horizontal_cm": 59.7,
+      "plan_vertical_cm": 65.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About60cm horizontal x65cm vertical including front control/edge. W/D may mean combined or stacked washer/dryer. No model, capacity, height or confirmed site dimension.",
+      "physical_drawing_indices": [
+        743,
+        744
+      ]
+    },
+    {
+      "id": "fridge",
+      "room_id": "kitchen",
+      "label": "F / Refrigerator",
+      "bounds_pt": [
+        480.36,
+        283.72,
+        503.04,
+        303.52
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 69.9,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": 2,
+      "notes": "About80x70cm complete drawing-symbol envelope including upper handle/edge physical drawing740 and lower base/edge742. Main body drawing739 alone is80x59cm; actual model/height unconfirmed.",
+      "physical_drawing_indices": [
+        739,
+        740,
+        742
+      ]
+    },
+    {
+      "id": "kitchen-upper-worktop",
+      "room_id": "kitchen",
+      "label": "Upper worktop",
+      "bounds_pt": [
+        503.52,
+        283.72,
+        551.04,
+        302.08
+      ],
+      "plan_horizontal_cm": 167.6,
+      "plan_vertical_cm": 64.8,
+      "nominal_width_cm": 167.5,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length167.5cm annotated; depth≈64.8cm scaled. Finish/laminate codes unknown."
+    },
+    {
+      "id": "kitchen-lower-worktop",
+      "room_id": "kitchen",
+      "label": "Lower worktop",
+      "bounds_pt": [
+        460.2,
+        333.28,
+        551.04,
+        351.76
+      ],
+      "plan_horizontal_cm": 320.5,
+      "plan_vertical_cm": 65.2,
+      "nominal_width_cm": 320.5,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Width320.5cm dimension across kitchen, lower worktop spans same endpoints; depth≈65.2cm from drawing. Includes sink/hob areas."
+    }
+  ],
+  "unresolved": [
+    "All object heights unknown (null).",
+    "Actual appliance models and sizes unknown; symbols are only planned footprints.",
+    "Guest new wardrobe placement is a proposed design edit, not existing measured condition.",
+    "Master irregular zone and living/circulation grouping need polygon handling; no rectangular area from bounds.",
+    "Summary page4 is original layout, not the remodel source; calibrate it separately before comparisons."
+  ],
+  "audit_revision": "Rechecked physical linework against PyMuPDF drawing indices0–829. Desk depth corrected from dimension-line-derived68cm to physical50cm; refrigerator complete lower-base envelope corrected70cm deep; Helper bed complete headboard envelope corrected200cm long."
+}

@@ -1,0 +1,2324 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "SKG · 空間圖冊",
+    "revision": "R03",
+    "unit": "cm",
+    "date": "2026-10-16"
+  },
+  "scale": {
+    "title": "1:100 (A4)",
+    "nominal_cm_per_pt": 3.5277777777777777,
+    "least_squares_cm_per_pt": 3.5259203372877765,
+    "calibration_refs": 16,
+    "decision": "Use nominal 1:100 with source dimensions overriding estimates. PDF physical sheet is approximately A3; A4 title does not justify resizing the geometry.",
+    "rounding": "Display scaled room/object estimates to whole cm with approx symbol; source annotated cm may retain half cm.",
+    "limitations": "Drawing explicitly says subject to site measurement. PDF line placement/rounding is not site accuracy. Suggested ±2cm pertains reading/scaling only and excludes construction/site deviations."
+  },
+  "auxiliary": {
+    "source": "Floor plan scale.pdf",
+    "page": 1,
+    "coordinate_system": "PDF points, top-left origin",
+    "scale_cm_per_pt": 3.5277777777777777,
+    "spaces": [
+      {
+        "id": "master-balcony",
+        "source_label": "BALCONY",
+        "polygon_pt": [
+          [
+            188.4,
+            136.84
+          ],
+          [
+            264.84,
+            136.84
+          ],
+          [
+            264.84,
+            174.52
+          ],
+          [
+            259.2,
+            174.52
+          ],
+          [
+            259.2,
+            181.6
+          ],
+          [
+            188.4,
+            181.6
+          ]
+        ],
+        "bounds_pt": [
+          188.4,
+          136.84,
+          264.84,
+          181.6
+        ],
+        "parts": [
+          {
+            "label": "overall internal spans; irregular notch at lower right",
+            "bounds_pt": [
+              188.4,
+              136.84,
+              264.84,
+              181.6
+            ],
+            "horizontal_cm": 269.7,
+            "vertical_cm": 157.9
+          },
+          {
+            "label": "rectangular portion before lower-right notch",
+            "bounds_pt": [
+              188.4,
+              136.84,
+              264.84,
+              174.52
+            ],
+            "horizontal_cm": 269.7,
+            "vertical_cm": 132.9
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "Approx270cm wide x158cm maximum depth. Notched corner excluded. Bottom window balcony-facing line181.6 used, outer sill/room-face185.92 excluded."
+      },
+      {
+        "id": "living-balcony",
+        "source_label": "BALCONY",
+        "polygon_pt": [
+          [
+            428.4,
+            120.64
+          ],
+          [
+            584.4,
+            120.64
+          ],
+          [
+            584.4,
+            167.44
+          ],
+          [
+            557.88,
+            167.44
+          ],
+          [
+            557.88,
+            168.88
+          ],
+          [
+            533.76,
+            168.88
+          ],
+          [
+            533.76,
+            170.2
+          ],
+          [
+            509.28,
+            170.2
+          ],
+          [
+            484.8,
+            170.2
+          ],
+          [
+            484.8,
+            168.88
+          ],
+          [
+            460.56,
+            168.88
+          ],
+          [
+            460.56,
+            167.44
+          ],
+          [
+            434.52,
+            167.44
+          ],
+          [
+            434.52,
+            160.36
+          ],
+          [
+            428.4,
+            160.36
+          ]
+        ],
+        "bounds_pt": [
+          428.4,
+          120.64,
+          584.4,
+          170.2
+        ],
+        "parts": [
+          {
+            "label": "main internal width and conservative nominal depth",
+            "bounds_pt": [
+              428.4,
+              120.64,
+              584.4,
+              167.44
+            ],
+            "horizontal_cm": 550.3,
+            "vertical_cm": 165.1
+          },
+          {
+            "label": "upper fully rectangular clear band",
+            "bounds_pt": [
+              428.4,
+              120.64,
+              584.4,
+              160.36
+            ],
+            "horizontal_cm": 550.3,
+            "vertical_cm": 140.1
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "About550cm wide x165cm nominal depth; sliding glass boundary steps outward toward centre to170.2pt, increasing central depth about10cm. Left structural post/return at x428.4–434.52,y160.36–167.44 excluded. Boundary traced to balcony-facing window edges; decorative glass frame thickness not counted as floor."
+      },
+      {
+        "id": "bath1",
+        "source_label": "BATH 1",
+        "polygon_pt": [
+          [
+            220.92,
+            295
+          ],
+          [
+            249.24,
+            295
+          ],
+          [
+            249.24,
+            289.36
+          ],
+          [
+            266.28,
+            289.36
+          ],
+          [
+            266.28,
+            351.04
+          ],
+          [
+            185.52,
+            351.04
+          ],
+          [
+            185.52,
+            322.12
+          ],
+          [
+            202.56,
+            322.12
+          ],
+          [
+            202.56,
+            318.52
+          ],
+          [
+            197.52,
+            318.52
+          ],
+          [
+            197.52,
+            295
+          ]
+        ],
+        "bounds_pt": [
+          185.52,
+          289.36,
+          266.28,
+          351.04
+        ],
+        "parts": [
+          {
+            "label": "lower main width and length including vanity footprint",
+            "bounds_pt": [
+              197.52,
+              295,
+              266.28,
+              351.04
+            ],
+            "horizontal_cm": 242.6,
+            "vertical_cm": 197.7
+          },
+          {
+            "label": "lower wet zone extension",
+            "bounds_pt": [
+              185.52,
+              322.12,
+              252.12,
+              351.04
+            ],
+            "horizontal_cm": 234.9,
+            "vertical_cm": 102.0
+          },
+          {
+            "label": "full vertical span at vanity/right side",
+            "bounds_pt": [
+              249.24,
+              289.36,
+              266.28,
+              351.04
+            ],
+            "horizontal_cm": 60.1,
+            "vertical_cm": 217.6
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "Irregular en-suite. Main lower envelope≈243x198cm, lower left wet-zone extension adds≈42cm horizontal. Maximum total bounds≈285x218cm are NOT a rectangular room. Top right return below wardrobe begins289.36; main WC band begins295. Sliding division between dressing and WC represented with conceptual threshold295. Shapes and openings make exact usable-floor-area inappropriate without site verification."
+      },
+      {
+        "id": "bath2",
+        "source_label": "BATH 2",
+        "polygon_pt": [
+          [
+            366.12,
+            266.68
+          ],
+          [
+            393.72,
+            266.68
+          ],
+          [
+            393.72,
+            292.24
+          ],
+          [
+            420,
+            292.24
+          ],
+          [
+            420,
+            322.6
+          ],
+          [
+            349.92,
+            322.6
+          ],
+          [
+            349.92,
+            274.48
+          ],
+          [
+            366.12,
+            274.48
+          ]
+        ],
+        "bounds_pt": [
+          349.92,
+          266.68,
+          420,
+          322.6
+        ],
+        "parts": [
+          {
+            "label": "overall interior spans; upper right structural cutout excluded",
+            "bounds_pt": [
+              349.92,
+              266.68,
+              420,
+              322.6
+            ],
+            "horizontal_cm": 247.2,
+            "vertical_cm": 197.3
+          },
+          {
+            "label": "lower full-width zone",
+            "bounds_pt": [
+              349.92,
+              292.24,
+              420,
+              322.6
+            ],
+            "horizontal_cm": 247.2,
+            "vertical_cm": 107.1
+          },
+          {
+            "label": "upper central passage",
+            "bounds_pt": [
+              366.12,
+              266.68,
+              393.72,
+              292.24
+            ],
+            "horizontal_cm": 97.4,
+            "vertical_cm": 90.2
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "About247cm maximum width x197cm maximum depth, irregular L shape. Upper left projection349.92–366.12/y266.68–274.48 and upper right shaft393.72–420/y266.68–292.24 excluded. Main lower zone≈247x107cm; do not label full bounds as a rectangle."
+      },
+      {
+        "id": "ac-ledge-west",
+        "source_label": "A/C LEDGE",
+        "polygon_pt": [
+          [
+            150.84,
+            204.52
+          ],
+          [
+            179.16,
+            204.52
+          ],
+          [
+            179.16,
+            354.52
+          ],
+          [
+            150.84,
+            354.52
+          ]
+        ],
+        "bounds_pt": [
+          150.84,
+          204.52,
+          179.16,
+          354.52
+        ],
+        "parts": [
+          {
+            "label": "principal internal rectangle",
+            "bounds_pt": [
+              150.84,
+              204.52,
+              179.16,
+              354.52
+            ],
+            "horizontal_cm": 99.9,
+            "vertical_cm": 529.2
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "About100x529cm principal internal dimensions. Uses outer ledge inner railing face150.84 and building wall exterior face179.16. Bathroom window reveal325.6–346.84 not added to usable ledge width. No access/structural/load conclusion inferred."
+      },
+      {
+        "id": "ac-ledge-south",
+        "source_label": "A/C LEDGE",
+        "polygon_pt": [
+          [
+            349.92,
+            326.92
+          ],
+          [
+            420,
+            326.92
+          ],
+          [
+            420,
+            353.44
+          ],
+          [
+            349.92,
+            353.44
+          ]
+        ],
+        "bounds_pt": [
+          349.92,
+          326.92,
+          420,
+          353.44
+        ],
+        "parts": [
+          {
+            "label": "principal internal rectangle",
+            "bounds_pt": [
+              349.92,
+              326.92,
+              420,
+              353.44
+            ],
+            "horizontal_cm": 247.2,
+            "vertical_cm": 93.6
+          }
+        ],
+        "status": "scaled-estimate",
+        "uncertainty_cm": 2,
+        "notes": "About247x94cm. Bathroom wall outside face326.92 and bottom inner railing face353.44 used. Small right-side building recess not included."
+      }
+    ],
+    "study_fit_verification": {
+      "status": "authorized-design-fit",
+      "cabinet_bounds_pt": [
+        273.36,
+        266.68,
+        307.44,
+        283.72
+      ],
+      "desk_bounds_pt": [
+        273.36,
+        283.72,
+        287.64,
+        348.88
+      ],
+      "cabinet_frontage_cm": 120,
+      "cabinet_depth_cm": 60,
+      "desk_length_cm": 229.9,
+      "desk_depth_cm": 50.4,
+      "desk_original_annotated_length_cm": 240,
+      "desk_length_change_cm": -10.1,
+      "notes": "Validated against physical drawing129: actual original desk depth50.4cm. Cabinet120x60cm remains unscaled. Authorized proposed desk230x50cm exactly meets cabinet at283.72 and room-facing window at348.88 without footprint spill. Chairs retain rigid x=693.36−x,y=496.52−y.",
+      "window_check": "Desk is flush with new Study window line348.88. Zero horizontal gap is intentional geometrically, but desk height, sill height, opening direction, curtain track and handle clearance are unknown; actual obstruction cannot be verified from plan. No footprint penetrates window frame.",
+      "door_check": "Source Bedroom3 door startsx315.96. Cabinet ends307.44 (30cm before jamb) and corrected desk ends287.64 (100cm before jamb). No footprint/door swing intersection. Chair object bounds should be checked individually after transform."
+    }
+  },
+  "sources": [
+    {
+      "file": "Floor plan scale.pdf",
+      "page": 1,
+      "role": "新格局與量測主來源"
+    },
+    {
+      "file": "Summary.pdf",
+      "page": 4,
+      "role": "原始格局與 5 m 比例尺交叉核對"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "living",
+      "source_label": "LIVING/ DINING",
+      "polygon_pt": [
+        [
+          425.64,
+          171.64
+        ],
+        [
+          584.4,
+          171.64
+        ],
+        [
+          584.4,
+          404.2
+        ],
+        [
+          543.24,
+          404.2
+        ],
+        [
+          543.24,
+          355.96
+        ],
+        [
+          553.2,
+          355.96
+        ],
+        [
+          553.2,
+          281.56
+        ],
+        [
+          503.52,
+          281.56
+        ],
+        [
+          503.52,
+          263.8
+        ],
+        [
+          479.52,
+          263.8
+        ],
+        [
+          479.52,
+          283.72
+        ],
+        [
+          425.64,
+          283.72
+        ],
+        [
+          425.64,
+          263.8
+        ],
+        [
+          304.56,
+          263.8
+        ],
+        [
+          304.56,
+          232.6
+        ],
+        [
+          425.64,
+          232.6
+        ]
+      ],
+      "bounds_pt": [
+        304.56,
+        171.64,
+        584.4,
+        404.2
+      ],
+      "parts": [
+        {
+          "label": "客餐廳主要矩形區",
+          "bounds_pt": [
+            425.64,
+            171.64,
+            584.4,
+            263.8
+          ],
+          "horizontal_cm": 560,
+          "vertical_cm": 325
+        },
+        {
+          "label": "右側牆面標註跨度",
+          "bounds_pt": [
+            584.4,
+            171.64,
+            584.4,
+            281.56
+          ],
+          "horizontal_cm": 0,
+          "vertical_cm": 387.5
+        },
+        {
+          "label": "臥室走道",
+          "bounds_pt": [
+            304.56,
+            232.6,
+            425.64,
+            263.8
+          ],
+          "horizontal_cm": 427,
+          "vertical_cm": 110
+        },
+        {
+          "label": "玄關通道",
+          "bounds_pt": [
+            553.2,
+            281.56,
+            584.4,
+            355.96
+          ],
+          "horizontal_cm": 110,
+          "vertical_cm": 262
+        },
+        {
+          "label": "下方玄關區",
+          "bounds_pt": [
+            543.24,
+            355.96,
+            584.4,
+            404.2
+          ],
+          "horizontal_cm": 145,
+          "vertical_cm": 170
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "電視櫃設計": "圖面長 240 cm；深約 40 cm。款式、實際高度待定。",
+        "電視櫃兩端留白": "上端原標 50 cm；下端縱向餘量 97.5 cm（387.5 − 240 − 50）。斜向 111.9 cm 為另一條量測線。",
+        "餐桌尺寸與款式": "圖面約 200 × 80 cm，不含餐椅；實物尺寸、材質、款式待提供。",
+        "沙發與動線": "圖面沙發約 195 × 80 cm；實物尺寸待提供。",
+        "材質與色彩": null
+      },
+      "name": "客餐廳",
+      "english": "Living & dining",
+      "number": "01",
+      "focus": "電視櫃、兩端留白與餐桌配置"
+    },
+    {
+      "id": "kitchen",
+      "source_label": "KITCHEN",
+      "polygon_pt": [
+        [
+          460.2,
+          283.72
+        ],
+        [
+          551.04,
+          283.72
+        ],
+        [
+          551.04,
+          351.76
+        ],
+        [
+          460.2,
+          351.76
+        ]
+      ],
+      "bounds_pt": [
+        460.2,
+        283.72,
+        551.04,
+        351.76
+      ],
+      "parts": [
+        {
+          "label": "廚房功能範圍（含檯面家電）",
+          "bounds_pt": [
+            460.2,
+            283.72,
+            551.04,
+            351.76
+          ],
+          "horizontal_cm": 320.5,
+          "vertical_cm": 240
+        },
+        {
+          "label": "主檯面段中間淨走道",
+          "bounds_pt": [
+            503.52,
+            302.08,
+            551.04,
+            333.28
+          ],
+          "horizontal_cm": 168,
+          "vertical_cm": 110
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "檯面品牌／代碼": null,
+        "檯面顏色": null,
+        "Laminate 品牌／代碼": null,
+        "Laminate 顏色": null,
+        "冰箱型號與實際尺寸": null,
+        "洗烘衣機型號與實際尺寸": null,
+        "設計備註": "上檯面長 167.5 cm；下檯面跨度 320.5 cm。中間淨走道約 110 cm。"
+      },
+      "name": "廚房",
+      "english": "Kitchen",
+      "number": "02",
+      "focus": "檯面代碼、laminate 與家電尺寸"
+    },
+    {
+      "id": "helper",
+      "source_label": "MAID'S ROOM",
+      "polygon_pt": [
+        [
+          425.64,
+          283.72
+        ],
+        [
+          457.32,
+          283.72
+        ],
+        [
+          457.32,
+          341.8
+        ],
+        [
+          427.08,
+          341.8
+        ],
+        [
+          427.08,
+          299.32
+        ],
+        [
+          425.64,
+          299.32
+        ]
+      ],
+      "bounds_pt": [
+        425.64,
+        283.72,
+        457.32,
+        341.8
+      ],
+      "parts": [
+        {
+          "label": "房間主要內部區",
+          "bounds_pt": [
+            427.08,
+            283.72,
+            457.32,
+            341.8
+          ],
+          "horizontal_cm": 107,
+          "vertical_cm": 205
+        },
+        {
+          "label": "床頭較寬區",
+          "bounds_pt": [
+            425.64,
+            283.72,
+            457.32,
+            299.32
+          ],
+          "horizontal_cm": 112,
+          "vertical_cm": 55
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "床型與實際尺寸": null,
+        "收納設計": null,
+        "設計備註": "主要內寬約 107 cm，床頭局部約 112 cm。圖面床含床頭板約 107 × 200 cm，幾乎滿寬。"
+      },
+      "name": "女傭房",
+      "english": "Helper’s room",
+      "number": "03",
+      "focus": "床、收納與使用淨空"
+    },
+    {
+      "id": "master",
+      "source_label": "MASTER BEDROOM",
+      "polygon_pt": [
+        [
+          185.52,
+          185.92
+        ],
+        [
+          267.72,
+          185.92
+        ],
+        [
+          267.72,
+          232.6
+        ],
+        [
+          301.68,
+          232.6
+        ],
+        [
+          301.68,
+          263.8
+        ],
+        [
+          267.72,
+          263.8
+        ],
+        [
+          267.72,
+          289.36
+        ],
+        [
+          196.8,
+          289.36
+        ],
+        [
+          196.8,
+          263.8
+        ],
+        [
+          185.52,
+          263.8
+        ]
+      ],
+      "bounds_pt": [
+        185.52,
+        185.92,
+        301.68,
+        289.36
+      ],
+      "parts": [
+        {
+          "label": "睡眠主要矩形區",
+          "bounds_pt": [
+            185.52,
+            185.92,
+            267.72,
+            263.8
+          ],
+          "horizontal_cm": 290,
+          "vertical_cm": 275
+        },
+        {
+          "label": "東側入口凹位",
+          "bounds_pt": [
+            267.72,
+            232.6,
+            301.68,
+            263.8
+          ],
+          "horizontal_cm": 120,
+          "vertical_cm": 110
+        },
+        {
+          "label": "更衣區（含兩側衣櫃）",
+          "bounds_pt": [
+            196.8,
+            263.8,
+            267.72,
+            289.36
+          ],
+          "horizontal_cm": 250,
+          "vertical_cm": 90
+        },
+        {
+          "label": "兩櫃間淨走道",
+          "bounds_pt": [
+            213.84,
+            263.8,
+            250.68,
+            289.36
+          ],
+          "horizontal_cm": 130,
+          "vertical_cm": 90
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "衣櫃 layout": "圖面為兩側各 90 × 60 cm 衣櫃；中間淨寬約 130 cm。",
+        "衣櫃內部分區": null,
+        "衣櫃門片／Laminate": null,
+        "床與床頭設計": null,
+        "設計備註": "房間為不規則輪廓。睡眠區、入口與更衣區分段量測。"
+      },
+      "name": "主臥",
+      "english": "Master bedroom",
+      "number": "04",
+      "focus": "衣櫃設計與臥室配置"
+    },
+    {
+      "id": "kid",
+      "source_label": "BEDROOM 2",
+      "polygon_pt": [
+        [
+          273.36,
+          144.76
+        ],
+        [
+          344.28,
+          144.76
+        ],
+        [
+          344.28,
+          229.84
+        ],
+        [
+          273.36,
+          229.84
+        ]
+      ],
+      "bounds_pt": [
+        273.36,
+        144.76,
+        344.28,
+        229.84
+      ],
+      "parts": [
+        {
+          "label": "內牆範圍（含櫃體占位）",
+          "bounds_pt": [
+            273.36,
+            144.76,
+            344.28,
+            229.84
+          ],
+          "horizontal_cm": 250,
+          "vertical_cm": 300
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "床型與實際尺寸": null,
+        "衣櫃設計": "保留原 BEDROOM 2 的 120 × 60 cm 衣櫃占位。",
+        "設計備註": "原 BEDROOM 2 改名 KID ROOM。"
+      },
+      "name": "小孩房",
+      "english": "Kid room",
+      "number": "05",
+      "focus": "床位、衣櫃與成長需求"
+    },
+    {
+      "id": "study",
+      "source_label": "BEDROOM 3",
+      "polygon_pt": [
+        [
+          273.36,
+          266.68
+        ],
+        [
+          344.28,
+          266.68
+        ],
+        [
+          344.28,
+          348.88
+        ],
+        [
+          273.36,
+          348.88
+        ]
+      ],
+      "bounds_pt": [
+        273.36,
+        266.68,
+        344.28,
+        348.88
+      ],
+      "parts": [
+        {
+          "label": "內牆範圍（含櫃體占位）",
+          "bounds_pt": [
+            273.36,
+            266.68,
+            344.28,
+            348.88
+          ],
+          "horizontal_cm": 250,
+          "vertical_cm": 290
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "書桌設計": "原 STUDY 配置旋轉 180° 搬入。依內深約 290 cm 配適，桌長由 240 cm 改為約 230 cm；深約 50 cm。",
+        "收納櫃": "原 STUDY 下方櫃體旋轉後移到書房左上，保留 120 × 60 cm 圖面尺寸。用途與內部分區待定。",
+        "桌面材質／代碼": null,
+        "電源與照明": null,
+        "設計備註": "移除原 BEDROOM 3 床與衣櫃配置；家具按新書房牆線定位。書桌臨窗位置與開窗方式待現場核對。"
+      },
+      "name": "書房",
+      "english": "Study",
+      "number": "06",
+      "focus": "翻轉後的書桌與櫃體配置"
+    },
+    {
+      "id": "guest",
+      "source_label": "STUDY ROOM",
+      "polygon_pt": [
+        [
+          349.92,
+          144.76
+        ],
+        [
+          420,
+          144.76
+        ],
+        [
+          420,
+          229.84
+        ],
+        [
+          349.92,
+          229.84
+        ]
+      ],
+      "bounds_pt": [
+        349.92,
+        144.76,
+        420,
+        229.84
+      ],
+      "parts": [
+        {
+          "label": "內牆範圍（含家具占位）",
+          "bounds_pt": [
+            349.92,
+            144.76,
+            420,
+            229.84
+          ],
+          "horizontal_cm": 247,
+          "vertical_cm": 300
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "床位 layout": "原 BEDROOM 2 配置左右鏡像，靠客房右內牆對齊。",
+        "衣櫃設計": "與小孩房相同的 120 × 60 cm 衣櫃，位於右下。",
+        "設計備註": "原 STUDY 的桌與櫃已移到書房；家具本身不因房寬差約 3 cm 而縮放。",
+        "床型與實際尺寸": null
+      },
+      "name": "客房",
+      "english": "Guest room",
+      "number": "07",
+      "focus": "鏡像床位與同款衣櫃"
+    }
+  ],
+  "objects": [
+    {
+      "id": "living-cabinet",
+      "room_id": "living",
+      "label": "Unlabelled living cabinet",
+      "bounds_pt": [
+        425.64,
+        263.8,
+        479.52,
+        280.84
+      ],
+      "plan_horizontal_cm": 190.1,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 190,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length190cm annotated; depth≈60cm scaled. Crossed cabinet symbol, actual function/material not given.",
+      "name": "客餐廳櫃體（用途待定）",
+      "source_note": "原圖長 190 cm；深約 60 cm 為等比讀值。用途待確認。",
+      "dimensions": {
+        "w": {
+          "cm": 190,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 60,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "LIV-01"
+    },
+    {
+      "id": "piano",
+      "room_id": "living",
+      "label": "Piano",
+      "bounds_pt": [
+        504,
+        263.68,
+        540.84,
+        281.08
+      ],
+      "plan_horizontal_cm": 130.0,
+      "plan_vertical_cm": 61.4,
+      "nominal_width_cm": 130,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Width130cm annotated; drawn depth≈61cm. Model and height unknown.",
+      "name": "鋼琴",
+      "source_note": "原圖寬 130 cm；深約 61 cm 為等比讀值。",
+      "dimensions": {
+        "w": {
+          "cm": 130,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 61,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "LIV-02"
+    },
+    {
+      "id": "tv-console",
+      "room_id": "living",
+      "label": "TV console",
+      "bounds_pt": [
+        570.24,
+        185.92,
+        581.52,
+        253.96
+      ],
+      "plan_horizontal_cm": 39.8,
+      "plan_vertical_cm": 240.0,
+      "nominal_width_cm": 240,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length240cm source annotated; console front x570.24 to physical rear furniture line581.52 gives39.8cm depth. Original wall inner face584.4 yields50.0cm total projection from wall. Rear line581.52 is physical drawing56, not a dimension. Function of10.2cm band behind rear line is unconfirmed; keep as separate clearance/detail.",
+      "physical_drawing_indices": [
+        56,
+        616,
+        617,
+        618,
+        619
+      ],
+      "wall_to_front_projection_cm": 50.0,
+      "rear_band_to_wall_cm": 10.2,
+      "name": "電視櫃",
+      "source_note": "原圖長 240 cm；深約 40 cm 為等比讀值。 後側線至原牆約 10 cm；至原牆總突出約 50 cm，背板用途待確認。",
+      "dimensions": {
+        "w": {
+          "cm": 240,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 40,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "LIV-03"
+    },
+    {
+      "id": "sofa",
+      "room_id": "living",
+      "label": "Sofa",
+      "bounds_pt": [
+        500.76,
+        179.92,
+        523.44,
+        235.24
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 195.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About195cm long x80cm deep; plan symbol, not product dimensions.",
+      "name": "沙發",
+      "source_note": "由家具符號外框量測，長約 195 cm、深約 80 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 195,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 80,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "LIV-04"
+    },
+    {
+      "id": "dining-table",
+      "room_id": "living",
+      "label": "Dining table",
+      "bounds_pt": [
+        451.2,
+        174.16,
+        473.88,
+        230.92
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 200.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About200cm long x80cm wide; excludes chairs. Style/material unknown.",
+      "physical_drawing_indices": [
+        543
+      ],
+      "name": "餐桌",
+      "source_note": "由桌面外框量測，長約 200 cm、寬約 80 cm；不含餐椅。",
+      "dimensions": {
+        "w": {
+          "cm": 200,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 80,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "LIV-05"
+    },
+    {
+      "id": "washer-dryer",
+      "room_id": "kitchen",
+      "label": "W/D",
+      "bounds_pt": [
+        460.56,
+        284.56,
+        477.48,
+        303.04
+      ],
+      "plan_horizontal_cm": 59.7,
+      "plan_vertical_cm": 65.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About60cm horizontal x65cm vertical including front control/edge. W/D may mean combined or stacked washer/dryer. No model, capacity, height or confirmed site dimension.",
+      "physical_drawing_indices": [
+        743,
+        744
+      ],
+      "name": "洗烘衣機 W/D",
+      "source_note": "圖面符號約 60 × 65 cm，包含前緣；W/D 未能確認是洗烘合一或疊放。",
+      "dimensions": {
+        "w": {
+          "cm": 60,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 65,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KIT-01"
+    },
+    {
+      "id": "fridge",
+      "room_id": "kitchen",
+      "label": "F / Refrigerator",
+      "bounds_pt": [
+        480.36,
+        283.72,
+        503.04,
+        303.52
+      ],
+      "plan_horizontal_cm": 80.0,
+      "plan_vertical_cm": 69.9,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About80x70cm complete drawing-symbol envelope including upper handle/edge physical drawing740 and lower base/edge742. Main body drawing739 alone is80x59cm; actual model/height unconfirmed.",
+      "physical_drawing_indices": [
+        739,
+        740,
+        742
+      ],
+      "name": "冰箱 F",
+      "source_note": "圖面完整符號約 80 × 70 cm，含下緣底座；機身本體深約 59 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 80,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 70,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KIT-02"
+    },
+    {
+      "id": "kitchen-upper-worktop",
+      "room_id": "kitchen",
+      "label": "Upper worktop",
+      "bounds_pt": [
+        503.52,
+        283.72,
+        551.04,
+        302.08
+      ],
+      "plan_horizontal_cm": 167.6,
+      "plan_vertical_cm": 64.8,
+      "nominal_width_cm": 167.5,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Length167.5cm annotated; depth≈64.8cm scaled. Finish/laminate codes unknown.",
+      "name": "上方檯面",
+      "source_note": "原圖長 167.5 cm；深約 65 cm 為等比讀值。",
+      "dimensions": {
+        "w": {
+          "cm": 167.5,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 65,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KIT-03"
+    },
+    {
+      "id": "kitchen-lower-worktop",
+      "room_id": "kitchen",
+      "label": "Lower worktop",
+      "bounds_pt": [
+        460.2,
+        333.28,
+        551.04,
+        351.76
+      ],
+      "plan_horizontal_cm": 320.5,
+      "plan_vertical_cm": 65.2,
+      "nominal_width_cm": 320.5,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "source-annotated-length",
+      "uncertainty_cm": null,
+      "notes": "Width320.5cm dimension across kitchen, lower worktop spans same endpoints; depth≈65.2cm from drawing. Includes sink/hob areas.",
+      "name": "下方檯面",
+      "source_note": "原圖廚房橫向跨度 320.5 cm；檯面使用同一端點。深約 65 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 320.5,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 65,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KIT-04"
+    },
+    {
+      "id": "helper-bed",
+      "room_id": "helper",
+      "label": "Bed",
+      "bounds_pt": [
+        427.08,
+        285.04,
+        457.32,
+        341.8
+      ],
+      "plan_horizontal_cm": 106.7,
+      "plan_vertical_cm": 200.2,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "Complete footprint about107x200cm includes10cm headboard drawing727. Body drawing714 alone is107x190cm. Actual bed model/height unknown.",
+      "physical_drawing_indices": [
+        714,
+        727
+      ],
+      "name": "女傭房床",
+      "source_note": "圖面床含床頭板完整外框約 107 × 200 cm；床身本身長約 190 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 107,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 200,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-01"
+    },
+    {
+      "id": "master-wardrobe-left",
+      "room_id": "master",
+      "label": "Existing wardrobe left",
+      "bounds_pt": [
+        196.8,
+        263.8,
+        213.84,
+        289.36
+      ],
+      "plan_horizontal_cm": 60.1,
+      "plan_vertical_cm": 90.2,
+      "nominal_width_cm": 90,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
+      "name": "主臥左側衣櫃",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 90,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 60,
+          "status": "annotated"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "MST-01"
+    },
+    {
+      "id": "master-wardrobe-right",
+      "room_id": "master",
+      "label": "Existing wardrobe right",
+      "bounds_pt": [
+        250.68,
+        263.8,
+        267.72,
+        289.36
+      ],
+      "plan_horizontal_cm": 60.1,
+      "plan_vertical_cm": 90.2,
+      "nominal_width_cm": 90,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
+      "name": "主臥右側衣櫃",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 90,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 60,
+          "status": "annotated"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "MST-02"
+    },
+    {
+      "id": "master-unlabelled-cross-cabinet",
+      "room_id": "master",
+      "label": "Unlabelled crossed object",
+      "bounds_pt": [
+        185.52,
+        265.96,
+        194.76,
+        315.04
+      ],
+      "plan_horizontal_cm": 32.6,
+      "plan_vertical_cm": 173.1,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "Approximately33x173cm footprint; unlabelled. Do not call this a wardrobe/shaft without confirmation.",
+      "name": "未標示用途櫃形符號",
+      "source_note": "圖面 X 符號未標示用途；僅記錄平面外框，不能確定是衣櫃或管道。",
+      "dimensions": {
+        "w": {
+          "cm": 173,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 33,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "MST-03"
+    },
+    {
+      "id": "master-bed",
+      "room_id": "master",
+      "label": "King size bed",
+      "bounds_pt": [
+        185.52,
+        192.16,
+        242.16,
+        244.6
+      ],
+      "plan_horizontal_cm": 199.8,
+      "plan_vertical_cm": 185.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About200cm long x185cm wide; king-size label is source text, not verified mattress size.",
+      "physical_drawing_indices": [
+        329,
+        331
+      ],
+      "name": "主臥床",
+      "source_note": "原圖註記 KING SIZE；床框約 200 × 185 cm，不代表已購床墊尺寸。",
+      "dimensions": {
+        "w": {
+          "cm": 185,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 200,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "MST-04"
+    },
+    {
+      "id": "kid-wardrobe",
+      "room_id": "kid",
+      "label": "Existing wardrobe",
+      "bounds_pt": [
+        273.36,
+        212.8,
+        307.44,
+        229.84
+      ],
+      "plan_horizontal_cm": 120.2,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 120,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Width120/depth60cm are explicitly dimensioned.",
+      "name": "小孩房衣櫃",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。",
+      "dimensions": {
+        "w": {
+          "cm": 120,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 60,
+          "status": "annotated"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KID-01"
+    },
+    {
+      "id": "kid-bed",
+      "room_id": "kid",
+      "label": "Bed",
+      "bounds_pt": [
+        276.24,
+        153.28,
+        330.36,
+        196.36
+      ],
+      "plan_horizontal_cm": 190.9,
+      "plan_vertical_cm": 152.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "scaled-symbol",
+      "uncertainty_cm": null,
+      "notes": "About191x152cm horizontal/vertical footprint; no product model.",
+      "name": "小孩房床",
+      "source_note": "圖面床框約 191 × 152 cm，不代表已購床墊尺寸。",
+      "dimensions": {
+        "w": {
+          "cm": 152,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 191,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "KID-02"
+    },
+    {
+      "id": "study-cabinet",
+      "room_id": "study",
+      "name": "書房收納櫃（用途待定）",
+      "bounds_pt": [
+        273.36,
+        266.68,
+        307.44,
+        283.72
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 120,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "原 STUDY 右下櫃旋轉 180° 移入，寬 120 cm 原有標註，深約 60 cm。用途與內部分區待定。",
+      "status": "user-design",
+      "code": "STD-01"
+    },
+    {
+      "id": "study-desk",
+      "room_id": "study",
+      "name": "書房書桌",
+      "bounds_pt": [
+        273.36,
+        283.72,
+        287.64,
+        348.88
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 230,
+          "status": "fit"
+        },
+        "d": {
+          "cm": 50,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "依使用者授權配適新書房：原長 240 cm 改為約 230 cm（內深約 290 − 櫃深約 60）；桌深約 50 cm。櫃體保留原尺寸，桌高、窗台高度與開窗方式待現場核對。",
+      "status": "user-design",
+      "code": "STD-02",
+      "provenance_note": "Physical source face drawing129 x405.72; x400.8 is dimension extension line. Source desk bounds[405.72,144.76,420,212.8]. Target[273.36,283.72,287.64,348.88]."
+    },
+    {
+      "id": "guest-wardrobe",
+      "room_id": "guest",
+      "name": "客房衣櫃",
+      "bounds_pt": [
+        385.92,
+        212.8,
+        420,
+        229.84
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 120,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "依使用者要求，複製小孩房衣櫃並左右鏡像，尺寸同為 120 × 60 cm。",
+      "status": "user-design",
+      "code": "GST-01"
+    },
+    {
+      "id": "guest-bed",
+      "room_id": "guest",
+      "name": "客房床",
+      "bounds_pt": [
+        363,
+        153.28,
+        417.12,
+        196.36
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 152,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 191,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "小孩房床符號左右鏡像複製。圖面占位約 152 × 191 cm，實物尺寸待提供。",
+      "status": "user-design",
+      "code": "GST-02"
+    },
+    {
+      "id": "kitchen-sink",
+      "code": "KIT-05",
+      "room_id": "kitchen",
+      "name": "水槽",
+      "bounds_pt": [
+        462.36,
+        336.28,
+        479.52,
+        350.56
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 61,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 50,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "原圖水槽完整符號外框約 61 × 50 cm。實際盆體與開孔尺寸待選型。",
+      "status": "scaled-symbol"
+    },
+    {
+      "id": "kitchen-hob",
+      "code": "KIT-06",
+      "room_id": "kitchen",
+      "name": "瓦斯爐",
+      "bounds_pt": [
+        497.64,
+        337.24,
+        518.88,
+        349.12
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 75,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 42,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "原圖瓦斯爐完整符號外框約 75 × 42 cm；不是已購爐具尺寸。",
+      "status": "scaled-symbol"
+    },
+    {
+      "id": "appliance-tower",
+      "code": "KIT-07",
+      "room_id": "kitchen",
+      "name": "電器高櫃",
+      "bounds_pt": [
+        460.2,
+        333.28,
+        479.52,
+        351.76
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 68,
+          "status": "design"
+        },
+        "d": {
+          "cm": 65,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "B 方案原水槽段的暫定占位約 68 × 65 cm，非定案櫃寬深。到天花板的高度待量；三層可拉出：下層電鍋、中層微波爐、上層氣炸鍋，底部封閉收納。",
+      "status": "user-design",
+      "onlyLayouts": [
+        "window-sink"
+      ]
+    }
+  ],
+  "source_dimensions": [
+    {
+      "id": "kid-wardrobe-width",
+      "cm": 120,
+      "endpoints_pt": [
+        [
+          273.36,
+          207.76
+        ],
+        [
+          307.44,
+          207.76
+        ]
+      ],
+      "pt": 34.079999999999984,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kid-wardrobe-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          313.2,
+          212.8
+        ],
+        [
+          313.2,
+          229.84
+        ]
+      ],
+      "pt": 17.039999999999992,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "guest-original-cabinet-width",
+      "cm": 120,
+      "endpoints_pt": [
+        [
+          385.92,
+          208.72
+        ],
+        [
+          420,
+          208.72
+        ]
+      ],
+      "pt": 34.079999999999984,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-1-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          196.8,
+          256.96
+        ],
+        [
+          213.84,
+          256.96
+        ]
+      ],
+      "pt": 17.039999999999992,
+      "cm_per_pt": 3.521126760563382,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-1-width",
+      "cm": 90,
+      "endpoints_pt": [
+        [
+          219.84,
+          263.8
+        ],
+        [
+          219.84,
+          289.36
+        ]
+      ],
+      "pt": 25.560000000000002,
+      "cm_per_pt": 3.52112676056338,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-2-depth",
+      "cm": 60,
+      "endpoints_pt": [
+        [
+          250.68,
+          256.96
+        ],
+        [
+          267.72,
+          256.96
+        ]
+      ],
+      "pt": 17.04000000000002,
+      "cm_per_pt": 3.521126760563376,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "master-wardrobe-2-width",
+      "cm": 90,
+      "endpoints_pt": [
+        [
+          242.28,
+          263.8
+        ],
+        [
+          242.28,
+          289.36
+        ]
+      ],
+      "pt": 25.560000000000002,
+      "cm_per_pt": 3.52112676056338,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "guest-original-desk-length",
+      "cm": 240,
+      "endpoints_pt": [
+        [
+          400.8,
+          144.76
+        ],
+        [
+          400.8,
+          212.8
+        ]
+      ],
+      "pt": 68.04000000000002,
+      "cm_per_pt": 3.527336860670193,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "living-cabinet-length",
+      "cm": 190,
+      "endpoints_pt": [
+        [
+          425.64,
+          259
+        ],
+        [
+          479.52,
+          259
+        ]
+      ],
+      "pt": 53.879999999999995,
+      "cm_per_pt": 3.526354862657758,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "piano-length",
+      "cm": 130,
+      "endpoints_pt": [
+        [
+          504,
+          259.36
+        ],
+        [
+          540.84,
+          259.36
+        ]
+      ],
+      "pt": 36.84000000000003,
+      "cm_per_pt": 3.5287730727470112,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "tv-console-length",
+      "cm": 240,
+      "endpoints_pt": [
+        [
+          565.68,
+          185.92
+        ],
+        [
+          565.68,
+          253.96
+        ]
+      ],
+      "pt": 68.04000000000002,
+      "cm_per_pt": 3.527336860670193,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "tv-upper-space",
+      "cm": 50,
+      "endpoints_pt": [
+        [
+          565.8,
+          171.64
+        ],
+        [
+          565.8,
+          185.92
+        ]
+      ],
+      "pt": 14.280000000000001,
+      "cm_per_pt": 3.501400560224089,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "living-right-length",
+      "cm": 387.5,
+      "endpoints_pt": [
+        [
+          604.92,
+          171.64
+        ],
+        [
+          604.92,
+          281.56
+        ]
+      ],
+      "pt": 109.92000000000002,
+      "cm_per_pt": 3.5252911208151376,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kitchen-upper-worktop-length",
+      "cm": 167.5,
+      "endpoints_pt": [
+        [
+          503.52,
+          307.6
+        ],
+        [
+          551.04,
+          307.6
+        ]
+      ],
+      "pt": 47.51999999999998,
+      "cm_per_pt": 3.524831649831651,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "kitchen-span",
+      "cm": 320.5,
+      "endpoints_pt": [
+        [
+          460.2,
+          328.84
+        ],
+        [
+          551.04,
+          328.84
+        ]
+      ],
+      "pt": 90.83999999999997,
+      "cm_per_pt": 3.528181417877588,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "entry-clear-width",
+      "cm": 110,
+      "endpoints_pt": [
+        [
+          553.2,
+          292.12
+        ],
+        [
+          584.4,
+          292.12
+        ]
+      ],
+      "pt": 31.199999999999932,
+      "cm_per_pt": 3.5256410256410335,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    },
+    {
+      "id": "piano-tv-slant-clearance",
+      "cm": 111.9,
+      "endpoints_pt": null,
+      "pt": null,
+      "cm_per_pt": null,
+      "status": "source-annotated",
+      "note": "Dimension numerals are vector outlines, visually read at 5x rendering; source appears to use mm. Converted to cm."
+    }
+  ],
+  "changes": [
+    {
+      "id": "C01",
+      "text": "BEDROOM 2 → KID ROOM；保留原配置。"
+    },
+    {
+      "id": "C02",
+      "text": "原 STUDY → GUEST ROOM；配置改用小孩房左右鏡像，增加同尺寸衣櫃。"
+    },
+    {
+      "id": "C03",
+      "text": "BEDROOM 3 → STUDY；原 STUDY 室內配置旋轉 180° 搬入，書桌依新房深由 240 cm 調為約 230 cm。"
+    },
+    {
+      "id": "C04",
+      "text": "刪除頁首標語與單位展示區，首屏優先顯示平面圖。"
+    },
+    {
+      "id": "C05",
+      "text": "廚房加入 A 原配置與 B 窗下水槽／右端瓦斯爐／電器高櫃方案，版本各自保存筆記。"
+    },
+    {
+      "id": "C06",
+      "text": "repo 為共用版本來源；Mac mini 的 agent 修改、預覽、commit／push 後發佈。瀏覽器編輯明確區分為本機草稿。"
+    }
+  ],
+  "measurement_policy": {
+    "unit": "cm",
+    "basis": "所有房間以新格局內牆面／窗室內側線為基準；尺寸包含櫃體占位，非全部可用淨空。",
+    "scaled": "≈ 為 PDF 等比讀值，取整 cm；無現場誤差保證。",
+    "annotated": "原標：圖上明示的 mm 已除以 10 換算 cm；同一物件其他軸仍可能是估算。",
+    "fit": "配適：依使用者授權的新配置設計值，非實物量測。",
+    "actual": "品牌、型號、寬、深、高皆待使用者提供；不得以圖面符號冒充實物尺寸。",
+    "calibration": "按 1:100 對應 3.52778 cm/pt；16 項可用標註最小平方結果 3.52592 cm/pt。Summary 5 m 比例尺獨立校準，5 條外牆跨度差 0.29%–0.77%。",
+    "scope": "主臥與客餐廳為不規則區域，按分區尺寸記錄。未以外包矩形推算面積。"
+  },
+  "roomVersions": {
+    "kitchen": [
+      {
+        "id": "kitchen-current",
+        "name": "A · 目前配置",
+        "baseId": "kitchen-current",
+        "layout": "original",
+        "createdAt": "2026-10-16T00:00:00+08:00",
+        "notes": {
+          "檯面品牌／代碼": "",
+          "檯面顏色": "",
+          "Laminate 品牌／代碼": "",
+          "Laminate 顏色": "",
+          "冰箱型號與實際尺寸": "",
+          "洗烘衣機型號與實際尺寸": "",
+          "設計備註": "上檯面長 167.5 cm；下檯面跨度 320.5 cm。中間淨走道約 110 cm。",
+          "方案配置": "保留原圖：左側水槽、右側瓦斯爐，中間為對外窗。右側為廚房門。",
+          "水槽與瓦斯爐": "目前配置的圖面占位，實物型號與開孔尺寸待提供。"
+        },
+        "objectOverrides": {}
+      },
+      {
+        "id": "kitchen-window-sink",
+        "name": "B · 窗下水槽＋電器高櫃",
+        "baseId": "kitchen-window-sink",
+        "layout": "window-sink",
+        "createdAt": "2026-10-16T00:00:00+08:00",
+        "notes": {
+          "檯面品牌／代碼": "",
+          "檯面顏色": "",
+          "Laminate 品牌／代碼": "",
+          "Laminate 顏色": "",
+          "冰箱型號與實際尺寸": "",
+          "洗烘衣機型號與實際尺寸": "",
+          "設計備註": "位置為方案示意；櫃寬深、爐具定位、窗台／龍頭高度與電器使用淨空仍待定。",
+          "方案配置": "水槽移到下方中間外窗位；瓦斯爐移到下檯面右端，靠右側門邊。右側門與原固定開口保留。",
+          "電器高櫃": "原水槽位置做至天花板電器櫃；三個可拉出層：下層電鍋、中層微波爐、上層氣炸鍋；底部封閉收納。",
+          "櫃高／每層淨高": "待現場量測與電器型號。",
+          "女傭房動線": "本版將水槽操作區移離女傭房門口；依使用者指示，開門弧暫不納入檢查。"
+        },
+        "objectOverrides": {
+          "kitchen-sink": {
+            "bounds_pt": [
+              479.4,
+              336.28,
+              496.56,
+              350.56
+            ]
+          },
+          "kitchen-hob": {
+            "bounds_pt": [
+              527.52,
+              337.24,
+              548.76,
+              349.12
+            ]
+          },
+          "appliance-tower": {
+            "bounds_pt": [
+              460.2,
+              333.28,
+              479.52,
+              351.76
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

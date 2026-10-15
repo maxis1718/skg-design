@@ -1,0 +1,458 @@
+{
+  "source": "Floor plan scale.pdf",
+  "page": 1,
+  "coordinate_system": "PDF points, top-left origin",
+  "scale_cm_per_pt": 3.5277777777777777,
+  "spaces": [
+    {
+      "id": "master-balcony",
+      "source_label": "BALCONY",
+      "polygon_pt": [
+        [
+          188.4,
+          136.84
+        ],
+        [
+          264.84,
+          136.84
+        ],
+        [
+          264.84,
+          174.52
+        ],
+        [
+          259.2,
+          174.52
+        ],
+        [
+          259.2,
+          181.6
+        ],
+        [
+          188.4,
+          181.6
+        ]
+      ],
+      "bounds_pt": [
+        188.4,
+        136.84,
+        264.84,
+        181.6
+      ],
+      "parts": [
+        {
+          "label": "overall internal spans; irregular notch at lower right",
+          "bounds_pt": [
+            188.4,
+            136.84,
+            264.84,
+            181.6
+          ],
+          "horizontal_cm": 269.7,
+          "vertical_cm": 157.9
+        },
+        {
+          "label": "rectangular portion before lower-right notch",
+          "bounds_pt": [
+            188.4,
+            136.84,
+            264.84,
+            174.52
+          ],
+          "horizontal_cm": 269.7,
+          "vertical_cm": 132.9
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Approx270cm wide x158cm maximum depth. Notched corner excluded. Bottom window balcony-facing line181.6 used, outer sill/room-face185.92 excluded."
+    },
+    {
+      "id": "living-balcony",
+      "source_label": "BALCONY",
+      "polygon_pt": [
+        [
+          428.4,
+          120.64
+        ],
+        [
+          584.4,
+          120.64
+        ],
+        [
+          584.4,
+          167.44
+        ],
+        [
+          557.88,
+          167.44
+        ],
+        [
+          557.88,
+          168.88
+        ],
+        [
+          533.76,
+          168.88
+        ],
+        [
+          533.76,
+          170.2
+        ],
+        [
+          509.28,
+          170.2
+        ],
+        [
+          484.8,
+          170.2
+        ],
+        [
+          484.8,
+          168.88
+        ],
+        [
+          460.56,
+          168.88
+        ],
+        [
+          460.56,
+          167.44
+        ],
+        [
+          434.52,
+          167.44
+        ],
+        [
+          434.52,
+          160.36
+        ],
+        [
+          428.4,
+          160.36
+        ]
+      ],
+      "bounds_pt": [
+        428.4,
+        120.64,
+        584.4,
+        170.2
+      ],
+      "parts": [
+        {
+          "label": "main internal width and conservative nominal depth",
+          "bounds_pt": [
+            428.4,
+            120.64,
+            584.4,
+            167.44
+          ],
+          "horizontal_cm": 550.3,
+          "vertical_cm": 165.1
+        },
+        {
+          "label": "upper fully rectangular clear band",
+          "bounds_pt": [
+            428.4,
+            120.64,
+            584.4,
+            160.36
+          ],
+          "horizontal_cm": 550.3,
+          "vertical_cm": 140.1
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "About550cm wide x165cm nominal depth; sliding glass boundary steps outward toward centre to170.2pt, increasing central depth about10cm. Left structural post/return at x428.4–434.52,y160.36–167.44 excluded. Boundary traced to balcony-facing window edges; decorative glass frame thickness not counted as floor."
+    },
+    {
+      "id": "bath1",
+      "source_label": "BATH 1",
+      "polygon_pt": [
+        [
+          220.92,
+          295
+        ],
+        [
+          249.24,
+          295
+        ],
+        [
+          249.24,
+          289.36
+        ],
+        [
+          266.28,
+          289.36
+        ],
+        [
+          266.28,
+          351.04
+        ],
+        [
+          185.52,
+          351.04
+        ],
+        [
+          185.52,
+          322.12
+        ],
+        [
+          202.56,
+          322.12
+        ],
+        [
+          202.56,
+          318.52
+        ],
+        [
+          197.52,
+          318.52
+        ],
+        [
+          197.52,
+          295
+        ]
+      ],
+      "bounds_pt": [
+        185.52,
+        289.36,
+        266.28,
+        351.04
+      ],
+      "parts": [
+        {
+          "label": "lower main width and length including vanity footprint",
+          "bounds_pt": [
+            197.52,
+            295,
+            266.28,
+            351.04
+          ],
+          "horizontal_cm": 242.6,
+          "vertical_cm": 197.7
+        },
+        {
+          "label": "lower wet zone extension",
+          "bounds_pt": [
+            185.52,
+            322.12,
+            252.12,
+            351.04
+          ],
+          "horizontal_cm": 234.9,
+          "vertical_cm": 102.0
+        },
+        {
+          "label": "full vertical span at vanity/right side",
+          "bounds_pt": [
+            249.24,
+            289.36,
+            266.28,
+            351.04
+          ],
+          "horizontal_cm": 60.1,
+          "vertical_cm": 217.6
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "Irregular en-suite. Main lower envelope≈243x198cm, lower left wet-zone extension adds≈42cm horizontal. Maximum total bounds≈285x218cm are NOT a rectangular room. Top right return below wardrobe begins289.36; main WC band begins295. Sliding division between dressing and WC represented with conceptual threshold295. Shapes and openings make exact usable-floor-area inappropriate without site verification."
+    },
+    {
+      "id": "bath2",
+      "source_label": "BATH 2",
+      "polygon_pt": [
+        [
+          366.12,
+          266.68
+        ],
+        [
+          393.72,
+          266.68
+        ],
+        [
+          393.72,
+          292.24
+        ],
+        [
+          420,
+          292.24
+        ],
+        [
+          420,
+          322.6
+        ],
+        [
+          349.92,
+          322.6
+        ],
+        [
+          349.92,
+          274.48
+        ],
+        [
+          366.12,
+          274.48
+        ]
+      ],
+      "bounds_pt": [
+        349.92,
+        266.68,
+        420,
+        322.6
+      ],
+      "parts": [
+        {
+          "label": "overall interior spans; upper right structural cutout excluded",
+          "bounds_pt": [
+            349.92,
+            266.68,
+            420,
+            322.6
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 197.3
+        },
+        {
+          "label": "lower full-width zone",
+          "bounds_pt": [
+            349.92,
+            292.24,
+            420,
+            322.6
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 107.1
+        },
+        {
+          "label": "upper central passage",
+          "bounds_pt": [
+            366.12,
+            266.68,
+            393.72,
+            292.24
+          ],
+          "horizontal_cm": 97.4,
+          "vertical_cm": 90.2
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "About247cm maximum width x197cm maximum depth, irregular L shape. Upper left projection349.92–366.12/y266.68–274.48 and upper right shaft393.72–420/y266.68–292.24 excluded. Main lower zone≈247x107cm; do not label full bounds as a rectangle."
+    },
+    {
+      "id": "ac-ledge-west",
+      "source_label": "A/C LEDGE",
+      "polygon_pt": [
+        [
+          150.84,
+          204.52
+        ],
+        [
+          179.16,
+          204.52
+        ],
+        [
+          179.16,
+          354.52
+        ],
+        [
+          150.84,
+          354.52
+        ]
+      ],
+      "bounds_pt": [
+        150.84,
+        204.52,
+        179.16,
+        354.52
+      ],
+      "parts": [
+        {
+          "label": "principal internal rectangle",
+          "bounds_pt": [
+            150.84,
+            204.52,
+            179.16,
+            354.52
+          ],
+          "horizontal_cm": 99.9,
+          "vertical_cm": 529.2
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "About100x529cm principal internal dimensions. Uses outer ledge inner railing face150.84 and building wall exterior face179.16. Bathroom window reveal325.6–346.84 not added to usable ledge width. No access/structural/load conclusion inferred."
+    },
+    {
+      "id": "ac-ledge-south",
+      "source_label": "A/C LEDGE",
+      "polygon_pt": [
+        [
+          349.92,
+          326.92
+        ],
+        [
+          420,
+          326.92
+        ],
+        [
+          420,
+          353.44
+        ],
+        [
+          349.92,
+          353.44
+        ]
+      ],
+      "bounds_pt": [
+        349.92,
+        326.92,
+        420,
+        353.44
+      ],
+      "parts": [
+        {
+          "label": "principal internal rectangle",
+          "bounds_pt": [
+            349.92,
+            326.92,
+            420,
+            353.44
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 93.6
+        }
+      ],
+      "status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": "About247x94cm. Bathroom wall outside face326.92 and bottom inner railing face353.44 used. Small right-side building recess not included."
+    }
+  ],
+  "study_fit_verification": {
+    "status": "authorized-design-fit",
+    "cabinet_bounds_pt": [
+      273.36,
+      266.68,
+      307.44,
+      283.72
+    ],
+    "desk_bounds_pt": [
+      273.36,
+      283.72,
+      287.64,
+      348.88
+    ],
+    "cabinet_frontage_cm": 120,
+    "cabinet_depth_cm": 60,
+    "desk_length_cm": 229.9,
+    "desk_depth_cm": 50.4,
+    "desk_original_annotated_length_cm": 240,
+    "desk_length_change_cm": -10.1,
+    "notes": "Validated against physical drawing129: actual original desk depth50.4cm. Cabinet120x60cm remains unscaled. Authorized proposed desk230x50cm exactly meets cabinet at283.72 and room-facing window at348.88 without footprint spill. Chairs retain rigid x=693.36−x,y=496.52−y.",
+    "window_check": "Desk is flush with new Study window line348.88. Zero horizontal gap is intentional geometrically, but desk height, sill height, opening direction, curtain track and handle clearance are unknown; actual obstruction cannot be verified from plan. No footprint penetrates window frame.",
+    "door_check": "Source Bedroom3 door startsx315.96. Cabinet ends307.44 (30cm before jamb) and corrected desk ends287.64 (100cm before jamb). No footprint/door swing intersection. Chair object bounds should be checked individually after transform."
+  }
+}
