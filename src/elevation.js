@@ -69,7 +69,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     const y0 = oy + b.y0, ix = ox + sd, iw = u.w - 2 * sd;
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
-    if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); continue; }
+    if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
     if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); continue; }
     if (b.kind === 'worktop') { g.rect(ox, y0, u.w, b.h, {fill:C.stone, stroke:C.line, 'stroke-width':.25}); continue; }
     if (b.kind === 'builtin') {
@@ -91,8 +91,9 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
       continue;
     }
     if (b.kind === 'hang') {
-      const rail = oy + b.rail, gl = b.garments?.len ?? 90, n = b.garments?.count ?? 8;
+      const rail = oy + b.rail, n = b.garments?.count ?? 8, lens = b.garments?.lens;
       for (let i = 0; i < n; i++) {
+        const gl = lens?.length ? lens[i % lens.length] : (b.garments?.len ?? 90);
         const cx = ix + 4 + (i + .5) * ((iw - 8) / n), wv = Math.min(4.2, (iw - 8) / n * .55);
         g.path(`M${cx} ${g.Y(rail)}v3.2`, {stroke:C.thin, 'stroke-width':.25, fill:'none'});
         g.rect(cx - wv / 2, rail - 3.2 - gl, wv, gl, {fill:C.garment, stroke:'#9db0a3', 'stroke-width':.2, rx:1.2});
@@ -108,10 +109,11 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   for (const fr of u.fronts || []) {
     const y0 = oy + fr.from, h = fr.to - fr.from;
     const dashed = state === 'open' && fr.kind !== 'drawer';
-    for (const lf of frontLeaves(u, fr)) {
+    frontLeaves(u, fr).forEach((lf, li) => {
       const x = ox + lf.x;
       if (dashed) {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+        if (fr.swing) swingLeaf(g, fr, lf, li, x, y0, h, labels);
       } else if (fr.kind === 'drawer' || fr.kind === 'pullout') {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
@@ -121,14 +123,42 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
         g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
         const hy = Math.min(Math.max(y0 + 4, 100), y0 + h - 14), handleX = lf.hinge === 'L' ? x + lf.w - 1.6 : x + 1;
         g.rect(handleX, hy, .6, Math.min(12, h * .4), {fill:C.thin, stroke:'none', rx:.3});
+        // Concealed hinge cups (behind the closed leaf), drawn faint on the hinge edge.
+        for (const hm of fr.hingeMarks?.[li] || []) g.rect(lf.hinge === 'L' ? x + .6 : x + lf.w - 4.1, hm - 1.75, 3.5, 3.5, {fill:'none', stroke:C.faint, 'stroke-width':.25, rx:1.75});
       }
-    }
+    });
     if (fr.label && !dashed && labels) {
       if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
       else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74)});
     }
   }
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
+}
+
+// Opened door leaf seen at ~120°: a foreshortened quad outside the carcass showing its inner face.
+// fr.swing = {k: projection ratio, mirror: {leaf, from, to, inHinge, inFree, label}}; fr.hingeMarks[i] = hinge heights.
+function swingLeaf(g, fr, lf, li, x, y0, h, labels) {
+  const k = fr.swing.k ?? .38, p = lf.w * k, s = h * .035, dir = lf.hinge === 'L' ? -1 : 1;
+  const xh = lf.hinge === 'L' ? x : x + lf.w;
+  const P = (u, v) => [xh + dir * p * u, y0 + s * u + v * (h - 2 * s * u)];
+  const quad = (u0, u1, v0, v1) => { const pts = [P(u0, v0), P(u1, v0), P(u1, v1), P(u0, v1)]; return 'M' + pts.map(([px, py]) => `${+px.toFixed(2)} ${+g.Y(py).toFixed(2)}`).join('L') + 'Z'; };
+  g.path(quad(0, 1, 0, 1), {fill:C.front, stroke:C.line, 'stroke-width':.35});
+  for (const hm of fr.hingeMarks?.[li] || []) { const [cx, cy] = P(2.2 / lf.w, (hm - y0) / h); g.out.push(`<ellipse cx="${+cx.toFixed(2)}" cy="${+g.Y(cy).toFixed(2)}" rx="${+(1.75 * k).toFixed(2)}" ry="1.75" fill="#fff" stroke="${C.thin}" stroke-width=".25"/>`); }
+  const m = fr.swing.mirror;
+  if (m && m.leaf === li) {
+    const u0 = (m.inHinge ?? 7) / lf.w, u1 = 1 - (m.inFree ?? 4) / lf.w, v0 = (m.from - y0) / h, v1 = (m.to - y0) / h;
+    g.path(quad(u0, u1, v0, v1), {fill:'#d6e6ec', stroke:'#7d9aa5', 'stroke-width':.35});
+    for (const [a, b] of [[.2, .38], [.3, .44]]) { const [ax, ay] = P(u0 + (u1 - u0) * .25, v0 + (v1 - v0) * a), [bx, by] = P(u0 + (u1 - u0) * .75, v0 + (v1 - v0) * b); g.path(`M${+ax.toFixed(2)} ${+g.Y(ay).toFixed(2)}L${+bx.toFixed(2)} ${+g.Y(by).toFixed(2)}`, {stroke:'#ffffff', 'stroke-width':.6, fill:'none'}); }
+    if (labels) { const [lx, ly] = P((u0 + u1) / 2, (v0 + v1) / 2); g.vtext(lx + g.f * .26, ly, m.label || T('鏡面'), {fill:'#4f6d78', 'font-size':g.f * .72}); }
+  }
+}
+
+// LED strip under a board (shelf underside); glows when the doors are open (door-contact switch).
+function ledStrip(g, b, ix, iw, y0, state, detail) {
+  const L = b.led, x0 = ix + 1.5, x1 = ix + iw - 1.5;
+  if (state === 'open') g.path(`M${x0} ${g.Y(y0 - .8)}L${x1} ${g.Y(y0 - .8)}L${x1 + 2} ${g.Y(y0 - (L.glow ?? 26))}L${x0 - 2} ${g.Y(y0 - (L.glow ?? 26))}Z`, {fill:'#fbe7a1', opacity:.38, stroke:'none'});
+  g.rect(x0, y0 - .8, x1 - x0, .8, {fill:state === 'open' ? '#e8b923' : '#c9b98a', stroke:'none', rx:.3});
+  if (detail && state === 'open') g.text(ix + iw / 2, y0 - g.f * .95, L.label || T('感應燈'), {'text-anchor':'middle', fill:'#9a7413', 'font-size':g.f * .7});
 }
 
 function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
