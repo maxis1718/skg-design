@@ -11,6 +11,8 @@ const C = {
   stone:'#c9c5bb', glass:'#e3edf0', level:'#8fa197', steel:'#e4e6e2', dark:'#4b5751'
 };
 let T = s => s;
+// Current door state while rendering; extras with `when: 'open'|'closed'` only draw in that state (interiors, sockets).
+let ST = 'closed';
 // Rough text width in em: CJK ≈ 1em, other ≈ 0.56em.
 const em = s => [...String(s)].reduce((w, ch) => w + (/[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]/.test(ch) ? 1 : .56), 0);
 const levelMargin = (view, f) => view.levels?.length ? Math.max(f * 6.2, Math.max(...view.levels.map(lv => em(`▽ ${fmt(lv.y)} ${lv.label || ''}`))) * f * .72 + f * .9) : f * 2;
@@ -64,9 +66,11 @@ function appliance(g, it, x, y, w, h, labels) {
 function drawUnit(g, u, ox, oy, state, detail, labels) {
   // board = shelf/carcass board thickness; side = side-panel thickness (defaults to board).
   const t = u.board ?? 1.8, sd = u.side ?? t, B = bands(u), sw = detail ? .35 : .3;
+  // sideL / sideR override one side panel (e.g. two sub-columns sharing one divider); default = side.
+  const sl = u.sideL ?? sd, sr = u.sideR ?? sd;
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:C.interior, stroke:'none'});
   for (const b of B) {
-    const y0 = oy + b.y0, ix = ox + sd, iw = u.w - 2 * sd;
+    const y0 = oy + b.y0, ix = ox + sl, iw = u.w - sl - sr;
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
@@ -86,7 +90,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
       continue;
     }
     if (b.kind === 'boxes' || b.kind === 'cabinet') {
-      for (const s of b.shelves || []) g.rect(ix, y0 + s, iw, t, {fill:C.board, stroke:'none'});
+      for (const s of b.shelves || []) g.rect(ix, y0 + s, iw, b.glass ? .8 : t, b.glass ? {fill:C.glass, stroke:'#9fb4ba', 'stroke-width':.2} : {fill:C.board, stroke:'none'});
       placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align, b.gap);
       continue;
     }
@@ -103,17 +107,27 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     }
   }
   if (!u.noCarcass) {
-    g.rect(ox, oy, sd, u.h, {fill:C.board, stroke:'none'});
-    g.rect(ox + u.w - sd, oy, sd, u.h, {fill:C.board, stroke:'none'});
+    g.rect(ox, oy, sl, u.h, {fill:C.board, stroke:'none'});
+    g.rect(ox + u.w - sr, oy, sr, u.h, {fill:C.board, stroke:'none'});
   }
   for (const fr of u.fronts || []) {
     const y0 = oy + fr.from, h = fr.to - fr.from;
-    const dashed = state === 'open' && fr.kind !== 'drawer';
+    // kind 'mirror' = fixed mirror panel (never opens); door + mirror:true = mirrored door leaf.
+    const dashed = state === 'open' && fr.kind !== 'drawer' && fr.kind !== 'mirror';
     frontLeaves(u, fr).forEach((lf, li) => {
       const x = ox + lf.x;
-      if (dashed) {
+      if (fr.kind === 'mirror') {
+        mirrorFace(g, x, y0 + .2, lf.w, h - .4, sw);
+      } else if (dashed) {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
-        if (fr.swing) swingLeaf(g, fr, lf, li, x, y0, h, labels);
+        // swing object (wardrobe): foreshortened open leaf; swing true (mirror cabinet): leaf seen edge-on outside its hinge.
+        if (fr.swing && typeof fr.swing === 'object') swingLeaf(g, fr, lf, li, x, y0, h, labels);
+        else if (fr.swing) g.rect(lf.hinge === 'L' ? x - 2.3 : x + lf.w, y0 + .2, 2.3, h - .4, {fill:fr.mirror ? C.glass : C.front, stroke:C.line, 'stroke-width':sw});
+      } else if (fr.mirror) {
+        mirrorFace(g, x, y0 + .2, lf.w, h - .4, sw);
+        const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
+        g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.thin, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+        g.rect(lf.hinge === 'L' ? fx - 7 : fx + 1, y0 + .2, 6, .7, {fill:C.dark, stroke:'none'});
       } else if (fr.kind === 'drawer' || fr.kind === 'pullout') {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
@@ -159,6 +173,42 @@ function ledStrip(g, b, ix, iw, y0, state, detail) {
   if (state === 'open') g.path(`M${x0} ${g.Y(y0 - .8)}L${x1} ${g.Y(y0 - .8)}L${x1 + 2} ${g.Y(y0 - (L.glow ?? 26))}L${x0 - 2} ${g.Y(y0 - (L.glow ?? 26))}Z`, {fill:'#fbe7a1', opacity:.38, stroke:'none'});
   g.rect(x0, y0 - .8, x1 - x0, .8, {fill:state === 'open' ? '#e8b923' : '#c9b98a', stroke:'none', rx:.3});
   if (detail && state === 'open') g.text(ix + iw / 2, y0 - g.f * .95, L.label || T('感應燈'), {'text-anchor':'middle', fill:'#9a7413', 'font-size':g.f * .7});
+}
+
+function mirrorFace(g, x, y, w, h, sw) {
+  g.rect(x, y, w, h, {fill:C.glass, stroke:C.line, 'stroke-width':sw});
+  const k = Math.min(w, h) * .35;
+  for (const d of [0, k * .45]) g.path(`M${x + w - k - d} ${g.Y(y + h - 1.5)}L${x + w - 1.5} ${g.Y(y + h - k - d)}`, {stroke:'#ffffff', 'stroke-width':.9, 'stroke-opacity':.9, fill:'none'});
+}
+
+// Hair dryer hung head-up (barrel axis left–right). e.x = centre, e.y = head top; cord runs to e.cord [x, y].
+function dryer(g, e) {
+  const hh = e.head ?? 7.7, hw = (e.headW ?? 9.8) / 2, total = e.h ?? 28.8, hb = e.y - total, cx = e.x;
+  if (e.cord) {
+    const [sx, sy] = e.cord;
+    const low = Math.min(hb, sy) - (e.sag ?? 12);
+    g.path(`M${cx} ${g.Y(hb)}C${cx} ${g.Y(low)} ${sx} ${g.Y(low)} ${sx} ${g.Y(sy)}`, {fill:'none', stroke:C.dark, 'stroke-width':.45});
+  }
+  if (e.profile) g.out.push(`<circle cx="${cx}" cy="${g.Y(e.y - hh / 2)}" r="${hh / 2}" fill="${C.steel}" stroke="${C.line}" stroke-width=".35"/>`);
+  else g.rect(cx - hw, e.y - hh, hw * 2, hh, {fill:C.steel, stroke:C.line, 'stroke-width':.35, rx:hh / 2.4});
+  g.rect(cx - 1.8, hb, 3.6, total - hh, {fill:C.steel, stroke:C.line, 'stroke-width':.35, rx:1.2});
+  g.rect(cx - (e.profile ? 3.6 : hw + 1), e.y - hh - 1, e.profile ? 7.2 : hw * 2 + 2, 1, {fill:C.dark, stroke:'none', rx:.4});
+}
+
+// Wall socket face at centre (x, y): kind 'shaver' = 2-pin shaver supply unit; otherwise 13A switched, `gang` 1 or 2.
+function socketMark(g, e) {
+  const gang = e.gang ?? 1, h = 8.6, w = e.kind === 'shaver' ? 8.6 : gang === 2 ? 14.6 : 8.6, x = e.x - w / 2, y = e.y - h / 2;
+  g.rect(x, y, w, h, {fill:'#fff', stroke:C.dim, 'stroke-width':.4, rx:.7});
+  if (e.kind === 'shaver') {
+    for (const dx of [-1.4, 1.4]) g.out.push(`<circle cx="${e.x + dx}" cy="${g.Y(e.y)}" r=".55" fill="${C.dark}"/>`);
+    return;
+  }
+  for (let i = 0; i < gang; i++) {
+    const cx = gang === 2 ? x + w * (i ? .72 : .28) : e.x;
+    g.rect(cx - .45, e.y - 2.4, .9, 1.8, {fill:C.dark, stroke:'none'});
+    for (const dx of [-1.9, 1.1]) g.rect(cx + dx, e.y + .4, .8, 1.6, {fill:C.dark, stroke:'none'});
+    g.rect(cx - .7, y + h - 2.6, 1.4, 1.8, {fill:'#c96f4a', stroke:'none', rx:.3});
+  }
 }
 
 function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
@@ -224,6 +274,41 @@ function levels(g, view, x0, x1) {
 function extras(g, list) {
   for (const e of list || []) {
     if (dryExtra(g, e)) continue;
+    if (e.when && e.when !== ST) continue;
+    if (e.type === 'dryer') { dryer(g, e); if (e.label) g.text(e.lx ?? e.x, e.ly ?? e.y + 1.4, e.label, {'text-anchor':e.anchor || 'middle', fill:C.line, 'font-size':g.f * (e.size || .62)}); continue; }
+    if (e.type === 'socket') { socketMark(g, e); if (e.label) g.text(e.x + (e.dx ?? 0), e.y - (e.size ?? 8.6) / 2 - g.f * .95, e.label, {'text-anchor':e.anchor || 'middle', fill:C.dim, 'font-size':g.f * (e.fs || .6)}); continue; }
+    if (e.type === 'vanity') {
+      // Context only: vanity / basin / tap drawn dashed (not part of this design).
+      const ds = {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.6 1.1'};
+      g.rect(e.x, e.y - e.top, e.w, e.top, {...ds, fill:'#f4f5f1'});
+      if (e.plinth) g.rect(e.x, 0, e.w, e.y - e.top, ds);
+      if (e.basin) {
+        const bx = e.basinX ?? e.x + (e.w - e.basin) / 2, bd = e.basinDepth ?? 12;
+        g.path(`M${bx} ${g.Y(e.y)}Q${bx + 2} ${g.Y(e.y - bd)} ${bx + e.basin / 2} ${g.Y(e.y - bd)}Q${bx + e.basin - 2} ${g.Y(e.y - bd)} ${bx + e.basin} ${g.Y(e.y)}`, ds);
+        const tx = e.tapX ?? bx + e.basin / 2, th = e.tap ?? 20, reach = e.tapReach ?? 0, ts = {fill:'#dfe2dd', stroke:C.line, 'stroke-width':.3};
+        g.rect(tx - 1.1, e.y, 2.2, th, ts);
+        if (reach) g.path(`M${tx} ${g.Y(e.y + th - 1)}h${reach}v2.6`, {fill:'none', stroke:C.line, 'stroke-width':.9});
+        else g.rect(tx - 3.2, e.y + th - 2.2, 6.4, 2.2, {...ts, rx:.8});
+        if (e.tapLabel) g.text(tx + Math.max(reach, 3.2) + 1.2, e.y + th - g.f * .5, e.tapLabel, {fill:C.thin, 'font-size':g.f * .56});
+      }
+      if (e.label) g.text(e.x + e.w / 2, (e.y - e.top) / 2, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .62});
+      if (e.sub) g.text(e.x + e.w / 2, (e.y - e.top) / 2 - g.f * 1.05, e.sub, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .54});
+      continue;
+    }
+    if (e.type === 'rect') {
+      g.rect(e.x, e.y, e.w, e.h, {fill:e.fill || 'none', stroke:e.stroke || C.thin, 'stroke-width':e.sw ?? .3, 'stroke-dasharray':e.dashed ? '1.4 1' : null, rx:e.rx});
+      if (e.label) g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:e.color || C.thin, 'font-size':g.f * (e.size || .62)});
+      continue;
+    }
+    if (e.type === 'led') { g.rect(e.x, e.y - .6, e.w, .6, {fill:'#f2c46b', stroke:'none'}); g.rect(e.x, e.y - 4.6, e.w, 4, {fill:'#f6dc9b', 'fill-opacity':.35, stroke:'none'}); continue; }
+    if (e.type === 'stand') {
+      // Dyson stand profile (simplified): base plate + upright + cradle.
+      g.rect(e.x - e.w / 2, e.y, e.w, 1.4, {fill:C.dark, stroke:'none', rx:.5});
+      g.rect(e.x - .9, e.y + 1.4, 1.8, e.h - 3, {fill:'#8a948e', stroke:'none'});
+      g.rect(e.x - e.w / 2 + 1, e.y + e.h - 1.6, e.w - 2, 1.6, {fill:'#8a948e', stroke:'none', rx:.6});
+      if (e.label) g.text(e.x, e.y - g.f * .95, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .54});
+      continue;
+    }
     if (e.type === 'window') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.glass, stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'2 1.2'});
       g.line(e.x + e.w / 2, e.y, e.x + e.w / 2, e.y + e.h, {stroke:C.faint, 'stroke-width':.25});
@@ -270,7 +355,7 @@ function extras(g, list) {
 
 // Dry-kitchen primitives: framed glass partition, countertop device, tap column, socket.
 function dryExtra(g, e) {
-  if (e.type === 'glass') {
+  if (e.type === 'dk-glass') {
     const fw = e.frame ?? 1.6, fr = {fill:'#2b2f2d', stroke:'none'};
     g.rect(e.x, e.y, e.w, e.h, {fill:C.glass, 'fill-opacity':.7, stroke:'none'});
     for (const k of [.18, .26]) g.line(e.x + e.w * k, e.y + e.h * .35, e.x + e.w * (k + .14), e.y + e.h * .7, {stroke:'#ffffff', 'stroke-width':.8, 'stroke-opacity':.8});
@@ -282,7 +367,7 @@ function dryExtra(g, e) {
     if (e.sub) g.text(e.x + e.w / 2, cy - g.f * 1.25, e.sub, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .64});
     return true;
   }
-  if (e.type === 'device') {
+  if (e.type === 'dk-device') {
     const dash = e.dashed ? {'stroke-dasharray':'1.4 1'} : {};
     if (e.shape === 'pot') {
       g.rect(e.x, e.y, e.w, e.h, {fill:'none', stroke:C.itemLine, 'stroke-width':.3, rx:1.2, ...dash});
@@ -300,7 +385,7 @@ function dryExtra(g, e) {
     if (e.sizeLabel) g.text(e.x + e.w / 2, e.y + (e.labelY ?? e.h / 2) - fs * 1.4, e.sizeLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .85});
     return true;
   }
-  if (e.type === 'tap') {
+  if (e.type === 'dk-tap') {
     // Slim tap column standing on the worktop; spout swings out at the top (reach toward +x).
     const head = Math.min(6, e.h * .2), reach = e.reach ?? 5;
     g.rect(e.x, e.y, e.w, e.h - head, {fill:'#fbfbf8', stroke:C.itemLine, 'stroke-width':.35, rx:1.2});
@@ -314,7 +399,7 @@ function dryExtra(g, e) {
     if (e.label) g.vtext(e.x + e.w / 2 + g.f * .22, e.y + (e.h - head) / 2, e.label, {fill:C.line, 'font-size':g.f * (e.size || .62)});
     return true;
   }
-  if (e.type === 'socket') {
+  if (e.type === 'dk-socket') {
     const w = 4.2, h = 2.8, x = e.x - w / 2;
     g.rect(x, e.y, w, h, {fill:'#fff', stroke:C.dim, 'stroke-width':.25, rx:.4, ...(e.dashed ? {'stroke-dasharray':'.8 .6'} : {})});
     for (const k of [.32, .68]) g.rect(x + w * k - .3, e.y + 1, .6, .9, {fill:C.dim, stroke:'none'});
@@ -438,6 +523,7 @@ function svg(vb, out, label) {
 
 function render(elev, viewId, state, translate) {
   T = typeof translate === 'function' ? translate : (s => s);
+  ST = state;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
   return view.kind === 'section' ? renderSection(elev, view, state) : renderFront(elev, view, state);
 }
