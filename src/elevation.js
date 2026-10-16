@@ -150,7 +150,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     });
     if (fr.label && !dashed && labels) {
       if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
-      else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74)});
+      else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74), 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
     }
   }
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});

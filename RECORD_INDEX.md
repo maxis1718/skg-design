@@ -20,10 +20,11 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | --- | --- | --- | --- |
 | LIV-01 | `living-cabinet` | 客餐廳櫃體（用途待定） | 190 × 60 |
 | LIV-02 | `piano` | 鋼琴 | 130 × 61 |
-| LIV-03 | `tv-console` | 電視櫃 | 240 × 40 |
-| LIV-04 | `sofa` | 沙發 | 195 × 80 |
+| LIV-03 | `tv-console` | 電視櫃（三抽） | 210 × 45 |
+| LIV-04 | `sofa` | 沙發 | 210 × 95 |
 | LIV-05 | `dining-table` | 餐桌 | 90 × 150 |
 | LIV-06 | `drying-rack` | 曬衣架（天花吊掛） | 40 × 113 |
+| LIV-07 | `living-tv` | Samsung The Frame 75" | 168.5 × 2.7 |
 | KIT-01 | `washer-dryer` | 洗烘衣機 W/D | 60 × 65 |
 | KIT-02 | `fridge` | 冰箱 F | 80 × 70 |
 | KIT-03 | `kitchen-upper-worktop` | Dry kitchen | 167.5 × 65 |
@@ -46,6 +47,10 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-08 | `dishwasher` | 洗碗機 | 60 × 60 |
 | KIT-09 | `spice-pullout` | 窄拉籃（三層 · 左） | 20 × 60 |
 | KIT-11 | `spice-pullout-r` | 窄拉籃（三層 · 右） | 20 × 60 |
+| KIT-21 | `coffee-machine` | 咖啡機（示意） | 8.4 × 33 |
+| KIT-22 | `water-purifier` | 淨水器 Wells The One | 8.8 × 8.8 |
+| BTH-01 | `bath1-mirror-cabinet` | 主浴洗手台＋鏡櫃 | ≈ 197.7 × 50 |
+| BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋鏡櫃 | ≈ 89.7 × 57.2 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
