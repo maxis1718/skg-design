@@ -2,7 +2,7 @@
 
 共用原始碼：[maxis1718/skg-design](https://github.com/maxis1718/skg-design)。2026-10-16 啟用 Pages 後確認 repo 為 public，原始碼與圖檔也可公開讀取。以 Git 保存設計與歷史，支援 Mac mini 上的 Codex／Claude 透過既有 Telegram 控制流程修改。
 
-目前版本 R03，2026-10-16。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
+目前版本 R04，2026-10-16。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
 
 ## 修改與預覽
 
@@ -44,6 +44,15 @@ npm run check
 3. BEDROOM 3 → STUDY；原 STUDY 家具配置旋轉 180° 移入。櫃體約 120 × 60 cm，桌長經授權由 240 配適為約 230 cm，深約 50 cm。
 4. 固定牆、門、窗沿用新格局來源，搬移的是室內配置。
 
+## 立面設計（R04）
+
+點選有立面的物件後，下方會出現「立面設計」：正立面／側剖面／整面牆脈絡，可切換關門／開門（拉出）。資料在 `src/project.json → elevations`，繪圖在 `src/elevation.js`。
+
+- 單位 cm，高度由完成地面往上量；天花暫以使用者提供的 280 計。
+- 每個 unit 的 `bands`（由下到上）高度總和必須等於 `h`，`npm run check` 會驗證。
+- 已建立：`appliance-tower`（B 方案電器高櫃）、`master-wardrobe-left`、`master-wardrobe-right`。
+- 立面是設計提案，不是原圖標註；電器尺寸為示意機型，實購型號仍記在 actual 欄位。
+
 ## 廚房方案
 
 `src/project.json → roomVersions.kitchen` 是方案來源；所有房間分頁都可從圖面工具列切換廚房方案。
@@ -69,6 +78,7 @@ python tools/records.py show object fridge
 | --- | --- |
 | `src/project.json` | 房間 polygon、物件尺寸／bbox、來源、實物資料、方案與筆記 |
 | `src/app.js` | 分頁、highlights、hover、版本切換與本機草稿 |
+| `src/elevation.js` | 立面圖（正立面／側剖面／牆面）SVG 繪製 |
 | `src/style.css` / `src/shell.html` | 外觀與結構 |
 | `src/plan-paths.svg` | 從 PDF 抽出的原始固定圖元，不手工重畫牆 |
 | `src/furniture-kid.svg` | 小孩房來源；客房鏡像共用 |

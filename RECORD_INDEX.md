@@ -49,3 +49,11 @@ Geometry edits:
 - Study rigid move: `tools/build.py`, `data-layout="study-rotated"`, matrix(-1,0,0,-1,693.36,496.52).
 - Study fitted desk face: `tools/build.py`, `data-layout="study-desk-fit"`, x287.64 / y283.72 to348.88. Original path129 omitted.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.
+
+## Elevations
+
+| Object | Views | Notes |
+| --- | --- | --- |
+| `appliance-tower` | 正立面 · 側剖面拉出 · 整面牆 | B 方案限定；5 區、Blum MOVENTO |
+| `master-wardrobe-left` | 正立面 · 兩櫃對照 | 2 外抽＋長掛＋上櫃收納盒 |
+| `master-wardrobe-right` | 正立面 · 兩櫃對照 | 3 外抽＋短掛＋摺衣層＋上櫃收納盒 |

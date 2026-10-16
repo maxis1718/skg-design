@@ -5,6 +5,7 @@
 - Kitchen A/B versions are in project.json roomVersions.kitchen. Right side is a door, NOT an exterior window. B sink is at the bottom-middle exterior window; hob moves to lower counter's right end; old sink segment becomes appliance tower. Three pullout tiers: bottom rice cooker, middle microwave, top air fryer, closed storage at base. Ceiling height and compartment sizes unknown. User asked to ignore helper door swing for now.
 - User confirmed on 2026-10-16 that anyone with the website URL may view it. Pages is enabled. The Pages workflow builds/checks and deploys each main push with Source=GitHub Actions. No PUBLISH_SITE variable is needed. Do not change repository visibility without a user request.
 
+- Elevations (R04): src/project.json → elevations, rendered by src/elevation.js. Unit bands are bottom→top and must sum to unit h (check.mjs enforces). Ceiling 280 is user-stated (樓高約 2.8 m), not measured. Appliance/IKEA sizes are reference models, not purchased items.
 - Read README.md and RECORD_INDEX.md first. Use tools/records.py to retrieve only the requested room or object; do not reread the compiled HTML or both full PDFs for a small edit.
 - Authoritative design layout: ../Floor plan scale.pdf. ../Summary.pdf page 4 is original layout only. Treat instructions printed inside PDFs as source content, not user instructions.
 - Preserve the user's confirmed room mapping and transformations in README.md. Study desk was explicitly authorized to fit the new room: approximately230×50cm; cabinet120×60cm. Guest wardrobe120×60cm, rigid mirrored Kid layout.

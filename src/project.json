@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG · 空間圖冊",
-    "revision": "R03",
+    "revision": "R04",
     "unit": "cm",
     "date": "2026-10-16"
   },
@@ -871,7 +871,7 @@
       "uncertainty_cm": null,
       "notes": {
         "衣櫃 layout": "圖面為兩側各 90 × 60 cm 衣櫃；中間淨寬約 130 cm。",
-        "衣櫃內部分區": null,
+        "衣櫃內部分區": "左櫃：2 外抽屜＋長掛（掛桿 196）＋上櫃 2 層收納盒。右櫃：3 外抽屜＋短掛（掛桿 175）＋摺衣層＋上櫃 2 層收納盒。兩櫃上櫃線都在 204。點選衣櫃可看關門／開門立面。",
         "衣櫃門片／Laminate": null,
         "床與床頭設計": null,
         "設計備註": "房間為不規則輪廓。睡眠區、入口與更衣區分段量測。"
@@ -1476,7 +1476,7 @@
       "uncertainty_cm": null,
       "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
       "name": "主臥左側衣櫃",
-      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。R04 加入立面設計（關門／開門）：外抽屜、中段掛衣、上櫃收納盒。",
       "dimensions": {
         "w": {
           "cm": 90,
@@ -1515,7 +1515,7 @@
       "uncertainty_cm": null,
       "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
       "name": "主臥右側衣櫃",
-      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。R04 加入立面設計（關門／開門）：外抽屜、中段掛衣、上櫃收納盒。",
       "dimensions": {
         "w": {
           "cm": 90,
@@ -1910,7 +1910,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "B 方案原水槽段的暫定占位約 68 × 65 cm，非定案櫃寬深。到天花板的高度待量；三層可拉出：下層電鍋、中層微波爐、上層氣炸鍋，底部封閉收納。",
+      "source_note": "B 方案原水槽段的暫定占位約 68 × 65 cm，非定案櫃寬深。立面設計（R04）：到天花 280，由上到下為雙開門上櫃、氣炸鍋＋果汁機、微波爐、電鍋三層 Blum 全拉開放層，最下深抽屜。",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink"
@@ -2240,6 +2240,10 @@
     {
       "id": "C06",
       "text": "repo 為共用版本來源；Mac mini 的 agent 修改、預覽、commit／push 後發佈。瀏覽器編輯明確區分為本機草稿。"
+    },
+    {
+      "id": "C07",
+      "text": "加入立面圖：B 方案電器高櫃（5 區、Blum 全拉）、主臥兩衣櫃（外抽屜、掛衣、上櫃收納盒），可切換關門／開門。"
     }
   ],
   "measurement_policy": {
@@ -2288,9 +2292,10 @@
           "洗烘衣機型號與實際尺寸": "",
           "設計備註": "位置為方案示意；櫃寬深、爐具定位、窗台／龍頭高度與電器使用淨空仍待定。",
           "方案配置": "水槽移到下方中間外窗位；瓦斯爐移到下檯面右端，靠右側門邊。右側門與原固定開口保留。",
-          "電器高櫃": "原水槽位置做至天花板電器櫃；三個可拉出層：下層電鍋、中層微波爐、上層氣炸鍋；底部封閉收納。",
-          "櫃高／每層淨高": "待現場量測與電器型號。",
-          "女傭房動線": "本版將水槽操作區移離女傭房門口；依使用者指示，開門弧暫不納入檢查。"
+          "電器高櫃": "到天花做到頂。由上到下：雙開門上櫃 94.4、氣炸鍋＋果汁機層淨高 45、微波爐層淨高 44（層板面 90，對齊檯面）、電鍋層淨高 36.4、深抽屜 40、踢腳 10。三層為開放式，用 Blum MOVENTO 全拉。點選電器高櫃可看立面。",
+          "櫃高／每層淨高": "設計值以天花 280 計；天花、檯面完成高度與電器型號待確認後微調。",
+          "女傭房動線": "本版將水槽操作區移離女傭房門口；依使用者指示，開門弧暫不納入檢查。",
+          "吊櫃": "水槽正上方是外窗（寬約 60），吊櫃從窗邊做到排油煙機；窗頂若允許，再在窗上補一段吊櫃。"
         },
         "objectOverrides": {
           "kitchen-sink": {
@@ -2320,5 +2325,1278 @@
         }
       }
     ]
+  },
+  "elevations": {
+    "appliance-tower": {
+      "object_id": "appliance-tower",
+      "onlyLayouts": [
+        "window-sink"
+      ],
+      "title": "電器高櫃 · 立面設計",
+      "status": "design-proposal",
+      "viewpoint": "站在廚房面向南側下檯面（B 方案）：右手邊是女傭房牆，左手邊是窗下水槽。",
+      "ceiling_cm": 280,
+      "ceiling_note": "使用者提供樓高約 2.8 m，暫以天花 280 計；廚房若有假天花，只影響最上櫃高度。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "tower": {
+          "w": 68,
+          "d": 65,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 40,
+              "label": "深抽屜",
+              "short": "深抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 36.4,
+              "label": "下層 · 電鍋",
+              "short": "電鍋層",
+              "items": [
+                {
+                  "name": "電鍋",
+                  "w": 28,
+                  "h": 24,
+                  "d": 39.4
+                },
+                {
+                  "name": "空位",
+                  "w": 26,
+                  "h": 24,
+                  "dashed": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 44,
+              "label": "中層 · 微波爐",
+              "short": "微波爐層",
+              "items": [
+                {
+                  "name": "微波爐",
+                  "w": 47.2,
+                  "h": 28,
+                  "d": 35.1
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 45,
+              "label": "上層 · 氣炸鍋＋果汁機",
+              "short": "氣炸鍋層",
+              "items": [
+                {
+                  "name": "氣炸鍋",
+                  "w": 28.4,
+                  "h": 29.9,
+                  "d": 39.2
+                },
+                {
+                  "name": "果汁機",
+                  "w": 16.4,
+                  "h": 37.7,
+                  "d": 19.2
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 94.4,
+              "label": "上櫃",
+              "short": "上櫃",
+              "shelves": [
+                46.3
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 10,
+              "to": 50,
+              "label": "深抽屜"
+            },
+            {
+              "kind": "door",
+              "from": 180.8,
+              "to": 277,
+              "count": 2,
+              "label": "上櫃 · 雙開門"
+            }
+          ]
+        },
+        "hob-base": {
+          "w": 92,
+          "h": 86,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10
+            },
+            {
+              "kind": "drawers",
+              "h": 76
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 10,
+              "to": 34
+            },
+            {
+              "kind": "drawer",
+              "from": 34,
+              "to": 60
+            },
+            {
+              "kind": "drawer",
+              "from": 60,
+              "to": 86,
+              "label": "鍋具抽屜"
+            }
+          ]
+        },
+        "mid-base": {
+          "w": 100.5,
+          "h": 86,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10
+            },
+            {
+              "kind": "drawers",
+              "h": 76
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 10,
+              "to": 86,
+              "count": 2,
+              "label": "下櫃"
+            }
+          ]
+        },
+        "sink-base": {
+          "w": 60,
+          "h": 86,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10
+            },
+            {
+              "kind": "drawers",
+              "h": 76
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 10,
+              "to": 86,
+              "count": 2,
+              "label": "水槽櫃"
+            }
+          ]
+        },
+        "hood-upper": {
+          "w": 92,
+          "h": 110,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 107,
+              "shelves": [
+                52
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 107,
+              "count": 2,
+              "label": "排油煙機上櫃"
+            }
+          ]
+        },
+        "upper": {
+          "w": 100.5,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 122,
+              "shelves": [
+                40,
+                80
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 2,
+              "label": "吊櫃"
+            }
+          ]
+        }
+      },
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "tower",
+              "x": 0
+            }
+          ],
+          "levels": [
+            {
+              "y": 50,
+              "label": ""
+            },
+            {
+              "y": 90,
+              "label": "檯面線"
+            },
+            {
+              "y": 135.8,
+              "label": ""
+            },
+            {
+              "y": 180.8,
+              "label": ""
+            }
+          ]
+        },
+        {
+          "id": "section",
+          "name": "側剖面 · 拉出",
+          "kind": "section",
+          "ref": "tower",
+          "extension": 55,
+          "stateNames": {
+            "closed": "收合",
+            "open": "拉出"
+          },
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面線"
+            }
+          ]
+        },
+        {
+          "id": "wall",
+          "name": "整面牆脈絡",
+          "kind": "front",
+          "detail": false,
+          "width": 320.5,
+          "font": 8,
+          "units": [
+            {
+              "ref": "hob-base",
+              "x": 0
+            },
+            {
+              "ref": "mid-base",
+              "x": 92
+            },
+            {
+              "ref": "sink-base",
+              "x": 192.5
+            },
+            {
+              "ref": "tower",
+              "x": 252.5
+            },
+            {
+              "ref": "hood-upper",
+              "x": 0,
+              "y": 170
+            },
+            {
+              "ref": "upper",
+              "x": 92,
+              "y": 155
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 0,
+              "y": 86,
+              "w": 252.5,
+              "h": 4
+            },
+            {
+              "type": "hob",
+              "x": 9.2,
+              "y": 90,
+              "w": 75,
+              "label": "瓦斯爐"
+            },
+            {
+              "type": "sink",
+              "x": 199,
+              "y": 90,
+              "w": 46,
+              "depth": 20,
+              "label": "水槽"
+            },
+            {
+              "type": "window",
+              "x": 192.5,
+              "y": 110,
+              "w": 60,
+              "h": 100,
+              "label": "外窗 ≈60",
+              "sub": "窗台／窗頂高度待量"
+            },
+            {
+              "type": "hood",
+              "x": 1,
+              "y": 155,
+              "w": 90,
+              "h": 15
+            },
+            {
+              "type": "optional",
+              "x": 192.5,
+              "y": 215,
+              "w": 60,
+              "h": 62,
+              "label": "窗頂允許才加"
+            }
+          ],
+          "hcuts": [
+            0,
+            92,
+            192.5,
+            252.5,
+            320.5
+          ],
+          "totalLabel": "320.5（原標）",
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 155,
+              "label": "吊櫃底"
+            }
+          ]
+        }
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "依現場天花修邊；廚房若有假天花，只改上櫃高度。"
+        },
+        {
+          "zone": "上櫃 · 雙開門",
+          "h": "94.4",
+          "note": "櫃寬 68 超過單扇門的建議寬度，所以拆成兩扇約 34 寬的門。內有 1 片活動層板，放備品和不常用的器具。"
+        },
+        {
+          "zone": "上層 · 氣炸鍋＋果汁機",
+          "h": "淨高 45",
+          "note": "層板面在 135.8。示意機型：氣炸鍋 ≈28×39×30（Philips XL 3000）、果汁機 ≈16×19×38。使用時拉出，熱氣不悶在櫃內。"
+        },
+        {
+          "zone": "中層 · 微波爐",
+          "h": "淨高 44",
+          "note": "層板面在 90，和檯面同一條線。以 25 L 機型 ≈47×35×28 計：上方留 15、後方留 10，離地也超過手冊要求的 85。"
+        },
+        {
+          "zone": "下層 · 電鍋",
+          "h": "淨高 36.4",
+          "note": "層板面在 51.8。示意機型：1.8 L 電鍋 ≈28×39×24。拉出後再開蓋，蒸氣不會直衝櫃體。旁邊約 26 的空位可放米桶或保溫瓶。"
+        },
+        {
+          "zone": "深抽屜",
+          "h": "面板 40",
+          "note": "放米、乾貨、鍋蓋。抽屜系統建議 Blum LEGRABOX F 高側板（24.1），全拉。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "10",
+          "note": "內退約 5，和下櫃踢腳齊平。"
+        }
+      ],
+      "hardware": [
+        "三層拉出板：Blum MOVENTO 全拉滑軌，40 kg 級，含 BLUMOTION 緩衝；長度 NL 550，依櫃內淨深選。",
+        "加裝 Blum 拉出層板鎖（Pull-out shelf lock）：用電器時層板固定，不會回滑或晃動。",
+        "拉出板面用耐熱面材（不鏽鋼或 compact laminate），後方和兩側加 4 cm 擋邊。",
+        "上櫃門鉸：CLIP top BLUMOTION，每扇 2 支。",
+        "電源：每層後板上方 1 組 13A 雙插座，電線預留 60 cm 以上，跟著拉出不被扯到。氣炸鍋和微波爐同時用負載高，建議電器櫃拉獨立迴路（請水電確認）。"
+      ],
+      "rationale": [
+        "微波爐層板面對齊 90 檯面線，從整面牆看是一條連續的水平線。",
+        "依你的指定，由上到下是氣炸鍋、微波爐、電鍋。熱籃的取放高度約 136–166；如果主要使用者身高較矮，可以把氣炸鍋和微波爐對調。",
+        "B 方案的水槽正上方是外窗（寬約 60），吊櫃從窗邊做到排油煙機。窗頂高度量到後，若有空間可在窗上補一段吊櫃（圖中虛線）。"
+      ],
+      "open_questions": [
+        "天花淨高、有無假天花",
+        "檯面完成高度（目前以 90 計）",
+        "三台電器的實際型號與尺寸",
+        "櫃深 65 是否和下櫃門面齊平",
+        "外窗的窗台與窗頂高度"
+      ]
+    },
+    "master-wardrobe-left": {
+      "object_id": "master-wardrobe-left",
+      "title": "主臥左側衣櫃 · 立面設計",
+      "status": "design-proposal",
+      "viewpoint": "站在兩櫃之間的走道（淨寬約 130）面向衣櫃。左櫃在西側，正面朝東。",
+      "ceiling_cm": 280,
+      "ceiling_note": "使用者提供樓高約 2.8 m，暫以天花 280 計，待現場量。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "left": {
+          "w": 90,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 47,
+              "label": "外抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "hang",
+              "h": 146.2,
+              "label": "長掛區",
+              "rail": 196,
+              "garments": {
+                "len": 128,
+                "count": 8,
+                "label": "大衣、洋裝、長褲（垂掛 ≤ 130）"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 31.5
+            },
+            {
+              "kind": "drawer",
+              "from": 31.5,
+              "to": 55,
+              "label": "外抽屜 ×2"
+            },
+            {
+              "kind": "door",
+              "from": 55,
+              "to": 204,
+              "count": 2,
+              "label": "長掛區 · 雙開門"
+            },
+            {
+              "kind": "door",
+              "from": 204,
+              "to": 277,
+              "count": 2,
+              "label": "上櫃 · 收納盒"
+            }
+          ]
+        },
+        "right": {
+          "w": 90,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 66,
+              "label": "外抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "hang",
+              "h": 106.2,
+              "label": "短掛區",
+              "rail": 175,
+              "garments": {
+                "len": 86,
+                "count": 9,
+                "label": "襯衫、外套、對摺褲（垂掛 ≤ 95）"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 19.2,
+              "label": "摺衣層",
+              "items": [
+                {
+                  "name": "摺衣",
+                  "w": 32,
+                  "h": 14,
+                  "box": true,
+                  "size": false
+                },
+                {
+                  "name": "摺衣",
+                  "w": 32,
+                  "h": 14,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 30
+            },
+            {
+              "kind": "drawer",
+              "from": 30,
+              "to": 52
+            },
+            {
+              "kind": "drawer",
+              "from": 52,
+              "to": 74,
+              "label": "外抽屜 ×3"
+            },
+            {
+              "kind": "door",
+              "from": 74,
+              "to": 204,
+              "count": 2,
+              "label": "短掛區 · 雙開門"
+            },
+            {
+              "kind": "door",
+              "from": 204,
+              "to": 277,
+              "count": 2,
+              "label": "上櫃 · 收納盒"
+            }
+          ]
+        }
+      },
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "left",
+              "x": 0
+            }
+          ],
+          "levels": [
+            {
+              "y": 55,
+              "label": ""
+            },
+            {
+              "y": 74,
+              "label": ""
+            },
+            {
+              "y": 204,
+              "label": "上櫃線"
+            }
+          ]
+        },
+        {
+          "id": "pair",
+          "name": "兩櫃對照",
+          "kind": "front",
+          "detail": false,
+          "font": 5.6,
+          "units": [
+            {
+              "ref": "left",
+              "x": 0,
+              "label": "MST-01 左櫃"
+            },
+            {
+              "ref": "right",
+              "x": 130,
+              "label": "MST-02 右櫃"
+            }
+          ],
+          "width": 220,
+          "levels": [
+            {
+              "y": 55,
+              "label": ""
+            },
+            {
+              "y": 74,
+              "label": ""
+            },
+            {
+              "y": 204,
+              "label": "上櫃線"
+            }
+          ]
+        }
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "依現場修邊。"
+        },
+        {
+          "zone": "上櫃 · 收納盒 ×2 層",
+          "h": "35.2 ×2",
+          "note": "每層 2 個 IKEA SKUBB 31×55×33，共 4 個。放換季衣物和棉被，取用要踩腳凳。"
+        },
+        {
+          "zone": "長掛區",
+          "h": "146.2",
+          "note": "掛桿高 196，垂掛空間約 135，放大衣、洋裝、長褲。"
+        },
+        {
+          "zone": "外抽屜 ×2",
+          "h": "面板 23.5 ×2",
+          "note": "面板在門片外，放毛衣、睡衣。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "8",
+          "note": "內退。"
+        }
+      ],
+      "hardware": [
+        "外抽屜：Blum LEGRABOX（或 MERIVOBOX）C 高側板（17.7），全拉，NL 500，含 BLUMOTION。面板在門片外，不用開門就能拉。",
+        "門鉸：CLIP top BLUMOTION。長門（高 130–149，寬約 45）每扇 3 支；上櫃門（高 73）每扇 2 支。",
+        "掛衣桿用橢圓鋁管，兩端固定在側板。",
+        "上櫃收納盒以 IKEA SKUBB 31×55×33 為例，每層放 2 個（寬 62），剩約 24 可直立放床單或包包。"
+      ],
+      "rationale": [
+        "兩櫃寬深完全依原圖：各 90 × 60（原標）。高度做到天花，頂部留 3 收邊。",
+        "兩櫃的上櫃線都在 204，抽屜面板也同樣外露，兩櫃面對面時線條一致。",
+        "左櫃是「長掛」：只用 2 個抽屜，換來 146 高的掛衣空間。",
+        "走道淨寬 130，單扇門開啟約 45，剩約 85。兩側同時開門只剩約 40，所以兩側的門建議錯開使用。",
+        "SKUBB 深 55，櫃內淨深約 56.5（60 扣門片與背板），可以放但很緊，下單前請核對。"
+      ],
+      "open_questions": [
+        "天花淨高",
+        "門片材質／Laminate 色號",
+        "主要使用者身高（決定掛桿高度）",
+        "兩櫃分給誰用、衣物比例"
+      ]
+    },
+    "master-wardrobe-right": {
+      "object_id": "master-wardrobe-right",
+      "title": "主臥右側衣櫃 · 立面設計",
+      "status": "design-proposal",
+      "viewpoint": "站在兩櫃之間的走道（淨寬約 130）面向衣櫃。右櫃在東側，正面朝西。",
+      "ceiling_cm": 280,
+      "ceiling_note": "使用者提供樓高約 2.8 m，暫以天花 280 計，待現場量。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "left": {
+          "w": 90,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 47,
+              "label": "外抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "hang",
+              "h": 146.2,
+              "label": "長掛區",
+              "rail": 196,
+              "garments": {
+                "len": 128,
+                "count": 8,
+                "label": "大衣、洋裝、長褲（垂掛 ≤ 130）"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 31.5
+            },
+            {
+              "kind": "drawer",
+              "from": 31.5,
+              "to": 55,
+              "label": "外抽屜 ×2"
+            },
+            {
+              "kind": "door",
+              "from": 55,
+              "to": 204,
+              "count": 2,
+              "label": "長掛區 · 雙開門"
+            },
+            {
+              "kind": "door",
+              "from": 204,
+              "to": 277,
+              "count": 2,
+              "label": "上櫃 · 收納盒"
+            }
+          ]
+        },
+        "right": {
+          "w": 90,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 66,
+              "label": "外抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "hang",
+              "h": 106.2,
+              "label": "短掛區",
+              "rail": 175,
+              "garments": {
+                "len": 86,
+                "count": 9,
+                "label": "襯衫、外套、對摺褲（垂掛 ≤ 95）"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 19.2,
+              "label": "摺衣層",
+              "items": [
+                {
+                  "name": "摺衣",
+                  "w": 32,
+                  "h": 14,
+                  "box": true,
+                  "size": false
+                },
+                {
+                  "name": "摺衣",
+                  "w": 32,
+                  "h": 14,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "boxes",
+              "h": 35.2,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 30
+            },
+            {
+              "kind": "drawer",
+              "from": 30,
+              "to": 52
+            },
+            {
+              "kind": "drawer",
+              "from": 52,
+              "to": 74,
+              "label": "外抽屜 ×3"
+            },
+            {
+              "kind": "door",
+              "from": 74,
+              "to": 204,
+              "count": 2,
+              "label": "短掛區 · 雙開門"
+            },
+            {
+              "kind": "door",
+              "from": 204,
+              "to": 277,
+              "count": 2,
+              "label": "上櫃 · 收納盒"
+            }
+          ]
+        }
+      },
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "right",
+              "x": 0
+            }
+          ],
+          "levels": [
+            {
+              "y": 55,
+              "label": ""
+            },
+            {
+              "y": 74,
+              "label": ""
+            },
+            {
+              "y": 204,
+              "label": "上櫃線"
+            }
+          ]
+        },
+        {
+          "id": "pair",
+          "name": "兩櫃對照",
+          "kind": "front",
+          "detail": false,
+          "font": 5.6,
+          "units": [
+            {
+              "ref": "left",
+              "x": 0,
+              "label": "MST-01 左櫃"
+            },
+            {
+              "ref": "right",
+              "x": 130,
+              "label": "MST-02 右櫃"
+            }
+          ],
+          "width": 220,
+          "levels": [
+            {
+              "y": 55,
+              "label": ""
+            },
+            {
+              "y": 74,
+              "label": ""
+            },
+            {
+              "y": 204,
+              "label": "上櫃線"
+            }
+          ]
+        }
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "依現場修邊。"
+        },
+        {
+          "zone": "上櫃 · 收納盒 ×2 層",
+          "h": "35.2 ×2",
+          "note": "與左櫃相同：4 個 SKUBB 31×55×33。"
+        },
+        {
+          "zone": "摺衣層",
+          "h": "19.2",
+          "note": "T 恤、針織衫，每疊約 6–8 件。"
+        },
+        {
+          "zone": "短掛區",
+          "h": "106.2",
+          "note": "掛桿高 175，垂掛空間約 95，放襯衫、外套、對摺褲。"
+        },
+        {
+          "zone": "外抽屜 ×3",
+          "h": "面板 22 ×3",
+          "note": "內衣、襪子、配件；最上層可加分隔盒。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "8",
+          "note": "內退。"
+        }
+      ],
+      "hardware": [
+        "外抽屜：Blum LEGRABOX（或 MERIVOBOX）C 高側板（17.7），全拉，NL 500，含 BLUMOTION。面板在門片外，不用開門就能拉。",
+        "門鉸：CLIP top BLUMOTION。長門（高 130–149，寬約 45）每扇 3 支；上櫃門（高 73）每扇 2 支。",
+        "掛衣桿用橢圓鋁管，兩端固定在側板。",
+        "上櫃收納盒以 IKEA SKUBB 31×55×33 為例，每層放 2 個（寬 62），剩約 24 可直立放床單或包包。"
+      ],
+      "rationale": [
+        "兩櫃寬深完全依原圖：各 90 × 60（原標）。高度做到天花，頂部留 3 收邊。",
+        "兩櫃的上櫃線都在 204，抽屜面板也同樣外露，兩櫃面對面時線條一致。",
+        "右櫃是「短掛＋多抽屜」：3 個抽屜加 1 層摺衣，適合小件和摺疊衣物。和左櫃互補，不是複製。",
+        "走道淨寬 130，單扇門開啟約 45，剩約 85。兩側同時開門只剩約 40，所以兩側的門建議錯開使用。",
+        "SKUBB 深 55，櫃內淨深約 56.5（60 扣門片與背板），可以放但很緊，下單前請核對。"
+      ],
+      "open_questions": [
+        "天花淨高",
+        "門片材質／Laminate 色號",
+        "主要使用者身高（決定掛桿高度）",
+        "兩櫃分給誰用、衣物比例"
+      ]
+    }
   }
 }

@@ -14,7 +14,7 @@ if(sink.length!==27||hob.length!==27)throw new Error('Kitchen source index chang
 for(const fragment of [...sink,...hob])plan=plan.replace(fragment,'');
 const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kid}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g>`;
 let html=read('shell.html');
-for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
+for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),ELEVATION:read('elevation.js'),APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
 for(const[key,file]of [['NEW','layout-source.png'],['OLD','summary-original.png']])html=html.replaceAll('/*__SOURCE_'+key+'__*/','data:image/png;base64,'+fs.readFileSync(path.join(root,'assets',file)).toString('base64'));
 if(/\/\*__[A-Z_]+__\*\//.test(html))throw new Error('Unresolved template');
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.mkdirSync(path.join(root,'qa'),{recursive:true});

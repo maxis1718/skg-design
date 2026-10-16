@@ -5,5 +5,8 @@ for(const o of d.objects){assert(d.rooms.some(r=>r.id===o.room_id));const b=o.bo
 for(const v of d.roomVersions.kitchen){for(const[id,p]of Object.entries(v.objectOverrides)){assert(d.objects.some(o=>o.id===id));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}}
 new vm.Script(fs.readFileSync(path.join(root,'src','app.js'),'utf8'));
 const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');assert(!html.includes('每一寸，都有依據。'));assert(!/class="[^"]*unit-stamp/.test(html));assert(!html.includes('/*__'));assert(!html.includes('SKG_CLOUD_ENABLED=true'));
-assert(html.includes('id="kitchen-sink-geometry"')&&html.includes('id="kitchen-hob-geometry"'));assert(html.includes('上層 · 氣炸鍋'));assert(html.includes('中層 · 微波爐'));assert(html.includes('下層 · 電鍋'));
-console.log('PASS: source records, kitchen variants, script syntax, compact header and static build.');
+assert(html.includes('id="kitchen-sink-geometry"')&&html.includes('id="kitchen-hob-geometry"'));assert(html.includes('上層 · 氣炸鍋'));assert(html.includes('中層 · 微波爐'));assert(html.includes('下層 · 電鍋'));assert(html.includes('window.SKGElevation'));
+const sum=a=>a.reduce((s,b)=>s+b.h,0);for(const[id,e]of Object.entries(d.elevations||{})){assert(d.objects.some(o=>o.id===id),'elevation for unknown object '+id);assert(e.views.length&&e.states.length);for(const[uid,u]of Object.entries(e.units)){assert(Math.abs(sum(u.bands)-u.h)<0.05,id+'/'+uid+' bands must sum to unit height');for(const f of u.fronts||[])assert(f.from>=0&&f.to<=u.h&&f.from<f.to,id+'/'+uid+' front out of range');}for(const v of e.views)for(const r of v.units||(v.ref?[{ref:v.ref}]:[]))assert(e.units[r.ref],id+' view '+v.id+' missing unit '+r.ref);}
+for(const id of ['appliance-tower','master-wardrobe-left','master-wardrobe-right'])assert(d.elevations?.[id],'missing elevation '+id);
+new vm.Script(fs.readFileSync(path.join(root,'src','elevation.js'),'utf8'));
+console.log('PASS: source records, kitchen variants, elevations, script syntax, compact header and static build.');
