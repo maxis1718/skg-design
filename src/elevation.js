@@ -180,6 +180,10 @@ function extras(g, list) {
       g.line(e.x + e.w / 2, e.y, e.x + e.w / 2, e.y + e.h, {stroke:C.faint, 'stroke-width':.25});
       if (e.label) g.text(e.x + e.w / 2, e.y + e.h / 2, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
       if (e.sub) g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * 1.2, e.sub, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .62});
+    } else if (e.type === 'hood' && e.slim) {
+      g.rect(e.x, e.y, e.w, e.h, {fill:'#dfe2dd', stroke:C.line, 'stroke-width':.35});
+      g.rect(e.x + e.w * .3, e.y + e.h * .45, e.w * .4, .5, {fill:'#9aa39d', stroke:'none'});
+      g.text(e.x + e.w / 2, e.y - g.f * 1.05, e.label || T('排油煙機'), {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .72});
     } else if (e.type === 'hood') {
       g.path(`M${e.x} ${g.Y(e.y)}H${e.x + e.w}L${e.x + e.w - 4} ${g.Y(e.y + e.h)}H${e.x + 4}Z`, {fill:'#e2e4de', stroke:C.line, 'stroke-width':.35});
       g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label || T('排油煙機'), {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});

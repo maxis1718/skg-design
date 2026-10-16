@@ -17,7 +17,7 @@ for(const[id,e]of Object.entries(E)){
   const units={...(inc?.units||{}),...(b.units||{})},views=b.views.map(v=>typeof v==='string'?inc?.views.find(x=>x.id===v):v);
   assert(views.length&&b.states?.length&&b.spec?.length,id+' needs views, states and spec');checkUnits(id,b.units||{});checkViews(id,views,units);
 }
-for(const id of ['appliance-tower','master-wardrobe-left','master-wardrobe-right','kitchen-hob','dishwasher','spice-pullout','kitchen-oven'])assert(E[id],'missing elevation '+id);
+for(const id of ['appliance-tower','master-wardrobe-left','master-wardrobe-right','kitchen-hob','dishwasher','spice-pullout','kitchen-oven','kitchen-sink'])assert(E[id],'missing elevation '+id);
 const {collectKeys}=await import('./i18n-keys.mjs');const dict=JSON.parse(fs.readFileSync(path.join(root,'src','i18n.json'),'utf8')).en;
 const missing=collectKeys(root).filter(k=>typeof dict[k]!=='string'||!dict[k].trim());assert(!missing.length,'Missing English for '+missing.length+' strings, e.g. '+missing.slice(0,5).join(' | '));
 for(const[k,v]of Object.entries(dict)){const ph=s=>[...s.matchAll(/\{(\w+)\}/g)].map(m=>m[1]).sort().join();assert(ph(k)===ph(v),'Placeholder mismatch: '+k);}
