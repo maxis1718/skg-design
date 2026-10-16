@@ -12,7 +12,11 @@ const sink=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d
 const hob=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:78\d|79\d|80[0-6])"[^>]*\/>/g)].map(m=>m[0]);
 if(sink.length!==27||hob.length!==27)throw new Error('Kitchen source index changed');
 for(const fragment of [...sink,...hob])plan=plan.replace(fragment,'');
-const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kid}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g>`;
+// R07 dining redraw: original 200×80 table (543) and 8 chairs (519–591) are replaced by src/furniture-living.svg.
+const dining=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:519|5[2-8]\d|59[01])"[^>]*\/>/g)].map(m=>m[0]);
+if(dining.length!==73)throw new Error('Dining source index changed');
+for(const fragment of dining)plan=plan.replace(fragment,'');
+const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kid}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g>`;
 let html=read('shell.html');
 for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),ELEVATION:read('elevation.js'),I18N:fs.existsSync(path.join(root,'src','i18n.json'))?JSON.stringify(JSON.parse(read('i18n.json'))).replaceAll('</','<\\/'):'{"en":{}}',APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
 for(const[key,file]of [['NEW','layout-source.png'],['OLD','summary-original.png']])html=html.replaceAll('/*__SOURCE_'+key+'__*/','data:image/png;base64,'+fs.readFileSync(path.join(root,'assets',file)).toString('base64'));

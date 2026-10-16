@@ -2,7 +2,7 @@
 
 共用原始碼：[maxis1718/skg-design](https://github.com/maxis1718/skg-design)。2026-10-16 啟用 Pages 後確認 repo 為 public，原始碼與圖檔也可公開讀取。以 Git 保存設計與歷史，支援 Mac mini 上的 Codex／Claude 透過既有 Telegram 控制流程修改。
 
-目前版本 R06，2026-10-16。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
+目前版本 R07，2026-10-17。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
 
 ## 修改與預覽
 

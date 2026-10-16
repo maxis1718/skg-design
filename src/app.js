@@ -38,7 +38,7 @@ const dimension=d=>`${['scaled','fit'].includes(d.status)?'≈ ':''}${num(d.cm)}
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `≈ ${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
 const statuses=o=>[...new Set(Object.values(o.dimensions).map(d=>t(statusNames[d.status])))].join(' / ');
-const labelPositions={living:[483,249],kitchen:[514,318],helper:[442,320],master:[230,252],kid:[315,204],study:[321,319],guest:[378,204]};
+const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[230,252],kid:[315,204],study:[321,319],guest:[378,204]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 function save(){dirty=true;try{localStorage.setItem(STORAGE,JSON.stringify(changes));storageOK=true;$('#save-status').textContent=t('個人紀錄已存於此瀏覽器');}catch(e){storageOK=false;$('#save-status').textContent=t('此環境無法自動儲存，請匯出備份');}window.dispatchEvent(new CustomEvent('skg:change')); }
@@ -157,8 +157,10 @@ function renderSelectedDimensions(){
   const horizontal=(x1-x0)*project.scale.nominal_cm_per_pt;
   const w=o.dimensions.w,d=o.dimensions.d;
   const hd=Math.abs(horizontal-w.cm)<Math.abs(horizontal-d.cm)?w:d,vd=hd===w?d:w;
-  dimensionLine(g,x0,y0-3,x1,y0-3,dimension(hd)+' cm',true);
-  dimensionLine(g,x1+4,y0,x1+4,y1,dimension(vd)+' cm',true);
+  // Dining table: chairs flank the long sides and the Tripp Trapp sits at the north end, so put the width below (corridor end, no chair) and the length outside the east chairs.
+  const dining=o.id==='dining-table',hy=dining?y1+7:y0-3,vx=dining?x1+7.5:x1+4;
+  dimensionLine(g,x0,hy,x1,hy,dimension(hd)+' cm',true);
+  dimensionLine(g,vx,y0,vx,y1,dimension(vd)+' cm',true);
 }
 function showTip(e,o){
   const a=actual(o),hasActual=['w','d','h'].some(k=>a[k]!=null);
@@ -256,7 +258,7 @@ function validateOverrides(incoming){
 function buildReference(){
   const p=project.measurement_policy;
   $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':'R06'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':'R07'}</span>${esc(c.text)}</div>`).join('');
   const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
   const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
   $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ≈ ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;

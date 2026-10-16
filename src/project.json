@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R06",
+    "revision": "R07",
     "unit": "cm",
-    "date": "2026-10-16"
+    "date": "2026-10-17"
   },
   "scale": {
     "title": "1:100 (A4)",
@@ -623,14 +623,15 @@
       "notes": {
         "電視櫃設計": "圖面長 240 cm；深約 40 cm。款式、實際高度待定。",
         "電視櫃兩端留白": "上端原標 50 cm；下端縱向餘量 97.5 cm（387.5 − 240 − 50）。斜向 111.9 cm 為另一條量測線。",
-        "餐桌尺寸與款式": "圖面約 200 × 80 cm，不含餐椅；實物尺寸、材質、款式待提供。",
+        "餐桌尺寸與款式": "Dahlia Sintered Stone Dining Table 150 × 90 × 75 cm（岩板），長邊南北向，置中於陽台門與過道之間（兩端各約 87.5 cm）。長邊各 2 椅，陽台端 Stokke Tripp Trapp（46 × 49 × 79 cm），過道端不放椅。",
+        "陽台曬衣架": "SMARTLUX LITE 天花吊掛式 113 × 40 cm，下降距離 6.6–130 cm；客廳陽台西端，長邊沿陽台深度，離西牆約 10 cm。",
         "沙發與動線": "圖面沙發約 195 × 80 cm；實物尺寸待提供。",
         "材質與色彩": null
       },
       "name": "客餐廳",
       "english": "Living & dining",
       "number": "01",
-      "focus": "電視櫃、兩端留白與餐桌配置"
+      "focus": "電視櫃、兩端留白、餐桌與陽台曬衣架配置"
     },
     {
       "id": "kitchen",
@@ -1212,42 +1213,81 @@
       "room_id": "living",
       "label": "Dining table",
       "bounds_pt": [
-        451.2,
-        174.16,
-        473.88,
-        230.92
+        449.78,
+        196.46,
+        475.3,
+        238.98
       ],
-      "plan_horizontal_cm": 80.0,
-      "plan_vertical_cm": 200.2,
-      "nominal_width_cm": null,
-      "nominal_depth_cm": null,
-      "height_cm": null,
-      "status": "scaled-symbol",
+      "plan_horizontal_cm": 90.0,
+      "plan_vertical_cm": 150.0,
+      "nominal_width_cm": 150,
+      "nominal_depth_cm": 90,
+      "height_cm": 75,
+      "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "About200cm long x80cm wide; excludes chairs. Style/material unknown.",
-      "physical_drawing_indices": [
-        543
-      ],
+      "notes": "Dahlia Sintered Stone Dining Table 150 x 90 x 75 cm (user-specified, replaces drawn 200 x 80). Long axis N-S, centred on the old table centre (x462.54, y217.72 pt = midpoint between balcony door line y171.64 and corridor line y263.8). Chairs: 2 per long side at quarter points; Stokke Tripp Trapp (46 W x 49 D x 79 H cm) at the balcony (north) end; no chair at the corridor end.",
+      "physical_drawing_indices": [],
       "name": "餐桌",
-      "source_note": "由桌面外框量測，長約 200 cm、寬約 80 cm；不含餐椅。",
+      "source_note": "使用者指定 Dahlia Sintered Stone Dining Table 150 × 90 × 75 cm（岩板），取代原圖約 200 × 80 的餐桌符號。長邊仍為南北向，置中於陽台門線與過道之間（兩端各約 87.5 cm）。長邊各 2 張餐椅；陽台端放 Stokke Tripp Trapp 兒童椅（46 W × 49 D × 79 H cm，依 Stokke 經銷商規格）；過道端不放椅。",
       "dimensions": {
         "w": {
-          "cm": 200,
-          "status": "scaled"
+          "cm": 150,
+          "status": "design"
         },
         "d": {
-          "cm": 80,
-          "status": "scaled"
+          "cm": 90,
+          "status": "design"
         }
       },
       "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
+        "w": 150,
+        "d": 90,
+        "h": 75,
         "brand": null,
-        "model": null
+        "model": "Dahlia Sintered Stone Dining Table"
       },
-      "code": "LIV-05"
+      "code": "LIV-05",
+      "provenance_note": "Original table drawing543 [451.2,174.16,473.88,230.92] and chairs drawing519–591 are omitted at build; replaced by src/furniture-living.svg (table rect, 4 source chair glyphs translated to quarter points, Tripp Trapp glyph). Bounds = 150 × 90 cm at 3.5277778 cm/pt centred on x462.54 / y217.72."
+    },
+    {
+      "id": "drying-rack",
+      "room_id": "living",
+      "label": "Clothes drying rack",
+      "bounds_pt": [
+        431.23,
+        127.4,
+        442.57,
+        159.43
+      ],
+      "plan_horizontal_cm": 40.0,
+      "plan_vertical_cm": 113.0,
+      "nominal_width_cm": 113,
+      "nominal_depth_cm": 40,
+      "height_cm": null,
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "notes": "SMARTLUX LITE ceiling-mounted drying rack, 113 x 40 cm; drop-down distance 6.6-130 cm. Living balcony west end, long axis perpendicular to facade (N-S), 10 cm off the west balcony wall x428.4, ~24 cm from the outer balcony edge y120.64 and ~3 cm north of the post/return line y160.36 (~28 cm before the sliding door line y167.44). Overhead item: drawn dashed.",
+      "name": "曬衣架",
+      "source_note": "使用者指定 SMARTLUX LITE 天花吊掛式曬衣架 113 × 40 cm，可下降距離 6.6–130 cm。位於客廳陽台西端（靠廚房側牆），長邊垂直外牆、沿陽台深度方向，離西牆約 10 cm，大致置中於陽台深度。天花安裝，圖面以虛線表示，不占地面。",
+      "dimensions": {
+        "w": {
+          "cm": 113,
+          "status": "design"
+        },
+        "d": {
+          "cm": 40,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 113,
+        "d": 40,
+        "h": null,
+        "brand": "SMARTLUX",
+        "model": "SMARTLUX LITE"
+      },
+      "code": "LIV-06",
+      "mount": "ceiling"
     },
     {
       "id": "washer-dryer",
@@ -2388,6 +2428,10 @@
     {
       "id": "C10",
       "text": "廚房方案字母對調：窗下水槽方案改為 A（預設），原始配置改為 B；電器櫃外寬 68→60（側板 2.5、內淨寬 55），上層微波爐、中層大同電鍋 15 人份、下層預留、最下一個 45 鍋具抽屜；取消 27.5 抽屜櫃，爐具右側加第二個 20 窄拉籃（左右對稱），洗碗機兩側各 1.8 側板；水槽櫃 71.9、水槽盆 60，備菜區約 92；檯面改稱 Wet kitchen／Dry kitchen；整面牆視圖改名「空間規劃」；填入冰箱與洗烘衣機實際尺寸。"
+    },
+    {
+      "id": "C11",
+      "text": "客餐廳：餐桌改為 Dahlia 岩板餐桌 150 × 90 × 75，置中於陽台門與過道之間；長邊各 2 椅，陽台端 Stokke Tripp Trapp 兒童椅，過道端不放椅。客廳陽台西端加 SMARTLUX LITE 天花曬衣架 113 × 40（下降 6.6–130）。"
     }
   ],
   "measurement_policy": {

@@ -23,7 +23,11 @@ sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',p
 hob=re.findall(r'<path\b[^>]*data-source-path="(?:78\d|79\d|80[0-6])"[^>]*/>',plan)
 assert len(sink)==27 and len(hob)==27
 for fragment in sink+hob:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g>'
+# R07 dining redraw: original table (543) and 8 chairs (519-591) replaced by src/furniture-living.svg.
+dining=re.findall(r'<path\b[^>]*data-source-path="(?:519|5[2-8]\d|59[01])"[^>]*/>',plan)
+assert len(dining)==73
+for fragment in dining:plan=plan.replace(fragment,'')
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
