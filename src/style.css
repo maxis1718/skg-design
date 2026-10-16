@@ -36,3 +36,15 @@
 @media(max-width:900px){.elev-grid{grid-template-columns:1fr}.elev-controls{align-items:flex-start}}
 @media(max-width:760px){.elev-block{padding:14px;margin-left:-4px;margin-right:-4px}.elev-figure{padding:6px}.elev-svg{max-height:none}.elev-head h3{font-size:15px}}
 @media print{.elev-controls{display:none}.elev-block{break-inside:avoid}}
+
+/* Language switch (R05) */
+.lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#fff;margin-right:4px}
+.lang-switch a{padding:5px 10px;font-size:11px;line-height:1.2;color:var(--muted);text-decoration:none;letter-spacing:.5px}
+.lang-switch a+a{border-left:1px solid var(--line)}
+.lang-switch a.active{background:var(--ink);color:#f6f8ee}
+.lang-switch a:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+@media(max-width:760px){.lang-switch a{padding:5px 8px;font-size:10px}}
+@media print{.lang-switch{display:none}}
+.lang-switch a{white-space:nowrap}
+@media(max-width:520px){.edition-label,.live-dot{display:none}.edition{gap:6px}.edition b{margin-left:0}}
+html[lang="en"] .brand-zh,html[lang="en"] .brand-caption i{display:none}

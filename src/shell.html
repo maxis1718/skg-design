@@ -8,8 +8,8 @@
 </head>
 <body>
 <header class="masthead">
-  <a class="brand" href="#floor" aria-label="SKG 空間圖冊首頁"><span class="brand-mark">S<span>／</span>K<span>／</span>G</span><span class="brand-caption">HOME ATLAS <i></i> 空間圖冊</span></a>
-  <div class="edition"><button class="tool" id="draft-mode" aria-pressed="false">本機草稿</button><span class="live-dot"></span> 共用設計版 <b>R04</b><span class="edition-date">16 OCT 2026</span></div>
+  <a class="brand" href="#floor" aria-label="SKG 空間圖冊首頁"><span class="brand-mark">S<span>／</span>K<span>／</span>G</span><span class="brand-caption">HOME ATLAS <i></i> <span class="brand-zh">空間圖冊</span></span></a>
+  <div class="edition"><nav class="lang-switch" aria-label="Language / 語言"><a href="?lang=zh" data-lang="zh" lang="zh-Hant">中文</a><a href="?lang=en" data-lang="en" lang="en">EN</a></nav><button class="tool" id="draft-mode" aria-pressed="false">本機草稿</button><span class="live-dot"></span> <span class="edition-label">共用設計版</span> <b>R05</b><span class="edition-date">16 OCT 2026</span></div>
 </header>
 <main>
   <nav class="tabs" role="tablist" aria-label="選擇空間" id="tabs"></nav>
@@ -30,6 +30,7 @@
 <dialog id="source-dialog"><div class="modal-head"><div><p class="eyebrow">SOURCE DOCUMENTS</p><h2>圖面來源</h2></div><button class="tool" id="close-source">關閉 ✕</button></div><div class="source-switch"><button class="tool active" data-source="new">新格局 · Floor plan scale</button><button class="tool" data-source="original">原始格局 · Summary 第 4 頁</button></div><p id="source-caption">原圖保留原始標註（mm）；互動圖冊已統一換算 cm。</p><img id="source-image" alt="原始圖面" src="/*__SOURCE_NEW__*/"></dialog>
 <div id="toast" role="status" hidden></div>
 <script id="project-data" type="application/json">/*__DATA__*/</script>
+<script id="i18n-data" type="application/json">/*__I18N__*/</script>
 <script>window.SKG_REPO_MODE=true;</script>
 <script>/*__ELEVATION__*/</script>
 <script>/*__APP__*/</script>

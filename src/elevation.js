@@ -1,5 +1,6 @@
 // Elevation renderer: draws cabinet front / section / wall views from project.json → elevations.
 // Units are cm; elevation y is measured up from the finished floor. Pure string output, no DOM needed.
+// render(elev, viewId, state, T) — T translates the few literal labels drawn here (data labels arrive localized).
 (() => {
 'use strict';
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -7,8 +8,12 @@ const fmt = n => { const r = Math.round(n * 10) / 10; return Number.isInteger(r)
 const C = {
   line:'#2f443c', thin:'#7f8c84', faint:'#b9c2bb', front:'#fbfaf5', interior:'#eef1ea', board:'#d3c4aa',
   plinth:'#d7dbd2', dim:'#a96f47', item:'#ffffff', itemLine:'#55695f', box:'#eadcc4', garment:'#cfdcd2',
-  stone:'#c9c5bb', glass:'#e3edf0', level:'#8fa197'
+  stone:'#c9c5bb', glass:'#e3edf0', level:'#8fa197', steel:'#e4e6e2', dark:'#4b5751'
 };
+let T = s => s;
+// Rough text width in em: CJK ≈ 1em, other ≈ 0.56em.
+const em = s => [...String(s)].reduce((w, ch) => w + (/[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]/.test(ch) ? 1 : .56), 0);
+const levelMargin = (view, f) => view.levels?.length ? Math.max(f * 6.2, Math.max(...view.levels.map(lv => em(`▽ ${fmt(lv.y)} ${lv.label || ''}`))) * f * .72 + f * .9) : f * 2;
 
 // Resolve bands (bottom → top) to absolute ranges inside a unit.
 function bands(u) { let y = 0; return u.bands.map(b => { const r = {...b, y0:y, y1:y + b.h}; y += b.h; return r; }); }
@@ -18,14 +23,14 @@ function canvas(H, font) {
   const out = [];
   const Y = y => H - y; // floor-up cm → svg y
   const f = font;
-  const api = {
+  return {
     out, f, Y,
     rect(x, y, w, h, a = {}) { out.push(`<rect x="${x}" y="${Y(y + h)}" width="${w}" height="${h}" ${attrs(a)}/>`); },
     line(x1, y1, x2, y2, a = {}) { out.push(`<line x1="${x1}" y1="${Y(y1)}" x2="${x2}" y2="${Y(y2)}" ${attrs(a)}/>`); },
     path(d, a = {}) { out.push(`<path d="${d}" ${attrs(a)}/>`); },
     text(x, y, s, a = {}) { out.push(`<text x="${x}" y="${Y(y)}" ${attrs({'font-size':f, ...a})}>${esc(s)}</text>`); },
+    vtext(x, y, s, a = {}) { out.push(`<text x="${x}" y="${Y(y)}" transform="rotate(-90 ${x} ${Y(y)})" text-anchor="middle" ${attrs({'font-size':f, ...a})}>${esc(s)}</text>`); },
   };
-  return api;
 }
 function attrs(a) { return Object.entries(a).filter(([, v]) => v != null).map(([k, v]) => `${k}="${esc(v)}"`).join(' '); }
 
@@ -34,25 +39,54 @@ function frontLeaves(u, fr) {
   return Array.from({length:n}, (_, i) => ({x: gap + i * (w + gap), w, hinge: fr.hinges?.[i] ?? (n === 2 ? (i === 0 ? 'L' : 'R') : 'L')}));
 }
 
+// Built-in / freestanding appliance face (oven, dishwasher).
+function appliance(g, it, x, y, w, h, labels) {
+  g.rect(x, y, w, h, {fill:C.steel, stroke:C.line, 'stroke-width':.35, rx:.6});
+  if (it.type === 'oven') {
+    const panel = Math.min(10, h * .17);
+    g.rect(x, y + h - panel, w, panel, {fill:C.dark, stroke:'none', rx:.6});
+    for (const k of [.18, .82]) g.rect(x + w * k - 1.4, y + h - panel / 2 - 1.4, 2.8, 2.8, {fill:'#9aa39d', stroke:'none', rx:1.4});
+    g.rect(x + w * .12, y + h - panel - 4.2, w * .76, 1.1, {fill:'#8a948e', stroke:'none', rx:.55});
+    g.rect(x + w * .1, y + 5, w * .8, h - panel - 13, {fill:'#c9d1cf', stroke:'#8a948e', 'stroke-width':.3, rx:1.2});
+  } else if (it.type === 'dishwasher') {
+    g.rect(x, y + h - 6.5, w, 6.5, {fill:'#d4d8d3', stroke:'none'});
+    g.rect(x + w * .3, y + h - 9.5, w * .4, 1, {fill:'#8a948e', stroke:'none', rx:.5});
+    g.rect(x + w - 9, y + h - 4.3, 6, 1.6, {fill:'#7a8580', stroke:'none', rx:.4});
+  }
+  if (labels !== false && it.name) {
+    const cy = it.type === 'oven' ? y + h * .42 : y + h * .5;
+    g.text(x + w / 2, cy, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .82});
+    if (it.sizeLabel) g.text(x + w / 2, cy - g.f * 1.15, it.sizeLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .66});
+  }
+}
+
 // Draw a unit (front elevation) at (ox, oy).
-function drawUnit(g, u, ox, oy, state, detail) {
+function drawUnit(g, u, ox, oy, state, detail, labels) {
   const t = u.board ?? 1.8, B = bands(u), sw = detail ? .35 : .3;
-  g.rect(ox, oy, u.w, u.h, {fill:C.interior, stroke:'none'});
+  if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:C.interior, stroke:'none'});
   for (const b of B) {
     const y0 = oy + b.y0, ix = ox + t, iw = u.w - 2 * t;
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); continue; }
+    if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); continue; }
     if (b.kind === 'worktop') { g.rect(ox, y0, u.w, b.h, {fill:C.stone, stroke:C.line, 'stroke-width':.25}); continue; }
+    if (b.kind === 'builtin') {
+      const it = b.item, w = Math.min(it.w, u.w), h = Math.min(it.h, b.h), x = ox + (u.w - w) / 2;
+      if (!u.noCarcass) g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw});
+      else g.rect(ox, y0, u.w, b.h, {fill:'#f4f5f1', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+      appliance(g, it, x, y0 + (it.lift ?? 0), w, h, labels);
+      continue;
+    }
     if (b.kind === 'tier') {
       g.rect(ix + .4, y0, iw - .8, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
-      if (detail) g.rect(ix + 1.5, oy + b.y1 - 4.5, 3.6, 2.4, {fill:'#fff', stroke:C.thin, 'stroke-width':.2, rx:.4});
-      placeItems(g, b.items || [], ix, iw, y0 + 1.6, detail, b.h - 1.6);
+      if (detail && !b.noSocket) g.rect(ix + 1.5, oy + b.y1 - 4.5, 3.6, 2.4, {fill:'#fff', stroke:C.thin, 'stroke-width':.2, rx:.4});
+      placeItems(g, b.items || [], ix, iw, y0 + 1.6, detail, b.h - 1.6, b.align, b.gap);
       continue;
     }
     if (b.kind === 'boxes' || b.kind === 'cabinet') {
       for (const s of b.shelves || []) g.rect(ix, y0 + s, iw, t, {fill:C.board, stroke:'none'});
-      placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align);
+      placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align, b.gap);
       continue;
     }
     if (b.kind === 'hang') {
@@ -66,19 +100,20 @@ function drawUnit(g, u, ox, oy, state, detail) {
       if (detail) g.text(ix + iw / 2, y0 + 1.6, b.garments?.label || '', {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
     }
   }
-  // side panels
-  g.rect(ox, oy, t, u.h, {fill:C.board, stroke:'none'});
-  g.rect(ox + u.w - t, oy, t, u.h, {fill:C.board, stroke:'none'});
-  // fronts
+  if (!u.noCarcass) {
+    g.rect(ox, oy, t, u.h, {fill:C.board, stroke:'none'});
+    g.rect(ox + u.w - t, oy, t, u.h, {fill:C.board, stroke:'none'});
+  }
   for (const fr of u.fronts || []) {
     const y0 = oy + fr.from, h = fr.to - fr.from;
+    const dashed = state === 'open' && fr.kind !== 'drawer';
     for (const lf of frontLeaves(u, fr)) {
       const x = ox + lf.x;
-      if (fr.kind === 'drawer') {
+      if (dashed) {
+        g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+      } else if (fr.kind === 'drawer' || fr.kind === 'pullout') {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
-      } else if (state === 'open') {
-        g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
       } else {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
@@ -87,32 +122,33 @@ function drawUnit(g, u, ox, oy, state, detail) {
         g.rect(handleX, hy, .6, Math.min(12, h * .4), {fill:C.thin, stroke:'none', rx:.3});
       }
     }
-    if (fr.label && (fr.kind === 'drawer' || state !== 'open') && detail !== false) {
-      g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .9)});
+    if (fr.label && !dashed && labels) {
+      if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
+      else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74)});
     }
   }
-  g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
-  if (u.caption && !detail) g.text(ox + u.w / 2, oy + u.h + g.f * .55, u.caption, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .85});
+  if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
 }
 
-function placeItems(g, items, ix, iw, y0, detail, room, align) {
+function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
   if (!items.length) return;
-  const gap = 3, total = items.reduce((s, it) => s + it.w, 0) + gap * (items.length - 1);
+  const gap = gapIn ?? 3, total = items.reduce((s, it) => s + it.w, 0) + gap * (items.length - 1);
   let x = ix + (align === 'left' ? 1.5 : Math.max(1, (iw - total) / 2));
   for (const it of items) {
     const h = Math.min(it.h, room - .5);
-    g.rect(x, y0, it.w, h, {fill:it.dashed ? 'none' : (it.box ? C.box : C.item), stroke:it.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':it.dashed ? '1.4 1' : null, rx:it.box ? .6 : 1.6});
+    g.rect(x, y0, it.w, h, {fill:it.dashed ? 'none' : (it.box ? C.box : C.item), stroke:it.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':it.dashed ? '1.4 1' : null, rx:it.box ? .6 : Math.min(1.6, it.w / 4)});
     const fs = g.f * (detail ? .74 : .8);
-    if (h > fs * 2.4 && it.w > fs * 2) {
-      g.text(x + it.w / 2, y0 + h / 2 + fs * .35, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':fs});
-      if (detail && it.size !== false && h > fs * 4) g.text(x + it.w / 2, y0 + h / 2 - fs * 1.05, it.sizeLabel ?? `${fmt(it.w)}×${fmt(it.h)}`, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .82});
+    if (it.name && h > fs * 2.4) {
+      if (it.w > fs * Math.min(it.name.length, 4) * .9 || it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 + fs * .35, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':fs * (it.w < fs * 3 ? .8 : 1)});
+      else g.vtext(x + it.w / 2 + fs * .32, y0 + h / 2, it.name, {fill:C.line, 'font-size':fs * .8});
+      if (detail && it.size !== false && h > fs * 4 && it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 - fs * 1.05, it.sizeLabel ?? `${fmt(it.w)}×${fmt(it.h)}`, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .78});
     }
     x += it.w + gap;
   }
 }
 
-// Vertical dimension chain to the right of a unit.
-function chain(g, u, ox, oy, x) {
+// Vertical dimension chain for a unit; text horizontal to the right of the line.
+function chain(g, u, ox, oy, x, total = true) {
   const B = bands(u), tick = 1.2, s = {stroke:C.dim, 'stroke-width':.25};
   g.line(x, oy, x, oy + u.h, s);
   for (const b of B) {
@@ -120,15 +156,15 @@ function chain(g, u, ox, oy, x) {
     if (b.h >= 5) g.text(x + 1.6, oy + (b.y0 + b.y1) / 2 - g.f * .32, fmt(b.h), {fill:C.dim, 'font-size':g.f * .8});
   }
   g.line(x - tick, oy + u.h, x + tick, oy + u.h, s);
+  if (!total) return;
   const x2 = x + g.f * 3.6;
   g.line(x2, oy, x2, oy + u.h, s); g.line(x2 - tick, oy, x2 + tick, oy, s); g.line(x2 - tick, oy + u.h, x2 + tick, oy + u.h, s);
-  const my = oy + u.h / 2;
-  g.out.push(`<text x="${x2 + 1.4}" y="${g.Y(my)}" font-size="${g.f * .85}" fill="${C.dim}" transform="rotate(-90 ${x2 + 1.4} ${g.Y(my)})" text-anchor="middle" dy="${g.f * .7}">${fmt(u.h)}</text>`);
+  g.vtext(x2 + g.f * .9, oy + u.h / 2, fmt(u.h), {fill:C.dim, 'font-size':g.f * .85});
 }
 function hdim(g, x0, x1, y, label, emphasize) {
   const s = {stroke:C.dim, 'stroke-width':.25};
   g.line(x0, y, x1, y, s); g.line(x0, y - 1.2, x0, y + 1.2, s); g.line(x1, y - 1.2, x1, y + 1.2, s);
-  g.text((x0 + x1) / 2, y + .9, label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * (emphasize ? .85 : .78)});
+  g.text((x0 + x1) / 2, y + .9, label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * (emphasize ? .85 : .74)});
 }
 function levels(g, view, x0, x1) {
   for (const lv of view.levels || []) {
@@ -146,13 +182,13 @@ function extras(g, list) {
       if (e.sub) g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * 1.2, e.sub, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .62});
     } else if (e.type === 'hood') {
       g.path(`M${e.x} ${g.Y(e.y)}H${e.x + e.w}L${e.x + e.w - 4} ${g.Y(e.y + e.h)}H${e.x + 4}Z`, {fill:'#e2e4de', stroke:C.line, 'stroke-width':.35});
-      g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label || '排油煙機', {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});
+      g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label || T('排油煙機'), {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});
     } else if (e.type === 'worktop') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.stone, stroke:C.line, 'stroke-width':.3});
     } else if (e.type === 'hob') {
-      g.rect(e.x, e.y, e.w, 1.2, {fill:'#4b5751', stroke:'none'});
-      for (const k of [.28, .72]) g.rect(e.x + e.w * k - 5, e.y + 1.2, 10, 1.6, {fill:'#4b5751', stroke:'none'});
-      if (e.label) g.text(e.x + e.w / 2, e.y + 4.4, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .78});
+      g.rect(e.x, e.y, e.w, 1.2, {fill:C.dark, stroke:'none'});
+      for (const k of [.22, .5, .78]) g.rect(e.x + e.w * k - 4, e.y + 1.2, 8, 1.6, {fill:C.dark, stroke:'none'});
+      if (e.label) g.text(e.x + e.w / 2, e.y + 4.6, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .78});
     } else if (e.type === 'sink') {
       g.rect(e.x, e.y - e.depth, e.w, e.depth, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
       g.path(`M${e.x + e.w / 2} ${g.Y(e.y)}v-14h5v2`, {fill:'none', stroke:C.line, 'stroke-width':.6});
@@ -161,10 +197,18 @@ function extras(g, list) {
       g.rect(e.x, e.y, e.w, e.h, {fill:'none', stroke:C.dim, 'stroke-width':.3, 'stroke-dasharray':'1.6 1.2'});
       if (e.label) g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * .7});
     } else if (e.type === 'wall') {
-      g.rect(e.x, 0, e.w, e.h, {fill:'url(#elev-wall)', stroke:C.line, 'stroke-width':.4});
-      if (e.label) g.out.push(`<text x="${e.x + e.w / 2}" y="${g.Y(e.h / 2)}" font-size="${g.f * .78}" fill="${C.thin}" transform="rotate(-90 ${e.x + e.w / 2} ${g.Y(e.h / 2)})" text-anchor="middle" dy="${g.f * .3}">${esc(e.label)}</text>`);
-    } else if (e.type === 'text') {
-      g.text(e.x, e.y, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.thin, 'font-size':g.f * (e.size || .8)});
+      g.rect(e.x, e.y ?? 0, e.w, e.h, {fill:'url(#elev-wall)', stroke:C.line, 'stroke-width':.4});
+      if (e.label) g.vtext(e.x + e.w / 2 + g.f * .3, (e.y ?? 0) + e.h / 2, e.label, {fill:C.thin, 'font-size':g.f * .74});
+    } else if (e.type === 'note') {
+      g.text(e.x, e.y, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .72)});
+    } else if (e.type === 'clear') {
+      const s = {stroke:C.dim, 'stroke-width':.25};
+      if (e.vertical) {
+        g.line(e.x, e.y0, e.x, e.y1, s); g.line(e.x - 1.2, e.y0, e.x + 1.2, e.y0, s); g.line(e.x - 1.2, e.y1, e.x + 1.2, e.y1, s);
+        if (e.rotate) g.vtext(e.x + g.f * .95, (e.y0 + e.y1) / 2, e.label, {fill:C.dim, 'font-size':g.f * .7});
+        else g.text(e.x + 1.4, (e.y0 + e.y1) / 2 - g.f * .3, e.label, {fill:C.dim, 'font-size':g.f * .7});
+      }
+      else hdim(g, e.x0, e.x1, e.y, e.label);
     }
   }
 }
@@ -177,53 +221,76 @@ function renderFront(elev, view, state) {
   const units = view.units.map(r => ({...r, u:elev.units[r.ref]}));
   const W = view.width ?? Math.max(...units.map(r => r.x + r.u.w)), H = view.height ?? elev.ceiling_cm;
   const detail = view.detail !== false && units.length === 1;
+  const labels = view.labels ?? detail;
   const f = view.font ?? Math.max(5.4, W / 24);
-  const m = {l: view.levels?.length ? f * 6.2 : f * 2, r: detail ? f * 8 : f * 2, t: f * 2.4, b: f * (view.hcuts ? 5.4 : 3.6)};
+  const chainUnit = view.chain != null ? units[view.chain] : detail ? units[0] : null;
+  const m = {l: levelMargin(view, f), r: view.marginR != null ? f * view.marginR : chainUnit ? f * 8 : f * 2, t: f * 2.4, b: f * (view.hcuts ? 5.4 : 3.6)};
   const g = canvas(H, f);
   levels(g, view, -m.l + f * .4, W);
   g.line(-m.l + f * .4, 0, W + m.r - f, 0, {stroke:C.line, 'stroke-width':.6});
-  g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
-  g.text(W + m.r - f, H + .9, view.ceilingLabel || `天花 ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
+  if (!view.noCeiling) {
+    g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
+    g.text(W + m.r - f, H + .9, view.ceilingLabel || `${T('天花')} ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
+  }
   extras(g, view.under);
-  for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail);
+  for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail, labels);
   extras(g, view.extras);
-  if (detail) { const r = units[0]; chain(g, r.u, r.x, r.y || 0, r.x + r.u.w + f * 1.1); hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
+  if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
+  if (detail) { const r = units[0]; hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
   for (const r of units) if (r.label) g.text(r.x + r.u.w / 2, -f * 1.6, r.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .8});
   if (view.hcuts) {
     const cuts = view.hcuts;
     for (let i = 0; i < cuts.length - 1; i++) hdim(g, cuts[i], cuts[i + 1], -f * 1.6, fmt(cuts[i + 1] - cuts[i]));
     hdim(g, cuts[0], cuts[cuts.length - 1], -f * 3.6, view.totalLabel || fmt(cuts[cuts.length - 1] - cuts[0]), true);
   }
-  const vb = [-m.l, -m.t, W + m.l + m.r, H + m.t + m.b];
-  return svg(vb, g.out, view.aria || elev.title);
+  return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
-// Side section (depth axis horizontal; wall at x=0, room to the right). Shows pull-outs extended when state=open.
+// Side section (depth axis horizontal; wall at x=0, room to the right). Pull-outs extend when state=open.
+// unit.pullout === 'whole' moves every band above the plinth (and the full-height front) together.
 function renderSection(elev, view, state) {
   const u = elev.units[view.ref], B = bands(u), D = u.d, t = u.board ?? 1.8, ext = view.extension ?? 55;
-  const W = D + ext + 6, H = elev.ceiling_cm, f = view.font ?? 5.4;
-  const m = {l: f * 6.2, r: f * 2, t: f * 2.4, b: f * 3.6};
-  const g = canvas(H, f), open = state === 'open';
+  const whole = u.pullout === 'whole', open = state === 'open';
+  const H = view.height ?? elev.ceiling_cm, f = view.font ?? 5.4;
+  const top = u.h - (B.find(b => b.kind === 'filler')?.h || 0);
+  const W = D + ext + (view.labelRoom ?? 16);
+  const m = {l: Math.max(f * 6.2, levelMargin(view, f)), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
+  const g = canvas(H, f);
   levels(g, view, -m.l + f * .4, W);
   g.rect(-4, 0, 4, H, {fill:'url(#elev-wall)', stroke:C.line, 'stroke-width':.4});
   g.line(-m.l + f * .4, 0, W + m.r - f, 0, {stroke:C.line, 'stroke-width':.6});
-  g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
-  g.rect(0, 0, D, H - (B.find(b => b.kind === 'filler')?.h || 0), {fill:C.interior, stroke:C.line, 'stroke-width':.45});
-  const front = D, back = 1;
+  if (!view.noCeiling) g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
+  g.rect(0, 0, D, top, {fill:C.interior, stroke:C.line, 'stroke-width':.45});
+  extras(g, view.under);
+  const back = 1, dxAll = whole && open ? ext : 0;
+  const firstY = B.find(b => b.kind !== 'plinth')?.y0 ?? 0;
+  if (whole) {
+    g.rect(back + dxAll, firstY, 1.6, top - firstY - .5, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+  }
   for (const b of B) {
     const y0 = b.y0;
     if (b.kind === 'plinth') { g.rect(0, y0, D - 5, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); g.rect(D - 5, y0, 5, b.h, {fill:'#fff', stroke:'none'}); }
     else if (b.kind === 'board') g.rect(0, y0, D, b.h, {fill:C.board, stroke:'none'});
     else if (b.kind === 'filler') g.rect(0, y0, D, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2});
     else if (b.kind === 'tier') {
-      const tray = D - back - 3, dx = open ? ext : 0, x = back + dx;
+      const tray = D - back - 3, dx = whole ? dxAll : open ? ext : 0, x = back + dx;
       g.rect(x, y0, tray, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
-      g.rect(x + tray - 1.2, y0, 1.2, 4, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
-      let ix = x + tray - 2.5;
-      for (const it of b.items || []) { if (it.dashed) continue; const d = it.d ?? 35; ix -= d; g.rect(ix, y0 + 1.6, d, Math.min(it.h, b.h - 2), {fill:open ? C.item : 'none', stroke:C.itemLine, 'stroke-width':.3, 'stroke-dasharray':open ? null : '1.4 1', rx:1.4}); break; }
-      g.rect(D - 6, y0 + 1.6, 1, 1.2, {fill:C.line, stroke:'none'});
-      g.text(open ? x + tray + 1.2 : D + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
-      if (open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `滿拉 ≈ ${fmt(ext)}`);
+      g.rect(x + tray - 1.2, y0, 1.2, b.lip ?? 4, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+      if (whole) g.rect(x + 2, y0, 1.2, b.lip ?? 4, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+      const solid = open || whole;
+      const sty = {fill:solid ? C.item : 'none', stroke:C.itemLine, 'stroke-width':.3, 'stroke-dasharray':solid ? null : '1.4 1'};
+      const real = (b.items || []).filter(it => !it.dashed);
+      if (view.allItems) {
+        let ix = x + tray - 2.5;
+        for (const it of real) for (let k = 0; k < (it.repeat || 1); k++) { const d = it.d ?? 8; ix -= d + .8; if (ix < x + 3) break; g.rect(ix, y0 + 1.6, d, Math.min(it.h, b.h - 2), {...sty, rx:Math.min(1.4, d / 3)}); }
+      } else if (real.length) {
+        const it = real.reduce((a, c) => (c.d ?? 0) > (a.d ?? 0) ? c : a), d = it.d ?? 35;
+        g.rect(x + tray - 2.5 - d, y0 + 1.6, d, Math.min(it.h, b.h - 2), {...sty, rx:1.4});
+      }
+      if (!whole) g.rect(D - 6, y0 + 1.6, 1, 1.2, {fill:C.line, stroke:'none'});
+      const lx = (open || whole && open) ? x + tray + 1.2 : D + 1.6;
+      if (!whole || open) g.text(lx + (whole ? 2 : 0), y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
+      if (!whole && open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `${T('滿拉')} ≈ ${fmt(ext)}`);
     } else if (b.kind === 'drawers') {
       const dx = open ? (view.drawerExtension ?? ext - 5) : 0;
       g.rect(back + dx, y0 + 2, D - back - 4, b.h - 6, {fill:'none', stroke:C.thin, 'stroke-width':.3});
@@ -236,8 +303,15 @@ function renderSection(elev, view, state) {
       g.text(D + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     }
   }
-  g.rect(0, 0, back, H - (B.find(b => b.kind === 'filler')?.h || 0), {fill:C.board, stroke:'none'});
-  hdim(g, 0, D, -f * 1.6, `${fmt(D)}（櫃深）`, true);
+  if (whole) {
+    g.rect(D - 1.8 + dxAll, firstY + .2, 1.8, top - firstY - .4, {fill:C.front, stroke:C.line, 'stroke-width':.4});
+    if (open) hdim(g, D, D + ext, top + 3.4, `${T('拉出')} ≈ ${fmt(ext)}`);
+    else g.text(D + 1.6, firstY + (top - firstY) / 2, u.caption || '', {fill:C.line, 'font-size':f * .74});
+  }
+  g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});
+  extras(g, view.extras);
+  if (view.chain) chain(g, u, 0, 0, W + f * .6, false);
+  hdim(g, 0, D, -f * 1.6, `${fmt(D)}（${T('櫃深')}）`, true);
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
@@ -245,7 +319,8 @@ function svg(vb, out, label) {
   return `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
 }
 
-function render(elev, viewId, state) {
+function render(elev, viewId, state, translate) {
+  T = typeof translate === 'function' ? translate : (s => s);
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
   return view.kind === 'section' ? renderSection(elev, view, state) : renderFront(elev, view, state);
 }

@@ -2,7 +2,7 @@
 
 共用原始碼：[maxis1718/skg-design](https://github.com/maxis1718/skg-design)。2026-10-16 啟用 Pages 後確認 repo 為 public，原始碼與圖檔也可公開讀取。以 Git 保存設計與歷史，支援 Mac mini 上的 Codex／Claude 透過既有 Telegram 控制流程修改。
 
-目前版本 R04，2026-10-16。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
+目前版本 R05，2026-10-16。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
 
 ## 修改與預覽
 
@@ -33,7 +33,7 @@ npm run check
 
 - 全屋與 7 個房間分頁，選房間高亮原圖區域。
 - 所有尺寸 cm；物件 hover／點選顯示尺寸與來源。
-- 本版可見大型物件 A=22 件、B=23 件，包含新增的水槽、瓦斯爐與 B 方案電器櫃。總索引 23 件。
+- 本版可見大型物件 A=22 件、B=26 件（B 加入電器高櫃、洗碗機、窄拉籃、爐下烤箱）。總索引 26 件。
 - 圖面縮放、物件／尺寸圖層、尺寸簿與各房間設計細節。
 - 已移除頁首標語與單位展示區，首屏優先顯示圖面。
 
@@ -44,13 +44,18 @@ npm run check
 3. BEDROOM 3 → STUDY；原 STUDY 家具配置旋轉 180° 移入。櫃體約 120 × 60 cm，桌長經授權由 240 配適為約 230 cm，深約 50 cm。
 4. 固定牆、門、窗沿用新格局來源，搬移的是室內配置。
 
-## 立面設計（R04）
+## 語言
+
+頁首右上「中文／EN」切換，網址同步帶 `?lang=zh` 或 `?lang=en`；分享 `?lang=en` 連結會直接開英文版，沒有參數時為中文。英文字典在 `src/i18n.json`（中文原文 → 英文，逐字比對）。新增或修改任何中文文字後執行 `node tools/i18n-keys.mjs --missing` 補英文；`npm run check` 會擋下缺漏的翻譯與 `{placeholder}` 不一致。
+
+## 立面設計（R04–R05）
 
 點選有立面的物件後，下方會出現「立面設計」：正立面／側剖面／整面牆脈絡，可切換關門／開門（拉出）。資料在 `src/project.json → elevations`，繪圖在 `src/elevation.js`。
 
 - 單位 cm，高度由完成地面往上量；天花暫以使用者提供的 280 計。
 - 每個 unit 的 `bands`（由下到上）高度總和必須等於 `h`，`npm run check` 會驗證。
-- 已建立：`appliance-tower`（B 方案電器高櫃）、`master-wardrobe-left`、`master-wardrobe-right`。
+- 已建立：`appliance-tower`（B 方案電器高櫃）、`kitchen-hob`（爐台＋爐下烤箱＋窄拉籃）、`dishwasher`、`spice-pullout`、`kitchen-oven`、`master-wardrobe-left`、`master-wardrobe-right`。
+- 廚房 B 的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`）；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
 - 立面是設計提案，不是原圖標註；電器尺寸為示意機型，實購型號仍記在 actual 欄位。
 
 ## 廚房方案
