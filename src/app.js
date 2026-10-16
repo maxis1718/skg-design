@@ -88,7 +88,7 @@ function buildPlan(){
     const[x0,y0,x1,y1]=o.bounds_pt, attrs={x:x0,y:y0,width:x1-x0,height:y1-y0,rx:.8,'data-object':o.id};
     $('#object-fills').append(svgEl('rect',{...attrs,class:'object-fill'}));
     const hit=svgEl('rect',{...attrs,class:'object-hit','aria-label':`${o.name}${t('，')}${size(o)} cm`});
-    hit.append(svgEl('title',{},`${o.code} ${o.name} · ${size(o)} cm · ${statuses(o)}${t('；高度待提供')}`));
+    // No native <title> here: the single custom hover label below replaces it (aria-label keeps the accessible name).
     hit.addEventListener('pointerenter',e=>showTip(e,object(o.id)));hit.addEventListener('pointermove',positionTip);hit.addEventListener('pointerleave',hideTip);
     hit.addEventListener('click',e=>{e.stopPropagation();selectObject(o.id);hideTip();});$('#object-hits').append(hit);
   }
@@ -109,7 +109,7 @@ function renderKitchenVersion(){
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
  }
  const visible=new Set(visibleObjects().map(o=>o.id));
- $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);const title=el.querySelector('title');if(title)title.textContent=`${o.code} ${o.name} · ${size(o)} cm · ${statuses(o)}`;}});
+ $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);}});
  if(objectId&&!visible.has(objectId))objectId=null;
 }
 function chooseKitchenVersion(id){
@@ -162,12 +162,20 @@ function renderSelectedDimensions(){
   dimensionLine(g,x0,hy,x1,hy,dimension(hd)+' cm',true);
   dimensionLine(g,vx,y0,vx,y1,dimension(vd)+' cm',true);
 }
+// Hover label: name (+ muted code) only — sizes, status and actual fields live in the inspector after a click.
+// Mouse/pen only (a touch tap selects instead). Fixed to the viewport, offset from the cursor, flipping left/up near edges.
 function showTip(e,o){
-  const a=actual(o),hasActual=['w','d','h'].some(k=>a[k]!=null);
-  $('#tooltip').innerHTML=`<span class="tip-code">${o.code}</span><strong>${esc(o.name)}</strong><div class="tip-value">${size(o)} <small>cm</small></div><small>${statuses(o)}</small>${hasActual?`<div><small>${t('實物 W × D × H：')}${['w','d','h'].map(k=>a[k]==null?'—':num(a[k])).join(' × ')} cm</small></div>`:`<div><small>${t('實物寬、深、高待提供')}</small></div>`}`;
+  if(e.pointerType==='touch'||gesture.moved&&gesture.pts.size)return;
+  $('#tooltip').innerHTML=`<span class="tip-name">${esc(o.name)}</span><span class="tip-code">${esc(o.code)}</span>`;
   $('#tooltip').hidden=false;positionTip(e);
 }
-function positionTip(e){const tip=$('#tooltip');if(tip.hidden)return;const box=$('#plan-stage').getBoundingClientRect();const left=Math.max(8,Math.min(e.clientX-box.left+15,box.width-tip.offsetWidth-8));const top=Math.max(8,Math.min(e.clientY-box.top+14,box.height-tip.offsetHeight-8));tip.style.left=left+'px';tip.style.top=top+'px';}
+function positionTip(e){
+  const tip=$('#tooltip');if(tip.hidden)return;if(e.pointerType==='touch')return hideTip();
+  const gapX=14,gapY=20,edge=8,w=tip.offsetWidth,h=tip.offsetHeight,vw=document.documentElement.clientWidth,vh=document.documentElement.clientHeight;
+  let x=e.clientX+gapX,y=e.clientY+gapY;
+  if(x+w>vw-edge)x=e.clientX-gapX-w;if(y+h>vh-edge)y=e.clientY-gapX-h;
+  tip.style.left=Math.max(edge,x)+'px';tip.style.top=Math.max(edge,y)+'px';
+}
 function hideTip(){$('#tooltip').hidden=true;}
 function selectRoom(id,{keepObject=false}={}){
   if(id!=='floor'&&!room(id))return;roomId=id;if(!keepObject)objectId=null;
@@ -212,10 +220,15 @@ function renderDetails(){
   const r=room(roomId);$('#details-title').textContent=tf('{name} · 細節紀錄',{name:r.name});$('#details-kicker').textContent='SPACE '+r.number+' / DETAILS';$('#details-caption').textContent='';
   $('#details-content').innerHTML=`${elevationBlock()}<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>${t('全部單位 cm')}</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':(p.horizontal_cm===320.5?'':'≈ ')+num(p.horizontal_cm)+' × '}${p.vertical_cm===387.5?'':'≈ '}${num(p.vertical_cm)}</strong></div>`).join('')}<p class="quiet-note">${t('依新格局圖量測內牆面，包含固定櫃占位。≈ 為等比讀值；小數原標尺寸保留。')}${['master','living'].includes(r.id)?t('不以外包矩形推算整間面積。'):''}</p>${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}</div><div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):t('設計筆記')}</h3><button class="plain-button" id="copy-discussion">${t('複製討論提示 ↗')}</button></div>${Object.keys(fieldsFor(r)).map((key,i)=>`<div class="note-field"><label for="note-${i}">${esc(t(key))}</label><textarea id="note-${i}" data-note-key="${esc(key)}" rows="${note(r,key).length>45?3:2}" placeholder="${t('待討論 / 待提供')}">${esc(note(r,key))}</textarea></div>`).join('')}</div></div>`;
   bindElevation();$$('[data-elev-open]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.elevOpen);$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});});
+  fitNotes();$$('[data-note-key]').forEach(input=>input.addEventListener('input',()=>fitNote(input)));
   $$('[data-note-key]').forEach(input=>input.addEventListener('input',()=>{if(r.id==='kitchen'){const v=effectiveVersionCopy();v.notes[input.dataset.noteKey]=input.value;changes.versions['kitchen:'+v.id]=v;}else changes.notes[r.id]={...(changes.notes[r.id]||{}),[input.dataset.noteKey]:input.value};save();}));
   $('#copy-discussion').onclick=async()=>{const text=`${tf('請修改 SKG 空間規劃的{name}（room_id: {id}）',{name:r.name,id:r.id})}${r.id==='kitchen'?tf('，方案 {v}（{id}）',{v:kitchenVersion().name,id:kitchenVersion().id}):''}${t('。')}\n${t('目前配置：')}${Object.keys(fieldsFor(r)).map(k=>t(k)+t('：')+note(r,k)).join('\n')}\n${t('本次調整：')}`;
     try{await navigator.clipboard.writeText(text);toast(t('討論提示已複製，可貼回對話補充需求。'));}catch(e){toast(tf('可直接在對話中指定：{name}（{id}）',{name:r.name,id:r.id}));}};
 }
+// Notes grow with their content so longer text at the larger type size is never clipped inside the box.
+function fitNote(el){if(!el.offsetParent)return;el.style.height='auto';el.style.height=el.scrollHeight+2+'px';}
+function fitNotes(){$$('[data-note-key]').forEach(fitNote);}
+let fitTimer;window.addEventListener('resize',()=>{clearTimeout(fitTimer);fitTimer=setTimeout(fitNotes,120);});
 function renderInventory(){
   const q=$('#object-search').value.trim().toLowerCase();const filtered=visibleObjects().filter(o=>(roomId==='floor'||o.room_id===roomId)&&`${o.name} ${o.code} ${o.id} ${room(o.room_id).name}`.toLowerCase().includes(q));
   $('#inventory-title').textContent=roomId==='floor'?t('大型物件尺寸簿'):tf('{name} · 物件尺寸簿',{name:room(roomId).name});
@@ -294,7 +307,7 @@ const endPointer=e=>{
   else if(gesture.drag?.id===e.pointerId)gesture.drag=null;
   if(!gesture.pts.size&&gesture.moved)gesture.suppressUntil=performance.now()+400;
 };
-window.addEventListener('pointerup',endPointer);window.addEventListener('pointercancel',endPointer);
+window.addEventListener('pointerup',endPointer);window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);window.addEventListener('pointercancel',endPointer);
 planEl.addEventListener('click',e=>{if(performance.now()<gesture.suppressUntil){e.stopPropagation();e.preventDefault();}},true);
 planEl.addEventListener('touchmove',e=>{if(e.touches.length>1&&e.cancelable)e.preventDefault();},{passive:false});
 planEl.addEventListener('gesturestart',e=>e.preventDefault());

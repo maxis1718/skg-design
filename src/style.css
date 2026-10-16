@@ -48,3 +48,60 @@
 .lang-switch a{white-space:nowrap}
 @media(max-width:520px){.edition-label,.live-dot{display:none}.edition{gap:6px}.edition b{margin-left:0}}
 html[lang="en"] .brand-zh,html[lang="en"] .brand-caption i{display:none}
+
+/* Hover label (R08): one small name tag, fixed to the viewport, offset from the cursor (positioned in app.js) */
+.tooltip{position:fixed;left:0;top:0;z-index:30;pointer-events:none;display:flex;align-items:baseline;gap:8px;max-width:min(320px,calc(100vw - 16px));padding:4px 9px;border-radius:3px;background:#253c36eb;color:#f6f8ee;font-size:13px;line-height:1.45;white-space:nowrap;box-shadow:0 2px 8px #1b382722}
+.tooltip .tip-name{overflow:hidden;text-overflow:ellipsis}
+.tooltip .tip-code{float:none;margin:0;font-size:11px;letter-spacing:.6px;color:#b6c9b0;flex:none}
+@media(hover:none){.tooltip{display:none!important}}
+
+/* Readability type scale (R08): body ≥15px, meta/footnotes ≥12–13px. Plan SVG text and elevation drawing text untouched. */
+body{font-size:15px}h2{font-size:22px}h3{font-size:17px}
+.eyebrow{font-size:11.5px;letter-spacing:1.8px}.drawing-head .eyebrow{font-size:11px}
+.edition{font-size:12px}.lang-switch a{font-size:12px}
+.intro-copy{font-size:15px}
+.tab{font-size:15px}.tab .tab-number{font-size:11px}
+.drawing-head h2{font-size:19px}
+.tool{font-size:13px}#zoom-value{font-size:12px;width:42px}
+.version-toolbar{font-size:13px}.version-toolbar .seg .tool{font-size:13px}
+.canvas-tip{font-size:12px}
+.drawing-foot,.foot-source{font-size:12px}.legend i{height:9px;width:9px}
+.inspector .en-title{font-size:13px}
+.inspector-text{font-size:15px;line-height:1.8}
+.inspector .big-number span{font-size:14px}
+.inspector-note{font-size:13px}
+.inspector-pair{font-size:14px}
+.inspector-foot{font-size:13px;line-height:1.8}
+.inspector-button{font-size:14px;padding:9px 12px}
+.status-tag{font-size:12px;padding:3px 7px}
+.actual-form label{font-size:12px}.actual-form input{font-size:14px}
+.edit-hint,.source-pill{font-size:12px}
+.section-heading>span{font-size:14px}
+.room-index .room-index-no{font-size:12px}.room-index .room-index-en{font-size:13px}.room-index .room-index-dim{font-size:15px}.room-index .room-index-focus{font-size:13px;line-height:1.75}
+.detail-subhead{gap:12px}.detail-subhead h3{font-size:17px}.detail-subhead small{font-size:13px}
+.dimension-row{font-size:15px}
+.quiet-note,.dimension-list .quiet-note{font-size:13px;line-height:1.8}
+.note-field{grid-template-columns:168px minmax(0,1fr)}
+.note-field label{font-size:14px;line-height:1.6;padding-top:5px}
+.note-field textarea{font-size:15px;line-height:1.75}
+.plain-button{font-size:14px}
+.search-box{font-size:13px}.search-box input{font-size:14px}
+table{font-size:14px}th{font-size:12.5px}th small{font-size:11px}td .item-code{font-size:11px}td button{font-size:14px}.table-muted{font-size:13px}
+details>summary{font-size:15px}.auxiliary summary{font-size:14px}
+.reference-grid p{font-size:14px;line-height:1.85}
+.change-item{font-size:14px;line-height:1.75}.change-item span{font-size:12px}
+.auxiliary-grid>div{font-size:14px}.auxiliary-grid small{font-size:13px}
+footer{font-size:12px}
+#source-caption{font-size:14px}#toast{font-size:14px}
+.tower-elevation h3{font-size:16px}.tower-elevation small{font-size:13px}.tower-slot,.tower-base{font-size:14px}.tower-slot span{font-size:12px}
+.elev-head h3{font-size:19px}.elev-viewpoint{font-size:14px;max-width:520px}
+.elev-figure figcaption{font-size:13px;line-height:1.7}
+.elev-spec{font-size:15px}.elev-row b{font-size:15px}.elev-row span{font-size:15px}.elev-row p{font-size:14px;line-height:1.7}
+.elev-spec h4{font-size:15px}.elev-spec ul{font-size:14px;line-height:1.75}.elev-open{font-size:14px}
+@media(max-width:1100px){.note-field{grid-template-columns:140px minmax(0,1fr)}}
+@media(max-width:760px){.edition{font-size:11px}.lang-switch a{font-size:12px}.intro-copy{font-size:15px;max-width:100%}.tab{font-size:15px}.drawing-head h2{font-size:17px}.canvas-tip{font-size:11px}.section-heading>span{font-size:13px}.inspector-text{line-height:1.75}footer{font-size:12px}.elev-head h3{font-size:17px}}
+@media(max-width:560px){.note-field{grid-template-columns:minmax(0,1fr);gap:0;padding:10px 0 6px}.note-field label{padding-top:0}.note-field textarea{padding:4px 0}.room-index .room-index-focus{font-size:13px}.room-index .room-index-dim{font-size:14px}}
+@media(max-width:400px){.drawing-head .eyebrow{font-size:10px}.drawing-foot{font-size:11px}.legend{flex-wrap:wrap;gap:6px 12px}.tool{font-size:13px}}
+@media print{th,td{font-size:10px}}
+.note-field textarea{overflow:hidden;min-height:44px}
+@media(hover:none){.canvas-tip{display:none}}
