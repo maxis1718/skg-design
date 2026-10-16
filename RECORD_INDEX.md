@@ -25,8 +25,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | LIV-05 | `dining-table` | 餐桌 | 200 × 80 |
 | KIT-01 | `washer-dryer` | 洗烘衣機 W/D | 60 × 65 |
 | KIT-02 | `fridge` | 冰箱 F | 80 × 70 |
-| KIT-03 | `kitchen-upper-worktop` | 上方檯面 | 167.5 × 65 |
-| KIT-04 | `kitchen-lower-worktop` | 下方檯面 | 320.5 × 65 |
+| KIT-03 | `kitchen-upper-worktop` | Dry kitchen | 167.5 × 65 |
+| KIT-04 | `kitchen-lower-worktop` | Wet kitchen | 320.5 × 65 |
 | HLP-01 | `helper-bed` | 女傭房床 | 107 × 200 |
 | MST-01 | `master-wardrobe-left` | 主臥左側衣櫃 | 90 × 60 |
 | MST-02 | `master-wardrobe-right` | 主臥右側衣櫃 | 90 × 60 |
@@ -40,10 +40,11 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-02 | `guest-bed` | 客房床 | 152 × 191 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |
 | KIT-06 | `kitchen-hob` | 瓦斯爐 | 75 × 42 |
-| KIT-07 | `appliance-tower` | 電器高櫃 | 68 × 65 |
+| KIT-07 | `appliance-tower` | 電器櫃 | 60 × 65 |
 | KIT-10 | `kitchen-oven` | 嵌入式烤箱（爐下） | 80 × 60 |
 | KIT-08 | `dishwasher` | 洗碗機 | 60 × 60 |
-| KIT-09 | `spice-pullout` | 窄拉籃（三層） | 20 × 60 |
+| KIT-09 | `spice-pullout` | 窄拉籃（三層 · 左） | 20 × 60 |
+| KIT-11 | `spice-pullout-r` | 窄拉籃（三層 · 右） | 20 × 60 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 

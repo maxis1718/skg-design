@@ -62,10 +62,11 @@ function appliance(g, it, x, y, w, h, labels) {
 
 // Draw a unit (front elevation) at (ox, oy).
 function drawUnit(g, u, ox, oy, state, detail, labels) {
-  const t = u.board ?? 1.8, B = bands(u), sw = detail ? .35 : .3;
+  // board = shelf/carcass board thickness; side = side-panel thickness (defaults to board).
+  const t = u.board ?? 1.8, sd = u.side ?? t, B = bands(u), sw = detail ? .35 : .3;
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:C.interior, stroke:'none'});
   for (const b of B) {
-    const y0 = oy + b.y0, ix = ox + t, iw = u.w - 2 * t;
+    const y0 = oy + b.y0, ix = ox + sd, iw = u.w - 2 * sd;
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); continue; }
@@ -101,8 +102,8 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     }
   }
   if (!u.noCarcass) {
-    g.rect(ox, oy, t, u.h, {fill:C.board, stroke:'none'});
-    g.rect(ox + u.w - t, oy, t, u.h, {fill:C.board, stroke:'none'});
+    g.rect(ox, oy, sd, u.h, {fill:C.board, stroke:'none'});
+    g.rect(ox + u.w - sd, oy, sd, u.h, {fill:C.board, stroke:'none'});
   }
   for (const fr of u.fronts || []) {
     const y0 = oy + fr.from, h = fr.to - fr.from;
@@ -288,8 +289,9 @@ function renderSection(elev, view, state) {
         let ix = x + tray - 2.5;
         for (const it of real) for (let k = 0; k < (it.repeat || 1); k++) { const d = it.d ?? 8; ix -= d + .8; if (ix < x + 3) break; g.rect(ix, y0 + 1.6, d, Math.min(it.h, b.h - 2), {...sty, rx:Math.min(1.4, d / 3)}); }
       } else if (real.length) {
+        // Unknown depth (d null) is drawn dashed at a nominal 35 so it never reads as a measured size.
         const it = real.reduce((a, c) => (c.d ?? 0) > (a.d ?? 0) ? c : a), d = it.d ?? 35;
-        g.rect(x + tray - 2.5 - d, y0 + 1.6, d, Math.min(it.h, b.h - 2), {...sty, rx:1.4});
+        g.rect(x + tray - 2.5 - d, y0 + 1.6, d, Math.min(it.h, b.h - 2), {...sty, ...(it.d == null ? {'stroke-dasharray':'1.4 1'} : {}), rx:1.4});
       }
       if (!whole) g.rect(D - 6, y0 + 1.6, 1, 1.2, {fill:C.line, stroke:'none'});
       const lx = (open || whole && open) ? x + tray + 1.2 : D + 1.6;

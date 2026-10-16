@@ -1,4 +1,4 @@
-# SKG Design · 空間圖冊
+# SKG 空間規劃
 
 共用原始碼：[maxis1718/skg-design](https://github.com/maxis1718/skg-design)。2026-10-16 啟用 Pages 後確認 repo 為 public，原始碼與圖檔也可公開讀取。以 Git 保存設計與歷史，支援 Mac mini 上的 Codex／Claude 透過既有 Telegram 控制流程修改。
 
@@ -25,7 +25,7 @@ npm run check
 
 - 預設顯示 repo 發布的共用版，筆記與實物欄位唯讀；手機與不同電腦看到同一份正式內容。
 - 正式修改由 Telegram／對話交給 agent，改來源 → 本地預覽 → 檢查 → commit／push → 部署。
-- 「本機草稿」允許暫記筆記、實物尺寸、複製或重新命名方案，只存這台瀏覽器，不會改共用版。原有本機資料保留在草稿內。
+- 「本機草稿」允許暫記筆記、實物尺寸，只存這台瀏覽器，不會改共用版。原有本機資料保留在草稿內。
 - JSON 匯出／匯入可備份或將草稿交給 agent；agent 必須把接受的修改合併到來源，才能讓其他裝置看見。
 - 網頁沒有嵌入 AI API 或 Telegram bot；使用者既有的 Mac mini 控制橋繼續負責這部分。
 
@@ -33,7 +33,7 @@ npm run check
 
 - 全屋與 7 個房間分頁，選房間高亮原圖區域。
 - 所有尺寸 cm；物件 hover／點選顯示尺寸與來源。
-- 本版可見大型物件 A=22 件、B=26 件（B 加入電器高櫃、洗碗機、窄拉籃、爐下烤箱）。總索引 26 件。
+- 廚房 A 方案加入電器櫃、洗碗機、兩個窄拉籃、爐下烤箱。
 - 圖面縮放、物件／尺寸圖層、尺寸簿與各房間設計細節。
 - 已移除頁首標語與單位展示區，首屏優先顯示圖面。
 
@@ -50,24 +50,24 @@ npm run check
 
 ## 立面設計（R04–R05）
 
-點選有立面的物件後，下方會出現「立面設計」：正立面／側剖面／整面牆脈絡，可切換關門／開門（拉出）。資料在 `src/project.json → elevations`，繪圖在 `src/elevation.js`。
+點選有立面的物件後，下方會出現「立面設計」：正立面／側剖面／空間規劃（點 Wet kitchen 即開），可切換關門／開門（拉出）。資料在 `src/project.json → elevations`，繪圖在 `src/elevation.js`。
 
 - 單位 cm，高度由完成地面往上量；天花暫以使用者提供的 280 計。
 - 每個 unit 的 `bands`（由下到上）高度總和必須等於 `h`，`npm run check` 會驗證。
-- 已建立：`appliance-tower`（B 方案電器高櫃）、`kitchen-hob`（爐台＋爐下烤箱＋窄拉籃）、`dishwasher`、`spice-pullout`、`kitchen-oven`、`master-wardrobe-left`、`master-wardrobe-right`。
-- 廚房 B 的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`）；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
+- 已建立：`appliance-tower`（A 方案電器櫃）、`kitchen-hob`（爐台＋爐下烤箱＋窄拉籃）、`dishwasher`、`spice-pullout`、`kitchen-oven`、`master-wardrobe-left`、`master-wardrobe-right`。
+- 廚房 A（窗下水槽，預設；B 為原始配置，網址 ?kitchen=a|b）的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`）；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
 - 立面是設計提案，不是原圖標註；電器尺寸為示意機型，實購型號仍記在 actual 欄位。
 
 ## 廚房方案
 
-`src/project.json → roomVersions.kitchen` 是方案來源；所有房間分頁都可從圖面工具列切換廚房方案。
+`src/project.json → roomVersions.kitchen` 是方案來源；圖面工具列用 A／B 切換，網址同步 `?kitchen=a|b`（預設 A）。
 
-- **A · 目前配置**：原水槽／瓦斯爐位置。
-- **B · 窗下水槽＋電器高櫃**：水槽移到兩者之間的下方外牆窗位；瓦斯爐移至下檯面右端。右側為門，保持門與開口。
-- 原水槽處規劃至天花板電器高櫃；三個可拉出層：下層電鍋、中層微波爐、上層氣炸鍋，底部封閉收納。立面分區示意不按比例。
-- 使用者指定女傭房開門弧暫不處理。櫃高、每格淨高、電器型號／尺寸、爐具安裝淨距與窗台／龍頭高度仍待定。
-- B 的櫃體約 68 × 65 cm 是原水槽段的規劃占位，不是已定案或現場實測櫃尺寸；爐具、水槽也是方案位置，與圖上原標分開。
-- A、B 筆記分開保存。未來增加方案時，複製完整版本資料與 objectOverrides，不改 A 的 source paths。
+- **A · 新方案**（`kitchen-window-sink`）：水槽移到下方外牆窗位，瓦斯爐靠門端，原水槽段改為電器櫃。下檯面稱 Wet kitchen、上檯面稱 Dry kitchen。
+- Wet kitchen 由門端起：收邊 5、窄拉籃 20、爐下櫃 80、窄拉籃 20（爐具兩側對稱）、洗碗機 63.6（側板 1.8＋開口 60＋側板 1.8）、水槽櫃 71.9（盆寬 60，備菜區 ≈92）、電器櫃 60。
+- 電器櫃外寬 60、內淨寬 55，到天花 280；由下到上：踢腳 10、鍋具抽屜 45、下層 36（預留）、中層 40 大同電鍋 15 人份、上層 45 微波爐、上櫃 93.8、收邊 3。
+- **B · 原始**（`kitchen-current`）：原水槽／瓦斯爐位置。
+- 使用者指定女傭房開門弧暫不處理。窗台／龍頭高度、電器實購型號仍待定；占位與立面是設計值，與圖上原標分開。
+- A、B 筆記分開保存；新增方案要在 project.json 複製完整版本資料與 objectOverrides，不改原始配置的 source paths。
 
 ## 快速索引
 
