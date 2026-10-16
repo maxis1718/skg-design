@@ -193,6 +193,7 @@ function levels(g, view, x0, x1) {
 
 function extras(g, list) {
   for (const e of list || []) {
+    if (dryExtra(g, e)) continue;
     if (e.type === 'window') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.glass, stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'2 1.2'});
       g.line(e.x + e.w / 2, e.y, e.x + e.w / 2, e.y + e.h, {stroke:C.faint, 'stroke-width':.25});
@@ -235,6 +236,62 @@ function extras(g, list) {
       else hdim(g, e.x0, e.x1, e.y, e.label);
     }
   }
+}
+
+// Dry-kitchen primitives: framed glass partition, countertop device, tap column, socket.
+function dryExtra(g, e) {
+  if (e.type === 'glass') {
+    const fw = e.frame ?? 1.6, fr = {fill:'#2b2f2d', stroke:'none'};
+    g.rect(e.x, e.y, e.w, e.h, {fill:C.glass, 'fill-opacity':.7, stroke:'none'});
+    for (const k of [.18, .26]) g.line(e.x + e.w * k, e.y + e.h * .35, e.x + e.w * (k + .14), e.y + e.h * .7, {stroke:'#ffffff', 'stroke-width':.8, 'stroke-opacity':.8});
+    g.rect(e.x, e.y, e.w, fw, fr); if (!e.cutTop) g.rect(e.x, e.y + e.h - fw, e.w, fw, fr);
+    g.rect(e.x, e.y, fw, e.h, fr); g.rect(e.x + e.w - fw, e.y, fw, e.h, fr);
+    for (const mx of e.mullions || []) g.rect(mx - fw / 2, e.y, fw, e.h, fr);
+    const cy = e.y + e.h * (e.labelAt ?? .5);
+    if (e.label) g.text(e.x + e.w / 2, cy, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});
+    if (e.sub) g.text(e.x + e.w / 2, cy - g.f * 1.25, e.sub, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .64});
+    return true;
+  }
+  if (e.type === 'device') {
+    const dash = e.dashed ? {'stroke-dasharray':'1.4 1'} : {};
+    if (e.shape === 'pot') {
+      g.rect(e.x, e.y, e.w, e.h, {fill:'none', stroke:C.itemLine, 'stroke-width':.3, rx:1.2, ...dash});
+      for (const hx of [e.x - 3.5, e.x + e.w]) g.rect(hx, e.y + e.h - 3, 3.5, 1.2, {fill:'none', stroke:C.itemLine, 'stroke-width':.3, rx:.5, ...dash});
+    } else {
+      g.rect(e.x, e.y, e.w, e.h, {fill:e.dashed ? 'none' : C.item, stroke:C.itemLine, 'stroke-width':.35, rx:Math.min(1.6, e.w / 4), ...dash});
+      if (e.shape === 'coffee') {
+        g.rect(e.x + .6, e.y + .5, e.w - 1.2, 1.2, {fill:C.dark, stroke:'none', rx:.4});
+        g.rect(e.x + .8, e.y + e.h - 1.8, e.w - 1.6, 1, {fill:'#9aa39d', stroke:'none', rx:.4});
+      }
+    }
+    const fs = g.f * (e.size || .7);
+    if (e.label && e.vertical) g.vtext(e.x + e.w / 2 + fs * .32, e.y + (e.labelY ?? e.h * .3), e.label, {fill:C.line, 'font-size':fs});
+    else if (e.label) g.text(e.x + e.w / 2, e.y + (e.labelY ?? e.h / 2 - fs * .35), e.label, {'text-anchor':'middle', fill:e.dashed ? C.thin : C.line, 'font-size':fs});
+    if (e.sizeLabel) g.text(e.x + e.w / 2, e.y + (e.labelY ?? e.h / 2) - fs * 1.4, e.sizeLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .85});
+    return true;
+  }
+  if (e.type === 'tap') {
+    // Slim tap column standing on the worktop; spout swings out at the top (reach toward +x).
+    const head = Math.min(6, e.h * .2), reach = e.reach ?? 5;
+    g.rect(e.x, e.y, e.w, e.h - head, {fill:'#fbfbf8', stroke:C.itemLine, 'stroke-width':.35, rx:1.2});
+    g.rect(e.x - .3, e.y + e.h - head, e.w + .6, head, {fill:'#fbfbf8', stroke:C.itemLine, 'stroke-width':.35, rx:1.6});
+    g.rect(e.x + e.w * .25, e.y + e.h - head * .55, e.w * .5, head * .3, {fill:'#9aa39d', stroke:'none', rx:.4});
+    if (reach) {
+      const oy = e.outlet ?? e.y + e.h - head - 1.5;
+      g.rect(e.x + e.w, oy, reach, 1.6, {fill:'#fbfbf8', stroke:C.itemLine, 'stroke-width':.3, rx:.6});
+      g.line(e.x + e.w + reach - 1, oy, e.x + e.w + reach - 1, oy - 4, {stroke:'#7fa8b8', 'stroke-width':.4, 'stroke-dasharray':'.8 .8'});
+    }
+    if (e.label) g.vtext(e.x + e.w / 2 + g.f * .22, e.y + (e.h - head) / 2, e.label, {fill:C.line, 'font-size':g.f * (e.size || .62)});
+    return true;
+  }
+  if (e.type === 'socket') {
+    const w = 4.2, h = 2.8, x = e.x - w / 2;
+    g.rect(x, e.y, w, h, {fill:'#fff', stroke:C.dim, 'stroke-width':.25, rx:.4, ...(e.dashed ? {'stroke-dasharray':'.8 .6'} : {})});
+    for (const k of [.32, .68]) g.rect(x + w * k - .3, e.y + 1, .6, .9, {fill:C.dim, stroke:'none'});
+    if (e.label) g.text(e.x + (e.anchor === 'end' ? -w / 2 - .8 : w / 2 + .8), e.y + .5, e.label, {'text-anchor':e.anchor || 'start', fill:C.dim, 'font-size':g.f * (e.size || .6)});
+    return true;
+  }
+  return false;
 }
 
 function defs() {
