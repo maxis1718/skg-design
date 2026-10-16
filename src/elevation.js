@@ -138,10 +138,10 @@ function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
   for (const it of items) {
     const h = Math.min(it.h, room - .5);
     g.rect(x, y0, it.w, h, {fill:it.dashed ? 'none' : (it.box ? C.box : C.item), stroke:it.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':it.dashed ? '1.4 1' : null, rx:it.box ? .6 : Math.min(1.6, it.w / 4)});
-    const fs = g.f * (detail ? .74 : .8);
-    if (it.name && h > fs * 2.4) {
-      if (it.w > fs * Math.min(it.name.length, 4) * .9 || it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 + fs * .35, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':fs * (it.w < fs * 3 ? .8 : 1)});
-      else g.vtext(x + it.w / 2 + fs * .32, y0 + h / 2, it.name, {fill:C.line, 'font-size':fs * .8});
+    const fs = g.f * (detail ? .74 : .8), name = (!detail && it.short) || it.name;
+    if (name && h > fs * 2.4) {
+      if (it.w > fs * Math.min(name.length, 4) * .9 || it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 + fs * .35, name, {'text-anchor':'middle', fill:C.line, 'font-size':fs * (it.w < fs * 3 ? .8 : 1)});
+      else g.vtext(x + it.w / 2 + fs * .32, y0 + h / 2, name, {fill:C.line, 'font-size':fs * .8});
       if (detail && it.size !== false && h > fs * 4 && it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 - fs * 1.05, it.sizeLabel ?? `${fmt(it.w)}×${fmt(it.h)}`, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .78});
     }
     x += it.w + gap;
@@ -161,6 +161,23 @@ function chain(g, u, ox, oy, x, total = true) {
   const x2 = x + g.f * 3.6;
   g.line(x2, oy, x2, oy + u.h, s); g.line(x2 - tick, oy, x2 + tick, oy, s); g.line(x2 - tick, oy + u.h, x2 + tick, oy + u.h, s);
   g.vtext(x2 + g.f * .9, oy + u.h / 2, fmt(u.h), {fill:C.dim, 'font-size':g.f * .85});
+}
+// Plain right-side height chain for one unit of a multi-unit view (view.rightChain = {ref, min?, note?}).
+// Ticks at every band boundary; numbers only for bands ≥ min (default 2.5, so 1.8 boards stay unlabelled).
+function rightChainWidth(g, u, rc) {
+  const fs = g.f * .8, nums = u.bands.filter(b => b.h >= (rc.min ?? 2.5)).map(b => em(fmt(b.h)));
+  const note = rc.note ? em(rc.note) * g.f * .6 : 0;
+  return g.f * 1.1 + Math.max(1.6 + Math.max(0, ...nums) * fs, note) + g.f * .9;
+}
+function rightChain(g, u, ox, oy, x, rc) {
+  const B = bands(u), tick = 1.2, s = {stroke:C.dim, 'stroke-width':.25}, fs = g.f * .8;
+  g.line(x, oy, x, oy + u.h, s);
+  for (const b of B) {
+    g.line(x - tick, oy + b.y0, x + tick, oy + b.y0, s);
+    if (b.h >= (rc.min ?? 2.5)) g.text(x + 1.6, oy + (b.y0 + b.y1) / 2 - fs * .36, fmt(b.h), {fill:C.dim, 'font-size':fs});
+  }
+  g.line(x - tick, oy + u.h, x + tick, oy + u.h, s);
+  if (rc.note) g.text(x - tick, oy - g.f * 1.35, rc.note, {fill:C.dim, 'font-size':g.f * .6});
 }
 function hdim(g, x0, x1, y, label, emphasize) {
   const s = {stroke:C.dim, 'stroke-width':.25};
@@ -190,6 +207,8 @@ function extras(g, list) {
       g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label || T('排油煙機'), {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});
     } else if (e.type === 'worktop') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.stone, stroke:C.line, 'stroke-width':.3});
+      // Optional material label (e.g. 燒結石檯面 · 面 90) placed above the worktop at labelX/labelY.
+      if (e.label) g.text(e.labelX ?? e.x + e.w / 2, e.labelY ?? e.y + e.h + g.f * .5, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (e.size || .62)});
     } else if (e.type === 'hob') {
       g.rect(e.x, e.y, e.w, 1.2, {fill:C.dark, stroke:'none'});
       for (const k of [.22, .5, .78]) g.rect(e.x + e.w * k - 4, e.y + 1.2, 8, 1.6, {fill:C.dark, stroke:'none'});
@@ -229,18 +248,21 @@ function renderFront(elev, view, state) {
   const labels = view.labels ?? detail;
   const f = view.font ?? Math.max(5.4, W / 24);
   const chainUnit = view.chain != null ? units[view.chain] : detail ? units[0] : null;
+  const rc = view.rightChain && units.find(r => r.ref === view.rightChain.ref);
   const m = {l: levelMargin(view, f), r: view.marginR != null ? f * view.marginR : chainUnit ? f * 8 : f * 2, t: f * 2.4, b: f * (view.hcuts ? 5.4 : 3.6)};
   const g = canvas(H, f);
+  if (rc) m.r = Math.max(m.r, rightChainWidth(g, rc.u, view.rightChain));
   levels(g, view, -m.l + f * .4, W);
   g.line(-m.l + f * .4, 0, W + m.r - f, 0, {stroke:C.line, 'stroke-width':.6});
   if (!view.noCeiling) {
     g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
-    g.text(W + m.r - f, H + .9, view.ceilingLabel || `${T('天花')} ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
+    g.text(rc ? W : W + m.r - f, H + (rc ? f * .5 : .9), view.ceilingLabel || `${T('天花')} ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
   }
   extras(g, view.under);
   for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail, labels);
   extras(g, view.extras);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
+  if (rc) rightChain(g, rc.u, rc.x, rc.y || 0, Math.max(rc.x + rc.u.w, W) + f * 1.1, view.rightChain);
   if (detail) { const r = units[0]; hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
   for (const r of units) if (r.label) g.text(r.x + r.u.w / 2, -f * 1.6, r.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .8});
   if (view.hcuts) {
@@ -303,9 +325,11 @@ function renderSection(elev, view, state) {
       g.rect(D - 1.8 + dx, y0 + .2, 1.8, b.h - .4, {fill:C.front, stroke:C.line, 'stroke-width':.35});
       g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     } else if (b.kind === 'cabinet') {
+      // shelves containing 0 = the cabinet's own bottom panel, so the door starts at the band (no overlap below).
+      const lo = (b.shelves || []).includes(0) ? 0 : 1.6;
       for (const s of b.shelves || []) g.rect(0, y0 + s, D - 2.5, t, {fill:C.board, stroke:'none'});
-      if (open) g.rect(D, y0 - 1.6, Math.min(ext, u.w / 2), b.h + 1.6, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
-      else g.rect(D - 1.8, y0 - 1.6, 1.8, b.h + 1.6, {fill:C.front, stroke:C.line, 'stroke-width':.35});
+      if (open) g.rect(D, y0 - lo, Math.min(ext, u.w / 2), b.h + lo, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
+      else g.rect(D - 1.8, y0 - lo, 1.8, b.h + lo, {fill:C.front, stroke:C.line, 'stroke-width':.35});
       g.text(D + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     }
   }
