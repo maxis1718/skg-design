@@ -27,6 +27,10 @@ for fragment in sink+hob:plan=plan.replace(fragment,'')
 dining=re.findall(r'<path\b[^>]*data-source-path="(?:519|5[2-8]\d|59[01])"[^>]*/>',plan)
 assert len(dining)==73
 for fragment in dining:plan=plan.replace(fragment,'')
+# R08 TV wall redraw: sofa (592-610), console outline + rear band (56, 615-620, 952), TV symbol (637-643), corner circle (738) replaced by src/furniture-living.svg.
+tv_wall=re.findall(r'<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*/>',plan)
+assert len(tv_wall)==35
+for fragment in tv_wall:plan=plan.replace(fragment,'')
 furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)

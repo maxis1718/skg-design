@@ -8,7 +8,8 @@ const fmt = n => { const r = Math.round(n * 10) / 10; return Number.isInteger(r)
 const C = {
   line:'#2f443c', thin:'#7f8c84', faint:'#b9c2bb', front:'#fbfaf5', interior:'#eef1ea', board:'#d3c4aa',
   plinth:'#d7dbd2', dim:'#a96f47', item:'#ffffff', itemLine:'#55695f', box:'#eadcc4', garment:'#cfdcd2',
-  stone:'#c9c5bb', glass:'#e3edf0', level:'#8fa197', steel:'#e4e6e2', dark:'#4b5751'
+  stone:'#c9c5bb', glass:'#e3edf0', level:'#8fa197', steel:'#e4e6e2', dark:'#4b5751',
+  paper:'#e6e4de', warm:'#f3c46b', screen:'#3d4743', socket:'#f7f7f4', cavity:'#e2ddd2'
 };
 let T = s => s;
 // Rough text width in em: CJK ≈ 1em, other ≈ 0.56em.
@@ -108,13 +109,19 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   for (const fr of u.fronts || []) {
     const y0 = oy + fr.from, h = fr.to - fr.from;
     const dashed = state === 'open' && fr.kind !== 'drawer';
-    for (const lf of frontLeaves(u, fr)) {
+    // fr.openLeaves: leaves (by index) drawn pulled out in the open state, revealing fr.inside (unit-relative extras).
+    const opened = i => state === 'open' && fr.openLeaves?.includes(i);
+    if (state === 'open' && fr.inside) extras(g, fr.inside.map(e => shift(e, ox, oy)), state);
+    frontLeaves(u, fr).forEach((lf, i) => {
       const x = ox + lf.x;
-      if (dashed) {
+      if (opened(i)) {
+        g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.dim, 'stroke-width':.3, 'stroke-dasharray':'1.6 1.1'});
+      } else if (dashed) {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
       } else if (fr.kind === 'drawer' || fr.kind === 'pullout') {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
-        g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
+        if (fr.notch) { if (!fr.notchLeaves || fr.notchLeaves.includes(i)) notch(g, x + lf.w / 2, y0 + h - .2, fr.notch.w, fr.notch.h); }
+        else g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
       } else {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
@@ -122,13 +129,38 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
         const hy = Math.min(Math.max(y0 + 4, 100), y0 + h - 14), handleX = lf.hinge === 'L' ? x + lf.w - 1.6 : x + 1;
         g.rect(handleX, hy, .6, Math.min(12, h * .4), {fill:C.thin, stroke:'none', rx:.3});
       }
-    }
+    });
     if (fr.label && !dashed && labels) {
       if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
       else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74)});
     }
   }
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
+}
+
+// Arc finger-pull / cable notch cut into the top edge of a front (cx centre, top = edge height, w wide, h deep).
+function notch(g, cx, top, w, h) {
+  g.path(`M${cx - w / 2} ${g.Y(top)}A${w / 2} ${h} 0 0 0 ${cx + w / 2} ${g.Y(top)}Z`, {fill:C.cavity, stroke:C.line, 'stroke-width':.3});
+}
+// Offset an extra's coordinates (x, x0/x1, y, y0/y1, pts, lx/ly) by (dx, dy).
+function shift(e, dx, dy) {
+  const o = {...e};
+  for (const k of ['x', 'x0', 'x1', 'lx']) if (o[k] != null) o[k] += dx;
+  for (const k of ['y', 'y0', 'y1', 'ly']) if (o[k] != null) o[k] += dy;
+  if (o.pts) o.pts = o.pts.map(([x, y]) => [x + dx, y + dy]);
+  return o;
+}
+// Type G (BS 1363) socket plate seen from the front: n gangs plus an optional USB pair.
+function socketPlate(g, x, y, w, h, n, usb) {
+  g.rect(x, y, w, h, {fill:C.socket, stroke:C.line, 'stroke-width':.25, rx:.4});
+  const slots = n + (usb ? 1 : 0), cw = w / slots, cy = y + h / 2;
+  for (let i = 0; i < n; i++) {
+    const cx = x + cw * (i + .5);
+    g.rect(cx - .45, cy + .4, .9, 1.3, {fill:C.dark, stroke:'none'});
+    g.rect(cx - 1.5, cy - 1.3, 1.1, .6, {fill:C.dark, stroke:'none'});
+    g.rect(cx + .4, cy - 1.3, 1.1, .6, {fill:C.dark, stroke:'none'});
+  }
+  if (usb) for (const k of [-.8, .8]) g.rect(x + cw * (n + .5) - .7, cy + k - .3, 1.4, .6, {fill:C.dark, stroke:'none', rx:.2});
 }
 
 function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
@@ -174,8 +206,77 @@ function levels(g, view, x0, x1) {
   }
 }
 
-function extras(g, list) {
-  for (const e of list || []) {
+function extras(g, list, state) {
+  for (let e of list || []) {
+    if (e.when && e.when !== state) continue;
+    if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
+    const fsz = g.f * (e.size || .7);
+    if (e.type === 'wallpaper') {
+      // Feature-wall finish (wallpaper over a timber/ply base); e.gaps adds 0.8 shadow gaps at both ends and the top.
+      const y = e.y ?? 0;
+      g.rect(e.x, y, e.w, e.h, {fill:C.paper, stroke:'none'});
+      g.rect(e.x, y, e.w, e.h, {fill:'url(#elev-paper)', stroke:'none'});
+      if (e.gaps) for (const r of [[e.x, y, .8, e.h], [e.x + e.w - .8, y, .8, e.h], [e.x, y + e.h - .8, e.w, .8]]) g.rect(...r, {fill:'#9aa199', stroke:'none'});
+      if (e.label) g.text(e.lx ?? e.x + 4, e.ly ?? y + e.h - g.f * 1.6, e.label, {fill:C.thin, 'font-size':fsz, 'text-anchor':e.anchor || 'start'});
+      continue;
+    }
+    if (e.type === 'wash') { g.rect(e.x, e.y, e.w, e.h, {fill:'url(#elev-warm)', stroke:'none', opacity:e.opacity ?? .5}); continue; }
+    if (e.type === 'beam') { g.path(`M${e.pts.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}Z`, {fill:'url(#elev-warm)', stroke:'none', opacity:e.opacity ?? .55}); continue; }
+    if (e.type === 'soffit') {
+      g.rect(e.x, e.y, e.w, e.h, {fill:'#eef0eb', stroke:C.thin, 'stroke-width':.3});
+      if (e.slot) g.rect(e.slot[0], e.y - .6, e.slot[1], 1.2, {fill:C.warm, stroke:C.line, 'stroke-width':.2});
+      if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h / 2 - fsz * .35, e.label, {'text-anchor':e.anchor || 'middle', fill:C.thin, 'font-size':fsz});
+      continue;
+    }
+    if (e.type === 'tv') {
+      if (e.side) g.rect(e.x, e.y, e.w, e.h, {fill:C.screen, stroke:C.line, 'stroke-width':.25});
+      else {
+        // e.cut: only the lower part of the TV is in view, so skip the top edge.
+        g.rect(e.x, e.y, e.w, e.h, {fill:'#2c3330', stroke:e.cut ? 'none' : C.line, 'stroke-width':.35, rx:e.cut ? 0 : .3});
+        g.rect(e.x + 1.6, e.y + 1.6, e.w - 3.2, e.h - (e.cut ? 1.6 : 3.2), {fill:C.screen, stroke:'none'});
+      }
+      if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h / 2 + fsz * .2, e.label, {'text-anchor':e.anchor || 'middle', fill:e.side ? C.line : '#eef1ec', 'font-size':fsz});
+      if (e.sub) g.text(e.lx ?? e.x + e.w / 2, (e.ly ?? e.y + e.h / 2 + fsz * .2) - fsz * 1.35, e.sub, {'text-anchor':e.anchor || 'middle', fill:e.side ? C.thin : '#c3cbc6', 'font-size':fsz * .82});
+      continue;
+    }
+    if (e.type === 'socket') {
+      if (e.side) g.rect(e.x, e.y, e.w, e.h, {fill:C.socket, stroke:C.line, 'stroke-width':.25});
+      else socketPlate(g, e.x, e.y, e.w, e.h, e.n || 2, e.usb);
+      if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h + fsz * .45, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.line, 'font-size':fsz});
+      continue;
+    }
+    if (e.type === 'device' || e.type === 'cavity') {
+      const cav = e.type === 'cavity';
+      g.rect(e.x, e.y, e.w, e.h, {fill:cav ? C.cavity : e.dashed ? 'none' : C.item, stroke:cav ? C.thin : e.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':e.dashed ? '1.4 1' : null, rx:cav ? 0 : .5});
+      if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h / 2 - fsz * .35, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.line, 'font-size':fsz});
+      continue;
+    }
+    if (e.type === 'conduit' || e.type === 'cable') {
+      const cd = e.type === 'conduit';
+      g.path(`M${e.pts.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}`, {fill:'none', stroke:cd ? '#8a6f4e' : C.dark, 'stroke-width':cd ? .9 : .35, 'stroke-dasharray':cd ? '2 1.2' : null, 'stroke-linejoin':'round'});
+      if (e.label) { const a = {fill:e.color || '#8a6f4e', 'font-size':fsz}; if (e.vertical) g.vtext(e.lx, e.ly, e.label, a); else g.text(e.lx, e.ly, e.label, {...a, 'text-anchor':e.anchor || 'start'}); }
+      continue;
+    }
+    if (e.type === 'cablearm') {
+      // Folding cable arm / drag chain from the fixed end (x0) to the moving drawer back (x1).
+      const n = e.links || 4, dx = (e.x1 - e.x0) / n, pts = [];
+      for (let i = 0; i <= n; i++) pts.push(`${e.x0 + dx * i} ${g.Y(e.y + (i % 2 ? e.h : 0))}`);
+      g.path(`M${pts.join('L')}`, {fill:'none', stroke:'#7a6a55', 'stroke-width':.8, 'stroke-linejoin':'round'});
+      if (e.label) g.text(e.lx ?? (e.x0 + e.x1) / 2, e.ly ?? e.y - fsz * 1.1, e.label, {'text-anchor':e.anchor || 'middle', fill:'#7a6a55', 'font-size':fsz});
+      continue;
+    }
+    if (e.type === 'callout') {
+      // Leader from the pointed feature (x, y) to a label at (lx, ly).
+      g.path(`M${e.x} ${g.Y(e.y)}L${e.lx - .8} ${g.Y(e.ly + fsz * .3)}`, {fill:'none', stroke:C.dim, 'stroke-width':.22});
+      g.rect(e.x - .5, e.y - .5, 1, 1, {fill:C.dim, stroke:'none', rx:.5});
+      g.text(e.lx, e.ly, e.label, {fill:e.color || C.line, 'font-size':fsz});
+      continue;
+    }
+    if (e.type === 'lining') {
+      g.rect(e.x, e.y ?? 0, e.w, e.h, {fill:'#efe6d6', stroke:C.thin, 'stroke-width':.25});
+      if (e.label) g.vtext(e.x + e.w / 2 + fsz * .3, (e.y ?? 0) + e.h * (e.at ?? .5), e.label, {fill:C.thin, 'font-size':fsz});
+      continue;
+    }
     if (e.type === 'window') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.glass, stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'2 1.2'});
       g.line(e.x + e.w / 2, e.y, e.x + e.w / 2, e.y + e.h, {stroke:C.faint, 'stroke-width':.25});
@@ -219,7 +320,7 @@ function extras(g, list) {
 }
 
 function defs() {
-  return `<defs><pattern id="elev-hatch" width="2" height="2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2" stroke="#b7beb6" stroke-width=".5"/></pattern><pattern id="elev-wall" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3" stroke="#a8b1a9" stroke-width=".35"/></pattern></defs>`;
+  return `<defs><pattern id="elev-hatch" width="2" height="2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2" stroke="#b7beb6" stroke-width=".5"/></pattern><pattern id="elev-wall" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3" stroke="#a8b1a9" stroke-width=".35"/></pattern><pattern id="elev-paper" width="9" height="7" patternUnits="userSpaceOnUse"><path d="M.6 1.2h2.2M5.2 3.1h2.6M2.1 5.4h1.7M7.3 6.2h1.2" stroke="#cfccc3" stroke-width=".22" stroke-linecap="round"/><circle cx="4.1" cy="1.4" r=".18" fill="#d3d0c8"/><circle cx="8.2" cy="4.6" r=".16" fill="#d3d0c8"/></pattern><linearGradient id="elev-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c46b" stop-opacity=".9"/><stop offset="1" stop-color="#f3c46b" stop-opacity="0"/></linearGradient></defs>`;
 }
 
 function renderFront(elev, view, state) {
@@ -237,9 +338,9 @@ function renderFront(elev, view, state) {
     g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
     g.text(W + m.r - f, H + .9, view.ceilingLabel || `${T('天花')} ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
   }
-  extras(g, view.under);
+  extras(g, view.under, state);
   for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail, labels);
-  extras(g, view.extras);
+  extras(g, view.extras, state);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
   if (detail) { const r = units[0]; hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
   for (const r of units) if (r.label) g.text(r.x + r.u.w / 2, -f * 1.6, r.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .8});
@@ -259,14 +360,15 @@ function renderSection(elev, view, state) {
   const H = view.height ?? elev.ceiling_cm, f = view.font ?? 5.4;
   const top = u.h - (B.find(b => b.kind === 'filler')?.h || 0);
   const W = D + ext + (view.labelRoom ?? 16);
-  const m = {l: Math.max(f * 6.2, levelMargin(view, f)), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
+  const m = {l: Math.max(f * 6.2, levelMargin(view, f)) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
   const g = canvas(H, f);
   levels(g, view, -m.l + f * .4, W);
-  g.rect(-4, 0, 4, H, {fill:'url(#elev-wall)', stroke:C.line, 'stroke-width':.4});
+  const wx = view.wallAt ?? 0; // structural wall face; a lining (feature-wall build-up) may sit between it and the cabinet back (x=0)
+  g.rect(wx - 4, 0, 4, H, {fill:'url(#elev-wall)', stroke:C.line, 'stroke-width':.4});
   g.line(-m.l + f * .4, 0, W + m.r - f, 0, {stroke:C.line, 'stroke-width':.6});
   if (!view.noCeiling) g.line(-m.l + f * .4, H, W + m.r - f, H, {stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'3 1.6'});
   g.rect(0, 0, D, top, {fill:C.interior, stroke:C.line, 'stroke-width':.45});
-  extras(g, view.under);
+  extras(g, view.under, state);
   const back = 1, dxAll = whole && open ? ext : 0;
   const firstY = B.find(b => b.kind !== 'plinth')?.y0 ?? 0;
   if (whole) {
@@ -298,10 +400,11 @@ function renderSection(elev, view, state) {
       if (!whole || open) g.text(lx + (whole ? 2 : 0), y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
       if (!whole && open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `${T('滿拉')} ≈ ${fmt(ext)}`);
     } else if (b.kind === 'drawers') {
-      const dx = open ? (view.drawerExtension ?? ext - 5) : 0;
-      g.rect(back + dx, y0 + 2, D - back - 4, b.h - 6, {fill:'none', stroke:C.thin, 'stroke-width':.3});
+      // b.boxFrom/boxTo/boxLift/boxH: explicit drawer-box geometry (e.g. a service void behind a short box).
+      const dx = open ? (view.drawerExtension ?? ext - 5) : 0, bx = b.boxFrom ?? back, bt = b.boxTo ?? D - 4;
+      g.rect(bx + dx, y0 + (b.boxLift ?? 2), bt - bx, b.boxH ?? b.h - 6, {fill:b.boxH ? '#f3efe6' : 'none', stroke:C.thin, 'stroke-width':.3});
       g.rect(D - 1.8 + dx, y0 + .2, 1.8, b.h - .4, {fill:C.front, stroke:C.line, 'stroke-width':.35});
-      g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
+      if (!b.noLabel) g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     } else if (b.kind === 'cabinet') {
       for (const s of b.shelves || []) g.rect(0, y0 + s, D - 2.5, t, {fill:C.board, stroke:'none'});
       if (open) g.rect(D, y0 - 1.6, Math.min(ext, u.w / 2), b.h + 1.6, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
@@ -314,8 +417,8 @@ function renderSection(elev, view, state) {
     if (open) hdim(g, D, D + ext, top + 3.4, `${T('拉出')} ≈ ${fmt(ext)}`);
     else g.text(D + 1.6, firstY + (top - firstY) / 2, u.caption || '', {fill:C.line, 'font-size':f * .74});
   }
-  g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});
-  extras(g, view.extras);
+  if (!u.noBack) g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});
+  extras(g, view.extras, state);
   if (view.chain) chain(g, u, 0, 0, W + f * .6, false);
   hdim(g, 0, D, -f * 1.6, `${fmt(D)}（${T('櫃深')}）`, true);
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
