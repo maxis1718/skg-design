@@ -14,6 +14,11 @@ const C = {
 let T = s => s;
 // Current door state while rendering; extras with `when: 'open'|'closed'` only draw in that state (interiors, sockets).
 let ST = 'closed';
+// Elevation-level front style (elev.frontStyle), e.g. handleless slab fronts for the whole kitchen; null = classic fronts.
+let FS = null;
+// gap = reveal between fronts (0.3 = 3 mm); lip = wall-door overhang below the carcass (finger pull from below);
+// groove = top-edge finger groove depth on base fronts; lipAbove = fronts whose bottom is at/above this height use the lip.
+const FRONT_STYLES = {slab: {gap:.3, lip:2, groove:2, lipAbove:140}};
 // Rough text width in em: CJK ≈ 1em, other ≈ 0.56em.
 const em = s => [...String(s)].reduce((w, ch) => w + (/[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]/.test(ch) ? 1 : .56), 0);
 const levelMargin = (view, f) => view.levels?.length ? Math.max(f * 6.2, Math.max(...view.levels.map(lv => em(`▽ ${fmt(lv.y)} ${lv.label || ''}`))) * f * .72 + f * .9) : f * 2;
@@ -75,7 +80,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
-    if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); continue; }
+    if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); if (FS) g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-grain)', stroke:'none'}); continue; }
     if (b.kind === 'worktop') { g.rect(ox, y0, u.w, b.h, {fill:C.stone, stroke:C.line, 'stroke-width':.25}); continue; }
     if (b.kind === 'builtin') {
       const it = b.item, w = Math.min(it.w, u.w), h = Math.min(it.h, b.h), x = ox + (u.w - w) / 2;
@@ -111,7 +116,12 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     g.rect(ox, oy, sl, u.h, {fill:C.board, stroke:'none'});
     g.rect(ox + u.w - sr, oy, sr, u.h, {fill:C.board, stroke:'none'});
   }
+  // Slab style, closed: light carcass outline drawn beneath the fronts, so the fine reveals (not unit boxes) read as the face
+  // and overhanging lip doors cover the carcass bottom edge.
+  const slabShut = FS && state !== 'open';
+  if (!u.noCarcass && slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:'#8d9891', 'stroke-width':.25});
   for (const fr of u.fronts || []) {
+    if (FS && fr.kind !== 'mirror' && !fr.mirror && !fr.swing) { slabFront(g, u, fr, ox, oy, state, labels, detail); continue; }
     const y0 = oy + fr.from, h = fr.to - fr.from;
     // kind 'mirror' = fixed mirror panel (never opens); door + mirror:true = mirrored door leaf.
     const dashed = state === 'open' && fr.kind !== 'drawer' && fr.kind !== 'mirror';
@@ -153,7 +163,35 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
       else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74), 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
     }
   }
-  if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
+  if (!u.noCarcass && !slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
+}
+
+// Handleless slab front (elev.frontStyle = {gap, lip, groove, lipAbove}): equal fine reveals, matte grain laminate, no bar handles.
+// Grip per front (fr.grip overrides): 'lip' when the front's bottom sits at/above lipAbove (wall units) — the door runs `lip`
+// below the carcass and is pulled from underneath; otherwise 'groove' — top-edge finger groove (panel stops `groove` short of
+// the zone top, back edge chamfered), drawn as a shadow band. Closed lip doors carry no face label or swing marks.
+function slabGrip(fr, oy) { return fr.grip || (oy + fr.from >= (FS.lipAbove ?? 140) ? 'lip' : 'groove'); }
+function slabFront(g, u, fr, ox, oy, state, labels, detail) {
+  const n = fr.count || 1, gp = FS.gap ?? .3, w = (u.w - gp * n) / n, grip = slabGrip(fr, oy);
+  const lip = grip === 'lip' ? (fr.lip ?? FS.lip ?? 2) : 0, groove = grip === 'groove' ? (fr.groove ?? FS.groove ?? 2) : 0;
+  const bot = oy + fr.from - lip + (lip ? 0 : gp / 2), top = oy + fr.to - gp / 2, ptop = top - groove + (groove ? gp / 2 : 0);
+  const door = fr.kind !== 'drawer' && fr.kind !== 'pullout', dashed = state === 'open' && door;
+  if (state === 'open' && fr.inside) extras(g, fr.inside.map(e => shift(e, ox, oy)), state);
+  for (let i = 0; i < n; i++) {
+    const x = ox + gp / 2 + i * (w + gp);
+    if (dashed) { g.rect(x, bot, w, top - bot, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'}); continue; }
+    if (groove) g.rect(x - gp / 2, ptop, w + gp, top + gp / 2 - ptop, {fill:'#b9b2a3', stroke:'none'});
+    g.rect(x, bot, w, ptop - bot, {fill:C.front, stroke:'#8d9891', 'stroke-width':.22});
+    g.rect(x, bot, w, ptop - bot, {fill:'url(#elev-grain)', stroke:'none'});
+    // Grip edge: chamfered top edge (groove) or the free bottom edge of an overhanging door (lip).
+    if (groove) g.rect(x + .1, ptop - .7, w - .2, .6, {fill:'#e6e2d8', stroke:'none'});
+    if (lip) { g.rect(x + .1, bot + .1, w - .2, .7, {fill:'#dedad0', stroke:'none'}); g.line(x, bot, x + w, bot, {stroke:C.dark, 'stroke-width':.3}); }
+  }
+  if (fr.label && !dashed && labels && !lip) {
+    const cy = (bot + ptop) / 2;
+    if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, cy, fr.label, {fill:C.thin, 'font-size':g.f * .74});
+    else g.text(ox + u.w / 2, cy - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74), 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
+  }
 }
 
 // Opened door leaf seen at ~120°: a foreshortened quad outside the carcass showing its inner face.
@@ -510,7 +548,7 @@ function dryExtra(g, e) {
 }
 
 function defs() {
-  return `<defs><pattern id="elev-hatch" width="2" height="2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2" stroke="#b7beb6" stroke-width=".5"/></pattern><pattern id="elev-wall" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3" stroke="#a8b1a9" stroke-width=".35"/></pattern><pattern id="elev-paper" width="9" height="7" patternUnits="userSpaceOnUse"><path d="M.6 1.2h2.2M5.2 3.1h2.6M2.1 5.4h1.7M7.3 6.2h1.2" stroke="#cfccc3" stroke-width=".22" stroke-linecap="round"/><circle cx="4.1" cy="1.4" r=".18" fill="#d3d0c8"/><circle cx="8.2" cy="4.6" r=".16" fill="#d3d0c8"/></pattern><linearGradient id="elev-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c46b" stop-opacity=".9"/><stop offset="1" stop-color="#f3c46b" stop-opacity="0"/></linearGradient></defs>`;
+  return `<defs><pattern id="elev-hatch" width="2" height="2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2" stroke="#b7beb6" stroke-width=".5"/></pattern><pattern id="elev-wall" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3" stroke="#a8b1a9" stroke-width=".35"/></pattern><pattern id="elev-paper" width="9" height="7" patternUnits="userSpaceOnUse"><path d="M.6 1.2h2.2M5.2 3.1h2.6M2.1 5.4h1.7M7.3 6.2h1.2" stroke="#cfccc3" stroke-width=".22" stroke-linecap="round"/><circle cx="4.1" cy="1.4" r=".18" fill="#d3d0c8"/><circle cx="8.2" cy="4.6" r=".16" fill="#d3d0c8"/></pattern><pattern id="elev-grain" width="4.6" height="38" patternUnits="userSpaceOnUse"><path d="M.7 0C.9 9 .5 19 .8 38M2.1 0C2.3 12 1.9 25 2.2 38M3.6 0C3.4 8 3.8 22 3.5 38" stroke="#ece8df" stroke-width=".14" fill="none"/></pattern><linearGradient id="elev-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c46b" stop-opacity=".9"/><stop offset="1" stop-color="#f3c46b" stop-opacity="0"/></linearGradient></defs>`;
 }
 
 function renderFront(elev, view, state) {
@@ -596,11 +634,12 @@ function renderSection(elev, view, state) {
       // b.boxFrom/boxTo/boxLift/boxH: explicit drawer-box geometry (e.g. a service void behind a short box).
       const dx = open ? (view.drawerExtension ?? ext - 5) : 0, bx = b.boxFrom ?? back, bt = b.boxTo ?? D - 4;
       g.rect(bx + dx, y0 + (b.boxLift ?? 2), bt - bx, b.boxH ?? b.h - 6, {fill:b.boxH ? '#f3efe6' : 'none', stroke:C.thin, 'stroke-width':.3});
-      g.rect(D - 1.8 + dx, y0 + .2, 1.8, b.h - .4, {fill:C.front, stroke:C.line, 'stroke-width':.35});
+      g.rect(D - 1.8 + dx, y0 + .2, 1.8, b.h - .4 - (FS ? FS.groove ?? 2 : 0), {fill:C.front, stroke:C.line, 'stroke-width':.35});
       if (!b.noLabel) g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     } else if (b.kind === 'cabinet') {
       // shelves containing 0 = the cabinet's own bottom panel, so the door starts at the band (no overlap below).
-      const lo = (b.shelves || []).includes(0) ? 0 : 1.6;
+      // Slab front style: wall-unit doors (zone bottom ≥ lipAbove) hang `lip` below the carcass as the finger pull.
+      const lo = ((b.shelves || []).includes(0) ? 0 : 1.6) + (FS && y0 >= (FS.lipAbove ?? 140) ? FS.lip ?? 2 : 0);
       for (const s of b.shelves || []) g.rect(0, y0 + s, D - 2.5, t, {fill:C.board, stroke:'none'});
       if (open) g.rect(D, y0 - lo, Math.min(ext, u.w / 2), b.h + lo, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
       else g.rect(D - 1.8, y0 - lo, 1.8, b.h + lo, {fill:C.front, stroke:C.line, 'stroke-width':.35});
@@ -608,7 +647,7 @@ function renderSection(elev, view, state) {
     }
   }
   if (whole) {
-    g.rect(D - 1.8 + dxAll, firstY + .2, 1.8, top - firstY - .4, {fill:C.front, stroke:C.line, 'stroke-width':.4});
+    g.rect(D - 1.8 + dxAll, firstY + .2, 1.8, top - firstY - .4 - (FS ? FS.groove ?? 2 : 0), {fill:C.front, stroke:C.line, 'stroke-width':.4});
     if (open) hdim(g, D, D + ext, top + 3.4, `${T('拉出')} ≈ ${fmt(ext)}`);
     else g.text(D + 1.6, firstY + (top - firstY) / 2, u.caption || '', {fill:C.line, 'font-size':f * .74});
   }
@@ -626,6 +665,9 @@ function svg(vb, out, label) {
 function render(elev, viewId, state, translate) {
   T = typeof translate === 'function' ? translate : (s => s);
   ST = state;
+  // frontStyle: 'slab' (preset) or {style:'slab', gap, lip, groove, lipAbove} overrides; set on the including elevation.
+  const fsIn = elev.frontStyle;
+  FS = fsIn ? {...FRONT_STYLES.slab, ...(typeof fsIn === 'string' ? FRONT_STYLES[fsIn] : fsIn)} : null;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
   return view.kind === 'section' ? renderSection(elev, view, state) : renderFront(elev, view, state);
 }
