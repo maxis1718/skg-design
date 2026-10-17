@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R10",
+    "revision": "R11",
     "unit": "cm",
     "date": "2026-10-17"
   },
@@ -1139,11 +1139,11 @@
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 130 cm from the balcony glass (north end 25, south end 152.5 to the passage). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
+      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 130 cm from the balcony glass (north end 25, south end 152.5 to the passage). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 2700K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
-      "source_note": "設計值：落地電視櫃 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜對齊電視中線；所有插座都在中間抽屜內，整個抽屜拉出就能插拔。櫃後留 8.2 空腔走線、通風，木作底板 5 ＋櫃深 45 ＝前緣距結構牆 50，與原圖電視櫃前緣同線。原圖 240 長、約 40 深的電視櫃符號已由此取代。",
+      "source_note": "設計值：落地電視櫃 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜對齊電視中線；所有插座都在中間抽屜內，整個抽屜拉出就能插拔。櫃後留 8.2 空腔走線、通風，木作底板 5 ＋櫃深 45 ＝前緣距結構牆 50，與原圖電視櫃前緣同線。原圖 240 長、約 40 深的電視櫃符號已由此取代。踢腳內退 10，45° 鋁槽 COB 2700K 底燈洗地，驅動器在櫃後空腔。",
       "dimensions": {
         "w": {
           "cm": 210,
@@ -1482,7 +1482,8 @@
       "provenance_note": "Reference model only, not purchased. Dims from https://www.nespresso.com/ae/en/coffee-machines/original/essenza-mini-c (84 x 330 x 204 mm W x D x H). Placed 5 cm from the fridge-side end, 8 cm off the glass (Ø6 grommet behind it).",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -1517,7 +1518,8 @@
       "provenance_note": "User-chosen product; dims from https://wellsmalaysia.com/water-dispenser/wells-the-one/ (faucet 88 dia x 337 mm; body 180 W x 352 D x 325 H mm, 19 kg; 38 mm hole). HK listing https://hkele.com.hk/en/WELLS/THE-ONE-DB gives body 180 x 325 x 335 and a 35 mm hole, requires water inlet + drain and a dedicated socket near the main unit. Outlet height is not published. Placed 2026-10-17 at 38 cm from the fridge-side end so the outlet and pot zone sit over the main-unit cabinet (user request). Spout reach not published; drawn facing forward.",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -2111,7 +2113,8 @@
       "source_note": "A 方案：瓦斯爐正下方的爐下櫃（80 × 60）；由上到下為餐具抽屜、60 cm 嵌入式烤箱。烤箱型號待選。",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -2176,7 +2179,8 @@
       "source_note": "A 方案原水槽段的暫定占位約 60 × 65 cm，非定案櫃寬深。立面設計：到天花 280，外寬 60、內淨寬 55；由上到下為單門上櫃（鉸鏈在右，底 165，與吊櫃底對齊）、微波爐（淨高 35）、大同電鍋 15 人份（淨高 38）、象印電子鍋＋飯匙（淨高 31.6；三層皆為 Blum 全拉開放層），最下一個 45 鍋具抽屜。象印以 NS-ZAQ10 示意。",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -2210,7 +2214,8 @@
       "source_note": "A 方案：右側窄拉籃右邊、水槽櫃左邊（面對水槽時在左側），60 寬開口，兩側各 1.8 側板（整格 63.6）。機型由使用者指定：Samsung Bespoke AI 獨立式洗碗機；尺寸依 Samsung 新加坡官網。",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -2244,7 +2249,8 @@
       "source_note": "A 方案：面對瓦斯爐的左側，寬 20，拉出後三層放醬料。",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     },
     {
@@ -2278,7 +2284,8 @@
       "source_note": "A 方案：瓦斯爐右側（爐下櫃與洗碗機之間），寬 20，與左側窄拉籃相同、左右對稱。",
       "status": "user-design",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ]
     }
   ],
@@ -2633,6 +2640,10 @@
     {
       "id": "C14",
       "text": "吊櫃門改為由門端起 55 ×2（排油煙機上方）· 41.25 ×2；電器櫃上櫃改單門，鉸鏈在右。"
+    },
+    {
+      "id": "C15",
+      "text": "廚房改三方案：方案 A（電器櫃在女傭房端）、方案 B（電器櫃移到門端靠牆，上櫃 60 ×2 對中爐具）、原始；電視櫃踢腳內退 10，45° 鋁槽燈打地面。"
     }
   ],
   "measurement_policy": {
@@ -2649,7 +2660,7 @@
     "kitchen": [
       {
         "id": "kitchen-window-sink",
-        "name": "A · 新方案",
+        "name": "方案 A",
         "baseId": "kitchen-window-sink",
         "layout": "window-sink",
         "createdAt": "2026-10-16T00:00:00+08:00",
@@ -2711,8 +2722,110 @@
         }
       },
       {
+        "id": "kitchen-tower-left",
+        "name": "方案 B",
+        "baseId": "kitchen-tower-left",
+        "layout": "tower-left",
+        "createdAt": "2026-10-17T00:00:00+08:00",
+        "notes": {
+          "檯面品牌／代碼": "",
+          "檯面顏色": "",
+          "Laminate 品牌／代碼": "",
+          "Laminate 顏色": "",
+          "冰箱型號與實際尺寸": "HITACHI R-HW620RS：68.5×183.3×73.8；占位 80×70，深超 3.8。",
+          "洗烘衣機型號與實際尺寸": "LG WashTower 60×165.5×66；占位 60×65，深超 1。",
+          "設計備註": "全廚房白色細木紋霧面 laminate、無把手、縫 3 mm；下櫃上緣手扣槽。",
+          "方案配置": "電器櫃 60 · 拉籃 20 · 爐下 80 · 拉籃 20 · 水槽 76.9 · 洗碗機 63.6（門端起）。",
+          "電器櫃": "靠門端牆，60 寬（內 55）到天花；內部同方案 A，上櫃門鉸鏈在牆側（左）。",
+          "櫃高／每層淨高": "以天花 280 計；天花、檯面與電器型號確認後微調。",
+          "女傭房動線": "洗碗機在女傭房端，開門時靠近女傭房門口；開門弧暫不檢查。",
+          "吊櫃": "底 165；門端起 電器櫃 60 · 60 ×2（中縫對爐中心）· 窗邊收邊 12.5 ×2 · 55.5 單門。",
+          "Wet kitchen 檯面": "燒結石，面 90、總厚 3（12 mm 斜接，假設），底 87；色號待選。",
+          "洗碗機": "Samsung Bespoke 白色原廠面板，靠女傭房牆，兩側 1.8 側板，整格 63.6。",
+          "烤箱與窄拉籃": "爐下櫃 80：瓦斯爐＋餐具抽屜＋60 烤箱；兩側 20 三層窄拉籃。",
+          "水槽": "櫃 76.9，盆 60 偏門端 2（窗下）；備菜約 33，水槽右側約 70。",
+          "爐具間距": "爐離電器櫃 22.5（≥15），爐右緣離窗 35；排油煙機 90 置中。",
+          "Dry kitchen": "咖啡機最左；主機櫃 59.5（Wells＋2×13A）· 抽屜 51.5×2；玻璃到天花；需拉給排水。"
+        },
+        "objectOverrides": {
+          "appliance-tower": {
+            "bounds_pt": [
+              534.03,
+              333.28,
+              551.04,
+              351.76
+            ],
+            "source_note": "方案 B：門端靠牆 0–60，外寬 60、內淨 55、到天花；內部同方案 A，上櫃單門鉸鏈在牆側（左）。"
+          },
+          "kitchen-oven": {
+            "bounds_pt": [
+              505.69,
+              334.75,
+              528.36,
+              351.76
+            ],
+            "source_note": "方案 B：爐下櫃 80 × 60（離門端 80–160）；餐具抽屜＋60 烤箱，同方案 A。"
+          },
+          "kitchen-hob": {
+            "bounds_pt": [
+              506.39,
+              337.24,
+              527.65,
+              349.12
+            ],
+            "source_note": "方案 B：瓦斯爐 75 置中於爐下櫃（82.5–157.5），離電器櫃 22.5、離外窗 35。"
+          },
+          "spice-pullout": {
+            "bounds_pt": [
+              528.36,
+              334.75,
+              534.03,
+              351.76
+            ],
+            "source_note": "方案 B：電器櫃與爐下櫃之間，寬 20，兼作爐側距離。"
+          },
+          "spice-pullout-r": {
+            "bounds_pt": [
+              500.02,
+              334.75,
+              505.69,
+              351.76
+            ],
+            "source_note": "方案 B：爐下櫃與水槽櫃之間，寬 20，與左側對稱。"
+          },
+          "kitchen-sink": {
+            "bounds_pt": [
+              478.22,
+              334.75,
+              500.02,
+              351.76
+            ],
+            "dimensions": {
+              "w": {
+                "cm": 76.9,
+                "status": "design"
+              },
+              "d": {
+                "cm": 60,
+                "status": "design"
+              }
+            },
+            "source_note": "方案 B：水槽櫃 76.9 × 60（180–256.9）；盆寬 60 在 190.5–250.5，中心比外窗中心偏門端 2，櫃內兩側留 8.7／4.6。"
+          },
+          "dishwasher": {
+            "bounds_pt": [
+              460.7,
+              334.75,
+              477.71,
+              351.76
+            ],
+            "source_note": "方案 B：水槽右側、靠女傭房牆；開口 60，兩側 1.8 側板（整格 63.6）。Samsung Bespoke AI 獨立式。"
+          }
+        }
+      },
+      {
         "id": "kitchen-current",
-        "name": "B · 原始",
+        "name": "原始",
         "baseId": "kitchen-current",
         "layout": "original",
         "createdAt": "2026-10-16T00:00:00+08:00",
@@ -4696,6 +4809,988 @@
         }
       ]
     },
+    "kitchen-b2": {
+      "shared": true,
+      "title": "廚房方案 B · Wet kitchen",
+      "ceiling_cm": 280,
+      "units": {
+        "tower": {
+          "w": 60,
+          "d": 65,
+          "h": 280,
+          "board": 1.8,
+          "side": 2.5,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 45,
+              "label": "鍋具抽屜",
+              "short": "鍋具抽屜"
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 31.6,
+              "label": "下層 · 象印電子鍋＋飯匙",
+              "short": "電子鍋層",
+              "items": [
+                {
+                  "name": "象印電子鍋",
+                  "short": "電子鍋",
+                  "w": 25.5,
+                  "h": 20.5,
+                  "d": 33,
+                  "sizeLabel": "25.5×20.5"
+                },
+                {
+                  "name": "飯匙",
+                  "w": 10,
+                  "h": 20,
+                  "dashed": true,
+                  "size": false
+                }
+              ],
+              "gap": 2.5
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 38,
+              "label": "中層 · 大同電鍋 15 人份",
+              "short": "電鍋層",
+              "items": [
+                {
+                  "name": "大同電鍋",
+                  "w": 39,
+                  "h": 30,
+                  "sizeLabel": "39×30"
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
+              "h": 35,
+              "label": "上層 · 微波爐",
+              "short": "微波爐層",
+              "items": [
+                {
+                  "name": "微波爐",
+                  "w": 47.2,
+                  "h": 28,
+                  "d": 35.1
+                }
+              ]
+            },
+            {
+              "kind": "cabinet",
+              "h": 112,
+              "label": "上櫃",
+              "short": "上櫃",
+              "shelves": [
+                0,
+                36,
+                73
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 10,
+              "to": 55,
+              "label": "鍋具抽屜"
+            },
+            {
+              "kind": "door",
+              "from": 165,
+              "to": 277,
+              "count": 1,
+              "label": "上櫃 · 單門（鉸鏈在左）",
+              "hinges": [
+                "L"
+              ]
+            }
+          ]
+        },
+        "spice": {
+          "w": 20,
+          "d": 60,
+          "h": 87,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "tier",
+              "h": 34,
+              "label": "下層 · 油瓶、醬油",
+              "short": "下層 34",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 6,
+              "items": [
+                {
+                  "name": "油",
+                  "w": 7,
+                  "h": 28,
+                  "d": 7.5,
+                  "repeat": 3
+                },
+                {
+                  "name": "",
+                  "w": 6.5,
+                  "h": 24,
+                  "d": 6.5,
+                  "repeat": 3
+                }
+              ]
+            },
+            {
+              "kind": "tier",
+              "h": 23,
+              "label": "中層 · 醬料瓶",
+              "short": "中層 23",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 5,
+              "items": [
+                {
+                  "name": "醬",
+                  "w": 6,
+                  "h": 18,
+                  "d": 6,
+                  "repeat": 4
+                },
+                {
+                  "name": "",
+                  "w": 6,
+                  "h": 14,
+                  "d": 6,
+                  "repeat": 3
+                }
+              ]
+            },
+            {
+              "kind": "tier",
+              "h": 20,
+              "label": "上層 · 香料罐",
+              "short": "上層 20",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 4,
+              "items": [
+                {
+                  "name": "",
+                  "w": 5,
+                  "h": 11,
+                  "d": 5,
+                  "repeat": 5
+                },
+                {
+                  "name": "",
+                  "w": 5,
+                  "h": 9,
+                  "d": 5,
+                  "repeat": 3
+                }
+              ]
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "pullout",
+              "from": 10,
+              "to": 87,
+              "label": "窄拉籃",
+              "vertical": true
+            }
+          ],
+          "pullout": "whole",
+          "caption": "窄拉籃"
+        },
+        "oven": {
+          "w": 80,
+          "d": 60,
+          "h": 87,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "builtin",
+              "h": 60,
+              "label": "烤箱開口",
+              "item": {
+                "name": "嵌入式烤箱",
+                "type": "oven",
+                "w": 59.4,
+                "h": 59.5,
+                "lift": 0.25,
+                "sizeLabel": "59.4×59.5"
+              }
+            },
+            {
+              "kind": "drawers",
+              "h": 17,
+              "label": "餐具抽屜",
+              "short": "餐具抽屜"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 70,
+              "to": 87,
+              "label": "餐具抽屜"
+            }
+          ]
+        },
+        "spice-r": {
+          "w": 20,
+          "d": 60,
+          "h": 87,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "tier",
+              "h": 34,
+              "label": "下層 · 油瓶、醬油",
+              "short": "下層 34",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 6,
+              "items": [
+                {
+                  "name": "油",
+                  "w": 7,
+                  "h": 28,
+                  "d": 7.5,
+                  "repeat": 3
+                },
+                {
+                  "name": "",
+                  "w": 6.5,
+                  "h": 24,
+                  "d": 6.5,
+                  "repeat": 3
+                }
+              ]
+            },
+            {
+              "kind": "tier",
+              "h": 23,
+              "label": "中層 · 醬料瓶",
+              "short": "中層 23",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 5,
+              "items": [
+                {
+                  "name": "醬",
+                  "w": 6,
+                  "h": 18,
+                  "d": 6,
+                  "repeat": 4
+                },
+                {
+                  "name": "",
+                  "w": 6,
+                  "h": 14,
+                  "d": 6,
+                  "repeat": 3
+                }
+              ]
+            },
+            {
+              "kind": "tier",
+              "h": 20,
+              "label": "上層 · 香料罐",
+              "short": "上層 20",
+              "noSocket": true,
+              "gap": 1.2,
+              "lip": 4,
+              "items": [
+                {
+                  "name": "",
+                  "w": 5,
+                  "h": 11,
+                  "d": 5,
+                  "repeat": 5
+                },
+                {
+                  "name": "",
+                  "w": 5,
+                  "h": 9,
+                  "d": 5,
+                  "repeat": 3
+                }
+              ]
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "pullout",
+              "from": 10,
+              "to": 87,
+              "label": "窄拉籃",
+              "vertical": true
+            }
+          ],
+          "pullout": "whole",
+          "caption": "窄拉籃"
+        },
+        "dw": {
+          "w": 63.6,
+          "d": 60,
+          "h": 87,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "builtin",
+              "h": 87,
+              "label": "洗碗機開口",
+              "item": {
+                "name": "洗碗機",
+                "type": "dishwasher",
+                "w": 59.8,
+                "h": 84.5,
+                "sizeLabel": "Samsung 59.8×84.5",
+                "sub": "原廠面板 · 選白色、實機確認"
+              }
+            }
+          ],
+          "fronts": []
+        },
+        "sink": {
+          "w": 76.9,
+          "d": 60,
+          "h": 87,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 10,
+              "label": "踢腳"
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
+              "shelves": [
+                33.2
+              ],
+              "label": "水槽櫃",
+              "items": [
+                {
+                  "name": "清潔劑",
+                  "w": 10,
+                  "h": 27,
+                  "size": false
+                },
+                {
+                  "name": "噴瓶",
+                  "w": 9,
+                  "h": 25,
+                  "size": false
+                },
+                {
+                  "name": "菜瓜布／手套",
+                  "w": 14,
+                  "h": 12,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 10,
+              "to": 87,
+              "count": 2,
+              "label": "水槽櫃"
+            }
+          ]
+        },
+        "upper-h": {
+          "w": 120,
+          "d": 35,
+          "h": 115,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 112,
+              "shelves": [
+                36,
+                73
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 112,
+              "count": 2,
+              "hinges": [
+                "L",
+                "R"
+              ]
+            }
+          ]
+        },
+        "upper-r": {
+          "w": 55.5,
+          "d": 35,
+          "h": 115,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 112,
+              "shelves": [
+                36,
+                73
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 112,
+              "count": 1,
+              "hinges": [
+                "R"
+              ]
+            }
+          ]
+        },
+        "upper-f": {
+          "w": 12.5,
+          "d": 35,
+          "h": 117,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 114
+            },
+            {
+              "kind": "filler",
+              "h": 3
+            }
+          ],
+          "fronts": []
+        }
+      },
+      "views": [
+        {
+          "id": "tower-front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "tower",
+              "x": 0
+            }
+          ],
+          "levels": [
+            {
+              "y": 56.8,
+              "label": ""
+            },
+            {
+              "y": 90.2,
+              "label": ""
+            },
+            {
+              "y": 130,
+              "label": ""
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ]
+        },
+        {
+          "id": "tower-section",
+          "name": "側剖面 · 拉出",
+          "kind": "section",
+          "ref": "tower",
+          "extension": 55,
+          "stateNames": {
+            "closed": "收合",
+            "open": "拉出"
+          },
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面線"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ],
+          "units": []
+        },
+        {
+          "id": "hob-run",
+          "name": "爐台區立面",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "labels": true,
+          "width": 180,
+          "chain": 2,
+          "units": [
+            {
+              "ref": "tower",
+              "x": 0
+            },
+            {
+              "ref": "spice",
+              "x": 60
+            },
+            {
+              "ref": "oven",
+              "x": 80
+            },
+            {
+              "ref": "spice-r",
+              "x": 160
+            },
+            {
+              "ref": "upper-h",
+              "x": 60,
+              "y": 165
+            }
+          ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 75,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 60,
+              "y": 87,
+              "w": 120,
+              "h": 3
+            },
+            {
+              "type": "hob",
+              "x": 82.5,
+              "y": 90,
+              "w": 75,
+              "label": "瓦斯爐 75"
+            },
+            {
+              "type": "clear",
+              "x0": 60,
+              "x1": 82.5,
+              "y": 112,
+              "label": "22.5"
+            },
+            {
+              "type": "note",
+              "x": 71.25,
+              "y": 104,
+              "label": "爐側 ≥15",
+              "size": 0.6
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 150,
+              "y0": 93.5,
+              "y1": 160,
+              "label": "≈66.5（≥65）"
+            }
+          ],
+          "hcuts": [
+            0,
+            60,
+            80,
+            160,
+            180
+          ],
+          "levels": [
+            {
+              "y": 70,
+              "label": "烤箱頂"
+            },
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ]
+        },
+        {
+          "id": "spice-section",
+          "name": "窄拉籃側剖面",
+          "kind": "section",
+          "ref": "spice",
+          "extension": 50,
+          "height": 100,
+          "noCeiling": true,
+          "allItems": true,
+          "chain": true,
+          "labelRoom": 26,
+          "stateNames": {
+            "closed": "收合",
+            "open": "拉出"
+          },
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 0,
+              "y": 87,
+              "w": 65,
+              "h": 3
+            }
+          ],
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            }
+          ],
+          "units": []
+        },
+        {
+          "id": "sink-run",
+          "name": "水槽區立面",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "labels": true,
+          "width": 160.5,
+          "units": [
+            {
+              "ref": "spice-r",
+              "x": 0
+            },
+            {
+              "ref": "sink",
+              "x": 20
+            },
+            {
+              "ref": "dw",
+              "x": 96.9
+            },
+            {
+              "ref": "upper-f",
+              "x": 20,
+              "y": 163
+            },
+            {
+              "ref": "upper-f",
+              "x": 92.5,
+              "y": 163
+            },
+            {
+              "ref": "upper-r",
+              "x": 105,
+              "y": 165
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 0,
+              "y": 87,
+              "w": 160.5,
+              "h": 3,
+              "label": "燒結石檯面 · 面 90",
+              "labelX": 128.7,
+              "labelY": 100
+            },
+            {
+              "type": "sink",
+              "x": 30.5,
+              "y": 90,
+              "w": 60,
+              "depth": 20,
+              "label": "水槽",
+              "bowlWhen": "open"
+            },
+            {
+              "type": "window",
+              "x": 32.5,
+              "y": 110,
+              "w": 60,
+              "h": 100,
+              "label": "外窗 ≈60",
+              "sub": "窗台／窗頂高度待量"
+            },
+            {
+              "type": "optional",
+              "x": 32.5,
+              "y": 215,
+              "w": 60,
+              "h": 62,
+              "label": "窗頂允許才加",
+              "leaves": 2,
+              "lip": 2,
+              "size": 0.55
+            },
+            {
+              "type": "clear",
+              "x0": 90.5,
+              "x1": 160.5,
+              "y": 122,
+              "label": "水槽右側 ≈70"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "rotate": true,
+              "x": 163,
+              "y0": 0,
+              "y1": 87,
+              "label": "檯面底 87（洗碗機需 >86）"
+            },
+            {
+              "type": "note",
+              "x": 128.7,
+              "y": 92,
+              "label": "側板 1.8 · 開口 60 · 側板 1.8",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            20,
+            96.9,
+            160.5
+          ],
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ],
+          "marginR": 4.2
+        },
+        {
+          "id": "wall",
+          "name": "空間規劃",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "width": 320.5,
+          "font": 8,
+          "units": [
+            {
+              "ref": "tower",
+              "x": 0
+            },
+            {
+              "ref": "spice",
+              "x": 60
+            },
+            {
+              "ref": "oven",
+              "x": 80
+            },
+            {
+              "ref": "spice-r",
+              "x": 160
+            },
+            {
+              "ref": "sink",
+              "x": 180
+            },
+            {
+              "ref": "dw",
+              "x": 256.9
+            },
+            {
+              "ref": "upper-h",
+              "x": 60,
+              "y": 165
+            },
+            {
+              "ref": "upper-f",
+              "x": 180,
+              "y": 163
+            },
+            {
+              "ref": "upper-f",
+              "x": 252.5,
+              "y": 163
+            },
+            {
+              "ref": "upper-r",
+              "x": 265,
+              "y": 165
+            }
+          ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 75,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 60,
+              "y": 87,
+              "w": 260.5,
+              "h": 3,
+              "label": "燒結石檯面 · 面 90",
+              "labelX": 288.7,
+              "labelY": 95
+            },
+            {
+              "type": "hob",
+              "x": 82.5,
+              "y": 90,
+              "w": 75,
+              "label": "瓦斯爐"
+            },
+            {
+              "type": "sink",
+              "x": 190.5,
+              "y": 90,
+              "w": 60,
+              "depth": 20,
+              "label": "水槽",
+              "bowlWhen": "open"
+            },
+            {
+              "type": "window",
+              "x": 192.5,
+              "y": 110,
+              "w": 60,
+              "h": 100,
+              "label": "外窗 ≈60",
+              "sub": "窗台／窗頂高度待量"
+            },
+            {
+              "type": "optional",
+              "x": 192.5,
+              "y": 215,
+              "w": 60,
+              "h": 62,
+              "label": "窗頂允許才加",
+              "leaves": 2,
+              "lip": 2,
+              "size": 0.55
+            },
+            {
+              "type": "clear",
+              "x0": 157.5,
+              "x1": 190.5,
+              "y": 122,
+              "label": "備菜區 ≈33"
+            },
+            {
+              "type": "clear",
+              "x0": 250.5,
+              "x1": 320.5,
+              "y": 122,
+              "label": "水槽右側 ≈70"
+            },
+            {
+              "type": "note",
+              "x": 0,
+              "y": 283,
+              "label": "← 門端",
+              "anchor": "start",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            60,
+            80,
+            160,
+            180,
+            256.9,
+            320.5
+          ],
+          "totalLabel": "320.5（原標）",
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ],
+          "leftChain": {
+            "ref": "tower"
+          }
+        }
+      ]
+    },
     "kitchen-hob": {
       "include": "kitchen-b",
       "onlyLayouts": [
@@ -6183,7 +7278,10 @@
             {
               "kind": "plinth",
               "h": 8,
-              "label": "踢腳"
+              "label": "踢腳",
+              "recess": 10,
+              "inset": 1.8,
+              "fill": "#c5cac1"
             },
             {
               "kind": "drawers",
@@ -6339,12 +7437,20 @@
               "size": 0.78
             },
             {
-              "type": "wash",
-              "x": 25.5,
-              "y": 0,
-              "w": 209,
-              "h": 8,
-              "opacity": 0.75
+              "type": "toe-light",
+              "x": 26.8,
+              "w": 206.4,
+              "y": 8,
+              "p": 1.8
+            },
+            {
+              "type": "note",
+              "x": 255.0,
+              "y": 2.2,
+              "label": "底燈 2700K",
+              "anchor": "start",
+              "size": 0.55,
+              "tvlight": true
             },
             {
               "type": "clear",
@@ -6476,12 +7582,11 @@
               "size": 0.7
             },
             {
-              "type": "wash",
-              "x": 0.5,
-              "y": 0,
-              "w": 209,
-              "h": 8,
-              "opacity": 0.75
+              "type": "toe-light",
+              "x": 1.8,
+              "w": 206.4,
+              "y": 8,
+              "p": 1.8
             },
             {
               "type": "clear",
@@ -6545,9 +7650,11 @@
             {
               "type": "note",
               "x": 105.0,
-              "y": 3,
-              "label": "2700K 燈條往下打地板（可開關）",
-              "size": 0.58
+              "y": 2.2,
+              "label": "內退 10 · 2700K",
+              "size": 0.58,
+              "color": "#7a5a35",
+              "tvlight": true
             }
           ],
           "hcuts": [
@@ -6593,6 +7700,18 @@
             }
           ],
           "extras": [
+            {
+              "type": "toe-light",
+              "section": true,
+              "x": 35,
+              "y": 8,
+              "p": 1.8,
+              "front": 45,
+              "board": 1.8,
+              "a1": 10,
+              "a2": 80,
+              "reach": 77
+            },
             {
               "type": "conduit",
               "pts": [
@@ -6709,28 +7828,6 @@
               "when": "open"
             },
             {
-              "type": "beam",
-              "pts": [
-                [
-                  39.6,
-                  8
-                ],
-                [
-                  41.2,
-                  8
-                ],
-                [
-                  48,
-                  0
-                ],
-                [
-                  33,
-                  0
-                ]
-              ],
-              "opacity": 0.7
-            },
-            {
               "type": "clear",
               "x0": 0,
               "x1": 8.2,
@@ -6783,16 +7880,6 @@
               "lx": 50,
               "ly": 44,
               "label": "頂板後緣 3 通風縫",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 41,
-              "y": 7.6,
-              "lx": 50,
-              "ly": 1,
-              "label": "2700K 燈條",
               "when": "closed",
               "size": 0.62
             },
@@ -6855,6 +7942,95 @@
               "label": "通風縫",
               "when": "open",
               "size": 0.62
+            },
+            {
+              "type": "device",
+              "x": 0.2,
+              "y": 26,
+              "w": 3.2,
+              "h": 4.3,
+              "tvlight": true
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  1.8,
+                  26
+                ],
+                [
+                  1.8,
+                  6.6
+                ],
+                [
+                  34.6,
+                  6.6
+                ]
+              ],
+              "tvlight": true
+            },
+            {
+              "type": "callout",
+              "x": 1.8,
+              "y": 28.2,
+              "lx": 50,
+              "ly": 37.5,
+              "label": "24V 驅動器",
+              "when": "closed",
+              "size": 0.62,
+              "tvlight": true
+            },
+            {
+              "type": "callout",
+              "x": 35.9,
+              "y": 7.1,
+              "lx": 50,
+              "ly": 1,
+              "label": "45° 鋁槽燈",
+              "when": "closed",
+              "size": 0.62,
+              "tvlight": true
+            },
+            {
+              "type": "callout",
+              "x": 35.9,
+              "y": 7.1,
+              "lx": 86,
+              "ly": 15,
+              "label": "底燈不動",
+              "when": "open",
+              "size": 0.62,
+              "tvlight": true
+            },
+            {
+              "type": "toe-detail",
+              "x": 62,
+              "y": 63.5,
+              "k": 2.5,
+              "x0": 28,
+              "x1": 56,
+              "y0": -4,
+              "y1": 12.5,
+              "front": 45,
+              "recess": 10,
+              "under": 8,
+              "p": 1.8,
+              "board": 1.8,
+              "a1": 10,
+              "a2": 80,
+              "eye": [
+                110,
+                227
+              ],
+              "plinthFill": "#c5cac1",
+              "labels": {
+                "title": "底燈大樣",
+                "led": "45° 鋁槽",
+                "recess": "內退 10",
+                "eye": "坐姿視線 110",
+                "angle": "45°"
+              },
+              "tvlight": true
             }
           ],
           "levels": [
@@ -6916,26 +8092,33 @@
         },
         {
           "zone": "踢腳 · 底燈",
-          "h": "8 · 內退 5",
-          "note": "2700K 底燈照地板；踢腳百葉進氣，頂板後緣通風縫排熱。"
+          "h": "8 高 · 內退 10",
+          "note": "45° 鋁槽藏內退角、乳白罩；兩端側板落地遮光。"
+        },
+        {
+          "zone": "底燈電源",
+          "h": "24 V · 約 16.5 W",
+          "note": "驅動器在後腔，拆中抽可換；牆面獨立開關。"
         }
       ],
       "hardware": [
         "Blum LEGRABOX 全拉緩衝 NL 350；中抽 C 高側板、40 kg 級。",
-        "SIRIM 4 位 13A 延長座（突波＋USB）鎖抽屜背板；摺疊線架。",
-        "空腔內雙位插座離地 17；底燈、洗牆燈獨立迴路，LEW 施工。"
+        "SIRIM 4 位 13A 延長座鎖抽屜背板；後腔雙位插座離地 17。",
+        "底燈：45° 鋁槽 206＋COB 24V 2700K CRI≥90 8W/m；LEW 獨立迴路。"
       ],
       "rationale": [
         "3 抽不選 5：中抽內淨 65 才放得下 One Connect 等設備。",
         "櫃 210 與沙發同寬同中線；北留 25、南留 152.5 給動線。",
-        "電視中心 110 對坐姿視線；視距約 180–190。"
+        "燈藏內退 10：視線 110 高看不到燈；COB 無光點，亮面地板不見顆粒。"
       ],
       "open_questions": [
         "The Frame 是否另需電源",
         "路由器／光纖終端位置",
         "遊戲機、Soundbar、喇叭",
         "天花淨高、能否做局部假天花",
-        "壁紙型號與木作底板厚度"
+        "壁紙型號與木作底板厚度",
+        "地板是否亮面",
+        "底燈要否調光"
       ]
     },
     "living-tv": {
@@ -7542,7 +8725,8 @@
     "kitchen-upper-worktop": {
       "include": "kitchen-dry",
       "onlyLayouts": [
-        "window-sink"
+        "window-sink",
+        "tower-left"
       ],
       "status": "design-proposal",
       "frontStyle": "slab",
@@ -7558,7 +8742,7 @@
           "name": "開門"
         }
       ],
-      "viewpoint": "Dry kitchen 面向客餐廳（A 方案）：前為黑框玻璃，左冰箱、右廚房門端。",
+      "viewpoint": "Dry kitchen 面向客餐廳（方案 A／B）：前為黑框玻璃，左冰箱、右廚房門端。",
       "object_id": "kitchen-upper-worktop",
       "title": "Dry kitchen · 空間規劃",
       "views": [
@@ -7623,6 +8807,381 @@
         "玻璃隔間分格與框料",
         "咖啡機實購型號",
         "電工確認插座迴路"
+      ]
+    },
+    "appliance-tower@tower-left": {
+      "object_id": "appliance-tower",
+      "onlyLayouts": [
+        "tower-left"
+      ],
+      "title": "電器櫃 · 立面設計",
+      "status": "design-proposal",
+      "frontStyle": "slab",
+      "viewpoint": "面向 Wet kitchen（方案 B）：左為廚房門端牆，電器櫃靠牆；右為瓦斯爐。",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計（brochure 2.75，待現場量）；有假天花只改最上櫃。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "277–280，依現場天花修邊。"
+        },
+        {
+          "zone": "上櫃 · 單門（鉸鏈在左）",
+          "h": "112 · 底 165",
+          "note": "165–277；門下緣多 2 當手扣，與吊櫃門齊；內 2 片活動層板。"
+        },
+        {
+          "zone": "上層 · 微波爐",
+          "h": "淨高 35",
+          "note": "130–165 拉出板；47.2×28 機型頂留 5.4，久熱拉出散熱。"
+        },
+        {
+          "zone": "中層 · 大同電鍋 15 人份",
+          "h": "淨高 38",
+          "note": "90.2–128.2，約與檯面同高；電鍋 39×30，拉出蒸煮。"
+        },
+        {
+          "zone": "下層 · 象印電子鍋＋飯匙",
+          "h": "淨高 31.6",
+          "note": "56.8–88.4；象印 NS-ZAQ10（示意）＋飯匙，拉出煮飯。"
+        },
+        {
+          "zone": "鍋具抽屜",
+          "h": "面板 45",
+          "note": "10–55；LEGRABOX 全拉深抽屜，內高約 40；上緣 2 手扣槽。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "10",
+          "note": "0–10，內退約 5，與下櫃齊平。"
+        }
+      ],
+      "hardware": [
+        "拉出板：Blum MOVENTO 全拉 40 kg＋層板鎖；耐熱面材，4 cm 擋邊。",
+        "上櫃門：CLIP top BLUMOTION 緩衝鉸鍊 ×3。",
+        "每層後方 13A 雙插座，線留 60 以上；建議獨立迴路（水電確認）。"
+      ],
+      "rationale": [
+        "外寬 60（側板 2.5，內淨 55），層板 1.8。",
+        "10＋45＋31.6＋38＋35＋1.8×3＝165，上櫃底對齊吊櫃底。",
+        "門板同全廚房：白色細木紋霧面 laminate、無把手、縫 0.3。",
+        "靠門端牆，鉸鏈在牆側；朝爐側板離爐 22.5，用耐熱面材。"
+      ],
+      "open_questions": [
+        "天花淨高、有無假天花",
+        "微波爐型號與散熱要求",
+        "大同電鍋 15 人份的深度",
+        "電子鍋實購型號",
+        "櫃深 65 是否和下櫃門面齊平"
+      ],
+      "sources": [
+        "https://ea.blum.com/en/number-of-hinges/",
+        "https://www.broadwaylifestyle.com/hk_en/zojirushi-ns-zaq10-fuzzy-logic-rice-cooker-1-0l-h204966-m",
+        "https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10"
+      ],
+      "include": "kitchen-b2",
+      "views": [
+        "tower-front",
+        "tower-section",
+        "wall"
+      ]
+    },
+    "kitchen-hob@tower-left": {
+      "include": "kitchen-b2",
+      "onlyLayouts": [
+        "tower-left"
+      ],
+      "status": "design-proposal",
+      "frontStyle": "slab",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計（brochure 2.75，待現場量）；有假天花只改最上櫃。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "viewpoint": "面向 Wet kitchen（方案 B）：左為電器櫃（門端），右為水槽與外窗。",
+      "object_id": "kitchen-hob",
+      "title": "瓦斯爐 · 烤箱 · 窄拉籃 · 立面設計",
+      "views": [
+        "hob-run",
+        "spice-section",
+        "wall"
+      ],
+      "spec": [
+        {
+          "zone": "排油煙機",
+          "h": "底 160",
+          "note": "薄型 90 寬（x 75–165）對中爐具；機身在 60 ×2 吊櫃中縫下方；距爐架 66.5。"
+        },
+        {
+          "zone": "瓦斯爐",
+          "h": "75 寬",
+          "note": "x 82.5–157.5；離電器櫃 22.5（側牆 ≥15），右緣離外窗 35。"
+        },
+        {
+          "zone": "檯面",
+          "h": "燒結石 · 厚 3",
+          "note": "面 90、底 87；12 mm 板前緣斜接到 3，開孔補強由檯面廠確認。"
+        },
+        {
+          "zone": "餐具抽屜",
+          "h": "面板 17",
+          "note": "爐與烤箱之間放餐具、鍋鏟；LEGRABOX M 低側板，上緣手扣槽。"
+        },
+        {
+          "zone": "嵌入式烤箱",
+          "h": "開口 60",
+          "note": "開口 56.5×60×55；示意 Bosch HBA534ES0A，兩側飾板封平。"
+        },
+        {
+          "zone": "窄拉籃",
+          "h": "寬 20 ×2",
+          "note": "爐左右對稱：左在電器櫃與爐下櫃之間，兼作爐側距離。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "10",
+          "note": "內退，和整排下櫃齊平。"
+        }
+      ],
+      "hardware": [
+        "3 層窄拉籃（如 Häfele 545.61.233）或木作框＋MOVENTO。",
+        "烤箱需強制散熱，櫃底後留風口；插座在右拉籃後方，離地 ≥45。",
+        "排油煙機機身占 60 ×2 吊櫃下段約 25（中縫下方不做中隔板），不可放物。"
+      ],
+      "rationale": [
+        "由上到下：爐具、餐具抽屜、烤箱（同方案 A）。",
+        "電器櫃 60＋拉籃 20＋淨距 2.5＝爐距門端 82.5，離電器櫃 22.5。",
+        "吊櫃 60 ×2 中縫對準爐中心 120，排油煙機置中。"
+      ],
+      "open_questions": [
+        "爐具種類與型號（瓦斯／電磁）",
+        "烤箱型號與嵌入尺寸",
+        "瓦斯管與烤箱電源位置",
+        "排油煙機排風方式與面板間隙",
+        "燒結石開孔處厚度與補強",
+        "電器櫃朝爐側板的耐熱處理"
+      ],
+      "sources": [
+        "https://bosch-home.com.sg/experience-bosch/kitchen-installation-guide/hobs/gas-hobs-installation"
+      ]
+    },
+    "spice-pullout@tower-left": {
+      "alias": "kitchen-hob@tower-left",
+      "object_id": "spice-pullout",
+      "title": "窄拉籃 · 立面設計",
+      "views": [
+        "spice-section",
+        "hob-run",
+        "wall"
+      ]
+    },
+    "spice-pullout-r@tower-left": {
+      "alias": "kitchen-hob@tower-left",
+      "object_id": "spice-pullout-r",
+      "title": "窄拉籃（右） · 立面設計",
+      "views": [
+        "spice-section",
+        "hob-run",
+        "wall"
+      ]
+    },
+    "kitchen-oven@tower-left": {
+      "alias": "kitchen-hob@tower-left",
+      "object_id": "kitchen-oven",
+      "title": "嵌入式烤箱 · 立面設計",
+      "views": [
+        "hob-run",
+        "wall"
+      ]
+    },
+    "dishwasher@tower-left": {
+      "include": "kitchen-b2",
+      "onlyLayouts": [
+        "tower-left"
+      ],
+      "status": "design-proposal",
+      "frontStyle": "slab",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計（brochure 2.75，待現場量）；有假天花只改最上櫃。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "viewpoint": "面向 Wet kitchen（方案 B）：洗碗機在水槽右側，靠女傭房牆。",
+      "object_id": "dishwasher",
+      "title": "洗碗機 · 水槽區立面",
+      "views": [
+        "sink-run",
+        "wall"
+      ],
+      "spec": [
+        {
+          "zone": "檯面",
+          "h": "底 87",
+          "note": "燒結石，面 90、總厚 3（12 mm 斜接加厚，假設）。"
+        },
+        {
+          "zone": "洗碗機",
+          "h": "60 寬開口",
+          "note": "Samsung Bespoke DW60CB750FAPSP，白色原廠面板。"
+        },
+        {
+          "zone": "側板",
+          "h": "1.8 ×2",
+          "note": "靠女傭房牆側也做 1.8 側板，整格 63.6，開口淨寬 60。"
+        },
+        {
+          "zone": "開口高度",
+          "h": "87",
+          "note": "手冊要求 >86；保留頂蓋直接放入。"
+        },
+        {
+          "zone": "水槽櫃",
+          "h": "76.9",
+          "note": "雙門 38.45；盆 60 在窗下，櫃內兩側 8.7／4.6；前半深層板放清潔用品。"
+        },
+        {
+          "zone": "水槽右側檯面",
+          "h": "≈70",
+          "note": "盆右緣到女傭房牆，在洗碗機上方：主要備料、瀝水區。"
+        }
+      ],
+      "hardware": [
+        "原廠白色面板、無把手；洗程結束自動開門 10 cm 乾燥。",
+        "管線經左側板進水槽櫃；插座在水槽櫃背板上段，離地 ≥45。",
+        "水槽櫃層板用防水板材，前緣加擋條。"
+      ],
+      "rationale": [
+        "洗碗機緊鄰水槽櫃，管線最短。",
+        "洗碗機在女傭房端，開門時靠近女傭房門口，用完即關。"
+      ],
+      "open_questions": [
+        "水槽型號（盆寬 60 的外框與開孔）",
+        "SG 型號手冊：嵌入、管線、排水高度",
+        "檯面厚度與前緣做法"
+      ],
+      "sources": [
+        "https://www.samsung.com/sg/dishwashers/freestanding/dw7700-dw60cb750fapsp-bespoke-dishwasher-14-place-settings-silver-dw60cb750fapsp/",
+        "https://www.thewcsupply.com/pages/kitchen-design-guidelines-standard-clearances"
+      ]
+    },
+    "kitchen-sink@tower-left": {
+      "alias": "dishwasher@tower-left",
+      "object_id": "kitchen-sink",
+      "title": "水槽區 · 立面設計",
+      "views": [
+        "sink-run",
+        "wall"
+      ]
+    },
+    "kitchen-lower-worktop@tower-left": {
+      "include": "kitchen-b2",
+      "onlyLayouts": [
+        "tower-left"
+      ],
+      "status": "design-proposal",
+      "frontStyle": "slab",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計（brochure 2.75，待現場量）；有假天花只改最上櫃。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "viewpoint": "面向 Wet kitchen（方案 B）：左為廚房門端（電器櫃），右為女傭房牆。",
+      "object_id": "kitchen-lower-worktop",
+      "title": "Wet kitchen · 空間規劃",
+      "views": [
+        "wall",
+        "hob-run",
+        "sink-run"
+      ],
+      "spec": [
+        {
+          "zone": "吊櫃",
+          "h": "底 165",
+          "note": "門端起：電器櫃 60 · 60 ×2 · 收邊 12.5 · 窗 · 收邊 12.5 · 55.5；下緣多 2 當手扣。"
+        },
+        {
+          "zone": "門板（全廚房一致）",
+          "h": "無把手 · 縫 0.3",
+          "note": "白色細木紋霧面 laminate；吊櫃下緣手扣、下櫃上緣 2 手扣槽。"
+        },
+        {
+          "zone": "外窗",
+          "h": "≈60 寬",
+          "note": "位於 192.5–252.5，在水槽正上方；窗台／窗頂高度待量。"
+        },
+        {
+          "zone": "電器櫃",
+          "h": "60 寬 · 到天花",
+          "note": "0–60，門端靠牆；上櫃底 165 對齊吊櫃。"
+        },
+        {
+          "zone": "檯面",
+          "h": "面 90 · 燒結石",
+          "note": "60 到女傭房牆連續 260.5；12 mm 板斜接加厚到 3（假設），底 87。"
+        },
+        {
+          "zone": "備菜區",
+          "h": "≈33",
+          "note": "爐具右緣 157.5 到水槽盆左緣 190.5；水槽右側另有約 70。"
+        },
+        {
+          "zone": "下櫃（由門端起）",
+          "h": "320.5",
+          "note": "電器櫃 60 · 拉籃 20 · 爐下 80 · 拉籃 20 · 水槽 76.9 · 洗碗機 63.6。"
+        }
+      ],
+      "hardware": [
+        "各櫃五金見瓦斯爐、洗碗機、電器櫃立面。",
+        "吊櫃門：CLIP top BLUMOTION 緩衝鉸鍊每扇 3 支；雙面貼皮防翹。"
+      ],
+      "rationale": [
+        "電器櫃移到門端，水槽仍在窗下，洗碗機靠女傭房牆。",
+        "代價：爐與水槽間備菜約 33（方案 A 約 92），水槽右側 70 補足。",
+        "全廚房一套門板：吊櫃下緣手扣、下櫃上緣手扣槽。"
+      ],
+      "open_questions": [
+        "天花淨高、有無假天花",
+        "外窗的窗台與窗頂高度",
+        "水槽型號（盆寬 60 的外框與開孔）",
+        "燒結石板厚、前緣、品牌色號",
+        "laminate 品牌與色號"
+      ],
+      "sources": [
+        "https://ea.blum.com/en/number-of-hinges/",
+        "https://bosch-home.com.sg/experience-bosch/kitchen-installation-guide/hobs/gas-hobs-installation",
+        "https://www.thewcsupply.com/pages/kitchen-design-guidelines-standard-clearances"
       ]
     }
   }
