@@ -50,7 +50,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-21 | `coffee-machine` | 咖啡機（示意） | 8.4 × 33 |
 | KIT-22 | `water-purifier` | 淨水器 Wells The One | 8.8 × 8.8 |
 | BTH-01 | `bath1-mirror-cabinet` | 主浴洗手台＋鏡櫃 | ≈ 197.7 × 50 |
-| BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋鏡櫃 | ≈ 89.7 × 57.2 |
+| BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | ≈ 169.8 × 57.2 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
