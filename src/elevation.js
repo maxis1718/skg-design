@@ -19,6 +19,15 @@ let FS = null;
 // gap = reveal between fronts (0.3 = 3 mm); lip = wall-door overhang below the carcass (finger pull from below);
 // groove = top-edge finger groove depth on base fronts; lipAbove = fronts whose bottom is at/above this height use the lip.
 const FRONT_STYLES = {slab: {gap:.3, lip:2, groove:2, lipAbove:140}};
+// FL = draw labels on front faces (view.frontLabels === false hides them in the closed state).
+let FL = true;
+// Fit a label into a w × h box: horizontal unless the box is taller than wide and the text does not fit across; font shrinks to fit.
+function fitLabel(g, cx, cy, w, h, s, base, a = {}) {
+  const L = Math.max(em(s), .5), across = L * base <= w - 1.5, vert = !across && h > w;
+  const fs = Math.max(base * .5, Math.min(base, ((vert ? h : w) - 1.5) / L));
+  if (vert) g.vtext(cx + fs * .32, cy, s, {...a, 'font-size':fs});
+  else g.text(cx, cy - fs * .35, s, {'text-anchor':'middle', ...a, 'font-size':fs});
+}
 // Rough text width in em: CJK ≈ 1em, other ≈ 0.56em.
 const em = s => [...String(s)].reduce((w, ch) => w + (/[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]/.test(ch) ? 1 : .56), 0);
 const levelMargin = (view, f) => view.levels?.length ? Math.max(f * 6.2, Math.max(...view.levels.map(lv => em(`▽ ${fmt(lv.y)} ${lv.label || ''}`))) * f * .72 + f * .9) : f * 2;
@@ -56,6 +65,10 @@ function appliance(g, it, x, y, w, h, labels) {
     for (const k of [.18, .82]) g.rect(x + w * k - 1.4, y + h - panel / 2 - 1.4, 2.8, 2.8, {fill:'#9aa39d', stroke:'none', rx:1.4});
     g.rect(x + w * .12, y + h - panel - 4.2, w * .76, 1.1, {fill:'#8a948e', stroke:'none', rx:.55});
     g.rect(x + w * .1, y + 5, w * .8, h - panel - 13, {fill:'#c9d1cf', stroke:'#8a948e', 'stroke-width':.3, rx:1.2});
+  } else if (it.type === 'dishwasher' && FS) {
+    // Slab kitchens: factory panel in white, hidden top controls — no bar handle, no front control strip; thin top recess only.
+    g.rect(x, y, w, h, {fill:'#f6f5f0', stroke:C.line, 'stroke-width':.3, rx:.6});
+    g.line(x + .8, y + h - 1.6, x + w - .8, y + h - 1.6, {stroke:'#b9bdb6', 'stroke-width':.3});
   } else if (it.type === 'dishwasher') {
     g.rect(x, y + h - 6.5, w, 6.5, {fill:'#d4d8d3', stroke:'none'});
     g.rect(x + w * .3, y + h - 9.5, w * .4, 1, {fill:'#8a948e', stroke:'none', rx:.5});
@@ -65,6 +78,7 @@ function appliance(g, it, x, y, w, h, labels) {
     const cy = it.type === 'oven' ? y + h * .42 : y + h * .5;
     g.text(x + w / 2, cy, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .82});
     if (it.sizeLabel) g.text(x + w / 2, cy - g.f * 1.15, it.sizeLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .66});
+    if (it.sub) fitLabel(g, x + w / 2, cy - g.f * 2.1, w, g.f, it.sub, g.f * .6, {fill:C.thin});
   }
 }
 
@@ -75,16 +89,20 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   // sideL / sideR override one side panel (e.g. two sub-columns sharing one divider); default = side.
   const sl = u.sideL ?? sd, sr = u.sideR ?? sd;
   if (!u.noCarcass) g.rect(ox, oy, u.w, u.h, {fill:C.interior, stroke:'none'});
+  // Closed state: contents of a band fully behind a closed front are hidden anyway — skip them so their labels never
+  // collide (in bbox or on screen) with the front's own label.
+  // Drawer / pull-out fronts stay drawn in the open state too (the section view shows them pulled out).
+  const hidden = b => (u.fronts || []).some(fr => (state !== 'open' || fr.kind === 'drawer' || fr.kind === 'pullout') && fr.from <= b.y0 + .01 && fr.to >= b.y1 - .01);
   for (const b of B) {
     const y0 = oy + b.y0, ix = ox + sl, iw = u.w - sl - sr;
     if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
-    if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
+    if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, FS && state !== 'open' ? {fill:C.front, stroke:'#8d9891', 'stroke-width':.15} : {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
     if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); if (FS) g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-grain)', stroke:'none'}); continue; }
     if (b.kind === 'worktop') { g.rect(ox, y0, u.w, b.h, {fill:C.stone, stroke:C.line, 'stroke-width':.25}); continue; }
     if (b.kind === 'builtin') {
       const it = b.item, w = Math.min(it.w, u.w), h = Math.min(it.h, b.h), x = ox + (u.w - w) / 2;
-      if (!u.noCarcass) g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw});
+      if (!u.noCarcass) { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); if (FS) g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-grain)', stroke:'none'}); }
       else g.rect(ox, y0, u.w, b.h, {fill:'#f4f5f1', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
       appliance(g, it, x, y0 + (it.lift ?? 0), w, h, labels);
       continue;
@@ -92,12 +110,12 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     if (b.kind === 'tier') {
       g.rect(ix + .4, y0, iw - .8, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
       if (detail && !b.noSocket) g.rect(ix + 1.5, oy + b.y1 - 4.5, 3.6, 2.4, {fill:'#fff', stroke:C.thin, 'stroke-width':.2, rx:.4});
-      placeItems(g, b.items || [], ix, iw, y0 + 1.6, detail, b.h - 1.6, b.align, b.gap);
+      if (!hidden(b)) placeItems(g, b.items || [], ix, iw, y0 + 1.6, detail, b.h - 1.6, b.align, b.gap);
       continue;
     }
     if (b.kind === 'boxes' || b.kind === 'cabinet') {
       for (const s of b.shelves || []) g.rect(ix, y0 + s, iw, b.glass ? .8 : t, b.glass ? {fill:C.glass, stroke:'#9fb4ba', 'stroke-width':.2} : {fill:C.board, stroke:'none'});
-      placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align, b.gap);
+      if (!hidden(b)) placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align, b.gap);
       continue;
     }
     if (b.kind === 'hang') {
@@ -112,9 +130,17 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
       if (detail) g.text(ix + iw / 2, y0 + 1.6, b.garments?.label || '', {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
     }
   }
-  if (!u.noCarcass) {
-    g.rect(ox, oy, sl, u.h, {fill:C.board, stroke:'none'});
-    g.rect(ox + u.w - sr, oy, sr, u.h, {fill:C.board, stroke:'none'});
+  // Slab style: panel-only units (end / filler panels) are one finished panel, no carcass sides; built-in openings and
+  // fronts-less units show their side boards edge-banded in the door finish. Classic style: tan board edges.
+  const panelOnly = u.bands.every(b => b.kind === 'plinth' || b.kind === 'panel');
+  // (Open state keeps tan boards on units with fronts, matching the interior/construction rendering.)
+  const finSides = FS && (state !== 'open' || !u.fronts?.length || u.bands.some(b => b.kind === 'builtin'));
+  if (!u.noCarcass && !(FS && panelOnly)) {
+    const side = finSides ? {fill:C.front, stroke:'#8d9891', 'stroke-width':.2} : {fill:C.board, stroke:'none'};
+    for (const [sx, swd] of [[ox, sl], [ox + u.w - sr, sr]]) {
+      g.rect(sx, oy, swd, u.h, side);
+      if (finSides) g.rect(sx, oy, swd, u.h, {fill:'url(#elev-grain)', stroke:'none'});
+    }
   }
   // Slab style, closed: light carcass outline drawn beneath the fronts, so the fine reveals (not unit boxes) read as the face
   // and overhanging lip doors cover the carcass bottom edge.
@@ -150,17 +176,20 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
         else g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
       } else {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
-        const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
-        g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
-        const hy = Math.min(Math.max(y0 + 4, 100), y0 + h - 14), handleX = lf.hinge === 'L' ? x + lf.w - 1.6 : x + 1;
-        g.rect(handleX, hy, .6, Math.min(12, h * .4), {fill:C.thin, stroke:'none', rx:.3});
+        // fr.handle === false: handleless (finger pull) door — no bar handle and no swing diagonals on the closed face.
+        if (fr.handle !== false) {
+          const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
+          g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+          const hy = Math.min(Math.max(y0 + 4, 100), y0 + h - 14), handleX = lf.hinge === 'L' ? x + lf.w - 1.6 : x + 1;
+          g.rect(handleX, hy, .6, Math.min(12, h * .4), {fill:C.thin, stroke:'none', rx:.3});
+        }
         // Concealed hinge cups (behind the closed leaf), drawn faint on the hinge edge.
         for (const hm of fr.hingeMarks?.[li] || []) g.rect(lf.hinge === 'L' ? x + .6 : x + lf.w - 4.1, hm - 1.75, 3.5, 3.5, {fill:'none', stroke:C.faint, 'stroke-width':.25, rx:1.75});
       }
     });
     if (fr.label && !dashed && labels) {
-      if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
-      else g.text(ox + u.w / 2, y0 + h / 2 - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74), 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
+      if (fr.vertical && h > u.w) g.vtext(ox + u.w / 2 + g.f * .3, y0 + h / 2, fr.label, {fill:C.thin, 'font-size':g.f * .74});
+      else fitLabel(g, ox + u.w / 2, y0 + h / 2 + g.f * .05, u.w, h, fr.label, g.f * (detail ? .78 : .74), {fill:C.thin, 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
     }
   }
   if (!u.noCarcass && !slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
@@ -177,6 +206,8 @@ function slabFront(g, u, fr, ox, oy, state, labels, detail) {
   const bot = oy + fr.from - lip + (lip ? 0 : gp / 2), top = oy + fr.to - gp / 2, ptop = top - groove + (groove ? gp / 2 : 0);
   const door = fr.kind !== 'drawer' && fr.kind !== 'pullout', dashed = state === 'open' && door;
   if (state === 'open' && fr.inside) extras(g, fr.inside.map(e => shift(e, ox, oy)), state);
+  // Closed / drawer fronts: back the whole zone with the reveal shadow, so reveals read as even dark hairlines and nothing behind shows.
+  if (!dashed) g.rect(ox, bot - (lip ? 0 : gp / 2), u.w, top + gp / 2 - bot + (lip ? 0 : gp / 2), {fill:'#9aa29c', stroke:'none'});
   for (let i = 0; i < n; i++) {
     const x = ox + gp / 2 + i * (w + gp);
     if (dashed) { g.rect(x, bot, w, top - bot, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'}); continue; }
@@ -187,11 +218,7 @@ function slabFront(g, u, fr, ox, oy, state, labels, detail) {
     if (groove) g.rect(x + .1, ptop - .7, w - .2, .6, {fill:'#e6e2d8', stroke:'none'});
     if (lip) { g.rect(x + .1, bot + .1, w - .2, .7, {fill:'#dedad0', stroke:'none'}); g.line(x, bot, x + w, bot, {stroke:C.dark, 'stroke-width':.3}); }
   }
-  if (fr.label && !dashed && labels && !lip) {
-    const cy = (bot + ptop) / 2;
-    if (fr.vertical || u.w < g.f * fr.label.length * .55) g.vtext(ox + u.w / 2 + g.f * .3, cy, fr.label, {fill:C.thin, 'font-size':g.f * .74});
-    else g.text(ox + u.w / 2, cy - g.f * .3, fr.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (detail ? .78 : .74), 'paint-order':'stroke', stroke:C.front, 'stroke-width':g.f * .25, 'stroke-linejoin':'round'});
-  }
+  if (fr.label && !dashed && labels && !lip && (FL || state === 'open')) fitLabel(g, ox + u.w / 2, (bot + ptop) / 2, u.w, ptop - bot, fr.label, g.f * (detail ? .78 : .74), {fill:C.thin});
 }
 
 // Opened door leaf seen at ~120°: a foreshortened quad outside the carcass showing its inner face.
@@ -290,8 +317,9 @@ function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
     g.rect(x, y0, it.w, h, {fill:it.dashed ? 'none' : (it.box ? C.box : C.item), stroke:it.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':it.dashed ? '1.4 1' : null, rx:it.box ? .6 : Math.min(1.6, it.w / 4)});
     const fs = g.f * (detail ? .74 : .8), name = (!detail && it.short) || it.name;
     if (name && h > fs * 2.4) {
-      if (it.w > fs * Math.min(name.length, 4) * .9 || it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 + fs * .35, name, {'text-anchor':'middle', fill:C.line, 'font-size':fs * (it.w < fs * 3 ? .8 : 1)});
-      else g.vtext(x + it.w / 2 + fs * .32, y0 + h / 2, name, {fill:C.line, 'font-size':fs * .8});
+      const fh = fs * (it.w < fs * 3 ? .8 : 1), fitsAcross = em(name) * fh <= it.w - 1;
+      if ((it.w > fs * Math.min(name.length, 4) * .9 || it.w > fs * 2.6) && (fitsAcross || h <= it.w)) g.text(x + it.w / 2, y0 + h / 2 + fs * .35, name, {'text-anchor':'middle', fill:C.line, 'font-size':fitsAcross ? fh : Math.max(fh * .55, (it.w - 1) / em(name))});
+      else g.vtext(x + it.w / 2 + fs * .32, y0 + h / 2, name, {fill:C.line, 'font-size':Math.min(fs * .8, Math.max(fs * .45, (h - 1.5) / em(name)))});
       if (detail && it.size !== false && h > fs * 4 && it.w > fs * 2.6) g.text(x + it.w / 2, y0 + h / 2 - fs * 1.05, it.sizeLabel ?? `${fmt(it.w)}×${fmt(it.h)}`, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .78});
     }
     x += it.w + gap;
@@ -468,9 +496,15 @@ function extras(g, list, state = ST) {
       for (const k of [.22, .5, .78]) g.rect(e.x + e.w * k - 4, e.y + 1.2, 8, 1.6, {fill:C.dark, stroke:'none'});
       if (e.label) g.text(e.x + e.w / 2, e.y + 4.6, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .78});
     } else if (e.type === 'sink') {
-      g.rect(e.x, e.y - e.depth, e.w, e.depth, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
+      const bowl = !e.bowlWhen || e.bowlWhen === state;
+      if (bowl) g.rect(e.x, e.y - e.depth, e.w, e.depth, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
       g.path(`M${e.x + e.w / 2} ${g.Y(e.y)}v-14h5v2`, {fill:'none', stroke:C.line, 'stroke-width':.6});
-      if (e.label) g.text(e.x + e.w / 2, e.y - e.depth / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
+      if (e.label && bowl) g.text(e.x + e.w / 2, e.y - e.depth / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
+    } else if (e.type === 'optional' && e.leaves) {
+      // Possible future cabinet: faint dashed slab leaves (same reveal / lip as the wall units), small label inside.
+      const n = e.leaves, gp = FS?.gap ?? .3, lw = (e.w - gp * n) / n, lip = e.lip ?? 0;
+      for (let i = 0; i < n; i++) g.rect(e.x + gp / 2 + i * (lw + gp), e.y - lip, lw, e.h + lip, {fill:C.front, 'fill-opacity':.55, stroke:C.thin, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+      if (e.label) g.text(e.x + e.w / 2, e.y - lip + g.f * .7, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (e.size || .55)});
     } else if (e.type === 'optional') {
       g.rect(e.x, e.y, e.w, e.h, {fill:'none', stroke:C.dim, 'stroke-width':.3, 'stroke-dasharray':'1.6 1.2'});
       if (e.label) g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * .7});
@@ -569,7 +603,9 @@ function renderFront(elev, view, state) {
     g.text(rc ? W : W + m.r - f, H + (rc ? f * .5 : .9), view.ceilingLabel || `${T('天花')} ${fmt(H)}`, {'text-anchor':'end', fill:C.thin, 'font-size':f * .72});
   }
   extras(g, view.under, state);
+  FL = !(view.frontLabels === false && state !== 'open');
   for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail, labels);
+  FL = true;
   extras(g, view.extras, state);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
   if (rc) rightChain(g, rc.u, rc.x, rc.y || 0, Math.max(rc.x + rc.u.w, W) + f * 1.1, view.rightChain);
@@ -590,7 +626,9 @@ function renderSection(elev, view, state) {
   const whole = u.pullout === 'whole', open = state === 'open';
   const H = view.height ?? elev.ceiling_cm, f = view.font ?? 5.4;
   const top = u.h - (B.find(b => b.kind === 'filler')?.h || 0);
-  const W = D + ext + (view.labelRoom ?? 16);
+  // Label room: at least view.labelRoom (default 16), widened so the longest tier / drawer label stays inside the drawing.
+  const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet').map(b => em(b.short || b.label || '')));
+  const W = D + ext + Math.max(view.labelRoom ?? 16, longest * f * .74 + 4);
   const m = {l: Math.max(f * 6.2, levelMargin(view, f)) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
   const g = canvas(H, f);
   levels(g, view, -m.l + f * .4, W);

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R08",
+    "revision": "R09",
     "unit": "cm",
     "date": "2026-10-17"
   },
@@ -1457,9 +1457,9 @@
       "name": "咖啡機（示意）",
       "bounds_pt": [
         504.94,
-        284.57,
+        285.99,
         507.32,
-        293.92
+        295.34
       ],
       "dimensions": {
         "w": {
@@ -1478,8 +1478,8 @@
         "brand": null,
         "model": null
       },
-      "source_note": "示意機型 Nespresso Essenza Mini C：W 8.4 × D 33 × H 20.4 cm（Nespresso 官網）。Dry kitchen 最左端，離冰箱側 5；實購型號待定。",
-      "provenance_note": "Reference model only, not purchased. Dims from https://www.nespresso.com/ae/en/coffee-machines/original/essenza-mini-c (84 x 330 x 204 mm W x D x H). Placed 5 cm from the fridge-side end, 3 cm off the glass.",
+      "source_note": "示意機型 Nespresso Essenza Mini C：W 8.4 × D 33 × H 20.4 cm（Nespresso 官網）。Dry kitchen 最左端，離冰箱側 5、離玻璃 8（後方留線孔），在淨水器主機櫃上方；實購型號待定。",
+      "provenance_note": "Reference model only, not purchased. Dims from https://www.nespresso.com/ae/en/coffee-machines/original/essenza-mini-c (84 x 330 x 204 mm W x D x H). Placed 5 cm from the fridge-side end, 8 cm off the glass (Ø6 grommet behind it).",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink"
@@ -1491,9 +1491,9 @@
       "room_id": "kitchen",
       "name": "淨水器 Wells The One",
       "bounds_pt": [
-        510.78,
+        513.04,
         288.14,
-        513.27,
+        515.54,
         290.64
       ],
       "dimensions": {
@@ -1513,8 +1513,8 @@
         "brand": "Wells",
         "model": "The One（白）"
       },
-      "source_note": "使用者指定 Wells The One 白色。檯面上只有出水龍頭 Ø8.8 × H33.7（檯面開孔 Ø3.8，可轉 180°）；主機 W18 × D35.2 × H32.5、19 kg 放在下方主機櫃（Wells Malaysia 官網）。龍頭中心離冰箱側 30、離玻璃 20；右側 45 留空放鍋。",
-      "provenance_note": "User-chosen product; dims from https://wellsmalaysia.com/water-dispenser/wells-the-one/ (faucet 88 dia x 337 mm; body 180 W x 352 D x 325 H mm, 19 kg; 38 mm hole). HK listing https://hkele.com.hk/en/WELLS/THE-ONE-DB gives body 180 x 325 x 335 and a 35 mm hole, requires water inlet + drain and a dedicated socket near the main unit. Outlet height is not published.",
+      "source_note": "使用者指定 Wells The One 白色。檯面上只有出水龍頭 Ø8.8 × H33.7（檯面開孔 Ø3.8，可轉 180°）；主機 W18 × D35.2 × H32.5、19 kg 放在下方主機櫃（Wells Malaysia 官網）。龍頭中心離冰箱側 38、離玻璃 20，出水嘴朝前；出水口和放鍋區都在主機櫃（59.5）上方。",
+      "provenance_note": "User-chosen product; dims from https://wellsmalaysia.com/water-dispenser/wells-the-one/ (faucet 88 dia x 337 mm; body 180 W x 352 D x 325 H mm, 19 kg; 38 mm hole). HK listing https://hkele.com.hk/en/WELLS/THE-ONE-DB gives body 180 x 325 x 335 and a 35 mm hole, requires water inlet + drain and a dedicated socket near the main unit. Outlet height is not published. Placed 2026-10-17 at 38 cm from the fridge-side end so the outlet and pot zone sit over the main-unit cabinet (user request). Spout reach not published; drawn facing forward.",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink"
@@ -1805,24 +1805,24 @@
         416,
         417
       ],
-      "notes": "BATH 1 vanity counter along the right-hand wall: front line x252.12 (drawing408) to wall x266.28, y295-351.04 = about 197.7 x 50 cm. Oval basin centre y321.94 = 95 cm from the y295 end, basin about 53 x 33 cm. Thin line drawing409 at about 15 cm from the wall (possibly a mirror-cabinet or upstand line in the source; to confirm). Mirror cabinet above is a design proposal (depth 15).",
-      "source_note": "平面占位是原圖的洗手台（長 ≈197.7 × 深 ≈50，圖面估算）；盆中心距入口端 ≈95。上方鏡櫃（深 15、櫃底 115 到天花）是設計提案，見立面。原圖洗手台內另有一條距牆約 15 的細線，可能是鏡櫃或檯面後擋線，待確認。衛浴 1 不是房間分頁，歸在主臥。"
+      "notes": "BATH 1 vanity counter along the right-hand wall: front line x252.12 (drawing408) to wall x266.28, y295-351.04 = about 197.7 x 50 cm. Oval basin centre y321.94 = 95 cm from the y295 end, basin about 53 x 33 cm. Thin line drawing409 at x262.08 = about 14.8 cm from the wall (likely the developer's overhead mirror-cabinet line; same 14.8 line as drawing455 in BATH 2). Mirror cabinet above is a design proposal: overall depth 19 (back 1.8 + clear 15 + mirror door 2.2), so it projects about 4 beyond drawing409.",
+      "source_note": "平面占位是原圖的洗手台（長 ≈197.7 × 深 ≈50，圖面估算）；盆中心距入口端 ≈95。上方鏡櫃（深 19、內淨 15，櫃底 115 到天花）是設計提案，見立面。原圖洗手台內另有一條距牆約 14.8 的細線（衛浴 2 也有同樣一條），應是建商畫的上方鏡櫃線；本設計深 19，比它多出約 4。衛浴 1 不是房間分頁，歸在主臥。"
     },
     {
       "id": "bath2-mirror-cabinet",
       "code": "BTH-02",
       "room_id": "living",
-      "name": "衛浴 2 洗手台＋鏡櫃",
-      "label": "BATH 2 vanity (source) + mirror cabinet (design)",
+      "name": "衛浴 2 洗手台＋整面鏡櫃",
+      "label": "BATH 2 vanity + WC ledge (source) + full-wall mirror cabinet (design)",
       "bounds_pt": [
         349.92,
         274.48,
         366.12,
-        299.92
+        322.6
       ],
       "dimensions": {
         "w": {
-          "cm": 89.7,
+          "cm": 169.8,
           "status": "scaled"
         },
         "d": {
@@ -1843,8 +1843,8 @@
         454,
         455
       ],
-      "notes": "BATH 2 vanity alcove on the wall opposite the shower: x349.92-366.12 (drawing454 front line), y274.48-299.92 = about 89.7 x 57.2 cm. No basin is drawn in the source. South of it the front steps back to x356.16 (about 22 cm ledge behind the WC, likely a concealed-cistern ledge). Thin line drawing455 about 7 cm from the wall. Mirror cabinet above is a design proposal (depth 15).",
-      "source_note": "平面占位是原圖的洗手台凹位（長 ≈89.7 × 深 ≈57，圖面估算），原圖沒有畫臉盆，盆位假設置中在固定鏡下方。上方鏡櫃（深 15、櫃底 115 到天花）是設計提案，見立面。衛浴 2 從走廊進出，走廊屬客餐廳分頁，所以歸在客餐廳。"
+      "notes": "BATH 2 west wall: wall face drawing144 x349.92 from the nib drawing135 (y274.48) to the south wall drawing177 (y322.6) = about 169.8 cm. Vanity alcove y274.48-299.92 (drawing454 front x366.12) = about 89.7 x 57.2 cm, no basin drawn. WC ledge y299.92-322.6, front x356.16 = about 80.0 x 22.0 cm; WC block drawing468/469 x356.16-361.8, y304.24-318.4 (50 wide, centre about 39.8 from the south wall), bowl to x376.08 (about 92 from the wall). Thin line drawing455 x354.12 runs the full wall, about 14.8 from the wall (likely the developer's overhead mirror-cabinet line). Hit area = full wall length x vanity depth; over the WC the cabinet itself is only 19 deep (design), inside the 22 ledge. Mirror cabinet: design proposal, overall depth 19 (back 1.8 + clear 15 + door 2.2), underside 115 across the whole wall.",
+      "source_note": "平面占位是整面牆：原圖洗手台凹位（≈89.7 × 57）加馬桶後矮台段（≈80 × 22），合計長 ≈169.8（圖面估算）；占位深度以洗手台 57 計，馬桶段的鏡櫃本身只有 19 深，在矮台 22 之內。原圖沒有畫臉盆，盆位假設置中在凹位。上方整面鏡櫃（深 19、內淨 15，櫃底 115 到天花）是設計提案，見立面。衛浴 2 從走廊進出，走廊屬客餐廳分頁，所以歸在客餐廳。"
     },
     {
       "id": "kid-wardrobe",
@@ -2625,6 +2625,10 @@
     {
       "id": "C12",
       "text": "hover 改為只顯示名稱的小標籤、內文字級放大；電器櫃上櫃底對齊吊櫃底 165（下層象印電子鍋＋飯匙、中層大同電鍋、上層微波爐 35），燒結石檯面面 90，空間規劃加高度標註；Dry kitchen 下櫃與空間規劃（咖啡機、Wells The One 淨水器）；主臥兩衣櫃相同（3 外抽、掛桿 188、高門雙開、門內全身鏡、感應燈）；主浴與衛浴 2 鏡櫃到天花；電視牆空間規劃、三抽電視櫃（插座在中間抽屜）、沙發 210 × 95、餐桌組往陽台移。"
+    },
+    {
+      "id": "C13",
+      "text": "廚房全部門板改無把手平板門（白色細木紋霧面、縫 0.3）：吊櫃與電器櫃上櫃門片下緣多 2 當手扣，下櫃與抽屜上緣手扣槽；Dry kitchen 淨水器主機櫃加寬到 59.5，出水口與放鍋區移到主機櫃上方；鏡櫃改總深 19、內淨 15，衛浴 2 鏡櫃做成整面牆（含馬桶上方）。"
     }
   ],
   "measurement_policy": {
@@ -2657,12 +2661,12 @@
           "電器櫃": "做到天花，外寬 60（側板 2.5，內淨寬 55）。由上到下：雙開門上櫃 112（165–277，底與吊櫃底 165 對齊）、上層微波爐（淨高 35）、中層大同電鍋 15 人份（淨高 38，蒸）、下層象印電子鍋＋飯匙（淨高 31.6，煮飯）、一個 45 鍋具抽屜、踢腳 10。三層開放式，用 Blum MOVENTO 全拉。",
           "櫃高／每層淨高": "設計值以天花 280 計；天花、檯面完成高度與電器型號待確認後微調。",
           "女傭房動線": "本版將水槽操作區移離女傭房門口；依使用者指示，開門弧暫不納入檢查。",
-          "吊櫃": "吊櫃底 165，整排 5 扇等寬門到天花，電器櫃上櫃底同為 165；薄型排油煙機藏在吊櫃下段，面板底 160。水槽正上方是外窗（寬約 60）；窗頂若允許，再在窗上補一段吊櫃。",
+          "吊櫃": "吊櫃底 165，整排 5 扇等寬（38.5）無把手平板門到天花，門片下緣比櫃底多 2 當手扣（門底 163）；電器櫃上櫃同做法、底同為 165。全廚房門板一致：白色細木紋霧面 laminate（色號待選）、門縫 3 mm；下櫃抽屜和門片用上緣手扣槽。薄型排油煙機藏在吊櫃下段，面板底 160，上緣被門片蓋住。水槽正上方是外窗（寬約 60）；窗頂若允許，再在窗上補一段吊櫃。",
           "Wet kitchen 檯面": "燒結石（sintered stone）檯面，完成面 90。燒結石板常見厚 12 mm，前緣以 45° 斜接加厚；圖面以總厚 3 繪製（底 87，洗碗機需 >86），屬設計假設，待檯面廠確認。品牌／色號待選。",
           "洗碗機": "Samsung Bespoke AI 獨立式洗碗機（SG 型號 DW60CB750FAPSP，598×845×600 mm），在右側窄拉籃和水槽櫃之間，兩側各 1.8 側板；檯面底 87，高於手冊要求的 86。",
           "烤箱與窄拉籃": "爐下櫃寬 80：瓦斯爐、下方餐具抽屜、最下 60 cm 嵌入式烤箱；爐台左右各一個 20 寬三層窄拉籃（左側離門端 5），對稱。",
           "水槽": "水槽盆 60 寬，置中於 71.9 寬水槽櫃；爐具到水槽之間備菜區約 92。水槽櫃內建前半深層板放清潔用品。",
-          "Dry kitchen": "面向客餐廳，前方黑框玻璃到天花；檯面 90、厚 3，同 Wet kitchen 岩板。由冰箱側起：收邊 3、淨水器主機櫃 46.5（單門，Wells 主機＋角閥＋排水，鋁製防水底盤）、抽屜櫃 58 ×2（14／21／42：膠囊、杯子、瓶罐）、側板 2。檯面左起咖啡機（示意 Essenza Mini）、Wells The One 白色龍頭，右側留 45 放鍋。插座做在主機櫃內，線孔上檯面；需另拉給排水，請水電確認。"
+          "Dry kitchen": "面向客餐廳，前方黑框玻璃到天花；檯面 90、厚 3，同 Wet kitchen 岩板。由冰箱側起：收邊 3、淨水器主機櫃 59.5（單門，Wells 主機＋角閥＋排水，鋁製防水底盤）、抽屜櫃 51.5 ×2（14／21／42：膠囊、杯子、瓶罐）、側板 2。主機櫃上方左起咖啡機（示意 Essenza Mini）、Wells The One 白色龍頭（中心離冰箱側 38），出水嘴朝前，龍頭前方留 49 寬放鍋接水，全在主機櫃範圍內。插座做在主機櫃內，線孔上檯面；需另拉給排水，請水電確認。"
         },
         "objectOverrides": {
           "kitchen-sink": {
@@ -2731,6 +2735,7 @@
       ],
       "title": "電器櫃 · 立面設計",
       "status": "design-proposal",
+      "frontStyle": "slab",
       "viewpoint": "站在廚房面向 Wet kitchen（A 方案）：右手邊是女傭房牆，左手邊是窗下水槽。",
       "ceiling_cm": 280,
       "ceiling_note": "暫以天花 280 計（使用者提供樓高約 2.8 m）；專案量測紀錄（brochure）為 2.75 m，待現場確認。廚房若有假天花，只影響最上櫃。",
@@ -2753,12 +2758,12 @@
         {
           "zone": "上櫃 · 雙開門",
           "h": "112 · 底 165",
-          "note": "165–277。底板 165–166.8，門片 165–277 和左側吊櫃門片上下齊（吊櫃底同為 165）。櫃寬 60，兩扇約 30 寬的門；內 2 片活動層板（約 201、238，與吊櫃層板同高），放備品和不常用的器具。"
+          "note": "165–277。底板 165–166.8；無把手雙開門 163–277（門片下緣比櫃底多 2 當手扣，設計假設），和左側吊櫃門片上下齊。櫃寬 60，兩扇約 30 寬的門；內 2 片活動層板（約 201、238，與吊櫃層板同高），放備品和不常用的器具。"
         },
         {
           "zone": "上層 · 微波爐",
           "h": "淨高 35",
-          "note": "130–165（層板面 130，拉出板面約 131.6）。以 25 L 機型 ≈47.2 寬 × 28 高 × 35.1 深計：機頂約留 5.4，櫃內淨寬 55。依你的要求由 45 壓到 35（範圍 32–35 取上限，給散熱多一點）。原參考機型手冊要求上方留 15，這裡不足：開放層正面通風，長時間加熱時把層板拉出再用；實購型號請確認嵌入／散熱要求。"
+          "note": "130–165（層板面 130，拉出板面約 131.6）。以 25 L 機型 ≈47.2 寬 × 28 高 × 35.1 深計：機頂約留 5.4，櫃內淨寬 55。依你的要求由 45 壓到 35（範圍 32–35 取上限，給散熱多一點）。原參考機型手冊要求上方留 15，這裡不足：開放層正面通風，長時間加熱時把層板拉出再用；實購型號請確認嵌入／散熱要求。上櫃門片下緣 163 比微波爐頂（約 159.6）高約 3.4，拉出時不會擋到。"
         },
         {
           "zone": "中層 · 大同電鍋 15 人份",
@@ -2773,7 +2778,7 @@
         {
           "zone": "鍋具抽屜",
           "h": "面板 45",
-          "note": "10–55。一個深抽屜放鍋具，抽屜箱可用內高約 40（高側板＋加高側欄／背板，依五金型號）。Blum LEGRABOX 全拉；鍋具較重，滑軌載重依實際鍋具選。"
+          "note": "10–55。一個深抽屜放鍋具，抽屜箱可用內高約 40（高側板＋加高側欄／背板，依五金型號）。Blum LEGRABOX 全拉；鍋具較重，滑軌載重依實際鍋具選。面板無把手，上緣 2 手扣槽。"
         },
         {
           "zone": "踢腳",
@@ -2785,7 +2790,7 @@
         "三層拉出板：Blum MOVENTO 全拉滑軌，40 kg 級，含 BLUMOTION 緩衝；長度 NL 550，依櫃內淨深選。",
         "加裝 Blum 拉出層板鎖（Pull-out shelf lock）：用電器時層板固定，不會回滑或晃動。",
         "拉出板面用耐熱面材（不鏽鋼或 compact laminate），後方和兩側加 4 cm 擋邊。",
-        "上櫃門鉸：CLIP top BLUMOTION，每扇 2 支。",
+        "上櫃門鉸：隱藏式緩衝鉸鍊（CLIP top BLUMOTION），門高約 114、寬約 30 的細長門每扇 3 支（Blum：細長門建議 3 支，https://ea.blum.com/en/number-of-hinges/ ）。",
         "電源：每層後板上方 1 組 13A 雙插座，電線預留 60 cm 以上，跟著拉出不被扯到。電鍋和微波爐同時用負載高，建議電器櫃拉獨立迴路（請水電確認）。",
         "示意機型：Zojirushi NS-ZAQ10（1.0 L／5.5 杯 Micom Fuzzy Logic，新加坡 FairPrice、Courts 有售）規格 255 寬 × 205 高 × 330 深 mm（Broadway 規格表：https://www.broadwaylifestyle.com/hk_en/zojirushi-ns-zaq10-fuzzy-logic-rice-cooker-1-0l-h204966-m ；新加坡售點：https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10 ）。"
       ],
@@ -2793,7 +2798,8 @@
         "櫃外寬 60、兩側板各 2.5，櫃內淨寬 55；層板 1.8。",
         "上櫃底對齊左側吊櫃底 165：踢腳 10 + 抽屜 45 + 層板 1.8×3 + 下層 31.6 + 中層 38 + 上層 35 = 165。先把微波爐層由 45 壓到 35，其餘兩層依電器高度分配。",
         "由上到下是微波爐、大同電鍋（蒸）、象印電子鍋（煮飯）＋飯匙，最下一個鍋具抽屜。微波爐機身約在 131.6–159.6（比原本 138–166 低約 6），拿熱湯較安全；中層電鍋層板 90.2 約和檯面同高。",
-        "A 方案的水槽正上方是外窗（寬約 60），吊櫃從窗邊一路做到門端；窗頂若允許，再在窗上補一段吊櫃（空間規劃圖虛線，寬 68，補滿吊櫃與電器櫃之間）。"
+        "A 方案的水槽正上方是外窗（寬約 60），吊櫃從窗邊一路做到門端；窗頂若允許，再在窗上補一段吊櫃（空間規劃圖虛線，寬 68，補滿吊櫃與電器櫃之間）。",
+        "門板和吊櫃、下櫃同一款：白色細木紋霧面 laminate、無把手、門縫 0.3；上櫃從下方勾開，鍋具抽屜從上緣手扣槽拉。"
       ],
       "open_questions": [
         "天花淨高、有無假天花",
@@ -4139,7 +4145,8 @@
                 "type": "dishwasher",
                 "w": 59.8,
                 "h": 84.5,
-                "sizeLabel": "Samsung 59.8×84.5"
+                "sizeLabel": "Samsung 59.8×84.5",
+                "sub": "原廠面板 · 選白色、實機確認"
               }
             }
           ],
@@ -4315,6 +4322,7 @@
           "id": "hob-run",
           "name": "爐台區立面",
           "kind": "front",
+          "frontLabels": false,
           "detail": false,
           "labels": true,
           "width": 188.6,
@@ -4351,6 +4359,17 @@
               "y": 165
             }
           ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 20,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
           "extras": [
             {
               "type": "worktop",
@@ -4368,15 +4387,6 @@
               "y": 90,
               "w": 75,
               "label": "瓦斯爐 75"
-            },
-            {
-              "type": "hood",
-              "slim": true,
-              "x": 20,
-              "y": 160,
-              "w": 90,
-              "h": 5,
-              "label": "薄型排油煙機"
             },
             {
               "type": "clear",
@@ -4453,6 +4463,7 @@
           "id": "sink-run",
           "name": "水槽區立面",
           "kind": "front",
+          "frontLabels": false,
           "detail": false,
           "labels": true,
           "width": 155.5,
@@ -4492,7 +4503,8 @@
               "y": 90,
               "w": 60,
               "depth": 20,
-              "label": "水槽"
+              "label": "水槽",
+              "bowlWhen": "open"
             },
             {
               "type": "window",
@@ -4543,6 +4555,7 @@
           "id": "wall",
           "name": "空間規劃",
           "kind": "front",
+          "frontLabels": false,
           "detail": false,
           "width": 320.5,
           "font": 8,
@@ -4586,6 +4599,17 @@
               "y": 165
             }
           ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 20,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
           "extras": [
             {
               "type": "worktop",
@@ -4610,7 +4634,8 @@
               "y": 90,
               "w": 60,
               "depth": 20,
-              "label": "水槽"
+              "label": "水槽",
+              "bowlWhen": "open"
             },
             {
               "type": "window",
@@ -4622,21 +4647,15 @@
               "sub": "窗台／窗頂高度待量"
             },
             {
-              "type": "hood",
-              "slim": true,
-              "x": 20,
-              "y": 160,
-              "w": 90,
-              "h": 5,
-              "label": "薄型排油煙機"
-            },
-            {
               "type": "optional",
               "x": 192.5,
               "y": 215,
               "w": 68,
               "h": 62,
-              "label": "窗頂允許才加"
+              "label": "窗頂允許才加",
+              "leaves": 2,
+              "lip": 2,
+              "size": 0.55
             },
             {
               "type": "clear",
@@ -4647,10 +4666,10 @@
             },
             {
               "type": "note",
-              "x": 2.5,
+              "x": -1.5,
               "y": 48,
               "label": "門端",
-              "anchor": "middle",
+              "anchor": "end",
               "size": 0.6
             }
           ],
@@ -4687,6 +4706,7 @@
         "window-sink"
       ],
       "status": "design-proposal",
+      "frontStyle": "slab",
       "ceiling_cm": 280,
       "ceiling_note": "暫以天花 280 計（使用者提供樓高約 2.8 m）；專案量測紀錄（brochure）為 2.75 m，待現場確認。廚房若有假天花，只影響最上櫃。",
       "states": [
@@ -4711,7 +4731,7 @@
         {
           "zone": "排油煙機",
           "h": "底 160",
-          "note": "薄型（隱藏式）排油煙機，機身藏在上方吊櫃下段，只有面板低於吊櫃 5。寬 90，置中對爐具。Bosch：瓦斯爐爐架頂到排油煙機底至少 65；這裡約 66.5。"
+          "note": "薄型（隱藏式）排油煙機，機身藏在上方吊櫃下段；面板 160–165 收在吊櫃門片後方，門片下緣 163 蓋住面板上緣 2，正面只露出約 3 的不鏽鋼面板（同參考照片）。拉出面板時要和門片手扣錯開，面板前緣與門片內側的間隙依機型安裝圖確認。寬 90，置中對爐具。Bosch：瓦斯爐爐架頂到排油煙機底至少 65；這裡約 66.5。"
         },
         {
           "zone": "瓦斯爐",
@@ -4726,7 +4746,7 @@
         {
           "zone": "餐具抽屜",
           "h": "面板 17",
-          "note": "照你家現況（圖 2）：爐具和烤箱中間一個淺抽屜放餐具、鍋鏟。抽屜箱用 Blum LEGRABOX M 低側板（9.05），箱頂約 80，避開爐具嵌入檯面下的部分。"
+          "note": "照你家現況（圖 2）：爐具和烤箱中間一個淺抽屜放餐具、鍋鏟。抽屜箱用 Blum LEGRABOX M 低側板（9.05），箱頂約 80，避開爐具嵌入檯面下的部分。面板無把手，上緣 2 手扣槽（和全廚房一致）。"
         },
         {
           "zone": "嵌入式烤箱",
@@ -4736,7 +4756,7 @@
         {
           "zone": "窄拉籃",
           "h": "寬 20 ×2",
-          "note": "爐具左右各一個，相同、對稱：左側離門端 5（收邊條，免得面板撞門框），右側在爐下櫃和洗碗機之間。單一面板滿高，拉出約 50 後三層：下層 34 放油和醬油（1 L 瓶約 28–30 高，扣掉托盤仍有約 32 淨高）、中層 23 放醬料瓶、上層 20 放香料罐。"
+          "note": "爐具左右各一個，相同、對稱：左側離門端 5（收邊條，免得面板撞門框），右側在爐下櫃和洗碗機之間。單一面板滿高，拉出約 50 後三層：下層 34 放油和醬油（1 L 瓶約 28–30 高，扣掉托盤仍有約 32 淨高）、中層 23 放醬料瓶、上層 20 放香料罐。面板無把手，上緣 2 手扣槽，從上方勾出。"
         },
         {
           "zone": "踢腳",
@@ -4749,7 +4769,7 @@
         "烤箱：Bosch 規定爐下安裝的烤箱要有強制散熱（冷卻風扇）；櫃底後方留散熱開口（Electrolux 要求 56×2）。",
         "餐具抽屜箱頂和爐具底部要保留間距（依爐具手冊）；爐具嵌入檯面下的深度請控制在 5 以內。排油煙機淨距 66.5 以爐架頂高出檯面約 3.5 估算，依實際爐具確認。",
         "烤箱插座裝在右側窄拉籃櫃後方的管道空間（拉籃深約 50，後方留約 10；離地 ≥45）；Bosch 電線 120 夠長。不放在烤箱正後方。",
-        "吊櫃整排 5 扇門等寬（38.5），做到天花。排油煙機機身藏在左側 3 門吊櫃下段，該櫃內下段約 25 不能放東西。"
+        "吊櫃整排 5 扇門等寬（38.5），無把手，做到天花；門片下緣比櫃底多 2 當手扣。排油煙機機身藏在左側 3 門吊櫃下段，該櫃內下段約 25 不能放東西。"
       ],
       "rationale": [
         "照你的參考照片（圖 2），由上到下是爐具、餐具抽屜、烤箱：烤箱在最下，抽屜在順手高度。",
@@ -4763,7 +4783,9 @@
         "門端牆面與門框的實際位置",
         "瓦斯管與烤箱電源位置",
         "排油煙機排風方式：外排要在吊櫃層板開孔走風管，或改用循環式",
-        "燒結石開孔處厚度是否符合爐下烤箱的 ≥3 要求（板下補強）"
+        "燒結石開孔處厚度是否符合爐下烤箱的 ≥3 要求（板下補強）",
+        "門板 laminate 品牌與色號（白色細木紋霧面，照參考照片）",
+        "排油煙機前拉面板與吊櫃門片下緣（163，多出櫃底 2）是否衝突：依機型安裝圖決定面板前緣退縮，或面板改貼同款門板"
       ]
     },
     "spice-pullout": {
@@ -4817,7 +4839,7 @@
         },
         "dyson": {
           "w": 42,
-          "d": 15,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -4871,13 +4893,14 @@
               "hinges": [
                 "L"
               ],
-              "label": "上櫃"
+              "label": "上櫃",
+              "handle": false
             }
           ]
         },
         "mirror": {
           "w": 100,
-          "d": 15,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -4922,13 +4945,14 @@
               "from": 85,
               "to": 122,
               "count": 2,
-              "label": "上櫃"
+              "label": "上櫃",
+              "handle": false
             }
           ]
         },
         "care": {
           "w": 49.7,
-          "d": 15,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -4992,7 +5016,8 @@
               "hinges": [
                 "R"
               ],
-              "label": "上櫃"
+              "label": "上櫃",
+              "handle": false
             }
           ]
         },
@@ -5226,12 +5251,17 @@
         {
           "zone": "左櫃 · Dyson 吹風機（S1）",
           "h": "鏡門 42",
-          "note": "鉸鏈在左外側。吹風機掛在櫃頂掛架（頭在上、風筒平行牆，佔深約 8），風嘴磁吸在背板，線垂到底部線材籃，不纏機身。S1 插座離地 140，在後板右側。"
+          "note": "鉸鏈在左外側。吹風機掛在櫃頂掛架（頭在上，機頭深 9.8＋掛架 ≈ 11.3，內淨 15 放得下），風嘴磁吸在背板，線垂到底部線材籃，不纏機身。S1 插座離地 140，在後板右側。"
         },
         {
           "zone": "右櫃 · 保養品＋電動牙刷（S2）",
           "h": "鏡門 49.7",
           "note": "鉸鏈在右外側。兩片活動玻璃層板（約 149、175，可調），底層放電動牙刷充電座；S2 牙刷插座離地 128，在後板右下。"
+        },
+        {
+          "zone": "櫃深（剖面）",
+          "h": "19 · 內淨 15",
+          "note": "背板 1.8＋內淨 15＋鏡門 2.2（18 mm 防潮板＋4 mm 銀鏡）。玻璃層板深約 14，前緣離門留約 1。"
         },
         {
           "zone": "鏡櫃底 · LED 燈帶",
@@ -5245,10 +5275,10 @@
         }
       ],
       "hardware": [
-        "鏡門：5 mm 銀鏡貼 18 mm 防潮板（或鋁框鏡門），全蓋；Blum CLIP top BLUMOTION 110°，每扇 3 支（鏡門較重）。門下緣做手扣，不另裝把手。",
+        "鏡門：4 mm 銀鏡貼 18 mm 防潮板（或鋁框鏡門），全蓋；Blum CLIP top BLUMOTION 110°，每扇 3 支（鏡門較重）。門下緣做手扣，不另裝把手。",
         "兩端靠牆各留 3 收邊，外側鉸鏈的鏡門才能開過 90° 不撞牆。",
         "層板：8 mm 強化玻璃，活動層板釘（32 mm 系統孔），可調。",
-        "櫃深 15（櫃身約 12.6＋鏡門約 2.4），內淨深約 11.5；防潮板、四邊封邊。",
+        "櫃深 19：背板 1.8＋內淨 15＋鏡門 2.2（18 mm 防潮板＋4 mm 銀鏡）；側板 1.8、櫃身深 16.8。若改鋁框鏡門（約 2.0），內淨約 15.2。防潮板、四邊封邊。",
         "S1（吹風機）：13A 單插附開關，左櫃後板，離地 140，距臉盆邊約 35 以上。Dyson Supersonic 線長 2.7 m，站在中段鏡前用綽綽有餘。",
         "S2（電動牙刷）：建議用 shaver supply unit（BS EN 61558-2-5 隔離變壓器，2-pin），右櫃後板，離地 128；前提是充電座是 2-pin 插頭。",
         "LED 燈帶與除霧片需要電源，變壓器放上櫃；開關接浴室燈或獨立開關（請 LEW 確認）。"
@@ -5257,8 +5287,8 @@
         "臉盆正上方做固定鏡、兩側才是鏡門：每天刷牙洗臉不用開任何門；兩側門鉸鏈在外側，打開時往兩邊轉，可以一直開著拿東西，中段鏡子照樣用。",
         "中段 100 對齊盆中心 95：左櫃 42、右櫃 49.7，兩端各 3 收邊，合計 197.7（洗手台全長，圖面估算，請現場丈量後微調右櫃）。",
         "鏡櫃底 115、鏡面頂 200：身高約 150–190 都照得到臉；200 以上到天花是少用的上櫃。",
-        "Dyson 官方收納是桌上型 display stand：原 Supersonic 的 stand 單獨 19.3 高 × 13.6 寬 × 17.6 深，掛上吹風機後 26.7 × 13.6 × 27.5 深；官網另售 Supersonic stand 970516-02、Supersonic r Display stand 971327-03，都是桌上型，沒有官方壁掛架。深 27.5 放不進 15 深的鏡櫃，所以櫃內改用掛架把機身吊起；若想用官方 stand，只能放在洗手台檯面上（濺水區）。",
-        "吹風機機身 28.8 高 × 7.7 寬 × 9.8 深：頭朝上、風筒平行牆掛，佔深約 8，內淨深 11.5 放得下；風筒若垂直於牆會太深。",
+        "Dyson 官方收納是桌上型 display stand：原 Supersonic 的 stand 單獨 19.3 高 × 13.6 寬 × 17.6 深，掛上吹風機後 26.7 × 13.6 × 27.5 深；官網另售 Supersonic stand 970516-02、Supersonic r Display stand 971327-03，都是桌上型，沒有官方壁掛架。深 27.5 放不進內淨 15 的鏡櫃，所以櫃內改用掛架把機身吊起；若想用官方 stand，只能放在洗手台檯面上（濺水區）。",
+        "吹風機機身 28.8 高 × 7.7 寬 × 9.8 深：頭朝上掛，機頭最深 9.8＋掛架約 1.5 ≈ 11.3，內淨 15 前方還留約 3.7 不碰鏡門；風筒平行或垂直牆都放得下。插頭＋彎線約佔 7 深，S1 放在掛架旁邊而不是正後方。",
         "Dyson 安全說明：不要把線纏在機身上；剛用完機身和金屬環很燙，放回前先放涼（門開著散熱）；在浴室使用後要拔插頭，不只關開關。插頭長插的做法請以 S1 附開關、用完關掉並由 LEW 確認為前提。",
         "插座放在兩側櫃內、靠外側且離臉盆邊 35 以上，關門時看不到插座，也不在正面潑水範圍。",
         "來源：Dyson Supersonic 規格表 https://www.dyson.com/content/dam/dyson/for-business/business-refresh/docs/us/hair-care/supersonic-tech-spec-us.pdf ；Supersonic stand https://www.dyson.com/support/journey/tools/970516-02 ；Supersonic r 配件 https://www.dyson.com/commercial/hair-care/supersonic-r-professional/accessories ；Dyson 安全說明 https://support.dyson.co.nz/support/hd01/supersonic-black-nickel/using-your-dyson-appliance/important-safety-instructions ；EMA RCCB https://www.ema.gov.sg/RCCB_Requirement.aspx ；BS 7671 第 701 節摘要 https://www.voltimum.co.uk/news/section-701-locations-containing-bath-or"
@@ -5275,9 +5305,9 @@
     },
     "bath2-mirror-cabinet": {
       "object_id": "bath2-mirror-cabinet",
-      "title": "衛浴 2 鏡櫃 · 空間規劃",
+      "title": "衛浴 2 整面鏡櫃 · 空間規劃",
       "status": "design-proposal",
-      "viewpoint": "站在衛浴 2 洗手台前，面向洗手台牆：左手邊是馬桶那一端，右手邊靠入口門；淋浴間在身後左側。",
+      "viewpoint": "站在衛浴 2 洗手台前，面向整面牆（長 ≈169.8）：左邊是馬桶與後方約 22 深的矮台，一直到南牆；右邊是約 57 深的牆垛，入口門在右後方；淋浴間在身後左側。",
       "ceiling_cm": 240,
       "ceiling_note": "浴室天花以 brochure 量測紀錄 2.4 m 計（浴室通常有假天花與檢修口），待現場確認；鏡櫃頂留 3 收邊。",
       "states": [
@@ -5291,9 +5321,20 @@
         }
       ],
       "units": {
-        "care": {
-          "w": 20,
-          "d": 15,
+        "fill-l": {
+          "w": 3,
+          "h": 125,
+          "noCarcass": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 125
+            }
+          ]
+        },
+        "wc1": {
+          "w": 26.7,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -5306,9 +5347,153 @@
               "h": 83.2,
               "glass": true,
               "shelves": [
-                28,
-                56
+                36
               ],
+              "items": [
+                {
+                  "name": "衛生紙",
+                  "w": 19,
+                  "h": 30,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 35.2,
+              "glass": true,
+              "shelves": [
+                17
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 85,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "鏡門 · 衛生紙",
+              "vertical": true
+            },
+            {
+              "kind": "door",
+              "from": 85,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "label": "上櫃",
+              "vertical": true,
+              "handle": false
+            }
+          ]
+        },
+        "wc2": {
+          "w": 26.7,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 83.2,
+              "glass": true,
+              "shelves": [
+                36,
+                60
+              ],
+              "items": [
+                {
+                  "name": "清潔備品",
+                  "w": 19,
+                  "h": 28,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 35.2,
+              "glass": true,
+              "shelves": [
+                17
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 85,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "鏡門 · 清潔備品",
+              "vertical": true
+            },
+            {
+              "kind": "door",
+              "from": 85,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "label": "上櫃",
+              "vertical": true,
+              "handle": false
+            }
+          ]
+        },
+        "dyson": {
+          "w": 26.7,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 83.2,
+              "glass": true,
+              "shelves": [],
               "items": []
             },
             {
@@ -5340,7 +5525,7 @@
               ],
               "mirror": true,
               "swing": true,
-              "label": "鏡門 · 備品",
+              "label": "鏡門 · 吹風機",
               "vertical": true
             },
             {
@@ -5351,13 +5536,88 @@
               "hinges": [
                 "L"
               ],
-              "label": "上櫃"
+              "label": "上櫃",
+              "vertical": true,
+              "handle": false
+            }
+          ]
+        },
+        "care": {
+          "w": 21.8,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 83.2,
+              "glass": true,
+              "shelves": [
+                28,
+                56
+              ],
+              "items": [
+                {
+                  "name": "保養品",
+                  "w": 6,
+                  "h": 16,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 35.2,
+              "glass": true,
+              "shelves": [
+                17
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 85,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "鏡門 · 保養品",
+              "vertical": true
+            },
+            {
+              "kind": "door",
+              "from": 85,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "label": "上櫃",
+              "vertical": true,
+              "handle": false
             }
           ]
         },
         "mirror": {
-          "w": 46.7,
-          "d": 15,
+          "w": 40.1,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -5402,13 +5662,14 @@
               "from": 85,
               "to": 122,
               "count": 2,
-              "label": "上櫃"
+              "label": "上櫃",
+              "handle": false
             }
           ]
         },
-        "dyson": {
-          "w": 20,
-          "d": 15,
+        "daily": {
+          "w": 21.8,
+          "d": 19,
           "h": 125,
           "board": 1.8,
           "bands": [
@@ -5420,8 +5681,18 @@
               "kind": "cabinet",
               "h": 83.2,
               "glass": true,
-              "shelves": [],
-              "items": []
+              "shelves": [
+                28,
+                56
+              ],
+              "items": [
+                {
+                  "name": "漱口杯",
+                  "w": 8,
+                  "h": 11,
+                  "size": false
+                }
+              ]
             },
             {
               "kind": "board",
@@ -5452,7 +5723,7 @@
               ],
               "mirror": true,
               "swing": true,
-              "label": "鏡門 · 吹風機",
+              "label": "鏡門 · 牙刷牙膏",
               "vertical": true
             },
             {
@@ -5463,7 +5734,9 @@
               "hinges": [
                 "R"
               ],
-              "label": "上櫃"
+              "label": "上櫃",
+              "vertical": true,
+              "handle": false
             }
           ]
         },
@@ -5486,48 +5759,97 @@
           "kind": "front",
           "detail": false,
           "labels": true,
-          "width": 89.7,
-          "font": 4.6,
+          "width": 169.8,
+          "font": 5.8,
           "units": [
             {
-              "ref": "fill-r",
-              "x": 86.7,
-              "y": 115
-            },
-            {
-              "ref": "care",
+              "ref": "fill-l",
               "x": 0,
               "y": 115
             },
             {
-              "ref": "mirror",
-              "x": 20,
+              "ref": "fill-r",
+              "x": 166.8,
+              "y": 115
+            },
+            {
+              "ref": "wc1",
+              "x": 3,
+              "y": 115
+            },
+            {
+              "ref": "wc2",
+              "x": 29.7,
               "y": 115
             },
             {
               "ref": "dyson",
-              "x": 66.7,
+              "x": 56.4,
+              "y": 115
+            },
+            {
+              "ref": "care",
+              "x": 83.1,
+              "y": 115
+            },
+            {
+              "ref": "mirror",
+              "x": 104.9,
+              "y": 115
+            },
+            {
+              "ref": "daily",
+              "x": 145.0,
               "y": 115
             }
           ],
           "under": [
             {
               "type": "wall",
-              "x": 89.7,
+              "x": -4,
               "w": 4,
               "h": 240
             },
             {
-              "type": "vanity",
+              "type": "wall",
+              "x": 169.8,
+              "w": 4,
+              "h": 240
+            },
+            {
+              "type": "rect",
               "x": 0,
+              "y": 0,
+              "w": 80.1,
+              "h": 100,
+              "dashed": true,
+              "fill": "#f4f5f1",
+              "label": "馬桶後矮台 · 深 ≈22 · 高度假設 100",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 20.3,
+              "y": 0,
+              "w": 39,
+              "h": 40,
+              "dashed": true,
+              "fill": "#fbfaf5",
+              "rx": 4,
+              "label": "馬桶（示意）",
+              "size": 0.5
+            },
+            {
+              "type": "vanity",
+              "x": 80.1,
               "w": 89.7,
               "y": 85,
               "top": 3,
               "plinth": true,
               "basin": 45,
-              "basinX": 20.85,
+              "basinX": 102.45,
               "basinDepth": 14,
-              "tapX": 43.35,
+              "tapX": 124.95,
               "tap": 20,
               "tapLabel": "龍頭 ≈20（假設）",
               "label": "洗手台（示意）",
@@ -5537,29 +5859,43 @@
           "extras": [
             {
               "type": "led",
-              "x": 0,
+              "x": 3,
               "y": 115,
-              "w": 86.7
+              "w": 163.8
             },
             {
               "type": "clear",
               "vertical": true,
-              "x": 72,
+              "x": 160,
               "y0": 85,
               "y1": 115,
               "label": "30"
             },
             {
-              "type": "note",
-              "x": -1.5,
-              "y": 48,
-              "label": "馬桶端",
-              "anchor": "end",
-              "size": 0.6
+              "type": "clear",
+              "vertical": true,
+              "x": 10,
+              "y0": 100,
+              "y1": 115,
+              "label": "15"
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 80.1,
+              "y": 64,
+              "label": "馬桶段 80.1"
+            },
+            {
+              "type": "clear",
+              "x0": 80.1,
+              "x1": 169.8,
+              "y": 64,
+              "label": "洗手台凹位 89.7"
             },
             {
               "type": "note",
-              "x": 43.35,
+              "x": 124.95,
               "y": 166,
               "label": "除霧片在鏡後",
               "size": 0.56,
@@ -5567,27 +5903,51 @@
               "when": "closed"
             },
             {
+              "type": "note",
+              "x": 39.8,
+              "y": 106,
+              "label": "櫃面比矮台退 3",
+              "size": 0.5,
+              "color": "#7f8c84"
+            },
+            {
               "type": "rect",
-              "x": 68.8,
+              "x": 58.8,
               "y": 117,
-              "w": 15.8,
+              "w": 21.8,
               "h": 7,
               "fill": "#eadcc4",
               "stroke": "#55695f",
+              "label": "線材籃",
+              "size": 0.46,
+              "color": "#2f443c",
               "when": "open"
             },
             {
-              "type": "note",
-              "x": 76.7,
-              "y": 126,
-              "label": "線材籃",
-              "size": 0.46,
-              "color": "#55695f",
+              "type": "rect",
+              "x": 71.4,
+              "y": 176,
+              "w": 5,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 77.4,
+              "y": 176,
+              "w": 3.8,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
               "when": "open"
             },
             {
               "type": "socket",
-              "x": 79.2,
+              "x": 76.4,
               "y": 140,
               "label": "S1",
               "fs": 0.62,
@@ -5595,28 +5955,40 @@
             },
             {
               "type": "dryer",
-              "x": 74.2,
+              "x": 64.2,
               "y": 196,
               "cord": [
-                79.2,
+                76.4,
                 136
               ],
               "sag": 6,
+              "label": "Dyson",
+              "lx": 64.2,
+              "ly": 150,
+              "size": 0.46,
               "when": "open"
             }
           ],
           "hcuts": [
             0,
-            20,
-            66.7,
-            86.7,
-            89.7
+            3,
+            29.7,
+            56.4,
+            83.1,
+            104.9,
+            145.0,
+            166.8,
+            169.8
           ],
-          "totalLabel": "89.7（圖面估算）",
+          "totalLabel": "169.8（整面牆，圖面估算）",
           "levels": [
             {
               "y": 85,
               "label": "檯面（假設）"
+            },
+            {
+              "y": 100,
+              "label": "矮台（假設）"
             },
             {
               "y": 115,
@@ -5638,54 +6010,76 @@
         {
           "zone": "上櫃 · 少用備品",
           "h": "200–237",
-          "note": "20／23.4 ×2／20 共四扇門，各一片活動玻璃層板；放衛生紙、備用牙刷、補充瓶。"
+          "note": "與下方同寬分格：26.7 ×3／21.8／20 ×2／21.8，各一片活動玻璃層板；放整串衛生紙、補充瓶。"
         },
         {
           "zone": "中段 · 固定鏡",
-          "h": "115–200 · 寬 46.7",
-          "note": "不開的固定鏡，約等於盆寬；臉盆請置中在它下方（原圖沒畫盆）。鏡後裝除霧片。"
+          "h": "115–200 · 寬 40.1",
+          "note": "不開的固定鏡，中心對齊臉盆（盆中心距南牆 124.95，原圖沒畫盆，假設置中在凹位）。兩側鏡門打開時照樣能照；鏡後裝除霧片。"
         },
         {
-          "zone": "右櫃 · Dyson 吹風機（S1）",
-          "h": "鏡門 20",
-          "note": "靠入口門那側，鉸鏈在右外側。吹風機掛在櫃頂掛架（佔寬約 10、深約 8），風嘴磁吸在側板，線垂到底部線材籃。S1 插座離地 140。"
+          "zone": "洗手台右櫃 · 牙刷牙膏",
+          "h": "鏡門 21.8",
+          "note": "靠牆垛，鉸鏈在右外側，往牆垛方向開。兩片活動玻璃層板，放每天用的牙刷、牙膏、漱口杯。"
         },
         {
-          "zone": "左櫃 · 備品",
-          "h": "鏡門 20",
-          "note": "靠馬桶那側，鉸鏈在左外側。兩片活動玻璃層板（約 145、173），放牙膏、漱口水、保養品。"
+          "zone": "洗手台左櫃 · 保養品",
+          "h": "鏡門 21.8",
+          "note": "鉸鏈在左外側（x 83.1，凹位左緣內 3），往馬桶方向開，開著不擋固定鏡。兩片活動玻璃層板。"
+        },
+        {
+          "zone": "馬桶段 · 吹風機（S1）",
+          "h": "鏡門 26.7",
+          "note": "緊鄰洗手台的第一格（只有右緣 3 越過凹位），S1 在矮台正上方、不在檯面上方；S1 距盆邊約 26.0、高出檯面 55。鉸鏈在左；吹風機頭朝上掛，機頭深 9.8＋掛架 ≈ 11.3 < 內淨 15；風嘴磁吸在背板，線垂到線材籃。"
+        },
+        {
+          "zone": "馬桶段 · 衛生紙、清潔備品",
+          "h": "鏡門 26.7 ×2",
+          "note": "中間一格對齊馬桶中心（距南牆 ≈39.8）。鉸鏈都在左側（往南牆開），最左一扇靠 3 收邊，可開過 90°。"
+        },
+        {
+          "zone": "櫃深（剖面）",
+          "h": "19 · 內淨 15",
+          "note": "背板 1.8＋內淨 15＋鏡門 2.2（18 mm 防潮板＋4 mm 銀鏡）。玻璃層板深約 14，前緣離門留約 1。比馬桶後矮台（深 ≈22）淺 3，整排櫃面都在矮台面之後。"
         },
         {
           "zone": "鏡櫃底 · LED 燈帶",
-          "h": "115",
-          "note": "檯面上方 30；龍頭頂假設約 105，留約 10。"
+          "h": "115（整面同高）",
+          "note": "洗手台段：檯面上方 30，龍頭頂假設約 105，留約 10。馬桶段：矮台若高 100，上方留 15 可放小物；整排燈帶當夜燈。"
         },
         {
-          "zone": "洗手台（示意）",
-          "h": "檯面 85（假設）",
-          "note": "原圖凹位長 ≈89.7 × 深 ≈57（圖面估算），沒有畫臉盆；不在本次設計範圍，只畫虛線對位。"
+          "zone": "洗手台／馬桶（示意）",
+          "h": "檯面 85、矮台 100（假設）",
+          "note": "原圖凹位 ≈89.7 × 57、矮台 ≈80 × 22（圖面估算）；不在本次設計範圍，只畫虛線對位。"
         }
       ],
       "hardware": [
-        "鏡門：5 mm 銀鏡貼 18 mm 防潮板（或鋁框鏡門），全蓋；Blum CLIP top BLUMOTION 110°，每扇 2–3 支。門下緣做手扣。",
-        "右端靠牆留 3 收邊，鏡門才能開過 90°；左端是馬桶後方的矮台，門可以直接打開。",
-        "層板：8 mm 強化玻璃，活動層板釘（32 mm 系統孔）。",
-        "櫃深 15，內淨深約 11.5；左右櫃內淨寬約 16.4，吹風機頭長 9.8 放得下。",
-        "S1（吹風機）：13A 單插附開關，右櫃後板，離地 140；水平距盆邊只有約 13，但高出檯面 55、關門時在櫃內。",
-        "LED 燈帶與除霧片需要電源（請 LEW 確認）。"
+        "鏡門：4 mm 銀鏡貼 18 mm 防潮板（或鋁框鏡門），全蓋；Blum CLIP top BLUMOTION 110°，每扇 3 支。門下緣做手扣，關門時整面是連續鏡面。",
+        "兩端各留 3 收邊：左端南牆、右端牆垛，外側鉸鏈的鏡門才能開過 90° 不撞牆。",
+        "鉸鏈方向：洗手台右櫃在右；其餘五扇都在左。相鄰門的鉸鏈不在同一條側板上，所以任兩扇同時打開也不互撞。",
+        "層板：8 mm 強化玻璃，深約 14，活動層板釘（32 mm 系統孔）。",
+        "櫃深 19：背板 1.8＋內淨 15＋鏡門 2.2（18 mm 防潮板＋4 mm 銀鏡）；側板 1.8、櫃身深 16.8。若改鋁框鏡門（約 2.0），內淨約 15.2。各格內淨寬：馬桶段 23.1、洗手台兩側 18.2。",
+        "S1（吹風機）：13A 單插附開關，馬桶段第三格後板右側，離地 140；距盆邊約 26.0，在矮台正上方、不在檯面上方。",
+        "LED 燈帶與除霧片需要電源，變壓器放上櫃；開關接浴室燈或獨立開關（請 LEW 確認）。"
       ],
       "rationale": [
-        "凹位只有 89.7：中段固定鏡 46.7 約等於盆寬，兩側各一扇 20 的窄鏡門，鉸鏈在外側往兩邊開，開著也不擋中段鏡子。",
-        "吹風機放靠入口門那側：在門口和走道吹頭髮，不用站在淋浴間旁；線長 2.7 m 夠用。",
-        "鏡櫃底 115、鏡面頂 200，與主浴相同高度，兩間浴室做法一致。",
-        "Dyson 官方 stand 掛上吹風機後深 27.5，放不進 15 深的鏡櫃，所以同主浴改用櫃內掛架（Dyson 尺寸與收納說明見主浴鏡櫃）。",
-        "衛浴 2 左側是馬桶後方約 22 深的矮台（原圖），鏡櫃沒有延伸過去，避免坐著時頭碰到櫃子。"
+        "整面牆依原圖量：牆面 drawing144 x349.92（y274.48–322.6）長 ≈169.8；北端是 drawing135 的牆垛，南端是 drawing177 南牆。洗手台凹位 y274.48–299.92 ≈89.7，馬桶矮台 y299.92–322.6 ≈80.1、深 ≈22（drawing454）。",
+        "原圖 drawing455 是一條距牆 14.8、從牆垛一路畫到南牆的細線（主浴 drawing409 也有同樣一條），應是建商的上方鏡櫃線，本來就是整面牆。本設計深 19，比它多出約 4，但仍在矮台面（22）之後。",
+        "分格：收邊 3＋馬桶段三扇 26.7＋洗手台左 21.8＋固定鏡 40.1＋洗手台右 21.8＋收邊 3＝169.8。鏡子中心對齊盆中心 124.95；左右兩扇等寬，所以洗手台左門剛好從凹位左緣內 3 開始；馬桶段 80 平分三扇。",
+        "每天刷牙洗臉不用開門：固定鏡在臉盆正上方，左右鏡門外側鉸鏈往兩邊開，開著也不擋鏡子。關門時 115–200 是一整片鏡牆。",
+        "馬桶段門都往南牆開：站在洗手台開門時，開口朝向人；門板停在各自左緣，不會擺到臉盆上方，也不會擋住往馬桶走的路。",
+        "櫃底整面 115 不加高：站在馬桶前（距牆約 100 以外）頭在櫃前方很遠，碰不到；門開 90° 只伸到距牆約 46。坐著時背靠矮台面（距牆 22），頭頂約 125–130 會高過櫃底 115，後腦離櫃面還有約 3；仰頭靠後最多碰到平的鏡門面，不會撞到門角。門下緣手扣用圓角鋁收邊。若要完全不碰，馬桶段櫃底可改 130（高過坐姿頭頂），但整面底線就斷開、上面少一層，本案不建議。矮台頂若高過約 110，櫃子要改坐在矮台上（見待確認）。",
+        "吹風機放在馬桶段緊鄰洗手台那一格：S1 離盆邊約 26.0、不在檯面潑水範圍；站在鏡前往左一步就拿得到，線長 2.7 m 夠用。",
+        "衛生紙放在馬桶正上方中間格，坐著不方便拿，但站起來順手補；備用衛生紙不佔洗手台下櫃。",
+        "Dyson 官方 stand 掛上吹風機後深 27.5，放不進內淨 15 的鏡櫃，所以同主浴改用櫃內掛架（Dyson 尺寸與收納說明見主浴鏡櫃）。隱藏式水箱常見框架高度 82／98／112（Geberit Duofix 型錄 https://catalog.international.geberit.com/en-ZA/systems/CH2_100901/products ），所以矮台高度要現場確認。"
       ],
       "open_questions": [
-        "衛浴 2 臉盆位置與尺寸（原圖未畫）",
+        "馬桶後矮台高度、沖水面板在正面還是頂面（頂面按鍵或矮台頂 >110 時，馬桶段櫃底要改坐在矮台上或加高）",
+        "隱藏式水箱檢修口位置（不可被鏡櫃擋住）",
+        "衛浴 2 臉盆位置與尺寸（原圖未畫；本設計假設置中在凹位）",
         "浴室天花淨高、假天花檢修口位置",
         "洗手台高度、龍頭高度",
-        "浴室內 13A 插座是否允許與位置（同主浴，請 LEW 依 SS 638 確認；S1 距淋浴區約 1.6 m，圖面估算）",
+        "浴室內 13A 插座是否允許與位置（同主浴，請 LEW 依 SS 638 確認；S1 距淋浴區約 1.5 m，圖面估算）",
         "要不要除霧片與 LED 燈帶"
       ]
     },
@@ -5704,6 +6098,7 @@
         "window-sink"
       ],
       "status": "design-proposal",
+      "frontStyle": "slab",
       "ceiling_cm": 280,
       "ceiling_note": "暫以天花 280 計（使用者提供樓高約 2.8 m）；專案量測紀錄（brochure）為 2.75 m，待現場確認。廚房若有假天花，只影響最上櫃。",
       "states": [
@@ -5747,7 +6142,7 @@
         {
           "zone": "水槽櫃",
           "h": "71.9",
-          "note": "前半深內建層板（深約 30），層板面離櫃底約 33：下層放清潔劑、噴瓶，上層放菜瓜布、手套。後半留給存水彎、進水角閥和洗碗機管線。"
+          "note": "前半深內建層板（深約 30），層板面離櫃底約 33：下層放清潔劑、噴瓶，上層放菜瓜布、手套。後半留給存水彎、進水角閥和洗碗機管線。雙開門無把手，上緣 2 手扣槽，和全廚房一致。"
         },
         {
           "zone": "備菜區",
@@ -5756,7 +6151,7 @@
         }
       ],
       "hardware": [
-        "洗碗機用原廠前面板，不另做門片；兩側 1.8 側板落地，踢腳在洗碗機處斷開。",
+        "洗碗機用原廠前面板，不另做門片（獨立式機型無法貼櫃體 laminate）。Samsung 新加坡官網列 DW60CB750FAPSP 為隱藏式觸控面板、洗程結束自動開門 10 cm 乾燥（Auto Door Open Dry），Bespoke 面板顏色另購；正面沒有把手和操作列，和無把手門板一致。選白色面板、實機確認色差。來源：https://www.samsung.com/sg/dishwashers/freestanding/dw7700-dw60cb750fapsp-bespoke-dishwasher-14-place-settings-silver-dw60cb750fapsp/ 。兩側 1.8 側板落地，踢腳在洗碗機處斷開。",
         "洗碗機緊鄰水槽櫃：進排水管從右側板開孔進水槽櫃，排水接在存水彎上方。洗碗機插座裝在水槽櫃背板上段（離地 ≥45），高於進排水管。",
         "排水高度：相近機型手冊兩處分別寫 30–70 與 30–80 cm，請以新加坡型號手冊為準。",
         "水槽櫃層板用防水板材（如 PP 板或封邊防潮板），前緣加擋條，噴瓶不會倒出來。"
@@ -6579,6 +6974,7 @@
         "window-sink"
       ],
       "status": "design-proposal",
+      "frontStyle": "slab",
       "ceiling_cm": 280,
       "ceiling_note": "暫以天花 280 計（使用者提供樓高約 2.8 m）；專案量測紀錄（brochure）為 2.75 m，待現場確認。廚房若有假天花，只影響最上櫃。",
       "states": [
@@ -6603,7 +6999,12 @@
         {
           "zone": "吊櫃",
           "h": "底 165",
-          "note": "整排 5 扇等寬門（38.5），從門端做到窗邊 192.5，到天花；底 165 與電器櫃上櫃底同高。薄型排油煙機面板底 160。窗頂若允許，窗上可補一段吊櫃（虛線，寬 68，補滿吊櫃與電器櫃之間）。"
+          "note": "整排 5 扇等寬（38.5）無把手平板門，從門端做到窗邊 192.5，到天花。櫃底 165 與電器櫃上櫃底同高；門片下緣比櫃底多 2 作為手扣（門底 163，設計假設），從下方勾開，離檯面約 73。薄型排油煙機面板 160–165，上緣被門片蓋住，只露出約 3。窗頂若允許，窗上可補一段吊櫃（虛線，寬 68，補滿吊櫃與電器櫃之間）。"
+        },
+        {
+          "zone": "門板（全廚房一致）",
+          "h": "無把手 · 縫 0.3",
+          "note": "Wet kitchen、電器櫃、Dry kitchen 全部同一款門板：白色細木紋霧面 laminate（色號待選），無把手平板門，門縫統一約 0.3（3 mm），隱藏式緩衝鉸鍊。吊櫃與電器櫃上櫃：門片下緣比櫃底多 2 作為手扣（設計假設），從下方勾開；下櫃抽屜、門片、窄拉籃與鍋具抽屜：面板上緣做 2 的手扣槽（J 型斜切），從上方勾開，和吊櫃一上一下對應。"
         },
         {
           "zone": "外窗",
@@ -6632,16 +7033,20 @@
         }
       ],
       "hardware": [
-        "各櫃五金見瓦斯爐、洗碗機、電器櫃立面。"
+        "各櫃五金見瓦斯爐、洗碗機、電器櫃立面。",
+        "吊櫃門鉸：隱藏式緩衝鉸鍊（如 Blum CLIP top BLUMOTION），門高約 114，每扇 3 支（Blum：門重 6–12 kg 或細長門用 3 支，https://ea.blum.com/en/number-of-hinges/ ）。門片雙面貼同款 laminate（平衡板），長門片才不易翹。"
       ],
       "rationale": [
-        "水槽移到窗下，瓦斯爐靠門端、左右各一個窄拉籃，電器櫃放在女傭房那一端；爐和水槽之間留約 92 備菜區。"
+        "水槽移到窗下，瓦斯爐靠門端、左右各一個窄拉籃，電器櫃放在女傭房那一端；爐和水槽之間留約 92 備菜區。",
+        "門板照參考照片（圖 2）：吊櫃整排平板門、無把手、細縫，門片下緣稍微超出櫃底當手扣；下櫃用上緣手扣槽，全廚房同一個系統、同一款面材。",
+        "下櫃用上緣手扣槽，不用 Blum TIP-ON／SERVO-DRIVE 按壓開啟：手扣純機械、不用拉電，不會被膝蓋或身體誤觸彈開，重的鍋具抽屜和窄拉籃照樣用 BLUMOTION 緩衝；代價是槽內會積灰、要順手擦，面板可用高度少約 2。TIP-ON 外觀最乾淨，但面板容易留手印、被碰到就彈開；SERVO-DRIVE 要電源，廚房下櫃不建議。"
       ],
       "open_questions": [
         "天花淨高、有無假天花",
         "外窗的窗台與窗頂高度",
         "水槽型號（盆寬 60 的外框與開孔）",
-        "燒結石板厚與前緣做法（12 mm 斜接加厚到 3？）、品牌與色號"
+        "燒結石板厚與前緣做法（12 mm 斜接加厚到 3？）、品牌與色號",
+        "門板 laminate 品牌與色號（白色細木紋霧面，照參考照片）"
       ]
     },
     "kitchen-dry": {
@@ -6668,7 +7073,7 @@
           "fronts": []
         },
         "dry-water": {
-          "w": 46.5,
+          "w": 59.5,
           "d": 60,
           "h": 87,
           "board": 1.8,
@@ -6720,7 +7125,7 @@
           ]
         },
         "dry-drawers-a": {
-          "w": 58,
+          "w": 51.5,
           "d": 60,
           "h": 87,
           "board": 1.8,
@@ -6771,7 +7176,7 @@
           ]
         },
         "dry-drawers-b": {
-          "w": 58,
+          "w": 51.5,
           "d": 60,
           "h": 87,
           "board": 1.8,
@@ -6855,11 +7260,11 @@
             },
             {
               "ref": "dry-drawers-a",
-              "x": 49.5
+              "x": 62.5
             },
             {
               "ref": "dry-drawers-b",
-              "x": 107.5
+              "x": 114.0
             },
             {
               "ref": "dry-end",
@@ -6901,12 +7306,24 @@
             },
             {
               "type": "dk-tap",
-              "x": 25.6,
+              "x": 33.6,
               "y": 90,
               "w": 8.8,
               "h": 33.7,
-              "reach": 6,
-              "outlet": 117,
+              "reach": 0,
+              "outlet": 117
+            },
+            {
+              "type": "dk-device",
+              "x": 36,
+              "y": 117,
+              "w": 4,
+              "h": 2
+            },
+            {
+              "type": "note",
+              "x": 38,
+              "y": 125.3,
               "label": "Wells The One",
               "size": 0.52
             },
@@ -6914,31 +7331,52 @@
               "type": "dk-device",
               "shape": "pot",
               "dashed": true,
-              "x": 37,
+              "x": 24.0,
               "y": 90,
               "w": 28,
-              "h": 18,
-              "label": "Ø28 鍋",
-              "size": 0.6
+              "h": 18
             },
             {
-              "type": "clear",
-              "x0": 34.400000000000006,
-              "x1": 79.4,
-              "y": 133,
-              "label": "放鍋淨空 45"
+              "type": "note",
+              "x": 56.7,
+              "y": 92,
+              "label": "Ø28 鍋（含把手 35）",
+              "anchor": "start",
+              "size": 0.55
             },
             {
               "type": "clear",
               "vertical": true,
-              "x": 72,
+              "x": 38,
               "y0": 90,
               "y1": 117,
-              "label": "出水口 ≈27（估）"
+              "label": ""
+            },
+            {
+              "type": "note",
+              "x": 56.7,
+              "y": 113,
+              "label": "出水口 ≈27（估）",
+              "anchor": "start",
+              "size": 0.6
+            },
+            {
+              "type": "clear",
+              "x0": 13.4,
+              "x1": 62.5,
+              "y": 133,
+              "label": "放鍋淨空 49"
+            },
+            {
+              "type": "clear",
+              "x0": 62.5,
+              "x1": 167.5,
+              "y": 133,
+              "label": "備餐檯面 105"
             },
             {
               "type": "dk-socket",
-              "x": 40,
+              "x": 55.5,
               "y": 70,
               "dashed": true,
               "label": "13A ×2（櫃內）",
@@ -6953,20 +7391,13 @@
               "label": "冰箱側",
               "anchor": "end",
               "size": 0.6
-            },
-            {
-              "type": "note",
-              "x": 137,
-              "y": 133,
-              "label": "檯面留空 ≈88",
-              "size": 0.6
             }
           ],
           "hcuts": [
             0,
             3,
-            49.5,
-            107.5,
+            62.5,
+            114.0,
             165.5,
             167.5
           ],
@@ -6975,6 +7406,10 @@
             {
               "y": 90,
               "label": "檯面"
+            },
+            {
+              "y": 117,
+              "label": "出水口（估）"
             }
           ]
         },
@@ -6999,11 +7434,11 @@
             },
             {
               "ref": "dry-drawers-a",
-              "x": 49.5
+              "x": 62.5
             },
             {
               "ref": "dry-drawers-b",
-              "x": 107.5
+              "x": 114.0
             },
             {
               "ref": "dry-end",
@@ -7043,36 +7478,55 @@
             },
             {
               "type": "dk-tap",
-              "x": 25.6,
+              "x": 33.6,
               "y": 90,
               "w": 8.8,
               "h": 33.7,
-              "reach": 6,
-              "outlet": 117,
-              "label": "Wells The One",
-              "size": 0.52
+              "reach": 0,
+              "outlet": 117
+            },
+            {
+              "type": "dk-device",
+              "x": 36,
+              "y": 117,
+              "w": 4,
+              "h": 2
             },
             {
               "type": "dk-device",
               "shape": "pot",
               "dashed": true,
-              "x": 37,
+              "x": 24.0,
               "y": 90,
               "w": 28,
-              "h": 18,
-              "label": "Ø28 鍋",
-              "size": 0.6
+              "h": 18
+            },
+            {
+              "type": "note",
+              "x": 56.7,
+              "y": 92,
+              "label": "Ø28 鍋（含把手 35）",
+              "anchor": "start",
+              "size": 0.55
             },
             {
               "type": "clear",
-              "x0": 34.400000000000006,
-              "x1": 79.4,
-              "y": 121,
-              "label": "淨空 45"
+              "vertical": true,
+              "x": 38,
+              "y0": 90,
+              "y1": 117,
+              "label": ""
+            },
+            {
+              "type": "clear",
+              "x0": 13.4,
+              "x1": 62.5,
+              "y": 126,
+              "label": "淨空 49"
             },
             {
               "type": "dk-socket",
-              "x": 40,
+              "x": 55.5,
               "y": 70,
               "dashed": true,
               "label": "13A ×2",
@@ -7084,8 +7538,8 @@
           "hcuts": [
             0,
             3,
-            49.5,
-            107.5,
+            62.5,
+            114.0,
             165.5,
             167.5
           ],
@@ -7113,6 +7567,7 @@
         "window-sink"
       ],
       "status": "design-proposal",
+      "frontStyle": "slab",
       "ceiling_cm": 280,
       "ceiling_note": "暫以天花 280 計（使用者提供樓高約 2.8 m）；專案量測紀錄（brochure）為 2.75 m，待現場確認。玻璃隔間高度跟著天花走。",
       "states": [
@@ -7141,17 +7596,17 @@
         {
           "zone": "咖啡機",
           "h": "8.4 × 20.4",
-          "note": "最左端，離冰箱側 5。示意機型 Nespresso Essenza Mini C：W 8.4 × D 33 × H 20.4，電線約 90。"
+          "note": "最左端，離冰箱側 5（5–13.4）、離玻璃 8，在淨水器主機櫃正上方；後方留線孔。示意機型 Nespresso Essenza Mini C：W 8.4 × D 33 × H 20.4，電線約 90。"
         },
         {
           "zone": "淨水器 Wells The One（白）",
           "h": "龍頭 Ø8.8 × 33.7",
-          "note": "檯面上只有出水龍頭，中心離冰箱側 30、離玻璃 20；檯面開孔 Ø3.8，可轉 180°。出水口高度廠商未列，圖以檯面上約 27 估，選購時請實機量。"
+          "note": "龍頭中心離冰箱側 38、離玻璃 20，落在主機櫃正上方（主機櫃 3–62.5）；檯面開孔 Ø3.8。出水嘴平常轉向正前方，出水口就在龍頭前方、主機櫃範圍內；可轉 180°（左↔前↔右）。出水口高度廠商未列，圖以檯面上約 27 估，選購時請實機量。"
         },
         {
           "zone": "放鍋淨空",
-          "h": "45 寬",
-          "note": "龍頭右側 34.4–79.4 不放東西：Ø28、高 18 的湯鍋可直接放檯面接水；更高的鍋把出水口轉向前方，鍋子放在檯面前緣（檯面深 65）。上方是玻璃，不會擋到。"
+          "h": "49 寬",
+          "note": "咖啡機右緣到主機櫃右緣 13.4–62.5 不放東西，全部在主機櫃上方。Ø28、高 18 的湯鍋（含把手寬 35）放在龍頭正前方 20.5–55.5，鍋心左右對準出水口，鍋把手離咖啡機 7；鍋子後緣貼著龍頭前方，離玻璃約 25–53，前面還留 12。出水嘴朝前伸出龍頭外緣約 2 以上，水就落在鍋內（伸出長度廠商未列，選購時實機確認）。鍋口 108，出水口約 117，還有約 9（估）。更高的鍋稍微往前傾，或用水壺分次。"
         },
         {
           "zone": "檯面",
@@ -7160,13 +7615,13 @@
         },
         {
           "zone": "淨水器主機櫃",
-          "h": "46.5 · 單門",
-          "note": "門鉸在冰箱側。主機 W18 × D35.2 × H32.5（19 kg）放櫃底，前方留空間換濾心；櫃內淨深約 56，大於 Wells 要求的 40。層板面在 56、前半深，放備用濾心和除垢劑。"
+          "h": "59.5 · 單門",
+          "note": "加寬到 59.5，咖啡機、龍頭、出水口和放鍋區都在這一櫃上方；水、電、主機集中一處。門鉸在冰箱側。主機 W18 × D35.2 × H32.5（19 kg）靠左放櫃底，前方留空間換濾心；櫃內淨深約 56，大於 Wells 要求的 40。層板面在 56、前半深，放備用濾心和除垢劑。門片無把手，上緣 2 手扣槽（和 Wet kitchen 一致）。"
         },
         {
           "zone": "抽屜櫃 ×2",
-          "h": "58 · 14／21／42",
-          "note": "兩櫃同分割、面板對齊。左櫃：咖啡膠囊／杯子／水壺、瓶罐；右櫃：茶匙、餐具／茶包、零食／保溫瓶、備品。"
+          "h": "51.5 · 14／21／42",
+          "note": "兩櫃各 51.5（內寬約 47.9），同分割、面板對齊。左櫃：咖啡膠囊／杯子／水壺、瓶罐；右櫃：茶匙、餐具／茶包、零食／保溫瓶、備品。上方 105 檯面留給倒水、備餐。面板無把手，每個抽屜上緣 2 手扣槽。"
         },
         {
           "zone": "踢腳",
@@ -7178,13 +7633,14 @@
         "抽屜：Blum LEGRABOX 全拉＋BLUMOTION。面板 14 用 N 側板（6.65）、21 用 K（12.85）、42 用 F（24.1）。膠囊抽屜放膠囊收納盤。",
         "主機櫃門鉸：CLIP top BLUMOTION 兩支；櫃底鋪鋁製防水底盤（滿底、四邊翻起約 3），可加漏水偵測器。",
         "水路：Wells 主機要進水和排水（每 24 小時自動排管路水）。Dry kitchen 原圖沒有給排水，要從最近的給排水點拉到主機櫃，請水電確認排水坡度與接點。",
-        "插座（建議）：主機櫃內右側板上段，離地約 70，高過角閥和排水；裝兩個 13A 開關插座。一個專供 Wells 主機（官方要求主機附近專用插座，加熱 2800 W），一個給咖啡機，電線從檯面後緣 Ø6 有蓋線孔上來，藏在咖啡機後方。請電工確認迴路（建議獨立迴路）與防水。"
+        "插座（建議）：主機櫃內右側板上段，離地約 70，高過角閥和排水；裝兩個 13A 開關插座。一個專供 Wells 主機（官方要求主機附近專用插座，加熱 2800 W），一個給咖啡機，電線從檯面後緣 Ø6 有蓋線孔（中心離冰箱側 9、離玻璃 4，在咖啡機正後方，咖啡機離玻璃 8）下到櫃後 5 的管線空間再進主機櫃。請電工確認迴路（建議獨立迴路）與防水。"
       ],
       "rationale": [
-        "由冰箱側起：收邊 3、淨水器主機櫃 46.5、抽屜櫃 58、抽屜櫃 58、東端側板 2，合計 167.5。",
-        "咖啡機和淨水器集中在最左：水、電、主機都在同一個門櫃；右邊約 88 檯面留給倒水、備餐。",
-        "杯子和膠囊抽屜在咖啡機旁邊：拿杯、接水、沖咖啡不用走動。",
-        "踢腳 10、檯面 90、厚 3 和 Wet kitchen 一致；玻璃側不做插座，改放在櫃內。"
+        "由冰箱側起：收邊 3、淨水器主機櫃 59.5、抽屜櫃 51.5、抽屜櫃 51.5、東端側板 2，合計 167.5。",
+        "咖啡機、淨水龍頭、出水口和放鍋區全部在主機櫃上方：水、電、主機都在同一個門櫃，接水不會滴到抽屜櫃。",
+        "杯子和膠囊抽屜在主機櫃右邊：拿杯、接水、沖咖啡不用走動；右邊約 105 檯面留給倒水、備餐。",
+        "踢腳 10、檯面 90、厚 3 和 Wet kitchen 一致；玻璃側不做插座，改放在櫃內。",
+        "門板和 Wet kitchen 同一款：白色細木紋霧面 laminate、無把手、門縫 0.3，抽屜與門片都用上緣手扣槽。"
       ],
       "open_questions": [
         "淨水器出水口實際高度與安裝圖",
