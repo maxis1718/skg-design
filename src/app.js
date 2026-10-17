@@ -19,8 +19,8 @@ let elevView={},elevState='closed';
 let changes={notes:{},actual:{},versions:{}}, roomId='floor', objectId=null, showDims=true, showObjects=true, dirty=false, storageOK=true, toastTimer;
 try{const saved=JSON.parse(localStorage.getItem(STORAGE)||'null');if(saved&&saved.notes&&saved.actual) changes=saved;}catch(e){storageOK=false;}
 changes.versions??={};
-// Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-current. The URL (?kitchen=a|b) is the only selection state.
-const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
+// Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
+const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
 const repoMode=window.SKG_REPO_MODE===true;let draftActive=!repoMode,draftChanges=structuredClone(changes);
 if(repoMode)changes={notes:{},actual:{},versions:{}};
@@ -50,8 +50,9 @@ function syncEditMode(){
  $('#save-status').textContent=draftActive?t('本機草稿'):t('共用設計版')+' '+project.project.revision;
 }
 function effectiveVersionCopy(){const v=structuredClone(kitchenVersion());v.notes=Object.fromEntries(Object.keys(fieldsFor(room('kitchen'))).map(k=>[k,note(room('kitchen'),k)]));return v;}
+// A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
 function elevationFor(id){
- const all=project.elevations||{};let e=all[id];if(!e||e.shared||!window.SKGElevation)return null;
+ const all=project.elevations||{};let e=all[id+'@'+kitchenVersion()?.layout]||all[id];if(!e||e.shared||!window.SKGElevation)return null;
  if(e.alias){const{alias,...own}=e;e={...all[alias],...own};}
  if(e.onlyLayouts&&!e.onlyLayouts.includes(kitchenVersion()?.layout))return null;
  if(e.include){const s=all[e.include];e={...e,units:{...(s?.units||{}),...(e.units||{})},views:e.views.map(v=>typeof v==='string'?s?.views.find(x=>x.id===v):v).filter(Boolean)};}
@@ -102,8 +103,8 @@ function renderKitchenVersion(){
    const target=object(id).bounds_pt,sx=(target[2]-target[0])/(source[2]-source[0]),sy=(target[3]-target[1])/(source[3]-source[1]);
    $('#'+id+'-geometry').setAttribute('transform',`translate(${target[0]} ${target[1]}) scale(${sx} ${sy}) translate(${-source[0]} ${-source[1]})`);
  }
- const tower=$('#appliance-tower-geometry');tower.replaceChildren();tower.toggleAttribute('hidden',version.layout!=='window-sink');
- if(version.layout==='window-sink'){
+ const towerLayouts=['window-sink','tower-left'],tower=$('#appliance-tower-geometry');tower.replaceChildren();tower.toggleAttribute('hidden',!towerLayouts.includes(version.layout));
+ if(towerLayouts.includes(version.layout)){
    const[x0,y0,x1,y1]=object('appliance-tower').bounds_pt;
    tower.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,fill:'#d5c2a5','fill-opacity':'.65',stroke:'#8e704c','stroke-width':'.5'}));
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
@@ -244,7 +245,7 @@ function validateOverrides(incoming){
   for(const[id,fields]of Object.entries(incoming.notes||{})){const r=room(id);if(!r||!fields||typeof fields!=='object')continue;clean.notes[id]={};for(const key of Object.keys(r.notes))if(typeof fields[key]==='string'&&fields[key].length<=20000)clean.notes[id][key]=fields[key];}
   for(const[id,fields]of Object.entries(incoming.actual||{})){if(!object(id)||!fields||typeof fields!=='object')continue;clean.actual[id]={};for(const key of ['w','d','h'])if(fields[key]===null||typeof fields[key]==='number'&&Number.isFinite(fields[key])&&fields[key]>0&&fields[key]<=10000)clean.actual[id][key]=fields[key];for(const key of ['brand','model'])if(fields[key]===null||typeof fields[key]==='string'&&fields[key].length<1000)clean.actual[id][key]=fields[key];}
   for(const[key,v]of Object.entries(incoming.versions||{})){
-    if(!/^kitchen:kitchen-[a-zA-Z0-9-]+$/.test(key)||!v||typeof v!=='object'||key!=='kitchen:'+v.id||typeof v.name!=='string'||!v.name.trim()||v.name.length>80||!['original','window-sink'].includes(v.layout)||typeof v.baseId!=='string'||typeof v.createdAt!=='string')continue;
+    if(!/^kitchen:kitchen-[a-zA-Z0-9-]+$/.test(key)||!v||typeof v!=='object'||key!=='kitchen:'+v.id||typeof v.name!=='string'||!v.name.trim()||v.name.length>80||!['original','window-sink','tower-left'].includes(v.layout)||typeof v.baseId!=='string'||typeof v.createdAt!=='string')continue;
     const notes={};for(const[k,value]of Object.entries(v.notes||{}).slice(0,40))if(typeof value==='string'&&value.length<=20000)notes[k]=value;
     const objectOverrides={};for(const[id,patch]of Object.entries(v.objectOverrides||{})){if(!baseObject(id)||baseObject(id).room_id!=='kitchen'||!Array.isArray(patch.bounds_pt)||patch.bounds_pt.length!==4||!patch.bounds_pt.every(Number.isFinite))continue;const b=patch.bounds_pt;if(b[0]>=b[2]||b[1]>=b[3]||b[0]<100||b[2]>700||b[1]<70||b[3]>450)continue;objectOverrides[id]={bounds_pt:b};if(patch.dimensions){const dims={};for(const axis of ['w','d']){const d=patch.dimensions[axis];if(d&&Number.isFinite(d.cm)&&d.cm>0&&d.cm<=10000&&statusNames[d.status])dims[axis]={cm:d.cm,status:d.status};}objectOverrides[id].dimensions=dims;}}
     clean.versions[key]={id:v.id,name:v.name,baseId:v.baseId,layout:v.layout,notes,objectOverrides,createdAt:v.createdAt};

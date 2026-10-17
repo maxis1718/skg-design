@@ -357,6 +357,16 @@ function rightChain(g, u, ox, oy, x, rc) {
   g.line(x - tick, oy + u.h, x + tick, oy + u.h, s);
   if (rc.note) g.text(x - tick, oy - g.f * 1.35, rc.note, {fill:C.dim, 'font-size':g.f * .6});
 }
+// Mirror of rightChain for a unit at the left end of a view (view.leftChain = {ref, min?}); numbers sit left of the line.
+function leftChain(g, u, ox, oy, x, rc) {
+  const B = bands(u), tick = 1.2, s = {stroke:C.dim, 'stroke-width':.25}, fs = g.f * .8;
+  g.line(x, oy, x, oy + u.h, s);
+  for (const b of B) {
+    g.line(x - tick, oy + b.y0, x + tick, oy + b.y0, s);
+    if (b.h >= (rc.min ?? 2.5)) g.text(x - 1.6, oy + (b.y0 + b.y1) / 2 - fs * .36, fmt(b.h), {'text-anchor':'end', fill:C.dim, 'font-size':fs});
+  }
+  g.line(x - tick, oy + u.h, x + tick, oy + u.h, s);
+}
 function hdim(g, x0, x1, y, label, emphasize) {
   const s = {stroke:C.dim, 'stroke-width':.25};
   g.line(x0, y, x1, y, s); g.line(x0, y - 1.2, x0, y + 1.2, s); g.line(x1, y - 1.2, x1, y + 1.2, s);
@@ -596,6 +606,8 @@ function renderFront(elev, view, state) {
   const m = {l: levelMargin(view, f), r: view.marginR != null ? f * view.marginR : chainUnit ? f * 8 : f * 2, t: f * 2.4, b: f * (view.hcuts ? 5.4 : 3.6)};
   const g = canvas(H, f);
   if (rc) m.r = Math.max(m.r, rightChainWidth(g, rc.u, view.rightChain));
+  const lc = view.leftChain && units.find(r => r.ref === view.leftChain.ref);
+  if (lc) m.l += rightChainWidth(g, lc.u, view.leftChain);
   levels(g, view, -m.l + f * .4, W);
   g.line(-m.l + f * .4, 0, W + m.r - f, 0, {stroke:C.line, 'stroke-width':.6});
   if (!view.noCeiling) {
@@ -609,6 +621,7 @@ function renderFront(elev, view, state) {
   extras(g, view.extras, state);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
   if (rc) rightChain(g, rc.u, rc.x, rc.y || 0, Math.max(rc.x + rc.u.w, W) + f * 1.1, view.rightChain);
+  if (lc) leftChain(g, lc.u, lc.x, lc.y || 0, Math.min(lc.x, 0) - f * 1.1, view.leftChain);
   if (detail) { const r = units[0]; hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
   for (const r of units) if (r.label) g.text(r.x + r.u.w / 2, -f * 1.6, r.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .8});
   if (view.hcuts) {

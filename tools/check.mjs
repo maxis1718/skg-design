@@ -2,6 +2,7 @@ import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';i
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const d=JSON.parse(fs.readFileSync(path.join(root,'src','project.json'),'utf8'));
 assert.equal(d.rooms.length,7);assert.equal(new Set(d.objects.map(o=>o.id)).size,d.objects.length);
 for(const o of d.objects){assert(d.rooms.some(r=>r.id===o.room_id));const b=o.bounds_pt;assert(b.length===4&&b.every(Number.isFinite)&&b[0]<b[2]&&b[1]<b[3]);for(const axis of ['w','d'])assert(o.dimensions[axis].cm>0);}
+assert.deepEqual(d.roomVersions.kitchen.map(v=>v.id).sort(),['kitchen-current','kitchen-tower-left','kitchen-window-sink'],'kitchen needs schemes A, B and original');
 for(const v of d.roomVersions.kitchen){for(const[id,p]of Object.entries(v.objectOverrides)){assert(d.objects.some(o=>o.id===id));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}}
 new vm.Script(fs.readFileSync(path.join(root,'src','app.js'),'utf8'));
 const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');assert(!html.includes('每一寸，都有依據。'));assert(!/class="[^"]*unit-stamp/.test(html));assert(!html.includes('/*__'));assert(!html.includes('SKG_CLOUD_ENABLED=true'));
@@ -11,7 +12,8 @@ const checkUnits=(id,units)=>{for(const[uid,u]of Object.entries(units)){assert(M
 const checkViews=(id,views,units)=>{for(const v of views){assert(v,id+' references a missing view');for(const r of v.units||(v.ref?[{ref:v.ref}]:[]))assert(units[r.ref],id+' view '+v.id+' missing unit '+r.ref);}};
 for(const[id,e]of Object.entries(E)){
   if(e.shared){checkUnits(id,e.units);checkViews(id,e.views,e.units);continue;}
-  assert(d.objects.some(o=>o.id===id),'elevation for unknown object '+id);
+  // 'objectId@layout' = layout-specific elevation (kitchen scheme B); the layout must exist in roomVersions.kitchen.
+  const[oid,lay]=id.split('@');assert(d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert(d.roomVersions.kitchen.some(v=>v.layout===lay),'elevation for unknown layout '+id);
   if(e.alias)assert(E[e.alias]&&!E[e.alias].alias,id+' alias must point at a concrete elevation');
   const b=e.alias?{...E[e.alias],...e}:e,inc=b.include?E[b.include]:null;if(b.include)assert(inc?.shared,id+' include must be shared');
   const units={...(inc?.units||{}),...(b.units||{})},views=b.views.map(v=>typeof v==='string'?inc?.views.find(x=>x.id===v):v);

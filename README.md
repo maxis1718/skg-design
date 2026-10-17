@@ -55,7 +55,7 @@ npm run check
 - 單位 cm，高度由完成地面往上量；天花暫以使用者提供的 280 計。
 - 每個 unit 的 `bands`（由下到上）高度總和必須等於 `h`，`npm run check` 會驗證。
 - 已建立：`appliance-tower`（A 方案電器櫃）、`kitchen-hob`、`dishwasher`、`spice-pullout(-r)`、`kitchen-oven`、`kitchen-lower-worktop`（Wet kitchen 空間規劃，右側高度鏈）、`kitchen-upper-worktop`（Dry kitchen）、`master-wardrobe-left/right`（兩櫃相同：3 外抽 24/24/20、掛桿 188、高門雙開 76–272 含上層收納、門內全身鏡、開門感應燈）、`bath1-mirror-cabinet`／`bath2-mirror-cabinet`（鏡櫃到天花 240、總深 19／內淨 15：中間固定鏡、兩側鏡門向外開、櫃內 Dyson 插座；衛浴 2 整面牆含馬桶上方 169.8）、`tv-console`／`living-tv`（電視牆：三抽電視櫃 210×45×40、插座全在中間抽屜、弧形缺口把手兼出線）。
-- 廚房 A（窗下水槽，預設；B 為原始配置，網址 ?kitchen=a|b）的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`）；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
+- 廚房三個方案：方案 A（窗下水槽，預設）、方案 B（電器櫃移到門端）、原始，網址 ?kitchen=a|b|original。方案 A 的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`），方案 B 在 `elevations.kitchen-b2`，B 的物件立面以 `物件id@tower-left` 為鍵；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
 - 立面是設計提案，不是原圖標註；電器尺寸為示意機型，實購型號仍記在 actual 欄位。
 
 ## 廚房方案
