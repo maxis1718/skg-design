@@ -16,7 +16,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const num=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:1});
 const statusNames={annotated:'原圖標註',scaled:'圖面估算',design:'設計配置',fit:'配適設計'};
 let elevView={},elevState='closed';
-let changes={notes:{},actual:{},versions:{}}, roomId='floor', objectId=null, zoom=1, pan={x:0,y:0}, showDims=true, showObjects=true, dirty=false, storageOK=true, toastTimer;
+let changes={notes:{},actual:{},versions:{}}, roomId='floor', objectId=null, showDims=true, showObjects=true, dirty=false, storageOK=true, toastTimer;
 try{const saved=JSON.parse(localStorage.getItem(STORAGE)||'null');if(saved&&saved.notes&&saved.actual) changes=saved;}catch(e){storageOK=false;}
 changes.versions??={};
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-current. The URL (?kitchen=a|b) is the only selection state.
@@ -165,7 +165,7 @@ function renderSelectedDimensions(){
 // Hover label: name (+ muted code) only — sizes, status and actual fields live in the inspector after a click.
 // Mouse/pen only (a touch tap selects instead). Fixed to the viewport, offset from the cursor, flipping left/up near edges.
 function showTip(e,o){
-  if(e.pointerType==='touch'||gesture.moved&&gesture.pts.size)return;
+  if(e.pointerType==='touch')return;
   $('#tooltip').innerHTML=`<span class="tip-name">${esc(o.name)}</span><span class="tip-code">${esc(o.code)}</span>`;
   $('#tooltip').hidden=false;positionTip(e);
 }
@@ -187,7 +187,6 @@ function selectRoom(id,{keepObject=false}={}){
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
   $$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId));
   history.replaceState(null,'','#'+(objectId?'object-'+objectId:id));
-  if(zoom>1){pan={x:0,y:0};applyZoom();}
   renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();syncEditMode();hideTip();
 }
 function selectObject(id,{scroll=false}={}){
@@ -198,27 +197,26 @@ function renderInspector(){
   const node=$('#inspector');
   if(objectId){
     const o=object(objectId),r=room(o.room_id),a=actual(o);
-    node.innerHTML=`<p class="eyebrow">OBJECT / ${o.code}</p><h2>${esc(o.name)}</h2><div class="en-title">${tf('{name} · 圖面占位',{name:r.name})}</div><div class="big-number">${size(o)}<span>cm</span></div><div class="inspector-note">W × D · ${statuses(o)}</div><p class="inspector-text">${esc(o.source_note)}</p><hr class="inspector-rule"><div class="detail-subhead"><h3>${t('實物資料')}</h3><span class="status-tag">${t('待補齊')}</span></div><div class="actual-form">${['w','d','h'].map((k,i)=>`<label>${t(['寬 W','深 D','高 H'][i])} · cm<input type="number" step="0.1" min="0.1" max="10000" inputmode="decimal" data-actual="${k}" value="${a[k]??''}" placeholder="${t('待提供')}" aria-label="${o.name} ${t(['實物寬','實物深','實物高'][i])} (cm)"></label>`).join('')}<label class="wide">${t('品牌')}<input data-actual="brand" value="${esc(a.brand)}" placeholder="${t('待提供')}"></label><label class="wide">${t('型號')}<input data-actual="model" value="${esc(a.model)}" placeholder="${t('待提供')}"></label></div><div class="spacer"></div>${elevationFor(o.id)?`<button class="inspector-button elev-go" id="go-elevation">${t('查看立面設計 ↓')}</button>`:''}<button class="inspector-button" id="return-room">${tf('回到{name}概覽',{name:r.name})}</button>`;
+    node.innerHTML=`<p class="eyebrow">OBJECT / ${o.code}</p><h2>${esc(o.name)}</h2><div class="en-title">${tf('{name} · 圖面占位',{name:r.name})}</div><div class="big-number">${size(o)}<span>cm</span></div><div class="inspector-note">W × D · ${statuses(o)}</div><p class="inspector-text">${esc(o.source_note)}</p><hr class="inspector-rule"><div class="detail-subhead"><h3>${t('實物資料')}</h3><span class="status-tag">${t('待補齊')}</span></div><div class="actual-form">${['w','d','h'].map((k,i)=>`<label>${t(['寬 W','深 D','高 H'][i])} · cm<input type="number" step="0.1" min="0.1" max="10000" inputmode="decimal" data-actual="${k}" value="${a[k]??''}" placeholder="${t('待提供')}" aria-label="${o.name} ${t(['實物寬','實物深','實物高'][i])} (cm)"></label>`).join('')}<label class="wide">${t('品牌')}<input data-actual="brand" value="${esc(a.brand)}" placeholder="${t('待提供')}"></label><label class="wide">${t('型號')}<input data-actual="model" value="${esc(a.model)}" placeholder="${t('待提供')}"></label></div><button class="inspector-button" id="return-room">${tf('回到{name}概覽',{name:r.name})}</button>`;
     $$('#inspector [data-actual]').forEach(input=>input.addEventListener('change',()=>{const key=input.dataset.actual;let value=input.value.trim();if(['w','d','h'].includes(key)){value=value===''?null:Number(value);if(value!==null&&(!Number.isFinite(value)||value<=0||value>10000)){input.setCustomValidity(t('請輸入大於 0 的有效尺寸。'));input.reportValidity();return;}input.setCustomValidity('');}else value=value||null;changes.actual[o.id]={...(changes.actual[o.id]||{}),[key]:value};save();renderInventory();const current=actual(o),filled=['w','d','h','brand','model'].filter(k=>current[k]!=null).length;$('#inspector .status-tag').textContent=filled===5?t('資料齊全'):filled>0?t('已有部分資料'):t('待補齊');}));
     const filled=['w','d','h','brand','model'].filter(k=>a[k]!=null).length;$('#inspector .status-tag').textContent=filled===5?t('資料齊全'):filled>0?t('已有部分資料'):t('待補齊');
-    $('#return-room').onclick=()=>selectRoom(r.id);if($('#go-elevation'))$('#go-elevation').onclick=()=>$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});return;
+    $('#return-room').onclick=()=>selectRoom(r.id);return;
   }
   if(roomId==='floor'){
-    node.innerHTML=`<p class="eyebrow">${t('目前圖面')} / ${project.project.revision}</p><h2>${t('配置與尺寸')}</h2><div class="en-title">${esc(kitchenVersion().name)}</div><hr class="inspector-rule"><p class="inspector-text">${t('選房間查看分區尺寸與設計筆記。點選物件可補充實物尺寸、品牌與型號。')}</p><div class="inspector-pair"><span>${t('書房書桌')}</span><strong>≈ 230 × 50 cm</strong></div><div class="inspector-pair"><span>${t('客房衣櫃')}</span><strong>120 × 60 cm</strong></div><div class="spacer"></div><div class="inspector-pair"><span>${t('主要空間')}</span><strong>07</strong></div><div class="inspector-pair"><span>${t('本版物件')}</span><strong>${String(visibleObjects().length).padStart(2,'0')}</strong></div><p class="inspector-foot">${t('尺寸單位 cm。≈ 為圖面估算。')}<br>${t('原標、設計值與實物資料分開記錄。')}</p>`;
+    node.innerHTML=`<p class="eyebrow">${t('目前圖面')} / ${project.project.revision}</p><h2>${t('配置與尺寸')}</h2><div class="en-title">${esc(kitchenVersion().name)}</div><hr class="inspector-rule"><p class="inspector-text">${t('選房間查看分區尺寸與設計筆記。點選物件可補充實物尺寸、品牌與型號。')}</p><div class="inspector-pair"><span>${t('書房書桌')}</span><strong>≈ 230 × 50 cm</strong></div><div class="inspector-pair"><span>${t('客房衣櫃')}</span><strong>120 × 60 cm</strong></div><div class="inspector-pair"><span>${t('主要空間')}</span><strong>07</strong></div><div class="inspector-pair"><span>${t('本版物件')}</span><strong>${String(visibleObjects().length).padStart(2,'0')}</strong></div><p class="inspector-foot">${t('尺寸單位 cm。≈ 為圖面估算。')}<br>${t('原標、設計值與實物資料分開記錄。')}</p>`;
   }else{
     const r=room(roomId),p=r.parts[0],count=visibleObjects().filter(o=>o.room_id===r.id).length;
-    node.innerHTML=`<p class="eyebrow">SPACE / ${r.number}</p><h2>${r.name}</h2><div class="en-title">${LANG==='en'?esc(r.source_label):r.english}</div><div class="big-number">${roomSize(r)}<span>cm</span></div><div class="inspector-note">${tf('{label} · 橫向 × 縱向',{label:esc(p.label)})}</div><p class="inspector-text">${r.focus}</p><hr class="inspector-rule"><div class="inspector-pair"><span>${t('原圖名稱')}</span><strong>${esc(r.source_label)}</strong></div><div class="inspector-pair"><span>${t('收錄物件')}</span><strong>${tf('{n} 件',{n:count})}</strong></div><div class="inspector-pair"><span>${t('尺寸依據')}</span><strong>${t('內牆面 / 窗室內側線')}</strong></div><div class="spacer"></div><p class="inspector-foot">${['master','living'].includes(r.id)?t('不規則空間；上方為主要矩形區尺寸，分區詳見下方。'):t('包含櫃體與家具占位；淨走道另行記錄。')}<br>${t('圖面讀值不代表現場實測。')}</p><button class="inspector-button" id="go-details">${t('查看空間細節 ↓')}</button>`;
-    $('#go-details').onclick=()=>$('#details-section').scrollIntoView({behavior:'smooth',block:'start'});
+    node.innerHTML=`<p class="eyebrow">SPACE / ${r.number}</p><h2>${r.name}</h2><div class="en-title">${LANG==='en'?esc(r.source_label):r.english}</div><div class="big-number">${roomSize(r)}<span>cm</span></div><div class="inspector-note">${tf('{label} · 橫向 × 縱向',{label:esc(p.label)})}</div><p class="inspector-text">${r.focus}</p><hr class="inspector-rule"><div class="inspector-pair"><span>${t('原圖名稱')}</span><strong>${esc(r.source_label)}</strong></div><div class="inspector-pair"><span>${t('收錄物件')}</span><strong>${tf('{n} 件',{n:count})}</strong></div><div class="inspector-pair"><span>${t('尺寸依據')}</span><strong>${t('內牆面 / 窗室內側線')}</strong></div>`;
   }
 }
 function renderDetails(){
   if(roomId==='floor'){
     $('#details-title').textContent=t('空間索引');$('#details-kicker').textContent='THE SPACES';$('#details-caption').textContent=tf('7 個空間 · 本版 {n} 個大型物件',{n:visibleObjects().length});
-    $('#details-content').innerHTML=`<div class="room-grid">${project.rooms.map(r=>`<button class="room-index" data-open-room="${r.id}"><div class="room-index-no">SPACE ${r.number}</div><span class="arrow">↗</span><h3>${r.name}</h3><div class="room-index-en">${LANG==='en'?esc(r.source_label):r.english}</div><div class="room-index-dim">${roomSize(r)} cm${['master','living'].includes(r.id)?t(' · 主區'):''}</div><p class="room-index-focus">${r.focus}</p></button>`).join('')}</div>`;
+    $('#elevation-slot').innerHTML='';$('#details-content').innerHTML=`<div class="room-grid">${project.rooms.map(r=>`<button class="room-index" data-open-room="${r.id}"><div class="room-index-no">SPACE ${r.number}</div><span class="arrow">↗</span><h3>${r.name}</h3><div class="room-index-en">${LANG==='en'?esc(r.source_label):r.english}</div><div class="room-index-dim">${roomSize(r)} cm${['master','living'].includes(r.id)?t(' · 主區'):''}</div><p class="room-index-focus">${r.focus}</p></button>`).join('')}</div>`;
     $$('[data-open-room]').forEach(b=>b.onclick=()=>{selectRoom(b.dataset.openRoom);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});return;
   }
-  const r=room(roomId);$('#details-title').textContent=tf('{name} · 細節紀錄',{name:r.name});$('#details-kicker').textContent='SPACE '+r.number+' / DETAILS';$('#details-caption').textContent='';
-  $('#details-content').innerHTML=`${elevationBlock()}<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>${t('全部單位 cm')}</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':(p.horizontal_cm===320.5?'':'≈ ')+num(p.horizontal_cm)+' × '}${p.vertical_cm===387.5?'':'≈ '}${num(p.vertical_cm)}</strong></div>`).join('')}<p class="quiet-note">${t('依新格局圖量測內牆面，包含固定櫃占位。≈ 為等比讀值；小數原標尺寸保留。')}${['master','living'].includes(r.id)?t('不以外包矩形推算整間面積。'):''}</p>${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-upper-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-upper-worktop">'+esc(object('kitchen-upper-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('tv-console')?'<button class="plain-button elev-link" data-elev-open="tv-console">'+t('電視牆 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'&&elevationFor('bath1-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath1-mirror-cabinet">'+t('主浴鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('bath2-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath2-mirror-cabinet">'+t('衛浴 2 鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}</div><div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):t('設計筆記')}</h3><button class="plain-button" id="copy-discussion">${t('複製討論提示 ↗')}</button></div>${Object.keys(fieldsFor(r)).map((key,i)=>`<div class="note-field"><label for="note-${i}">${esc(t(key))}</label><textarea id="note-${i}" data-note-key="${esc(key)}" rows="${note(r,key).length>45?3:2}" placeholder="${t('待討論 / 待提供')}">${esc(note(r,key))}</textarea></div>`).join('')}</div></div>`;
+  const r=room(roomId),editing=!repoMode||draftActive,noteKeys=Object.keys(fieldsFor(r)).filter(k=>editing||String(note(r,k)).trim());$('#details-title').textContent=tf('{name} · 細節紀錄',{name:r.name});$('#details-kicker').textContent='SPACE '+r.number+' / DETAILS';$('#details-caption').textContent='';
+  $('#elevation-slot').innerHTML=elevationBlock();$('#details-content').innerHTML=`<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>${t('cm · ≈ 為圖面估算')}</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':(p.horizontal_cm===320.5?'':'≈ ')+num(p.horizontal_cm)+' × '}${p.vertical_cm===387.5?'':'≈ '}${num(p.vertical_cm)}</strong></div>`).join('')}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-upper-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-upper-worktop">'+esc(object('kitchen-upper-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('tv-console')?'<button class="plain-button elev-link" data-elev-open="tv-console">'+t('電視牆 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'&&elevationFor('bath1-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath1-mirror-cabinet">'+t('主浴鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('bath2-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath2-mirror-cabinet">'+t('衛浴 2 鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}</div><div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):t('設計筆記')}</h3><button class="plain-button" id="copy-discussion">${t('複製討論提示 ↗')}</button></div>${noteKeys.length?'':`<p class="quiet-note">${t('尚無筆記。')}</p>`}${noteKeys.map((key,i)=>`<div class="note-field"><label for="note-${i}">${esc(t(key))}</label><textarea id="note-${i}" data-note-key="${esc(key)}" rows="${note(r,key).length>45?3:2}" placeholder="${t('待討論 / 待提供')}">${esc(note(r,key))}</textarea></div>`).join('')}</div></div>`;
   bindElevation();$$('[data-elev-open]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.elevOpen);$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});});
   fitNotes();$$('[data-note-key]').forEach(input=>input.addEventListener('input',()=>fitNote(input)));
   $$('[data-note-key]').forEach(input=>input.addEventListener('input',()=>{if(r.id==='kitchen'){const v=effectiveVersionCopy();v.notes[input.dataset.noteKey]=input.value;changes.versions['kitchen:'+v.id]=v;}else changes.notes[r.id]={...(changes.notes[r.id]||{}),[input.dataset.noteKey]:input.value};save();}));
@@ -234,21 +232,6 @@ function renderInventory(){
   $('#inventory-title').textContent=roomId==='floor'?t('大型物件尺寸簿'):tf('{name} · 物件尺寸簿',{name:room(roomId).name});
   $('#inventory-body').innerHTML=filtered.map(o=>{const r=room(o.room_id),a=actual(o);const vals=['w','d','h'].map(k=>a[k]==null?'—':num(a[k]));return `<tr data-item-row="${o.id}" class="${o.id===objectId?'is-selected':''}"><td><button data-open-object="${o.id}"><span class="item-code">${o.code}</span>${esc(o.name)}</button></td><td>${r.name}</td><td>${size(o)}</td><td><span class="status-tag ${/design|fit/.test(Object.values(o.dimensions).map(d=>d.status).join())?'design':''}">${statuses(o)}</span></td><td class="${vals.every(v=>v==='—')?'table-muted':''}">${vals.join(' × ')}</td><td class="table-muted">${esc([a.brand,a.model].filter(Boolean).join(' / ')||t('待提供'))}</td></tr>`;}).join('');
   $('#no-results').hidden=filtered.length>0;$$('[data-open-object]').forEach(b=>b.onclick=()=>selectObject(b.dataset.openObject,{scroll:true}));
-}
-function viewCenter(){if(roomId==='floor'||zoom===1)return{x:379,y:266};const b=room(roomId).bounds_pt;return{x:(b[0]+b[2])/2,y:(b[1]+b[3])/2};}
-function applyZoom(){
-  if(zoom===1)pan={x:0,y:0};const c=viewCenter(),w=484/zoom,h=330/zoom;
-  const x=Math.max(137,Math.min(c.x-w/2+pan.x,621-w)),y=Math.max(101,Math.min(c.y-h/2+pan.y,431-h));
-  pan={x:x-(c.x-w/2),y:y-(c.y-h/2)};// keep pan clamped so over-dragging never builds up hidden offset
-  $('#plan').setAttribute('viewBox',[x,y,w,h].join(' '));$('#plan').classList.toggle('zoomed',zoom>1);$('#zoom-value').textContent=Math.round(zoom*100)+'%';
-  $('#zoom-out').disabled=zoom<=1;$('#zoom-in').disabled=zoom>=3;
-}
-// Plan coordinates under a client point, and zooming so that plan point `anchor` sits under client point (cx,cy).
-function planPoint(cx,cy){const vb=$('#plan').viewBox.baseVal,box=$('#plan').getBoundingClientRect();return{x:vb.x+(cx-box.left)/box.width*vb.width,y:vb.y+(cy-box.top)/box.height*vb.height};}
-function zoomAt(next,cx,cy,anchor){
-  zoom=Math.max(1,Math.min(3,next));if(zoom<1.02)zoom=1;
-  const box=$('#plan').getBoundingClientRect(),w=484/zoom,h=330/zoom,c=viewCenter();
-  pan={x:anchor.x-(cx-box.left)/box.width*w-(c.x-w/2),y:anchor.y-(cy-box.top)/box.height*h-(c.y-h/2)};applyZoom();
 }
 function exportBackup(){
   const effective=structuredClone(projectSource);for(const r of effective.rooms)for(const key of Object.keys(r.notes))r.notes[key]=note(r,key)||null;for(const o of effective.objects)o.actual=actual(o);
@@ -278,45 +261,18 @@ function buildReference(){
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
-$('#zoom-in').onclick=()=>{zoom=Math.min(3,zoom+.25);applyZoom();};$('#zoom-out').onclick=()=>{zoom=Math.max(1,zoom-.25);applyZoom();};
 $('#object-search').addEventListener('input',renderInventory);$('#export-data').onclick=exportBackup;
 $('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{try{const file=e.target.files[0];if(!file)return;if(file.size>5000000)throw new Error(t('備份檔過大。'));const payload=JSON.parse(await file.text());if(payload.format!=='skg-home-atlas-backup')throw new Error(t('請選擇由此圖冊匯出的 JSON 備份。'));const incoming=validateOverrides(payload.overrides);if(!draftActive){draftActive=true;changes=structuredClone(draftChanges);}for(const[id,fields]of Object.entries(incoming.notes))changes.notes[id]={...(changes.notes[id]||{}),...fields};for(const[id,fields]of Object.entries(incoming.actual))changes.actual[id]={...(changes.actual[id]||{}),...fields};changes.versions={...changes.versions,...incoming.versions};save();renderKitchenVersion();renderDetails();renderInspector();renderInventory();syncEditMode();toast(t('備份已合併至本機草稿。'));}catch(error){toast(error.message||t('無法讀取此備份。'));}e.target.value='';};
 $('#show-source').onclick=()=>{$('#source-dialog').showModal();};$('#close-source').onclick=()=>$('#source-dialog').close();
 $$('[data-source]').forEach(b=>b.onclick=()=>{$$('[data-source]').forEach(x=>x.classList.toggle('active',x===b));$('#source-image').src=originalSources[b.dataset.source];$('#source-caption').textContent=b.dataset.source==='new'?t('新格局來源。原圖保留原始標註（mm）；互動圖冊已統一換算 cm。'):t('原始格局，僅作比較與 5 m 比例尺校驗。原 PDF 圖面與文字為左右鏡像，此處忠實保留。');});
 $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
-// Plan gestures (pointer events): mouse drag / one-finger pan while zoomed, two-finger pinch zoom (+pan via midpoint).
-// At 100% the plan keeps touch-action:pan-y so one-finger vertical page scroll still works; .zoomed switches to touch-action:none.
-// A short tap never counts as a pan, so tap-to-select rooms/objects keeps working.
-const gesture={pts:new Map(),drag:null,pinch:null,moved:false,suppressUntil:0},planEl=$('#plan');
-planEl.addEventListener('pointerdown',e=>{
-  if(e.pointerType==='mouse'&&e.button!==0)return;if(!gesture.pts.size)gesture.moved=false;
-  gesture.pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
-  if(gesture.pts.size===2){const[a,b]=[...gesture.pts.values()];gesture.drag=null;gesture.moved=true;hideTip();gesture.pinch={d:Math.hypot(a.x-b.x,a.y-b.y)||1,zoom,anchor:planPoint((a.x+b.x)/2,(a.y+b.y)/2)};for(const id of gesture.pts.keys())try{planEl.setPointerCapture(id);}catch{}}
-  else if(gesture.pts.size===1&&zoom>1)gesture.drag={id:e.pointerId,x:e.clientX,y:e.clientY,pan:{...pan}};
-});
-planEl.addEventListener('pointermove',e=>{
-  const p=gesture.pts.get(e.pointerId);if(!p)return;p.x=e.clientX;p.y=e.clientY;
-  if(gesture.pinch&&gesture.pts.size>=2){const[a,b]=[...gesture.pts.values()];zoomAt(gesture.pinch.zoom*Math.hypot(a.x-b.x,a.y-b.y)/gesture.pinch.d,(a.x+b.x)/2,(a.y+b.y)/2,gesture.pinch.anchor);return;}
-  const d=gesture.drag;if(!d||d.id!==e.pointerId)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;
-  if(!gesture.moved&&Math.hypot(dx,dy)>(e.pointerType==='mouse'?5:8)){gesture.moved=true;hideTip();try{planEl.setPointerCapture(e.pointerId);}catch{}}
-  if(gesture.moved){const box=planEl.getBoundingClientRect();pan={x:d.pan.x-dx*484/zoom/box.width,y:d.pan.y-dy*330/zoom/box.height};applyZoom();}
-});
-const endPointer=e=>{
-  if(!gesture.pts.delete(e.pointerId))return;
-  if(gesture.pinch&&gesture.pts.size<2){gesture.pinch=null;const rest=[...gesture.pts.entries()][0];gesture.drag=rest&&zoom>1?{id:rest[0],x:rest[1].x,y:rest[1].y,pan:{...pan}}:null;}
-  else if(gesture.drag?.id===e.pointerId)gesture.drag=null;
-  if(!gesture.pts.size&&gesture.moved)gesture.suppressUntil=performance.now()+400;
-};
-window.addEventListener('pointerup',endPointer);window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);window.addEventListener('pointercancel',endPointer);
-planEl.addEventListener('click',e=>{if(performance.now()<gesture.suppressUntil){e.stopPropagation();e.preventDefault();}},true);
-planEl.addEventListener('touchmove',e=>{if(e.touches.length>1&&e.cancelable)e.preventDefault();},{passive:false});
-planEl.addEventListener('gesturestart',e=>e.preventDefault());
-planEl.addEventListener('wheel',e=>{if(!e.ctrlKey)return;e.preventDefault();zoomAt(zoom*Math.exp(-e.deltaY/200),e.clientX,e.clientY,planPoint(e.clientX,e.clientY));},{passive:false});
+// The plan has no zoom of its own: it always fits its container width, and the browser's page zoom / pinch handles magnification.
+window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);
 $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[data-kitchen-version]');if(b)chooseKitchenVersion(b.dataset.kitchenVersion);});
 $('#draft-mode').onclick=()=>{if(draftActive){draftChanges=structuredClone(changes);changes={notes:{},actual:{},versions:{}};draftActive=false;}else{changes=structuredClone(draftChanges);draftActive=true;}selectRoom(roomId,{keepObject:true});toast(draftActive?t('本機草稿'):t('共用設計版'));};
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#inspector,#details-content,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#toast,#kitchen-version,#save-status,#drawing-title,#drawing-kicker,#details-title,#details-caption,#inventory-title,#source-caption,script,style';
+const DYNAMIC='#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#toast,#kitchen-version,#save-status,#drawing-title,#drawing-kicker,#details-title,#details-caption,#inventory-title,#source-caption,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -334,11 +290,11 @@ function setLang(next){
 }
 $$('[data-lang]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setLang(a.dataset.lang);}));
 applyStatic();syncKitchenURL();
-buildTabs();buildPlan();buildReference();renderKitchenVersion();applyZoom();
+buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)?hash:'floor');
 if(Object.keys(changes.notes).length||Object.keys(changes.actual).length)$('#save-status').textContent=t('已載入此瀏覽器的個人紀錄');
 if(!storageOK)$('#save-status').textContent=t('此環境無法自動儲存，請匯出備份');
 syncEditMode();
 // Expose a read-only snapshot for focused QA and efficient future updates.
-window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,zoom,showDims,showObjects,selectedVersions:{...selectedVersions},project:structuredClone(project),overrides:structuredClone(changes)}),applyOverrides:next=>{changes=validateOverrides(next);try{localStorage.setItem(STORAGE,JSON.stringify(changes));}catch{}renderKitchenVersion();renderInspector();renderDetails();renderInventory();renderDimensions();}};
+window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,selectedVersions:{...selectedVersions},project:structuredClone(project),overrides:structuredClone(changes)}),applyOverrides:next=>{changes=validateOverrides(next);try{localStorage.setItem(STORAGE,JSON.stringify(changes));}catch{}renderKitchenVersion();renderInspector();renderDetails();renderInventory();renderDimensions();}};
 })();
