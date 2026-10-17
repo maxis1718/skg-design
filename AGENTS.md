@@ -20,3 +20,4 @@
 - Deliver dist/index.html and link it with an absolute local file path. Keep private floor plans local unless user asks to publish.
 
 - R08 (2026-10-17): hover shows only a small name label (details on click). Dry kitchen, master wardrobes (identical; user 180 cm, wife 168 cm), bathroom mirror cabinets (bath ceiling 240 per brochure), TV feature wall + 3-drawer console have elevations. elevation.js extra types are namespaced by owner where they collide: dry kitchen uses dk-*; `socket` without w = wall-socket glyph (bath), with w/h = socket plate (living).
+- R10: wall-cabinet doors from the door end 29.5 · 35.5×2 (over the hob) · 60 · 32 as units upper-a / upper-h / upper-b / upper-c; appliance-cabinet upper is one 60 door hinged right.
