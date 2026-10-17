@@ -95,7 +95,8 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   const hidden = b => (u.fronts || []).some(fr => (state !== 'open' || fr.kind === 'drawer' || fr.kind === 'pullout') && fr.from <= b.y0 + .01 && fr.to >= b.y1 - .01);
   for (const b of B) {
     const y0 = oy + b.y0, ix = ox + sl, iw = u.w - sl - sr;
-    if (b.kind === 'plinth') { g.rect(ox, y0, u.w, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
+    // plinth.inset: plinth sits between end gables that run to the floor; fill: e.g. a shadowed recessed face.
+    if (b.kind === 'plinth') { const ins = b.inset ?? 0; g.rect(ox + ins, y0, u.w - 2 * ins, b.h, {fill:b.fill || C.plinth, stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'filler') { g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2}); continue; }
     if (b.kind === 'board') { g.rect(ox, y0, u.w, b.h, FS && state !== 'open' ? {fill:C.front, stroke:'#8d9891', 'stroke-width':.15} : {fill:C.board, stroke:'none'}); if (b.led) ledStrip(g, b, ix, iw, y0, state, detail); continue; }
     if (b.kind === 'panel') { g.rect(ox, y0, u.w, b.h, {fill:C.front, stroke:C.line, 'stroke-width':sw}); if (FS) g.rect(ox, y0, u.w, b.h, {fill:'url(#elev-grain)', stroke:'none'}); continue; }
@@ -382,7 +383,7 @@ function levels(g, view, x0, x1) {
 function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
-    if (dryExtra(g, e)) continue;
+    if (dryExtra(g, e) || toeExtra(g, e)) continue;
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
     const fsz = g.f * (e.size || .7);
     if (e.type === 'wallpaper') {
@@ -591,6 +592,76 @@ function dryExtra(g, e) {
   return false;
 }
 
+// Toe-kick light (TV console): 45° corner LED profile in the angle between the carcass underside and a recessed plinth face.
+// toe-light front: {x, w, y (carcass underside), p (profile size)} — lit diffuser bar + glow down to the floor.
+// toe-light section: {section:true, x (plinth face), y, p, front (drawer front line), board} — base board, profile, beam.
+// toe-detail: magnified inset {x, y (box bottom-left), k (scale), x0..x1 / y0..y1 (real window), front, recess, y (underside)
+// via `under`, p, eye:[height, distance], labels:{title, recess, eye, led}} — profile angle, recess depth and seated sightline.
+function toeBeam(ox, oy, a1, a2, xMax) {
+  // Rays from the diffuser centre (ox, oy) at a1..a2 degrees below horizontal, ending on the floor (clipped at xMax).
+  const hit = a => { const t = Math.tan(a * Math.PI / 180), x = ox + oy / t; return x <= xMax ? [[x, 0]] : [[xMax, oy - (xMax - ox) * t], [xMax, 0]]; };
+  return [[ox, oy], ...hit(a1), ...hit(a2).slice(-1)];
+}
+function toeProfile(g, X, Y, x, y, p, sw) {
+  // Right-angle aluminium body in the corner (x = plinth face, y = carcass underside); opal diffuser on the 45° face.
+  g.path(`M${X(x)} ${Y(y)}L${X(x + p)} ${Y(y)}L${X(x)} ${Y(y - p)}Z`, {fill:'#c7cbc6', stroke:C.line, 'stroke-width':sw});
+  g.path(`M${X(x + p)} ${Y(y)}L${X(x)} ${Y(y - p)}`, {fill:'none', stroke:'#f6c25e', 'stroke-width':sw * 3.2, 'stroke-linecap':'round'});
+}
+function toeExtra(g, e) {
+  if (e.type === 'toe-light' && !e.section) {
+    const p = e.p ?? 1.8;
+    g.rect(e.x, 0, e.w, e.y - p, {fill:'url(#elev-warm)', stroke:'none', opacity:e.opacity ?? .8});
+    g.rect(e.x - 3, 0, e.w + 6, .7, {fill:C.warm, stroke:'none', opacity:.85, rx:.35});
+    // Profile is hidden behind the front line: drawn dashed.
+    g.rect(e.x, e.y - p, e.w, p, {fill:'#fff3d2', 'fill-opacity':.6, stroke:'#b39a68', 'stroke-width':.2, 'stroke-dasharray':'1.2 .8'});
+    if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? 1.6, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .58)});
+    return true;
+  }
+  if (e.type === 'toe-light') {
+    const p = e.p ?? 1.8, cx = e.x + p / 2, cy = e.y - p / 2, X = v => v, Y = v => g.Y(v);
+    g.rect(0, e.y, e.front - (e.board ?? 1.8), e.board ?? 1.8, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+    const pts = toeBeam(cx, cy, e.a1 ?? 10, e.a2 ?? 80, e.reach ?? e.front + 30);
+    g.path(`M${pts.map(([x, y]) => `${x} ${Y(y)}`).join('L')}Z`, {fill:'url(#elev-warm)', stroke:'none', opacity:.75});
+    g.rect(pts.at(-1)[0], 0, (pts[1][0]) - pts.at(-1)[0], .6, {fill:C.warm, stroke:'none', opacity:.8});
+    toeProfile(g, X, Y, e.x, e.y, p, .2);
+    return true;
+  }
+  if (e.type === 'toe-detail') {
+    const k = e.k ?? 3, x0 = e.x0, x1 = e.x1, y0 = e.y0 ?? -2.5, y1 = e.y1 ?? 13, fr = e.front, rc = e.recess, uy = e.under ?? 8, p = e.p ?? 1.8, bd = e.board ?? 1.8;
+    const X = v => e.x + (v - x0) * k, Y = v => g.Y(e.y + (v - y0) * k), L = e.labels || {}, fs = g.f * (e.size || .56);
+    const box = (ax, ay, bx, by, a) => g.path(`M${X(ax)} ${Y(ay)}H${X(bx)}V${Y(by)}H${X(ax)}Z`, a);
+    box(x0, y0, x1, y1, {fill:'#fff', stroke:C.thin, 'stroke-width':.3});
+    if (L.title) g.text(e.x, e.y + (y1 - y0) * k + fs * .6, L.title, {fill:C.line, 'font-size':fs * 1.1});
+    g.path(`M${X(x0)} ${Y(0)}H${X(x1)}`, {stroke:C.line, 'stroke-width':.45});
+    box(x0, 0, fr - rc, uy, {fill:e.plinthFill || C.plinth, stroke:C.thin, 'stroke-width':.2});
+    box(x0, uy, fr - bd, uy + bd, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+    box(fr - bd, uy + .2, fr, y1, {fill:C.front, stroke:C.line, 'stroke-width':.3});
+    const pts = toeBeam(fr - rc + p / 2, uy - p / 2, e.a1 ?? 10, e.a2 ?? 80, x1);
+    g.path(`M${pts.map(([x, y]) => `${X(x)} ${Y(y)}`).join('L')}Z`, {fill:'url(#elev-warm)', stroke:'none', opacity:.75});
+    // Beam axis at 45° and the seated sightline grazing the front-bottom edge.
+    const ax = fr - rc + p / 2, ay = uy - p / 2;
+    g.path(`M${X(ax)} ${Y(ay)}L${X(ax + ay)} ${Y(0)}`, {stroke:C.dim, 'stroke-width':.22, 'stroke-dasharray':'.9 .7'});
+    if (L.angle) g.text(X(ax + ay * .62) + fs * .35, ay * .38 * k + e.y - y0 * k - fs * .25, L.angle, {fill:C.dim, 'font-size':fs});
+    toeProfile(g, X, Y, fr - rc, uy, p, .25);
+    if (e.eye) {
+      const sl = (e.eye[0] - uy) / e.eye[1], ya = x => uy + (x - fr) * sl, xa = Math.max(fr - rc, fr - uy / sl), xs = Math.min(x1, fr + (y1 - uy) / sl);
+      g.path(`M${X(xs)} ${Y(ya(xs))}L${X(xa)} ${Y(ya(xa))}`, {stroke:'#5d7f9a', 'stroke-width':.3, 'stroke-dasharray':'1.6 .9'});
+      // Label under the sightline, above the beam (right end of the window).
+      if (L.eye) g.text(X(x1) - .8, e.y + (uy - .7 - y0) * k, L.eye, {'text-anchor':'end', fill:'#5d7f9a', 'font-size':fs});
+    }
+    if (L.led) g.text(X(fr - rc) - .8, e.y + (uy - 2.4 - y0) * k, L.led, {'text-anchor':'end', fill:C.line, 'font-size':fs, 'paint-order':'stroke', stroke:'#fff', 'stroke-width':fs * .25});
+    // Recess dimension under the floor line; underside height on the right of the front line.
+    const dy = e.y + (-1.2 - y0) * k, s = {stroke:C.dim, 'stroke-width':.22};
+    g.line(X(fr - rc), dy, X(fr), dy, s); for (const v of [fr - rc, fr]) g.line(X(v), dy - .9, X(v), dy + .9, s);
+    if (L.recess) g.text((X(fr - rc) + X(fr)) / 2, dy - fs * 1.15, L.recess, {'text-anchor':'middle', fill:C.dim, 'font-size':fs});
+    const vx = X(fr) + 2.2; g.line(vx, e.y - y0 * k, vx, e.y + (uy - y0) * k, s);
+    for (const v of [0, uy]) g.line(vx - .9, e.y + (v - y0) * k, vx + .9, e.y + (v - y0) * k, s);
+    g.text(vx + .9, e.y + (uy / 2 - y0) * k - fs * .35, fmt(uy), {fill:C.dim, 'font-size':fs});
+    return true;
+  }
+  return false;
+}
+
 function defs() {
   return `<defs><pattern id="elev-hatch" width="2" height="2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2" stroke="#b7beb6" stroke-width=".5"/></pattern><pattern id="elev-wall" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3" stroke="#a8b1a9" stroke-width=".35"/></pattern><pattern id="elev-paper" width="9" height="7" patternUnits="userSpaceOnUse"><path d="M.6 1.2h2.2M5.2 3.1h2.6M2.1 5.4h1.7M7.3 6.2h1.2" stroke="#cfccc3" stroke-width=".22" stroke-linecap="round"/><circle cx="4.1" cy="1.4" r=".18" fill="#d3d0c8"/><circle cx="8.2" cy="4.6" r=".16" fill="#d3d0c8"/></pattern><pattern id="elev-grain" width="4.6" height="38" patternUnits="userSpaceOnUse"><path d="M.7 0C.9 9 .5 19 .8 38M2.1 0C2.3 12 1.9 25 2.2 38M3.6 0C3.4 8 3.8 22 3.5 38" stroke="#ece8df" stroke-width=".14" fill="none"/></pattern><linearGradient id="elev-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c46b" stop-opacity=".9"/><stop offset="1" stop-color="#f3c46b" stop-opacity="0"/></linearGradient></defs>`;
 }
@@ -658,7 +729,7 @@ function renderSection(elev, view, state) {
   }
   for (const b of B) {
     const y0 = b.y0;
-    if (b.kind === 'plinth') { g.rect(0, y0, D - 5, b.h, {fill:C.plinth, stroke:C.thin, 'stroke-width':.2}); g.rect(D - 5, y0, 5, b.h, {fill:'#fff', stroke:'none'}); }
+    if (b.kind === 'plinth') { const rc = b.recess ?? 5; g.rect(0, y0, D - rc, b.h, {fill:b.fill || C.plinth, stroke:C.thin, 'stroke-width':.2}); g.rect(D - rc, y0, rc, b.h, {fill:'#fff', stroke:'none'}); }
     else if (b.kind === 'board') g.rect(0, y0, D, b.h, {fill:C.board, stroke:'none'});
     else if (b.kind === 'filler') g.rect(0, y0, D, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2});
     else if (b.kind === 'tier') {
