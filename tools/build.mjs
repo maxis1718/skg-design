@@ -6,7 +6,13 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,'src',name),'utf8');
 const project=JSON.parse(read('project.json'));
 if(project.rooms.length!==7||new Set(project.objects.map(o=>o.id)).size!==project.objects.length)throw new Error('Invalid record index');
-const kid=read('furniture-kid.svg'),study=read('furniture-guest.svg').replace(/<path\b[^>]*data-source-path="129"[^>]*\/>/g,'');
+const kidSource=read('furniture-kid.svg');
+// 2026-10-20 kid-room bed removed (user: no double bed; spec to come): bed frame, pillows, blanket fold and headboard band (source paths 666–688)
+// are dropped from the kid-room copy only; the guest room keeps the full mirrored symbol.
+const kidBed=[...kidSource.matchAll(/<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8])"[^>]*\/>/g)].map(m=>m[0]);
+if(kidBed.length!==23)throw new Error('Kid-bed source index changed');
+let kid=kidSource;for(const fragment of kidBed)kid=kid.replace(fragment,'');
+const study=read('furniture-guest.svg').replace(/<path\b[^>]*data-source-path="129"[^>]*\/>/g,'');
 let plan=read('plan-paths.svg');
 const sink=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*\/>/g)].map(m=>m[0]);
 const hob=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:78\d|79\d|80[0-6])"[^>]*\/>/g)].map(m=>m[0]);
@@ -21,7 +27,7 @@ for(const fragment of dining)plan=plan.replace(fragment,'');
 const tvWall=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*\/>/g)].map(m=>m[0]);
 if(tvWall.length!==35)throw new Error('Living TV-wall source index changed');
 for(const fragment of tvWall)plan=plan.replace(fragment,'');
-const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kid}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g>`;
+const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kidSource}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g>`;
 let html=read('shell.html');
 for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),ELEVATION:read('elevation.js'),I18N:fs.existsSync(path.join(root,'src','i18n.json'))?JSON.stringify(JSON.parse(read('i18n.json'))).replaceAll('</','<\\/'):'{"en":{}}',APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
 for(const[key,file]of [['NEW','layout-source.png'],['OLD','summary-original.png']])html=html.replaceAll('/*__SOURCE_'+key+'__*/','data:image/png;base64,'+fs.readFileSync(path.join(root,'assets',file)).toString('base64'));

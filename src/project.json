@@ -926,7 +926,7 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "床型與實際尺寸": null,
+        "床型與實際尺寸": "床：待提供規格（不放原圖雙人床，圖面床位已移除）。",
         "衣櫃設計": "保留原 BEDROOM 2 的 120 × 60 cm 衣櫃占位。",
         "設計備註": "原 BEDROOM 2 改名 KID ROOM。"
       },
@@ -1886,45 +1886,6 @@
         "model": null
       },
       "code": "KID-01"
-    },
-    {
-      "id": "kid-bed",
-      "room_id": "kid",
-      "label": "Bed",
-      "bounds_pt": [
-        276.24,
-        153.28,
-        330.36,
-        196.36
-      ],
-      "plan_horizontal_cm": 190.9,
-      "plan_vertical_cm": 152.0,
-      "nominal_width_cm": null,
-      "nominal_depth_cm": null,
-      "height_cm": null,
-      "status": "scaled-symbol",
-      "uncertainty_cm": null,
-      "notes": "About191x152cm horizontal/vertical footprint; no product model.",
-      "name": "小孩房床",
-      "source_note": "圖面床框約 191 × 152 cm，不代表已購床墊尺寸。",
-      "dimensions": {
-        "w": {
-          "cm": 152,
-          "status": "scaled"
-        },
-        "d": {
-          "cm": 191,
-          "status": "scaled"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "code": "KID-02"
     },
     {
       "id": "study-cabinet",

@@ -12,11 +12,17 @@ assert all(o['room_id'] in {r['id'] for r in project['rooms']} for o in project[
 for o in project['objects']:
     assert all(o['dimensions'][k]['cm']>0 for k in ('w','d'))
     assert o['bounds_pt'][0]<o['bounds_pt'][2] and o['bounds_pt'][1]<o['bounds_pt'][3]
-kid=read('furniture-kid.svg')
+kid_source=read('furniture-kid.svg')
+# 2026-10-20 kid-room bed removed (user: no double bed; spec to come): bed frame, pillows, blanket fold and headboard band (source paths 666-688)
+# are dropped from the kid-room copy only; the guest room keeps the full mirrored symbol.
+kid_bed=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8])"[^>]*/>',kid_source)
+assert len(kid_bed)==23
+kid=kid_source
+for fragment in kid_bed:kid=kid.replace(fragment,'')
 old_study=read('furniture-guest.svg')
 # Original desk physical front is source path129. Retain chairs/cabinet with a rigid 180° move.
 study=re.sub(r'<path\b[^>]*data-source-path="129"[^>]*/>','',old_study)
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid}</g>\n<g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">{study}</g>\n<path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/>'
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid_source}</g>\n<g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">{study}</g>\n<path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)

@@ -35,7 +35,6 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | MST-03 | `master-unlabelled-cross-cabinet` | 未標示用途櫃形符號 | 173 × 33 |
 | MST-04 | `master-bed` | 主臥床 | 185 × 200 |
 | KID-01 | `kid-wardrobe` | 小孩房衣櫃 | 120 × 60 |
-| KID-02 | `kid-bed` | 小孩房床 | 152 × 191 |
 | STD-01 | `study-cabinet` | 書房收納櫃（用途待定） | 120 × 60 |
 | STD-02 | `study-desk` | 書房書桌 | 230 × 50 |
 | GST-01 | `guest-wardrobe` | 客房衣櫃 | 120 × 60 |

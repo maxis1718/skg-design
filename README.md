@@ -88,7 +88,7 @@ python tools/records.py show object fridge
 | `src/elevation.js` | 立面圖（正立面／側剖面／牆面）SVG 繪製 |
 | `src/style.css` / `src/shell.html` | 外觀與結構 |
 | `src/plan-paths.svg` | 從 PDF 抽出的原始固定圖元，不手工重畫牆 |
-| `src/furniture-kid.svg` | 小孩房來源；客房鏡像共用 |
+| `src/furniture-kid.svg` | 小孩房來源；客房鏡像共用（小孩房床 path 666–688 在 build 時只從小孩房移除，客房保留） |
 | `src/furniture-guest.svg` | 原書房來源，旋轉後移到新書房 |
 | `tools/build.mjs` | 免依賴、跨平台單檔 HTML 編譯 |
 | `tools/check.mjs` | 來源、尺寸、版本與產物檢查 |
