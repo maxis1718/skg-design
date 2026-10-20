@@ -17,7 +17,7 @@ for(const[id,e]of Object.entries(E)){
   if(e.alias)assert(E[e.alias]&&!E[e.alias].alias,id+' alias must point at a concrete elevation');
   const b=e.alias?{...E[e.alias],...e}:e,inc=b.include?E[b.include]:null;if(b.include)assert(inc?.shared,id+' include must be shared');
   const units={...(inc?.units||{}),...(b.units||{})},views=b.views.map(v=>typeof v==='string'?inc?.views.find(x=>x.id===v):v);
-  assert(views.length&&b.states?.length&&b.spec?.length,id+' needs views, states and spec');checkUnits(id,b.units||{});checkViews(id,views,units);
+  assert(views.length&&b.states?.length&&b.spec?.length,id+' needs views, states and spec');if(b.risks!=null)assert(Array.isArray(b.risks)&&b.risks.every(x=>typeof x==='string'&&x.trim()),id+' risks must be a list of strings');checkUnits(id,b.units||{});checkViews(id,views,units);
 }
 for(const id of ['appliance-tower','master-wardrobe-left','master-wardrobe-right','kitchen-hob','dishwasher','spice-pullout','kitchen-oven','kitchen-sink'])assert(E[id],'missing elevation '+id);
 const {collectKeys}=await import('./i18n-keys.mjs');const dict=JSON.parse(fs.readFileSync(path.join(root,'src','i18n.json'),'utf8')).en;

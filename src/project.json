@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R11",
+    "revision": "R12",
     "unit": "cm",
-    "date": "2026-10-17"
+    "date": "2026-10-20"
   },
   "scale": {
     "title": "1:100 (A4)",
@@ -2605,6 +2605,10 @@
     {
       "id": "C15",
       "text": "廚房改三方案：方案 A（電器櫃在女傭房端）、方案 B（電器櫃移到門端靠牆，上櫃 60 ×2 對中爐具）、原始；電視櫃踢腳內退 10，45° 鋁槽燈打地面。"
+    },
+    {
+      "id": "C16",
+      "text": "吊櫃與電器櫃上櫃分上下段（分縫 200）：下段 Blum AVENTOS HK-XS 上掀（開 86° 門邊約 197），爐上下段為固定假門，上段 TIP-ON 側開門；立面右欄新增紅字「需評估」（洗碗機／拉出板與女傭房門口、進門視覺）。"
     }
   ],
   "measurement_policy": {
@@ -2634,10 +2638,10 @@
           "洗烘衣機型號與實際尺寸": "LG WashTower 60×165.5×66；占位 60×65，深超 1。",
           "設計備註": "全廚房白色細木紋霧面 laminate、無把手、縫 3 mm；下櫃上緣手扣槽。",
           "方案配置": "收邊 5 · 拉籃 20 · 爐下 80 · 拉籃 20 · 洗碗機 63.6 · 水槽 71.9 · 電器櫃 60（門端起）。",
-          "電器櫃": "60 寬（內 55）到天花：上櫃 112／微波 35／電鍋 38／飯鍋 31.6／鍋抽 45。",
+          "電器櫃": "60 寬（內 55）到天花：上櫃 35 上掀＋77／微波 35／電鍋 38／飯鍋 31.6／鍋抽 45。",
           "櫃高／每層淨高": "以天花 280 計；天花、檯面與電器型號確認後微調。",
-          "女傭房動線": "水槽移離女傭房門口；開門弧暫不檢查。",
-          "吊櫃": "底 165；門 55 ×2 · 41.25 ×2 到天花；下緣多 2 當手扣。",
+          "女傭房動線": "水槽移離女傭房門口；電器櫃拉出板使用時門口剩約 35。",
+          "吊櫃": "底 165；分縫 200：下段上掀（爐上固定）、上段側開；55 ×2 · 41.25 ×2。",
           "Wet kitchen 檯面": "燒結石，面 90、總厚 3（12 mm 斜接，假設），底 87；色號待選。",
           "洗碗機": "Samsung Bespoke 白色原廠面板，兩側 1.8 側板，整格 63.6。",
           "烤箱與窄拉籃": "爐下櫃 80：瓦斯爐＋餐具抽屜＋60 烤箱；兩側 20 三層窄拉籃。",
@@ -2699,8 +2703,8 @@
           "方案配置": "電器櫃 60 · 拉籃 20 · 爐下 80 · 拉籃 20 · 水槽 76.9 · 洗碗機 63.6（門端起）。",
           "電器櫃": "靠門端牆，60 寬（內 55）到天花；內部同方案 A，上櫃門鉸鏈在牆側（左）。",
           "櫃高／每層淨高": "以天花 280 計；天花、檯面與電器型號確認後微調。",
-          "女傭房動線": "洗碗機在女傭房端，開門時靠近女傭房門口；開門弧暫不檢查。",
-          "吊櫃": "底 165；門端起 電器櫃 60 · 66.25 ×2 到窗邊；窗右側到牆留白。",
+          "女傭房動線": "洗碗機開門擋女傭房門口（剩約 30）並撞門片，列為需評估。",
+          "吊櫃": "底 165；分縫 200：電器櫃 60 · 66.25 ×2；下段固定／上掀、上段側開；窗右留白。",
           "Wet kitchen 檯面": "燒結石，面 90、總厚 3（12 mm 斜接，假設），底 87；色號待選。",
           "洗碗機": "Samsung Bespoke 白色原廠面板，靠女傭房牆，兩側 1.8 側板，整格 63.6。",
           "烤箱與窄拉籃": "爐下櫃 80：瓦斯爐＋餐具抽屜＋60 烤箱；兩側 20 三層窄拉籃。",
@@ -2834,9 +2838,14 @@
           "note": "277–280，依現場天花修邊。"
         },
         {
-          "zone": "上櫃 · 單門（鉸鏈在右）",
-          "h": "112 · 底 165",
-          "note": "165–277；門下緣多 2 當手扣，與吊櫃門齊；內 2 片活動層板。"
+          "zone": "上櫃 · 上段單門（鉸鏈在右）",
+          "h": "77 · 200–277",
+          "note": "TIP-ON 按壓開；底 200 高過先生頭頂 20；內 1 層板。"
+        },
+        {
+          "zone": "上櫃 · 下段上掀",
+          "h": "35 · 165–200",
+          "note": "門 163–200，下緣手扣往上掀；開 86° 門邊約 197。"
         },
         {
           "zone": "上層 · 微波爐",
@@ -2866,13 +2875,13 @@
       ],
       "hardware": [
         "拉出板：Blum MOVENTO 全拉 40 kg＋層板鎖；耐熱面材，4 cm 擋邊。",
-        "上櫃門：CLIP top BLUMOTION 緩衝鉸鍊 ×3。",
+        "上櫃：下段 HK-XS＋110° 鉸鍊（86° 限位）；上段 TIP-ON＋鉸鍊 ×2。",
         "每層後方 13A 雙插座，線留 60 以上；建議獨立迴路（水電確認）。"
       ],
       "rationale": [
         "外寬 60（側板 2.5，內淨 55），層板 1.8。",
         "10＋45＋31.6＋38＋35＋1.8×3＝165，上櫃底對齊吊櫃底。",
-        "門板同全廚房：白色細木紋霧面 laminate、無把手、縫 0.3。"
+        "上櫃分縫 200 與吊櫃同一線；下段上掀，開門不掃頭。"
       ],
       "open_questions": [
         "天花淨高、有無假天花",
@@ -2884,13 +2893,19 @@
       "sources": [
         "https://ea.blum.com/en/number-of-hinges/",
         "https://www.broadwaylifestyle.com/hk_en/zojirushi-ns-zaq10-fuzzy-logic-rice-cooker-1-0l-h204966-m",
-        "https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10"
+        "https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10",
+        "https://www.blum.com/sg/en/products/liftsystems/aventos-hk-xs/programme/",
+        "https://www.blum.com/us/en/products/motion-technologies/tip-on-doors/overview/"
       ],
       "include": "kitchen-b",
       "views": [
         "tower-front",
         "tower-section",
         "wall"
+      ],
+      "risks": [
+        "進門視線盡頭就是這座到天花的高櫃，視覺壓迫。",
+        "拉出板（55）正對女傭房門口，使用時門口只剩約 35。"
       ]
     },
     "master-wardrobe-left": {
@@ -3902,14 +3917,27 @@
             },
             {
               "kind": "cabinet",
-              "h": 112,
-              "label": "上櫃",
-              "short": "上櫃",
+              "h": 35,
+              "label": "上櫃 · 下段上掀",
+              "short": "下段上掀",
+              "shelves": [
+                0
+              ],
+              "lift": {
+                "angle": 86,
+                "label": "開 86° · 門邊 ≈197"
+              }
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
+              "label": "上櫃 · 上段側開",
+              "short": "上段側開",
               "shelves": [
                 0,
-                36,
-                73
-              ]
+                38
+              ],
+              "grip": "push"
             },
             {
               "kind": "filler",
@@ -3925,14 +3953,22 @@
               "label": "鍋具抽屜"
             },
             {
-              "kind": "door",
+              "kind": "lift",
               "from": 165,
+              "to": 200,
+              "count": 1,
+              "label": "下段 · 上掀"
+            },
+            {
+              "kind": "door",
+              "from": 200,
               "to": 277,
               "count": 1,
-              "label": "上櫃 · 單門（鉸鏈在右）",
+              "label": "上段 · 單門（鉸鏈在右）",
               "hinges": [
                 "R"
-              ]
+              ],
+              "grip": "push"
             }
           ]
         },
@@ -4273,11 +4309,17 @@
           "bands": [
             {
               "kind": "cabinet",
-              "h": 112,
+              "h": 35,
+              "shelves": []
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
               "shelves": [
-                36,
-                73
-              ]
+                0,
+                38
+              ],
+              "grip": "push"
             },
             {
               "kind": "filler",
@@ -4286,14 +4328,21 @@
           ],
           "fronts": [
             {
-              "kind": "door",
+              "kind": "fixed",
               "from": 0,
+              "to": 35,
+              "count": 2
+            },
+            {
+              "kind": "door",
+              "from": 35,
               "to": 112,
               "count": 2,
               "hinges": [
                 "L",
                 "R"
-              ]
+              ],
+              "grip": "push"
             }
           ]
         },
@@ -4305,11 +4354,17 @@
           "bands": [
             {
               "kind": "cabinet",
-              "h": 112,
+              "h": 35,
+              "shelves": []
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
               "shelves": [
-                36,
-                73
-              ]
+                0,
+                38
+              ],
+              "grip": "push"
             },
             {
               "kind": "filler",
@@ -4318,14 +4373,21 @@
           ],
           "fronts": [
             {
-              "kind": "door",
+              "kind": "lift",
               "from": 0,
+              "to": 35,
+              "count": 2
+            },
+            {
+              "kind": "door",
+              "from": 35,
               "to": 112,
               "count": 2,
               "hinges": [
                 "L",
                 "R"
-              ]
+              ],
+              "grip": "push"
             }
           ]
         }
@@ -4378,6 +4440,14 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 180,
+              "label": "先生頭頂"
+            },
+            {
+              "y": 198,
+              "label": "太太伸手"
             }
           ],
           "units": []
@@ -4489,6 +4559,10 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ]
         },
@@ -4547,7 +4621,7 @@
             },
             {
               "ref": "upper-h",
-              "x": 0,
+              "x": -105,
               "y": 165
             },
             {
@@ -4617,9 +4691,14 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ],
-          "marginR": 4.2
+          "marginR": 4.2,
+          "clip": true
         },
         {
           "id": "wall",
@@ -4762,6 +4841,10 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ],
           "rightChain": {
@@ -4859,14 +4942,27 @@
             },
             {
               "kind": "cabinet",
-              "h": 112,
-              "label": "上櫃",
-              "short": "上櫃",
+              "h": 35,
+              "label": "上櫃 · 下段上掀",
+              "short": "下段上掀",
+              "shelves": [
+                0
+              ],
+              "lift": {
+                "angle": 86,
+                "label": "開 86° · 門邊 ≈197"
+              }
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
+              "label": "上櫃 · 上段側開",
+              "short": "上段側開",
               "shelves": [
                 0,
-                36,
-                73
-              ]
+                38
+              ],
+              "grip": "push"
             },
             {
               "kind": "filler",
@@ -4882,14 +4978,22 @@
               "label": "鍋具抽屜"
             },
             {
-              "kind": "door",
+              "kind": "lift",
               "from": 165,
+              "to": 200,
+              "count": 1,
+              "label": "下段 · 上掀"
+            },
+            {
+              "kind": "door",
+              "from": 200,
               "to": 277,
               "count": 1,
-              "label": "上櫃 · 單門（鉸鏈在左）",
+              "label": "上段 · 單門（鉸鏈在左）",
               "hinges": [
                 "L"
-              ]
+              ],
+              "grip": "push"
             }
           ]
         },
@@ -5212,11 +5316,17 @@
           "bands": [
             {
               "kind": "cabinet",
-              "h": 112,
+              "h": 35,
+              "shelves": []
+            },
+            {
+              "kind": "cabinet",
+              "h": 77,
               "shelves": [
-                36,
-                73
-              ]
+                0,
+                38
+              ],
+              "grip": "push"
             },
             {
               "kind": "filler",
@@ -5225,14 +5335,21 @@
           ],
           "fronts": [
             {
-              "kind": "door",
+              "kind": "fixed",
               "from": 0,
+              "to": 35,
+              "count": 2
+            },
+            {
+              "kind": "door",
+              "from": 35,
               "to": 112,
               "count": 2,
               "hinges": [
                 "L",
                 "R"
-              ]
+              ],
+              "grip": "push"
             }
           ]
         }
@@ -5285,6 +5402,14 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 180,
+              "label": "先生頭頂"
+            },
+            {
+              "y": 198,
+              "label": "太太伸手"
             }
           ],
           "units": []
@@ -5389,6 +5514,10 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ]
         },
@@ -5444,6 +5573,11 @@
             {
               "ref": "dw",
               "x": 96.9
+            },
+            {
+              "ref": "upper-h",
+              "x": -100,
+              "y": 165
             }
           ],
           "extras": [
@@ -5513,9 +5647,14 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ],
-          "marginR": 4.2
+          "marginR": 4.2,
+          "clip": true
         },
         {
           "id": "wall",
@@ -5644,6 +5783,10 @@
             {
               "y": 165,
               "label": "吊櫃底"
+            },
+            {
+              "y": 200,
+              "label": "上下分縫"
             }
           ],
           "leftChain": {
@@ -5719,7 +5862,7 @@
       "hardware": [
         "3 層窄拉籃（如 Häfele 545.61.233）或木作框＋MOVENTO。",
         "烤箱需強制散熱，櫃底後留風口；插座在右拉籃後方，離地 ≥45。",
-        "排油煙機機身占 55 ×2 吊櫃內下段約 25，不可放物。"
+        "排油煙機機身在吊櫃下段固定假門後（約 25），不可放物。"
       ],
       "rationale": [
         "由上到下：爐具、餐具抽屜、烤箱（照現況圖 2）。",
@@ -8015,13 +8158,13 @@
       "spec": [
         {
           "zone": "吊櫃",
-          "h": "底 165",
-          "note": "55 ×2 · 41.25 ×2 到天花；下緣多 2 當手扣。"
+          "h": "底 165 · 分縫 200",
+          "note": "下段上掀（爐上固定）、上段側開；55 ×2 · 41.25 ×2。"
         },
         {
           "zone": "門板（全廚房一致）",
           "h": "無把手 · 縫 0.3",
-          "note": "白色細木紋霧面 laminate；吊櫃下緣手扣、下櫃上緣 2 手扣槽。"
+          "note": "白色細木紋霧面 laminate；吊櫃下段下緣手扣、上段按壓開，下櫃上緣手扣槽。"
         },
         {
           "zone": "外窗",
@@ -8051,12 +8194,13 @@
       ],
       "hardware": [
         "各櫃五金見瓦斯爐、洗碗機、電器櫃立面。",
-        "吊櫃門：CLIP top BLUMOTION 緩衝鉸鍊每扇 3 支；雙面貼皮防翹。"
+        "吊櫃下段：AVENTOS HK-XS＋CLIP top BLUMOTION 110°，86° 限位、任意停。",
+        "吊櫃上段：TIP-ON 按壓開＋CLIP top 鉸鍊 ×2；爐上下段為固定假門。"
       ],
       "rationale": [
         "水槽移到窗下，爐靠門端、電器櫃靠女傭房；備菜約 92。",
-        "全廚房一套門板：吊櫃下緣手扣、下櫃上緣手扣槽。",
-        "手扣槽不用 TIP-ON／SERVO：不誤觸、不需電；槽內要順手擦。"
+        "側開門底 163 會掃過頭；下段改上掀，開 86° 門邊約 197，太太可及。",
+        "上段 200 起，高過先生頭頂 20：下段放日用，上段放備品。"
       ],
       "open_questions": [
         "天花淨高、有無假天花",
@@ -8066,7 +8210,13 @@
         "laminate 品牌與色號"
       ],
       "sources": [
-        "https://ea.blum.com/en/number-of-hinges/"
+        "https://ea.blum.com/en/number-of-hinges/",
+        "https://www.blum.com/sg/en/products/liftsystems/aventos-hk-xs/programme/",
+        "https://www.blum.com/us/en/products/motion-technologies/tip-on-doors/overview/"
+      ],
+      "risks": [
+        "進門視線盡頭是電器櫃（到天花的高櫃），視覺壓迫。",
+        "電器櫃拉出板（55）正對女傭房門口，使用時門口只剩約 35。"
       ]
     },
     "kitchen-dry": {
@@ -8696,9 +8846,14 @@
           "note": "277–280，依現場天花修邊。"
         },
         {
-          "zone": "上櫃 · 單門（鉸鏈在左）",
-          "h": "112 · 底 165",
-          "note": "165–277；門下緣多 2 當手扣，與吊櫃門齊；內 2 片活動層板。"
+          "zone": "上櫃 · 上段單門（鉸鏈在左）",
+          "h": "77 · 200–277",
+          "note": "TIP-ON 按壓開；底 200 高過先生頭頂 20；內 1 層板。"
+        },
+        {
+          "zone": "上櫃 · 下段上掀",
+          "h": "35 · 165–200",
+          "note": "門 163–200，下緣手扣往上掀；開 86° 門邊約 197。"
         },
         {
           "zone": "上層 · 微波爐",
@@ -8728,13 +8883,13 @@
       ],
       "hardware": [
         "拉出板：Blum MOVENTO 全拉 40 kg＋層板鎖；耐熱面材，4 cm 擋邊。",
-        "上櫃門：CLIP top BLUMOTION 緩衝鉸鍊 ×3。",
+        "上櫃：下段 HK-XS＋110° 鉸鍊（86° 限位）；上段 TIP-ON＋鉸鍊 ×2。",
         "每層後方 13A 雙插座，線留 60 以上；建議獨立迴路（水電確認）。"
       ],
       "rationale": [
         "外寬 60（側板 2.5，內淨 55），層板 1.8。",
         "10＋45＋31.6＋38＋35＋1.8×3＝165，上櫃底對齊吊櫃底。",
-        "門板同全廚房：白色細木紋霧面 laminate、無把手、縫 0.3。",
+        "上櫃分縫 200 與吊櫃同一線；下段上掀，開門不掃頭。",
         "靠門端牆，鉸鏈在牆側；朝爐側板離爐 22.5，用耐熱面材。"
       ],
       "open_questions": [
@@ -8747,13 +8902,19 @@
       "sources": [
         "https://ea.blum.com/en/number-of-hinges/",
         "https://www.broadwaylifestyle.com/hk_en/zojirushi-ns-zaq10-fuzzy-logic-rice-cooker-1-0l-h204966-m",
-        "https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10"
+        "https://www.fairprice.com.sg/product/zojirushi-10l-micom-fuzzy-logic-rice-cookerwarmer-ns-zaq10",
+        "https://www.blum.com/sg/en/products/liftsystems/aventos-hk-xs/programme/",
+        "https://www.blum.com/us/en/products/motion-technologies/tip-on-doors/overview/"
       ],
       "include": "kitchen-b2",
       "views": [
         "tower-front",
         "tower-section",
         "wall"
+      ],
+      "risks": [
+        "進門先見電器櫃側板：比正面不壓迫；門洞 110 不變但有窄感。",
+        "拉出板（55）在門口，使用時入口通道剩約 55。"
       ]
     },
     "kitchen-hob@tower-left": {
@@ -8823,7 +8984,7 @@
       "hardware": [
         "3 層窄拉籃（如 Häfele 545.61.233）或木作框＋MOVENTO。",
         "烤箱需強制散熱，櫃底後留風口；插座在右拉籃後方，離地 ≥45。",
-        "排油煙機機身占吊櫃下段約 25，不可放物。"
+        "排油煙機機身在吊櫃下段固定假門後（約 25），不可放物。"
       ],
       "rationale": [
         "由上到下：爐具、餐具抽屜、烤箱（同方案 A）。",
@@ -8946,6 +9107,10 @@
       "sources": [
         "https://www.samsung.com/sg/dishwashers/freestanding/dw7700-dw60cb750fapsp-bespoke-dishwasher-14-place-settings-silver-dw60cb750fapsp/",
         "https://www.thewcsupply.com/pages/kitchen-design-guidelines-standard-clearances"
+      ],
+      "risks": [
+        "洗碗機門放下（伸出約 60）正對女傭房門口，開著時只剩約 30。",
+        "圖上女傭房門片開時貼近水槽側（伸入約 42），會撞放下的洗碗機門。"
       ]
     },
     "kitchen-sink@tower-left": {
@@ -8987,13 +9152,13 @@
       "spec": [
         {
           "zone": "吊櫃",
-          "h": "底 165",
-          "note": "門端起：電器櫃 60 · 66.25 ×2 到窗邊；窗右側到牆不做吊櫃；下緣多 2 當手扣。"
+          "h": "底 165 · 分縫 200",
+          "note": "電器櫃 60 · 66.25 ×2；下段固定／上掀、上段側開。"
         },
         {
           "zone": "門板（全廚房一致）",
           "h": "無把手 · 縫 0.3",
-          "note": "白色細木紋霧面 laminate；吊櫃下緣手扣、下櫃上緣 2 手扣槽。"
+          "note": "白色細木紋霧面 laminate；吊櫃下段下緣手扣、上段按壓開，下櫃上緣手扣槽。"
         },
         {
           "zone": "外窗",
@@ -9023,12 +9188,13 @@
       ],
       "hardware": [
         "各櫃五金見瓦斯爐、洗碗機、電器櫃立面。",
-        "吊櫃門：CLIP top BLUMOTION 緩衝鉸鍊每扇 3 支；雙面貼皮防翹。"
+        "電器櫃上櫃下段：AVENTOS HK-XS＋CLIP top BLUMOTION，86° 限位。",
+        "吊櫃上段：TIP-ON 按壓開＋CLIP top 鉸鍊 ×2；爐上下段為固定假門。"
       ],
       "rationale": [
         "電器櫃移到門端，水槽仍在窗下，洗碗機靠女傭房牆。",
         "代價：爐與水槽間備菜約 33（方案 A 約 92），水槽右側 70 補足。",
-        "全廚房一套門板：吊櫃下緣手扣、下櫃上緣手扣槽。"
+        "側開門會掃過頭：爐上下段固定，上段 200 起高過先生頭頂 20。"
       ],
       "open_questions": [
         "天花淨高、有無假天花",
@@ -9040,7 +9206,15 @@
       "sources": [
         "https://ea.blum.com/en/number-of-hinges/",
         "https://bosch-home.com.sg/experience-bosch/kitchen-installation-guide/hobs/gas-hobs-installation",
-        "https://www.thewcsupply.com/pages/kitchen-design-guidelines-standard-clearances"
+        "https://www.thewcsupply.com/pages/kitchen-design-guidelines-standard-clearances",
+        "https://www.blum.com/sg/en/products/liftsystems/aventos-hk-xs/programme/",
+        "https://www.blum.com/us/en/products/motion-technologies/tip-on-doors/overview/"
+      ],
+      "risks": [
+        "洗碗機門放下（伸出約 60）正對女傭房門口，開著時只剩約 30。",
+        "圖上女傭房門片開時貼近水槽側（伸入約 42），會撞放下的洗碗機門。",
+        "進門先見電器櫃側板：比正面不壓迫；門洞 110 不變但有窄感。",
+        "備菜區僅約 33；主要備料改在水槽右側約 70。"
       ]
     }
   }

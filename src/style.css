@@ -31,6 +31,8 @@
 .elev-spec ul{margin:0;padding-left:16px;color:var(--muted);font-size:11px;line-height:1.75}
 .elev-spec li{margin-bottom:4px}
 .elev-open{font-size:11px;color:#956b43;line-height:1.75;margin:0}
+/* Per-elevation risks (elev.risks): red 需評估 list above 待確認. #b3261e on #fbfcf8 ≈ 6.3:1. */
+.elev-spec h4.elev-risk-title{color:#b3261e}.elev-spec ul.elev-risks{color:#b3261e;list-style:square}.elev-risks li::marker{color:#b3261e}
 .elev-link{display:block;margin-top:16px}
 .elev-go{border-color:var(--accent);color:var(--accent)}
 @media(max-width:900px){.elev-grid{grid-template-columns:1fr}.elev-controls{align-items:flex-start}}

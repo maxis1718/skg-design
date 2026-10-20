@@ -92,7 +92,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   // Closed state: contents of a band fully behind a closed front are hidden anyway — skip them so their labels never
   // collide (in bbox or on screen) with the front's own label.
   // Drawer / pull-out fronts stay drawn in the open state too (the section view shows them pulled out).
-  const hidden = b => (u.fronts || []).some(fr => (state !== 'open' || fr.kind === 'drawer' || fr.kind === 'pullout') && fr.from <= b.y0 + .01 && fr.to >= b.y1 - .01);
+  const hidden = b => (u.fronts || []).some(fr => (state !== 'open' || fr.kind === 'drawer' || fr.kind === 'pullout' || fr.kind === 'fixed') && fr.from <= b.y0 + .01 && fr.to >= b.y1 - .01);
   for (const b of B) {
     const y0 = oy + b.y0, ix = ox + sl, iw = u.w - sl - sr;
     // plinth.inset: plinth sits between end gables that run to the floor; fill: e.g. a shadowed recessed face.
@@ -147,8 +147,9 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   // and overhanging lip doors cover the carcass bottom edge.
   const slabShut = FS && state !== 'open';
   if (!u.noCarcass && slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:'#8d9891', 'stroke-width':.25});
+  const late = [];
   for (const fr of u.fronts || []) {
-    if (FS && fr.kind !== 'mirror' && !fr.mirror && !fr.swing) { slabFront(g, u, fr, ox, oy, state, labels, detail); continue; }
+    if (FS && fr.kind !== 'mirror' && !fr.mirror && !fr.swing) { slabFront(g, u, fr, ox, oy, state, labels, detail, late); continue; }
     const y0 = oy + fr.from, h = fr.to - fr.from;
     // kind 'mirror' = fixed mirror panel (never opens); door + mirror:true = mirrored door leaf.
     const dashed = state === 'open' && fr.kind !== 'drawer' && fr.kind !== 'mirror';
@@ -194,32 +195,49 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     }
   }
   if (!u.noCarcass && !slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
+  late.forEach(fn => fn());
 }
 
 // Handleless slab front (elev.frontStyle = {gap, lip, groove, lipAbove}): equal fine reveals, matte grain laminate, no bar handles.
 // Grip per front (fr.grip overrides): 'lip' when the front's bottom sits at/above lipAbove (wall units) — the door runs `lip`
 // below the carcass and is pulled from underneath; otherwise 'groove' — top-edge finger groove (panel stops `groove` short of
-// the zone top, back edge chamfered), drawn as a shadow band. Closed lip doors carry no face label or swing marks.
+// the zone top, back edge chamfered), drawn as a shadow band; 'push' = no grip (TIP-ON push-to-open, e.g. a door stacked
+// above a lift-up flap). Closed lip doors carry no face label or swing marks.
+// fr.kind 'lift' = lift-up flap hinged at its top edge (stay lift): faint chevron when closed; when open it is drawn raised
+// above its zone (foreshortened underside). fr.kind 'fixed' = fixed false front (never opens, e.g. hiding a hood body).
 function slabGrip(fr, oy) { return fr.grip || (oy + fr.from >= (FS.lipAbove ?? 140) ? 'lip' : 'groove'); }
-function slabFront(g, u, fr, ox, oy, state, labels, detail) {
+function slabFront(g, u, fr, ox, oy, state, labels, detail, late = []) {
   const n = fr.count || 1, gp = FS.gap ?? .3, w = (u.w - gp * n) / n, grip = slabGrip(fr, oy);
   const lip = grip === 'lip' ? (fr.lip ?? FS.lip ?? 2) : 0, groove = grip === 'groove' ? (fr.groove ?? FS.groove ?? 2) : 0;
   const bot = oy + fr.from - lip + (lip ? 0 : gp / 2), top = oy + fr.to - gp / 2, ptop = top - groove + (groove ? gp / 2 : 0);
-  const door = fr.kind !== 'drawer' && fr.kind !== 'pullout', dashed = state === 'open' && door;
+  const door = fr.kind !== 'drawer' && fr.kind !== 'pullout' && fr.kind !== 'fixed', dashed = state === 'open' && door;
   if (state === 'open' && fr.inside) extras(g, fr.inside.map(e => shift(e, ox, oy)), state);
   // Closed / drawer fronts: back the whole zone with the reveal shadow, so reveals read as even dark hairlines and nothing behind shows.
   if (!dashed) g.rect(ox, bot - (lip ? 0 : gp / 2), u.w, top + gp / 2 - bot + (lip ? 0 : gp / 2), {fill:'#9aa29c', stroke:'none'});
   for (let i = 0; i < n; i++) {
     const x = ox + gp / 2 + i * (w + gp);
-    if (dashed) { g.rect(x, bot, w, top - bot, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'}); continue; }
+    if (dashed) {
+      g.rect(x, bot, w, top - bot, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+      if (fr.kind === 'lift') late.push(() => liftRaised(g, x, w, top, (top - bot) * (fr.raise ?? .3), labels !== false));
+      continue;
+    }
     if (groove) g.rect(x - gp / 2, ptop, w + gp, top + gp / 2 - ptop, {fill:'#b9b2a3', stroke:'none'});
     g.rect(x, bot, w, ptop - bot, {fill:C.front, stroke:'#8d9891', 'stroke-width':.22});
     g.rect(x, bot, w, ptop - bot, {fill:'url(#elev-grain)', stroke:'none'});
     // Grip edge: chamfered top edge (groove) or the free bottom edge of an overhanging door (lip).
     if (groove) g.rect(x + .1, ptop - .7, w - .2, .6, {fill:'#e6e2d8', stroke:'none'});
     if (lip) { g.rect(x + .1, bot + .1, w - .2, .7, {fill:'#dedad0', stroke:'none'}); g.line(x, bot, x + w, bot, {stroke:C.dark, 'stroke-width':.3}); }
+    if (fr.kind === 'lift') { const cx = x + w / 2, cy = (bot + ptop) / 2, k = Math.min(2.4, w * .06); g.path(`M${cx - k} ${g.Y(cy - k * .35)}L${cx} ${g.Y(cy + k * .4)}L${cx + k} ${g.Y(cy - k * .35)}`, {fill:'none', stroke:'#cdd3ce', 'stroke-width':.25, 'stroke-linecap':'round'}); }
+    if (fr.kind === 'fixed' && state === 'open') fitLabel(g, x + w / 2, (bot + ptop) / 2, w, ptop - bot, T('固定'), g.f * .5, {fill:C.thin});
   }
-  if (fr.label && !dashed && labels && !lip && (FL || state === 'open')) fitLabel(g, ox + u.w / 2, (bot + ptop) / 2, u.w, ptop - bot, fr.label, g.f * (detail ? .78 : .74), {fill:C.thin});
+  if (fr.label && !dashed && labels && (!lip || fr.kind === 'lift') && (FL || state === 'open')) fitLabel(g, ox + u.w / 2, (bot + ptop) / 2, u.w, ptop - bot, fr.label, g.f * (detail ? .78 : .74), {fill:C.thin});
+}
+
+// Open lift-up flap seen from the front: its underside, foreshortened, rising from the hinge line (y = hinge) by hh.
+function liftRaised(g, x, w, hinge, hh, label) {
+  g.rect(x, hinge, w, hh, {fill:'#f1efe8', stroke:C.line, 'stroke-width':.3});
+  g.line(x, hinge + hh, x + w, hinge + hh, {stroke:C.dark, 'stroke-width':.35});
+  if (label && hh > g.f * .9) fitLabel(g, x + w / 2, hinge + hh / 2, w, hh, T('上掀'), g.f * .55, {fill:C.thin});
 }
 
 // Opened door leaf seen at ~120°: a foreshortened quad outside the carcass showing its inner face.
@@ -687,7 +705,10 @@ function renderFront(elev, view, state) {
   }
   extras(g, view.under, state);
   FL = !(view.frontLabels === false && state !== 'open');
+  // view.clip: units cut at the view edges (a run view showing part of a wider unit).
+  if (view.clip) { const id = `elev-clip-${esc(view.id)}`; g.out.push(`<clipPath id="${id}"><rect x="0" y="${-f * 4}" width="${W}" height="${H + f * 8}"/></clipPath><g clip-path="url(#${id})">`); }
   for (const r of units) drawUnit(g, r.u, r.x, r.y || 0, state, detail, labels);
+  if (view.clip) g.out.push('</g>');
   FL = true;
   extras(g, view.extras, state);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
@@ -761,9 +782,11 @@ function renderSection(elev, view, state) {
     } else if (b.kind === 'cabinet') {
       // shelves containing 0 = the cabinet's own bottom panel, so the door starts at the band (no overlap below).
       // Slab front style: wall-unit doors (zone bottom ≥ lipAbove) hang `lip` below the carcass as the finger pull.
-      const lo = ((b.shelves || []).includes(0) ? 0 : 1.6) + (FS && y0 >= (FS.lipAbove ?? 140) ? FS.lip ?? 2 : 0);
+      // b.grip 'push' (TIP-ON door stacked above a flap): no lip. b.lift = {angle, label}: lift-up flap hinged at the band top.
+      const lo = ((b.shelves || []).includes(0) ? 0 : 1.6) + (FS && y0 >= (FS.lipAbove ?? 140) && b.grip !== 'push' ? FS.lip ?? 2 : 0);
       for (const s of b.shelves || []) g.rect(0, y0 + s, D - 2.5, t, {fill:C.board, stroke:'none'});
-      if (open) g.rect(D, y0 - lo, Math.min(ext, u.w / 2), b.h + lo, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
+      if (open && b.lift) liftSection(g, D, y0 + b.h, b.h + lo, b.lift, f);
+      else if (open) g.rect(D, y0 - lo, Math.min(ext, u.w / 2), b.h + lo, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
       else g.rect(D - 1.8, y0 - lo, 1.8, b.h + lo, {fill:C.front, stroke:C.line, 'stroke-width':.35});
       g.text(D + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     }
@@ -778,6 +801,17 @@ function renderSection(elev, view, state) {
   if (view.chain) chain(g, u, 0, 0, W + f * .6, false);
   hdim(g, 0, D, -f * 1.6, `${fmt(D)}（${T('櫃深')}）`, true);
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
+}
+
+// Lift-up flap in section, opened by `angle` about its top hinge (hx, hy): rotated front, dashed edge path, closed ghost.
+function liftSection(g, hx, hy, L, lift, f) {
+  const a = (lift.angle ?? 86) * Math.PI / 180, sn = Math.sin(a), cs = Math.cos(a), t = 1.8;
+  const P = (dx, dy) => [hx + dx * cs - dy * sn, hy + dx * sn + dy * cs];
+  const pts = [P(0, 0), P(0, -L), P(-t, -L), P(-t, 0)].map(([x, y]) => `${+x.toFixed(2)} ${+g.Y(y).toFixed(2)}`);
+  g.rect(hx - t, hy - L, t, L, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+  g.path(`M${hx} ${g.Y(hy - L)}A${L} ${L} 0 0 0 ${+(hx + L * sn).toFixed(2)} ${+g.Y(hy - L * cs).toFixed(2)}`, {fill:'none', stroke:C.dim, 'stroke-width':.22, 'stroke-dasharray':'1 .8'});
+  g.path(`M${pts.join('L')}Z`, {fill:C.front, stroke:C.line, 'stroke-width':.35});
+  if (lift.label) g.text(hx + L * sn + 1.2, hy - L * cs + f * .9, lift.label, {fill:C.dim, 'font-size':f * .62});
 }
 
 function svg(vb, out, label) {
