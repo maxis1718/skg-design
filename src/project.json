@@ -621,7 +621,7 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "電視櫃設計": "落地 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜中線對齊電視。所有插座在中間抽屜內：背板內側鎖 4 位 13A 延長座＋USB，線材經後方摺疊線架跟著抽屜進出；面板上緣弧形缺口當把手兼出線口。櫃後空腔 8.2 放固定插座、網路孔，頂板後緣留通風縫；踢腳內退，2700K 燈條往下打地板，可開關。",
+        "電視櫃設計": "落地 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜中線對齊電視。所有插座在中間抽屜內：背板內側鎖 4 位 13A 延長座＋USB，線材經後方摺疊線架跟著抽屜進出；面板上緣弧形缺口當把手兼出線口。櫃後空腔 8.2 放固定插座、網路孔，頂板後緣留通風縫；踢腳內退，3000K 燈條往下打地板，可開關。",
         "電視與電視牆": "Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛，中心高 110、下緣 61.8，櫃面到電視留 21.8。電視牆 387.5（原標）從陽台門線到玄關過道，分戶牆不打鑿，外加木作底板約 5 ＋ wabi-sabi 淡灰壁紙到天花，內藏 Ø32 暗管從櫃後空腔上到電視背後；天花做局部假天花（底 270）嵌線性洗牆燈。",
         "電視櫃兩端留白": "電視、電視櫃、沙發同一條中線，距陽台玻璃 130。電視櫃北端距玻璃 25，南端到牆尾（玄關過道）152.8；電視左右各比櫃子內縮 20.75。",
         "餐桌尺寸與款式": "Dahlia Sintered Stone Dining Table 150 × 90 × 75 cm（岩板），長邊南北向。整組往陽台移：桌北緣距陽台落地玻璃 50，Tripp Trapp 平常收進只露出約 30（拉出最多 40，距玻璃仍約 10）；桌南緣到過道 125.1（原 87.6）。長邊各 2 椅，過道端不放椅。",
@@ -1139,11 +1139,11 @@
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 130 cm from the balcony glass (north end 25, south end 152.5 to the passage). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 2700K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
+      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 130 cm from the balcony glass (north end 25, south end 152.5 to the passage). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
-      "source_note": "設計值：落地電視櫃 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜對齊電視中線；所有插座都在中間抽屜內，整個抽屜拉出就能插拔。櫃後留 8.2 空腔走線、通風，木作底板 5 ＋櫃深 45 ＝前緣距結構牆 50，與原圖電視櫃前緣同線。原圖 240 長、約 40 深的電視櫃符號已由此取代。踢腳內退 10，45° 鋁槽 COB 2700K 底燈洗地，驅動器在櫃後空腔。",
+      "source_note": "設計值：落地電視櫃 210 × 45 × 40，3 個等寬抽屜（各 70），中間抽屜對齊電視中線；所有插座都在中間抽屜內，整個抽屜拉出就能插拔。櫃後留 8.2 空腔走線、通風，木作底板 5 ＋櫃深 45 ＝前緣距結構牆 50，與原圖電視櫃前緣同線。原圖 240 長、約 40 深的電視櫃符號已由此取代。踢腳內退 10，45° 鋁槽 COB 3000K 底燈洗地，驅動器在櫃後空腔。",
       "dimensions": {
         "w": {
           "cm": 210,
@@ -7284,7 +7284,7 @@
                 0,
                 387.5
               ],
-              "label": "局部假天花 · 線性洗牆燈 2700K",
+              "label": "局部假天花 · 線性洗牆燈 3000K",
               "size": 0.6
             },
             {
@@ -7308,7 +7308,7 @@
               "type": "note",
               "x": 255.0,
               "y": 2.2,
-              "label": "底燈 2700K",
+              "label": "底燈 3000K",
               "anchor": "start",
               "size": 0.55,
               "tvlight": true
@@ -7512,7 +7512,7 @@
               "type": "note",
               "x": 105.0,
               "y": 2.2,
-              "label": "內退 10 · 2700K",
+              "label": "內退 10 · 3000K",
               "size": 0.58,
               "color": "#7a5a35",
               "tvlight": true
@@ -7914,7 +7914,7 @@
         {
           "zone": "天花 · 洗牆燈",
           "h": "底 270",
-          "note": "局部假天花 30 寬、降 10，內嵌 2700K 可調光線性洗牆燈。"
+          "note": "局部假天花 30 寬、降 10，內嵌 3000K 可調光線性洗牆燈。"
         },
         {
           "zone": "電視牆面",
@@ -7954,7 +7954,7 @@
         {
           "zone": "踢腳 · 底燈",
           "h": "8 高 · 內退 10",
-          "note": "45° 鋁槽藏內退角、乳白罩；兩端側板落地遮光。"
+          "note": "45° 鋁槽藏內退角、乳白罩，兩端側板落地遮光；地板偏白亮面地磚，用 COB 無光點燈條。"
         },
         {
           "zone": "底燈電源",
@@ -7965,7 +7965,7 @@
       "hardware": [
         "Blum LEGRABOX 全拉緩衝 NL 350；中抽 C 高側板、40 kg 級。",
         "SIRIM 4 位 13A 延長座鎖抽屜背板；後腔雙位插座離地 17。",
-        "底燈：45° 鋁槽 206＋COB 24V 2700K CRI≥90 8W/m；LEW 獨立迴路。"
+        "底燈：45° 鋁槽 206＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。"
       ],
       "rationale": [
         "3 抽不選 5：中抽內淨 65 才放得下 One Connect 等設備。",
@@ -7977,9 +7977,7 @@
         "路由器／光纖終端位置",
         "遊戲機、Soundbar、喇叭",
         "天花淨高、能否做局部假天花",
-        "壁紙型號與木作底板厚度",
-        "地板是否亮面",
-        "底燈要否調光"
+        "壁紙型號與木作底板厚度"
       ]
     },
     "living-tv": {
