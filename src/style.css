@@ -115,3 +115,5 @@ footer{font-size:12px}
 @media(max-width:1200px){.details-layout .room-detail-grid{grid-template-columns:1fr;gap:22px}}
 @media(max-width:900px){.details-layout{display:flex;flex-direction:column;gap:18px}#details-content{display:contents}.details-layout>.inspector{position:static;max-height:none;overflow:visible;width:100%;order:2}.details-layout .room-grid{order:1}.details-layout .room-detail-grid{order:3;width:100%}.details-layout .room-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}#elevation-slot .elev-block{margin-bottom:18px}}
 @media print{.details-layout>.inspector{display:none!important}.details-layout{display:block}}
+
+.elev-risk-callout{border:1px solid rgba(179,38,30,.38);background:rgba(179,38,30,.06);border-radius:10px;padding:12px 16px 10px;margin:0 0 18px}.elev-risk-callout h4.elev-risk-title{margin:0 0 6px;color:#b3261e;font-size:15px;font-weight:600}.elev-risk-callout ul.elev-risks{margin:0;padding-left:18px;color:#8f1f18;list-style:square}.elev-risk-callout li{margin:3px 0}.elev-risk-callout li::marker{color:#b3261e}

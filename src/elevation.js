@@ -518,7 +518,7 @@ function extras(g, list, state = ST) {
       g.text(e.x + e.w / 2, e.y + e.h / 2 - g.f * .3, e.label || T('排油煙機'), {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .8});
     } else if (e.type === 'worktop') {
       g.rect(e.x, e.y, e.w, e.h, {fill:C.stone, stroke:C.line, 'stroke-width':.3});
-      // Optional material label (e.g. 燒結石檯面 · 面 90) placed above the worktop at labelX/labelY.
+      // Optional material label (e.g. 岩板檯面 · 面 90) placed above the worktop at labelX/labelY.
       if (e.label) g.text(e.labelX ?? e.x + e.w / 2, e.labelY ?? e.y + e.h + g.f * .5, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (e.size || .62)});
     } else if (e.type === 'hob') {
       g.rect(e.x, e.y, e.w, 1.2, {fill:C.dark, stroke:'none'});
