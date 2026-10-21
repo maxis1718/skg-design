@@ -52,6 +52,8 @@ function canvas(H, font) {
 function attrs(a) { return Object.entries(a).filter(([, v]) => v != null).map(([k, v]) => `${k}="${esc(v)}"`).join(' '); }
 
 function frontLeaves(u, fr) {
+  // fr.leaves: explicit unit-relative leaves [{x, w}] (e.g. inner fronts between spacer strips and a centre divider).
+  if (fr.leaves) return fr.leaves.map(l => ({x:l.x, w:l.w, hinge:l.hinge ?? 'L'}));
   const n = fr.count || 1, gap = 0.4, w = (u.w - gap * (n + 1)) / n;
   return Array.from({length:n}, (_, i) => ({x: gap + i * (w + gap), w, hinge: fr.hinges?.[i] ?? (n === 2 ? (i === 0 ? 'L' : 'R') : 'L')}));
 }
@@ -147,8 +149,12 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   // and overhanging lip doors cover the carcass bottom edge.
   const slabShut = FS && state !== 'open';
   if (!u.noCarcass && slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:'#8d9891', 'stroke-width':.25});
+  // u.posts: vertical boards seen when the doors are open — {x, w, from, to, kind: 'divider' | 'spacer'} (unit-relative).
+  if (state === 'open') for (const p of u.posts || []) g.rect(ox + p.x, oy + p.from, p.w, p.to - p.from, p.kind === 'spacer' ? {fill:'#e9dfcc', stroke:C.thin, 'stroke-width':.2} : {fill:C.board, stroke:C.thin, 'stroke-width':.2});
   const late = [];
   for (const fr of u.fronts || []) {
+    // fr.inner: front behind a full-height door (inner drawer / pull-out) — only drawn when the doors are open.
+    if (fr.inner && state !== 'open') continue;
     if (FS && fr.kind !== 'mirror' && !fr.mirror && !fr.swing) { slabFront(g, u, fr, ox, oy, state, labels, detail, late); continue; }
     const y0 = oy + fr.from, h = fr.to - fr.from;
     // kind 'mirror' = fixed mirror panel (never opens); door + mirror:true = mirrored door leaf.
@@ -172,6 +178,13 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
         const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
         g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.thin, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
         g.rect(lf.hinge === 'L' ? fx - 7 : fx + 1, y0 + .2, 6, .7, {fill:C.dark, stroke:'none'});
+      } else if ((fr.kind === 'drawer' || fr.kind === 'pullout') && fr.grip === 'groove') {
+        // Handleless top-edge finger groove (J-pull) on a classic-style front: panel stops `groove` short, shadow band above.
+        const gv = fr.groove ?? 2;
+        g.rect(x, y0 + h - gv, lf.w, gv - .2, {fill:'#b9b2a3', stroke:'none'});
+        g.rect(x, y0 + .2, lf.w, h - gv - .2, {fill:C.front, stroke:C.line, 'stroke-width':sw});
+        g.rect(x + .1, y0 + h - gv - .8, lf.w - .2, .6, {fill:'#e6e2d8', stroke:'none'});
+        if (fr.labels?.[i] && labels) fitLabel(g, x + lf.w / 2, y0 + (h - gv) / 2, lf.w, h - gv, fr.labels[i], g.f * (detail ? .7 : .66), {fill:C.thin});
       } else if (fr.kind === 'drawer' || fr.kind === 'pullout') {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
         if (fr.notch) { if (!fr.notchLeaves || fr.notchLeaves.includes(i)) notch(g, x + lf.w / 2, y0 + h - .2, fr.notch.w, fr.notch.h); }
@@ -732,7 +745,7 @@ function renderSection(elev, view, state) {
   const H = view.height ?? elev.ceiling_cm, f = view.font ?? 5.4;
   const top = u.h - (B.find(b => b.kind === 'filler')?.h || 0);
   // Label room: at least view.labelRoom (default 16), widened so the longest tier / drawer label stays inside the drawing.
-  const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet').map(b => em(b.short || b.label || '')));
+  const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet' || b.kind === 'rack').map(b => em(b.short || b.label || '')));
   const W = D + ext + Math.max(view.labelRoom ?? 16, longest * f * .74 + 4);
   const m = {l: Math.max(f * 6.2, levelMargin(view, f)) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
   const g = canvas(H, f);
@@ -751,8 +764,47 @@ function renderSection(elev, view, state) {
   for (const b of B) {
     const y0 = b.y0;
     if (b.kind === 'plinth') { const rc = b.recess ?? 5; g.rect(0, y0, D - rc, b.h, {fill:b.fill || C.plinth, stroke:C.thin, 'stroke-width':.2}); g.rect(D - rc, y0, rc, b.h, {fill:'#fff', stroke:'none'}); }
-    else if (b.kind === 'board') g.rect(0, y0, D, b.h, {fill:C.board, stroke:'none'});
+    else if (b.kind === 'board') {
+      // b.depth: board stops short of the front (e.g. behind a door); b.led: LED profile under the front edge, glowing when open.
+      const bd = b.depth ?? D;
+      g.rect(0, y0, bd, b.h, {fill:C.board, stroke:'none'});
+      if (b.led) {
+        if (open) g.path(`M${bd - 6} ${g.Y(y0 - .8)}L${bd - 2} ${g.Y(y0 - .8)}L${bd + 4} ${g.Y(y0 - (b.led.glow ?? 26))}L${bd - 14} ${g.Y(y0 - (b.led.glow ?? 26))}Z`, {fill:'#fbe7a1', opacity:.38, stroke:'none'});
+        g.rect(bd - 6, y0 - .8, 4, .8, {fill:open ? '#e8b923' : '#c9b98a', stroke:'none', rx:.3});
+      }
+    }
     else if (b.kind === 'filler') g.rect(0, y0, D, b.h, {fill:'url(#elev-hatch)', stroke:C.thin, 'stroke-width':.2});
+    else if (b.kind === 'hang') {
+      // Hanging zone seen from the side: rail (b.railX, default mid-depth), hanger and the longest garment face-on (shoulders across the depth).
+      const rx = b.railX ?? D / 2, ry = b.rail, gw = b.garments?.width ?? 44, gl = Math.max(...(b.garments?.lens || [90]));
+      g.rect(rx - gw / 2, ry - 3.2 - gl, gw, gl - 1.6, {fill:C.garment, stroke:'#9db0a3', 'stroke-width':.25, rx:2.4, opacity:.85});
+      g.path(`M${rx - gw / 2 + 1} ${g.Y(ry - 4.4)}L${rx} ${g.Y(ry - 1.4)}L${rx + gw / 2 - 1} ${g.Y(ry - 4.4)}Z`, {fill:'none', stroke:C.itemLine, 'stroke-width':.35, 'stroke-linejoin':'round'});
+      g.path(`M${rx} ${g.Y(ry - 1.4)}V${g.Y(ry + .4)}A.9 .9 0 0 0 ${rx - 1.8} ${g.Y(ry + .4)}`, {fill:'none', stroke:C.itemLine, 'stroke-width':.3});
+      g.out.push(`<circle cx="${rx}" cy="${g.Y(ry)}" r=".8" fill="#8f9a93"/>`);
+      if (b.short) fitLabel(g, rx, ry - 3.2 - gl / 2, gw - 4, gl, b.short, f * .7, {fill:C.thin});
+    } else if (b.kind === 'boxes') {
+      // Storage boxes from the back (b.depth deep, default 55), one per tier.
+      const it = (b.items || [])[0];
+      if (it) { const bd = b.boxDepth ?? 55; g.rect(1.8, y0, bd, Math.min(it.h, b.h - .5), {fill:C.box, stroke:C.itemLine, 'stroke-width':.3, rx:.6}); fitLabel(g, 1.8 + bd / 2, y0 + it.h / 2, bd, it.h, it.name, f * .7, {fill:C.line}); }
+    } else if (b.kind === 'rack') {
+      // Pull-out trouser rack: frame (floor on runners, back post, side rail) with round rods across the width, spaced front-to-back;
+      // garments folded over the rods. b.inset = front set back behind a door; b.boxFrom = frame back; b.rods = {n, pitch, d, first}.
+      const dx = open ? (view.drawerExtension ?? ext - 5) : 0, ins = b.inset ?? 0, fx = D - ins - 1.8, bx = b.boxFrom ?? back;
+      const R = b.rods || {}, n = R.n ?? 7, pitch = R.pitch ?? 7, rd = R.d ?? 1.6, rg = b.runner ?? 1.4;
+      const rodC = y0 + b.h - 1 - rd / 2, floor = y0 + rg + 1.6, lens = b.garments?.lens || [50];
+      g.rect(bx + dx, y0 + rg, fx - bx, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+      g.rect(bx + dx, y0 + rg, 1.6, rodC + rd / 2 - y0 - rg, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
+      g.rect(bx + dx, rodC - 1.5, fx - bx, 3, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
+      for (let i = 0; i < n; i++) {
+        const cx = fx + dx - (R.first ?? 3) - rd / 2 - i * pitch, r = rd / 2 + .5, L = Math.min(lens[i % lens.length], rodC - floor - 1.5);
+        g.path(`M${+(cx - r).toFixed(2)} ${+g.Y(rodC - L).toFixed(2)}V${+g.Y(rodC).toFixed(2)}A${r} ${r} 0 0 1 ${+(cx + r).toFixed(2)} ${+g.Y(rodC).toFixed(2)}V${+g.Y(rodC - L + 3).toFixed(2)}`, {fill:'none', stroke:'#a9bfb0', 'stroke-width':1, 'stroke-linecap':'round'});
+        g.out.push(`<circle cx="${+cx.toFixed(2)}" cy="${+g.Y(rodC).toFixed(2)}" r="${rd / 2}" fill="${R.color || '#3a3d3b'}"/>`);
+      }
+      const gv = b.groove ?? 0;
+      g.rect(fx + dx, y0 + .2, 1.8, b.h - .4 - gv, {fill:C.front, stroke:C.line, 'stroke-width':.35});
+      g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
+      if (open) hdim(g, D, D + dx, y0 - 5.6, `${T('滿拉')} ≈ ${fmt(dx)}`);
+    }
     else if (b.kind === 'tier') {
       const tray = D - back - 3, dx = whole ? dxAll : open ? ext : 0, x = back + dx;
       g.rect(x, y0, tray, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
@@ -775,9 +827,10 @@ function renderSection(elev, view, state) {
       if (!whole && open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `${T('滿拉')} ≈ ${fmt(ext)}`);
     } else if (b.kind === 'drawers') {
       // b.boxFrom/boxTo/boxLift/boxH: explicit drawer-box geometry (e.g. a service void behind a short box).
-      const dx = open ? (view.drawerExtension ?? ext - 5) : 0, bx = b.boxFrom ?? back, bt = b.boxTo ?? D - 4;
+      // b.inset: inner drawer behind a door — front set back by inset; b.groove: top finger groove on classic fronts.
+      const dx = open ? (view.drawerExtension ?? ext - 5) : 0, bx = b.boxFrom ?? back, bt = b.boxTo ?? D - 4, ins = b.inset ?? 0;
       g.rect(bx + dx, y0 + (b.boxLift ?? 2), bt - bx, b.boxH ?? b.h - 6, {fill:b.boxH ? '#f3efe6' : 'none', stroke:C.thin, 'stroke-width':.3});
-      g.rect(D - 1.8 + dx, y0 + .2, 1.8, b.h - .4 - (FS ? FS.groove ?? 2 : 0), {fill:C.front, stroke:C.line, 'stroke-width':.35});
+      g.rect(D - ins - 1.8 + dx, y0 + .2, 1.8, b.h - .4 - (FS ? FS.groove ?? 2 : b.groove ?? 0), {fill:C.front, stroke:C.line, 'stroke-width':.35});
       if (!b.noLabel) g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
     } else if (b.kind === 'cabinet') {
       // shelves containing 0 = the cabinet's own bottom panel, so the door starts at the band (no overlap below).

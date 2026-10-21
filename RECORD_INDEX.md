@@ -66,5 +66,5 @@ Geometry edits:
 | `appliance-tower` | 正立面 · 側剖面拉出 · 整面牆 | B 方案限定；上櫃＋三層 Blum 全拉＋兩淺抽 |
 | `kitchen-hob` / `kitchen-oven` / `spice-pullout` | 爐台區 · 窄拉籃側剖面 · 整面牆 | 共用 `kitchen-b`；後兩者為 alias |
 | `dishwasher` / `kitchen-sink` | 水槽區 · 整面牆 | Samsung DW60CB750FAPSP，檯面底 87；水槽櫃前半深層板 |
-| `master-wardrobe-left` | 正立面 · 兩櫃對照 | 2 外抽＋長掛＋上櫃收納盒 |
-| `master-wardrobe-right` | 正立面 · 兩櫃對照 | 3 外抽＋短掛＋摺衣層＋上櫃收納盒 |
+| `master-wardrobe-left` | 正立面 · 側剖面拉出 · 兩櫃對照 | 落地雙開門；內抽 ×2＋褲架拉籃 ×2（MOVENTO）＋掛衣（淨高 100）＋上櫃收納盒 |
+| `master-wardrobe-right` | 正立面 · 兩櫃對照 | 3 外抽＋掛衣（淨高 110.2）＋上櫃收納盒 |
