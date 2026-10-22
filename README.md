@@ -2,7 +2,7 @@
 
 共用原始碼：[maxis1718/skg-design](https://github.com/maxis1718/skg-design)。2026-10-16 啟用 Pages 後確認 repo 為 public，原始碼與圖檔也可公開讀取。以 Git 保存設計與歷史，支援 Mac mini 上的 Codex／Claude 透過既有 Telegram 控制流程修改。
 
-目前版本 R17，2026-10-22。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
+目前版本 R18，2026-10-22。平面圖主來源為 Floor plan scale.pdf；Summary.pdf 第 4 頁只作原格局對照。文件內的說明不取代使用者要求。
 
 ## 修改與預覽
 
@@ -54,7 +54,7 @@ npm run check
 
 - 單位 cm，高度由完成地面往上量；天花暫以使用者提供的 280 計。
 - 每個 unit 的 `bands`（由下到上）高度總和必須等於 `h`，`npm run check` 會驗證。
-- 已建立：`appliance-tower`（A 方案電器櫃）、`kitchen-hob`、`dishwasher`、`spice-pullout(-r)`、`kitchen-oven`、`kitchen-lower-worktop`（Wet kitchen 空間規劃，右側高度鏈）、`kitchen-upper-worktop`（Dry kitchen）、`master-wardrobe-left`（落地雙開門 8–272、門內全寬內抽（Blum MOVENTO）＋三排頂裝側拉褲架（Hettich 全拉＋Silent System，各自拉出）、掛桿 188 淨高 92、上層收納盒；有側剖面拉出圖）／`master-wardrobe-right`（3 外抽 24/24/20、掛桿 188、高門雙開 76–272 含上層收納）；兩櫃皆有門內全身鏡、開門感應燈、`bath1-mirror-cabinet`／`bath2-mirror-cabinet`（鏡櫃到天花 240、總深 19／內淨 15：中間固定鏡、兩側鏡門向外開、櫃內 Dyson 插座；衛浴 2 整面牆含馬桶上方 169.8）、`tv-console`／`living-tv`（電視牆：三抽電視櫃 210×45×40、插座全在中間抽屜、弧形缺口把手兼出線）。
+- 已建立：`appliance-tower`（A 方案電器櫃）、`kitchen-hob`、`dishwasher`、`spice-pullout(-r)`、`kitchen-oven`、`kitchen-lower-worktop`（Wet kitchen 空間規劃，右側高度鏈）、`kitchen-upper-worktop`（Dry kitchen）、`master-wardrobe-left`（落地雙開門 8–272、門內全寬內抽（Blum MOVENTO）＋三排頂裝側拉褲架（Hettich 全拉＋Silent System，各自拉出）、掛桿 193 淨高 94、上方低收納層＋SKUBB 盒；有側剖面拉出圖）／`master-wardrobe-right`（3 外抽 24/24/20、掛桿 193 淨高 115.2、高門雙開 76–272 含上層收納）；兩櫃皆有門內全身鏡、開門感應燈、`bath1-mirror-cabinet`／`bath2-mirror-cabinet`（鏡櫃到天花 240、總深 19／內淨 15：中間固定鏡、兩側鏡門向外開、櫃內 Dyson 插座；衛浴 2 整面牆含馬桶上方 169.8）、`tv-console`／`living-tv`（電視牆：三抽電視櫃 210×45×40、插座全在中間抽屜、弧形缺口把手兼出線）。
 - 廚房三個方案：方案 A（窗下水槽，預設）、方案 B（電器櫃移到門端）、原始，網址 ?kitchen=a|b|original。方案 A 的櫃體與視圖集中在共用的 `elevations.kitchen-b`（`shared: true`），方案 B 在 `elevations.kitchen-b2`，B 的物件立面以 `物件id@tower-left` 為鍵；物件立面用 `include` 引用、`views` 以 id 挑選，`alias` 可沿用另一個物件立面的說明。
 - 立面右欄可加 `risks`（字串清單），以紅字「需評估」顯示在待確認上方，記錄動線／視覺等待評估的風險；任何立面都可用。
 - 立面是設計提案，不是原圖標註；電器尺寸為示意機型，實購型號仍記在 actual 欄位。
