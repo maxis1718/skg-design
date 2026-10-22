@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R15",
+    "revision": "R16",
     "unit": "cm",
-    "date": "2026-10-21"
+    "date": "2026-10-22"
   },
   "scale": {
     "title": "1:100 (A4)",
@@ -873,7 +873,7 @@
       "uncertainty_cm": null,
       "notes": {
         "衣櫃 layout": "圖面為兩側各 90 × 60 cm 衣櫃；中間淨寬約 130 cm。",
-        "衣櫃內部分區": "左櫃（近床頭）：落地雙開門 8–272；由下到上踢腳 8、褲架拉籃左右各一（60）、內抽左右各一、層板（面 88）、掛衣（掛桿 188，淨高 100）、固定層板、SKUBB 收納盒 2 層。右櫃維持：外抽 24／24／20、掛桿 188（淨高 110.2）、高門 76–272。兩櫃都有開門自動亮的感應燈，靠浴室那扇門內貼全身鏡。點選衣櫃可看關門／開門立面。",
+        "衣櫃內部分區": "左櫃（近床頭）：落地雙開門 8–272；由下到上踢腳 8、三排頂裝側拉褲架（掛在 88 層板下，各自全拉）、掛衣（掛桿 188，淨高 100）、固定層板、SKUBB 收納盒 2 層。右櫃維持：外抽 24／24／20、掛桿 188（淨高 110.2）、高門 76–272。兩櫃都有開門自動亮的感應燈，靠浴室那扇門內貼全身鏡。點選衣櫃可看關門／開門立面。",
         "衣櫃門片／Laminate": null,
         "床與床頭設計": null,
         "設計備註": "房間為不規則輪廓。睡眠區、入口與更衣區分段量測。"
@@ -1623,7 +1623,7 @@
       "uncertainty_cm": null,
       "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
       "name": "主臥左側衣櫃",
-      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。立面為設計提案（右櫃維持原設計）。由下到上：踢腳 8、褲架拉籃左右各一（60）、內抽左右各一（面板 16.4）、層板（面 88，下方中隔板）、掛衣區（掛桿 188，淨高 100）、固定層板（底 195）、收納盒 2 層（每層 2 個 SKUBB）、收邊 8。落地雙開門 8–272，每扇 6 鉸鍊；靠浴室那扇門內貼全身鏡；開門自動亮的感應燈。",
+      "source_note": "原圖明示衣櫃正面寬與深，已由 mm 換算為 cm。立面為設計提案（右櫃維持原設計）。由下到上：踢腳 8、三排頂裝側拉褲架（76.4，各自全拉）、層板（面 88）、掛衣區（掛桿 188，淨高 100）、固定層板（底 195）、收納盒 2 層（每層 2 個 SKUBB）、收邊 8。落地雙開門 8–272，每扇 6 鉸鍊；靠浴室那扇門內貼全身鏡；開門自動亮的感應燈。",
       "dimensions": {
         "w": {
           "cm": 90,
@@ -2625,6 +2625,10 @@
     {
       "id": "C20",
       "text": "主臥左側衣櫃改版：門片到底兩扇中開；內部上層收納盒、掛桿 188（淨高 100）、層板，下方中隔板分左右：各一個內抽屜與一個褲架拉籃（7 根橫桿），面板平整上緣手扣槽，Blum MOVENTO 全拉緩衝。右側衣櫃不變。"
+    },
+    {
+      "id": "C21",
+      "text": "主臥左側衣櫃下段改為三排頂裝側拉褲架（Hettich，每排 9 勾、全拉緩衝、可各別拉出），拆掉中隔板與內抽屜，褲勾高 74.2，垂掛約 62。"
     }
   ],
   "measurement_policy": {
@@ -2953,43 +2957,57 @@
               "depth": 58.2
             },
             {
-              "kind": "rack",
-              "h": 60,
-              "label": "褲架拉籃 ×2",
-              "short": "褲架拉籃",
-              "inset": 2.3,
-              "groove": 2,
-              "boxFrom": 5.9,
-              "runner": 1.4,
-              "rods": {
-                "n": 7,
-                "pitch": 7,
-                "d": 1.6,
-                "first": 3
+              "kind": "toprack",
+              "h": 76.4,
+              "label": "頂裝側拉褲架 ×3",
+              "short": "頂裝褲架",
+              "rows": [
+                {
+                  "x": 4.3,
+                  "label": "長褲"
+                },
+                {
+                  "x": 31.43,
+                  "label": "長褲"
+                },
+                {
+                  "x": 58.56,
+                  "label": "長裙、洋裝"
+                }
+              ],
+              "rail": {
+                "w": 3.4,
+                "h": 13,
+                "hook": 22,
+                "hookAt": 12,
+                "n": 9,
+                "pitch": 5,
+                "first": 3,
+                "from": 8,
+                "len": 46,
+                "fixed": [
+                  2,
+                  54
+                ]
               },
               "garments": {
                 "lens": [
-                  50,
-                  53,
-                  46,
-                  54,
-                  49,
                   52,
-                  47
+                  55,
+                  60
+                ],
+                "sideLens": [
+                  52,
+                  55,
+                  50,
+                  54,
+                  48,
+                  53,
+                  60,
+                  51,
+                  56
                 ]
               }
-            },
-            {
-              "kind": "drawers",
-              "h": 16.4,
-              "label": "內抽 ×2",
-              "short": "內抽",
-              "inset": 2.3,
-              "groove": 2,
-              "boxFrom": 5.9,
-              "boxTo": 55.9,
-              "boxLift": 1.4,
-              "boxH": 13
             },
             {
               "kind": "board",
@@ -3092,13 +3110,6 @@
               "to": 86.2
             },
             {
-              "kind": "divider",
-              "x": 44.1,
-              "w": 1.8,
-              "from": 9.8,
-              "to": 86.2
-            },
-            {
               "kind": "spacer",
               "x": 85.7,
               "w": 2.5,
@@ -3108,53 +3119,11 @@
           ],
           "fronts": [
             {
-              "kind": "drawer",
-              "inner": true,
-              "grip": "groove",
-              "from": 9.8,
-              "to": 69.8,
-              "leaves": [
-                {
-                  "x": 4.5,
-                  "w": 39.4
-                },
-                {
-                  "x": 46.1,
-                  "w": 39.4
-                }
-              ],
-              "labels": [
-                "褲架 · 長褲",
-                "褲架 · 長裙、洋裝"
-              ]
-            },
-            {
-              "kind": "drawer",
-              "inner": true,
-              "grip": "groove",
-              "from": 69.8,
-              "to": 86.2,
-              "leaves": [
-                {
-                  "x": 4.5,
-                  "w": 39.4
-                },
-                {
-                  "x": 46.1,
-                  "w": 39.4
-                }
-              ],
-              "labels": [
-                "內衣、襪子",
-                "皮帶、配件"
-              ]
-            },
-            {
               "kind": "door",
               "from": 8,
               "to": 272,
               "count": 2,
-              "label": "落地雙開門 · 內含抽屜與褲架",
+              "label": "落地雙開門 · 內含三排褲架",
               "hingeMarks": [
                 [
                   18,
@@ -3368,17 +3337,12 @@
         {
           "zone": "層板（藍線）",
           "h": "1.8",
-          "note": "面 88；下方中隔板（紅線）分左右。"
+          "note": "面 88；底下吊三排褲架，取消中隔板。"
         },
         {
-          "zone": "內抽 ×2（左右）",
-          "h": "16.4",
-          "note": "內高約 12、內寬 35.6；內衣襪子、皮帶。"
-        },
-        {
-          "zone": "褲架拉籃 ×2（左右）",
-          "h": "60",
-          "note": "7 支 Ø1.6 橫桿、間距 7；每架 7 條，薄褲 14。"
+          "zone": "頂裝側拉褲架 ×3",
+          "h": "76.4",
+          "note": "每排寬 27、9 勾、勾長約 22；勾高 74.2，垂到底板 62。"
         },
         {
           "zone": "門片 · 落地雙開",
@@ -3392,28 +3356,27 @@
         }
       ],
       "hardware": [
-        "內抽與褲架：Blum MOVENTO 760H5000S（NL 500、40 kg、BLUMOTION S），與電器櫃拉出板同款。",
-        "門鉸 CLIP top BLUMOTION 110° 每扇 6 支＋門片矯正器；兩側牆加 2.5 墊條，內抽避開鉸鍊。",
+        "褲架 Hettich 9162284 頂裝伸縮褲架 ×3：9 勾、15 kg、全拉＋Silent System 緩衝（非 Blum）。",
+        "門鉸 CLIP top BLUMOTION 110° 每扇 6 支＋門片矯正器；兩側牆 2.5 墊條，褲架避開鉸鍊。",
         "全身鏡 5 mm 安全鏡 34.4 × 162（78–240）在靠浴室扇；LED 約 8 W，驅動器在踢腳。"
       ],
       "rationale": [
         "掛桿 188：太太 167 × 1.18 ≈ 197，取衣手到 192 仍留 5；淨高 100 夠襯衫外套。",
-        "褲架 60：褲長 100–108 對摺垂 50–54，可用 54.5；更長的掛右櫃（淨高 110.2）。",
-        "手扣槽同廚房下櫃：門內不會誤觸、免機構；靠浴室扇只開約 90°，故用墊條。"
+        "褲架勾高 74.2、底板 9.8：褲長 110 對摺垂 55、長裙 120 對摺 60，都離底 2 以上。",
+        "不留內抽：抽屜 16.4＋層板後褲只垂約 45，不夠；內衣襪子放右櫃外抽。"
       ],
       "open_questions": [
         "天花淨高（280 或 brochure 275）",
         "門片材質／Laminate 色號",
         "浴室側門片能開幾度",
-        "褲架橫桿霧黑或鍍鉻",
+        "Hettich 褲架長度與勾長（原廠圖）",
         "感應方式：門控或 PIR"
       ],
       "sources": [
         "Vertical grip reach / stature percentiles: https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-34_36.htm , https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-1.htm",
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
-        "Blum MOVENTO programme (load classes, NL, BLUMOTION / TIP-ON BLUMOTION): https://www.blum.com/sg/en/products/runnersystems/movento/programme/",
-        "Blum MOVENTO 760H BLUMOTION S codes, space requirement NL + 3, not compatible with TIP-ON BLUMOTION: https://publications.blum.com/2022/catalogue/en/418/",
-        "Blum 0-protrusion hinges for inner pull-outs (CLIP top BLUMOTION 155°): https://www.blum.com/au/en/company/news-blum-australia/new-hinges/",
+        "Hettich 9162284 telescopic trouser holder, below top panel, 9 hangers, 15 kg, full extension + Silent System, height 130 mm: https://shop.hettich.com/lv_EN/p/9162284",
+        "Hettich trouser holder installed below the top board, with Silent System (left/right): https://www.ostermann.eu/en_GB/product/pull-out-trouser-holder-hettich-installation-below-the-top-board-with-silent-system",
         "Blum number of hinges: https://ea.blum.com/en/number-of-hinges/",
         "Hettich door straightener: https://shop.hettich.com/lv_EN/p/45198"
       ],
@@ -3433,6 +3396,10 @@
             {
               "y": 8,
               "label": "門底"
+            },
+            {
+              "y": 74.2,
+              "label": "褲勾"
             },
             {
               "y": 88,
@@ -3456,6 +3423,10 @@
           "extension": 50,
           "drawerExtension": 50,
           "levels": [
+            {
+              "y": 74.2,
+              "label": "褲勾"
+            },
             {
               "y": 88,
               "label": "層板"
@@ -3574,43 +3545,57 @@
               "depth": 58.2
             },
             {
-              "kind": "rack",
-              "h": 60,
-              "label": "褲架拉籃 ×2",
-              "short": "褲架拉籃",
-              "inset": 2.3,
-              "groove": 2,
-              "boxFrom": 5.9,
-              "runner": 1.4,
-              "rods": {
-                "n": 7,
-                "pitch": 7,
-                "d": 1.6,
-                "first": 3
+              "kind": "toprack",
+              "h": 76.4,
+              "label": "頂裝側拉褲架 ×3",
+              "short": "頂裝褲架",
+              "rows": [
+                {
+                  "x": 4.3,
+                  "label": "長褲"
+                },
+                {
+                  "x": 31.43,
+                  "label": "長褲"
+                },
+                {
+                  "x": 58.56,
+                  "label": "長裙、洋裝"
+                }
+              ],
+              "rail": {
+                "w": 3.4,
+                "h": 13,
+                "hook": 22,
+                "hookAt": 12,
+                "n": 9,
+                "pitch": 5,
+                "first": 3,
+                "from": 8,
+                "len": 46,
+                "fixed": [
+                  2,
+                  54
+                ]
               },
               "garments": {
                 "lens": [
-                  50,
-                  53,
-                  46,
-                  54,
-                  49,
                   52,
-                  47
+                  55,
+                  60
+                ],
+                "sideLens": [
+                  52,
+                  55,
+                  50,
+                  54,
+                  48,
+                  53,
+                  60,
+                  51,
+                  56
                 ]
               }
-            },
-            {
-              "kind": "drawers",
-              "h": 16.4,
-              "label": "內抽 ×2",
-              "short": "內抽",
-              "inset": 2.3,
-              "groove": 2,
-              "boxFrom": 5.9,
-              "boxTo": 55.9,
-              "boxLift": 1.4,
-              "boxH": 13
             },
             {
               "kind": "board",
@@ -3713,13 +3698,6 @@
               "to": 86.2
             },
             {
-              "kind": "divider",
-              "x": 44.1,
-              "w": 1.8,
-              "from": 9.8,
-              "to": 86.2
-            },
-            {
               "kind": "spacer",
               "x": 85.7,
               "w": 2.5,
@@ -3729,53 +3707,11 @@
           ],
           "fronts": [
             {
-              "kind": "drawer",
-              "inner": true,
-              "grip": "groove",
-              "from": 9.8,
-              "to": 69.8,
-              "leaves": [
-                {
-                  "x": 4.5,
-                  "w": 39.4
-                },
-                {
-                  "x": 46.1,
-                  "w": 39.4
-                }
-              ],
-              "labels": [
-                "褲架 · 長褲",
-                "褲架 · 長裙、洋裝"
-              ]
-            },
-            {
-              "kind": "drawer",
-              "inner": true,
-              "grip": "groove",
-              "from": 69.8,
-              "to": 86.2,
-              "leaves": [
-                {
-                  "x": 4.5,
-                  "w": 39.4
-                },
-                {
-                  "x": 46.1,
-                  "w": 39.4
-                }
-              ],
-              "labels": [
-                "內衣、襪子",
-                "皮帶、配件"
-              ]
-            },
-            {
               "kind": "door",
               "from": 8,
               "to": 272,
               "count": 2,
-              "label": "落地雙開門 · 內含抽屜與褲架",
+              "label": "落地雙開門 · 內含三排褲架",
               "hingeMarks": [
                 [
                   18,
@@ -4013,7 +3949,7 @@
         "LED 約 8 W、CRI ≥ 90；驅動器在踢腳，櫃後低位插座請 LEW 預留。"
       ],
       "rationale": [
-        "90 × 60 依原圖；左櫃已改落地門＋褲架，本櫃維持原設計。",
+        "90 × 60 依原圖；左櫃已改落地門＋三排褲架，本櫃維持原設計。",
         "掛桿 188：低於太太輕鬆握高（約 197），取衣不必踮腳。",
         "鏡面 78–240 涵蓋兩人全身；走道 130，兩側門宜錯開開。"
       ],

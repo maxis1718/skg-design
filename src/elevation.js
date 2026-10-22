@@ -121,6 +121,7 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
       if (!hidden(b)) placeItems(g, b.items || [], ix, iw, y0, detail, b.h, b.align, b.gap);
       continue;
     }
+    if (b.kind === 'toprack') { if (state === 'open') topRackFront(g, b, ox, oy + b.y1, detail, labels); continue; }
     if (b.kind === 'hang') {
       const rail = oy + b.rail, n = b.garments?.count ?? 8, lens = b.garments?.lens;
       for (let i = 0; i < n; i++) {
@@ -209,6 +210,22 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
   }
   if (!u.noCarcass && !slabShut) g.rect(ox, oy, u.w, u.h, {fill:'none', stroke:C.line, 'stroke-width':detail ? .5 : .4});
   late.forEach(fn => fn());
+}
+
+// Top-mounted side-pull trouser racks (band kind 'toprack'), front view: per row (b.rows[{x, label}], unit-relative) the rail's
+// end cap hangs from the board above (top = board underside), a hook cantilevers to the right at b.rail.hookAt below it,
+// and the front-most folded garment hangs from the hook. b.rail = {w, h, hook, hookAt}; b.garments.lens per row.
+function topRackFront(g, b, ox, top, detail, labels) {
+  const R = b.rail || {}, rw = R.w ?? 3.4, rh = R.h ?? 13, hk = R.hook ?? 22, hy = top - (R.hookAt ?? 12), lens = b.garments?.lens || [52];
+  b.rows.forEach((row, i) => {
+    const x = ox + row.x, L = lens[i % lens.length], gx = x + rw + .6, gw = hk - 1.2;
+    g.rect(gx, hy - L, gw, L, {fill:C.garment, stroke:'#9db0a3', 'stroke-width':.25, rx:1.4});
+    g.rect(gx, hy - 3.2, gw, 3.2, {fill:'#bccdc1', stroke:'none', rx:1});
+    g.rect(x + rw, hy - .5, hk, 1, {fill:'#5b625e', stroke:'none', rx:.5});
+    g.rect(x, top - rh, rw, rh, {fill:'#5b625e', stroke:C.line, 'stroke-width':.2, rx:.4});
+    g.rect(x + rw, top - 2.2, hk, 2.2, {fill:'#d9dcd7', stroke:C.thin, 'stroke-width':.2});
+    if (labels && row.label) fitLabel(g, gx + gw / 2, hy - L / 2, gw, L - 4, row.label, g.f * (detail ? .7 : .66), {fill:C.thin});
+  });
 }
 
 // Handleless slab front (elev.frontStyle = {gap, lip, groove, lipAbove}): equal fine reveals, matte grain laminate, no bar handles.
@@ -745,7 +762,7 @@ function renderSection(elev, view, state) {
   const H = view.height ?? elev.ceiling_cm, f = view.font ?? 5.4;
   const top = u.h - (B.find(b => b.kind === 'filler')?.h || 0);
   // Label room: at least view.labelRoom (default 16), widened so the longest tier / drawer label stays inside the drawing.
-  const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet' || b.kind === 'rack').map(b => em(b.short || b.label || '')));
+  const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet' || b.kind === 'rack' || b.kind === 'toprack').map(b => em(b.short || b.label || '')));
   const W = D + ext + Math.max(view.labelRoom ?? 16, longest * f * .74 + 4);
   const m = {l: Math.max(f * 6.2, levelMargin(view, f)) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
   const g = canvas(H, f);
@@ -804,6 +821,23 @@ function renderSection(elev, view, state) {
       g.rect(fx + dx, y0 + .2, 1.8, b.h - .4 - gv, {fill:C.front, stroke:C.line, 'stroke-width':.35});
       g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
       if (open) hdim(g, D, D + dx, y0 - 5.6, `${T('滿拉')} ≈ ${fmt(dx)}`);
+    } else if (b.kind === 'toprack') {
+      // Top-mounted side-pull trouser rack in section: fixed runner under the board (b.rail.fixed = [x0, x1]), moving profile
+      // (b.rail.from, len) with hooks pointing at the viewer (pitch along the depth) and garments folded over each hook.
+      const R = b.rail || {}, top = y0 + b.h, dx = open ? (view.drawerExtension ?? ext - 5) : 0, rh = R.h ?? 13;
+      const [f0, f1] = R.fixed || [2, 54], x0 = (R.from ?? 8) + dx, len = R.len ?? 46, hy = top - (R.hookAt ?? 12), floor = y0;
+      const lens = b.garments?.sideLens || b.garments?.lens || [52], n = R.n ?? 9, pitch = R.pitch ?? 5;
+      for (let i = 0; i < n; i++) {
+        const cx = x0 + len - (R.first ?? 3) - i * pitch, r = .9, L = Math.min(lens[i % lens.length], hy - floor - 2);
+        g.path(`M${+(cx - r).toFixed(2)} ${+g.Y(hy - L).toFixed(2)}V${+g.Y(hy).toFixed(2)}A${r} ${r} 0 0 1 ${+(cx + r).toFixed(2)} ${+g.Y(hy).toFixed(2)}V${+g.Y(hy - L + 3).toFixed(2)}`, {fill:'none', stroke:'#a9bfb0', 'stroke-width':1, 'stroke-linecap':'round'});
+        g.out.push(`<circle cx="${+cx.toFixed(2)}" cy="${+g.Y(hy).toFixed(2)}" r=".6" fill="#5b625e"/>`);
+      }
+      g.rect(x0, hy + .6, len, top - 3.2 - hy - .6, {fill:'#e2e4df', stroke:'#5b625e', 'stroke-width':.3, rx:.4});
+      g.rect(f0, top - 3.2, f1 - f0, 3.2, {fill:'#5b625e', stroke:'none'});
+      g.rect(x0 + len - 1.2, hy - .6, 1.2, rh - 2.4, {fill:'#5b625e', stroke:'none', rx:.3});
+      const lx = Math.max(D, x0 + len) + 1.6;
+      g.text(lx, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
+      if (open) hdim(g, D, x0 + len, y0 - 5.6, `${T('滿拉')} ≈ ${fmt(dx)}`);
     }
     else if (b.kind === 'tier') {
       const tray = D - back - 3, dx = whole ? dxAll : open ? ext : 0, x = back + dx;
