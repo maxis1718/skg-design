@@ -38,7 +38,7 @@ const dimension=d=>`${['scaled','fit'].includes(d.status)?'≈ ':''}${num(d.cm)}
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `≈ ${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
 const statuses=o=>[...new Set(Object.values(o.dimensions).map(d=>t(statusNames[d.status])))].join(' / ');
-const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[230,252],kid:[315,204],study:[332,326],guest:[378,204]};
+const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[230,252],kid:[315,204],study:[321,312],guest:[378,204]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 function save(){dirty=true;try{localStorage.setItem(STORAGE,JSON.stringify(changes));storageOK=true;$('#save-status').textContent=t('個人紀錄已存於此瀏覽器');}catch(e){storageOK=false;$('#save-status').textContent=t('此環境無法自動儲存，請匯出備份');}window.dispatchEvent(new CustomEvent('skg:change')); }
