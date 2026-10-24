@@ -40,7 +40,6 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | KID-01 | `kid-wardrobe` | 小孩房衣櫃 | 120 × 60 |
 | KID-02 | `kid-bed` | 言言的床 | 120 × 200 |
-| KID-02 | `kid-bed` | 言言的床 | 120 × 200 |
 | STD-01 | `study-cabinet` | 書房收納櫃（用途待定） | 120 × 60 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | GST-01 | `guest-wardrobe` | 客房衣櫃 | 120 × 60 |
@@ -59,4 +58,5 @@ Geometry edits:
 - Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).
 - Study rigid move: `tools/build.py`, `data-layout="study-rotated"`, matrix(-1,0,0,-1,693.36,496.52).
 - Study (R20): desk (129) and both chairs (646–665, 808–827) dropped in build; only the 120×60 cabinet remains. Kid bed and massage chair are drawn in `src/furniture-kid-study.svg`.
+- Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.
