@@ -1,0 +1,12 @@
+<!-- R20 (2026-10-24): kid-room bed (言言的床 120 × 200) and study massage chair (OSIM uLove 3). Units: PDF pt, 1 pt = 3.5277778 cm. -->
+<!-- Kid bed: head at the west wall x273.36, long side 10 cm off the north window wall (y144.76); 200 → 56.69 pt, 120 → 34.02 pt. -->
+<path data-layout="kid-bed" class="furnishing" d="M273.36 147.59H330.05V181.61H273.36Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="kid-bed-headboard" class="furnishing" d="M274.78 147.59V181.61" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="kid-bed-pillow" class="furnishing" d="M276.6 156.89H285.1Q286.2 156.89 286.2 157.99V171.21Q286.2 172.31 285.1 172.31H276.6Q275.5 172.31 275.5 171.21V157.99Q275.5 156.89 276.6 156.89Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="kid-bed-duvet" class="furnishing" d="M294.62 147.59V181.61M296.32 147.59V181.61" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<!-- Study massage chair OSIM uLove 3 (OS-8218): upright 76 × 127, reclined 185 (manual). Back to the window, ≥10 from the window wall, centred on the middle pane. Dashed = reclined length 185. -->
+<path data-layout="massage-chair" class="furnishing" d="M299.17 310.05H318.71Q319.71 310.05 319.71 311.05V345.05Q319.71 346.05 318.71 346.05H299.17Q298.17 346.05 298.17 345.05V311.05Q298.17 310.05 299.17 310.05Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="massage-chair-arms" class="furnishing" d="M301.57 346.05V318.55M316.31 346.05V318.55" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="massage-chair-back" class="furnishing" d="M301.57 338.96H316.31" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="massage-chair-footrest" class="furnishing" d="M298.17 318.55H319.71" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="massage-chair-recline" class="furnishing" d="M298.17 310.05V293.61H319.71V310.05" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="1 0.8"/>

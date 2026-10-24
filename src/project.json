@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R19",
+    "revision": "R20",
     "unit": "cm",
-    "date": "2026-10-22"
+    "date": "2026-10-24"
   },
   "scale": {
     "title": "1:100 (A4)",
@@ -926,7 +926,7 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "床型與實際尺寸": "床：待提供規格（不放原圖雙人床，圖面床位已移除）。",
+        "床型與實際尺寸": "言言的床 120 × 200 cm：床頭靠西牆，長邊沿窗牆（離牆 10），床尾到東牆約 50，衣櫃前留約 110 走道。",
         "衣櫃設計": "保留原 BEDROOM 2 的 120 × 60 cm 衣櫃占位。",
         "設計備註": "原 BEDROOM 2 改名 KID ROOM。"
       },
@@ -978,11 +978,10 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "書桌設計": "原 STUDY 配置旋轉 180° 搬入。依內深約 290 cm 配適，桌長由 240 cm 改為約 230 cm；深約 50 cm。",
+        "按摩椅": "OSIM uLove 3（76 × 127 × 116，躺平 185）。背靠窗、離窗牆 10，置中對中間窗扇；前方留 80 以上，躺平後椅前到收納櫃仍有約 35。",
         "收納櫃": "原 STUDY 下方櫃體旋轉後移到書房左上，保留 120 × 60 cm 圖面尺寸。用途與內部分區待定。",
-        "桌面材質／代碼": null,
-        "電源與照明": null,
-        "設計備註": "移除原 BEDROOM 3 床與衣櫃配置；家具按新書房牆線定位。書桌臨窗位置與開窗方式待現場核對。"
+        "電源與照明": "按摩椅旁需 13A 接地插座（平均 260 W）。手冊建議避免直曬，窗邊要有窗簾或百葉；離電視、音響至少 1 m。",
+        "設計備註": "書桌與兩張椅子已移除（R20）。按摩椅約 105 kg，搬入時保護地板；門寬需 80 以上。"
       },
       "name": "書房",
       "english": "Study",
@@ -1888,6 +1887,37 @@
       "code": "KID-01"
     },
     {
+      "id": "kid-bed",
+      "code": "KID-02",
+      "room_id": "kid",
+      "name": "言言的床",
+      "bounds_pt": [
+        273.36,
+        147.59,
+        330.05,
+        181.61
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 120,
+          "status": "design"
+        },
+        "d": {
+          "cm": 200,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 120,
+        "d": 200,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "使用者提供：言言的床 120 × 200 cm。床頭靠西牆（衣櫃同側），長邊沿北側窗牆、離牆 10 留窗簾空間；床尾到東牆約 50，到衣櫃門面約 110。",
+      "status": "user-design"
+    },
+    {
       "id": "study-cabinet",
       "room_id": "study",
       "name": "書房收納櫃（用途待定）",
@@ -1919,36 +1949,35 @@
       "code": "STD-01"
     },
     {
-      "id": "study-desk",
+      "id": "massage-chair",
+      "code": "STD-03",
       "room_id": "study",
-      "name": "書房書桌",
+      "name": "按摩椅 OSIM uLove 3",
       "bounds_pt": [
-        273.36,
-        283.72,
-        287.64,
-        348.88
+        298.17,
+        310.05,
+        319.71,
+        346.05
       ],
       "dimensions": {
         "w": {
-          "cm": 230,
-          "status": "fit"
+          "cm": 76,
+          "status": "design"
         },
         "d": {
-          "cm": 50,
-          "status": "scaled"
+          "cm": 127,
+          "status": "design"
         }
       },
       "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
+        "w": 76,
+        "d": 127,
+        "h": 116,
+        "brand": "OSIM",
+        "model": "uLove 3 Well-Being Chair（OS-8218）"
       },
-      "source_note": "依使用者授權配適新書房：原長 240 cm 改為約 230 cm（內深約 290 − 櫃深約 60）；桌深約 50 cm。櫃體保留原尺寸，桌高、窗台高度與開窗方式待現場核對。",
-      "status": "user-design",
-      "code": "STD-02",
-      "provenance_note": "Physical source face drawing129 x405.72; x400.8 is dimension extension line. Source desk bounds[405.72,144.76,420,212.8]. Target[273.36,283.72,287.64,348.88]."
+      "source_note": "使用者指定 OSIM uLove 3，官網尺寸 76 × 127 × 116（直立）。手冊：躺平 185 × 76 × 97；背後離牆至少 10（往前滑躺），前方留至少 80；約 105 kg、平均 260 W。背靠窗、離窗牆 10，置中對中間窗扇；虛線為躺平長度。",
+      "status": "user-design"
     },
     {
       "id": "guest-wardrobe",
@@ -2641,6 +2670,10 @@
     {
       "id": "C24",
       "text": "主臥兩衣櫃依現居實測（層板下緣 199、掛桿 191）整體上移 4：掛桿 195、層板下緣 203；左櫃內抽屜外 20、內高 13。"
+    },
+    {
+      "id": "C25",
+      "text": "小孩房加入言言的床 120 × 200（床頭靠西牆、沿窗牆）；書房移除書桌與椅子，改放 OSIM uLove 3 按摩椅，背靠窗、置中，標出躺平 185。"
     }
   ],
   "measurement_policy": {

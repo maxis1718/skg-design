@@ -20,9 +20,12 @@ assert len(kid_bed)==23
 kid=kid_source
 for fragment in kid_bed:kid=kid.replace(fragment,'')
 old_study=read('furniture-guest.svg')
-# Original desk physical front is source path129. Retain chairs/cabinet with a rigid 180° move.
-study=re.sub(r'<path\b[^>]*data-source-path="129"[^>]*/>','',old_study)
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid_source}</g>\n<g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">{study}</g>\n<path data-layout="study-desk-fit" class="furnishing" d="M287.64 283.72V348.88" fill="none" stroke="currentColor" stroke-width=".36"/>'
+# R20: desk front (129) and both chairs (646-665, 808-827) removed; only the 120x60 cabinet stays, rotated 180°.
+study_drop=re.findall(r'<path\b[^>]*data-source-path="(?:129|64[6-9]|65\d|66[0-5]|80[89]|81\d|82[0-7])"[^>]*/>',old_study)
+assert len(study_drop)==41
+study=old_study
+for fragment in study_drop:study=study.replace(fragment,'')
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid_source}</g>\n<g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">{study}</g>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)
@@ -37,7 +40,7 @@ for fragment in dining:plan=plan.replace(fragment,'')
 tv_wall=re.findall(r'<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*/>',plan)
 assert len(tv_wall)==35
 for fragment in tv_wall:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g>'
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
