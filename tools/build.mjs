@@ -31,7 +31,11 @@ for(const fragment of dining)plan=plan.replace(fragment,'');
 const tvWall=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*\/>/g)].map(m=>m[0]);
 if(tvWall.length!==35)throw new Error('Living TV-wall source index changed');
 for(const fragment of tvWall)plan=plan.replace(fragment,'');
-const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kidSource}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g><g id="kid-study-geometry">${read('furniture-kid-study.svg')}</g>`;
+// R21: study (440 arc, 441 leaf) and bath-2 (510 arc, 511 leaf) swing doors → sliding doors in src/furniture-doors.svg; jambs kept.
+const swingDoors=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*\/>/g)].map(m=>m[0]);
+if(swingDoors.length!==4)throw new Error('Door source index changed');
+for(const fragment of swingDoors)plan=plan.replace(fragment,'');
+const furniture=`<g data-layout="kid-original">${kid}</g><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${kidSource}</g><g data-layout="study-rotated" transform="matrix(-1 0 0 -1 693.36 496.52)">${study}</g><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g><g id="kid-study-geometry">${read('furniture-kid-study.svg')}</g><g id="door-geometry">${read('furniture-doors.svg')}</g>`;
 let html=read('shell.html');
 for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),ELEVATION:read('elevation.js'),I18N:fs.existsSync(path.join(root,'src','i18n.json'))?JSON.stringify(JSON.parse(read('i18n.json'))).replaceAll('</','<\\/'):'{"en":{}}',APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
 for(const[key,file]of [['NEW','layout-source.png'],['OLD','summary-original.png']])html=html.replaceAll('/*__SOURCE_'+key+'__*/','data:image/png;base64,'+fs.readFileSync(path.join(root,'assets',file)).toString('base64'));

@@ -40,7 +40,11 @@ for fragment in dining:plan=plan.replace(fragment,'')
 tv_wall=re.findall(r'<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*/>',plan)
 assert len(tv_wall)==35
 for fragment in tv_wall:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g>'
+# R21: study (440/441) and bath-2 (510/511) swing doors replaced by sliding doors (src/furniture-doors.svg).
+swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*/>',plan)
+assert len(swing_doors)==4
+for fragment in swing_doors:plan=plan.replace(fragment,'')
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))

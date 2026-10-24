@@ -1,0 +1,11 @@
+<!-- R21 (2026-10-24): study and bath 2 swing doors replaced by surface-mounted sliding doors on the corridor side, both sliding east. Solid = closed, dashed = open. Units: PDF pt. -->
+<!-- Study: opening 315.96–341.4 (89.7); panel 93.7 (4 overlap west); open position stops at the bath-2 jamb 366.84 → clear ≈85.8 -->
+<path data-layout="study-slider-track" class="furnishing" d="M314.83 262.04H366.84" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="study-slider-panel" class="furnishing" d="M314.83 262.39H341.4V263.52H314.83Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="study-slider-open" class="furnishing" d="M340.27 262.39H366.84V263.52H340.27Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="0.8 0.6"/>
+<path data-layout="study-slider-arrow" class="furnishing" d="M338.4 260.19H344.4M343.2 259.29L344.4 260.19L343.2 261.09" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<!-- Bath 2: opening 368.16–391.56 (82.5); panel 84.5; slides east over the shaft wall to 415.52 → full 82.5 clear -->
+<path data-layout="bath2-slider-track" class="furnishing" d="M367.6 262.04H415.52" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="bath2-slider-panel" class="furnishing" d="M367.6 262.39H391.56V263.52H367.6Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="bath2-slider-open" class="furnishing" d="M391.56 262.39H415.52V263.52H391.56Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="0.8 0.6"/>
+<path data-layout="bath2-slider-arrow" class="furnishing" d="M388.56 260.19H394.56M393.36 259.29L394.56 260.19L393.36 261.09" fill="none" stroke="currentColor" stroke-width="0.12"/>
