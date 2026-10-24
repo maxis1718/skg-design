@@ -10,8 +10,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | `kitchen` | 廚房 | ≈ 320.5 × 240 |
 | `helper` | 女傭房 | ≈ 107 × 205 |
 | `master` | 主臥 | ≈ 290 × 275 |
-| `kid` | 小孩房 | ≈ 250 × 300 |
-| `study` | 書房 | ≈ 250 × 290 |
+| `kid` | 小孩房 | ≈ 250 × 290 |
+| `study` | 書房 | ≈ 250 × 300 |
 | `guest` | 客房 | ≈ 247 × 300 |
 
 ## Objects
@@ -38,9 +38,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | MST-04 | `master-bed` | 主臥床 | 185 × 200 |
 | BTH-01 | `bath1-mirror-cabinet` | 主浴洗手台＋鏡櫃 | 197.7 × 50 |
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
-| KID-01 | `kid-wardrobe` | 小孩房衣櫃 | 120 × 60 |
-| KID-02 | `kid-bed` | 言言的床 | 120 × 200 |
-| STD-01 | `study-cabinet` | 書房收納櫃（用途待定） | 120 × 60 |
+| STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | GST-01 | `guest-wardrobe` | 客房衣櫃 | 120 × 60 |
 | GST-02 | `guest-bed` | 客房床 | 152 × 191 |
@@ -56,7 +54,6 @@ All actual W/D/H/brand/model fields are initially null. Keep source geometry and
 
 Geometry edits:
 - Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).
-- Study rigid move: `tools/build.py`, `data-layout="study-rotated"`, matrix(-1,0,0,-1,693.36,496.52).
-- Study (R20): desk (129) and both chairs (646–665, 808–827) dropped in build; only the 120×60 cabinet remains. Kid bed and massage chair are drawn in `src/furniture-kid-study.svg`.
+- Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.
 - Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.
