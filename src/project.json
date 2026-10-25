@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R25",
+    "revision": "R26",
     "unit": "cm",
     "date": "2026-10-25"
   },
@@ -926,13 +926,13 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "配置": "原書房（BEDROOM 3）改為小孩房，目前全部清空；床與衣櫃規格待提供。",
+        "配置": "言言的半高床＋滑梯，A／B 兩個方案可切換（?kid=a|b）。",
         "門": "拉門：明裝掛軌在走道側，往東滑到浴室 2 門邊；門片約 94，淨開口約 86。"
       },
       "name": "小孩房",
       "english": "Kid room",
       "number": "05",
-      "focus": "床位與收納（待規劃）"
+      "focus": "言言半高床＋滑梯（A／B）"
     },
     {
       "id": "study",
@@ -2386,6 +2386,210 @@
         "window-sink",
         "tower-left"
       ]
+    },
+    {
+      "id": "kid-loft-bed-a",
+      "code": "KID-01",
+      "room_id": "kid",
+      "name": "言言半高床（A）",
+      "bounds_pt": [
+        273.36,
+        276.74,
+        319.56,
+        335.42
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 163,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 207,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 A：櫸木半高床，床墊 150 × 200，床下淨寬 155、淨高 120。外框 163 × 207 為示意（整組 254.5 × 227 依商品圖）。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-a"
+      ]
+    },
+    {
+      "id": "kid-slide-a",
+      "code": "KID-02",
+      "room_id": "kid",
+      "name": "言言高滑梯（A）",
+      "bounds_pt": [
+        273.36,
+        335.42,
+        337.71,
+        348.88
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 227,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 47.5,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 A：滑梯長 227 依商品圖深度；寬 47.5 = 254.5 − 床長 207（示意）。滑梯頂在床的西南角，往東滑出。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-a"
+      ]
+    },
+    {
+      "id": "kid-stool-a",
+      "code": "KID-03",
+      "room_id": "kid",
+      "name": "言言爬梯凳（A）",
+      "bounds_pt": [
+        319.56,
+        276.74,
+        330.62,
+        289.5
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 39,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 45,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 A：爬梯凳在床北端東側，尺寸示意。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-a"
+      ]
+    },
+    {
+      "id": "kid-loft-bed-b",
+      "code": "KID-04",
+      "room_id": "kid",
+      "name": "言言半高床（B）",
+      "bounds_pt": [
+        273.36,
+        266.68,
+        319.56,
+        325.36
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 163,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 207,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 B：櫸木半高床，床墊 150 × 200，床下淨寬 155、淨高 120。外框 163 × 207 為示意（整組 254.5 × 227 依商品圖）。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-b"
+      ]
+    },
+    {
+      "id": "kid-slide-b",
+      "code": "KID-05",
+      "room_id": "kid",
+      "name": "言言高滑梯（B）",
+      "bounds_pt": [
+        273.36,
+        325.36,
+        337.71,
+        338.82
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 227,
+          "status": "annotated"
+        },
+        "d": {
+          "cm": 47.5,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 B：滑梯長 227 依商品圖深度；寬 47.5 = 254.5 − 床長 207（示意）。滑梯頂在床的西南角，往東滑出。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-b"
+      ]
+    },
+    {
+      "id": "kid-stool-b",
+      "code": "KID-06",
+      "room_id": "kid",
+      "name": "言言爬梯凳（B）",
+      "bounds_pt": [
+        319.56,
+        266.68,
+        330.62,
+        279.44
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 39,
+          "status": "scaled"
+        },
+        "d": {
+          "cm": 45,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 B：爬梯凳在床北端東側，尺寸示意。",
+      "status": "user-design",
+      "onlyKid": [
+        "kid-b"
+      ]
     }
   ],
   "source_dimensions": [
@@ -2803,6 +3007,10 @@
     {
       "id": "C30",
       "text": "客房改為三個方案：A 拆衣櫃放 MALM Queen 收納床靠窗＋MICKE 書桌面向走廊＋69 窄衣櫃；B Super single＋保留衣櫃＋MICKE 書桌；原始（保留原床與衣櫃）。"
+    },
+    {
+      "id": "C31",
+      "text": "小孩房放言言的櫸木半高床＋高滑梯＋屋頂＋爬梯凳（整組 254.5 × 227）：A 滑梯貼窗；B 爬梯凳貼走廊牆。A／B 可切換（?kid=a|b）。"
     }
   ],
   "measurement_policy": {
@@ -3047,6 +3255,38 @@
           378,
           204
         ]
+      }
+    ],
+    "kid": [
+      {
+        "id": "kid-a",
+        "name": "方案 A",
+        "layout": "kid-a",
+        "label": [
+          327,
+          318
+        ],
+        "notes": {
+          "床組": "言言櫸木半高床一站式方案⑦：①半高床＋②高滑梯＋③屋頂＋④爬梯凳（不含左側櫃）。整組 254.5 × 227，高 241／248。",
+          "擺法": "床長邊貼西牆；滑梯貼窗（南牆）往東滑出；爬梯凳在床北端東側。床頭離走廊牆 35.5。",
+          "動線": "床東側空地寬 87；滑梯出口離東牆 23；門洞在北牆離西牆 150–240，進門約 35 就碰到爬梯凳。",
+          "尺寸依據": "整組 254.5 × 227 依商品圖；床 163 × 207、滑梯寬 47.5、爬梯凳 39 × 45 為示意。"
+        }
+      },
+      {
+        "id": "kid-b",
+        "name": "方案 B",
+        "layout": "kid-b",
+        "label": [
+          327,
+          288
+        ],
+        "notes": {
+          "床組": "言言櫸木半高床一站式方案⑦：①半高床＋②高滑梯＋③屋頂＋④爬梯凳（不含左側櫃）。整組 254.5 × 227，高 241／248。",
+          "擺法": "床長邊貼西牆、床頭與爬梯凳貼走廊牆（北牆）；滑梯在床南端往東滑出，離窗 35.5。",
+          "動線": "床東側空地寬 87；滑梯出口離東牆 23；門洞在北牆離西牆 150–240，爬梯凳占 163–202，進門只剩東側約 38 可走。",
+          "尺寸依據": "整組 254.5 × 227 依商品圖；床 163 × 207、滑梯寬 47.5、爬梯凳 39 × 45 為示意。"
+        }
       }
     ]
   },

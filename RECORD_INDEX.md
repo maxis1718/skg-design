@@ -54,6 +54,12 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-08 | `dishwasher` | 洗碗機 | 60 × 60 |
 | KIT-09 | `spice-pullout` | 窄拉籃（三層 · 左） | 20 × 60 |
 | KIT-11 | `spice-pullout-r` | 窄拉籃（三層 · 右） | 20 × 60 |
+| KID-01 | `kid-loft-bed-a` | 言言半高床（A） | 163 × 207 |
+| KID-02 | `kid-slide-a` | 言言高滑梯（A） | 227 × 47.5 |
+| KID-03 | `kid-stool-a` | 言言爬梯凳（A） | 39 × 45 |
+| KID-04 | `kid-loft-bed-b` | 言言半高床（B） | 163 × 207 |
+| KID-05 | `kid-slide-b` | 言言高滑梯（B） | 227 × 47.5 |
+| KID-06 | `kid-stool-b` | 言言爬梯凳（B） | 39 × 45 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
@@ -61,5 +67,6 @@ Geometry edits:
 - Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).
 - Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.
 - Guest (R23): mirrored kid bed (666–688) and wardrobe (429–437) dropped from the guest copy; Queen 150×200 + desk niche 70 + wardrobe 50 drawn in `src/furniture-guest-plan.svg` (scheme A); scheme B (wardrobe removed) in `src/furniture-guest-plan-b.svg`. Toggle: roomVersions.guest, objects carry onlyGuest, URL ?guest=a|b.
+- Kid (R26): 言言 loft bed schemes in `src/furniture-kid-plan-a.svg` (slide against the window) and `-b.svg` (stool against the corridor wall). Toggle: roomVersions.kid, objects carry onlyKid, URL ?kid=a|b.
 - Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.

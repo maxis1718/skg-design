@@ -25,20 +25,25 @@ let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search)
 // Guest-room scheme (R25): A = guest-a (wardrobe removed, MALM queen by the window, default), B = guest-b (super single + wardrobe kept), original = guest-original. URL ?guest=a|b|original.
 const GUEST_KEYS={a:'guest-a',b:'guest-b',original:'guest-original'};
 selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||GUEST_KEYS.a;
+// Kid-room scheme (R26): 言言 loft bed — A = slide against the window (default), B = stool against the corridor wall. URL ?kid=a|b.
+const KID_KEYS={a:'kid-a',b:'kid-b'};
+selectedVersions.kid=KID_KEYS[(new URLSearchParams(location.search).get('kid')||'').toLowerCase()]||KID_KEYS.a;
 const repoMode=window.SKG_REPO_MODE===true;let draftActive=!repoMode,draftChanges=structuredClone(changes);
 if(repoMode)changes={notes:{},actual:{},versions:{}};
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
 function guestVersions(){return project.roomVersions?.guest||[];}
 function guestVersion(){const vs=guestVersions();return vs.find(v=>v.id===selectedVersions.guest)||vs[0];}
+function kidVersions(){return project.roomVersions?.kid||[];}
+function kidVersion(){const vs=kidVersions();return vs.find(v=>v.id===selectedVersions.kid)||vs[0];}
 function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===selectedVersions.kitchen)||vs.find(v=>v.id===KITCHEN_KEYS.a)||vs[0];}
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
 function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KEYS[k]===kitchenVersion()?.id);if(!key)return;const u=new URL(location.href);if(u.searchParams.get('kitchen')!==key){u.searchParams.set('kitchen',key);history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
 function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
-function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
+function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))&&(!o.onlyKid||o.onlyKid.includes(kidVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>({...o.actual,...(changes.actual[o.id]||{})});
-const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.notes;
-const note=(r,key)=>r.id==='guest'&&guestVersion()?(changes.notes.guest?.[key]??guestVersion().notes?.[key]??r.notes[key]??''):r.id==='kitchen'?(changes.versions['kitchen:'+kitchenVersion().id]?.notes?.[key]??(kitchenVersion().id==='kitchen-current'?changes.notes.kitchen?.[key]:null)??kitchenVersion().notes[key]??''):(changes.notes[r.id]?.[key]??r.notes[key]??'');
+const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.id==='kid'&&kidVersion()?{...r.notes,...kidVersion().notes}:r.notes;
+const note=(r,key)=>r.id==='guest'&&guestVersion()?(changes.notes.guest?.[key]??guestVersion().notes?.[key]??r.notes[key]??''):r.id==='kid'&&kidVersion()?(changes.notes.kid?.[key]??kidVersion().notes?.[key]??r.notes[key]??''):r.id==='kitchen'?(changes.versions['kitchen:'+kitchenVersion().id]?.notes?.[key]??(kitchenVersion().id==='kitchen-current'?changes.notes.kitchen?.[key]:null)??kitchenVersion().notes[key]??''):(changes.notes[r.id]?.[key]??r.notes[key]??'');
 const dimension=d=>`${['scaled','fit'].includes(d.status)?'≈ ':''}${num(d.cm)}`;
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `≈ ${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
@@ -114,7 +119,7 @@ function renderKitchenVersion(){
    tower.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,fill:'#d5c2a5','fill-opacity':'.65',stroke:'#8e704c','stroke-width':'.5'}));
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
  }
- renderGuestVersion();
+ renderGuestVersion();renderKidVersion();
  const visible=new Set(visibleObjects().map(o=>o.id));
  $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);}});
  if(objectId&&!visible.has(objectId)){objectId=null;try{history.replaceState(null,'',location.search+'#'+roomId);}catch(e){}}
@@ -126,6 +131,19 @@ function renderGuestVersion(){
  $('#guest-version-group').hidden=!(roomId==='floor'||roomId==='guest');
  for(const x of guestVersions()){const g=document.getElementById('guest-plan-'+x.layout.replace('guest-',''));if(g)g.toggleAttribute('hidden',x.id!==v.id);}
  const lab=document.querySelector('[data-label-room="guest"]'),base=labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
+}
+function renderKidVersion(){
+ const v=kidVersion(),seg=$('#kid-version');if(!v||!seg)return;
+ seg.setAttribute('aria-label',t('切換小孩房方案'));
+ seg.innerHTML=kidVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-kid-version="${esc(x.id)}" aria-pressed="${x.id===v.id}">${esc(x.name)}</button>`).join('');
+ $('#kid-version-group').hidden=!(roomId==='floor'||roomId==='kid');
+ for(const x of kidVersions()){const g=document.getElementById('kid-plan-'+x.layout.replace('kid-',''));if(g)g.toggleAttribute('hidden',x.id!==v.id);}
+ const lab=document.querySelector('[data-label-room="kid"]'),base=labelPositions.kid;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
+}
+function chooseKidVersion(id){
+ if(!kidVersions().some(v=>v.id===id)||id===kidVersion()?.id)return;selectedVersions.kid=id;
+ const key=Object.keys(KID_KEYS).find(k=>KID_KEYS[k]===id),u=new URL(location.href);u.searchParams.set('kid',key);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
+ selectRoom(roomId,{keepObject:true});
 }
 function chooseGuestVersion(id){
  if(!guestVersions().some(v=>v.id===id)||id===guestVersion()?.id)return;selectedVersions.guest=id;
@@ -274,7 +292,7 @@ function validateOverrides(incoming){
 function buildReference(){
   const p=project.measurement_policy;
   $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':'R25'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':'R26'}</span>${esc(c.text)}</div>`).join('');
   const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
   const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
   $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ≈ ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;
@@ -290,6 +308,7 @@ $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog
 window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);
 $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[data-kitchen-version]');if(b)chooseKitchenVersion(b.dataset.kitchenVersion);});
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
+$('#kid-version').addEventListener('click',e=>{const b=e.target.closest('[data-kid-version]');if(b)chooseKidVersion(b.dataset.kidVersion);});
 $('#draft-mode').onclick=()=>{if(draftActive){draftChanges=structuredClone(changes);changes={notes:{},actual:{},versions:{}};draftActive=false;}else{changes=structuredClone(draftChanges);draftActive=true;}selectRoom(roomId,{keepObject:true});toast(draftActive?t('本機草稿'):t('共用設計版'));};
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
