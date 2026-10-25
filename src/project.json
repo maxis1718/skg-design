@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R24",
+    "revision": "R25",
     "unit": "cm",
     "date": "2026-10-25"
   },
@@ -1914,16 +1914,16 @@
     {
       "id": "guest-wardrobe",
       "room_id": "guest",
-      "name": "客房衣櫃（50）",
+      "name": "客房衣櫃",
       "bounds_pt": [
-        405.76,
+        385.92,
         212.8,
         420,
         229.84
       ],
       "dimensions": {
         "w": {
-          "cm": 50,
+          "cm": 120,
           "status": "design"
         },
         "d": {
@@ -1938,27 +1938,96 @@
         "brand": null,
         "model": null
       },
-      "source_note": "原 120 衣櫃改為「書桌 70 + 衣櫃 50」。衣櫃 50 寬、60 深、到天花，單門（開門後離床約 26）。",
+      "source_note": "依使用者要求，複製小孩房衣櫃並左右鏡像，尺寸同為 120 × 60 cm。原始配置與方案 B 保留。",
       "status": "user-design",
       "code": "GST-01",
+      "onlyGuest": [
+        "guest-original",
+        "guest-b"
+      ]
+    },
+    {
+      "id": "guest-bed-a",
+      "code": "GST-03",
+      "room_id": "guest",
+      "name": "客房床（A · MALM 收納床 Queen）",
+      "bounds_pt": [
+        360.75,
+        146.18,
+        420.0,
+        193.23
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 166,
+          "status": "design"
+        },
+        "d": {
+          "cm": 209,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 A：IKEA MALM 高床架＋2 個收納箱，床墊 150 × 200，外框 209 × 166（IKEA SG 官網）。床頭靠東牆、離窗牆 5，只從南側上下床；收納箱從南側拉出。",
+      "status": "user-design",
       "onlyGuest": [
         "guest-a"
       ]
     },
     {
-      "id": "guest-desk",
-      "code": "GST-03",
+      "id": "guest-desk-a",
+      "code": "GST-04",
       "room_id": "guest",
-      "name": "客房書桌凹槽",
+      "name": "客房書桌（A · MICKE 73 × 50）",
       "bounds_pt": [
-        385.92,
-        212.8,
-        405.76,
+        379.68,
+        215.63,
+        400.38,
         229.84
       ],
       "dimensions": {
         "w": {
-          "cm": 70,
+          "cm": 73,
+          "status": "design"
+        },
+        "d": {
+          "cm": 50,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 73,
+        "d": 50,
+        "h": null,
+        "brand": "IKEA",
+        "model": "MICKE 73×50"
+      },
+      "source_note": "方案 A：IKEA MICKE 73 × 50（最小款）靠南牆、緊鄰門框東側，坐著面向走廊；椅子在床與書桌之間。",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-a"
+      ]
+    },
+    {
+      "id": "guest-wardrobe-a",
+      "code": "GST-05",
+      "room_id": "guest",
+      "name": "客房窄衣櫃（A · 69）",
+      "bounds_pt": [
+        400.38,
+        212.8,
+        420.0,
+        229.84
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 69,
           "status": "design"
         },
         "d": {
@@ -1973,7 +2042,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "衣櫃排西段做書桌凹槽 70 × 60（桌面深 55、高約 75，上方加層板與檯燈）；椅子坐在床與書桌之間 76 的走道，不用時推進凹槽。",
+      "source_note": "方案 A：南牆東段剩下的寬度：247.2 − 門框 105 − 書桌 73 = 69.2。做到天花、深 60、雙門各約 34.6（開門後離床約 34）。",
       "status": "user-design",
       "onlyGuest": [
         "guest-a"
@@ -1981,22 +2050,22 @@
     },
     {
       "id": "guest-bed-b",
-      "code": "GST-04",
+      "code": "GST-06",
       "room_id": "guest",
-      "name": "客房雙人床（B · Queen 150 × 200）",
+      "name": "客房床（B · Super single）",
       "bounds_pt": [
-        361.6,
-        157.52,
+        363.3,
+        146.18,
         420.0,
-        201.17
+        178.78
       ],
       "dimensions": {
         "w": {
-          "cm": 154,
+          "cm": 115,
           "status": "design"
         },
         "d": {
-          "cm": 206,
+          "cm": 200,
           "status": "design"
         }
       },
@@ -2007,7 +2076,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "B 方案：拆掉衣櫃後，Queen 150 × 200（以 IKEA SLATTUM 206 × 154 計）床頭靠東牆，靠窗側 45、南側約 100，兩側都能上下床；床尾到西牆 41。",
+      "source_note": "方案 B：Super single，新加坡規格床墊 107 × 190，床架以約 115 × 200 示意。床頭靠東牆、離窗牆 5。",
       "status": "user-design",
       "onlyGuest": [
         "guest-b"
@@ -2015,33 +2084,33 @@
     },
     {
       "id": "guest-desk-b",
-      "code": "GST-05",
+      "code": "GST-07",
       "room_id": "guest",
-      "name": "客房書桌（B · 100 × 60）",
+      "name": "客房書桌（B · MICKE 73 × 50）",
       "bounds_pt": [
-        402.98,
-        201.45,
-        420.0,
-        229.84
+        349.92,
+        180.19,
+        364.09,
+        200.89
       ],
       "dimensions": {
         "w": {
-          "cm": 100,
+          "cm": 73,
           "status": "design"
         },
         "d": {
-          "cm": 60,
+          "cm": 50,
           "status": "design"
         }
       },
       "actual": {
-        "w": null,
-        "d": null,
+        "w": 73,
+        "d": 50,
         "h": null,
-        "brand": null,
-        "model": null
+        "brand": "IKEA",
+        "model": "MICKE 73×50"
       },
-      "source_note": "B 方案：IKEA LINNMON 100 × 60（官網尺寸）靠東牆南段，北端貼床頭兼床頭櫃；椅子朝東坐，在床南側走道內。",
+      "source_note": "方案 B：IKEA MICKE 73 × 50 靠西牆，椅子朝西；在開門範圍北側。",
       "status": "user-design",
       "onlyGuest": [
         "guest-b"
@@ -2050,21 +2119,21 @@
     {
       "id": "guest-bed",
       "room_id": "guest",
-      "name": "客房雙人床（Queen 150 × 200）",
+      "name": "客房床",
       "bounds_pt": [
-        361.61,
-        147.59,
-        420.0,
-        191.24
+        363,
+        153.28,
+        417.12,
+        196.36
       ],
       "dimensions": {
         "w": {
-          "cm": 154,
-          "status": "design"
+          "cm": 152,
+          "status": "scaled"
         },
         "d": {
-          "cm": 206,
-          "status": "design"
+          "cm": 191,
+          "status": "scaled"
         }
       },
       "actual": {
@@ -2074,11 +2143,11 @@
         "brand": null,
         "model": null
       },
-      "source_note": "建議 IKEA Queen 150 × 200，外框以 SLATTUM（206 × 154，最省空間的雙人床架）計。床頭靠東牆、長邊離窗牆 10；床尾到西牆 41，床到書桌／衣櫃 76。實際床架待選。",
+      "source_note": "原始配置：小孩房床符號左右鏡像複製。圖面占位約 152 × 191 cm，實物尺寸待提供。",
       "status": "user-design",
       "code": "GST-02",
       "onlyGuest": [
-        "guest-a"
+        "guest-original"
       ]
     },
     {
@@ -2730,6 +2799,10 @@
     {
       "id": "C29",
       "text": "客房加入 B 方案：拆掉 120 衣櫃，Queen 150 × 200 床頭靠東牆、兩側都能上下床（靠窗 45、南側約 100），LINNMON 100 × 60 書桌靠東牆南段。A／B 可切換（?guest=a|b）。"
+    },
+    {
+      "id": "C30",
+      "text": "客房改為三個方案：A 拆衣櫃放 MALM Queen 收納床靠窗＋MICKE 書桌面向走廊＋69 窄衣櫃；B Super single＋保留衣櫃＋MICKE 書桌；原始（保留原床與衣櫃）。"
     }
   ],
   "measurement_policy": {
@@ -2932,29 +3005,48 @@
     "guest": [
       {
         "id": "guest-a",
-        "name": "A · 床沿窗＋書桌凹槽",
+        "name": "方案 A",
         "layout": "guest-a",
         "notes": {
-          "床位 layout": "Queen 150 × 200（IKEA SLATTUM 外框 206 × 154）。床頭靠東牆，長邊沿北窗、離窗牆 10；床尾到西牆 41，靠窗側的人從床尾上下床。",
-          "書桌": "原 120 衣櫃那排改為「書桌 70 + 衣櫃 50」：書桌凹槽 70 寬、60 深，桌高約 75、上方加層板。椅子坐在床與書桌之間 76 的走道。",
-          "衣櫃設計": "衣櫃縮為 50 寬、60 深、到天花，單門；客人短住夠用。",
-          "動線": "門（西南，90 開門半徑）→ 床南側 76 走道 → 書桌與衣櫃；床尾 41 通往窗側。開門範圍不碰任何家具。",
-          "床型與實際尺寸": "建議 IKEA 150 × 200。若改買新加坡規格 Queen 152 × 190（外框約 196），床尾走道變約 51。",
-          "設計備註": "兩側都留 ≥45 走道的雙人床放進 247 × 300，就沒有書桌的位置；所以床一側靠窗，換到一張 70 書桌。"
-        }
+          "床": "IKEA MALM 收納床（高床架＋2 收納箱），Queen 150 × 200，外框 209 × 166。床頭靠東牆、離窗牆 5，只從南側上下床；收納箱從南側拉出。",
+          "書桌": "IKEA MICKE 73 × 50（最小款）靠南牆、緊鄰門框，坐著面向走廊。",
+          "窄衣櫃": "南牆東段剩 69.2（247.2 − 門框 105 − 書桌 73）。做 69 寬 × 60 深、到天花，雙門各約 34.6。",
+          "動線": "開門範圍（半徑 90）不碰家具；床到書桌椅子約 42、到衣櫃門面 69；床尾到西牆 38。",
+          "取捨": "拆掉原 120 衣櫃，換到 Queen 床＋書桌＋窄衣櫃；靠窗那側不能上下床。"
+        },
+        "label": [
+          361,
+          214
+        ]
       },
       {
         "id": "guest-b",
-        "name": "B · 拆衣櫃，兩側上下床",
+        "name": "方案 B",
         "layout": "guest-b",
         "notes": {
-          "床位 layout": "Queen 150 × 200（IKEA SLATTUM 外框 206 × 154）。床頭靠東牆，兩側都能上下床：靠窗側 45、南側約 100；床尾到西牆 41。",
-          "書桌": "LINNMON 100 × 60 靠東牆南段（床頭南邊），北端兼南側床頭櫃；椅子朝東坐，在床南側走道內。",
-          "衣櫃設計": "原 120 × 60 衣櫃敲掉，不做衣櫃。客人用西牆掛衣鉤、行李箱放床尾或床下。",
-          "動線": "門（西南，90 開門半徑）→ 床南側約 100 的走道 → 書桌；床尾 41 通往窗側 45 走道。開門範圍不碰任何家具。",
-          "床型與實際尺寸": "建議 IKEA 150 × 200。若改買新加坡規格 Queen 152 × 190（外框約 196），床尾走道變約 51。",
-          "設計備註": "拆衣櫃換到兩件事：雙人床兩側都有走道，書桌可以做到 100 寬。代價是沒有正式衣櫃。"
-        }
+          "床": "Super single：新加坡規格床墊 107 × 190（床架約 115 × 200，示意）。床頭靠東牆、離窗牆 5。",
+          "書桌": "IKEA MICKE 73 × 50 靠西牆，椅子朝西；在開門範圍北側。",
+          "衣櫃": "保留原 120 × 60 衣櫃（右下）。",
+          "動線": "床到衣櫃門面 120，衣櫃門打開後仍有約 60；開門範圍不碰家具。",
+          "取捨": "單人床＋書桌最寬鬆，但只能睡一人。"
+        },
+        "label": [
+          392,
+          197
+        ]
+      },
+      {
+        "id": "guest-original",
+        "name": "原始",
+        "layout": "guest-original",
+        "notes": {
+          "床位 layout": "原 BEDROOM 2 配置左右鏡像，靠客房右內牆對齊（床約 152 × 191，原圖符號）。",
+          "衣櫃設計": "與小孩房相同的 120 × 60 cm 衣櫃，位於右下。"
+        },
+        "label": [
+          378,
+          204
+        ]
       }
     ]
   },

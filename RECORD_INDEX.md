@@ -40,11 +40,13 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
-| GST-01 | `guest-wardrobe` | 客房衣櫃（50） | 50 × 60 |
-| GST-03 | `guest-desk` | 客房書桌凹槽 | 70 × 60 |
-| GST-04 | `guest-bed-b` | 客房雙人床（B · Queen 150 × 200） | 154 × 206 |
-| GST-05 | `guest-desk-b` | 客房書桌（B · 100 × 60） | 100 × 60 |
-| GST-02 | `guest-bed` | 客房雙人床（Queen 150 × 200） | 154 × 206 |
+| GST-01 | `guest-wardrobe` | 客房衣櫃 | 120 × 60 |
+| GST-03 | `guest-bed-a` | 客房床（A · MALM 收納床 Queen） | 166 × 209 |
+| GST-04 | `guest-desk-a` | 客房書桌（A · MICKE 73 × 50） | 73 × 50 |
+| GST-05 | `guest-wardrobe-a` | 客房窄衣櫃（A · 69） | 69 × 60 |
+| GST-06 | `guest-bed-b` | 客房床（B · Super single） | 115 × 200 |
+| GST-07 | `guest-desk-b` | 客房書桌（B · MICKE 73 × 50） | 73 × 50 |
+| GST-02 | `guest-bed` | 客房床 | 152 × 191 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |
 | KIT-10 | `kitchen-oven` | 嵌入式烤箱（爐下） | 80 × 60 |
 | KIT-06 | `kitchen-hob` | 瓦斯爐 | 75 × 42 |

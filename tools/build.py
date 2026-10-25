@@ -19,18 +19,16 @@ kid_bed=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8])"[^>]
 assert len(kid_bed)==23
 kid=kid_source
 for fragment in kid_bed:kid=kid.replace(fragment,'')
-# R23: guest copy drops the mirrored bed (666-688) and wardrobe (429-437); redrawn in src/furniture-guest-plan.svg.
-guest_drop=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8]|429|43[0-7])"[^>]*/>',kid_source)
-assert len(guest_drop)==32
-guest=kid_source
-for fragment in guest_drop:guest=guest.replace(fragment,'')
+# R25: guest schemes — A drawn in furniture-guest-plan.svg; B = mirrored wardrobe only + furniture-guest-plan-b.svg; original = full mirrored kid symbol.
+guest_wardrobe=kid_source
+for fragment in kid_bed:guest_wardrobe=guest_wardrobe.replace(fragment,'')
 old_study=read('furniture-guest.svg')
 # R20: desk front (129) and both chairs (646-665, 808-827) removed; only the 120x60 cabinet stays, rotated 180°.
 study_drop=re.findall(r'<path\b[^>]*data-source-path="(?:129|64[6-9]|65\d|66[0-5]|80[89]|81\d|82[0-7])"[^>]*/>',old_study)
 assert len(study_drop)==41
 study=old_study
 for fragment in study_drop:study=study.replace(fragment,'')
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{guest}</g><g id="guest-plan-a">'+read('furniture-guest-plan.svg')+'</g><g id="guest-plan-b" hidden>'+read('furniture-guest-plan-b.svg')+'</g>'
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g id="guest-plan-a">'+read('furniture-guest-plan.svg')+'</g><g id="guest-plan-b" hidden><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+guest_wardrobe+'</g>'+read('furniture-guest-plan-b.svg')+'</g><g id="guest-plan-original" hidden><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+kid_source+'</g></g>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)

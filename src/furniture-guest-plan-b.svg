@@ -1,9 +1,8 @@
-<!-- R24 (2026-10-25) guest scheme B: wardrobe removed. Queen 150×200 (IKEA SLATTUM 206 × 154) headboard on the east wall with 45 to the window wall
-     and ≈100 on the south side; LINNMON 100 × 60 desk on the east wall (y200–300), its north end doubling as the south bedside table. Units: PDF pt. -->
-<path data-layout="guest-b-bed" class="furnishing" d="M361.6 157.52H420.0V201.17H361.6Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
-<path data-layout="guest-b-bed-headboard" class="furnishing" d="M417.73 157.52V201.17" fill="none" stroke="currentColor" stroke-width="0.24"/>
-<path data-layout="guest-b-bed-pillow" class="furnishing" d="M408.04 161.77H416.36Q417.16 161.77 417.16 162.57V176.56Q417.16 177.36 416.36 177.36H408.04Q407.24 177.36 407.24 176.56V162.57Q407.24 161.77 408.04 161.77Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="guest-b-bed-pillow" class="furnishing" d="M408.04 181.33H416.36Q417.16 181.33 417.16 182.13V196.12Q417.16 196.92 416.36 196.92H408.04Q407.24 196.92 407.24 196.12V182.13Q407.24 181.33 408.04 181.33Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="guest-b-bed-duvet" class="furnishing" d="M381.44 157.52V201.17M383.14 157.52V201.17" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="guest-b-desk" class="furnishing" d="M402.98 201.45H420V229.84H402.98Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
-<path data-layout="guest-b-chair" class="furnishing" d="M392.27 209.26H402.63Q403.83 209.26 403.83 210.46V220.82Q403.83 222.02 402.63 222.02H392.27Q391.07 222.02 391.07 220.82V210.46Q391.07 209.26 392.27 209.26Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<!-- R25 guest scheme B: original 120 wardrobe kept (mirrored source symbol, drawn by build). Super single SG 107 × 190 (frame ≈115 × 200, indicative) head east, 5 off the window wall;
+     MICKE 73 × 50 on the west wall (y125–198), chair facing west. Units: PDF pt. -->
+<path data-layout="guest-b-bed" class="furnishing" d="M363.3 146.18H420.0V178.78H363.3Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-b-bed-headboard" class="furnishing" d="M417.73 146.18V178.78" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-b-bed-pillow" class="furnishing" d="M408.04 152.05H416.36Q417.16 152.05 417.16 152.85V172.11Q417.16 172.91 416.36 172.91H408.04Q407.24 172.91 407.24 172.11V152.85Q407.24 152.05 408.04 152.05Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-b-bed-duvet" class="furnishing" d="M383.14 146.18V178.78M384.84 146.18V178.78" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-b-desk" class="furnishing" d="M349.92 180.19H364.09V200.89H349.92Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-b-chair" class="furnishing" d="M362.88 184.16H373.24Q374.44 184.16 374.44 185.36V195.72Q374.44 196.92 373.24 196.92H362.88Q361.68 196.92 361.68 195.72V185.36Q361.68 184.16 362.88 184.16Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
