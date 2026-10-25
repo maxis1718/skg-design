@@ -820,7 +820,7 @@ function renderSection(elev, view, state) {
       const gv = b.groove ?? 0;
       g.rect(fx + dx, y0 + .2, 1.8, b.h - .4 - gv, {fill:C.front, stroke:C.line, 'stroke-width':.35});
       g.text(D + dx + 1.6, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
-      if (open) hdim(g, D, D + dx, y0 - 5.6, `${T('滿拉')} ≈ ${fmt(dx)}`);
+      if (open) hdim(g, D, D + dx, y0 - 5.6, `${T('滿拉')} ${fmt(dx)}`);
     } else if (b.kind === 'toprack') {
       // Top-mounted side-pull trouser rack in section: fixed runner under the board (b.rail.fixed = [x0, x1]), moving profile
       // (b.rail.from, len) with hooks pointing at the viewer (pitch along the depth) and garments folded over each hook.
@@ -837,7 +837,7 @@ function renderSection(elev, view, state) {
       g.rect(x0 + len - 1.2, hy - .6, 1.2, rh - 2.4, {fill:'#5b625e', stroke:'none', rx:.3});
       const lx = Math.max(D, x0 + len) + 1.6;
       g.text(lx, y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
-      if (open) hdim(g, D, x0 + len, y0 - 5.6, `${T('滿拉')} ≈ ${fmt(dx)}`);
+      if (open) hdim(g, D, x0 + len, y0 - 5.6, `${T('滿拉')} ${fmt(dx)}`);
     }
     else if (b.kind === 'tier') {
       const tray = D - back - 3, dx = whole ? dxAll : open ? ext : 0, x = back + dx;
@@ -858,7 +858,7 @@ function renderSection(elev, view, state) {
       if (!whole) g.rect(D - 6, y0 + 1.6, 1, 1.2, {fill:C.line, stroke:'none'});
       const lx = (open || whole && open) ? x + tray + 1.2 : D + 1.6;
       if (!whole || open) g.text(lx + (whole ? 2 : 0), y0 + b.h / 2 - f * .3, b.short || b.label, {fill:C.line, 'font-size':f * .74});
-      if (!whole && open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `${T('滿拉')} ≈ ${fmt(ext)}`);
+      if (!whole && open && b === B.filter(z => z.kind === 'tier').at(-1)) hdim(g, D, D + ext, y0 + b.h + 3.2, `${T('滿拉')} ${fmt(ext)}`);
     } else if (b.kind === 'drawers') {
       // b.boxFrom/boxTo/boxLift/boxH: explicit drawer-box geometry (e.g. a service void behind a short box).
       // b.inset: inner drawer behind a door — front set back by inset; b.groove: top finger groove on classic fronts.
@@ -880,7 +880,7 @@ function renderSection(elev, view, state) {
   }
   if (whole) {
     g.rect(D - 1.8 + dxAll, firstY + .2, 1.8, top - firstY - .4 - (FS ? FS.groove ?? 2 : 0), {fill:C.front, stroke:C.line, 'stroke-width':.4});
-    if (open) hdim(g, D, D + ext, top + 3.4, `${T('拉出')} ≈ ${fmt(ext)}`);
+    if (open) hdim(g, D, D + ext, top + 3.4, `${T('拉出')} ${fmt(ext)}`);
     else g.text(D + 1.6, firstY + (top - firstY) / 2, u.caption || '', {fill:C.line, 'font-size':f * .74});
   }
   if (!u.noBack) g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});

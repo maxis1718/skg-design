@@ -18,7 +18,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 
 | Code | Stable ID | 名稱 | 圖面 W × D cm |
 | --- | --- | --- | --- |
-| LIV-01 | `living-cabinet` | 客餐廳櫃體（用途待定） | 190 × 60 |
+| LIV-01 | `living-cabinet` | 客餐廳櫃體 | 190 × 60 |
 | LIV-02 | `piano` | 鋼琴 | 130 × 61 |
 | LIV-03 | `tv-console` | 電視櫃 | 210 × 45 |
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |
@@ -34,26 +34,26 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | HLP-01 | `helper-bed` | 女傭房床 | 107 × 200 |
 | MST-01 | `master-wardrobe-left` | 主臥左側衣櫃 | 90 × 60 |
 | MST-02 | `master-wardrobe-right` | 主臥右側衣櫃 | 90 × 60 |
-| MST-03 | `master-unlabelled-cross-cabinet` | 未標示用途櫃形符號 | 173 × 33 |
+| MST-03 | `master-unlabelled-cross-cabinet` | 未標示櫃體 | 173 × 33 |
 | MST-04 | `master-bed` | 主臥床 | 185 × 200 |
 | BTH-01 | `bath1-mirror-cabinet` | 主浴洗手台＋鏡櫃 | 197.7 × 50 |
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |
-| KIT-10 | `kitchen-oven` | 嵌入式烤箱（爐下） | 80 × 60 |
+| KIT-10 | `kitchen-oven` | 爐下烤箱 | 80 × 60 |
 | KIT-06 | `kitchen-hob` | 瓦斯爐 | 75 × 42 |
 | KIT-07 | `appliance-tower` | 電器櫃 | 60 × 65 |
 | KIT-08 | `dishwasher` | 洗碗機 | 60 × 60 |
-| KIT-09 | `spice-pullout` | 窄拉籃（三層 · 左） | 20 × 60 |
-| KIT-11 | `spice-pullout-r` | 窄拉籃（三層 · 右） | 20 × 60 |
+| KIT-09 | `spice-pullout` | 窄拉籃 · 左 | 20 × 60 |
+| KIT-11 | `spice-pullout-r` | 窄拉籃 · 右 | 20 × 60 |
 | KID-01 | `kid-wardrobe` | 小孩房衣櫃 | 120 × 60 |
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
-| GST-01 | `guest-bed-a` | 客房床（A · MALM Queen） | 166 × 209 |
-| GST-02 | `guest-desk-a` | 客房書桌（A） | 60 × 45 |
-| GST-03 | `guest-wardrobe-a` | 客房訂製衣櫃（A） | 49 × 60 |
-| GST-04 | `guest-bed-b` | 客房床（B · MALM Queen） | 166 × 209 |
-| GST-05 | `guest-desk-b` | 客房書桌（B） | 60 × 45 |
-| GST-06 | `guest-wardrobe-b` | 客房訂製衣櫃（B） | 90 × 60 |
+| GST-01 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
+| GST-02 | `guest-desk-a` | 客房書桌 A | 60 × 45 |
+| GST-03 | `guest-wardrobe-a` | 客房衣櫃 A | 49 × 60 |
+| GST-04 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
+| GST-05 | `guest-desk-b` | 客房書桌 B | 60 × 45 |
+| GST-06 | `guest-wardrobe-b` | 客房衣櫃 B | 85 × 60 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
