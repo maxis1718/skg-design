@@ -47,19 +47,20 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-11 | `spice-pullout-r` | 窄拉籃 · 右 | 20 × 60 |
 | KID-01 | `kid-wardrobe` | 小孩房衣櫃 | 120 × 60 |
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
+| STD-05 | `study-desk` | 書房電腦桌 | 100 × 50 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | GST-01 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
 | GST-02 | `guest-desk-a` | 客房書桌 A | 60 × 45 |
 | GST-03 | `guest-wardrobe-a` | 客房衣櫃 A | 49 × 60 |
 | GST-04 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
 | GST-05 | `guest-desk-b` | 客房書桌 B | 60 × 45 |
-| GST-06 | `guest-wardrobe-b` | 客房衣櫃 B | 85 × 60 |
+| GST-06 | `guest-wardrobe-b` | 客房衣櫃 B | 80 × 60 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
 Geometry edits:
 - Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).
-- Rooms (R27): NW room = `kid` (bed removed, keeps the original 120×60 wardrobe `kid-wardrobe`); NE room = `study` (mirrored original wardrobe `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`, shifted); south room = `guest`.
+- Rooms (R27): NW room = `kid` (bed removed, keeps the original 120×60 wardrobe `kid-wardrobe`); NE room = `study` (mirrored original wardrobe `study-wardrobe`, massage chair (backrest east, reclines west) + 100 desk + 27" monitor in `src/furniture-kid-study.svg`); south room = `guest`.
 - Guest (R27): schemes A/B in `src/furniture-guest-plan-a.svg` / `-b.svg` (MALM Queen 15 off the window for the curtain; A = wardrobe 49 + desk on the west wall, B = wardrobe 90 + desk on the north wall). Toggle: roomVersions.guest, objects carry onlyGuest, URL ?guest=a|b.
 - Doors (R21): NE/NW rooms keep swing doors; south room and bath-2 use corridor-side sliding doors in `src/furniture-doors.svg`.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.

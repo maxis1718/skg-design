@@ -1,9 +1,11 @@
-<!-- R27 (2026-10-26): massage chair moved with the study to the north-east room (former guest room, window on the north wall); same placement rule, shifted by translate(76.56 0). Units: PDF pt. -->
-<g transform="translate(76.56 0)">
-<!-- Study massage chair OSIM uLove 3 (OS-8218): upright 76 × 127, reclined 185 (manual). Long side parallel to the window, 10 off the north window wall; backrest 10 off the west wall, facing east. Dashed = reclined length 185. -->
-<path data-layout="massage-chair" class="furnishing" d="M276.19 168.13Q276.19 169.13 277.19 169.13H311.19Q312.19 169.13 312.19 168.13V148.59Q312.19 147.59 311.19 147.59H277.19Q276.19 147.59 276.19 148.59Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="massage-chair-arms" class="furnishing" d="M276.19 165.73H303.69M276.19 150.99H303.69" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="massage-chair-back" class="furnishing" d="M283.28 165.73V150.99" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="massage-chair-footrest" class="furnishing" d="M303.69 169.13V147.59" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="massage-chair-recline" class="furnishing" d="M312.19 169.13H328.63V147.59H312.19" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="1 0.8"/>
-</g>
+<!-- R28 (2026-10-26): study (NE room, window on the north wall, 247 × 300). Massage chair OSIM uLove 3 76 × 127: 10 off the window, backrest 10 off the EAST wall, reclines west to 185 (dashed). Desk 100 × 50 (depth schematic) on the east wall between the chair and the wardrobe, 27" monitor (≈61.4 wide, schematic), office chair facing east. Units: PDF pt. -->
+<path data-layout="massage-chair" class="furnishing" d="M382.09 147.59H416.11Q417.1 147.59 417.1 148.59V168.15Q417.1 169.14 416.11 169.14H382.09Q381.1 169.14 381.1 168.15V148.59Q381.1 147.59 382.09 147.59Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="massage-chair-arms" class="furnishing" d="M417.1 150.0H389.61M417.1 166.73H389.61" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="massage-chair-back" class="furnishing" d="M410.01 150.0V166.73" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="massage-chair-footrest" class="furnishing" d="M389.61 147.59V169.14" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="massage-chair-recline" class="furnishing" d="M381.1 147.59H364.66V169.14H381.1" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
+<path data-layout="study-desk" class="furnishing" d="M405.76 170.27H419.94V198.62H405.76Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="study-monitor" class="furnishing" d="M416.82 175.74H417.95V193.15H416.82Z" fill="none" stroke="currentColor" stroke-width="0.18" stroke-linejoin="round"/>
+<path data-layout="study-monitor-stand" class="furnishing" d="M414.55 181.61H417.95V187.28H414.55Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="study-chair" class="furnishing" d="M390.74 177.36H402.64Q403.78 177.36 403.78 178.49V190.4Q403.78 191.53 402.64 191.53H390.74Q389.61 191.53 389.61 190.4V178.49Q389.61 177.36 390.74 177.36Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="study-chair-back" class="furnishing" d="M390.74 178.49V190.4" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
