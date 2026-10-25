@@ -1,0 +1,15 @@
+<!-- R23 (2026-10-25): guest room re-plan. Queen 150×200 (IKEA SLATTUM overall 206 × 154) head at the east wall, 10 off the north window wall;
+     the 120 wardrobe run becomes desk niche 70 (x385.92–405.76) + wardrobe 50 (x405.76–420), 60 deep. Units: PDF pt, 1 pt = 3.5277778 cm. -->
+<path data-layout="guest-bed" class="furnishing" d="M361.61 147.59H420.0V191.24H361.61Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-bed-headboard" class="furnishing" d="M417.73 147.59V191.24" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-bed-pillow" class="furnishing" d="M408.04 151.84H416.36Q417.16 151.84 417.16 152.64000000000001V166.63Q417.16 167.43 416.36 167.43H408.04Q407.24 167.43 407.24 166.63V152.64000000000001Q407.24 151.84 408.04 151.84Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-bed-pillow" class="furnishing" d="M408.04 171.4H416.36Q417.16 171.4 417.16 172.20000000000002V186.19Q417.16 186.99 416.36 186.99H408.04Q407.24 186.99 407.24 186.19V172.20000000000002Q407.24 171.4 408.04 171.4Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-bed-duvet" class="furnishing" d="M381.45 147.59V191.24M383.15 147.59V191.24" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-desk-niche" class="furnishing" d="M385.92 212.8H405.76V229.84H385.92Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-desk-top" class="furnishing" d="M385.92 214.25H405.76" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="0.8 0.6"/>
+<path data-layout="guest-desk-chair" class="furnishing" d="M390.65999999999997 200.89H401.02000000000004Q402.22 200.89 402.22 202.08999999999997V212.45000000000002Q402.22 213.65 401.02000000000004 213.65H390.65999999999997Q389.46 213.65 389.46 212.45000000000002V202.08999999999997Q389.46 200.89 390.65999999999997 200.89Z" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-wardrobe" class="furnishing" d="M405.76 212.8H420V229.84H405.76Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="guest-wardrobe-rail" class="furnishing" d="M405.76 221.32H420" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-wardrobe-hanger" class="furnishing" d="M409.32 215.2V226.64" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-wardrobe-hanger" class="furnishing" d="M412.88 215.2V226.64" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="guest-wardrobe-hanger" class="furnishing" d="M416.44 215.2V226.64" fill="none" stroke="currentColor" stroke-width="0.12"/>

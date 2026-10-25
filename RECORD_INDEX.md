@@ -40,8 +40,9 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
-| GST-01 | `guest-wardrobe` | 客房衣櫃 | 120 × 60 |
-| GST-02 | `guest-bed` | 客房床 | 152 × 191 |
+| GST-01 | `guest-wardrobe` | 客房衣櫃（50） | 50 × 60 |
+| GST-03 | `guest-desk` | 客房書桌凹槽 | 70 × 60 |
+| GST-02 | `guest-bed` | 客房雙人床（Queen 150 × 200） | 154 × 206 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |
 | KIT-10 | `kitchen-oven` | 嵌入式烤箱（爐下） | 80 × 60 |
 | KIT-06 | `kitchen-hob` | 瓦斯爐 | 75 × 42 |
@@ -55,5 +56,6 @@ All actual W/D/H/brand/model fields are initially null. Keep source geometry and
 Geometry edits:
 - Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).
 - Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.
+- Guest (R23): mirrored kid bed (666–688) and wardrobe (429–437) dropped from the guest copy; Queen 150×200 + desk niche 70 + wardrobe 50 drawn in `src/furniture-guest-plan.svg`.
 - Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.
 - Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.

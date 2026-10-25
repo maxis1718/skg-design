@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R22",
+    "revision": "R23",
     "unit": "cm",
     "date": "2026-10-25"
   },
@@ -1030,15 +1030,17 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "床位 layout": "原 BEDROOM 2 配置左右鏡像，靠客房右內牆對齊。",
-        "衣櫃設計": "與小孩房相同的 120 × 60 cm 衣櫃，位於右下。",
-        "設計備註": "原 STUDY 的桌與櫃已移到書房；家具本身不因房寬差約 3 cm 而縮放。",
-        "床型與實際尺寸": null
+        "床位 layout": "Queen 150 × 200（IKEA SLATTUM 外框 206 × 154）。床頭靠東牆，長邊沿北窗、離窗牆 10；床尾到西牆 41，靠窗側的人從床尾上下床。",
+        "書桌": "原 120 衣櫃那排改為「書桌 70 + 衣櫃 50」：書桌凹槽 70 寬、60 深，桌高約 75、上方加層板。椅子坐在床與書桌之間 76 的走道。",
+        "衣櫃設計": "衣櫃縮為 50 寬、60 深、到天花，單門；客人短住夠用。",
+        "動線": "門（西南，90 開門半徑）→ 床南側 76 走道 → 書桌與衣櫃；床尾 41 通往窗側。開門範圍不碰任何家具。",
+        "床型與實際尺寸": "建議 IKEA 150 × 200。若改買新加坡規格 Queen 152 × 190（外框約 196），床尾走道變約 51。",
+        "設計備註": "兩側都留 ≥45 走道的雙人床放進 247 × 300，就沒有書桌的位置；所以床一側靠窗，換到一張 70 書桌。"
       },
       "name": "客房",
       "english": "Guest room",
       "number": "07",
-      "focus": "鏡像床位與同款衣櫃"
+      "focus": "雙人床＋小書桌與動線"
     }
   ],
   "objects": [
@@ -1919,16 +1921,16 @@
     {
       "id": "guest-wardrobe",
       "room_id": "guest",
-      "name": "客房衣櫃",
+      "name": "客房衣櫃（50）",
       "bounds_pt": [
-        385.92,
+        405.76,
         212.8,
         420,
         229.84
       ],
       "dimensions": {
         "w": {
-          "cm": 120,
+          "cm": 50,
           "status": "design"
         },
         "d": {
@@ -1943,28 +1945,29 @@
         "brand": null,
         "model": null
       },
-      "source_note": "依使用者要求，複製小孩房衣櫃並左右鏡像，尺寸同為 120 × 60 cm。",
+      "source_note": "原 120 衣櫃改為「書桌 70 + 衣櫃 50」。衣櫃 50 寬、60 深、到天花，單門（開門後離床約 26）。",
       "status": "user-design",
       "code": "GST-01"
     },
     {
-      "id": "guest-bed",
+      "id": "guest-desk",
+      "code": "GST-03",
       "room_id": "guest",
-      "name": "客房床",
+      "name": "客房書桌凹槽",
       "bounds_pt": [
-        363,
-        153.28,
-        417.12,
-        196.36
+        385.92,
+        212.8,
+        405.76,
+        229.84
       ],
       "dimensions": {
         "w": {
-          "cm": 152,
-          "status": "scaled"
+          "cm": 70,
+          "status": "design"
         },
         "d": {
-          "cm": 191,
-          "status": "scaled"
+          "cm": 60,
+          "status": "design"
         }
       },
       "actual": {
@@ -1974,7 +1977,37 @@
         "brand": null,
         "model": null
       },
-      "source_note": "小孩房床符號左右鏡像複製。圖面占位約 152 × 191 cm，實物尺寸待提供。",
+      "source_note": "衣櫃排西段做書桌凹槽 70 × 60（桌面深 55、高約 75，上方加層板與檯燈）；椅子坐在床與書桌之間 76 的走道，不用時推進凹槽。",
+      "status": "user-design"
+    },
+    {
+      "id": "guest-bed",
+      "room_id": "guest",
+      "name": "客房雙人床（Queen 150 × 200）",
+      "bounds_pt": [
+        361.61,
+        147.59,
+        420.0,
+        191.24
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 154,
+          "status": "design"
+        },
+        "d": {
+          "cm": 206,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "建議 IKEA Queen 150 × 200，外框以 SLATTUM（206 × 154，最省空間的雙人床架）計。床頭靠東牆、長邊離窗牆 10；床尾到西牆 41，床到書桌／衣櫃 76。實際床架待選。",
       "status": "user-design",
       "code": "GST-02"
     },
@@ -2619,6 +2652,10 @@
     {
       "id": "C27",
       "text": "書房與小孩房互換：上方原小孩房改為書房，按摩椅同樣長邊沿窗、椅背靠西牆，保留 120 × 60 衣櫃；下方原書房改為小孩房並清空。言言的床先移除。"
+    },
+    {
+      "id": "C28",
+      "text": "客房重新規劃：Queen 150 × 200 床頭靠東牆、沿窗；衣櫃排改為書桌凹槽 70 + 衣櫃 50；床到書桌／衣櫃走道 76。"
     }
   ],
   "measurement_policy": {

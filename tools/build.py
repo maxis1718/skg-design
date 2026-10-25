@@ -19,13 +19,18 @@ kid_bed=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8])"[^>]
 assert len(kid_bed)==23
 kid=kid_source
 for fragment in kid_bed:kid=kid.replace(fragment,'')
+# R23: guest copy drops the mirrored bed (666-688) and wardrobe (429-437); redrawn in src/furniture-guest-plan.svg.
+guest_drop=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8]|429|43[0-7])"[^>]*/>',kid_source)
+assert len(guest_drop)==32
+guest=kid_source
+for fragment in guest_drop:guest=guest.replace(fragment,'')
 old_study=read('furniture-guest.svg')
 # R20: desk front (129) and both chairs (646-665, 808-827) removed; only the 120x60 cabinet stays, rotated 180°.
 study_drop=re.findall(r'<path\b[^>]*data-source-path="(?:129|64[6-9]|65\d|66[0-5]|80[89]|81\d|82[0-7])"[^>]*/>',old_study)
 assert len(study_drop)==41
 study=old_study
 for fragment in study_drop:study=study.replace(fragment,'')
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{kid_source}</g>'
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">{guest}</g><g id="guest-plan-geometry">'+read('furniture-guest-plan.svg')+'</g>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)
@@ -64,6 +69,6 @@ for r in project['rooms']:
 lines+=['','## Objects','','| Code | Stable ID | 名稱 | 圖面 W × D cm |','| --- | --- | --- | --- |']
 for o in project['objects']:
     w=o['dimensions']['w']['cm'];d=o['dimensions']['d']['cm'];lines.append(f'| {o["code"]} | `{o["id"]}` | {o["name"]} | {w} × {d} |')
-lines+=['','All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.','','Geometry edits:','- Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).','- Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.','- Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.','- Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.']
+lines+=['','All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.','','Geometry edits:','- Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).','- Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.','- Guest (R23): mirrored kid bed (666–688) and wardrobe (429–437) dropped from the guest copy; Queen 150×200 + desk niche 70 + wardrobe 50 drawn in `src/furniture-guest-plan.svg`.','- Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.','- Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.']
 (ROOT/'RECORD_INDEX.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
 print(json.dumps(manifest))
