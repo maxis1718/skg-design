@@ -117,3 +117,5 @@ footer{font-size:12px}
 @media print{.details-layout>.inspector{display:none!important}.details-layout{display:block}}
 
 .elev-risk-callout{border:1px solid rgba(179,38,30,.38);background:rgba(179,38,30,.06);border-radius:10px;padding:12px 16px 10px;margin:0 0 18px}.elev-risk-callout h4.elev-risk-title{margin:0 0 6px;color:#b3261e;font-size:15px;font-weight:600}.elev-risk-callout ul.elev-risks{margin:0;padding-left:18px;color:#8f1f18;list-style:square}.elev-risk-callout li{margin:3px 0}.elev-risk-callout li::marker{color:#b3261e}
+.version-group{display:inline-flex;align-items:center;gap:9px;margin-left:10px;padding-left:12px;border-left:1px solid var(--line)}.version-group[hidden]{display:none}
+@media(max-width:760px){.version-group{margin-left:0;padding-left:0;border-left:0}}
