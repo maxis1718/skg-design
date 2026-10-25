@@ -19,7 +19,7 @@ kid_bed=re.findall(r'<path\b[^>]*data-source-path="(?:66[6-9]|67\d|68[0-8])"[^>]
 assert len(kid_bed)==23
 kid=kid_source
 for fragment in kid_bed:kid=kid.replace(fragment,'')
-# R25: guest schemes — A drawn in furniture-guest-plan.svg; B = mirrored wardrobe only + furniture-guest-plan-b.svg; original = full mirrored kid symbol.
+# R27: NE room (study) = mirrored wardrobe only; guest schemes A/B in the south room (furniture-guest-plan-a/-b.svg).
 guest_wardrobe=kid_source
 for fragment in kid_bed:guest_wardrobe=guest_wardrobe.replace(fragment,'')
 old_study=read('furniture-guest.svg')
@@ -28,7 +28,7 @@ study_drop=re.findall(r'<path\b[^>]*data-source-path="(?:129|64[6-9]|65\d|66[0-5
 assert len(study_drop)==41
 study=old_study
 for fragment in study_drop:study=study.replace(fragment,'')
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g id="guest-plan-a">'+read('furniture-guest-plan.svg')+'</g><g id="guest-plan-b" hidden><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+guest_wardrobe+'</g>'+read('furniture-guest-plan-b.svg')+'</g><g id="guest-plan-original" hidden><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+kid_source+'</g></g>'
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+guest_wardrobe+'</g><g id="guest-plan-a">'+read('furniture-guest-plan-a.svg')+'</g><g id="guest-plan-b" hidden>'+read('furniture-guest-plan-b.svg')+'</g>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)
@@ -47,7 +47,7 @@ for fragment in tv_wall:plan=plan.replace(fragment,'')
 swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*/>',plan)
 assert len(swing_doors)==4
 for fragment in swing_doors:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g><g id="kid-plan-a">'+read('furniture-kid-plan-a.svg')+'</g><g id="kid-plan-b" hidden>'+read('furniture-kid-plan-b.svg')+'</g>'
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
@@ -67,6 +67,6 @@ for r in project['rooms']:
 lines+=['','## Objects','','| Code | Stable ID | 名稱 | 圖面 W × D cm |','| --- | --- | --- | --- |']
 for o in project['objects']:
     w=o['dimensions']['w']['cm'];d=o['dimensions']['d']['cm'];lines.append(f'| {o["code"]} | `{o["id"]}` | {o["name"]} | {w} × {d} |')
-lines+=['','All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.','','Geometry edits:','- Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).','- Rooms (R22): study and kid room swapped — `study` is now the north room (former BEDROOM 2, keeps the 120×60 wardrobe as `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`); `kid` is the south room (former study), empty. The old rotated study group is no longer drawn.','- Guest (R23): mirrored kid bed (666–688) and wardrobe (429–437) dropped from the guest copy; Queen 150×200 + desk niche 70 + wardrobe 50 drawn in `src/furniture-guest-plan.svg` (scheme A); scheme B (wardrobe removed) in `src/furniture-guest-plan-b.svg`. Toggle: roomVersions.guest, objects carry onlyGuest, URL ?guest=a|b.','- Kid (R26): 言言 loft bed schemes in `src/furniture-kid-plan-a.svg` (slide against the window) and `-b.svg` (stool against the corridor wall). Toggle: roomVersions.kid, objects carry onlyKid, URL ?kid=a|b.','- Doors (R21): study (440/441) and bath-2 (510/511) swing doors replaced by corridor-side sliding doors in `src/furniture-doors.svg`.','- Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.']
+lines+=['','All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.','','Geometry edits:','- Guest mirroring: `tools/build.py`, `data-layout="guest-mirrored"`, matrix(-1,0,0,1,693.36,0).','- Rooms (R27): NW room = `kid` (bed removed, keeps the original 120×60 wardrobe `kid-wardrobe`); NE room = `study` (mirrored original wardrobe `study-wardrobe`, massage chair in `src/furniture-kid-study.svg`, shifted); south room = `guest`.','- Guest (R27): schemes A/B in `src/furniture-guest-plan-a.svg` / `-b.svg` (MALM Queen 15 off the window for the curtain; A = wardrobe 49 + desk on the west wall, B = wardrobe 90 + desk on the north wall). Toggle: roomVersions.guest, objects carry onlyGuest, URL ?guest=a|b.','- Doors (R21): NE/NW rooms keep swing doors; south room and bath-2 use corridor-side sliding doors in `src/furniture-doors.svg`.','- Fixed physical geometry: `src/plan-paths.svg`; native PDFs are not required for ordinary note/actual-size edits.']
 (ROOT/'RECORD_INDEX.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
 print(json.dumps(manifest))

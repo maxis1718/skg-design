@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R26",
+    "revision": "R27",
     "unit": "cm",
-    "date": "2026-10-25"
+    "date": "2026-10-26"
   },
   "scale": {
     "title": "1:100 (A4)",
@@ -885,57 +885,6 @@
     },
     {
       "id": "kid",
-      "source_label": "BEDROOM 3",
-      "polygon_pt": [
-        [
-          273.36,
-          266.68
-        ],
-        [
-          344.28,
-          266.68
-        ],
-        [
-          344.28,
-          348.88
-        ],
-        [
-          273.36,
-          348.88
-        ]
-      ],
-      "bounds_pt": [
-        273.36,
-        266.68,
-        344.28,
-        348.88
-      ],
-      "parts": [
-        {
-          "label": "內牆範圍（含櫃體占位）",
-          "bounds_pt": [
-            273.36,
-            266.68,
-            344.28,
-            348.88
-          ],
-          "horizontal_cm": 250,
-          "vertical_cm": 290
-        }
-      ],
-      "measurement_status": "scaled-estimate",
-      "uncertainty_cm": null,
-      "notes": {
-        "配置": "言言的半高床＋滑梯，A／B 兩個方案可切換（?kid=a|b）。",
-        "門": "拉門：明裝掛軌在走道側，往東滑到浴室 2 門邊；門片約 94，淨開口約 86。"
-      },
-      "name": "小孩房",
-      "english": "Kid room",
-      "number": "05",
-      "focus": "言言半高床＋滑梯（A／B）"
-    },
-    {
-      "id": "study",
       "source_label": "BEDROOM 2",
       "polygon_pt": [
         [
@@ -977,18 +926,15 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "按摩椅": "OSIM uLove 3（76 × 127 × 116，躺平 185）。長邊與窗平行、離窗牆 10；椅背離西牆 10，面向東。直立時前方到東牆約 113，躺平後仍有約 55。",
-        "衣櫃": "保留原小孩房 120 × 60 衣櫃（原圖標註），在西南角；衣櫃前到按摩椅約 154。",
-        "電源與照明": "按摩椅旁需 13A 接地插座（平均 260 W）。手冊建議避免直曬，窗邊要有窗簾或百葉；離電視、音響至少 1 m。",
-        "設計備註": "原小孩房（BEDROOM 2）改為書房（R22）。按摩椅約 105 kg，搬入時保護地板；門寬需 80 以上。"
+        "配置": "原書房位置改為小孩房（R27）：床已移除、待規劃；保留原 120 × 60 衣櫃（西南角，原圖標註）。"
       },
-      "name": "書房",
-      "english": "Study",
-      "number": "06",
-      "focus": "按摩椅與衣櫃"
+      "name": "小孩房",
+      "english": "Kid room",
+      "number": "05",
+      "focus": "床位與收納（待規劃）"
     },
     {
-      "id": "guest",
+      "id": "study",
       "source_label": "STUDY ROOM",
       "polygon_pt": [
         [
@@ -1029,11 +975,68 @@
       ],
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
-      "notes": {},
+      "notes": {
+        "按摩椅": "OSIM uLove 3（76 × 127 × 116，躺平 185），從原書房搬過來。長邊與窗平行、離窗牆 10；椅背離西牆 10，面向東。直立時前方到東牆約 110，躺平後仍有約 52。",
+        "衣櫃": "保留原客房 120 × 60 衣櫃（原圖標註），在東南角；衣櫃前到按摩椅約 154。",
+        "門": "原開門（西南角內開），開門範圍不碰家具。",
+        "電源與照明": "按摩椅旁需 13A 接地插座（平均 260 W）。手冊建議避免直曬，窗邊要有窗簾或百葉；離電視、音響至少 1 m。",
+        "設計備註": "原客房（STUDY ROOM）改為書房（R27）。按摩椅約 105 kg，搬入時保護地板；門寬需 80 以上。"
+      },
+      "name": "書房",
+      "english": "Study",
+      "number": "06",
+      "focus": "按摩椅與衣櫃"
+    },
+    {
+      "id": "guest",
+      "source_label": "BEDROOM 3",
+      "polygon_pt": [
+        [
+          273.36,
+          266.68
+        ],
+        [
+          344.28,
+          266.68
+        ],
+        [
+          344.28,
+          348.88
+        ],
+        [
+          273.36,
+          348.88
+        ]
+      ],
+      "bounds_pt": [
+        273.36,
+        266.68,
+        344.28,
+        348.88
+      ],
+      "parts": [
+        {
+          "label": "內牆範圍（含櫃體占位）",
+          "bounds_pt": [
+            273.36,
+            266.68,
+            344.28,
+            348.88
+          ],
+          "horizontal_cm": 250,
+          "vertical_cm": 290
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": null,
+      "notes": {
+        "門": "拉門：明裝掛軌在走道側，往東滑到浴室 2 門邊；門片約 94，淨開口約 86（北牆，離西牆 150–240）。",
+        "窗簾": "整面南牆是窗。床離窗牆留 15 給窗簾軌道與收簾，床不能推到底。"
+      },
       "name": "客房",
       "english": "Guest room",
       "number": "07",
-      "focus": "雙人床＋小書桌與動線"
+      "focus": "雙人床＋書桌＋衣櫃（A／B）"
     }
   ],
   "objects": [
@@ -1842,315 +1845,6 @@
       "source_note": "平面占位是整面牆：原圖洗手台凹位（≈89.7 × 57）加馬桶後矮台段（≈80 × 22），合計長 ≈169.8（圖面估算）；占位深度以洗手台 57 計，馬桶段的鏡櫃本身只有 19 深，在矮台 22 之內。原圖沒有畫臉盆，盆位假設置中在凹位。上方整面鏡櫃（深 19、內淨 15，櫃底 115 到天花）是設計提案，見立面。衛浴 2 從走廊進出，走廊屬客餐廳分頁，所以歸在客餐廳。"
     },
     {
-      "id": "study-wardrobe",
-      "room_id": "study",
-      "label": "Existing wardrobe",
-      "bounds_pt": [
-        273.36,
-        212.8,
-        307.44,
-        229.84
-      ],
-      "plan_horizontal_cm": 120.2,
-      "plan_vertical_cm": 60.1,
-      "nominal_width_cm": 120,
-      "nominal_depth_cm": 60,
-      "height_cm": null,
-      "status": "source-annotated",
-      "uncertainty_cm": null,
-      "notes": "Width120/depth60cm are explicitly dimensioned.",
-      "name": "書房衣櫃",
-      "source_note": "原小孩房（BEDROOM 2）衣櫃，原圖明示正面寬與深，已由 mm 換算為 cm。R22 房間互換後歸書房。",
-      "dimensions": {
-        "w": {
-          "cm": 120,
-          "status": "annotated"
-        },
-        "d": {
-          "cm": 60,
-          "status": "annotated"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "code": "STD-04"
-    },
-    {
-      "id": "massage-chair",
-      "code": "STD-03",
-      "room_id": "study",
-      "name": "按摩椅 OSIM uLove 3",
-      "bounds_pt": [
-        276.19,
-        147.59,
-        312.19,
-        169.13
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 76,
-          "status": "design"
-        },
-        "d": {
-          "cm": 127,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": 76,
-        "d": 127,
-        "h": 116,
-        "brand": "OSIM",
-        "model": "uLove 3 Well-Being Chair（OS-8218）"
-      },
-      "source_note": "使用者指定 OSIM uLove 3，官網尺寸 76 × 127 × 116（直立）。手冊：躺平 185 × 76 × 97；背後離牆至少 10（往前滑躺），前方留至少 80；約 105 kg、平均 260 W。長邊與窗平行、離北側窗牆 10；椅背離西牆 10，面向東；虛線為躺平長度。",
-      "status": "user-design"
-    },
-    {
-      "id": "guest-wardrobe",
-      "room_id": "guest",
-      "name": "客房衣櫃",
-      "bounds_pt": [
-        385.92,
-        212.8,
-        420,
-        229.84
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 120,
-          "status": "design"
-        },
-        "d": {
-          "cm": 60,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "依使用者要求，複製小孩房衣櫃並左右鏡像，尺寸同為 120 × 60 cm。原始配置與方案 B 保留。",
-      "status": "user-design",
-      "code": "GST-01",
-      "onlyGuest": [
-        "guest-original",
-        "guest-b"
-      ]
-    },
-    {
-      "id": "guest-bed-a",
-      "code": "GST-03",
-      "room_id": "guest",
-      "name": "客房床（A · MALM 收納床 Queen）",
-      "bounds_pt": [
-        360.75,
-        146.18,
-        420.0,
-        193.23
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 166,
-          "status": "design"
-        },
-        "d": {
-          "cm": 209,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "方案 A：IKEA MALM 高床架＋2 個收納箱，床墊 150 × 200，外框 209 × 166（IKEA SG 官網）。床頭靠東牆、離窗牆 5，只從南側上下床；收納箱從南側拉出。",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-a"
-      ]
-    },
-    {
-      "id": "guest-desk-a",
-      "code": "GST-04",
-      "room_id": "guest",
-      "name": "客房書桌（A · MICKE 73 × 50）",
-      "bounds_pt": [
-        379.68,
-        215.63,
-        400.38,
-        229.84
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 73,
-          "status": "design"
-        },
-        "d": {
-          "cm": 50,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": 73,
-        "d": 50,
-        "h": null,
-        "brand": "IKEA",
-        "model": "MICKE 73×50"
-      },
-      "source_note": "方案 A：IKEA MICKE 73 × 50（最小款）靠南牆、緊鄰門框東側，坐著面向走廊；椅子在床與書桌之間。",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-a"
-      ]
-    },
-    {
-      "id": "guest-wardrobe-a",
-      "code": "GST-05",
-      "room_id": "guest",
-      "name": "客房窄衣櫃（A · 69）",
-      "bounds_pt": [
-        400.38,
-        212.8,
-        420.0,
-        229.84
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 69,
-          "status": "design"
-        },
-        "d": {
-          "cm": 60,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "方案 A：南牆東段剩下的寬度：247.2 − 門框 105 − 書桌 73 = 69.2。做到天花、深 60、雙門各約 34.6（開門後離床約 34）。",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-a"
-      ]
-    },
-    {
-      "id": "guest-bed-b",
-      "code": "GST-06",
-      "room_id": "guest",
-      "name": "客房床（B · Super single）",
-      "bounds_pt": [
-        363.3,
-        146.18,
-        420.0,
-        178.78
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 115,
-          "status": "design"
-        },
-        "d": {
-          "cm": 200,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "方案 B：Super single，新加坡規格床墊 107 × 190，床架以約 115 × 200 示意。床頭靠東牆、離窗牆 5。",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-b"
-      ]
-    },
-    {
-      "id": "guest-desk-b",
-      "code": "GST-07",
-      "room_id": "guest",
-      "name": "客房書桌（B · MICKE 73 × 50）",
-      "bounds_pt": [
-        349.92,
-        180.19,
-        364.09,
-        200.89
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 73,
-          "status": "design"
-        },
-        "d": {
-          "cm": 50,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": 73,
-        "d": 50,
-        "h": null,
-        "brand": "IKEA",
-        "model": "MICKE 73×50"
-      },
-      "source_note": "方案 B：IKEA MICKE 73 × 50 靠西牆，椅子朝西；在開門範圍北側。",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-b"
-      ]
-    },
-    {
-      "id": "guest-bed",
-      "room_id": "guest",
-      "name": "客房床",
-      "bounds_pt": [
-        363,
-        153.28,
-        417.12,
-        196.36
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 152,
-          "status": "scaled"
-        },
-        "d": {
-          "cm": 191,
-          "status": "scaled"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "原始配置：小孩房床符號左右鏡像複製。圖面占位約 152 × 191 cm，實物尺寸待提供。",
-      "status": "user-design",
-      "code": "GST-02",
-      "onlyGuest": [
-        "guest-original"
-      ]
-    },
-    {
       "id": "kitchen-sink",
       "code": "KIT-05",
       "room_id": "kitchen",
@@ -2388,58 +2082,33 @@
       ]
     },
     {
-      "id": "kid-loft-bed-a",
-      "code": "KID-01",
+      "id": "kid-wardrobe",
       "room_id": "kid",
-      "name": "言言半高床（A）",
+      "label": "Existing wardrobe",
       "bounds_pt": [
         273.36,
-        276.74,
-        319.56,
-        335.42
+        212.8,
+        307.44,
+        229.84
       ],
+      "plan_horizontal_cm": 120.2,
+      "plan_vertical_cm": 60.1,
+      "nominal_width_cm": 120,
+      "nominal_depth_cm": 60,
+      "height_cm": null,
+      "status": "source-annotated",
+      "uncertainty_cm": null,
+      "notes": "Width120/depth60cm are explicitly dimensioned.",
+      "name": "小孩房衣櫃",
+      "source_note": "原 BEDROOM 2 衣櫃 120 × 60（原圖標註），R27 隨房間改為小孩房衣櫃，位置不變。",
       "dimensions": {
         "w": {
-          "cm": 163,
-          "status": "scaled"
-        },
-        "d": {
-          "cm": 207,
-          "status": "scaled"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "方案 A：櫸木半高床，床墊 150 × 200，床下淨寬 155、淨高 120。外框 163 × 207 為示意（整組 254.5 × 227 依商品圖）。",
-      "status": "user-design",
-      "onlyKid": [
-        "kid-a"
-      ]
-    },
-    {
-      "id": "kid-slide-a",
-      "code": "KID-02",
-      "room_id": "kid",
-      "name": "言言高滑梯（A）",
-      "bounds_pt": [
-        273.36,
-        335.42,
-        337.71,
-        348.88
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 227,
+          "cm": 120,
           "status": "annotated"
         },
         "d": {
-          "cm": 47.5,
-          "status": "scaled"
+          "cm": 60,
+          "status": "annotated"
         }
       },
       "actual": {
@@ -2449,27 +2118,119 @@
         "brand": null,
         "model": null
       },
-      "source_note": "方案 A：滑梯長 227 依商品圖深度；寬 47.5 = 254.5 − 床長 207（示意）。滑梯頂在床的西南角，往東滑出。",
-      "status": "user-design",
-      "onlyKid": [
-        "kid-a"
-      ]
+      "code": "KID-01"
     },
     {
-      "id": "kid-stool-a",
-      "code": "KID-03",
-      "room_id": "kid",
-      "name": "言言爬梯凳（A）",
+      "id": "study-wardrobe",
+      "room_id": "study",
+      "name": "書房衣櫃",
       "bounds_pt": [
-        319.56,
-        276.74,
-        330.62,
-        289.5
+        385.92,
+        212.8,
+        420,
+        229.84
       ],
       "dimensions": {
         "w": {
-          "cm": 39,
-          "status": "scaled"
+          "cm": 120,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "原客房衣櫃 120 × 60（原圖標註，鏡像），R27 隨房間改為書房衣櫃，位置不變。",
+      "status": "user-design",
+      "code": "STD-04"
+    },
+    {
+      "id": "massage-chair",
+      "code": "STD-03",
+      "room_id": "study",
+      "name": "按摩椅 OSIM uLove 3",
+      "bounds_pt": [
+        352.75,
+        147.59,
+        388.75,
+        169.13
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 76,
+          "status": "design"
+        },
+        "d": {
+          "cm": 127,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 76,
+        "d": 127,
+        "h": 116,
+        "brand": "OSIM",
+        "model": "uLove 3 Well-Being Chair（OS-8218）"
+      },
+      "source_note": "使用者指定 OSIM uLove 3，官網尺寸 76 × 127 × 116（直立）。手冊：躺平 185 × 76 × 97；背後離牆至少 10（往前滑躺），前方留至少 80；約 105 kg、平均 260 W。長邊與窗平行、離北側窗牆 10；椅背離西牆 10，面向東；虛線為躺平長度。",
+      "status": "user-design"
+    },
+    {
+      "id": "guest-bed-a",
+      "code": "GST-01",
+      "room_id": "guest",
+      "name": "客房床（A · MALM Queen）",
+      "bounds_pt": [
+        273.36,
+        297.58,
+        332.6,
+        344.63
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 166,
+          "status": "design"
+        },
+        "d": {
+          "cm": 209,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 A：IKEA MALM 高床架＋2 收納箱，Queen 150 × 200，外框 209 × 166（IKEA SG 官網）。床頭靠西牆、離窗牆 15（窗簾），從北側上下床；收納箱從北側拉出。",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-a"
+      ]
+    },
+    {
+      "id": "guest-desk-a",
+      "code": "GST-02",
+      "room_id": "guest",
+      "name": "客房書桌（A）",
+      "bounds_pt": [
+        273.36,
+        280.57,
+        286.12,
+        297.58
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 60,
+          "status": "design"
         },
         "d": {
           "cm": 45,
@@ -2483,31 +2244,31 @@
         "brand": null,
         "model": null
       },
-      "source_note": "方案 A：爬梯凳在床北端東側，尺寸示意。",
+      "source_note": "方案 A：書桌寬 60（使用者指定），深 45 為示意；靠西牆、在衣櫃南側，椅子面向西。",
       "status": "user-design",
-      "onlyKid": [
-        "kid-a"
+      "onlyGuest": [
+        "guest-a"
       ]
     },
     {
-      "id": "kid-loft-bed-b",
-      "code": "KID-04",
-      "room_id": "kid",
-      "name": "言言半高床（B）",
+      "id": "guest-wardrobe-a",
+      "code": "GST-03",
+      "room_id": "guest",
+      "name": "客房訂製衣櫃（A）",
       "bounds_pt": [
         273.36,
         266.68,
-        319.56,
-        325.36
+        290.37,
+        280.57
       ],
       "dimensions": {
         "w": {
-          "cm": 163,
-          "status": "scaled"
+          "cm": 49,
+          "status": "design"
         },
         "d": {
-          "cm": 207,
-          "status": "scaled"
+          "cm": 60,
+          "status": "design"
         }
       },
       "actual": {
@@ -2517,31 +2278,31 @@
         "brand": null,
         "model": null
       },
-      "source_note": "方案 B：櫸木半高床，床墊 150 × 200，床下淨寬 155、淨高 120。外框 163 × 207 為示意（整組 254.5 × 227 依商品圖）。",
+      "source_note": "方案 A：西北角訂製衣櫃，從地做到頂；寬 49 = 床北緣到北牆 109 − 書桌 60；深 60，門朝東開。",
       "status": "user-design",
-      "onlyKid": [
-        "kid-b"
+      "onlyGuest": [
+        "guest-a"
       ]
     },
     {
-      "id": "kid-slide-b",
-      "code": "KID-05",
-      "room_id": "kid",
-      "name": "言言高滑梯（B）",
+      "id": "guest-bed-b",
+      "code": "GST-04",
+      "room_id": "guest",
+      "name": "客房床（B · MALM Queen）",
       "bounds_pt": [
-        273.36,
-        325.36,
-        337.71,
-        338.82
+        284.98,
+        297.58,
+        344.23,
+        344.63
       ],
       "dimensions": {
         "w": {
-          "cm": 227,
-          "status": "annotated"
+          "cm": 166,
+          "status": "design"
         },
         "d": {
-          "cm": 47.5,
-          "status": "scaled"
+          "cm": 209,
+          "status": "design"
         }
       },
       "actual": {
@@ -2551,27 +2312,27 @@
         "brand": null,
         "model": null
       },
-      "source_note": "方案 B：滑梯長 227 依商品圖深度；寬 47.5 = 254.5 − 床長 207（示意）。滑梯頂在床的西南角，往東滑出。",
+      "source_note": "方案 B：IKEA MALM 高床架＋2 收納箱，Queen 150 × 200，外框 209 × 166（IKEA SG 官網）。床頭靠東牆、離窗牆 15（窗簾），從北側上下床；床尾到西牆 41。",
       "status": "user-design",
-      "onlyKid": [
-        "kid-b"
+      "onlyGuest": [
+        "guest-b"
       ]
     },
     {
-      "id": "kid-stool-b",
-      "code": "KID-06",
-      "room_id": "kid",
-      "name": "言言爬梯凳（B）",
+      "id": "guest-desk-b",
+      "code": "GST-05",
+      "room_id": "guest",
+      "name": "客房書桌（B）",
       "bounds_pt": [
-        319.56,
+        298.87,
         266.68,
-        330.62,
+        315.88,
         279.44
       ],
       "dimensions": {
         "w": {
-          "cm": 39,
-          "status": "scaled"
+          "cm": 60,
+          "status": "design"
         },
         "d": {
           "cm": 45,
@@ -2585,10 +2346,44 @@
         "brand": null,
         "model": null
       },
-      "source_note": "方案 B：爬梯凳在床北端東側，尺寸示意。",
+      "source_note": "方案 B：書桌寬 60（使用者指定），深 45 為示意；靠北牆、在衣櫃東側、門洞西側，椅子面向北、背後是床。",
       "status": "user-design",
-      "onlyKid": [
-        "kid-b"
+      "onlyGuest": [
+        "guest-b"
+      ]
+    },
+    {
+      "id": "guest-wardrobe-b",
+      "code": "GST-06",
+      "room_id": "guest",
+      "name": "客房訂製衣櫃（B）",
+      "bounds_pt": [
+        273.36,
+        266.68,
+        298.87,
+        283.69
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 90,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "方案 B：西北角訂製衣櫃，從地做到頂；沿北牆寬 90（到書桌為止），深 60，門朝南、前方到床 49。",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-b"
       ]
     }
   ],
@@ -3011,6 +2806,10 @@
     {
       "id": "C31",
       "text": "小孩房放言言的櫸木半高床＋高滑梯＋屋頂＋爬梯凳（整組 254.5 × 227）：A 滑梯貼窗；B 爬梯凳貼走廊牆。A／B 可切換（?kid=a|b）。"
+    },
+    {
+      "id": "C32",
+      "text": "房間重新分配：上左（原書房）改小孩房，床移除、保留原衣櫃；上右（原客房）改書房，保留原衣櫃，按摩椅搬過來；下方（原小孩房）改客房。客房只留 A／B：A 衣櫃＋書桌靠西牆；B 衣櫃＋書桌靠北牆。床離窗 15 留窗簾。廚房方案只在選廚房時顯示。"
     }
   ],
   "measurement_policy": {
@@ -3215,77 +3014,32 @@
         "id": "guest-a",
         "name": "方案 A",
         "layout": "guest-a",
-        "notes": {
-          "床": "IKEA MALM 收納床（高床架＋2 收納箱），Queen 150 × 200，外框 209 × 166。床頭靠東牆、離窗牆 5，只從南側上下床；收納箱從南側拉出。",
-          "書桌": "IKEA MICKE 73 × 50（最小款）靠南牆、緊鄰門框，坐著面向走廊。",
-          "窄衣櫃": "南牆東段剩 69.2（247.2 − 門框 105 − 書桌 73）。做 69 寬 × 60 深、到天花，雙門各約 34.6。",
-          "動線": "開門範圍（半徑 90）不碰家具；床到書桌椅子約 42、到衣櫃門面 69；床尾到西牆 38。",
-          "取捨": "拆掉原 120 衣櫃，換到 Queen 床＋書桌＋窄衣櫃；靠窗那側不能上下床。"
-        },
         "label": [
-          361,
-          214
-        ]
+          323,
+          279
+        ],
+        "notes": {
+          "床": "IKEA MALM Queen 收納床 209 × 166，床頭靠西牆，離窗牆 15 留給窗簾；只從北側上下床，收納箱從北側拉出。",
+          "書桌": "寬 60 × 深 45（深度示意）靠西牆、在衣櫃南側，坐著面向西牆。",
+          "衣櫃": "西北角訂製衣櫃，從地做到頂：寬 49 × 深 60，單門朝東開；下抽屜、中掛衣、上層收納（立面見下方）。",
+          "動線": "椅子背後是空地，到東牆約 155（進門動線經過）；床北側走道 109；床尾到東牆 41。",
+          "取捨": "書桌好坐、衣櫃抽屜和門都能全開，但衣櫃只有 49 寬（約一人份）。"
+        }
       },
       {
         "id": "guest-b",
         "name": "方案 B",
         "layout": "guest-b",
-        "notes": {
-          "床": "Super single：新加坡規格床墊 107 × 190（床架約 115 × 200，示意）。床頭靠東牆、離窗牆 5。",
-          "書桌": "IKEA MICKE 73 × 50 靠西牆，椅子朝西；在開門範圍北側。",
-          "衣櫃": "保留原 120 × 60 衣櫃（右下）。",
-          "動線": "床到衣櫃門面 120，衣櫃門打開後仍有約 60；開門範圍不碰家具。",
-          "取捨": "單人床＋書桌最寬鬆，但只能睡一人。"
-        },
         "label": [
-          392,
-          197
-        ]
-      },
-      {
-        "id": "guest-original",
-        "name": "原始",
-        "layout": "guest-original",
-        "notes": {
-          "床位 layout": "原 BEDROOM 2 配置左右鏡像，靠客房右內牆對齊（床約 152 × 191，原圖符號）。",
-          "衣櫃設計": "與小孩房相同的 120 × 60 cm 衣櫃，位於右下。"
-        },
-        "label": [
-          378,
-          204
-        ]
-      }
-    ],
-    "kid": [
-      {
-        "id": "kid-a",
-        "name": "方案 A",
-        "layout": "kid-a",
-        "label": [
-          327,
-          318
+          332,
+          277
         ],
         "notes": {
-          "床組": "言言櫸木半高床一站式方案⑦：①半高床＋②高滑梯＋③屋頂＋④爬梯凳（不含左側櫃）。整組 254.5 × 227，高 241／248。",
-          "擺法": "床長邊貼西牆；滑梯貼窗（南牆）往東滑出；爬梯凳在床北端東側。床頭離走廊牆 35.5。",
-          "動線": "床東側空地寬 87；滑梯出口離東牆 23；門洞在北牆離西牆 150–240，進門約 35 就碰到爬梯凳。",
-          "尺寸依據": "整組 254.5 × 227 依商品圖；床 163 × 207、滑梯寬 47.5、爬梯凳 39 × 45 為示意。"
-        }
-      },
-      {
-        "id": "kid-b",
-        "name": "方案 B",
-        "layout": "kid-b",
-        "label": [
-          327,
-          288
-        ],
-        "notes": {
-          "床組": "言言櫸木半高床一站式方案⑦：①半高床＋②高滑梯＋③屋頂＋④爬梯凳（不含左側櫃）。整組 254.5 × 227，高 241／248。",
-          "擺法": "床長邊貼西牆、床頭與爬梯凳貼走廊牆（北牆）；滑梯在床南端往東滑出，離窗 35.5。",
-          "動線": "床東側空地寬 87；滑梯出口離東牆 23；門洞在北牆離西牆 150–240，爬梯凳占 163–202，進門只剩東側約 38 可走。",
-          "尺寸依據": "整組 254.5 × 227 依商品圖；床 163 × 207、滑梯寬 47.5、爬梯凳 39 × 45 為示意。"
+          "床": "IKEA MALM Queen 收納床 209 × 166，床頭靠東牆，離窗牆 15 留給窗簾；只從北側上下床，床尾到西牆 41。",
+          "書桌": "寬 60 × 深 45（深度示意）靠北牆、在衣櫃與門洞之間，坐著面向北牆。",
+          "衣櫃": "西北角訂製衣櫃，從地做到頂：寬 90 × 深 60，雙門朝南開；下抽屜、中掛衣、上層收納（立面見下方）。",
+          "動線": "書桌前緣到床 64：坐得下，但起身要把椅子推到床邊（舒適約 75–90）。衣櫃門面到床 49：門開得了，抽屜拉出後幾乎沒有站的位置。",
+          "取捨": "衣櫃大將近一倍（90），但椅子和衣櫃前都擠。"
         }
       }
     ]
