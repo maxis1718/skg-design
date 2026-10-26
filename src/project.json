@@ -11672,6 +11672,2024 @@
           ]
         }
       ]
+    },
+    "guest-wall-a": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "客房方案 A · 牆面",
+      "viewpoint": "面向西牆；左為窗牆，右為北牆。",
+      "units": {
+        "wardrobe": {
+          "w": 49,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 5,
+                "width": 44,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 44,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "44×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 1,
+              "hinges": [
+                "R"
+              ],
+              "label": "單開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "49 × 60",
+          "note": "單門，鉸鏈在北牆側；外抽屜 ×3、掛桿 195。"
+        },
+        {
+          "zone": "書桌",
+          "h": "60 × 45",
+          "note": "活動書桌，靠西牆。"
+        },
+        {
+          "zone": "床",
+          "h": "209 × 166",
+          "note": "MALM Queen，床頭靠西牆，離窗 15。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 290,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 241
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 290,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 0,
+              "w": 166,
+              "h": 50,
+              "dashed": true,
+              "fill": "#f4f5f1",
+              "label": "床",
+              "size": 0.7
+            },
+            {
+              "type": "rect",
+              "x": 181,
+              "y": 0,
+              "w": 60,
+              "h": 75,
+              "dashed": true,
+              "fill": "#fbfaf5",
+              "label": "書桌 60 × 45",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            15,
+            181,
+            241,
+            290
+          ],
+          "totalLabel": "290 西牆",
+          "levels": [
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "rightChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
+    },
+    "guest-wall-b": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "客房方案 B · 牆面",
+      "viewpoint": "從床邊面向北牆；左為西牆，右為門。",
+      "units": {
+        "wardrobe": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 7,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 69,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "69×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 2,
+              "label": "雙開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ],
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "80 × 60",
+          "note": "雙門；淺抽 NL 350，到床 49。"
+        },
+        {
+          "zone": "書桌",
+          "h": "60 × 45",
+          "note": "活動書桌；前緣到床 64。"
+        },
+        {
+          "zone": "門洞",
+          "h": "90",
+          "note": "150–240；書桌到門洞 10。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 250,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 250,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 80,
+              "y": 0,
+              "w": 60,
+              "h": 75,
+              "dashed": true,
+              "fill": "#fbfaf5",
+              "label": "書桌 60 × 45",
+              "size": 0.6
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 0,
+              "w": 90,
+              "h": 210,
+              "dashed": true,
+              "fill": "#eef1ea",
+              "label": "門洞 90",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            80,
+            140,
+            150,
+            240,
+            250
+          ],
+          "totalLabel": "250 北牆",
+          "levels": [
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "leftChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
+    },
+    "guest-wall-c": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "客房方案 C · 牆面",
+      "viewpoint": "從床邊面向北牆；左為西牆，右為門。",
+      "units": {
+        "wardrobe": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 21,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 7,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 69,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "69×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 2,
+              "label": "雙開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ],
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        },
+        "desk-drawers": {
+          "w": 58.2,
+          "d": 40,
+          "h": 10,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "drawers",
+              "h": 10,
+              "label": "淺抽",
+              "short": "淺抽"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 0,
+              "to": 10,
+              "count": 2
+            }
+          ]
+        },
+        "niche": {
+          "w": 58.2,
+          "d": 40,
+          "h": 75,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 75,
+              "shelves": [
+                40
+              ],
+              "items": [
+                {
+                  "name": "書",
+                  "w": 16,
+                  "h": 24,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "w": 58.2,
+          "d": 35,
+          "h": 130,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "shelves": [
+                59
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 2,
+              "label": "上櫃"
+            }
+          ]
+        },
+        "gable": {
+          "w": 1.8,
+          "h": 280,
+          "noCarcass": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 272
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "80 × 60",
+          "note": "同方案 B：雙門、淺抽 NL 350、掛桿 195。"
+        },
+        {
+          "zone": "天花收邊",
+          "h": "8",
+          "note": "衣櫃與書桌同一條收邊，272–280。"
+        },
+        {
+          "zone": "上櫃",
+          "h": "150–272",
+          "note": "深 35，雙門，一片層板；門頂對齊衣櫃門頂 272。"
+        },
+        {
+          "zone": "開放層",
+          "h": "75–150",
+          "note": "LED 燈帶在上櫃底；層板 115，深 20；桌面到上櫃底 75。"
+        },
+        {
+          "zone": "桌面",
+          "h": "75",
+          "note": "60 × 40，厚 2.5。"
+        },
+        {
+          "zone": "淺抽 ×2",
+          "h": "62.5–72.5",
+          "note": "各寬 28.7，面板 10，放文具。"
+        },
+        {
+          "zone": "腳下空間",
+          "h": "0–62.5",
+          "note": "淨寬 58.2，不做踢腳。"
+        },
+        {
+          "zone": "側板",
+          "h": "0–272",
+          "note": "書桌外側 1.8 到頂，收住整排。"
+        },
+        {
+          "zone": "動線",
+          "h": "到床 69",
+          "note": "書桌前緣到床 69。"
+        },
+        {
+          "zone": "門洞",
+          "h": "90",
+          "note": "150–240；書桌到門洞 10。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 250,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 0
+            },
+            {
+              "ref": "desk-drawers",
+              "x": 80,
+              "y": 62.5
+            },
+            {
+              "ref": "niche",
+              "x": 80,
+              "y": 75
+            },
+            {
+              "ref": "upper",
+              "x": 80,
+              "y": 150
+            },
+            {
+              "ref": "gable",
+              "x": 138.2,
+              "y": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 250,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 150,
+              "y": 0,
+              "w": 90,
+              "h": 210,
+              "dashed": true,
+              "fill": "#eef1ea",
+              "label": "門洞 90",
+              "size": 0.6
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 80,
+              "y": 72.5,
+              "w": 58.2,
+              "h": 2.5
+            },
+            {
+              "type": "led",
+              "x": 81,
+              "y": 150,
+              "w": 56.2
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 92,
+              "y0": 0,
+              "y1": 62.5,
+              "label": "腳下 62.5"
+            }
+          ],
+          "hcuts": [
+            0,
+            80,
+            140,
+            150,
+            240,
+            250
+          ],
+          "totalLabel": "250 北牆",
+          "levels": [
+            {
+              "y": 62.5,
+              "label": "抽屜底"
+            },
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 150,
+              "label": "上櫃底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "leftChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
+    },
+    "guest-wall-lb-a": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "格局 B 客房方案 A · 牆面",
+      "viewpoint": "面向東牆；左為窗牆，右為南牆。",
+      "units": {
+        "wardrobe": {
+          "w": 59,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 6,
+                "width": 44,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 44,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "44×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 1,
+              "hinges": [
+                "R"
+              ],
+              "label": "單開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "59 × 60",
+          "note": "單門，鉸鏈在南牆側；NL 500，前方淨空 ≥ 60。"
+        },
+        {
+          "zone": "書桌",
+          "h": "60 × 45",
+          "note": "活動書桌，靠東牆。"
+        },
+        {
+          "zone": "床",
+          "h": "209 × 166",
+          "note": "MALM Queen，床頭靠東牆，離窗 15。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 300,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 241
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 300,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 0,
+              "w": 166,
+              "h": 50,
+              "dashed": true,
+              "fill": "#f4f5f1",
+              "label": "床",
+              "size": 0.7
+            },
+            {
+              "type": "rect",
+              "x": 181,
+              "y": 0,
+              "w": 60,
+              "h": 75,
+              "dashed": true,
+              "fill": "#fbfaf5",
+              "label": "書桌 60 × 45",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            15,
+            181,
+            241,
+            300
+          ],
+          "totalLabel": "300 東牆",
+          "levels": [
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "rightChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
+    },
+    "guest-wall-lb-b": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "格局 B 客房方案 B · 牆面",
+      "viewpoint": "從床邊面向南牆；左為東牆，右為門。",
+      "units": {
+        "wardrobe": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 7,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 69,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "69×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 2,
+              "label": "雙開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ],
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "80 × 60",
+          "note": "雙門；NL 450，到床 59。"
+        },
+        {
+          "zone": "書桌",
+          "h": "60 × 45",
+          "note": "活動書桌；前緣到床 74。"
+        },
+        {
+          "zone": "門",
+          "h": "90",
+          "note": "開門範圍離西牆 10–100；書桌到開門範圍 7。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 247,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 247,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 80,
+              "y": 0,
+              "w": 60,
+              "h": 75,
+              "dashed": true,
+              "fill": "#fbfaf5",
+              "label": "書桌 60 × 45",
+              "size": 0.6
+            },
+            {
+              "type": "rect",
+              "x": 147,
+              "y": 0,
+              "w": 90,
+              "h": 210,
+              "dashed": true,
+              "fill": "#eef1ea",
+              "label": "門 90 · 開門範圍",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            80,
+            140,
+            147,
+            237,
+            247
+          ],
+          "totalLabel": "247 南牆",
+          "levels": [
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "leftChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
+    },
+    "guest-wall-lb-c": {
+      "wall": true,
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "hardware": [],
+      "rationale": [],
+      "open_questions": [],
+      "sources": [],
+      "title": "格局 B 客房方案 C · 牆面",
+      "viewpoint": "從床邊面向南牆；左為東牆，右為門。",
+      "units": {
+        "wardrobe": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 7,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 69,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "69×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 2,
+              "label": "雙開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ],
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ]
+            }
+          ]
+        },
+        "desk-drawers": {
+          "w": 58.2,
+          "d": 40,
+          "h": 10,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "drawers",
+              "h": 10,
+              "label": "淺抽",
+              "short": "淺抽"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 0,
+              "to": 10,
+              "count": 2
+            }
+          ]
+        },
+        "niche": {
+          "w": 58.2,
+          "d": 40,
+          "h": 75,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "cabinet",
+              "h": 75,
+              "shelves": [
+                40
+              ],
+              "items": [
+                {
+                  "name": "書",
+                  "w": 16,
+                  "h": 24,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "w": 58.2,
+          "d": 35,
+          "h": 130,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "shelves": [
+                59
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 2,
+              "label": "上櫃"
+            }
+          ]
+        },
+        "gable": {
+          "w": 1.8,
+          "h": 280,
+          "noCarcass": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 272
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ]
+        }
+      },
+      "spec": [
+        {
+          "zone": "衣櫃",
+          "h": "80 × 60",
+          "note": "同方案 B：雙門、NL 450、掛桿 195。"
+        },
+        {
+          "zone": "天花收邊",
+          "h": "8",
+          "note": "衣櫃與書桌同一條收邊，272–280。"
+        },
+        {
+          "zone": "上櫃",
+          "h": "150–272",
+          "note": "深 35，雙門，一片層板；門頂對齊衣櫃門頂 272。"
+        },
+        {
+          "zone": "開放層",
+          "h": "75–150",
+          "note": "LED 燈帶在上櫃底；層板 115，深 20；桌面到上櫃底 75。"
+        },
+        {
+          "zone": "桌面",
+          "h": "75",
+          "note": "60 × 40，厚 2.5。"
+        },
+        {
+          "zone": "淺抽 ×2",
+          "h": "62.5–72.5",
+          "note": "各寬 28.7，面板 10，放文具。"
+        },
+        {
+          "zone": "腳下空間",
+          "h": "0–62.5",
+          "note": "淨寬 58.2，不做踢腳。"
+        },
+        {
+          "zone": "側板",
+          "h": "0–272",
+          "note": "書桌外側 1.8 到頂，收住整排。"
+        },
+        {
+          "zone": "動線",
+          "h": "到床 79",
+          "note": "書桌前緣到床 79。"
+        },
+        {
+          "zone": "門",
+          "h": "90",
+          "note": "開門範圍離西牆 10–100；書桌到開門範圍 7。"
+        }
+      ],
+      "views": [
+        {
+          "id": "wall",
+          "name": "正立面",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 247,
+          "font": 8,
+          "units": [
+            {
+              "ref": "wardrobe",
+              "x": 0
+            },
+            {
+              "ref": "desk-drawers",
+              "x": 80,
+              "y": 62.5
+            },
+            {
+              "ref": "niche",
+              "x": 80,
+              "y": 75
+            },
+            {
+              "ref": "upper",
+              "x": 80,
+              "y": 150
+            },
+            {
+              "ref": "gable",
+              "x": 138.2,
+              "y": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 247,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 147,
+              "y": 0,
+              "w": 90,
+              "h": 210,
+              "dashed": true,
+              "fill": "#eef1ea",
+              "label": "門 90 · 開門範圍",
+              "size": 0.6
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 80,
+              "y": 72.5,
+              "w": 58.2,
+              "h": 2.5
+            },
+            {
+              "type": "led",
+              "x": 81,
+              "y": 150,
+              "w": 56.2
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 92,
+              "y0": 0,
+              "y1": 62.5,
+              "label": "腳下 62.5"
+            }
+          ],
+          "hcuts": [
+            0,
+            80,
+            140,
+            147,
+            237,
+            247
+          ],
+          "totalLabel": "247 南牆",
+          "levels": [
+            {
+              "y": 62.5,
+              "label": "抽屜底"
+            },
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 150,
+              "label": "上櫃底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "leftChain": {
+            "ref": "wardrobe"
+          }
+        }
+      ]
     }
   },
   "layouts": [
