@@ -6,7 +6,7 @@ src=ROOT/'src'
 def read(name):return (src/name).read_text(encoding='utf8')
 def data_image(name):return 'data:image/png;base64,'+base64.b64encode((ROOT/'assets'/name).read_bytes()).decode()
 project=json.loads(read('project.json'))
-assert len(project['rooms'])==9
+assert len(project["rooms"])==11
 assert len({o['id'] for o in project['objects']})==len(project['objects'])
 assert all(o['room_id'] in {r['id'] for r in project['rooms']} for o in project['objects'])
 for o in project['objects']:
