@@ -434,9 +434,9 @@ function hdim(g, x0, x1, y, label, emphasize, strong) {
   g.text((x0 + x1) / 2, y + .9, label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * (emphasize ? .85 : .74), 'font-weight':strong ? 600 : null});
 }
 // Focused unit(s) of a run view: accent tint + outline, and dashed extension lines from the unit edge to its height chain at x.
-function focusMarks(g, fu, x) {
+function focusMarks(g, fu, x, edgeIn) {
   for (const r of fu) g.rect(r.x, r.y || 0, r.u.w, r.u.h, {fill:C.dim, 'fill-opacity':.1, stroke:C.dim, 'stroke-width':.7});
-  const r = fu[0], oy = r.y || 0, edge = x > r.x ? r.x + r.u.w : r.x;
+  const r = fu[0], oy = r.y || 0, edge = edgeIn ?? (x > r.x ? r.x + r.u.w : r.x);
   for (const b of bands(r.u).slice(1)) g.line(edge, oy + b.y0, x, oy + b.y0, {stroke:C.dim, 'stroke-width':.18, 'stroke-dasharray':'1.2 1', 'stroke-opacity':.7});
   g.line(edge, oy + r.u.h, x, oy + r.u.h, {stroke:C.dim, 'stroke-width':.18, 'stroke-dasharray':'1.2 1', 'stroke-opacity':.7});
 }
@@ -450,7 +450,7 @@ function levels(g, view, x0, x1) {
 function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
-    if (dryExtra(g, e) || toeExtra(g, e)) continue;
+    if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e)) continue;
     if (e.type === 'lid') { lidExtra(g, e, state); continue; }
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
     const fsz = g.f * (e.size || .7);
@@ -694,6 +694,44 @@ function dryExtra(g, e) {
   return false;
 }
 
+// Kitchen north wall (nw-*): freestanding appliances in a niche, and shelf-pin hole rows.
+// nw-appliance {kind:'washtower'|'fridge', x, y, w, h, side (section profile), dashed, label, sub}: schematic faces (示意).
+// nw-holes {xs, y0, n, pitch, d, pin, r}: 32 mm system holes on a gable face (r = drawn radius); the hole at `pin` carries a pin.
+function nwExtra(g, e) {
+  if (e.type === 'nw-appliance') {
+    const {x, w, h} = e, y = e.y ?? 0, ln = {stroke:C.itemLine, 'stroke-width':.3, fill:'none'};
+    g.rect(x, y, w, h, e.dashed ? {fill:'none', stroke:C.dim, 'stroke-width':.35, 'stroke-dasharray':'1.6 1.1'} : {fill:'#fbfbf8', stroke:C.line, 'stroke-width':.4, rx:1});
+    const fs = g.f * (e.size || .66);
+    if (!e.side && e.kind === 'washtower') {
+      const cx = x + w / 2, circ = (cy, r) => g.out.push(`<circle cx="${cx}" cy="${g.Y(cy)}" r="${r}" fill="#eef1ee" stroke="${C.itemLine}" stroke-width=".35"/>`);
+      circ(y + h * .27, w * .32); circ(y + h * .72, w * .29);
+      g.rect(x + 2, y + h * .5 - 3, w - 4, 6, {fill:C.dark, stroke:'none', rx:.8});
+      g.line(x, y + h * .5 - 4.5, x + w, y + h * .5 - 4.5, ln); g.line(x, y + h * .5 + 4.5, x + w, y + h * .5 + 4.5, ln);
+      g.text(cx, y + h * .5 - fs * .35, e.mid || '', {'text-anchor':'middle', fill:'#e6ebe8', 'font-size':fs * .8});
+    } else if (!e.side && e.kind === 'fridge') {
+      const cx = x + w / 2, a = y + h * .57, b = y + h * .45, c = y + h * .24;
+      for (const yy of [a, b, c]) g.line(x, yy, x + w, yy, ln);
+      g.line(cx, a, cx, y + h, ln); g.line(cx, b, cx, a, ln);
+      g.rect(x, y, w, 3, {fill:'#d9ddd8', stroke:'none'});
+      for (const hx of [cx - 3, cx + 2.2]) g.rect(hx, a + 18, .8, 26, {fill:C.thin, stroke:'none', rx:.4});
+      for (const yy of [b - 2.5, c - 2.5]) g.rect(x + w * .3, yy, w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
+    }
+    const ly = e.ly ?? y + h * (e.kind === 'fridge' && !e.side ? .8 : .93);
+    if (e.label) g.text(e.lx ?? x + w / 2, ly, e.label, {'text-anchor':'middle', fill:e.dashed ? C.dim : C.line, 'font-size':fs});
+    if (e.sub) g.text(e.lx ?? x + w / 2, ly - fs * 1.3, e.sub, {'text-anchor':'middle', fill:e.dashed ? C.dim : C.thin, 'font-size':fs * .85});
+    return true;
+  }
+  if (e.type === 'nw-holes') {
+    const r = e.r ?? Math.max((e.d ?? .5) / 2, .42);
+    for (const hx of e.xs) for (let i = 0; i < e.n; i++) {
+      const hy = e.y0 + i * e.pitch, pin = e.pin != null && Math.abs(hy - e.pin) < .05;
+      g.out.push(`<circle cx="${hx}" cy="${+g.Y(hy).toFixed(2)}" r="${pin ? r * 1.25 : r}" fill="${pin ? C.dark : '#fff'}" stroke="${pin ? 'none' : C.dim}" stroke-width=".18"/>`);
+    }
+    return true;
+  }
+  return false;
+}
+
 // Toe-kick light (TV console): 45° corner LED profile in the angle between the carcass underside and a recessed plinth face.
 // toe-light front: {x, w, y (carcass underside), p (profile size)} — lit diffuser bar + glow down to the floor.
 // toe-light section: {section:true, x (plinth face), y, p, front (drawer front line), board} — base board, profile, beam.
@@ -777,8 +815,10 @@ function renderFront(elev, view, state) {
   const chainUnit = view.chain != null ? units[view.chain] : detail ? units[0] : null;
   // elev.focus = [unitRef…]: the selected object's unit(s) in a run view — tinted, with their own height chain
   // (replacing the view's right/left chain, on the nearer side), width emphasised in hcuts and a w × d × h caption.
+  // Several focus units (e.g. a whole counter) act as one span: side, extension edge and caption use the span.
   const fu = units.filter(r => elev.focus?.includes(r.ref)), fr0 = fu[0];
-  const fSide = fr0 && (fr0.x + fr0.u.w / 2 < W / 2 ? 'left' : 'right');
+  const fx0 = fr0 && Math.min(...fu.map(r => r.x)), fx1 = fr0 && Math.max(...fu.map(r => r.x + r.u.w));
+  const fSide = fr0 && ((fx0 + fx1) / 2 < W / 2 ? 'left' : 'right');
   const rcSpec = fr0 ? (fSide === 'right' ? {ref:fr0.ref} : null) : view.rightChain;
   const lcSpec = fr0 ? (fSide === 'left' ? {ref:fr0.ref} : null) : view.leftChain;
   const rc = rcSpec && units.find(r => r.ref === rcSpec.ref);
@@ -802,7 +842,7 @@ function renderFront(elev, view, state) {
   FL = true;
   extras(g, view.extras, state);
   if (chainUnit) chain(g, chainUnit.u, chainUnit.x, chainUnit.y || 0, Math.max(chainUnit.x + chainUnit.u.w, W) + f * 1.1, detail);
-  if (fr0) focusMarks(g, fu, fSide === 'right' ? Math.max(fr0.x + fr0.u.w, W) + f * 1.1 : Math.min(fr0.x, 0) - f * 1.1);
+  if (fr0) focusMarks(g, fu, fSide === 'right' ? Math.max(fx1, W) + f * 1.1 : Math.min(fx0, 0) - f * 1.1, fSide === 'right' ? fx1 : fx0);
   if (rc) rightChain(g, rc.u, rc.x, rc.y || 0, Math.max(rc.x + rc.u.w, W) + f * 1.1, rcSpec);
   if (lc) leftChain(g, lc.u, lc.x, lc.y || 0, Math.min(lc.x, 0) - f * 1.1, lcSpec);
   if (detail) { const r = units[0]; hdim(g, r.x, r.x + r.u.w, -f * 1.6, `${fmt(r.u.w)}`, true); }
@@ -814,8 +854,8 @@ function renderFront(elev, view, state) {
     hdim(g, cuts[0], cuts[cuts.length - 1], -f * 3.6, view.totalLabel || fmt(cuts[cuts.length - 1] - cuts[0]), true);
   }
   if (fr0) {
-    const txt = `${T('寬')} ${fmt(fr0.u.w)} · ${T('深')} ${fmt(fr0.u.d)} · ${T('高')} ${fmt(fr0.u.h)}`, half = em(txt) * f * .85 * .5;
-    const cx = Math.min(Math.max(fr0.x + fr0.u.w / 2, half), W - half);
+    const txt = `${T('寬')} ${fmt(fx1 - fx0)} · ${T('深')} ${fmt(Math.max(...fu.map(r => r.u.d)))} · ${T('高')} ${fmt(Math.max(...fu.map(r => r.u.h)))}`, half = em(txt) * f * .85 * .5;
+    const cx = Math.min(Math.max((fx0 + fx1) / 2, half), W - half);
     g.text(cx, -f * (view.hcuts ? 5.6 : 3.6), txt, {'text-anchor':'middle', fill:C.dim, 'font-size':f * .85, 'font-weight':600});
   }
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
