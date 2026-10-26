@@ -9530,12 +9530,98 @@
             }
           ],
           "fronts": []
+        },
+        "nw-wd": {
+          "w": 73.6,
+          "d": 70,
+          "h": 240,
+          "board": 1.8,
+          "sideL": 1.8,
+          "sideR": 1.8,
+          "bands": [
+            {
+              "kind": "niche",
+              "h": 165.5,
+              "label": "洗烘衣機"
+            },
+            {
+              "kind": "niche",
+              "h": 25,
+              "label": "活動層板區"
+            },
+            {
+              "kind": "cabinet",
+              "h": 46.5,
+              "label": "上櫃",
+              "short": "上櫃",
+              "shelves": [
+                0
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 190.5,
+              "to": 237,
+              "count": 2,
+              "label": "上櫃"
+            }
+          ]
+        },
+        "nw-fridge": {
+          "w": 79.4,
+          "d": 70,
+          "h": 240,
+          "board": 1.8,
+          "sideL": 0,
+          "sideR": 1.8,
+          "bands": [
+            {
+              "kind": "niche",
+              "h": 183.5,
+              "label": "冰箱"
+            },
+            {
+              "kind": "niche",
+              "h": 7,
+              "label": "散熱"
+            },
+            {
+              "kind": "cabinet",
+              "h": 46.5,
+              "label": "上櫃",
+              "short": "上櫃",
+              "shelves": [
+                0
+              ]
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 190.5,
+              "to": 237,
+              "count": 2,
+              "label": "上櫃"
+            }
+          ]
         }
       },
       "views": [
         {
           "id": "dry-wall",
-          "name": "空間規劃",
+          "name": "檯面細部",
           "kind": "front",
           "detail": false,
           "labels": true,
@@ -9850,6 +9936,372 @@
               "label": "檯面"
             }
           ]
+        },
+        {
+          "id": "north-wall",
+          "name": "空間規劃",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "width": 320.5,
+          "font": 8,
+          "units": [
+            {
+              "ref": "nw-wd",
+              "x": 0
+            },
+            {
+              "ref": "nw-fridge",
+              "x": 73.6
+            },
+            {
+              "ref": "dry-filler",
+              "x": 153
+            },
+            {
+              "ref": "dry-water",
+              "x": 156
+            },
+            {
+              "ref": "dry-drawers-a",
+              "x": 215.5
+            },
+            {
+              "ref": "dry-drawers-b",
+              "x": 267
+            },
+            {
+              "ref": "dry-end",
+              "x": 318.5
+            }
+          ],
+          "under": [
+            {
+              "type": "dk-glass",
+              "x": 153,
+              "y": 90,
+              "w": 167.5,
+              "h": 150,
+              "frame": 2,
+              "label": "黑框玻璃隔間（至天花）",
+              "labelAt": 0.62
+            }
+          ],
+          "extras": [
+            {
+              "type": "nw-appliance",
+              "kind": "washtower",
+              "x": 6.8,
+              "y": 0,
+              "w": 60,
+              "h": 165.5,
+              "label": "LG WashTower",
+              "sub": "60 × 66 × 165.5"
+            },
+            {
+              "type": "nw-appliance",
+              "kind": "fridge",
+              "x": 78.15,
+              "y": 0,
+              "w": 68.5,
+              "h": 183.3,
+              "label": "HITACHI R-HW620RS",
+              "sub": "68.5 × 73.8 × 183.3",
+              "size": 0.58,
+              "ly": 24
+            },
+            {
+              "type": "rect",
+              "x": 2,
+              "y": 177.9,
+              "w": 69.6,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.25
+            },
+            {
+              "type": "nw-holes",
+              "xs": [
+                2.5,
+                71.1
+              ],
+              "y0": 152,
+              "n": 12,
+              "pitch": 3.2,
+              "d": 0.5,
+              "pin": 177.6,
+              "r": 0.6
+            },
+            {
+              "type": "note",
+              "x": 36.8,
+              "y": 182,
+              "label": "活動層板",
+              "size": 0.6
+            },
+            {
+              "type": "note",
+              "x": 36.8,
+              "y": 169.4,
+              "label": "頂淨 12.4 · 側各 5",
+              "size": 0.56
+            },
+            {
+              "type": "note",
+              "x": 113.3,
+              "y": 184.9,
+              "label": "頂 7.2 · 側各 4.55",
+              "size": 0.56
+            },
+            {
+              "type": "worktop",
+              "x": 153,
+              "y": 87,
+              "w": 167.5,
+              "h": 3
+            },
+            {
+              "type": "dk-device",
+              "shape": "coffee",
+              "x": 158,
+              "y": 90,
+              "w": 8.4,
+              "h": 20.4,
+              "label": "咖啡機",
+              "vertical": true,
+              "labelY": 10.2,
+              "size": 0.6
+            },
+            {
+              "type": "dk-tap",
+              "x": 186.6,
+              "y": 90,
+              "w": 8.8,
+              "h": 33.7,
+              "reach": 0,
+              "outlet": 117
+            },
+            {
+              "type": "dk-device",
+              "shape": "pot",
+              "dashed": true,
+              "x": 177,
+              "y": 90,
+              "w": 28,
+              "h": 18
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 191,
+              "y0": 90,
+              "y1": 117,
+              "label": ""
+            },
+            {
+              "type": "clear",
+              "x0": 166.4,
+              "x1": 215.5,
+              "y": 128,
+              "label": "放鍋淨空 49"
+            },
+            {
+              "type": "clear",
+              "x0": 215.5,
+              "x1": 320.5,
+              "y": 128,
+              "label": "備餐檯面 105"
+            },
+            {
+              "type": "dk-socket",
+              "x": 208.5,
+              "y": 70,
+              "dashed": true,
+              "label": "13A ×2（櫃內）",
+              "anchor": "end",
+              "size": 0.55,
+              "when": "open"
+            },
+            {
+              "type": "note",
+              "x": 292,
+              "y": 242.5,
+              "label": "門端 →",
+              "anchor": "end",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            73.6,
+            153,
+            156,
+            215.5,
+            267,
+            318.5,
+            320.5
+          ],
+          "totalLabel": "320.5",
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165.5,
+              "label": "洗衣機頂"
+            },
+            {
+              "y": 183.5,
+              "label": "冰箱頂"
+            },
+            {
+              "y": 190.5,
+              "label": "上櫃底"
+            }
+          ]
+        },
+        {
+          "id": "wd-section",
+          "name": "側剖面 · 洗衣機格",
+          "kind": "section",
+          "ref": "nw-wd",
+          "extension": 20,
+          "labelRoom": 78,
+          "font": 5.4,
+          "levels": [
+            {
+              "y": 165.5,
+              "label": "洗衣機頂"
+            },
+            {
+              "y": 183.5,
+              "label": "冰箱頂"
+            },
+            {
+              "y": 190.5,
+              "label": "上櫃底"
+            }
+          ],
+          "under": [
+            {
+              "type": "nw-appliance",
+              "kind": "fridge",
+              "side": true,
+              "dashed": true,
+              "x": 2,
+              "y": 0,
+              "w": 73.8,
+              "h": 183.3,
+              "size": 0.62
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "x": 2,
+              "y": 177.9,
+              "w": 66,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.25
+            },
+            {
+              "type": "nw-holes",
+              "xs": [
+                3.7,
+                66.3
+              ],
+              "y0": 152,
+              "n": 12,
+              "pitch": 3.2,
+              "d": 0.5,
+              "pin": 177.6
+            },
+            {
+              "type": "nw-appliance",
+              "kind": "washtower",
+              "side": true,
+              "x": 10,
+              "y": 0,
+              "w": 66,
+              "h": 165.5,
+              "label": "LG WashTower 深 66",
+              "ly": 120,
+              "size": 0.74
+            },
+            {
+              "type": "device",
+              "x": 0,
+              "y": 168,
+              "w": 2.4,
+              "h": 5,
+              "label": "插座＋龍頭（示意）",
+              "lx": 4,
+              "ly": 169.2,
+              "anchor": "start",
+              "size": 0.56
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 10,
+              "y": 100,
+              "label": "10"
+            },
+            {
+              "type": "clear",
+              "x0": 10,
+              "x1": 76,
+              "y": 90,
+              "label": "機深 66 · 前緣 76"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 80,
+              "y0": 165.5,
+              "y1": 177.9,
+              "label": "12.4（LG ≥ 11.5）"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 80,
+              "y0": 183.3,
+              "y1": 190.5,
+              "label": "7.2（Hitachi ≥ 5）"
+            },
+            {
+              "type": "callout",
+              "x": 50,
+              "y": 183.3,
+              "lx": 86,
+              "ly": 202,
+              "label": "冰箱 73.8＋背 2（隔壁格虛線）",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 50,
+              "y": 179.7,
+              "lx": 86,
+              "ly": 158,
+              "label": "活動層板 66 深 · 底 177.9",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 66.3,
+              "y": 171.2,
+              "lx": 86,
+              "ly": 150,
+              "label": "層板孔 Ø5 @3.2 · 前後兩排",
+              "size": 0.62
+            }
+          ]
         }
       ]
     },
@@ -9877,6 +10329,7 @@
       "object_id": "kitchen-upper-worktop",
       "title": "Dry kitchen",
       "views": [
+        "north-wall",
         "dry-wall",
         "dry-base"
       ],
@@ -9937,6 +10390,13 @@
         "玻璃隔間分格與框料",
         "咖啡機實購型號",
         "電工確認插座迴路"
+      ],
+      "focus": [
+        "dry-filler",
+        "dry-water",
+        "dry-drawers-a",
+        "dry-drawers-b",
+        "dry-end"
       ]
     },
     "appliance-tower@tower-left": {
@@ -14349,6 +14809,123 @@
     },
     "guest-desk-lb-b": {
       "alias": "guest-wall-lb-b"
+    },
+    "washer-dryer": {
+      "include": "kitchen-dry",
+      "onlyLayouts": [
+        "window-sink",
+        "tower-left"
+      ],
+      "status": "design-proposal",
+      "frontStyle": "slab",
+      "ceiling_cm": 240,
+      "ceiling_note": "假天花暫以 240 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "viewpoint": "面向北牆：左為女傭房牆，右為廚房門端",
+      "object_id": "washer-dryer",
+      "title": "洗烘衣機 · 北牆",
+      "views": [
+        "north-wall",
+        "wd-section"
+      ],
+      "focus": [
+        "nw-wd"
+      ],
+      "specFirst": [
+        "洗烘衣機 LG WashTower",
+        "活動層板",
+        "層板孔"
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "237–240，現場修邊"
+        },
+        {
+          "zone": "上櫃 ×2",
+          "h": "46.5 · 底 190.5",
+          "note": "冰箱頂 183.5＋7；兩格各雙門，深 70，下緣多 2 當手扣。"
+        },
+        {
+          "zone": "活動層板",
+          "h": "69.6 × 66 · 厚 1.8",
+          "note": "層板粒放 177.6 孔，層板底 177.9、上方到櫃底 10.8：放洗衣球、烘衣紙。"
+        },
+        {
+          "zone": "層板孔",
+          "h": "Ø5 · 間距 3.2",
+          "note": "洗衣機格兩側板各前後一排，共 4 排；152–187.2 每排 12 孔，孔心離前後緣 3.7。"
+        },
+        {
+          "zone": "洗烘衣機 LG WashTower",
+          "h": "60 × 66 × 165.5",
+          "note": "格淨寬 70：兩側各 5、背 10、安裝高度 ≥177（LG 安裝指南）；前緣離牆 76。"
+        },
+        {
+          "zone": "冰箱 HITACHI R-HW620RS",
+          "h": "68.5 × 73.8 × 183.3",
+          "note": "格淨寬 77.6：兩側各 4.55、頂 7.2、背 2；手冊要求側 ≥0.5、頂 ≥5、背 ≥2。前緣離牆 75.8。"
+        },
+        {
+          "zone": "側板",
+          "h": "1.8 ×3 · 深 70",
+          "note": "落地到 237：洗衣機格兩側、冰箱右側。機身凸出側板約 6，門可開足。"
+        },
+        {
+          "zone": "Dry kitchen",
+          "h": "167.5",
+          "note": "沿用現行設計：主機櫃 59.5＋抽屜櫃 51.5 ×2。"
+        }
+      ],
+      "hardware": [
+        "層板粒：金屬圓柱 Ø5 ×4（鍍鎳），孔深約 1.2，32 mm 系統排鑽。",
+        "洗衣機插座＋進水龍頭：背牆約 170，洗衣機頂上、層板下，伸手可關水、拔插頭（示意）。",
+        "冰箱插座：背牆約 200，在上櫃內（示意）。",
+        "上櫃門：CLIP top BLUMOTION 緩衝鉸鍊每扇 2 支。"
+      ],
+      "rationale": [
+        "北牆由女傭房牆起：洗衣機格 73.6 · 冰箱格 79.4 · Dry kitchen 167.5 ＝ 320.5。",
+        "上櫃底 190.5＝冰箱 183.5＋7；冰箱規格 183.3，實際頂距 7.2。",
+        "換洗衣機時移動層板粒即可調高低，不必改櫃。"
+      ],
+      "risks": [
+        "LG 要求安裝高度 ≥177：層板壓到 177 以下可多放東西，但不符安裝指南。"
+      ],
+      "open_questions": [
+        "洗衣機給排水、插座位置（水電確認）",
+        "假天花高度 240",
+        "上櫃深 70 是否改淺"
+      ],
+      "sources": [
+        "https://www.hitachi-homeappliances.com.hk/filemanager/common/UM/Multi_Door/(WEB)Instruction%20manual_R-HW620RH_R-HW540RH_A.pdf",
+        "https://www.lg.com/sg/appliances/installation-guide/washing-machine/"
+      ]
+    },
+    "fridge": {
+      "alias": "washer-dryer",
+      "object_id": "fridge",
+      "title": "冰箱 · 北牆",
+      "views": [
+        "north-wall",
+        "wd-section"
+      ],
+      "focus": [
+        "nw-fridge"
+      ],
+      "specFirst": [
+        "冰箱 HITACHI R-HW620RS",
+        "上櫃 ×2"
+      ]
     }
   },
   "layouts": [
