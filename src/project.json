@@ -3986,9 +3986,11 @@
       ],
       "include": "kitchen-b",
       "views": [
-        "tower-front",
-        "tower-section",
-        "wall"
+        "wall",
+        "tower-section"
+      ],
+      "focus": [
+        "tower"
       ],
       "risks": [
         "進門正對到天花的電器櫃，視覺壓迫"
@@ -6077,10 +6079,10 @@
             },
             {
               "type": "note",
-              "x": -1.5,
-              "y": 48,
-              "label": "門端",
-              "anchor": "end",
+              "x": 0,
+              "y": 243,
+              "label": "← 門端",
+              "anchor": "start",
               "size": 0.6
             }
           ],
@@ -6965,7 +6967,7 @@
             {
               "type": "note",
               "x": 0,
-              "y": 258,
+              "y": 243,
               "label": "← 門端",
               "anchor": "start",
               "size": 0.6
@@ -7020,9 +7022,11 @@
       "object_id": "kitchen-hob",
       "title": "瓦斯爐 · 烤箱 · 窄拉籃",
       "views": [
-        "hob-run",
-        "spice-section",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "oven"
       ],
       "spec": [
         {
@@ -7081,9 +7085,14 @@
       "object_id": "spice-pullout",
       "title": "窄拉籃",
       "views": [
-        "spice-section",
-        "hob-run",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "spice"
+      ],
+      "specFirst": [
+        "窄拉籃"
       ]
     },
     "spice-pullout-r": {
@@ -7091,9 +7100,14 @@
       "object_id": "spice-pullout-r",
       "title": "窄拉籃 · 右",
       "views": [
-        "spice-section",
-        "hob-run",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "spice-r"
+      ],
+      "specFirst": [
+        "窄拉籃"
       ]
     },
     "bath1-mirror-cabinet": {
@@ -8258,8 +8272,14 @@
       "object_id": "kitchen-oven",
       "title": "嵌入式烤箱",
       "views": [
-        "hob-run",
         "wall"
+      ],
+      "focus": [
+        "oven"
+      ],
+      "specFirst": [
+        "嵌入式烤箱",
+        "餐具抽屜"
       ]
     },
     "dishwasher": {
@@ -8285,8 +8305,15 @@
       "object_id": "dishwasher",
       "title": "洗碗機 · 水槽區",
       "views": [
-        "sink-run",
         "wall"
+      ],
+      "focus": [
+        "dw"
+      ],
+      "specFirst": [
+        "洗碗機",
+        "側板",
+        "開口高度"
       ],
       "spec": [
         {
@@ -8342,8 +8369,14 @@
       "object_id": "kitchen-sink",
       "title": "水槽區",
       "views": [
-        "sink-run",
         "wall"
+      ],
+      "focus": [
+        "sink"
+      ],
+      "specFirst": [
+        "水槽櫃",
+        "備菜區"
       ]
     },
     "tv-console": {
@@ -9986,9 +10019,11 @@
       ],
       "include": "kitchen-b2",
       "views": [
-        "tower-front",
-        "tower-section",
-        "wall"
+        "wall",
+        "tower-section"
+      ],
+      "focus": [
+        "tower"
       ]
     },
     "kitchen-hob@tower-left": {
@@ -10014,9 +10049,11 @@
       "object_id": "kitchen-hob",
       "title": "瓦斯爐 · 烤箱 · 窄拉籃",
       "views": [
-        "hob-run",
-        "spice-section",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "oven"
       ],
       "spec": [
         {
@@ -10080,9 +10117,14 @@
       "object_id": "spice-pullout",
       "title": "窄拉籃",
       "views": [
-        "spice-section",
-        "hob-run",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "spice"
+      ],
+      "specFirst": [
+        "窄拉籃"
       ]
     },
     "spice-pullout-r@tower-left": {
@@ -10090,9 +10132,14 @@
       "object_id": "spice-pullout-r",
       "title": "窄拉籃 · 右",
       "views": [
-        "spice-section",
-        "hob-run",
-        "wall"
+        "wall",
+        "spice-section"
+      ],
+      "focus": [
+        "spice-r"
+      ],
+      "specFirst": [
+        "窄拉籃"
       ]
     },
     "kitchen-oven@tower-left": {
@@ -10100,8 +10147,14 @@
       "object_id": "kitchen-oven",
       "title": "嵌入式烤箱",
       "views": [
-        "hob-run",
         "wall"
+      ],
+      "focus": [
+        "oven"
+      ],
+      "specFirst": [
+        "嵌入式烤箱",
+        "餐具抽屜"
       ]
     },
     "dishwasher@tower-left": {
@@ -10127,8 +10180,15 @@
       "object_id": "dishwasher",
       "title": "洗碗機 · 水槽區",
       "views": [
-        "sink-run",
         "wall"
+      ],
+      "focus": [
+        "dw"
+      ],
+      "specFirst": [
+        "洗碗機",
+        "側板",
+        "開口高度"
       ],
       "spec": [
         {
@@ -10188,8 +10248,14 @@
       "object_id": "kitchen-sink",
       "title": "水槽區",
       "views": [
-        "sink-run",
         "wall"
+      ],
+      "focus": [
+        "sink"
+      ],
+      "specFirst": [
+        "水槽櫃",
+        "水槽右側檯面"
       ]
     },
     "kitchen-lower-worktop@tower-left": {

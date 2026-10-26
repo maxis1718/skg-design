@@ -27,6 +27,7 @@
 .elev-row b{font-weight:600;font-size:12px}
 .elev-row span{font-variant-numeric:tabular-nums;color:var(--accent);font-size:12px;white-space:nowrap}
 .elev-row p{margin:3px 0 0;color:var(--muted);font-size:11px;line-height:1.7}
+.elev-row.is-focus{box-shadow:inset 3px 0 0 var(--accent);padding-left:11px}
 .elev-spec h4{font-size:12px;margin:18px 0 6px;font-weight:600}
 .elev-spec ul{margin:0;padding-left:16px;color:var(--muted);font-size:11px;line-height:1.75}
 .elev-spec li{margin-bottom:4px}
