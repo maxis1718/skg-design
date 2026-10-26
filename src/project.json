@@ -12487,11 +12487,13 @@
               ],
               "items": [
                 {
-                  "name": "書",
-                  "w": 16,
-                  "h": 24,
-                  "box": true,
-                  "size": false
+                  "name": "iPad",
+                  "tablet": true,
+                  "w": 24.7,
+                  "h": 17.8,
+                  "tilt": 15,
+                  "lift": 4,
+                  "sizeLabel": "247 × 178 mm"
                 }
               ]
             }
@@ -13496,11 +13498,13 @@
               ],
               "items": [
                 {
-                  "name": "書",
-                  "w": 16,
-                  "h": 24,
-                  "box": true,
-                  "size": false
+                  "name": "iPad",
+                  "tablet": true,
+                  "w": 24.7,
+                  "h": 17.8,
+                  "tilt": 15,
+                  "lift": 4,
+                  "sizeLabel": "247 × 178 mm"
                 }
               ]
             }

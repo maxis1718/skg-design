@@ -362,6 +362,18 @@ function placeItems(g, items, ix, iw, y0, detail, room, align, gapIn) {
   const gap = gapIn ?? 3, total = items.reduce((s, it) => s + it.w, 0) + gap * (items.length - 1);
   let x = ix + (align === 'left' ? 1.5 : Math.max(1, (iw - total) / 2));
   for (const it of items) {
+    if (it.tablet) {
+      // Tablet on a stand, leaning back by it.tilt° (front view: screen foreshortened by cos(tilt), stand foot below).
+      const lift = it.lift ?? 4, sh = it.h * Math.cos((it.tilt ?? 15) * Math.PI / 180), tot = Math.min(lift + sh, room - .5);
+      const fy = y0, sy = y0 + Math.min(lift, tot - sh);
+      g.rect(x + it.w / 2 - 4, fy, 8, lift, {fill:C.item, stroke:C.itemLine, 'stroke-width':.3, rx:.4});
+      g.rect(x, sy, it.w, sh, {fill:'#3a4540', stroke:C.dark, 'stroke-width':.3, rx:1});
+      g.rect(x + .9, sy + .9, it.w - 1.8, sh - 1.8, {fill:'#dfe7e3', stroke:'none', rx:.5});
+      const fs = g.f * (detail ? .74 : .8);
+      g.text(x + it.w / 2, sy + sh / 2 + fs * .5, it.name, {'text-anchor':'middle', fill:C.line, 'font-size':fs});
+      if (it.sizeLabel) g.text(x + it.w / 2, sy + sh / 2 - fs * .55, it.sizeLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':fs * .52});
+      x += it.w + (gapIn ?? 3);continue;
+    }
     const h = Math.min(it.h, room - .5);
     g.rect(x, y0, it.w, h, {fill:it.dashed ? 'none' : (it.box ? C.box : C.item), stroke:it.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':it.dashed ? '1.4 1' : null, rx:it.box ? .6 : Math.min(1.6, it.w / 4)});
     const fs = g.f * (detail ? .74 : .8), name = (!detail && it.short) || it.name;
