@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R33",
+    "revision": "R34",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -749,7 +749,7 @@
           "vertical_cm": 205
         },
         {
-          "label": "床頭較寬區",
+          "label": "床頭段 · 西牆退 5",
           "bounds_pt": [
             425.64,
             283.72,
@@ -763,14 +763,14 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "床型與實際尺寸": null,
-        "收納設計": null,
-        "設計備註": "・內寬約 107，床頭處約 112\n・床含床頭板約 107 × 200"
+        "床型與實際尺寸": "・訂製收納床台 107 × 205，台面 38\n・三折床墊 107 × 190 × 10，坐高約 48",
+        "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位",
+        "設計備註": "・內寬 107；北端 55 段西牆外退 5，寬 112\n・床台全寬，床邊沒有走道，從門洞 80 取物"
       },
       "name": "女傭房",
       "english": "Helper’s room",
       "number": "03",
-      "focus": "床、收納與使用淨空"
+      "focus": "收納床台與床底上掀收納"
     },
     {
       "id": "master",
@@ -1037,6 +1037,182 @@
       "english": "Guest room",
       "number": "07",
       "focus": "雙人床＋書桌＋衣櫃（A／B／C）"
+    },
+    {
+      "id": "master-balcony",
+      "source_label": "BALCONY",
+      "polygon_pt": [
+        [
+          188.4,
+          136.84
+        ],
+        [
+          264.84,
+          136.84
+        ],
+        [
+          264.84,
+          174.52
+        ],
+        [
+          259.2,
+          174.52
+        ],
+        [
+          259.2,
+          181.6
+        ],
+        [
+          188.4,
+          181.6
+        ]
+      ],
+      "bounds_pt": [
+        188.4,
+        136.84,
+        264.84,
+        181.6
+      ],
+      "parts": [
+        {
+          "label": "最大內跨度",
+          "bounds_pt": [
+            188.4,
+            136.84,
+            264.84,
+            181.6
+          ],
+          "horizontal_cm": 269.7,
+          "vertical_cm": 157.9
+        },
+        {
+          "label": "右下缺角以北",
+          "bounds_pt": [
+            188.4,
+            136.84,
+            264.84,
+            174.52
+          ],
+          "horizontal_cm": 269.7,
+          "vertical_cm": 132.9
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": {
+        "設計備註": "・西北角放櫃 105 × 65 × 104.5，長邊貼西牆、離北緣 10\n・櫃南端到門窗線約 43",
+        "待確認": "・滑門開啟側，確認櫃前通行\n・櫃體防潑水、櫃腳墊高排水"
+      },
+      "name": "主臥陽台",
+      "english": "Master balcony",
+      "number": "08",
+      "focus": "西北角收納櫃"
+    },
+    {
+      "id": "living-balcony",
+      "source_label": "BALCONY",
+      "polygon_pt": [
+        [
+          428.4,
+          120.64
+        ],
+        [
+          584.4,
+          120.64
+        ],
+        [
+          584.4,
+          167.44
+        ],
+        [
+          557.88,
+          167.44
+        ],
+        [
+          557.88,
+          168.88
+        ],
+        [
+          533.76,
+          168.88
+        ],
+        [
+          533.76,
+          170.2
+        ],
+        [
+          509.28,
+          170.2
+        ],
+        [
+          484.8,
+          170.2
+        ],
+        [
+          484.8,
+          168.88
+        ],
+        [
+          460.56,
+          168.88
+        ],
+        [
+          460.56,
+          167.44
+        ],
+        [
+          434.52,
+          167.44
+        ],
+        [
+          434.52,
+          160.36
+        ],
+        [
+          428.4,
+          160.36
+        ]
+      ],
+      "bounds_pt": [
+        428.4,
+        120.64,
+        584.4,
+        170.2
+      ],
+      "parts": [
+        {
+          "label": "主要內寬 × 深",
+          "bounds_pt": [
+            428.4,
+            120.64,
+            584.4,
+            167.44
+          ],
+          "horizontal_cm": 550.3,
+          "vertical_cm": 165.1
+        },
+        {
+          "label": "北側完整矩形帶",
+          "bounds_pt": [
+            428.4,
+            120.64,
+            584.4,
+            160.36
+          ],
+          "horizontal_cm": 550.3,
+          "vertical_cm": 140.1
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": {
+        "設計備註": "・西端：天花曬衣架 113 × 40\n・東段：鞦韆天花吊點 ×2，間距 48",
+        "鞦韆吊點": "・錨進結構樓板，不可只鎖假天花\n・每點額定 ≥ 150 kg，約人＋座椅的 2 倍\n・座椅兩側到外緣／滑門各約 58，前後擺動各留 ≥ 100"
+      },
+      "name": "客廳陽台",
+      "english": "Living balcony",
+      "number": "09",
+      "focus": "曬衣架與鞦韆吊點"
     }
   ],
   "objects": [
@@ -1242,7 +1418,7 @@
     },
     {
       "id": "drying-rack",
-      "room_id": "living",
+      "room_id": "living-balcony",
       "label": "Clothes drying rack",
       "bounds_pt": [
         431.23,
@@ -1563,32 +1739,29 @@
       "label": "Bed",
       "bounds_pt": [
         427.08,
-        285.04,
+        283.72,
         457.32,
         341.8
       ],
       "plan_horizontal_cm": 106.7,
-      "plan_vertical_cm": 200.2,
+      "plan_vertical_cm": 204.9,
       "nominal_width_cm": null,
       "nominal_depth_cm": null,
       "height_cm": null,
-      "status": "scaled-symbol",
+      "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "Complete footprint about107x200cm includes10cm headboard drawing727. Body drawing714 alone is107x190cm. Actual bed model/height unknown.",
-      "physical_drawing_indices": [
-        714,
-        727
-      ],
-      "name": "女傭房床",
-      "source_note": "含床頭板；床身長約 190",
+      "notes": "Built-in platform bed wall to wall 107 x 205 (replaces source bed symbol drawings 714-727, drawn in src/furniture-helper.svg). Top 38; head strip 15 fixed; three lift-up lids 63.3 x 107 hinged on the west wall side; tri-fold mattress 107 x 190 x 10 (schematic). West-wall 5 x 55 step at the head end closed by a filler.",
+      "physical_drawing_indices": [],
+      "name": "女傭房收納床台",
+      "source_note": "・訂製床台 107 × 205 × 38，床頭固定段 15\n・床底 3 格，上掀蓋 63.3 × 107 ×3\n・三折床墊 107 × 190 × 10 為示意",
       "dimensions": {
         "w": {
           "cm": 107,
-          "status": "scaled"
+          "status": "design"
         },
         "d": {
-          "cm": 200,
-          "status": "scaled"
+          "cm": 205,
+          "status": "design"
         }
       },
       "actual": {
@@ -3189,6 +3362,75 @@
       "onlyLayout": [
         "layout-a"
       ]
+    },
+    {
+      "id": "balcony-cabinet",
+      "code": "MBL-01",
+      "room_id": "master-balcony",
+      "name": "陽台收納櫃",
+      "label": "Master balcony cabinet",
+      "bounds_pt": [
+        188.4,
+        139.67,
+        206.83,
+        169.44
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 105,
+          "status": "design"
+        },
+        "d": {
+          "cm": 65,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 105,
+        "d": 65,
+        "h": 104.5,
+        "brand": null,
+        "model": null
+      },
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "notes": "105 W x 65 D x 104.5 H cabinet in the master-balcony NW corner: back/long side 105 against the west wall x188.4 (N-S), 65 deep into the balcony, 10 cm off the north edge y136.84 (y 10-115 cm), front facing east.",
+      "source_note": "・105 × 65 × 104.5，長邊 105 貼西牆\n・離北緣 10，門朝東\n・南端到門窗線約 43"
+    },
+    {
+      "id": "swing-hooks",
+      "code": "LBL-01",
+      "room_id": "living-balcony",
+      "name": "鞦韆 · 天花吊點 ×2",
+      "label": "Swing ceiling hooks x2",
+      "bounds_pt": [
+        544.71,
+        136.95,
+        556.05,
+        151.13
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 50,
+          "status": "design"
+        },
+        "d": {
+          "cm": 40,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "mount": "ceiling",
+      "notes": "Two ceiling hook points 48 cm apart on a N-S line, centre 120 cm from the east balcony wall x584.4 and mid-depth of the main band (y144.04, ~83 cm from the outer edge). Swing travels E-W along the balcony. Seat 50 x 40 is schematic; hook spacing slightly wider than the seat (engineerfix.com); clearance >= 50 each side (Lillagunga Classic manual), Freifrau asks 70 sides / 100 front-back. Anchor into the structural RC slab, rating >= 2x user + seat.",
+      "source_note": "・吊點 ×2 間距 48，連線南北向，鞦韆東西向擺\n・吊點中心距東牆 120、在陽台深度中線\n・錨進結構樓板，每點額定 ≥ 150 kg\n・座椅 50 × 40 為示意；兩側各約 58 淨空"
     }
   ],
   "source_dimensions": [
@@ -3642,6 +3884,18 @@
     {
       "id": "C39",
       "text": "客房：活動衣櫃 70＋書桌 70 × 40 改為方案 A，木作改 B、原 A 改 C；全屋格局 A／B 對調。"
+    },
+    {
+      "id": "C40",
+      "text": "加 ⚡ 電與網路圖層：插座、天花供電、Aqara E1 攝影機 ×3、UniFi U7 Lite ×2、網路孔。"
+    },
+    {
+      "id": "C41",
+      "text": "兩個陽台變成可點空間；主臥陽台櫃 105 × 65 × 104.5；客廳陽台鞦韆吊點 ×2。"
+    },
+    {
+      "id": "C42",
+      "text": "女傭房改成整床收納床台：三片上掀板、無把手、氣壓撐桿。"
     }
   ],
   "measurement_policy": {
@@ -14349,6 +14603,445 @@
     },
     "guest-desk-lb-b": {
       "alias": "guest-wall-lb-b"
+    },
+    "helper-bed": {
+      "object_id": "helper-bed",
+      "title": "女傭房收納床台",
+      "viewpoint": "站在門口面向西牆：左為床尾，右為床頭",
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "states": [
+        {
+          "id": "closed",
+          "name": "蓋上"
+        },
+        {
+          "id": "open",
+          "name": "掀開"
+        }
+      ],
+      "units": {
+        "main": {
+          "w": 205,
+          "d": 107,
+          "h": 38,
+          "board": 1.8,
+          "noCarcass": true,
+          "noBack": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 34.2,
+              "label": "封板"
+            },
+            {
+              "kind": "groove",
+              "h": 2
+            },
+            {
+              "kind": "lid",
+              "h": 1.8
+            }
+          ]
+        }
+      },
+      "risks": [
+        "床台佔滿房寬 107，床邊沒有走道；床頭那片不在門洞範圍，要跪在中段蓋上伸手開。",
+        "床尾那片掀起後貼近西牆窗，窗台高度與窗扇開法待確認，必要時限位開角。"
+      ],
+      "spec": [
+        {
+          "zone": "床墊",
+          "h": "10",
+          "note": "三折泡棉 107 × 190 × 10 示意；折線對齊上蓋分縫，掀哪片先折起那段。"
+        },
+        {
+          "zone": "上掀蓋 ×3",
+          "h": "1.8",
+          "note": "63.3 × 107 等分；鉸鏈在西牆側，從門側掀起約 75°；每片開通風孔。"
+        },
+        {
+          "zone": "手扣槽",
+          "h": "2",
+          "note": "封板頂比蓋子低 2，手指從蓋緣下方扣起；無把手。"
+        },
+        {
+          "zone": "收納格 ×3",
+          "h": "32.4",
+          "note": "內寬約 103、長 63.3；登機箱平放、收納箱、換季被。"
+        },
+        {
+          "zone": "底板",
+          "h": "3.8",
+          "note": "底板架高 2 通風防潮；封板下緣留通風縫。"
+        }
+      ],
+      "hardware": [
+        "每片 2 支緩降氣壓撐桿，任意角度停，不會落下夾手；力道依蓋重配，約 7 kg／片示意。",
+        "每片西側 3 個鉸鏈或 1 支長鉸鏈；蓋下加橫肋，跪坐不下陷。",
+        "不用按壓回彈：坐、跪在床上會誤觸彈開。"
+      ],
+      "rationale": [
+        "側抽屜不可行：床寬等於房寬，抽屜只能從門洞往廚房拉，會擋門和走道。",
+        "三片上掀可行：每片獨立開，不必整床抬起；三折床墊只要折一段。",
+        "不做整片掀床：107 × 190 連床墊太重，撐桿力大且開起來擋窗。",
+        "床頭固定段 15 吸收 205 − 190，也補平西牆退 5 的凹位；台面 38 ＋ 床墊 10 ＝ 坐高 48。"
+      ],
+      "open_questions": [
+        "床墊厚度與型號",
+        "西牆窗台高度",
+        "板材與色號",
+        "床頭插座"
+      ],
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "main",
+              "x": 0
+            }
+          ],
+          "width": 205,
+          "height": 160,
+          "noCeiling": true,
+          "detail": false,
+          "chain": 0,
+          "hcuts": [
+            0,
+            63.33,
+            126.67,
+            190,
+            205
+          ],
+          "totalLabel": "205",
+          "levels": [
+            {
+              "y": 38,
+              "label": "台面"
+            },
+            {
+              "y": 48,
+              "label": "床面"
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 34.2,
+              "w": 190,
+              "h": 2,
+              "fill": "#b9b2a3",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 190,
+              "y": 36.2,
+              "w": 15,
+              "h": 1.8,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "callout",
+              "x": 197.5,
+              "y": 37.5,
+              "lx": 186,
+              "ly": 78,
+              "label": "床頭固定段",
+              "size": 0.6
+            },
+            {
+              "type": "lid",
+              "x": 0.15,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "床尾"
+            },
+            {
+              "type": "lid",
+              "x": 63.48,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "中段"
+            },
+            {
+              "type": "lid",
+              "x": 126.82,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "床頭",
+              "open": false
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 63.33,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "label": "三折床墊 107 × 190 × 10",
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 48,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 58,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "label": "床墊疊起",
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "when": "open",
+              "x": 4,
+              "y": 3.8,
+              "w": 55,
+              "h": 23,
+              "dashed": true,
+              "label": "登機箱平放"
+            },
+            {
+              "type": "device",
+              "when": "open",
+              "x": 67,
+              "y": 3.8,
+              "w": 56,
+              "h": 28,
+              "dashed": true,
+              "label": "收納箱 ×2"
+            },
+            {
+              "type": "clear",
+              "x0": 45,
+              "x1": 125,
+              "y": 150,
+              "label": "門洞 80"
+            }
+          ]
+        },
+        {
+          "id": "side",
+          "name": "側剖面 · 中段",
+          "kind": "section",
+          "ref": "main",
+          "height": 160,
+          "noCeiling": true,
+          "extension": 20,
+          "labelRoom": 30,
+          "levels": [
+            {
+              "y": 38,
+              "label": "台面"
+            },
+            {
+              "y": 48,
+              "label": "床面"
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "x": 1.8,
+              "y": 2,
+              "w": 103.4,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 8,
+              "y": 0,
+              "w": 4,
+              "h": 2,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 50,
+              "y": 0,
+              "w": 4,
+              "h": 2,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 92,
+              "y": 0,
+              "w": 4,
+              "h": 2,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 3.8,
+              "w": 1.8,
+              "h": 32.4,
+              "fill": "#d3c4aa",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 105.2,
+              "y": 0,
+              "w": 1.8,
+              "h": 34.2,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "lid",
+              "section": true,
+              "hx": 0,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "label": "上掀 75°",
+              "strut": {
+                "x": 14,
+                "y": 8,
+                "u": 20,
+                "label": "氣壓撐桿"
+              }
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 107,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "label": "床墊",
+              "when": "closed"
+            },
+            {
+              "type": "device",
+              "when": "open",
+              "x": 30,
+              "y": 3.8,
+              "w": 55,
+              "h": 23,
+              "dashed": true,
+              "label": "登機箱平放"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 92,
+              "y0": 3.8,
+              "y1": 36.2,
+              "label": "內高 32.4",
+              "rotate": true
+            },
+            {
+              "type": "callout",
+              "x": 106.1,
+              "y": 35.2,
+              "lx": 112,
+              "ly": 28,
+              "label": "手扣槽 2"
+            },
+            {
+              "type": "note",
+              "x": -7,
+              "y": 110,
+              "label": "西牆",
+              "anchor": "end"
+            },
+            {
+              "type": "note",
+              "x": 110,
+              "y": 110,
+              "label": "門側",
+              "anchor": "start"
+            }
+          ],
+          "depthLabel": "床台寬 107"
+        }
+      ]
     }
   },
   "layouts": [

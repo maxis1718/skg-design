@@ -13,6 +13,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | `kid` | 小孩房 | ≈ 250 × 300 |
 | `study` | 書房 | ≈ 247 × 300 |
 | `guest` | 客房 | ≈ 250 × 290 |
+| `master-balcony` | 主臥陽台 | ≈ 269.7 × 157.9 |
+| `living-balcony` | 客廳陽台 | ≈ 550.3 × 165.1 |
 
 ## Objects
 
@@ -31,7 +33,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-21 | `coffee-machine` | 咖啡機（示意） | 8.4 × 33 |
 | KIT-22 | `water-purifier` | 淨水器 Wells The One | 8.8 × 8.8 |
 | KIT-04 | `kitchen-lower-worktop` | Wet kitchen | 320.5 × 65 |
-| HLP-01 | `helper-bed` | 女傭房床 | 107 × 200 |
+| HLP-01 | `helper-bed` | 女傭房收納床台 | 107 × 205 |
 | MST-01 | `master-wardrobe-left` | 主臥左側衣櫃 | 90 × 60 |
 | MST-02 | `master-wardrobe-right` | 主臥右側衣櫃 | 90 × 60 |
 | MST-03 | `master-unlabelled-cross-cabinet` | 未標示櫃體 | 173 × 33 |
@@ -71,6 +73,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-18 | `guest-desk-lb-b` | 客房木作書桌（B） | 60 × 40 |
 | GST-19 | `guest-chair-lb-b` | 客房書椅（B） | 45 × 45 |
 | GST-20 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
+| MBL-01 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
+| LBL-01 | `swing-hooks` | 鞦韆 · 天花吊點 ×2 | 50 × 40 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 

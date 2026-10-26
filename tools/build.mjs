@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,'src',name),'utf8');
 const project=JSON.parse(read('project.json'));
-if(project.rooms.length!==7||new Set(project.objects.map(o=>o.id)).size!==project.objects.length)throw new Error('Invalid record index');
+if(project.rooms.length!==9||new Set(project.objects.map(o=>o.id)).size!==project.objects.length)throw new Error('Invalid record index');
 const kidSource=read('furniture-kid.svg');
 // 2026-10-20 kid-room bed removed (user: no double bed; spec to come): bed frame, pillows, blanket fold and headboard band (source paths 666–688)
 // are dropped from the kid-room copy only; the guest room keeps the full mirrored symbol.
@@ -40,7 +40,11 @@ for(const fragment of tvWall)plan=plan.replace(fragment,'');
 const swingDoors=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*\/>/g)].map(m=>m[0]);
 if(swingDoors.length!==4)throw new Error('Door source index changed');
 for(const fragment of swingDoors)plan=plan.replace(fragment,'');
-const furniture=`<g data-layout="kid-original">${kid}</g><g id="layout-a-geometry"><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${guestWardrobe}</g><g id="guest-plan-a" data-guest-plan="guest-a">${read('furniture-guest-plan-a.svg')}</g><g id="guest-plan-b" data-guest-plan="guest-b" hidden>${read('furniture-guest-plan-b.svg')}</g><g data-guest-plan="guest-c" hidden>${read('furniture-guest-plan-c.svg')}</g><g id="kid-study-geometry">${read('furniture-kid-study.svg')}</g></g><g id="layout-b-geometry" hidden>${read('furniture-layout-b.svg')}<g data-guest-plan="guest-a">${read('furniture-guest-plan-lb-a.svg')}</g><g data-guest-plan="guest-b" hidden>${read('furniture-guest-plan-lb-b.svg')}</g><g data-guest-plan="guest-c" hidden>${read('furniture-guest-plan-lb-c.svg')}</g></g><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g><g id="door-geometry">${read('furniture-doors.svg')}</g>`;
+// Helper room: source bed symbol (714–727: body, pillow, blanket, headboard) → built-in platform bed in src/furniture-helper.svg.
+const helperBed=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:71[4-9]|72[0-7])"[^>]*\/>/g)].map(m=>m[0]);
+if(helperBed.length!==14)throw new Error('Helper bed source index changed');
+for(const fragment of helperBed)plan=plan.replace(fragment,'');
+const furniture=`<g data-layout="kid-original">${kid}</g><g id="layout-a-geometry"><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">${guestWardrobe}</g><g id="guest-plan-a" data-guest-plan="guest-a">${read('furniture-guest-plan-a.svg')}</g><g id="guest-plan-b" data-guest-plan="guest-b" hidden>${read('furniture-guest-plan-b.svg')}</g><g data-guest-plan="guest-c" hidden>${read('furniture-guest-plan-c.svg')}</g><g id="kid-study-geometry">${read('furniture-kid-study.svg')}</g></g><g id="layout-b-geometry" hidden>${read('furniture-layout-b.svg')}<g data-guest-plan="guest-a">${read('furniture-guest-plan-lb-a.svg')}</g><g data-guest-plan="guest-b" hidden>${read('furniture-guest-plan-lb-b.svg')}</g><g data-guest-plan="guest-c" hidden>${read('furniture-guest-plan-lb-c.svg')}</g></g><g id="kitchen-sink-geometry">${sink.join('')}</g><g id="kitchen-hob-geometry">${hob.join('')}</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">${read('furniture-living.svg')}</g><g id="door-geometry">${read('furniture-doors.svg')}</g><g id="balcony-geometry">${read('furniture-balcony.svg')}</g><g id="helper-geometry">${read('furniture-helper.svg')}</g>`;
 let html=read('shell.html');
 for(const[key,value]of Object.entries({STYLE:read('style.css'),PLAN:plan,FURNITURE:furniture,DATA:JSON.stringify(project).replaceAll('</','<\\/'),ELEVATION:read('elevation.js'),I18N:fs.existsSync(path.join(root,'src','i18n.json'))?JSON.stringify(JSON.parse(read('i18n.json'))).replaceAll('</','<\\/'):'{"en":{}}',APP:read('app.js')}))html=html.replace('/*__'+key+'__*/',()=>value);
 for(const[key,file]of [['NEW','layout-source.png'],['OLD','summary-original.png']])html=html.replaceAll('/*__SOURCE_'+key+'__*/','data:image/png;base64,'+fs.readFileSync(path.join(root,'assets',file)).toString('base64'));
@@ -48,4 +52,4 @@ if(/\/\*__[A-Z_]+__\*\//.test(html))throw new Error('Unresolved template');
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.mkdirSync(path.join(root,'qa'),{recursive:true});
 fs.writeFileSync(path.join(root,'dist','index.html'),html);fs.writeFileSync(path.join(root,'dist','.nojekyll'),'');
 fs.writeFileSync(path.join(root,'qa','build-manifest.json'),JSON.stringify({revision:project.project.revision,objects:project.objects.length,rooms:project.rooms.length,bytes:Buffer.byteLength(html),sha256:crypto.createHash('sha256').update(html).digest('hex')},null,2));
-console.log(`Built dist/index.html · ${project.project.revision} · 7 rooms · ${project.objects.length} objects`);
+console.log(`Built dist/index.html · ${project.project.revision} · ${project.rooms.length} rooms · ${project.objects.length} objects`);
