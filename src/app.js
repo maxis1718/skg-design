@@ -31,7 +31,7 @@ let roomId='floor', objectId=null, showDims=true, showObjects=true;
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
 // Guest-room scheme (R27, south room): A = guest-a (wardrobe 49 + desk on the west wall, default), B = guest-b (wardrobe 80 + desk on the north wall, bed head west). URL ?guest=a|b.
-const GUEST_KEYS={a:'guest-a',b:'guest-b'};
+const GUEST_KEYS={a:'guest-a',b:'guest-b',c:'guest-c'};
 selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||GUEST_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
@@ -61,14 +61,15 @@ function elevationFor(id){
  if(e.include){const s=all[e.include];e={...e,units:{...(s?.units||{}),...(e.units||{})},views:e.views.map(v=>typeof v==='string'?s?.views.find(x=>x.id===v):v).filter(Boolean)};}
  return e;
 }
+const elevId=()=>objectId||(roomId==='guest'?guestVersion()?.elevation:null);
 function elevationBlock(){
- const e=objectId&&elevationFor(objectId);if(!e)return '';
- const view=e.views.find(v=>v.id===elevView[objectId])||e.views[0],names=view.stateNames||{};
+ const eid=elevId(),e=eid&&elevationFor(eid);if(!e)return '';
+ const view=e.views.find(v=>v.id===elevView[eid])||e.views[0],names=view.stateNames||{};
  const list=items=>`<ul>${items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
  return `<div class="elev-block" id="elevation"><div class="elev-head"><div><h3>${esc(e.title)}</h3><p class="elev-viewpoint">${esc(e.viewpoint)}</p></div><div class="elev-controls"><div class="seg" role="group" aria-label="${t('立面視圖')}">${e.views.map(v=>`<button class="tool ${v.id===view.id?'active':''}" data-elev-view="${esc(v.id)}" aria-pressed="${v.id===view.id}">${esc(v.name)}</button>`).join('')}</div><div class="seg" role="group" aria-label="${t('門片狀態')}">${e.states.map(st=>`<button class="tool ${st.id===elevState?'active':''}" data-elev-state="${esc(st.id)}" aria-pressed="${st.id===elevState}">${esc(names[st.id]||st.name)}</button>`).join('')}</div></div></div><div class="elev-grid"><figure class="elev-figure">${window.SKGElevation.render(e,view.id,elevState,t)}${e.ceiling_note?`<figcaption>${esc(e.ceiling_note)}</figcaption>`:''}</figure><div class="elev-spec">${e.risks?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t('需評估')}</h4><ul class="elev-risks">${e.risks.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}<div class="detail-subhead"><h3>${t('分區 · 由上到下')}</h3></div>${e.spec.map(z=>`<div class="elev-row"><div><b>${esc(z.zone)}</b><span>${esc(z.h)}</span></div><p>${esc(z.note)}</p></div>`).join('')}${e.hardware?.length?`<h4>${t('五金與機電')}</h4>${list(e.hardware)}`:''}${e.rationale?.length?`<h4>${t('設計說明')}</h4>${list(e.rationale)}`:''}${e.open_questions?.length?`<h4>${t('待確認')}</h4><p class="elev-open">${e.open_questions.map(esc).join(t('、'))}</p>`:''}</div></div></div>`;
 }
 function bindElevation(){
- $$('[data-elev-view]').forEach(b=>b.onclick=()=>{elevView[objectId]=b.dataset.elevView;refreshElevation();});
+ $$('[data-elev-view]').forEach(b=>b.onclick=()=>{elevView[elevId()]=b.dataset.elevView;refreshElevation();});
  $$('[data-elev-state]').forEach(b=>b.onclick=()=>{elevState=b.dataset.elevState;refreshElevation();});
 }
 function refreshElevation(){const el=$('#elevation');if(!el)return;el.outerHTML=elevationBlock();bindElevation();}
@@ -254,7 +255,7 @@ function renderInventory(){
 function buildReference(){
   const p=project.measurement_policy;
   $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':'R31'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':Number(c.id.slice(1))<=36?'R31':'R32'}</span>${esc(c.text)}</div>`).join('');
   const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
   const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
   $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;

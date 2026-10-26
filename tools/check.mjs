@@ -13,7 +13,7 @@ const checkViews=(id,views,units)=>{for(const v of views){assert(v,id+' referenc
 for(const[id,e]of Object.entries(E)){
   if(e.shared){checkUnits(id,e.units);checkViews(id,e.views,e.units);continue;}
   // 'objectId@layout' = layout-specific elevation (kitchen scheme B); the layout must exist in roomVersions.kitchen.
-  const[oid,lay]=id.split('@');assert(d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert(d.roomVersions.kitchen.some(v=>v.layout===lay),'elevation for unknown layout '+id);
+  const[oid,lay]=id.split('@');assert(e.wall||d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert(d.roomVersions.kitchen.some(v=>v.layout===lay),'elevation for unknown layout '+id);
   if(e.alias)assert(E[e.alias]&&!E[e.alias].alias,id+' alias must point at a concrete elevation');
   const b=e.alias?{...E[e.alias],...e}:e,inc=b.include?E[b.include]:null;if(b.include)assert(inc?.shared,id+' include must be shared');
   const units={...(inc?.units||{}),...(b.units||{})},views=b.views.map(v=>typeof v==='string'?inc?.views.find(x=>x.id===v):v);
