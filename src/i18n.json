@@ -219,7 +219,6 @@
   "・OSIM uLove 3：76 × 127 × 116，躺平 185\n・離窗 10；椅背靠東牆、離牆 10，往西躺平\n・躺平後到西牆約 52": "• OSIM uLove 3: 76 × 127 × 116, 185 reclined\n• 10 off the window; backrest to the east wall, 10 off it, reclines west\n• About 52 to the west wall when reclined",
   "・OSIM uLove 3：76 × 127 × 116，躺平 185\n・離窗 10；椅背靠東牆、離牆 10，往西躺平\n・躺平後到西牆約 55": "• OSIM uLove 3: 76 × 127 × 116, 185 reclined\n• 10 off the window; backrest to the east wall, 10 off it, reclines west\n• About 55 to the west wall when reclined",
   "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊沿陽台東西向，離西牆 70、在陽台深度中線，兩側衣服不碰牆和玻璃": "• SMARTLUX LITE ceiling-hung 113 × 40\n• Lowers 6.6–130\n• Long side east–west, 70 off the west wall, centred in the balcony depth so clothes clear the wall and the glass",
-  "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，離西牆約 10": "• SMARTLUX LITE ceiling rack 113 × 40, drops 6.6–130\n• West end of the balcony, 10 off the west wall",
   "・Samsung Bespoke AI 獨立式\n・開口 60，兩側 1.8 側板，整格 63.6": "• Samsung Bespoke AI freestanding\n• 60 opening, 1.8 side panels, 63.6 bay",
   "・Samsung The Frame 75\" 168.53 × 96.54 × 2.69\n・壁掛：中心高 110，下緣 61.8，上緣 158.3": "• Samsung The Frame 75\" 168.53 × 96.54 × 2.69\n• Wall-mounted: centre 110, bottom 61.8, top 158.3",
   "・Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛\n・中心高 110、下緣 61.8；櫃面到電視 21.8\n・電視牆 387.5：木作底板約 5＋wabi-sabi 淡灰壁紙到天花；分戶牆不打鑿\n・Ø32 暗管：櫃後空腔 → 電視背後\n・局部假天花（底 270）嵌線性洗牆燈": "• Samsung The Frame 75\" (168.5 × 96.5 × 2.7), wall-mounted\n• Centre 110, bottom 61.8; 21.8 from console top to TV\n• Feature wall 387.5: 5 timber backing + pale-grey wabi-sabi wallpaper to the ceiling; party wall not chased\n• Ø32 concealed conduit: console void → behind the TV\n• Local false ceiling (underside 270) with a linear wall-washer",
@@ -245,7 +244,6 @@
   "・右鍵解耦，不接燈，按一下關全屋燈\n・出門前一鍵；場景在 Aqara Home 設定\n・離地 120，與客廳開關並排": "・Right key decoupled, no load; one press turns off every light\n・One press when leaving; the scene is set in Aqara Home\n・120 above floor, side by side with the living-room switch",
   "・吊點 ×2 間距 48，連線南北向，鞦韆東西向擺\n・吊點中心距東牆 120、在陽台深度中線\n・錨進結構樓板，每點額定 ≥ 150 kg\n・座椅 50 × 40 為示意；兩側各約 58 淨空": "• 2 hook points 48 apart on a north–south line; the swing travels east–west\n• Hook centre 120 from the east wall, on the balcony's mid-depth line\n• Anchored into the structural slab, each point rated ≥ 150 kg\n• Seat 50 × 40 is indicative; about 58 clear on each side",
   "・同北側，離地 60（示意）": "・Same as the north side, 60 above floor (indicative)",
-  "・含底座 35 × 35，放陽台西南角、門邊牆垛旁\n・背後低位插座（S-09）": "• 35 × 35 incl. dock, balcony south-west corner by the door pier\n• Low socket behind (S-09)",
   "・四腳椅、不裝滾輪，無扶手\n・座深 ≤ 45": "• Four-leg chair, no casters, no arms\n• Seat depth ≤ 45",
   "・四腳椅、不裝滾輪，無扶手\n・座深 ≤ 45，椅背可貼床緣": "• Four-leg chair, no casters, no arms\n• Seat depth ≤ 45; backrest can touch the bed edge",
   "・圖上第二個「?」位置，靠大門\n・坐沙發時在右前方約 70°、5 m 外，多半被走道牆角擋住\n・預設看廚房門與走道，可轉到大門與客廳\n・不選第一個「?」：太靠近電視，看電視時一直在視線內\n・供電 P-02，Wi-Fi 2.4 GHz 連線": "・The second \"?\" on the drawing, near the main door\n・From the sofa it is about 70° front-right and 5 m away, mostly hidden by the passage corner\n・Default view: kitchen door and passage; can turn to the main door and living room\n・Not the first \"?\": too close to the TV, always in view while watching\n・Power from P-02, Wi-Fi 2.4 GHz",
@@ -654,7 +652,6 @@
   "客廳東牆 · 清淨機後": "Living east wall · behind the purifier",
   "客廳西牆 · 餐桌北端": "Living west wall · north end of the dining table",
   "客廳西牆 · 餐桌南端": "Living west wall · south end of the dining table",
-  "客廳陽台 · 西南角牆垛": "Living balcony · south-west pier",
   "客廳陽台": "Living-room balcony",
   "客廳陽台門左側天花角": "Ceiling corner left of the living balcony door",
   "客房 B 方案：拆 120 衣櫃，LINNMON 100 × 60 書桌": "Guest scheme B: 120 wardrobe removed, LINNMON 100 × 60 desk",
@@ -1416,6 +1413,11 @@
   "龍頭頂要低於鏡門下緣 115，選龍頭時注意。": "The tap top must stay below the mirror-door bottom edge at 115 — check when choosing the tap.",
   "龍頭高度": "Tap height",
   "＋": "+",
-  "，": ", "
+  "，": ", ",
+  "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊南北向（垂直客廳滑門），曬被子不擋客廳採光\n・離西牆 55、置中陽台深度": "・SMARTLUX LITE ceiling-mounted, 113 × 40\n・Lowers 6.6–130\n・Long axis north–south (perpendicular to the living-room slider) so drying bedding doesn't block living-room sun\n・55 off the west wall, centred in balcony depth",
+  "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離西牆 55": "・SMARTLUX LITE ceiling-mounted 113 × 40, lowers 6.6–130\n・Balcony west end, long axis north–south, 55 off the west wall",
+  "・含底座 35 × 35，背貼陽台西牆、牆垛北側，不碰玻璃門\n・背後低位插座（S-09）": "・35 × 35 incl. dock, back against the balcony west wall north of the pier, clear of the glass door\n・Low socket behind (S-09)",
+  "客廳陽台 · 西牆（底座後）": "Living balcony · west wall (behind dock)",
+  "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。": "Balcony Dreame dock moved against the west wall; drying rack turned north–south so bedding doesn't block living-room sun."
  }
 }

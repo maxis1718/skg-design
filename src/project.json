@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R39",
+    "revision": "R40",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -625,7 +625,7 @@
         "電視與電視牆": "・Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛\n・中心高 110、下緣 61.8；櫃面到電視 21.8\n・電視牆 387.5：木作底板約 5＋wabi-sabi 淡灰壁紙到天花；分戶牆不打鑿\n・Ø32 暗管：櫃後空腔 → 電視背後\n・局部假天花（底 270）嵌線性洗牆燈",
         "電視櫃兩端留白": "・電視、櫃、沙發同中線，距陽台玻璃 130\n・櫃北端距玻璃 25，南端到牆尾 152.8",
         "餐桌尺寸與款式": "・Dahlia 岩板餐桌 150 × 90 × 75\n・北緣距陽台玻璃 50；南緣到過道 125.1\n・長邊各 2 椅，過道端不放椅\n・陽台端 Tripp Trapp 收進露約 30，拉出最多 40，距玻璃仍約 10",
-        "陽台曬衣架": "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，離西牆約 10",
+        "陽台曬衣架": "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離西牆 55",
         "沙發與動線": "・沙發 210 × 95，與電視同中線\n・北端距玻璃 25，南端到過道 90.1\n・前緣到電視櫃 90；拉開中抽後仍約 55 可站\n・椅背到餐桌東緣 149.9\n・椅背到螢幕約 227.3，坐姿視距約 180–190",
         "材質與色彩": null
       },
@@ -1632,10 +1632,10 @@
       "room_id": "living-balcony",
       "label": "Clothes drying rack",
       "bounds_pt": [
-        448.24,
-        138.37,
-        480.27,
-        149.71
+        443.99,
+        128.02,
+        455.33,
+        160.06
       ],
       "plan_horizontal_cm": 40.0,
       "plan_vertical_cm": 113.0,
@@ -1644,9 +1644,9 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "SMARTLUX LITE ceiling-mounted drying rack, 113 x 40 cm; drop-down distance 6.6-130 cm. Living balcony west end, long axis perpendicular to facade (N-S), 10 cm off the west balcony wall x428.4, ~24 cm from the outer balcony edge y120.64 and ~3 cm north of the post/return line y160.36 (~28 cm before the sliding door line y167.44). Overhead item: drawn dashed.",
+      "notes": "SMARTLUX LITE ceiling-mounted drying rack, 113 x 40 cm. Long axis N-S (perpendicular to the living-room sliding door) so hung bedding does not block sun into the living room. West edge 55 cm off the west balcony wall, centred in balcony depth. Overhead: dashed.",
       "name": "曬衣架",
-      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊沿陽台東西向，離西牆 70、在陽台深度中線，兩側衣服不碰牆和玻璃",
+      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊南北向（垂直客廳滑門），曬被子不擋客廳採光\n・離西牆 55、置中陽台深度",
       "dimensions": {
         "w": {
           "cm": 113,
@@ -3680,10 +3680,10 @@
       "room_id": "living-balcony",
       "name": "掃拖機器人 Dreame H14 Ultra（含底座）",
       "bounds_pt": [
-        434.62,
-        157.42,
-        444.54,
-        167.34
+        428.4,
+        150.44,
+        438.32,
+        160.36
       ],
       "dimensions": {
         "w": {
@@ -3702,7 +3702,7 @@
         "brand": "Dreame",
         "model": "H14 Ultra"
       },
-      "source_note": "・含底座 35 × 35，放陽台西南角、門邊牆垛旁\n・背後低位插座（S-09）",
+      "source_note": "・含底座 35 × 35，背貼陽台西牆、牆垛北側，不碰玻璃門\n・背後低位插座（S-09）",
       "status": "user-design"
     },
     {
@@ -4254,6 +4254,10 @@
     {
       "id": "C47",
       "text": "小孩房加 Dyson TP09；客房加 Electrolux UltimateHome 300；三組雙孔插座。"
+    },
+    {
+      "id": "C48",
+      "text": "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。"
     }
   ],
   "measurement_policy": {
@@ -17348,9 +17352,9 @@
         "id": "sock-vacuum",
         "code": "S-09",
         "kind": "socket",
-        "x": 434.9,
-        "y": 162.38,
-        "place": "客廳陽台 · 西南角牆垛",
+        "x": 428.9,
+        "y": 155.4,
+        "place": "客廳陽台 · 西牆（底座後）",
         "mount": 15,
         "name": "插座 · 掃拖機器人",
         "notes": "・13A，離地 15（低位，藏在底座後）\n・陽台用防水面板（IP66）",
