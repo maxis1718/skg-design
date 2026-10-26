@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R35",
+    "revision": "R36",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -3900,6 +3900,10 @@
     {
       "id": "C43",
       "text": "廚房北牆整面立面：洗烘衣機、冰箱、Dry kitchen；上櫃底 190.5，洗衣機上方活動層板。"
+    },
+    {
+      "id": "C44",
+      "text": "電與智能家居：Wi-Fi 方案 A（Deco X50-PoE）／B（UniFi U7 Lite）＋PoE 交換器；四房電動窗簾；全屋智能開關＋門口一鍵全關；攝影機走天花插座＋Wi-Fi。"
     }
   ],
   "measurement_policy": {
