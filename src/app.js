@@ -191,7 +191,8 @@ function renderSelectedDimensions(){
   // Dining table: chairs flank the long sides and the Tripp Trapp sits at the north end, so put the width below (corridor end, no chair) and the length outside the east chairs.
   const dining=o.id==='dining-table',hy=dining?y1+7:y0-3,vx=dining?x1+7.5:x1+4;
   dimensionLine(g,x0,hy,x1,hy,dimension(hd)+' cm',true);
-  dimensionLine(g,vx,y0,vx,y1,dimension(vd)+' cm',true);
+  if(!o.clearances)dimensionLine(g,vx,y0,vx,y1,dimension(vd)+' cm',true);
+  for(const c of o.clearances||[]){const[a,b,c2,d]=c.line;dimensionLine(g,a,b,c2,d,c.label,true);}
 }
 // Hover label: name (+ muted code) only — sizes, status and actual fields live in the inspector after a click.
 // Mouse/pen only (a touch tap selects instead). Fixed to the viewport, offset from the cursor, flipping left/up near edges.

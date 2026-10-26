@@ -62,6 +62,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-09 | `guest-wardrobe-lb-a` | 客房訂製衣櫃（A） | 59 × 60 |
 | GST-10 | `guest-desk-lb-b` | 客房書桌（B） | 60 × 45 |
 | GST-11 | `guest-wardrobe-lb-b` | 客房訂製衣櫃（B） | 80 × 60 |
+| GST-12 | `guest-chair-b` | 客房書椅（B） | 45 × 45 |
+| GST-13 | `guest-chair-lb-b` | 客房書椅（B） | 45 × 45 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
