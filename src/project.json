@@ -1036,7 +1036,7 @@
       "name": "客房",
       "english": "Guest room",
       "number": "07",
-      "focus": "雙人床＋書桌＋衣櫃（A／B）"
+      "focus": "雙人床＋書桌＋衣櫃（A／B／C）"
     }
   ],
   "objects": [
@@ -2222,8 +2222,119 @@
       ]
     },
     {
-      "id": "guest-bed-a",
+      "id": "guest-bed-c",
       "code": "GST-01",
+      "room_id": "guest",
+      "name": "客房床 C · MALM Queen",
+      "bounds_pt": [
+        273.36,
+        297.58,
+        332.6,
+        344.63
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 166,
+          "status": "design"
+        },
+        "d": {
+          "cm": 209,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・IKEA MALM 高床架＋2 收納箱\n・床墊 Queen 150 × 200，外框 209 × 166",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-c"
+      ],
+      "onlyLayout": [
+        "layout-a"
+      ]
+    },
+    {
+      "id": "guest-desk-c",
+      "code": "GST-02",
+      "room_id": "guest",
+      "name": "客房書桌 C",
+      "bounds_pt": [
+        273.36,
+        280.57,
+        286.12,
+        297.58
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 60,
+          "status": "design"
+        },
+        "d": {
+          "cm": 45,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "深 45 示意",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-c"
+      ],
+      "onlyLayout": [
+        "layout-a"
+      ]
+    },
+    {
+      "id": "guest-wardrobe-c",
+      "code": "GST-03",
+      "room_id": "guest",
+      "name": "客房衣櫃 C",
+      "bounds_pt": [
+        273.36,
+        266.68,
+        290.37,
+        280.57
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 49,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・訂製到頂，單門朝東\n・寬 49＝床北側走道 109 − 書桌 60",
+      "status": "user-design",
+      "onlyGuest": [
+        "guest-c"
+      ],
+      "onlyLayout": [
+        "layout-a"
+      ]
+    },
+    {
+      "id": "guest-bed-a",
+      "code": "GST-04",
       "room_id": "guest",
       "name": "客房床 A · MALM Queen",
       "bounds_pt": [
@@ -2260,134 +2371,23 @@
     },
     {
       "id": "guest-desk-a",
-      "code": "GST-02",
+      "code": "GST-05",
       "room_id": "guest",
       "name": "客房書桌 A",
       "bounds_pt": [
-        273.36,
-        280.57,
-        286.12,
-        297.58
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 60,
-          "status": "design"
-        },
-        "d": {
-          "cm": 45,
-          "status": "scaled"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "深 45 示意",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-a"
-      ],
-      "onlyLayout": [
-        "layout-a"
-      ]
-    },
-    {
-      "id": "guest-wardrobe-a",
-      "code": "GST-03",
-      "room_id": "guest",
-      "name": "客房衣櫃 A",
-      "bounds_pt": [
-        273.36,
-        266.68,
-        290.37,
-        280.57
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 49,
-          "status": "design"
-        },
-        "d": {
-          "cm": 60,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "・訂製到頂，單門朝東\n・寬 49＝床北側走道 109 − 書桌 60",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-a"
-      ],
-      "onlyLayout": [
-        "layout-a"
-      ]
-    },
-    {
-      "id": "guest-bed-b",
-      "code": "GST-04",
-      "room_id": "guest",
-      "name": "客房床 B · MALM Queen",
-      "bounds_pt": [
-        273.36,
-        297.58,
-        332.6,
-        344.63
-      ],
-      "dimensions": {
-        "w": {
-          "cm": 166,
-          "status": "design"
-        },
-        "d": {
-          "cm": 209,
-          "status": "design"
-        }
-      },
-      "actual": {
-        "w": null,
-        "d": null,
-        "h": null,
-        "brand": null,
-        "model": null
-      },
-      "source_note": "・IKEA MALM 高床架＋2 收納箱\n・床墊 Queen 150 × 200，外框 209 × 166",
-      "status": "user-design",
-      "onlyGuest": [
-        "guest-b"
-      ],
-      "onlyLayout": [
-        "layout-a"
-      ]
-    },
-    {
-      "id": "guest-desk-b",
-      "code": "GST-05",
-      "room_id": "guest",
-      "name": "客房書桌 B",
-      "bounds_pt": [
-        296.04,
+        293.2,
         266.68,
         313.05,
-        279.44
+        278.02
       ],
       "dimensions": {
         "w": {
-          "cm": 60,
+          "cm": 70,
           "status": "design"
         },
         "d": {
-          "cm": 45,
-          "status": "scaled"
+          "cm": 40,
+          "status": "design"
         }
       },
       "actual": {
@@ -2397,10 +2397,10 @@
         "brand": null,
         "model": null
       },
-      "source_note": "深 45 示意；離門洞 10",
+      "source_note": "離門洞 10",
       "status": "user-design",
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ],
       "onlyLayout": [
         "layout-a"
@@ -2409,37 +2409,37 @@
         {
           "line": [
             312.19,
-            279.44,
+            278.02,
             312.19,
             297.58
           ],
-          "label": "64"
+          "label": "69"
         },
         {
           "line": [
-            304.54,
-            293.61,
-            304.54,
+            303.12,
+            292.19,
+            303.12,
             297.58
           ],
-          "label": "14"
+          "label": "19"
         }
       ]
     },
     {
-      "id": "guest-wardrobe-b",
+      "id": "guest-wardrobe-a",
       "code": "GST-06",
       "room_id": "guest",
-      "name": "客房衣櫃 B",
+      "name": "客房衣櫃 A",
       "bounds_pt": [
         273.36,
         266.68,
-        296.04,
+        293.2,
         283.69
       ],
       "dimensions": {
         "w": {
-          "cm": 80,
+          "cm": 70,
           "status": "design"
         },
         "d": {
@@ -2457,7 +2457,7 @@
       "source_note": "・訂製到頂，雙門朝南\n・門前到床 49",
       "status": "user-design",
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ],
       "onlyLayout": [
         "layout-a"
@@ -2566,10 +2566,10 @@
       ]
     },
     {
-      "id": "guest-desk-lb-a",
+      "id": "guest-desk-lb-c",
       "code": "GST-08",
       "room_id": "guest",
-      "name": "客房書桌（A）",
+      "name": "客房書桌（C）",
       "bounds_pt": [
         407.18,
         196.07,
@@ -2599,14 +2599,14 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-a"
+        "guest-c"
       ]
     },
     {
-      "id": "guest-wardrobe-lb-a",
+      "id": "guest-wardrobe-lb-c",
       "code": "GST-09",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（A）",
+      "name": "客房訂製衣櫃（C）",
       "bounds_pt": [
         402.93,
         213.07,
@@ -2636,28 +2636,28 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-a"
+        "guest-c"
       ]
     },
     {
-      "id": "guest-desk-lb-b",
+      "id": "guest-desk-lb-a",
       "code": "GST-10",
       "room_id": "guest",
-      "name": "客房書桌（B）",
+      "name": "客房書桌（A）",
       "bounds_pt": [
         380.25,
-        217.04,
-        397.26,
+        218.46,
+        400.1,
         229.8
       ],
       "dimensions": {
         "w": {
-          "cm": 60,
+          "cm": 70,
           "status": "design"
         },
         "d": {
-          "cm": 45,
-          "status": "scaled"
+          "cm": 40,
+          "status": "design"
         }
       },
       "actual": {
@@ -2667,49 +2667,49 @@
         "brand": null,
         "model": null
       },
-      "source_note": "深 45 示意；離門扇 6",
+      "source_note": "離門扇 7",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ],
       "clearances": [
         {
           "line": [
-            396.12,
+            398.96,
             196.07,
-            396.12,
-            217.04
+            398.96,
+            218.46
           ],
-          "label": "74"
+          "label": "79"
         },
         {
           "line": [
-            388.75,
+            390.17,
             196.07,
-            388.75,
-            202.87
+            390.17,
+            204.29
           ],
-          "label": "24"
+          "label": "29"
         }
       ]
     },
     {
-      "id": "guest-wardrobe-lb-b",
+      "id": "guest-wardrobe-lb-a",
       "code": "GST-11",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（B）",
+      "name": "客房訂製衣櫃（A）",
       "bounds_pt": [
-        397.26,
+        400.1,
         212.79,
         419.94,
         229.8
       ],
       "dimensions": {
         "w": {
-          "cm": 80,
+          "cm": 70,
           "status": "design"
         },
         "d": {
@@ -2730,19 +2730,19 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ]
     },
     {
-      "id": "guest-chair-b",
+      "id": "guest-chair-a",
       "code": "GST-12",
       "room_id": "guest",
-      "name": "客房書椅（B）",
+      "name": "客房書椅（A）",
       "bounds_pt": [
-        298.16,
-        280.85,
-        310.92,
-        293.61
+        296.75,
+        279.44,
+        309.5,
+        292.19
       ],
       "dimensions": {
         "w": {
@@ -2767,39 +2767,39 @@
         "layout-a"
       ],
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ],
       "clearances": [
         {
           "line": [
             312.19,
-            279.44,
+            278.02,
             312.19,
             297.58
           ],
-          "label": "64"
+          "label": "69"
         },
         {
           "line": [
-            304.54,
-            293.61,
-            304.54,
+            303.12,
+            292.19,
+            303.12,
             297.58
           ],
-          "label": "14"
+          "label": "19"
         }
       ]
     },
     {
-      "id": "guest-chair-lb-b",
+      "id": "guest-chair-lb-a",
       "code": "GST-13",
       "room_id": "guest",
-      "name": "客房書椅（B）",
+      "name": "客房書椅（A）",
       "bounds_pt": [
-        382.38,
-        202.87,
-        395.13,
-        215.63
+        383.79,
+        204.29,
+        396.55,
+        217.04
       ],
       "dimensions": {
         "w": {
@@ -2824,34 +2824,34 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-b"
+        "guest-a"
       ],
       "clearances": [
         {
           "line": [
-            396.12,
+            398.96,
             196.07,
-            396.12,
-            217.04
+            398.96,
+            218.46
           ],
-          "label": "74"
+          "label": "79"
         },
         {
           "line": [
-            388.75,
+            390.17,
             196.07,
-            388.75,
-            202.87
+            390.17,
+            204.29
           ],
-          "label": "24"
+          "label": "29"
         }
       ]
     },
     {
-      "id": "guest-wardrobe-c",
+      "id": "guest-wardrobe-b",
       "code": "GST-14",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（C）",
+      "name": "客房訂製衣櫃（B）",
       "bounds_pt": [
         273.36,
         266.68,
@@ -2881,15 +2881,15 @@
         "layout-a"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
-      "group": "guest-builtin-c"
+      "group": "guest-builtin-b"
     },
     {
-      "id": "guest-desk-c",
+      "id": "guest-desk-b",
       "code": "GST-15",
       "room_id": "guest",
-      "name": "客房木作書桌（C）",
+      "name": "客房木作書桌（B）",
       "bounds_pt": [
         296.04,
         266.68,
@@ -2919,7 +2919,7 @@
         "layout-a"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
       "clearances": [
         {
@@ -2941,13 +2941,13 @@
           "label": "19"
         }
       ],
-      "group": "guest-builtin-c"
+      "group": "guest-builtin-b"
     },
     {
-      "id": "guest-chair-c",
+      "id": "guest-chair-b",
       "code": "GST-16",
       "room_id": "guest",
-      "name": "客房書椅（C）",
+      "name": "客房書椅（B）",
       "bounds_pt": [
         298.16,
         279.44,
@@ -2977,7 +2977,7 @@
         "layout-a"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
       "clearances": [
         {
@@ -3001,10 +3001,10 @@
       ]
     },
     {
-      "id": "guest-wardrobe-lb-c",
+      "id": "guest-wardrobe-lb-b",
       "code": "GST-17",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（C）",
+      "name": "客房訂製衣櫃（B）",
       "bounds_pt": [
         397.26,
         212.79,
@@ -3034,15 +3034,15 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
-      "group": "guest-builtin-lb-c"
+      "group": "guest-builtin-lb-b"
     },
     {
-      "id": "guest-desk-lb-c",
+      "id": "guest-desk-lb-b",
       "code": "GST-18",
       "room_id": "guest",
-      "name": "客房木作書桌（C）",
+      "name": "客房木作書桌（B）",
       "bounds_pt": [
         380.25,
         218.46,
@@ -3072,7 +3072,7 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
       "clearances": [
         {
@@ -3094,13 +3094,13 @@
           "label": "29"
         }
       ],
-      "group": "guest-builtin-lb-c"
+      "group": "guest-builtin-lb-b"
     },
     {
-      "id": "guest-chair-lb-c",
+      "id": "guest-chair-lb-b",
       "code": "GST-19",
       "room_id": "guest",
-      "name": "客房書椅（C）",
+      "name": "客房書椅（B）",
       "bounds_pt": [
         382.38,
         204.29,
@@ -3130,7 +3130,7 @@
         "layout-b"
       ],
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
       "clearances": [
         {
@@ -3154,10 +3154,10 @@
       ]
     },
     {
-      "id": "guest-bed-c",
+      "id": "guest-bed-b",
       "code": "GST-20",
       "room_id": "guest",
-      "name": "客房床 C · MALM Queen",
+      "name": "客房床 B · MALM Queen",
       "bounds_pt": [
         273.36,
         297.58,
@@ -3184,7 +3184,7 @@
       "source_note": "・IKEA MALM 高床架＋2 收納箱\n・床墊 Queen 150 × 200，外框 209 × 166",
       "status": "user-design",
       "onlyGuest": [
-        "guest-c"
+        "guest-b"
       ],
       "onlyLayout": [
         "layout-a"
@@ -3638,6 +3638,10 @@
     {
       "id": "C38",
       "text": "廚房假天花改以 240 計（待現場確認）：上櫃與電器櫃上櫃 97 → 72，其餘不變。"
+    },
+    {
+      "id": "C39",
+      "text": "客房：活動衣櫃 70＋書桌 70 × 40 改為方案 A，木作改 B、原 A 改 C；全屋格局 A／B 對調。"
     }
   ],
   "measurement_policy": {
@@ -3842,6 +3846,49 @@
         "name": "方案 A",
         "layout": "guest-a",
         "label": [
+          329,
+          279
+        ],
+        "notes": {
+          "床": "・IKEA MALM Queen 收納床 209 × 166\n・床頭靠西牆，只從北側上下床",
+          "書桌": "70 × 40；離門洞 10",
+          "衣櫃": "訂製到頂 70 × 60，雙門朝南",
+          "動線": "・桌到床 69；坐著時椅背到床約 19\n・起身：椅子後推貼床，從右側（門那側）側身出來\n・衣櫃到床 49：抽屜拉出後幾乎無處站\n・床尾到東牆 41",
+          "取捨": "・優：書桌 70 較好用，床下兩個收納箱都能拉（拉時椅子推進桌下）\n・缺：衣櫃 70；坐著偏擠"
+        },
+        "risks": [
+          "坐著時椅背到床只剩約 19：起身要把椅子推到貼床，從右側側身出來",
+          "衣櫃到床 49：抽屜拉出後幾乎沒地方站",
+          "床下收納箱往北拉會碰到椅子：先把椅子推進桌下"
+        ],
+        "elevation": "guest-wall-a"
+      },
+      {
+        "id": "guest-b",
+        "name": "方案 B",
+        "layout": "guest-b",
+        "label": [
+          331,
+          284
+        ],
+        "elevation": "guest-wall-b",
+        "notes": {
+          "床": "・IKEA MALM Queen 收納床 209 × 166\n・床頭靠西牆，只從北側上下床",
+          "木作": "・衣櫃 80 × 60＋書桌 60 × 40 一體到頂\n・桌下 2 抽，桌上開放層板＋LED，再上吊櫃",
+          "動線": "・桌到床 69；坐著時椅背到床約 19\n・衣櫃到床 49\n・木作離門洞 10",
+          "取捨": "・優：桌上多一排收納，衣櫃 80，一體好看\n・缺：木作費用較高"
+        },
+        "risks": [
+          "衣櫃到床 49：抽屜拉出後幾乎沒地方站",
+          "床下收納箱往北拉會碰到椅子：先把椅子推進桌下",
+          "吊櫃底要離桌面 ≥ 45，坐著才不碰頭"
+        ]
+      },
+      {
+        "id": "guest-c",
+        "name": "方案 C",
+        "layout": "guest-c",
+        "label": [
           323,
           279
         ],
@@ -3855,51 +3902,7 @@
         "risks": [
           "床下收納箱被書桌、椅子擋住，只剩一個能用（靠窗那側不能拉）"
         ],
-        "elevation": "guest-wall-a"
-      },
-      {
-        "id": "guest-b",
-        "name": "方案 B",
-        "layout": "guest-b",
-        "label": [
-          329,
-          279
-        ],
-        "notes": {
-          "床": "・IKEA MALM Queen 收納床 209 × 166\n・床頭靠西牆，只從北側上下床",
-          "書桌": "60 × 45，深度示意；離門洞 10",
-          "衣櫃": "訂製到頂 80 × 60，雙門朝南",
-          "動線": "・桌到床 64；坐著時椅背到床約 14\n・起身：椅子後推貼床，從右側（門那側）側身出來\n・衣櫃到床 49：抽屜拉出後幾乎無處站\n・床尾到東牆 41",
-          "取捨": "・優：衣櫃 80，床下兩個收納箱都能拉（拉時椅子推進桌下）\n・缺：坐得下但偏擠；書桌深改 40 可多 5"
-        },
-        "risks": [
-          "坐著時椅背到床只剩約 14：起身要把椅子推到貼床，從右側側身出來",
-          "衣櫃到床 49：抽屜拉出後幾乎沒地方站",
-          "床下收納箱往北拉會碰到椅子：先把椅子推進桌下",
-          "書桌深改 40 可多 5"
-        ],
-        "elevation": "guest-wall-b"
-      },
-      {
-        "id": "guest-c",
-        "name": "方案 C",
-        "layout": "guest-c",
-        "label": [
-          331,
-          284
-        ],
-        "elevation": "guest-wall-c",
-        "notes": {
-          "床": "・IKEA MALM Queen 收納床 209 × 166\n・床頭靠西牆，只從北側上下床",
-          "木作": "・衣櫃 80 × 60＋書桌 60 × 40 一體到頂\n・桌下 2 抽，桌上開放層板＋LED，再上吊櫃",
-          "動線": "・桌到床 69；坐著時椅背到床約 19\n・衣櫃到床 49\n・木作離門洞 10",
-          "取捨": "・優：比 B 多 5 坐的空間，桌上多一排收納，一體好看\n・缺：木作費用較高"
-        },
-        "risks": [
-          "衣櫃到床 49：抽屜拉出後幾乎沒地方站",
-          "床下收納箱往北拉會碰到椅子：先把椅子推進桌下",
-          "吊櫃底要離桌面 ≥ 45，坐著才不碰頭"
-        ]
+        "elevation": "guest-wall-c"
       }
     ]
   },
@@ -10347,9 +10350,9 @@
         "洗碗機洗程結束自動開門，可能撞到女傭房門。"
       ]
     },
-    "guest-wardrobe-a": {
-      "object_id": "guest-wardrobe-a",
-      "title": "客房衣櫃 · 方案 A",
+    "guest-wardrobe-c": {
+      "object_id": "guest-wardrobe-c",
+      "title": "客房衣櫃 · 格局 B 方案 C",
       "viewpoint": "面向西牆：左為書桌，右為走廊牆",
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -10690,9 +10693,9 @@
         }
       ]
     },
-    "guest-wardrobe-b": {
-      "object_id": "guest-wardrobe-b",
-      "title": "客房衣櫃 · 方案 B",
+    "guest-wardrobe-a": {
+      "object_id": "guest-wardrobe-a",
+      "title": "客房衣櫃 · 格局 B 方案 A",
       "viewpoint": "面向北牆：右為書桌",
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -10709,7 +10712,7 @@
       ],
       "units": {
         "main": {
-          "w": 80,
+          "w": 70,
           "d": 60,
           "h": 280,
           "board": 1.8,
@@ -10760,7 +10763,7 @@
                   92,
                   100
                 ],
-                "count": 7,
+                "count": 6,
                 "label": "垂掛淨高 117.2"
               }
             },
@@ -10780,10 +10783,10 @@
               "items": [
                 {
                   "name": "SKUBB",
-                  "w": 69,
+                  "w": 44,
                   "h": 19,
                   "box": true,
-                  "sizeLabel": "69×55×19"
+                  "sizeLabel": "44×55×19"
                 }
               ],
               "align": "left"
@@ -10900,7 +10903,7 @@
         {
           "zone": "低收納層",
           "h": "27.8",
-          "note": "SKUBB 69×55×19 ×1，內寬 76.4、右側餘 6；底 204.8。"
+          "note": "SKUBB 44×55×19 ×1，內寬 66.4、右側餘 22；底 204.8。"
         },
         {
           "zone": "固定層板",
@@ -10915,12 +10918,12 @@
         {
           "zone": "掛衣區",
           "h": "125.2",
-          "note": "掛桿 195、長 76；桿下淨高 117.2。"
+          "note": "掛桿 195、長 66；桿下淨高 117.2。"
         },
         {
           "zone": "門片 · 雙開高門",
           "h": "196",
-          "note": "每扇 39.4 × 196，76–272；開到 90° 門緣離床約 8；右扇內貼全身鏡。"
+          "note": "每扇 34.4 × 196，76–272；開到 90° 門緣離床約 13；右扇內貼全身鏡。"
         },
         {
           "zone": "外抽屜 ×3",
@@ -10935,11 +10938,12 @@
       ],
       "hardware": [
         "Blum LEGRABOX NL 350 全拉緩衝；CLIP top 110° 鉸鏈每扇 ×5。",
-        "全身鏡 5 mm 安全鏡 29.4 × 162，高 78–240。",
+        "全身鏡 5 mm 安全鏡 24.4 × 162，高 78–240。",
         "LED CRI ≥ 90；櫃後預留低位插座。"
       ],
       "rationale": [
         "各高度同主臥右櫃",
+        "內寬 66.4 放不下 69 寬收納箱，低層改 SKUBB 44。",
         "到床只有 49：NL 500 全拉 50 會撞床，改 NL 350。",
         "門底 76 高於床面，開門不受床影響"
       ],
@@ -10954,7 +10958,6 @@
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
         "IKEA SKUBB storage case 44x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-50290361",
-        "IKEA SKUBB storage case 69x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-70294990/",
         "Blum LEGRABOX side heights / min. front heights: https://qiitp-frontdesk.screenstepslive.com/a/722184-blum-legrabox-drawer-heights",
         "Blum number of hinges: https://ea.blum.com/en/number-of-hinges/"
       ],
@@ -10969,7 +10972,7 @@
               "x": 18
             }
           ],
-          "width": 116,
+          "width": 106,
           "levels": [
             {
               "y": 76,
@@ -11064,9 +11067,9 @@
         }
       ]
     },
-    "guest-wardrobe-lb-a": {
-      "object_id": "guest-wardrobe-lb-a",
-      "title": "客房衣櫃 · 格局 B 方案 A",
+    "guest-wardrobe-lb-c": {
+      "object_id": "guest-wardrobe-lb-c",
+      "title": "客房衣櫃 · 方案 C",
       "viewpoint": "面向東牆：左為書桌，右為南牆",
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -11407,9 +11410,9 @@
         }
       ]
     },
-    "guest-wardrobe-lb-b": {
-      "object_id": "guest-wardrobe-lb-b",
-      "title": "客房衣櫃 · 格局 B 方案 B",
+    "guest-wardrobe-lb-a": {
+      "object_id": "guest-wardrobe-lb-a",
+      "title": "客房衣櫃 · 方案 A",
       "viewpoint": "面向南牆：左為東牆，右為書桌",
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -11426,7 +11429,7 @@
       ],
       "units": {
         "main": {
-          "w": 80,
+          "w": 70,
           "d": 60,
           "h": 280,
           "board": 1.8,
@@ -11477,7 +11480,7 @@
                   92,
                   100
                 ],
-                "count": 7,
+                "count": 6,
                 "label": "垂掛淨高 117.2"
               }
             },
@@ -11497,10 +11500,10 @@
               "items": [
                 {
                   "name": "SKUBB",
-                  "w": 69,
+                  "w": 44,
                   "h": 19,
                   "box": true,
-                  "sizeLabel": "69×55×19"
+                  "sizeLabel": "44×55×19"
                 }
               ],
               "align": "left"
@@ -11617,7 +11620,7 @@
         {
           "zone": "低收納層",
           "h": "27.8",
-          "note": "SKUBB 69×55×19 ×1，內寬 76.4、右側餘 6；底 204.8。"
+          "note": "SKUBB 44×55×19 ×1，內寬 66.4、右側餘 22；底 204.8。"
         },
         {
           "zone": "固定層板",
@@ -11632,12 +11635,12 @@
         {
           "zone": "掛衣區",
           "h": "125.2",
-          "note": "掛桿 195、長 76；桿下淨高 117.2。"
+          "note": "掛桿 195、長 66；桿下淨高 117.2。"
         },
         {
           "zone": "門片 · 雙開高門",
           "h": "196",
-          "note": "每扇 39.4 × 196，76–272；開到 90° 門緣離床約 18；左扇內貼全身鏡。"
+          "note": "每扇 34.4 × 196，76–272；開到 90° 門緣離床約 23；左扇內貼全身鏡。"
         },
         {
           "zone": "外抽屜 ×3",
@@ -11652,11 +11655,12 @@
       ],
       "hardware": [
         "Blum LEGRABOX NL 450 全拉緩衝；CLIP top 110° 鉸鏈每扇 ×5＋開角限位。",
-        "全身鏡 5 mm 安全鏡 29.4 × 162，高 78–240。",
+        "全身鏡 5 mm 安全鏡 24.4 × 162，高 78–240。",
         "LED CRI ≥ 90；櫃後預留低位插座。"
       ],
       "rationale": [
         "各高度同主臥右櫃",
+        "內寬 66.4 放不下 69 寬收納箱，低層改 SKUBB 44。",
         "到床 59：NL 500 全拉 50 只剩 9，改 NL 450 留 14。"
       ],
       "open_questions": [
@@ -11669,7 +11673,6 @@
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
         "IKEA SKUBB storage case 44x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-50290361",
-        "IKEA SKUBB storage case 69x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-70294990/",
         "Blum LEGRABOX side heights / min. front heights: https://qiitp-frontdesk.screenstepslive.com/a/722184-blum-legrabox-drawer-heights",
         "Blum number of hinges: https://ea.blum.com/en/number-of-hinges/"
       ],
@@ -11684,7 +11687,7 @@
               "x": 18
             }
           ],
-          "width": 116,
+          "width": 106,
           "levels": [
             {
               "y": 76,
@@ -11779,7 +11782,7 @@
         }
       ]
     },
-    "guest-wall-a": {
+    "guest-wall-c": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -11798,7 +11801,7 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "客房方案 A · 牆面",
+      "title": "格局 B 客房方案 C · 牆面",
       "viewpoint": "面向西牆；左為窗牆，右為北牆。",
       "units": {
         "wardrobe": {
@@ -12050,7 +12053,7 @@
         }
       ]
     },
-    "guest-wall-b": {
+    "guest-wall-a": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -12069,11 +12072,11 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "客房方案 B · 牆面",
+      "title": "格局 B 客房方案 A · 牆面",
       "viewpoint": "從床邊面向北牆；左為西牆，右為門。",
       "units": {
         "wardrobe": {
-          "w": 80,
+          "w": 70,
           "d": 60,
           "h": 280,
           "board": 1.8,
@@ -12124,7 +12127,7 @@
                   92,
                   100
                 ],
-                "count": 7,
+                "count": 6,
                 "label": "垂掛淨高 117.2"
               }
             },
@@ -12144,10 +12147,10 @@
               "items": [
                 {
                   "name": "SKUBB",
-                  "w": 69,
+                  "w": 44,
                   "h": 19,
                   "box": true,
-                  "sizeLabel": "69×55×19"
+                  "sizeLabel": "44×55×19"
                 }
               ],
               "align": "left"
@@ -12238,13 +12241,13 @@
       "spec": [
         {
           "zone": "衣櫃",
-          "h": "80 × 60",
+          "h": "70 × 60",
           "note": "雙門；淺抽 NL 350，到床 49。"
         },
         {
           "zone": "書桌",
-          "h": "60 × 45",
-          "note": "活動書桌；前緣到床 64。"
+          "h": "70 × 40",
+          "note": "活動書桌；前緣到床 69。"
         },
         {
           "zone": "門洞",
@@ -12282,13 +12285,13 @@
             },
             {
               "type": "rect",
-              "x": 80,
+              "x": 70,
               "y": 0,
-              "w": 60,
+              "w": 70,
               "h": 75,
               "dashed": true,
               "fill": "#fbfaf5",
-              "label": "書桌 60 × 45",
+              "label": "書桌 70 × 40",
               "size": 0.6
             },
             {
@@ -12305,7 +12308,7 @@
           ],
           "hcuts": [
             0,
-            80,
+            70,
             140,
             150,
             240,
@@ -12332,7 +12335,7 @@
         }
       ]
     },
-    "guest-wall-c": {
+    "guest-wall-b": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -12351,7 +12354,7 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "客房方案 C · 牆面",
+      "title": "格局 B 客房方案 B · 牆面",
       "viewpoint": "從床邊面向北牆；左為西牆，右為門。",
       "units": {
         "wardrobe": {
@@ -12640,7 +12643,7 @@
         {
           "zone": "衣櫃",
           "h": "80 × 60",
-          "note": "同方案 B：雙門、淺抽 NL 350、掛桿 195。"
+          "note": "雙門、淺抽 NL 350、掛桿 195。"
         },
         {
           "zone": "天花收邊",
@@ -13057,7 +13060,7 @@
         }
       ]
     },
-    "guest-wall-lb-a": {
+    "guest-wall-lb-c": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -13076,7 +13079,7 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "格局 B 客房方案 A · 牆面",
+      "title": "客房方案 C · 牆面",
       "viewpoint": "面向東牆；左為窗牆，右為南牆。",
       "units": {
         "wardrobe": {
@@ -13328,7 +13331,7 @@
         }
       ]
     },
-    "guest-wall-lb-b": {
+    "guest-wall-lb-a": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -13347,11 +13350,11 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "格局 B 客房方案 B · 牆面",
+      "title": "客房方案 A · 牆面",
       "viewpoint": "從床邊面向南牆；左為東牆，右為門。",
       "units": {
         "wardrobe": {
-          "w": 80,
+          "w": 70,
           "d": 60,
           "h": 280,
           "board": 1.8,
@@ -13402,7 +13405,7 @@
                   92,
                   100
                 ],
-                "count": 7,
+                "count": 6,
                 "label": "垂掛淨高 117.2"
               }
             },
@@ -13422,10 +13425,10 @@
               "items": [
                 {
                   "name": "SKUBB",
-                  "w": 69,
+                  "w": 44,
                   "h": 19,
                   "box": true,
-                  "sizeLabel": "69×55×19"
+                  "sizeLabel": "44×55×19"
                 }
               ],
               "align": "left"
@@ -13516,13 +13519,13 @@
       "spec": [
         {
           "zone": "衣櫃",
-          "h": "80 × 60",
+          "h": "70 × 60",
           "note": "雙門；NL 450，到床 59。"
         },
         {
           "zone": "書桌",
-          "h": "60 × 45",
-          "note": "活動書桌；前緣到床 74。"
+          "h": "70 × 40",
+          "note": "活動書桌；前緣到床 79。"
         },
         {
           "zone": "門",
@@ -13560,13 +13563,13 @@
             },
             {
               "type": "rect",
-              "x": 80,
+              "x": 70,
               "y": 0,
-              "w": 60,
+              "w": 70,
               "h": 75,
               "dashed": true,
               "fill": "#fbfaf5",
-              "label": "書桌 60 × 45",
+              "label": "書桌 70 × 40",
               "size": 0.6
             },
             {
@@ -13583,7 +13586,7 @@
           ],
           "hcuts": [
             0,
-            80,
+            70,
             140,
             147,
             237,
@@ -13610,7 +13613,7 @@
         }
       ]
     },
-    "guest-wall-lb-c": {
+    "guest-wall-lb-b": {
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
@@ -13629,7 +13632,7 @@
       "rationale": [],
       "open_questions": [],
       "sources": [],
-      "title": "格局 B 客房方案 C · 牆面",
+      "title": "客房方案 B · 牆面",
       "viewpoint": "從床邊面向南牆；左為東牆，右為門。",
       "units": {
         "wardrobe": {
@@ -13918,7 +13921,7 @@
         {
           "zone": "衣櫃",
           "h": "80 × 60",
-          "note": "同方案 B：雙門、NL 450、掛桿 195。"
+          "note": "雙門、NL 450、掛桿 195。"
         },
         {
           "zone": "天花收邊",
@@ -14335,28 +14338,23 @@
         }
       ]
     },
-    "guest-wardrobe-c": {
-      "alias": "guest-wall-c"
+    "guest-wardrobe-b": {
+      "alias": "guest-wall-b"
     },
-    "guest-desk-c": {
-      "alias": "guest-wall-c"
+    "guest-desk-b": {
+      "alias": "guest-wall-b"
     },
-    "guest-wardrobe-lb-c": {
-      "alias": "guest-wall-lb-c"
+    "guest-wardrobe-lb-b": {
+      "alias": "guest-wall-lb-b"
     },
-    "guest-desk-lb-c": {
-      "alias": "guest-wall-lb-c"
+    "guest-desk-lb-b": {
+      "alias": "guest-wall-lb-b"
     }
   },
   "layouts": [
     {
-      "id": "layout-a",
-      "name": "格局 A",
-      "note": "書房在右上、客房在下方"
-    },
-    {
       "id": "layout-b",
-      "name": "格局 B",
+      "name": "格局 A",
       "note": "客房在右上、書房在下方",
       "labels": {
         "guest": [
@@ -14410,7 +14408,7 @@
           ],
           "measurement_status": "scaled-estimate",
           "uncertainty_cm": null,
-          "focus": "雙人床＋書桌＋衣櫃（A／B）",
+          "focus": "雙人床＋書桌＋衣櫃（A／B／C）",
           "notes": {
             "床": "・MALM Queen 209 × 166，床頭靠東牆\n・從南側上下床；床尾到西牆 38",
             "門": "原內開門，不碰家具",
@@ -14478,13 +14476,15 @@
             172
           ],
           "notes": {
-            "書桌": "60 × 45，深度示意",
-            "衣櫃": "訂製到頂 59 × 60，單門朝西",
-            "動線": "・椅背到門扇約 50\n・床南側走道 119",
-            "取捨": "・優：書桌好坐，衣櫃抽屜、門都能全開\n・缺：衣櫃只有 59"
+            "書桌": "70 × 40",
+            "衣櫃": "訂製到頂 70 × 60，雙門朝北",
+            "動線": "・桌到床 79；坐著時椅背到床約 29，可直接後推起身\n・衣櫃到床 59：抽屜拉出剩約 14（NL 450）\n・書桌離門扇 7",
+            "取捨": "・優：書桌 70，坐得寬鬆\n・缺：衣櫃 70；椅子背後就是床"
           },
           "risks": [
-            "床下收納箱被書桌、椅子擋住，只剩一個能用（靠窗那側不能拉）"
+            "衣櫃到床 59：抽屜（NL 450）拉出後只剩約 14 可站",
+            "床下收納箱往南拉會碰到椅子：先把椅子推進桌下",
+            "兩扇衣櫃門都要開角限位，免得撞東牆、掃到書桌"
           ],
           "elevation": "guest-wall-lb-a"
         },
@@ -14496,18 +14496,17 @@
             390,
             172
           ],
+          "elevation": "guest-wall-lb-b",
           "notes": {
-            "書桌": "60 × 45，深度示意",
-            "衣櫃": "訂製到頂 80 × 60，雙門朝北",
-            "動線": "・桌到床 74；坐著時椅背到床約 24，可直接後推起身\n・衣櫃到床 59：抽屜拉出剩約 14（NL 450）\n・書桌離門扇 6",
-            "取捨": "・優：衣櫃 80\n・缺：椅子背後就是床"
+            "木作": "・衣櫃 80 × 60＋書桌 60 × 40 一體到頂\n・桌下 2 抽，桌上開放層板＋LED，再上吊櫃",
+            "動線": "・桌到床 79；坐著時椅背到床約 29\n・衣櫃到床 59\n・書桌離門扇 6",
+            "取捨": "・優：桌上多一排收納，衣櫃 80，一體好看\n・缺：木作費用較高"
           },
           "risks": [
             "衣櫃到床 59：抽屜（NL 450）拉出後只剩約 14 可站",
             "床下收納箱往南拉會碰到椅子：先把椅子推進桌下",
-            "兩扇衣櫃門都要開角限位，免得撞東牆、掃到書桌"
-          ],
-          "elevation": "guest-wall-lb-b"
+            "吊櫃底要離桌面 ≥ 45，坐著才不碰頭"
+          ]
         },
         {
           "id": "guest-c",
@@ -14517,19 +14516,23 @@
             390,
             172
           ],
-          "elevation": "guest-wall-lb-c",
           "notes": {
-            "木作": "・衣櫃 80 × 60＋書桌 60 × 40 一體到頂\n・桌下 2 抽，桌上開放層板＋LED，再上吊櫃",
-            "動線": "・桌到床 79；坐著時椅背到床約 29\n・衣櫃到床 59\n・書桌離門扇 6",
-            "取捨": "・優：坐得最寬鬆，桌上多一排收納，一體好看\n・缺：木作費用較高"
+            "書桌": "60 × 45，深度示意",
+            "衣櫃": "訂製到頂 59 × 60，單門朝西",
+            "動線": "・椅背到門扇約 50\n・床南側走道 119",
+            "取捨": "・優：書桌好坐，衣櫃抽屜、門都能全開\n・缺：衣櫃只有 59"
           },
           "risks": [
-            "衣櫃到床 59：抽屜（NL 450）拉出後只剩約 14 可站",
-            "床下收納箱往南拉會碰到椅子：先把椅子推進桌下",
-            "吊櫃底要離桌面 ≥ 45，坐著才不碰頭"
-          ]
+            "床下收納箱被書桌、椅子擋住，只剩一個能用（靠窗那側不能拉）"
+          ],
+          "elevation": "guest-wall-lb-c"
         }
       ]
+    },
+    {
+      "id": "layout-a",
+      "name": "格局 B",
+      "note": "書房在右上、客房在下方"
     }
   ]
 }

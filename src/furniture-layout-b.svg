@@ -1,4 +1,4 @@
-<!-- R30 (2026-10-26): 格局 B — guest in the NE room (wardrobe removed), study in the south room. Units: PDF pt. -->
+<!-- R30 (2026-10-26), shown as 格局 A since R34 (internal id layout-b) — guest in the NE room (wardrobe removed), study in the south room. Units: PDF pt. -->
 <path data-layout="lb-guest-bed" class="furnishing" d="M360.69 149.01H419.94V196.07H360.69Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
 <path data-layout="lb-guest-bed-headboard" class="furnishing" d="M417.67 149.01V196.07" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
 <path data-layout="lb-guest-bed-pillow" class="furnishing" d="M408.88 151.85H415.68Q416.53 151.85 416.53 152.7V170.84Q416.53 171.69 415.68 171.69H408.88Q408.03 171.69 408.03 170.84V152.7Q408.03 151.85 408.88 151.85Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
