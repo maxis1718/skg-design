@@ -49,28 +49,28 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-05 | `study-desk` | 書房電腦桌 | 100 × 50 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
-| GST-01 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
-| GST-02 | `guest-desk-a` | 客房書桌 A | 60 × 45 |
-| GST-03 | `guest-wardrobe-a` | 客房衣櫃 A | 49 × 60 |
-| GST-04 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
-| GST-05 | `guest-desk-b` | 客房書桌 B | 60 × 45 |
-| GST-06 | `guest-wardrobe-b` | 客房衣櫃 B | 80 × 60 |
+| GST-01 | `guest-bed-c` | 客房床 C · MALM Queen | 166 × 209 |
+| GST-02 | `guest-desk-c` | 客房書桌 C | 60 × 45 |
+| GST-03 | `guest-wardrobe-c` | 客房衣櫃 C | 49 × 60 |
+| GST-04 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
+| GST-05 | `guest-desk-a` | 客房書桌 A | 70 × 40 |
+| GST-06 | `guest-wardrobe-a` | 客房衣櫃 A | 70 × 60 |
 | GST-07 | `guest-bed-lb` | 客房床（MALM Queen） | 166 × 209 |
 | STD-06 | `massage-chair-lb` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | STD-07 | `study-desk-lb` | 書房電腦桌 | 100 × 50 |
-| GST-08 | `guest-desk-lb-a` | 客房書桌（A） | 60 × 45 |
-| GST-09 | `guest-wardrobe-lb-a` | 客房訂製衣櫃（A） | 59 × 60 |
-| GST-10 | `guest-desk-lb-b` | 客房書桌（B） | 60 × 45 |
-| GST-11 | `guest-wardrobe-lb-b` | 客房訂製衣櫃（B） | 80 × 60 |
-| GST-12 | `guest-chair-b` | 客房書椅（B） | 45 × 45 |
-| GST-13 | `guest-chair-lb-b` | 客房書椅（B） | 45 × 45 |
-| GST-14 | `guest-wardrobe-c` | 客房訂製衣櫃（C） | 80 × 60 |
-| GST-15 | `guest-desk-c` | 客房木作書桌（C） | 60 × 40 |
-| GST-16 | `guest-chair-c` | 客房書椅（C） | 45 × 45 |
-| GST-17 | `guest-wardrobe-lb-c` | 客房訂製衣櫃（C） | 80 × 60 |
-| GST-18 | `guest-desk-lb-c` | 客房木作書桌（C） | 60 × 40 |
-| GST-19 | `guest-chair-lb-c` | 客房書椅（C） | 45 × 45 |
-| GST-20 | `guest-bed-c` | 客房床 C · MALM Queen | 166 × 209 |
+| GST-08 | `guest-desk-lb-c` | 客房書桌（C） | 60 × 45 |
+| GST-09 | `guest-wardrobe-lb-c` | 客房訂製衣櫃（C） | 59 × 60 |
+| GST-10 | `guest-desk-lb-a` | 客房書桌（A） | 70 × 40 |
+| GST-11 | `guest-wardrobe-lb-a` | 客房訂製衣櫃（A） | 70 × 60 |
+| GST-12 | `guest-chair-a` | 客房書椅（A） | 45 × 45 |
+| GST-13 | `guest-chair-lb-a` | 客房書椅（A） | 45 × 45 |
+| GST-14 | `guest-wardrobe-b` | 客房訂製衣櫃（B） | 80 × 60 |
+| GST-15 | `guest-desk-b` | 客房木作書桌（B） | 60 × 40 |
+| GST-16 | `guest-chair-b` | 客房書椅（B） | 45 × 45 |
+| GST-17 | `guest-wardrobe-lb-b` | 客房訂製衣櫃（B） | 80 × 60 |
+| GST-18 | `guest-desk-lb-b` | 客房木作書桌（B） | 60 × 40 |
+| GST-19 | `guest-chair-lb-b` | 客房書椅（B） | 45 × 45 |
+| GST-20 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 

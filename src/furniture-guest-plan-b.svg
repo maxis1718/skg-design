@@ -1,14 +1,4 @@
-<!-- R27 (2026-10-26): guest room = south room (former kid room), 250 × 290, window = whole south wall, sliding door on the north wall 150–240 from the west wall. Bed IKEA MALM Queen 209 × 166, 15 off the window wall for the curtain (dashed track). Desk 60 wide (user), 45 deep (schematic); chair 45 × 45. Units: PDF pt. -->
-<!-- Scheme B: wardrobe 80 × 60 (front south) in the NW corner + desk 80–140 on the north wall, 10 short of the door opening, bed head west (foot 41 from the east wall). -->
-<path data-layout="guest-b-bed" class="furnishing" d="M273.36 297.58H332.6V344.63H273.36Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="guest-b-bed-headboard" class="furnishing" d="M275.63 297.58V344.63" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="guest-b-bed-pillow" class="furnishing" d="M277.61 300.41H284.42Q285.27 300.41 285.27 301.26V319.4Q285.27 320.25 284.42 320.25H277.61Q276.76 320.25 276.76 319.4V301.26Q276.76 300.41 277.61 300.41Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="guest-b-bed-pillow" class="furnishing" d="M277.61 321.96H284.42Q285.27 321.96 285.27 322.81V340.95Q285.27 341.8 284.42 341.8H277.61Q276.76 341.8 276.76 340.95V322.81Q276.76 321.96 277.61 321.96Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="guest-b-bed-duvet" class="furnishing" d="M293.2 297.58V344.63M294.9 297.58V344.63" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="guest-b-bed-boxes" class="furnishing" d="M281.86 297.58V314.02H324.1V297.58" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="0.8 0.6"/>
-<path data-layout="guest-b-desk" class="furnishing" d="M296.04 266.68H313.05V279.44H296.04Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="guest-b-chair" class="furnishing" d="M299.3 280.85H309.79Q310.92 280.85 310.92 281.99V292.48Q310.92 293.61 309.79 293.61H299.3Q298.16 293.61 298.16 292.48V281.99Q298.16 280.85 299.3 280.85Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="guest-b-chair-back" class="furnishing" d="M299.01 292.19H310.07" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<!-- R32 (2026-10-26): guest scheme B (was C) — wardrobe 80 + built-in desk 60 × 40 as one carpentry run; dashed = upper cabinets (depth 30) over the desk. Units: PDF pt. -->
 <path data-layout="guest-b-wardrobe" class="furnishing" d="M273.36 266.68H296.04V283.69H273.36Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
 <path data-layout="guest-b-wardrobe-rail" class="furnishing" d="M273.36 275.18H296.04" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="guest-b-wardrobe-hanger" class="furnishing" d="M277.14 268.95V281.42" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
@@ -16,4 +6,14 @@
 <path data-layout="guest-b-wardrobe-hanger" class="furnishing" d="M284.7 268.95V281.42" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="guest-b-wardrobe-hanger" class="furnishing" d="M288.48 268.95V281.42" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="guest-b-wardrobe-hanger" class="furnishing" d="M292.26 268.95V281.42" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-desk" class="furnishing" d="M296.04 266.68H313.05V278.02H296.04Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="guest-b-upper" class="furnishing" d="M296.04 266.68H313.05V275.18H296.04Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
+<path data-layout="guest-b-chair" class="furnishing" d="M299.3 279.44H309.79Q310.92 279.44 310.92 280.57V291.06Q310.92 292.19 309.79 292.19H299.3Q298.16 292.19 298.16 291.06V280.57Q298.16 279.44 299.3 279.44Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-chair-back" class="furnishing" d="M299.01 291.34H310.07" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed" class="furnishing" d="M273.36 297.58H332.6V344.63H273.36Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed-headboard" class="furnishing" d="M275.63 297.58V344.63" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed-pillow" class="furnishing" d="M277.61 300.41H284.42Q285.27 300.41 285.27 301.26V319.4Q285.27 320.25 284.42 320.25H277.61Q276.76 320.25 276.76 319.4V301.26Q276.76 300.41 277.61 300.41Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed-pillow" class="furnishing" d="M277.61 321.96H284.42Q285.27 321.96 285.27 322.81V340.95Q285.27 341.8 284.42 341.8H277.61Q276.76 341.8 276.76 340.95V322.81Q276.76 321.96 277.61 321.96Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed-duvet" class="furnishing" d="M293.2 297.58V344.63M294.9 297.58V344.63" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="guest-b-bed-boxes" class="furnishing" d="M281.86 297.58V314.02H324.1V297.58" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="0.8 0.6"/>
 <path data-layout="guest-b-curtain-track" class="furnishing" d="M273.93 346.62H343.66" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="2 0.8"/>

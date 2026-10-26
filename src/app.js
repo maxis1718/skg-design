@@ -9,8 +9,8 @@ const t=s=>LANG==='en'&&typeof s==='string'?(I18N.en[s]??s):s;
 const tf=(s,v={})=>t(s).replace(/\{(\w+)\}/g,(_,k)=>v[k]??'');
 const CJK=/[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]/;
 const localize=x=>typeof x==='string'?(CJK.test(x)?t(x):x):Array.isArray(x)?x.map(localize):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).map(([k,v])=>[k,localize(v)])):x;
-// Whole-home layout (R30): A = study NE / guest south (default), B = guest NE (wardrobe removed) / study south. URL ?layout=a|b.
-const LAYOUT_KEYS={a:'layout-a',b:'layout-b'};
+// Whole-home layout (R30, swapped R34): internal 'layout-b' = 格局 A (guest NE, study south; default), 'layout-a' = 格局 B (base rooms: study NE / guest south). URL ?layout=a|b.
+const LAYOUT_KEYS={a:'layout-b',b:'layout-a'};
 let layoutId=LAYOUT_KEYS[(new URLSearchParams(location.search).get('layout')||'').toLowerCase()]||LAYOUT_KEYS.a;
 function withLayout(p){
   const spec=(p.layouts||[]).find(l=>l.id===layoutId);
@@ -30,7 +30,7 @@ let roomId='floor', objectId=null, showDims=true, showObjects=true;
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
-// Guest-room scheme (R27, south room): A = guest-a (wardrobe 49 + desk on the west wall, default), B = guest-b (wardrobe 80 + desk on the north wall, bed head west). URL ?guest=a|b.
+// Guest-room scheme (R34 order): A = guest-a (loose wardrobe 70 + desk 70 × 40, default), B = guest-b (built-in wardrobe + desk), C = guest-c (narrow wardrobe + desk). URL ?guest=a|b|c.
 const GUEST_KEYS={a:'guest-a',b:'guest-b',c:'guest-c'};
 selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||GUEST_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
