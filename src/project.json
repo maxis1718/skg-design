@@ -15811,7 +15811,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・Wi-Fi：UniFi U7 Lite ×2 吸在假天花，廚房一顆、走廊一顆；主機與 PoE 交換器放電視櫃\n・選 UniFi：33 mm 薄圓盤，比 Deco X50-PoE（68.6 mm 高）低調；有線回程，可把攝影機分到獨立網段\n・攝影機：Aqara Camera E1 ×3，倒吊天花角，USB-C 由天花電源供電；女傭房與浴室不裝，裝好後告知女傭位置\n・選 E1：69 × 69 × 104 mm，比 Camera Hub G3（123.4 × 85.1 × 67.8 mm）小一圈，2K、360° 旋轉\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "summary": "・網路：方案 A Deco X50-PoE／方案 B UniFi U7 Lite，天花 AP 位置相同；建議 B\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：客廳、主臥、小孩房、客房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -15840,6 +15840,38 @@
       {
         "label": "UniFi USW Lite 8 PoE",
         "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
+      },
+      {
+        "label": "Deco X50-PoE PoE FAQ",
+        "url": "https://www.tp-link.com/support/faq/3484/"
+      },
+      {
+        "label": "TP-Link Deco X50",
+        "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50/"
+      },
+      {
+        "label": "TP-Link TL-SG108PE",
+        "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
+      },
+      {
+        "label": "UniFi Cloud Gateway Max",
+        "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-max"
+      },
+      {
+        "label": "UniFi G5 Flex",
+        "url": "https://techspecs.ui.com/unifi/cameras-nvrs/uvc-g5-flex"
+      },
+      {
+        "label": "Aqara Curtain Driver E1",
+        "url": "https://www.aqara.com/en/product/curtain-driver-e1/"
+      },
+      {
+        "label": "Aqara H1 EU (with neutral)",
+        "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
+      },
+      {
+        "label": "Aqara H2 EU",
+        "url": "https://www.smart-secure.co.uk/product/aqara-light-switch-h2-eu/"
       }
     ],
     "points": [
@@ -15852,7 +15884,8 @@
         "place": "客廳陽台門左側天花角",
         "mount": "ceiling",
         "name": "天花電源 · 客廳攝影機",
-        "notes": "・給客廳攝影機，假天花內藏 5V USB-C 電源\n・出線孔對準攝影機底座，線不外露\n・此處若無假天花，改沿牆角走細線槽"
+        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 收在天花內，日後可換 PoE 攝影機（示意）\n・此處若無假天花，改沿牆角走細線槽",
+        "use": "攝影機"
       },
       {
         "id": "cam-living",
@@ -15865,7 +15898,7 @@
         "aim": 36,
         "name": "攝影機 · 客餐廳",
         "product": "Aqara Camera E1",
-        "notes": "・倒吊天花，App 內翻轉畫面\n・沙發面向東邊電視，這顆在座位左後方，看電視時不會進入視線\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・坐餐桌東側時在右上角，白色機身貼角，存在感低"
+        "notes": "・倒吊天花，App 內翻轉畫面\n・沙發面向東邊電視，這顆在座位左後方，看電視時不會進入視線\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・坐餐桌東側時在右上角，白色機身貼角，存在感低\n・供電 P-01，Wi-Fi 2.4 GHz 連線"
       },
       {
         "id": "sock-dining-n",
@@ -15876,7 +15909,8 @@
         "place": "客廳西牆 · 餐桌北端",
         "mount": 30,
         "name": "插座 · 餐桌北",
-        "notes": "・餐桌旁，給火鍋、筆電、桌燈\n・13A 雙孔，離地 30（示意）"
+        "notes": "・餐桌旁，給火鍋、筆電、桌燈\n・13A 雙孔，離地 30（示意）",
+        "use": "餐桌"
       },
       {
         "id": "sock-dining-s",
@@ -15887,7 +15921,8 @@
         "place": "客廳西牆 · 餐桌南端",
         "mount": 30,
         "name": "插座 · 餐桌南",
-        "notes": "・13A 雙孔，離地 30（示意）"
+        "notes": "・13A 雙孔，離地 30（示意）",
+        "use": "餐桌"
       },
       {
         "id": "ceil-foyer",
@@ -15898,7 +15933,8 @@
         "place": "玄關走道東牆天花",
         "mount": "ceiling",
         "name": "天花電源 · 玄關攝影機",
-        "notes": "・給玄關攝影機，做法同客廳"
+        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 收在天花內，日後可換 PoE 攝影機（示意）",
+        "use": "攝影機"
       },
       {
         "id": "cam-foyer",
@@ -15911,7 +15947,7 @@
         "aim": -120,
         "name": "攝影機 · 廚房門與玄關",
         "product": "Aqara Camera E1",
-        "notes": "・圖上第二個「?」位置，靠大門\n・坐沙發時在右前方約 70°、5 m 外，多半被走道牆角擋住\n・預設看廚房門與走道，可轉到大門與客廳\n・不選第一個「?」：太靠近電視，看電視時一直在視線內"
+        "notes": "・圖上第二個「?」位置，靠大門\n・坐沙發時在右前方約 70°、5 m 外，多半被走道牆角擋住\n・預設看廚房門與走道，可轉到大門與客廳\n・不選第一個「?」：太靠近電視，看電視時一直在視線內\n・供電 P-02，Wi-Fi 2.4 GHz 連線"
       },
       {
         "id": "ceil-kid",
@@ -15922,7 +15958,8 @@
         "place": "小孩房門上方天花角",
         "mount": "ceiling",
         "name": "天花電源 · 小孩房攝影機",
-        "notes": "・給小孩房攝影機，做法同客廳"
+        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 收在天花內，日後可換 PoE 攝影機（示意）",
+        "use": "攝影機"
       },
       {
         "id": "cam-kid",
@@ -15935,7 +15972,7 @@
         "aim": -130,
         "name": "攝影機 · 小孩房",
         "product": "Aqara Camera E1",
-        "notes": "・門上方天花角，進門時在頭頂後方\n・從房內看貼在門框上角，不正對床\n・預設看全房，可轉向窗邊"
+        "notes": "・門上方天花角，進門時在頭頂後方\n・從房內看貼在門框上角，不正對床\n・預設看全房，可轉向窗邊\n・供電 P-03，Wi-Fi 2.4 GHz 連線"
       },
       {
         "id": "sock-bed-n",
@@ -15946,7 +15983,8 @@
         "place": "主臥西牆 · 床頭北側",
         "mount": 60,
         "name": "插座 · 床頭北",
-        "notes": "・床頭櫃上方，手機充電、床頭燈\n・13A 雙孔＋USB-C，離地 60（示意，依床頭櫃高度）"
+        "notes": "・床頭櫃上方，手機充電、床頭燈\n・13A 雙孔＋USB-C，離地 60（示意，依床頭櫃高度）",
+        "use": "床頭"
       },
       {
         "id": "sock-bed-s",
@@ -15957,7 +15995,8 @@
         "place": "主臥西牆 · 床頭南側",
         "mount": 60,
         "name": "插座 · 床頭南",
-        "notes": "・同北側，離地 60（示意）"
+        "notes": "・同北側，離地 60（示意）",
+        "use": "床頭"
       },
       {
         "id": "sock-mbalcony",
@@ -15969,7 +16008,8 @@
         "mount": 30,
         "name": "插座 · 主臥陽台",
         "notes": "・戶外防水型，IP66 掀蓋\n・離地 30（示意）",
-        "room": "master"
+        "room": "master",
+        "use": "陽台"
       },
       {
         "id": "sock-bath1",
@@ -15981,7 +16021,8 @@
         "mount": 120,
         "name": "刮鬍刀插座 · 主浴鏡櫃",
         "notes": "・鏡櫃內左端，給電動牙刷、刮鬍刀\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）\n・浴室迴路須 30 mA RCD；一般 13A 插座與淋浴區距離由電工依 SS 638 確認\n・離地 120（示意，鏡櫃內）",
-        "room": "master"
+        "room": "master",
+        "use": "刮鬍刀、牙刷"
       },
       {
         "id": "hub",
@@ -15992,8 +16033,11 @@
         "place": "電視櫃中間抽屜",
         "mount": 30,
         "name": "網路主機 · 電視櫃",
-        "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm，4 埠 PoE+，共 52 W，無風扇\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與窗簾馬達，USB-C 供電\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡",
+        "onlyNet": [
+          "b"
+        ]
       },
       {
         "id": "data-tv",
@@ -16037,7 +16081,7 @@
         "place": "主臥天花",
         "mount": "ceiling",
         "name": "預留網路線 · 主臥天花",
-        "notes": "・預留一條 Cat6，先不裝 AP\n・實測主臥訊號不足再加一台 U7 Lite"
+        "notes": "・預留一條 Cat6，先不裝 AP\n・實測主臥訊號不足再加一顆同款 AP"
       },
       {
         "id": "ap-kitchen",
@@ -16049,7 +16093,10 @@
         "mount": "ceiling",
         "name": "Wi-Fi AP · 廚房",
         "product": "UniFi U7 Lite",
-        "notes": "・Ø171.5 × 33 mm 白色圓盤，貼在白色假天花上像一盞薄吸頂燈\n・PoE 供電，最大 13 W\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩"
+        "notes": "・Ø171.5 × 33 mm 白色圓盤，貼在白色假天花上像一盞薄吸頂燈\n・PoE 供電，最大 13 W，接交換器 PoE+ 埠\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩",
+        "onlyNet": [
+          "b"
+        ]
       },
       {
         "id": "ap-corridor",
@@ -16061,7 +16108,541 @@
         "mount": "ceiling",
         "name": "Wi-Fi AP · 走廊",
         "product": "UniFi U7 Lite",
-        "notes": "・在東北房門外，北側兩間房門之間\n・離主臥床約 4.8 m、東北房與南側房約 3–4 m、小孩房約 2.5 m\n・按摩椅與客房追劇都在這顆範圍內"
+        "notes": "・在東北房門外，北側兩間房門之間\n・離主臥床約 4.8 m、東北房與南側房約 3–4 m、小孩房約 2.5 m\n・按摩椅與客房追劇都在這顆範圍內",
+        "onlyNet": [
+          "b"
+        ]
+      },
+      {
+        "id": "hub-a",
+        "code": "NET-00",
+        "kind": "hub",
+        "x": 575.2,
+        "y": 214,
+        "place": "電視櫃中間抽屜",
+        "mount": 30,
+        "name": "網路主機 · 電視櫃",
+        "product": "Deco X50-PoE 主路由 + TP-Link TL-SG108PE + Aqara Hub M3",
+        "onlyNet": [
+          "a"
+        ],
+        "notes": "・第 3 顆 Deco X50-PoE 當主路由，用隨附 12 V DC 變壓器供電\n・Deco 只有 2 個網口：1G 接光纖終端，2.5G 接交換器\n・TL-SG108PE 158 × 101 × 25 mm：8 埠，4 埠 PoE 802.3af/at，共 64 W，無風扇\n・PoE 負載：Deco X50-PoE 2 × 14.4 W = 28.8 W，剩 35.2 W\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，USB-C 供電\n・抽屜面板不可用金屬，否則擋主路由的 Wi-Fi"
+      },
+      {
+        "code": "AP-01",
+        "kind": "ap",
+        "x": 536,
+        "y": 313,
+        "place": "廚房假天花 · 走道中間",
+        "mount": "ceiling",
+        "name": "Wi-Fi AP · 廚房",
+        "id": "ap-kitchen-a",
+        "product": "TP-Link Deco X50-PoE",
+        "onlyNet": [
+          "a"
+        ],
+        "notes": "・154 × 154 × 68.6 mm 白色方盒，吸頂，比 U7 Lite 厚一倍\n・只吃 802.3at／bt PoE，不支援 802.3af；EU 版最大 14.4 W\n・有線回程；也可改用隨附 12 V DC 變壓器供電\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩",
+        "shape": "square"
+      },
+      {
+        "code": "AP-02",
+        "kind": "ap",
+        "x": 347,
+        "y": 248,
+        "place": "走廊假天花 · 北側兩房門之間",
+        "mount": "ceiling",
+        "name": "Wi-Fi AP · 走廊",
+        "id": "ap-corridor-a",
+        "product": "TP-Link Deco X50-PoE",
+        "onlyNet": [
+          "a"
+        ],
+        "notes": "・154 × 154 × 68.6 mm 白色方盒，吸頂，比 U7 Lite 厚一倍\n・只吃 802.3at／bt PoE，不支援 802.3af；EU 版最大 14.4 W\n・有線回程；也可改用隨附 12 V DC 變壓器供電\n・按摩椅與客房追劇都在這顆範圍內",
+        "shape": "square"
+      },
+      {
+        "id": "ct-living",
+        "code": "CT-01",
+        "kind": "curtain",
+        "x": 582.3,
+        "y": 174.5,
+        "pocket": [
+          425.64,
+          171.64,
+          584.4,
+          177.31
+        ],
+        "place": "客餐廳 · 陽台落地門",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 客餐廳",
+        "product": "Aqara 窗簾馬達 CD-M01D ×2",
+        "specs": [
+          [
+            "軌長",
+            "560 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 2 顆馬達"
+          ],
+          [
+            "馬達端",
+            "東端 · 電視牆側"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "20 cm"
+          ]
+        ],
+        "notes": "・紗簾與遮光簾都電動，中分，兩側收攏\n・電視櫃、沙發北端距玻璃 25，窗簾盒 20 後剩約 5\n・餐桌 Tripp Trapp 拉出時距玻璃約 10，會碰到垂下的窗簾\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達"
+      },
+      {
+        "id": "ct-master",
+        "code": "CT-02",
+        "kind": "curtain",
+        "x": 265.8,
+        "y": 188,
+        "pocket": [
+          185.52,
+          185.92,
+          267.72,
+          190.17
+        ],
+        "place": "主臥 · 陽台門",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 主臥",
+        "product": "Aqara 窗簾馬達 CD-M01D",
+        "specs": [
+          [
+            "軌長",
+            "290 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "東端 · 離床頭遠"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ],
+        "notes": "・遮光簾電動，紗簾手動\n・床北緣距牆約 22，窗簾盒 15 不碰床\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達"
+      },
+      {
+        "id": "ct-kid",
+        "code": "CT-03",
+        "kind": "curtain",
+        "x": 342.4,
+        "y": 146.9,
+        "pocket": [
+          273.36,
+          144.76,
+          344.28,
+          149.01
+        ],
+        "place": "小孩房 · 北窗",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 小孩房",
+        "product": "Aqara 窗簾馬達 CD-M01D",
+        "specs": [
+          [
+            "軌長",
+            "250 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "東端 · 門側"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ],
+        "notes": "・遮光簾電動，紗簾手動\n・床位待定：床離窗至少 15\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達"
+      },
+      {
+        "id": "ct-ne",
+        "code": "CT-04",
+        "kind": "curtain",
+        "x": 351.8,
+        "y": 146.9,
+        "pocket": [
+          349.92,
+          144.76,
+          420,
+          149.01
+        ],
+        "place": "客房 · 北窗",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 客房",
+        "product": "Aqara 窗簾馬達 CD-M01D",
+        "specs": [
+          [
+            "軌長",
+            "247 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "西端 · 床尾側"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ],
+        "notes": "・遮光簾電動，紗簾手動\n・床離窗 15，正好留給窗簾盒\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達",
+        "onlyLayout": [
+          "layout-b"
+        ]
+      },
+      {
+        "id": "ct-s",
+        "code": "CT-05",
+        "kind": "curtain",
+        "x": 342.4,
+        "y": 346.75,
+        "pocket": [
+          273.36,
+          344.63,
+          344.28,
+          348.88
+        ],
+        "place": "客房 · 南窗",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 客房",
+        "product": "Aqara 窗簾馬達 CD-M01D",
+        "specs": [
+          [
+            "軌長",
+            "250 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "東端 · 床尾側"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ],
+        "notes": "・遮光簾電動，紗簾手動\n・床離窗 15，正好留給窗簾盒\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達",
+        "onlyLayout": [
+          "layout-a"
+        ]
+      },
+      {
+        "id": "rs-ne",
+        "code": "P-04",
+        "kind": "ceiling-power",
+        "x": 352,
+        "y": 147.6,
+        "place": "書房 · 北窗西端天花",
+        "mount": "ceiling",
+        "name": "預留電源 · 書房窗簾",
+        "onlyLayout": [
+          "layout-a"
+        ],
+        "use": "預留窗簾",
+        "notes": "・窗簾盒位置預留 13A 插座，先不裝馬達\n・按摩椅離窗 10，要做窗簾需先把椅子往內移"
+      },
+      {
+        "id": "rs-s",
+        "code": "P-05",
+        "kind": "ceiling-power",
+        "x": 342,
+        "y": 346,
+        "place": "書房 · 南窗東端天花",
+        "mount": "ceiling",
+        "name": "預留電源 · 書房窗簾",
+        "onlyLayout": [
+          "layout-b"
+        ],
+        "use": "預留窗簾",
+        "notes": "・窗簾盒位置預留 13A 插座，先不裝馬達\n・按摩椅離窗 10，要做窗簾需先把椅子往內移"
+      },
+      {
+        "id": "sc-entry",
+        "code": "SC-01",
+        "kind": "scene",
+        "x": 544.9,
+        "y": 392.5,
+        "place": "大門內左手牆",
+        "mount": 120,
+        "name": "一鍵全關 · 大門",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "左：玄關燈；右：一鍵全關"
+          ]
+        ],
+        "notes": "・右鍵解耦，不接燈，按一下關全屋燈\n・出門前一鍵；場景在 Aqara Home 設定\n・離地 120，與客廳開關並排"
+      },
+      {
+        "id": "sw-living",
+        "code": "SW-01",
+        "kind": "switch",
+        "x": 544.9,
+        "y": 383.5,
+        "place": "大門內左手牆 · 一鍵全關上方",
+        "mount": 120,
+        "name": "開關 · 客餐廳",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵 ×2（示意）"
+          ],
+          [
+            "控制",
+            "客廳主燈、餐桌吊燈、洗牆燈、電視櫃燈條"
+          ]
+        ],
+        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+      },
+      {
+        "id": "sw-kitchen",
+        "code": "SW-02",
+        "kind": "switch",
+        "x": 549.6,
+        "y": 305,
+        "place": "廚房門內北側",
+        "mount": 120,
+        "name": "開關 · 廚房",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "廚房主燈、吊櫃下燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+      },
+      {
+        "id": "sw-helper",
+        "code": "SW-03",
+        "kind": "switch",
+        "x": 455.6,
+        "y": 305.5,
+        "place": "女傭房門內北側",
+        "mount": 120,
+        "name": "開關 · 女傭房",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "女傭房燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+      },
+      {
+        "id": "sw-master",
+        "code": "SW-04",
+        "kind": "switch",
+        "x": 297.5,
+        "y": 234.6,
+        "place": "主臥門內北側",
+        "mount": 120,
+        "name": "開關 · 主臥",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "主燈、衣櫃區燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）\n・床頭另加無線開關 H1 一鍵關燈，不用拉線"
+      },
+      {
+        "id": "sw-bath1",
+        "code": "SW-05",
+        "kind": "switch",
+        "x": 222.5,
+        "y": 297.5,
+        "place": "衛浴 1 門內",
+        "mount": 120,
+        "name": "開關 · 衛浴 1",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "燈、抽風機"
+          ]
+        ],
+        "notes": "・離淋浴區與浴缸 ≥ 60，位置由電工依 SS 638 確認\n・離地 120（示意）",
+        "room": "master"
+      },
+      {
+        "id": "sw-kid",
+        "code": "SW-06",
+        "kind": "switch",
+        "x": 311.5,
+        "y": 227.8,
+        "place": "小孩房門內西側",
+        "mount": 120,
+        "name": "開關 · 小孩房",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "房間主燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+      },
+      {
+        "id": "sw-ne",
+        "code": "SW-07",
+        "kind": "switch",
+        "x": 381,
+        "y": 227.8,
+        "place": "東北房門內東側",
+        "mount": 120,
+        "name": "開關 · 東北房",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "房間主燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+      },
+      {
+        "id": "sw-s",
+        "code": "SW-08",
+        "kind": "switch",
+        "x": 313,
+        "y": 268.6,
+        "place": "南側房門內西側",
+        "mount": 120,
+        "name": "開關 · 南側房",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "房間主燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）\n・拉門往東滑，開關放西側不被門片擋"
+      },
+      {
+        "id": "sw-corridor",
+        "code": "SW-09",
+        "kind": "switch",
+        "x": 423.6,
+        "y": 235.2,
+        "place": "走廊東端 · 客廳入口",
+        "mount": 120,
+        "name": "開關 · 走廊",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "走廊燈"
+          ]
+        ],
+        "notes": "・離地 120（示意）\n・主臥門口可加無線開關 H1 做雙切"
+      },
+      {
+        "id": "sw-bath2",
+        "code": "SW-10",
+        "kind": "switch",
+        "x": 364.5,
+        "y": 261.6,
+        "place": "衛浴 2 門外西側 · 走廊",
+        "mount": 120,
+        "name": "開關 · 衛浴 2",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "燈、抽風機"
+          ]
+        ],
+        "notes": "・放門外，拉門往東滑不擋\n・離地 120（示意）"
       }
     ],
     "runs": [
@@ -16187,6 +16768,357 @@
           ]
         ]
       }
-    ]
+    ],
+    "nets": [
+      {
+        "id": "a",
+        "name": "方案 A · Deco",
+        "note": "TP-Link Deco X50-PoE ×3＋TL-SG108PE"
+      },
+      {
+        "id": "b",
+        "name": "方案 B · UniFi",
+        "note": "UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE"
+      }
+    ],
+    "defaultNet": "b",
+    "record": {
+      "title": "電與智能家居",
+      "asof": "規格與價格查詢日期 2026-10-26；價格含 GST，約數",
+      "sections": [
+        {
+          "id": "net",
+          "title": "網路方案 A／B",
+          "table": {
+            "head": [
+              "",
+              "方案 A · Deco X50-PoE",
+              "方案 B · UniFi U7 Lite"
+            ],
+            "rows": [
+              [
+                "天花 AP",
+                "Deco X50-PoE ×2 · 廚房、走廊",
+                "U7 Lite ×2 · 廚房、走廊"
+              ],
+              [
+                "主路由",
+                "第 3 顆 Deco X50-PoE，電視櫃，12 V DC",
+                "Cloud Gateway Ultra，電視櫃"
+              ],
+              [
+                "PoE 交換器",
+                "TL-SG108PE · 8 埠，4 埠 PoE，64 W",
+                "USW Lite 8 PoE · 8 埠，4 埠 PoE+，52 W"
+              ],
+              [
+                "AP 供電",
+                "只吃 802.3at／bt，不支援 802.3af；最大 14.4 W",
+                "PoE，最大 13 W"
+              ],
+              [
+                "天花外形",
+                "154 × 154 × 68.6 mm 方盒",
+                "Ø171.5 × 33 mm 圓盤"
+              ],
+              [
+                "Wi-Fi",
+                "Wi-Fi 6 · 5 GHz 2402 + 2.4 GHz 574 Mbps",
+                "Wi-Fi 7 · 5 GHz 4.3 Gbps + 2.4 GHz 688 Mbps"
+              ],
+              [
+                "網口",
+                "每顆 2.5G ×1 + 1G ×1",
+                "2.5G ×1"
+              ],
+              [
+                "有線回程",
+                "支援",
+                "支援"
+              ],
+              [
+                "管理",
+                "Deco App，需 TP-Link 帳號",
+                "UniFi Network，跑在 Cloud Gateway 本機"
+              ],
+              [
+                "約價",
+                "3 顆裝 S$417；交換器待查",
+                "S$164 ×2 + S$219 + S$186 ≈ S$733"
+              ],
+              [
+                "優點",
+                "便宜、App 簡單",
+                "薄一半、Wi-Fi 7、本機管理、攝影機可分網段"
+              ],
+              [
+                "缺點",
+                "天花上較厚；每顆只有 2 個網口",
+                "貴約 S$300；設定項目多"
+              ]
+            ]
+          },
+          "text": "・建議方案 B：天花上最顯眼的是 AP，U7 Lite 厚 33 mm，Deco 68.6 mm\n・兩案 AP 位置、網路線、PoE 交換器位置完全相同，水電可先照圖施工，晚點再決定\n・兩顆天花 AP 夠用：U7 Lite 每顆標示 115 m²；主臥預留 Cat6，不足再加第 3 顆\n・不選一般 Deco X50：桌上型 110 × 110 × 114 mm，沒有 PoE，天花要多一個插座且無吸頂件",
+          "sources": [
+            {
+              "label": "TP-Link Deco X50-PoE",
+              "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50-poe/"
+            },
+            {
+              "label": "Deco X50-PoE PoE FAQ",
+              "url": "https://www.tp-link.com/support/faq/3484/"
+            },
+            {
+              "label": "TP-Link Deco X50",
+              "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50/"
+            },
+            {
+              "label": "UniFi U7 Lite",
+              "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+            },
+            {
+              "label": "UniFi Cloud Gateway Ultra",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
+            },
+            {
+              "label": "UniFi USW Lite 8 PoE",
+              "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
+            },
+            {
+              "label": "TP-Link TL-SG108PE",
+              "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
+            },
+            {
+              "label": "SourceIT SG · Deco X50-PoE 3-pack",
+              "url": "https://sourceit.com.sg/products/tp-link-deco-x50-poe-ax3000-whole-home-mesh-wi-fi-6-system-with-poe-3-pack"
+            },
+            {
+              "label": "UI Store SG · U7 Lite",
+              "url": "https://sg.store.ui.com/sg/en/products/u7-lite"
+            },
+            {
+              "label": "UI Store SG · UCG Ultra",
+              "url": "https://sg.store.ui.com/sg/en/products/ucg-ultra"
+            },
+            {
+              "label": "UI Store SG · USW Lite 8 PoE",
+              "url": "https://sg.store.ui.com/sg/en/products/usw-lite-8-poe"
+            }
+          ]
+        },
+        {
+          "id": "poe",
+          "title": "PoE 交換器與功耗",
+          "table": {
+            "head": [
+              "",
+              "方案 A · TL-SG108PE",
+              "方案 B · USW Lite 8 PoE"
+            ],
+            "rows": [
+              [
+                "PoE 預算",
+                "64 W",
+                "52 W"
+              ],
+              [
+                "AP 負載",
+                "2 × 14.4 = 28.8 W",
+                "2 × 13 = 26 W"
+              ],
+              [
+                "餘量",
+                "35.2 W",
+                "26 W"
+              ],
+              [
+                "主臥加第 3 顆 AP",
+                "43.2 W，夠",
+                "39 W，夠"
+              ],
+              [
+                "埠數",
+                "上聯、AP ×2、網路孔 ×4、Hub M3 = 8／8",
+                "上聯、AP ×2、網路孔 ×3 = 6／8；電視與 Hub M3 接 UCG"
+              ]
+            ]
+          },
+          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・方案 A 埠數用滿；要再接設備需加小交換器\n・光纖終端、主路由、交換器建議同接一台小型 UPS（待確認）",
+          "sources": [
+            {
+              "label": "Deco X50-PoE PoE FAQ",
+              "url": "https://www.tp-link.com/support/faq/3484/"
+            },
+            {
+              "label": "UniFi U7 Lite",
+              "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+            },
+            {
+              "label": "TP-Link TL-SG108PE",
+              "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
+            },
+            {
+              "label": "UniFi USW Lite 8 PoE",
+              "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
+            },
+            {
+              "label": "Harvey Norman SG · Hub M3",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-hubs-en/aqara-m3-hub-black-hm-g01d.html"
+            }
+          ]
+        },
+        {
+          "id": "cam",
+          "title": "攝影機供電決策",
+          "table": {
+            "head": [
+              "",
+              "天花插座 + Wi-Fi · 建議",
+              "PoE 攝影機"
+            ],
+            "rows": [
+              [
+                "機型",
+                "Aqara Camera E1 ×3",
+                "例：UniFi G5 Flex ×3"
+              ],
+              [
+                "供電",
+                "5 V 2 A USB-C；假天花內 13A 插座＋原廠變壓器",
+                "PoE 最大 4 W；一條 Cat6 供電加傳輸"
+              ],
+              [
+                "佈線",
+                "就近接插座迴路，線短",
+                "每顆一條 Cat6 拉回電視櫃"
+              ],
+              [
+                "連線",
+                "Wi-Fi 6 · 2.4 GHz；三顆串流只佔 AP 頻寬一小部分",
+                "有線，不受 Wi-Fi 干擾"
+              ],
+              [
+                "停電",
+                "一起斷電；錄到 microSD 為止",
+                "交換器接 UPS 可續錄"
+              ],
+              [
+                "錄影與隱私",
+                "microSD ≤ 512 GB；HomeKit Secure Video",
+                "要 UniFi Protect：UCG Ultra 不支援，需改 UCG Max S$483＋SSD；方案 A 無錄影主機"
+              ],
+              [
+                "生態",
+                "Aqara Home、Apple Home",
+                "UniFi Protect App，不進 Apple Home"
+              ],
+              [
+                "外形",
+                "69 × 69 × 104 mm",
+                "Ø48 × 107.5 mm"
+              ],
+              [
+                "約價",
+                "S$99／顆",
+                "S$219／顆＋錄影主機差價"
+              ]
+            ]
+          },
+          "text": "・建議天花插座 + Wi-Fi：每顆省約 S$120，不用換錄影主機，留在 Apple Home\n・每個攝影機點順便預埋一條 Cat6 收在天花內，日後要換 PoE 不必拆天花（示意）\n・女傭房與浴室不裝攝影機",
+          "sources": [
+            {
+              "label": "Aqara Camera E1 specs",
+              "url": "https://www.aqara.com/en/product/camera-e1-specs/"
+            },
+            {
+              "label": "Harvey Norman SG · Camera E1",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/cameras-en/security-cameras-en/aqara-e1-camera-white-ch-c01e.html"
+            },
+            {
+              "label": "UniFi G5 Flex",
+              "url": "https://techspecs.ui.com/unifi/cameras-nvrs/uvc-g5-flex"
+            },
+            {
+              "label": "UI Store SG · G5 Flex",
+              "url": "https://sg.store.ui.com/sg/en/products/uvc-g5-flex"
+            },
+            {
+              "label": "UniFi Cloud Gateway Ultra",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
+            },
+            {
+              "label": "UniFi Cloud Gateway Max",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-max"
+            },
+            {
+              "label": "UI Store SG · UCG Max",
+              "url": "https://sg.store.ui.com/sg/en/products/ucg-max"
+            }
+          ]
+        },
+        {
+          "id": "curtain",
+          "title": "電動窗簾",
+          "auto": "curtain",
+          "text": "・馬達：Aqara 窗簾馬達 CD-M01D，230 V，Zigbee，Apple Home；70 × 50 × 346 mm，負重 50 kg，經銷商規格待確認；新加坡含 2 m 軌道與安裝 S$409\n・遮光簾電動、紗簾手動；客廳兩層都電動\n・窗簾盒淨深：臥室 15，配合床離窗 15；客廳 20\n・電源：馬達端窗簾盒內留 13A 插座，接插座迴路\n・不拉電的替代：Curtain Driver E1，6000 mAh 充電、約一年一充、負重 12 kg，掛在 U／I 軌上，S$140\n・本地窗簾店常配 Dooya／Somfy：要指定 Zigbee 3.0 或 Matter 版才能進 Aqara／Apple Home",
+          "sources": [
+            {
+              "label": "Harvey Norman SG · Aqara 窗簾馬達 CD-M01D",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-curtain-motor-with-2m-track-and-installation-white-cd-m01d.html"
+            },
+            {
+              "label": "CD-M01D 經銷商規格",
+              "url": "https://www.yohohongkong.com/en-us/product/113444-Aqara-Smart-Curtain-Motor-Zigbee-Opening-and-Closing-Curtain-Version-CD-M01D-Clean-Machine-Apple-Homekit"
+            },
+            {
+              "label": "Aqara Curtain Driver E1",
+              "url": "https://www.aqara.com/en/product/curtain-driver-e1/"
+            },
+            {
+              "label": "Harvey Norman SG · Curtain Driver E1",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-e1-smart-curtain-driver-track-version-white-cm-m01.html"
+            }
+          ]
+        },
+        {
+          "id": "switch",
+          "title": "智能開關",
+          "auto": "switch",
+          "text": "・Aqara H1 EU 有零線版：WS-EUK03 單鍵、WS-EUK04 雙鍵；85.8 × 86 mm，100–250 V，Zigbee 3.0，電阻負載 8 A\n・裝在新加坡 86 方盒；Harvey Norman SG 有售，單鍵 S$55\n・每個開關盒要有零線 N：請電工拉到每個盒；無零線版有最低負載與閃燈問題\n・中樞 Aqara Hub M3，S$289，放電視櫃\n・不選 H2 EU：55 mm 模組框，不配英式盒",
+          "sources": [
+            {
+              "label": "Aqara H1 EU (with neutral)",
+              "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
+            },
+            {
+              "label": "Aqara H1 EU 說明書",
+              "url": "https://www.123led.nl/pdf/LAQ00028.pdf"
+            },
+            {
+              "label": "Harvey Norman SG · H1 單鍵",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-h1-neutral-single-rocker-smart-wall-switch-white-ws-euk03.html"
+            },
+            {
+              "label": "Aqara H2 EU",
+              "url": "https://www.smart-secure.co.uk/product/aqara-light-switch-h2-eu/"
+            },
+            {
+              "label": "Harvey Norman SG · Hub M3",
+              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-hubs-en/aqara-m3-hub-black-hm-g01d.html"
+            }
+          ]
+        },
+        {
+          "id": "power",
+          "title": "插座與天花供電",
+          "auto": "power"
+        },
+        {
+          "id": "todo",
+          "title": "待確認",
+          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10：書房要窗簾需移椅，電源先預留\n・CD-M01D 尺寸與插頭向 Aqara SG 或窗簾商確認\n・TL-SG108PE 新加坡售價"
+        }
+      ]
+    }
   }
 }

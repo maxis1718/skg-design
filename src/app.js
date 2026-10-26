@@ -29,6 +29,8 @@ let elevView={},elevState='closed';
 let roomId='floor', objectId=null, showDims=true, showObjects=true;
 // Power & network layer (⚡): off by default, URL ?power=1 is the only state. powerId = selected point.
 let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=null;
+// Wi-Fi scheme inside the ⚡ layer: a = Deco X50-PoE, b = UniFi U7 Lite (default). URL ?net=a|b. Points with onlyNet / onlyLayout are filtered.
+let netId=(()=>{const v=(new URLSearchParams(location.search).get('net')||'').toLowerCase();return v==='a'||v==='b'?v:null;})();
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
@@ -102,20 +104,25 @@ function buildPlan(){
   buildPower();
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
-const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機'};
-const powerPoints=()=>project.electrical?.points||[];
+const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',curtain:'電動窗簾',switch:'智能開關',scene:'一鍵全關'};
+const currentNet=()=>netId||project.electrical?.defaultNet||'b';
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyNet||p.onlyNet.includes(currentNet()))&&(!p.onlyLayout||p.onlyLayout.includes(layoutId)));
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const powerMount=p=>p.mount==='ceiling'?t('天花'):tf('離地 {h} cm',{h:p.mount});
 function inPoly(x,y,poly){let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const[xi,yi]=poly[i],[xj,yj]=poly[j];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c;}return c;}
 const powerRoom=p=>project.rooms.find(r=>inPoly(p.x,p.y,r.polygon_pt))?.id||p.room||null;
 function powerGlyph(p){
   const g=svgEl('g',{class:'power-mark','data-power':p.id,transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
-  const O='#d9731c',B='#2f68a6',C='#24443b';
+  const O='#d9731c',B='#2f68a6',C='#24443b',V='#6a4f97';
   if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));}
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
+  else if(p.kind==='ap'&&p.shape==='square'){g.append(svgEl('rect',{x:-3.1,y:-3.1,width:6.2,height:6.2,rx:1,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
   else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
+  else if(p.kind==='curtain'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.9,fill:V}),svgEl('path',{d:'M-1.2 -1.1v2.2M0 -1.1v2.2M1.2 -1.1v2.2',stroke:'#fff','stroke-width':.45}),svgEl('circle',{cx:2.4,cy:-2.4,r:1.05,fill:O,stroke:'#fff','stroke-width':.3}));}
+  else if(p.kind==='switch'){g.append(svgEl('rect',{x:-2.1,y:-2.1,width:4.2,height:4.2,rx:.5,fill:'#fff',stroke:V,'stroke-width':.6}),svgEl('rect',{x:-.55,y:-1.25,width:1.1,height:2.5,rx:.3,fill:V}));}
+  else if(p.kind==='scene'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.6,fill:V}),svgEl('path',{d:'M-.95 -.75A1.3 1.3 0 1 0 .95 -.75M0 -1.5V0',fill:'none',stroke:'#fff','stroke-width':.45,'stroke-linecap':'round'}));}
   else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
   g.append(svgEl('circle',{class:'pm-ring',r:p.kind==='ap'?4.6:4.1}),svgEl('circle',{class:'pm-hit',r:5}));
   g.addEventListener('pointerenter',e=>showTip(e,{name:p.name,code:p.code}));g.addEventListener('pointermove',positionTip);g.addEventListener('pointerleave',hideTip);
@@ -126,14 +133,17 @@ function powerGlyph(p){
 function buildPower(){
   const layer=$('#power-layer');if(!layer)return;layer.replaceChildren();const el=project.electrical;if(!el)return;
   const under=svgEl('g',{class:'power-under'});
-  for(const p of el.points){
+  const pts=powerPoints();
+  for(const p of pts){
+    if(p.kind==='curtain'&&p.pocket){const[x0,y0,x1,y1]=p.pocket,vert=x1-x0<y1-y0;under.append(svgEl('rect',{class:'curtain-pocket',x:x0,y:y0,width:x1-x0,height:y1-y0}));
+      for(const f of [.32,.68]){under.append(svgEl('path',{class:'curtain-track',d:vert?`M${x0+(x1-x0)*f} ${y0}V${y1}`:`M${x0} ${y0+(y1-y0)*f}H${x1}`}));}}
     if(p.kind==='ap')under.append(svgEl('circle',{cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
     if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
       under.append(svgEl('path',{class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
   }
   for(const r of el.runs||[])under.append(svgEl('polyline',{class:'power-run',points:r.path.map(q=>q.join(',')).join(' ')}));
   layer.append(under);
-  const marks=svgEl('g',{class:'power-marks'});for(const p of el.points)marks.append(powerGlyph(p));layer.append(marks);
+  const marks=svgEl('g',{class:'power-marks'});for(const p of pts)marks.append(powerGlyph(p));layer.append(marks);
   renderPowerLayer();
 }
 function renderPowerLayer(){
@@ -142,6 +152,40 @@ function renderPowerLayer(){
   $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
   const lg=$('#power-legend');lg.hidden=!showPower;
   lg.innerHTML=Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
+  renderNetVersion();renderSmartRecord();
+}
+function renderNetVersion(){
+  const grp=$('#net-version-group'),seg=$('#net-version'),nets=project.electrical?.nets||[];if(!grp||!seg)return;
+  grp.hidden=!showPower||!nets.length;seg.setAttribute('aria-label',t('切換網路方案'));
+  seg.innerHTML=nets.map(n=>`<button type="button" class="tool ${n.id===currentNet()?'active':''}" data-net-version="${esc(n.id)}" aria-pressed="${n.id===currentNet()}" title="${esc(n.note||'')}">${esc(n.name)}</button>`).join('');
+  $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
+}
+function chooseNet(id){
+  if(id===currentNet()||!(project.electrical?.nets||[]).some(n=>n.id===id))return;netId=id;
+  const u=new URL(location.href);u.searchParams.set('net',id);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
+  if(powerId&&!powerPoint(powerId))powerId=null;buildPower();renderInspector();
+}
+// 電與智能家居 record: shown under the plan on the whole-home view while ⚡ is on. `auto` sections are tables built from the visible points.
+const specOf=(p,k)=>(p.specs||[]).find(s=>s[0]===k)?.[1]??'';
+function recordTable(head,rows,first=false){
+  return `<div class="sr-table"><table><thead><tr>${head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>i===0&&first&&c&&typeof c==='object'?`<td><button class="sr-open" data-power-open="${esc(c.id)}"><i class="pk pk-${c.kind}"></i>${esc(c.label)}</button></td>`:`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function recordAuto(kind){
+  const pts=powerPoints(),open=p=>({id:p.id,kind:p.kind,label:p.code});
+  if(kind==='curtain'){const ps=pts.filter(p=>p.kind==='curtain'),ks=['軌長','軌道／馬達','馬達端','窗簾盒淨深'];
+    return recordTable([t('編號'),t('位置'),...ks.map(t)],ps.map(p=>[open(p),p.place,...ks.map(k=>specOf(p,t(k))||specOf(p,k))]),true);}
+  if(kind==='switch'){const ps=pts.filter(p=>p.kind==='scene'||p.kind==='switch');
+    return recordTable([t('編號'),t('位置'),t('鍵數'),t('控制')],ps.map(p=>[open(p),p.place,specOf(p,t('鍵數'))||specOf(p,'鍵數'),specOf(p,t('控制'))||specOf(p,'控制')]),true);}
+  if(kind==='power'){const ps=pts.filter(p=>['socket','ceiling-power','curtain'].includes(p.kind));
+    return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,p.kind==='curtain'?t('13A 插座 · 窗簾盒'):t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
+  return '';
+}
+function renderSmartRecord(){
+  const node=$('#smart-record');if(!node)return;const rec=project.electrical?.record;
+  const on=showPower&&roomId==='floor'&&!!rec;node.hidden=!on;if(!on){node.innerHTML='';return;}
+  node.innerHTML=`<div class="section-heading"><h2>${esc(rec.title)}</h2><span>${esc(rec.asof)}</span></div><nav class="sr-nav">${rec.sections.map((s,i)=>`<a href="#sr-${esc(s.id)}">${i+1}. ${esc(s.title)}</a>`).join('')}</nav>`+rec.sections.map((s,i)=>`<section class="sr-block" id="sr-${esc(s.id)}"><h3><span>${i+1}</span>${esc(s.title)}</h3>${s.table?recordTable(s.table.head,s.table.rows):''}${s.auto?recordAuto(s.auto):''}${s.text?`<ul class="sr-text">${s.text.split('\n').map(l=>`<li>${esc(l.replace(/^・/,''))}</li>`).join('')}</ul>`:''}${s.sources?.length?`<p class="power-sources">${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join(' · ')}</p>`:''}</section>`).join('');
+  node.querySelectorAll('[data-power-open]').forEach(b=>b.onclick=()=>{selectPower(b.dataset.powerOpen);$('#main-panel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});});
+  node.querySelectorAll('.sr-nav a').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById(a.getAttribute('href').slice(1))?.scrollIntoView({behavior:'smooth',block:'start'});});
 }
 function selectPower(id){
   if(!powerPoint(id))return;powerId=id;objectId=null;
@@ -150,7 +194,7 @@ function selectPower(id){
   if(matchMedia('(max-width:900px)').matches)$('#inspector').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function powerSummary(){
-  const el=project.electrical,pts=el.points.filter(p=>roomId==='floor'||powerRoom(p)===roomId);
+  const el=project.electrical,pts=powerPoints().filter(p=>roomId==='floor'||powerRoom(p)===roomId);
   const kinds=Object.keys(POWER_KINDS).filter(k=>pts.some(p=>p.kind===k));
   const counts=kinds.map(k=>`<span><i class="pk pk-${k}"></i>${esc(t(POWER_KINDS[k]))} <b>${pts.filter(p=>p.kind===k).length}</b></span>`).join('');
   const rows=kinds.map(k=>pts.filter(p=>p.kind===k).map(p=>`<button class="power-row" data-power-open="${esc(p.id)}"><i class="pk pk-${k}"></i><span>${esc(p.name)}</span><small>${esc(p.code)}</small></button>`).join('')).join('');
@@ -295,7 +339,7 @@ function renderInspector(){
   renderPowerLayer();
   if(showPower&&powerId&&!objectId&&powerPoint(powerId)){
     const p=powerPoint(powerId);
-    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
+    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
     $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
   }
   if(objectId){
@@ -342,10 +386,11 @@ $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog
 window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);
 $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[data-kitchen-version]');if(b)chooseKitchenVersion(b.dataset.kitchenVersion);});
 $('#layout-version').addEventListener('click',e=>{const b=e.target.closest('[data-layout-version]');if(b)chooseLayout(b.dataset.layoutVersion);});
+$('#net-version').addEventListener('click',e=>{const b=e.target.closest('[data-net-version]');if(b)chooseNet(b.dataset.netVersion);});
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,script,style';
+const DYNAMIC='#smart-record,#net-version,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -366,5 +411,5 @@ applyStatic();syncKitchenURL();
 buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)?hash:'floor');
 // Expose a read-only snapshot for focused QA and efficient future updates.
-window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
+window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,net:currentNet(),selectedVersions:{...selectedVersions},project:structuredClone(project)})};
 })();

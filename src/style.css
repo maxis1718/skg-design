@@ -131,3 +131,16 @@ details>summary{font-size:15px}.auxiliary summary{font-size:14px}
 .power-sources{font-size:11px;line-height:1.8;color:#75836d}.power-sources a{color:#52694b}
 .legend i.pk-socket,.legend i.pk-ceiling-power,.legend i.pk-camera,.legend i.pk-ap{border-radius:50%}.legend i.pk-data,.legend i.pk-hub{border-radius:2px}
 .drawing-foot{flex-wrap:wrap}.power-legend{justify-content:flex-end}@media(max-width:760px){.power-legend{justify-content:flex-start;width:100%}}
+/* ⚡ smart home: curtains, switches, Wi-Fi scheme, 電與智能家居 record */
+#power-layer .curtain-pocket{fill:#6a4f97;fill-opacity:.1}#power-layer .curtain-track{fill:none;stroke:#6a4f97;stroke-opacity:.75;stroke-width:.35}
+.pk-curtain{background:#6a4f97;border-radius:2px!important}.pk-switch{border:1.5px solid #6a4f97;border-radius:2px!important;background:#fff}.pk-scene{background:#6a4f97;border-radius:2px!important;box-shadow:inset 0 0 0 2px #6a4f97,inset 0 0 0 3px #fff}
+.smart-record{padding-top:38px}.smart-record[hidden]{display:none}.smart-record .section-heading{flex-wrap:wrap}
+.sr-nav{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;margin:-8px 0 18px}.sr-nav a{color:#52694b;text-decoration:none;border-bottom:1px solid #c9d5c0}.sr-nav a:hover{border-color:#52694b}
+.sr-block{background:#fbfcf8;border:1px solid var(--line);border-radius:3px;padding:20px 22px;margin-bottom:16px;scroll-margin-top:12px}
+.sr-block h3{font-size:16px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:10px}.sr-block h3 span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;font-weight:500;flex:none}
+.sr-table{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:#fff;margin-bottom:12px}.sr-table table{width:100%;border-collapse:collapse;white-space:normal}
+.sr-table th{padding:8px 12px;font-size:12px;white-space:nowrap}.sr-table td{padding:8px 12px;font-size:13px;line-height:1.6;border-bottom:1px solid #edf0e8;background:none;vertical-align:top}.sr-table tr:last-child td{border-bottom:0}
+.sr-table td:first-child{color:var(--muted);white-space:nowrap}.sr-open{border:0;background:none;padding:0;display:inline-flex;align-items:center;gap:7px;color:var(--ink);font-size:12px;letter-spacing:.3px;white-space:nowrap}.sr-open:hover{text-decoration:underline}
+.sr-text{margin:4px 0 8px;padding-left:18px;font-size:13px;line-height:1.85;color:#4f5e49}.sr-text li{margin-bottom:2px}
+@media(max-width:760px){.smart-record{padding-top:28px}.sr-block{padding:14px;margin-left:-4px;margin-right:-4px}.sr-table th,.sr-table td{padding:7px 9px;font-size:12px}.sr-table td{min-width:130px;max-width:210px}.sr-table td:first-child{min-width:0}.sr-text{font-size:13.5px}}
+.inspector-pair>span{flex:none}
