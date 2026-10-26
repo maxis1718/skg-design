@@ -1,0 +1,10 @@
+<!-- R31 (2026-10-26): 格局 B guest room (NE room 247 × 300, window north, swing door at the SW: hinge 10 from the west wall, leaf 90 → swing x 10–100, y 210–300). Bed MALM Queen 209 × 166 head east, 15 off the window (y 15–181). Units: PDF pt. -->
+<!-- Scheme A: wardrobe 59 × 60 in the SE corner (front west) + desk 60 × 45 on the east wall north of it; chair faces east. -->
+<path data-layout="lb-guest-a-desk" class="furnishing" d="M407.18 196.07H419.94V213.07H407.18Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-chair" class="furnishing" d="M394.14 198.19H404.63Q405.76 198.19 405.76 199.33V209.82Q405.76 210.95 404.63 210.95H394.14Q393.01 210.95 393.01 209.82V199.33Q393.01 198.19 394.14 198.19Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-chair-back" class="furnishing" d="M393.86 199.04V210.1" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-wardrobe" class="furnishing" d="M402.93 213.07H419.94V229.8H402.93Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-wardrobe-rail" class="furnishing" d="M411.43 213.07V229.8" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-wardrobe-hanger" class="furnishing" d="M405.2 217.26H417.67" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-wardrobe-hanger" class="furnishing" d="M405.2 221.44H417.67" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-guest-a-wardrobe-hanger" class="furnishing" d="M405.2 225.62H417.67" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>

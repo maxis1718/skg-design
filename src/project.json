@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R30",
+    "revision": "R31",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -2545,6 +2545,154 @@
       "onlyLayout": [
         "layout-b"
       ]
+    },
+    {
+      "id": "guest-desk-lb-a",
+      "code": "GST-08",
+      "room_id": "guest",
+      "name": "客房書桌（A）",
+      "bounds_pt": [
+        407.18,
+        196.07,
+        419.94,
+        213.07
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 60,
+          "status": "design"
+        },
+        "d": {
+          "cm": 45,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "寬 60，深 45 示意",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ],
+      "onlyGuest": [
+        "guest-a"
+      ]
+    },
+    {
+      "id": "guest-wardrobe-lb-a",
+      "code": "GST-09",
+      "room_id": "guest",
+      "name": "客房訂製衣櫃（A）",
+      "bounds_pt": [
+        402.93,
+        213.07,
+        419.94,
+        229.8
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 59,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・訂製到頂，單門朝西\n・寬 59",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ],
+      "onlyGuest": [
+        "guest-a"
+      ]
+    },
+    {
+      "id": "guest-desk-lb-b",
+      "code": "GST-10",
+      "room_id": "guest",
+      "name": "客房書桌（B）",
+      "bounds_pt": [
+        380.25,
+        217.04,
+        397.26,
+        229.8
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 60,
+          "status": "design"
+        },
+        "d": {
+          "cm": 45,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "寬 60，深 45 示意；離門扇 6，背後是床",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ],
+      "onlyGuest": [
+        "guest-b"
+      ]
+    },
+    {
+      "id": "guest-wardrobe-lb-b",
+      "code": "GST-11",
+      "room_id": "guest",
+      "name": "客房訂製衣櫃（B）",
+      "bounds_pt": [
+        397.26,
+        212.79,
+        419.94,
+        229.8
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 80,
+          "status": "design"
+        },
+        "d": {
+          "cm": 60,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・訂製到頂，雙門朝北\n・寬 80；門前到床 59",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ],
+      "onlyGuest": [
+        "guest-b"
+      ]
     }
   ],
   "source_dimensions": [
@@ -2982,6 +3130,10 @@
     {
       "id": "C35",
       "text": "全屋加入格局 A／B：A 書房右上、客房下方；B 客房右上（拆原衣櫃，床靠窗、床頭靠東牆），書房移到下方。"
+    },
+    {
+      "id": "C36",
+      "text": "格局 B 客房加入方案 A／B：A 衣櫃 59＋書桌靠東牆；B 衣櫃 80＋書桌靠南牆。床靠窗、床頭靠東牆。"
     }
   ],
   "measurement_policy": {
@@ -10339,6 +10491,723 @@
           ]
         }
       ]
+    },
+    "guest-wardrobe-lb-a": {
+      "object_id": "guest-wardrobe-lb-a",
+      "title": "客房衣櫃（格局 B · 方案 A）· 立面設計",
+      "viewpoint": "從房內面向東牆衣櫃；左為書桌，右為南牆",
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "main": {
+          "w": 59,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 6,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 6,
+                "width": 44,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 44,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "44×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 1,
+              "hinges": [
+                "R"
+              ],
+              "label": "單開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ],
+              "swing": {
+                "k": 0.38,
+                "mirror": {
+                  "leaf": 0,
+                  "from": 78,
+                  "to": 240,
+                  "inHinge": 7,
+                  "inFree": 3,
+                  "label": "全身鏡"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "risks": [
+        "鉸鏈側緊貼南牆，門開約 90° 會碰牆：鉸鏈加開角限位或牆面防撞。"
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "8",
+          "note": "櫃頂 272，現場裁切。"
+        },
+        {
+          "zone": "上層收納盒",
+          "h": "35.8",
+          "note": "SKUBB 31×55×33 ×1，右側餘 22；盒底 234.4，需踩凳。"
+        },
+        {
+          "zone": "低收納層",
+          "h": "27.8",
+          "note": "SKUBB 44×55×19 ×1，右側餘 10；底 204.8。"
+        },
+        {
+          "zone": "固定層板",
+          "h": "1.8",
+          "note": "底 203，深 58.2。"
+        },
+        {
+          "zone": "感應燈",
+          "h": "24 V",
+          "note": "LED 鋁槽燈長 52，門控：開門亮、關門滅。"
+        },
+        {
+          "zone": "掛衣區",
+          "h": "125.2",
+          "note": "掛桿 195、長 55；桿下淨高 117.2，約 15–20 件。"
+        },
+        {
+          "zone": "門片 · 單開高門",
+          "h": "196",
+          "note": "58.2 × 196，76–272；鉸鏈在南牆側，開向牆、不擋書桌；內貼全身鏡。"
+        },
+        {
+          "zone": "外抽屜 ×3",
+          "h": "20／24／24",
+          "note": "內高 16／20／20；LEGRABOX NL 500，全拉 50，前方淨空 ≥ 60。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "8",
+          "note": "內退 5，可拆，內放 LED 驅動器。"
+        }
+      ],
+      "hardware": [
+        "Blum LEGRABOX NL 500 全拉緩衝；CLIP top 110° 鉸鏈 ×5＋開角限位。",
+        "全身鏡 5 mm 安全鏡 48.2 × 162，高 78–240。",
+        "LED CRI ≥ 90；櫃後預留低位插座。"
+      ],
+      "rationale": [
+        "門底 76、掛桿 195、層板底 203、門頂 272，與主臥右櫃一致。",
+        "內寬 55.4 放不下 69 寬收納箱，上層改 SKUBB 44 與 31 各一。",
+        "門開向南牆，不往書桌掃；人站在門與書桌之間取衣。"
+      ],
+      "open_questions": [
+        "天花淨高 280 或 275",
+        "客人掛桿高度，可降至 185",
+        "門片色號",
+        "門內全身鏡",
+        "感應方式：門控或 PIR"
+      ],
+      "sources": [
+        "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
+        "IKEA SKUBB storage case 44x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-50290361",
+        "IKEA SKUBB storage case 69x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-70294990/",
+        "Blum LEGRABOX side heights / min. front heights: https://qiitp-frontdesk.screenstepslive.com/a/722184-blum-legrabox-drawer-heights",
+        "Blum number of hinges: https://ea.blum.com/en/number-of-hinges/"
+      ],
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "main",
+              "x": 10
+            }
+          ],
+          "width": 96,
+          "levels": [
+            {
+              "y": 76,
+              "label": "門底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "門頂"
+            }
+          ]
+        },
+        {
+          "id": "side",
+          "name": "側剖面 · 抽屜",
+          "kind": "section",
+          "ref": "main",
+          "extension": 60,
+          "drawerExtension": 50,
+          "labelRoom": 20,
+          "levels": [
+            {
+              "y": 76,
+              "label": "門底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "when": "closed",
+              "x": 58.2,
+              "y": 76.2,
+              "w": 1.8,
+              "h": 195.6,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "rect",
+              "when": "open",
+              "x": 58.2,
+              "y": 76.2,
+              "w": 1.8,
+              "h": 195.6,
+              "dashed": true,
+              "stroke": "#b9c2bb",
+              "sw": 0.25
+            },
+            {
+              "type": "clear",
+              "when": "closed",
+              "x0": 60,
+              "x1": 120,
+              "y": 84,
+              "label": "前方淨空 ≥ 60"
+            },
+            {
+              "type": "clear",
+              "when": "open",
+              "x0": 60,
+              "x1": 110,
+              "y": 84,
+              "label": "全拉 50"
+            }
+          ]
+        }
+      ]
+    },
+    "guest-wardrobe-lb-b": {
+      "object_id": "guest-wardrobe-lb-b",
+      "title": "客房衣櫃（格局 B · 方案 B）· 立面設計",
+      "viewpoint": "從床邊面向南牆衣櫃；左為東牆，右為書桌",
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "main": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳"
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "下抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 24,
+              "label": "外抽屜",
+              "short": "中抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "drawers",
+              "h": 20,
+              "label": "外抽屜",
+              "short": "上抽",
+              "boxFrom": 11,
+              "boxTo": 56
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "hang",
+              "h": 125.2,
+              "label": "掛衣區",
+              "rail": 195,
+              "short": "掛衣區",
+              "garments": {
+                "lens": [
+                  82,
+                  92,
+                  100
+                ],
+                "count": 7,
+                "label": "垂掛淨高 117.2"
+              }
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2,
+              "led": {
+                "label": "感應燈",
+                "glow": 30
+              }
+            },
+            {
+              "kind": "boxes",
+              "h": 27.8,
+              "label": "低收納層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 69,
+                  "h": 19,
+                  "box": true,
+                  "sizeLabel": "69×55×19"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "boxes",
+              "h": 35.8,
+              "label": "收納盒層",
+              "items": [
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                },
+                {
+                  "name": "SKUBB",
+                  "w": 31,
+                  "h": 33,
+                  "box": true,
+                  "sizeLabel": "31×55×33"
+                }
+              ],
+              "align": "left"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 58.2
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "drawer",
+              "from": 8,
+              "to": 32,
+              "label": "床單、毛巾"
+            },
+            {
+              "kind": "drawer",
+              "from": 32,
+              "to": 56,
+              "label": "摺疊衣物"
+            },
+            {
+              "kind": "drawer",
+              "from": 56,
+              "to": 76,
+              "label": "內衣、襪子"
+            },
+            {
+              "kind": "door",
+              "from": 76,
+              "to": 272,
+              "count": 2,
+              "label": "雙開高門",
+              "hingeMarks": [
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ],
+                [
+                  86,
+                  130,
+                  174,
+                  218,
+                  262
+                ]
+              ],
+              "swing": {
+                "k": 0.38,
+                "mirror": {
+                  "leaf": 0,
+                  "from": 78,
+                  "to": 240,
+                  "inHinge": 7,
+                  "inFree": 3,
+                  "label": "全身鏡"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "risks": [
+        "抽屜全拉 45 後離床 14，取物要側身站。",
+        "左扇緊貼東牆、右扇旁是書桌：兩扇鉸鏈都加開角限位，開到 90° 停。"
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "8",
+          "note": "櫃頂 272，現場裁切。"
+        },
+        {
+          "zone": "上層收納盒",
+          "h": "35.8",
+          "note": "SKUBB 31×55×33 ×2；盒底 234.4，需踩凳。"
+        },
+        {
+          "zone": "低收納層",
+          "h": "27.8",
+          "note": "SKUBB 69×55×19 ×1，內寬 76.4、右側餘 6；底 204.8。"
+        },
+        {
+          "zone": "固定層板",
+          "h": "1.8",
+          "note": "底 203，深 58.2。"
+        },
+        {
+          "zone": "感應燈",
+          "h": "24 V",
+          "note": "LED 鋁槽燈，門控：開門亮、全關滅。"
+        },
+        {
+          "zone": "掛衣區",
+          "h": "125.2",
+          "note": "掛桿 195、長 76；桿下淨高 117.2。"
+        },
+        {
+          "zone": "門片 · 雙開高門",
+          "h": "196",
+          "note": "每扇 39.4 × 196，76–272；開到 90° 門緣離床約 18；左扇內貼全身鏡。"
+        },
+        {
+          "zone": "外抽屜 ×3",
+          "h": "20／24／24",
+          "note": "內高 16／20／20；LEGRABOX NL 450，全拉 45，離床剩 14；抽屜後方 11 留空。"
+        },
+        {
+          "zone": "踢腳",
+          "h": "8",
+          "note": "內退 5，可拆，內放 LED 驅動器。"
+        }
+      ],
+      "hardware": [
+        "Blum LEGRABOX NL 450 全拉緩衝；CLIP top 110° 鉸鏈每扇 ×5＋開角限位。",
+        "全身鏡 5 mm 安全鏡 29.4 × 162，高 78–240。",
+        "LED CRI ≥ 90；櫃後預留低位插座。"
+      ],
+      "rationale": [
+        "門底 76、掛桿 195、層板底 203、門頂 272，與主臥右櫃一致。",
+        "到床 59：NL 500 全拉 50 只剩 9，改 NL 450 留 14。",
+        "兩扇都只開到 90°，不撞東牆、不掃到書桌。"
+      ],
+      "open_questions": [
+        "天花淨高 280 或 275",
+        "客人掛桿高度，可降至 185",
+        "門片色號",
+        "全身鏡放哪一扇",
+        "感應方式：門控或 PIR"
+      ],
+      "sources": [
+        "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
+        "IKEA SKUBB storage case 44x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-50290361",
+        "IKEA SKUBB storage case 69x55x19: https://www.ikea.cn/cn/en/p/skubb-storage-case-white-70294990/",
+        "Blum LEGRABOX side heights / min. front heights: https://qiitp-frontdesk.screenstepslive.com/a/722184-blum-legrabox-drawer-heights",
+        "Blum number of hinges: https://ea.blum.com/en/number-of-hinges/"
+      ],
+      "views": [
+        {
+          "id": "front",
+          "name": "正立面",
+          "kind": "front",
+          "units": [
+            {
+              "ref": "main",
+              "x": 18
+            }
+          ],
+          "width": 116,
+          "levels": [
+            {
+              "y": 76,
+              "label": "門底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            },
+            {
+              "y": 272,
+              "label": "門頂"
+            }
+          ]
+        },
+        {
+          "id": "side",
+          "name": "側剖面 · 抽屜與床",
+          "kind": "section",
+          "ref": "main",
+          "extension": 59,
+          "drawerExtension": 45,
+          "labelRoom": 34,
+          "levels": [
+            {
+              "y": 76,
+              "label": "門底"
+            },
+            {
+              "y": 195,
+              "label": "掛桿"
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "when": "closed",
+              "x": 58.2,
+              "y": 76.2,
+              "w": 1.8,
+              "h": 195.6,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "rect",
+              "when": "open",
+              "x": 58.2,
+              "y": 76.2,
+              "w": 1.8,
+              "h": 195.6,
+              "dashed": true,
+              "stroke": "#b9c2bb",
+              "sw": 0.25
+            },
+            {
+              "type": "rect",
+              "x": 119,
+              "y": 0,
+              "w": 30,
+              "h": 50,
+              "dashed": true,
+              "stroke": "#7f8c84",
+              "label": "床"
+            },
+            {
+              "type": "clear",
+              "when": "closed",
+              "x0": 60,
+              "x1": 119,
+              "y": 84,
+              "label": "到床 59"
+            },
+            {
+              "type": "clear",
+              "when": "open",
+              "x0": 60,
+              "x1": 105,
+              "y": 84,
+              "label": "全拉 45"
+            },
+            {
+              "type": "clear",
+              "when": "open",
+              "x0": 105,
+              "x1": 119,
+              "y": 84,
+              "label": "剩 14"
+            }
+          ]
+        }
+      ]
     }
   },
   "layouts": [
@@ -10403,11 +11272,10 @@
           ],
           "measurement_status": "scaled-estimate",
           "uncertainty_cm": null,
-          "focus": "雙人床（衣櫃拆除）",
+          "focus": "雙人床＋書桌＋衣櫃（A／B）",
           "notes": {
-            "床": "・MALM Queen 209 × 166，床頭靠東牆、離窗 15（窗簾）\n・從南側上下床，收納箱往南拉",
-            "衣櫃": "原 120 衣櫃拆除；床南側留 119 深空地",
-            "門": "原內開門，開門範圍不碰床",
+            "床": "・MALM Queen 209 × 166，床頭靠東牆、離窗 15（窗簾）\n・從南側上下床；床尾到西牆 38",
+            "門": "原內開門，開門範圍不碰家具",
             "窗簾": "床離窗留 15 給窗簾軌道與收簾"
           }
         },
@@ -10461,7 +11329,39 @@
             "搬入": "・按摩椅約 105 kg，搬入時保護地板\n・門寬需 80 以上"
           }
         }
-      }
+      },
+      "guestVersions": [
+        {
+          "id": "guest-a",
+          "name": "方案 A",
+          "layout": "guest-a",
+          "label": [
+            390,
+            172
+          ],
+          "notes": {
+            "書桌": "60 × 45，深度示意；靠東牆、在衣櫃北側，面向東牆",
+            "衣櫃": "・東南角訂製到頂 59 × 60，單門朝西\n・下抽屜、中掛衣、上收納",
+            "動線": "・椅子背後是空地，到門扇約 50\n・床南側走道 119",
+            "取捨": "・優：書桌好坐，衣櫃抽屜、門都能全開\n・缺：衣櫃只有 59"
+          }
+        },
+        {
+          "id": "guest-b",
+          "name": "方案 B",
+          "layout": "guest-b",
+          "label": [
+            390,
+            172
+          ],
+          "notes": {
+            "書桌": "60 × 45，深度示意；靠南牆、在門扇與衣櫃之間，面向南牆",
+            "衣櫃": "・東南角訂製到頂 80 × 60，雙門朝北\n・下抽屜、中掛衣、上收納",
+            "動線": "・書桌前緣到床 74，坐得下\n・衣櫃門面到床 59：抽屜拉出後剩約 14（NL 450）\n・書桌離門扇 6",
+            "取捨": "・優：衣櫃 80\n・缺：椅子背後就是床"
+          }
+        }
+      ]
     }
   ]
 }

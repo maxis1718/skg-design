@@ -16,7 +16,7 @@ function withLayout(p){
   const spec=(p.layouts||[]).find(l=>l.id===layoutId);
   if(spec?.rooms)p.rooms=p.rooms.map(r=>spec.rooms[r.id]?{...r,...spec.rooms[r.id]}:r);
   p.objects=p.objects.filter(o=>!o.onlyLayout||o.onlyLayout.includes(layoutId));
-  if(layoutId!=='layout-a'&&p.roomVersions)p.roomVersions={...p.roomVersions,guest:[]};
+  if(spec&&spec.id!=='layout-a'&&p.roomVersions)p.roomVersions={...p.roomVersions,guest:spec.guestVersions||[]};
   return p;
 }
 let project=withLayout(localize(projectSource));
@@ -134,8 +134,8 @@ function renderGuestVersion(){
  seg.setAttribute('aria-label',t('切換客房方案'));
  seg.innerHTML=guestVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-guest-version="${esc(x.id)}" aria-pressed="${x.id===v.id}">${esc(x.name)}</button>`).join('');
  $('#guest-version-group').hidden=roomId!=='guest';
- for(const x of guestVersions()){const g=document.getElementById('guest-plan-'+x.layout.replace('guest-',''));if(g)g.toggleAttribute('hidden',x.id!==v.id);}
- const lab=document.querySelector('[data-label-room="guest"]'),base=labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
+ $$('[data-guest-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.guestPlan!==v.layout));
+ const lab=document.querySelector('[data-label-room="guest"]'),base=layoutSpec()?.labels?.guest||labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
 }
 function renderLayoutVersion(){
  const seg=$('#layout-version');if(!seg)return;seg.setAttribute('aria-label',t('切換格局'));
@@ -298,7 +298,7 @@ function validateOverrides(incoming){
 function buildReference(){
   const p=project.measurement_policy;
   $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':'R30'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':'R31'}</span>${esc(c.text)}</div>`).join('');
   const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
   const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
   $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;
