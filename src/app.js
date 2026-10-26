@@ -217,7 +217,7 @@ function selectRoom(id,{keepObject=false}={}){
   $('#drawing-title').textContent=id==='floor'?t('全屋'):room(id).name;
   $$('.room-zone').forEach(z=>{z.classList.toggle('selected',z.dataset.room===id);z.classList.toggle('dimmed',id!=='floor'&&z.dataset.room!==id);});
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
-  $$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId));
+  const grp=objectId&&object(objectId)?.group;$$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId||(!!grp&&object(z.dataset.object)?.group===grp)));
   history.replaceState(null,'','#'+(objectId?'object-'+objectId:id));
   renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();hideTip();
 }
