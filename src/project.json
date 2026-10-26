@@ -12501,7 +12501,7 @@
         },
         "upper": {
           "w": 58.2,
-          "d": 35,
+          "d": 30,
           "h": 130,
           "board": 1.8,
           "bands": [
@@ -12551,6 +12551,24 @@
               "label": "天花收邊"
             }
           ]
+        },
+        "side": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "noBack": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 272
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ]
         }
       },
       "spec": [
@@ -12567,7 +12585,7 @@
         {
           "zone": "上櫃",
           "h": "150–272",
-          "note": "深 35，雙門，一片層板；門頂對齊衣櫃門頂 272。"
+          "note": "深 30，雙門，一片層板；門頂對齊衣櫃 272。比桌面退 10、比衣櫃淺 30，不壓迫。"
         },
         {
           "zone": "開放層",
@@ -12722,6 +12740,255 @@
           "leftChain": {
             "ref": "wardrobe"
           }
+        },
+        {
+          "id": "side",
+          "name": "側剖面",
+          "kind": "section",
+          "ref": "side",
+          "extension": 81,
+          "labelRoom": 4,
+          "levels": [
+            {
+              "y": 62.5,
+              "label": "抽屜底"
+            },
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 150,
+              "label": "上櫃底"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "extras": [
+            {
+              "type": "note",
+              "x": 45,
+              "y": 262,
+              "label": "衣櫃輪廓 · 深 60",
+              "size": 0.55,
+              "color": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 150,
+              "w": 28.2,
+              "h": 122,
+              "fill": "#eef1ea",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "note",
+              "x": 14.1,
+              "y": 240,
+              "label": "上櫃 · 深 30",
+              "size": 0.55,
+              "color": "#2f443c"
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 40,
+              "y": 55,
+              "label": "40"
+            },
+            {
+              "type": "rect",
+              "x": 1.8,
+              "y": 210.8,
+              "w": 26.4,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 28.2,
+              "y": 150,
+              "w": 1.8,
+              "h": 122,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "led",
+              "x": 22,
+              "y": 150,
+              "w": 5
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 115,
+              "w": 20,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 72.5,
+              "w": 40,
+              "h": 2.5,
+              "fill": "#c9c5bb",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 2,
+              "y": 63,
+              "w": 36,
+              "h": 9,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "label": "淺抽",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 52,
+              "y": 0,
+              "w": 1.5,
+              "h": 41,
+              "fill": "#b9c2bb",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 88,
+              "y": 0,
+              "w": 1.5,
+              "h": 41,
+              "fill": "#b9c2bb",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 50,
+              "y": 41,
+              "w": 42,
+              "h": 4,
+              "fill": "#e4e6e2",
+              "stroke": "#7f8c84",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 88,
+              "y": 45,
+              "w": 4,
+              "h": 50,
+              "fill": "#e4e6e2",
+              "stroke": "#7f8c84",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 38,
+              "y": 45,
+              "w": 28,
+              "h": 12,
+              "dashed": true,
+              "rx": 5,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 58,
+              "y": 47,
+              "w": 18,
+              "h": 59,
+              "dashed": true,
+              "rx": 5,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 54,
+              "y": 106,
+              "w": 16,
+              "h": 22,
+              "dashed": true,
+              "rx": 7,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "note",
+              "x": 72,
+              "y": 124,
+              "label": "頭頂 128",
+              "anchor": "start",
+              "size": 0.55
+            },
+            {
+              "type": "note",
+              "x": 72,
+              "y": 116,
+              "label": "眼 118",
+              "anchor": "start",
+              "size": 0.55
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 36,
+              "y0": 75,
+              "y1": 150,
+              "label": "75"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 54,
+              "y": 133,
+              "label": "24"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 40,
+              "y": 156,
+              "label": "10"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 60,
+              "y": 235,
+              "label": "30"
+            },
+            {
+              "type": "rect",
+              "x": 109,
+              "y": 0,
+              "w": 30,
+              "h": 50,
+              "dashed": true,
+              "fill": "#f4f5f1",
+              "label": "床",
+              "size": 0.6
+            },
+            {
+              "type": "clear",
+              "x0": 40,
+              "x1": 109,
+              "y": 20,
+              "label": "到床 69"
+            }
+          ]
         }
       ]
     },
@@ -13512,7 +13779,7 @@
         },
         "upper": {
           "w": 58.2,
-          "d": 35,
+          "d": 30,
           "h": 130,
           "board": 1.8,
           "bands": [
@@ -13562,6 +13829,24 @@
               "label": "天花收邊"
             }
           ]
+        },
+        "side": {
+          "w": 80,
+          "d": 60,
+          "h": 280,
+          "board": 1.8,
+          "noBack": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 272
+            },
+            {
+              "kind": "filler",
+              "h": 8,
+              "label": "天花收邊"
+            }
+          ]
         }
       },
       "spec": [
@@ -13578,7 +13863,7 @@
         {
           "zone": "上櫃",
           "h": "150–272",
-          "note": "深 35，雙門，一片層板；門頂對齊衣櫃門頂 272。"
+          "note": "深 30，雙門，一片層板；門頂對齊衣櫃 272。比桌面退 10、比衣櫃淺 30，不壓迫。"
         },
         {
           "zone": "開放層",
@@ -13733,6 +14018,255 @@
           "leftChain": {
             "ref": "wardrobe"
           }
+        },
+        {
+          "id": "side",
+          "name": "側剖面",
+          "kind": "section",
+          "ref": "side",
+          "extension": 91,
+          "labelRoom": 4,
+          "levels": [
+            {
+              "y": 62.5,
+              "label": "抽屜底"
+            },
+            {
+              "y": 75,
+              "label": "桌面"
+            },
+            {
+              "y": 150,
+              "label": "上櫃底"
+            },
+            {
+              "y": 272,
+              "label": "櫃頂"
+            }
+          ],
+          "extras": [
+            {
+              "type": "note",
+              "x": 45,
+              "y": 262,
+              "label": "衣櫃輪廓 · 深 60",
+              "size": 0.55,
+              "color": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 150,
+              "w": 28.2,
+              "h": 122,
+              "fill": "#eef1ea",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "note",
+              "x": 14.1,
+              "y": 240,
+              "label": "上櫃 · 深 30",
+              "size": 0.55,
+              "color": "#2f443c"
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 40,
+              "y": 55,
+              "label": "40"
+            },
+            {
+              "type": "rect",
+              "x": 1.8,
+              "y": 210.8,
+              "w": 26.4,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 28.2,
+              "y": 150,
+              "w": 1.8,
+              "h": 122,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "led",
+              "x": 22,
+              "y": 150,
+              "w": 5
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 115,
+              "w": 20,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 72.5,
+              "w": 40,
+              "h": 2.5,
+              "fill": "#c9c5bb",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 2,
+              "y": 63,
+              "w": 36,
+              "h": 9,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "label": "淺抽",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 52,
+              "y": 0,
+              "w": 1.5,
+              "h": 41,
+              "fill": "#b9c2bb",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 88,
+              "y": 0,
+              "w": 1.5,
+              "h": 41,
+              "fill": "#b9c2bb",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 50,
+              "y": 41,
+              "w": 42,
+              "h": 4,
+              "fill": "#e4e6e2",
+              "stroke": "#7f8c84",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 88,
+              "y": 45,
+              "w": 4,
+              "h": 50,
+              "fill": "#e4e6e2",
+              "stroke": "#7f8c84",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 38,
+              "y": 45,
+              "w": 28,
+              "h": 12,
+              "dashed": true,
+              "rx": 5,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 58,
+              "y": 47,
+              "w": 18,
+              "h": 59,
+              "dashed": true,
+              "rx": 5,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "rect",
+              "x": 54,
+              "y": 106,
+              "w": 16,
+              "h": 22,
+              "dashed": true,
+              "rx": 7,
+              "stroke": "#7f8c84"
+            },
+            {
+              "type": "note",
+              "x": 72,
+              "y": 124,
+              "label": "頭頂 128",
+              "anchor": "start",
+              "size": 0.55
+            },
+            {
+              "type": "note",
+              "x": 72,
+              "y": 116,
+              "label": "眼 118",
+              "anchor": "start",
+              "size": 0.55
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 36,
+              "y0": 75,
+              "y1": 150,
+              "label": "75"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 54,
+              "y": 133,
+              "label": "24"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 40,
+              "y": 156,
+              "label": "10"
+            },
+            {
+              "type": "clear",
+              "x0": 30,
+              "x1": 60,
+              "y": 235,
+              "label": "30"
+            },
+            {
+              "type": "rect",
+              "x": 119,
+              "y": 0,
+              "w": 30,
+              "h": 50,
+              "dashed": true,
+              "fill": "#f4f5f1",
+              "label": "床",
+              "size": 0.6
+            },
+            {
+              "type": "clear",
+              "x0": 40,
+              "x1": 119,
+              "y": 20,
+              "label": "到床 79"
+            }
+          ]
         }
       ]
     },
