@@ -17,3 +17,4 @@
 <path data-layout="lb-study-chair" class="furnishing" d="M315.6 302.11H327.5Q328.64 302.11 328.64 303.25V315.15Q328.64 316.29 327.5 316.29H315.6Q314.46 316.29 314.46 315.15V303.25Q314.46 302.11 315.6 302.11Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-study-chair-back" class="furnishing" d="M315.6 303.25V315.15" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-study-curtain-track" class="furnishing" d="M273.93 346.62H343.66" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="2 0.8"/>
+<g data-layout="guest-purifier" class="furnishing" fill="none" stroke="currentColor" stroke-width="0.18"><path d="M351.34 149.3H357.97V155.93H351.34Z"/><circle cx="354.65" cy="152.62" r="2.2" stroke-width="0.12"/></g>

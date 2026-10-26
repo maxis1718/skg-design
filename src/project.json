@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R38",
+    "revision": "R39",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -3704,6 +3704,71 @@
       },
       "source_note": "・含底座 35 × 35，放陽台西南角、門邊牆垛旁\n・背後低位插座（S-09）",
       "status": "user-design"
+    },
+    {
+      "id": "kid-fan",
+      "code": "KID-02",
+      "room_id": "kid",
+      "name": "風扇清淨機 Dyson TP09",
+      "bounds_pt": [
+        336.57,
+        149.3,
+        342.81,
+        155.53
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 22,
+          "status": "design"
+        },
+        "d": {
+          "cm": 22,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 22,
+        "d": 22,
+        "h": null,
+        "brand": "Dyson",
+        "model": "Purifier Cool Formaldehyde TP09"
+      },
+      "source_note": "・22 × 22，東北角靠窗\n・插座 S-12 在東牆",
+      "status": "user-design"
+    },
+    {
+      "id": "guest-purifier",
+      "code": "GST-21",
+      "room_id": "guest",
+      "name": "清淨機 Electrolux UltimateHome 300",
+      "bounds_pt": [
+        351.34,
+        149.3,
+        357.97,
+        155.93
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 23.4,
+          "status": "design"
+        },
+        "d": {
+          "cm": 23.4,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 23.4,
+        "d": 23.4,
+        "h": 40.5,
+        "brand": "Electrolux",
+        "model": "UltimateHome 300"
+      },
+      "source_note": "・23.4 × 23.4 × 40.5，西北角靠窗\n・插座 S-10 在西牆",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ]
     }
   ],
   "source_dimensions": [
@@ -4185,6 +4250,10 @@
     {
       "id": "C46",
       "text": "客廳加 Electrolux Pure A9 清淨機（後方插座 ×2）；陽台加 Dreame H14 Ultra 底座（低位插座）；曬衣架改東西向、離西牆 70。"
+    },
+    {
+      "id": "C47",
+      "text": "小孩房加 Dyson TP09；客房加 Electrolux UltimateHome 300；三組雙孔插座。"
     }
   ],
   "measurement_policy": {
@@ -17286,6 +17355,42 @@
         "name": "插座 · 掃拖機器人",
         "notes": "・13A，離地 15（低位，藏在底座後）\n・陽台用防水面板（IP66）",
         "use": "掃拖機器人"
+      },
+      {
+        "id": "sock-ne-window",
+        "code": "S-10",
+        "kind": "socket",
+        "x": 350.3,
+        "y": 152.7,
+        "place": "東北房西牆 · 靠窗角",
+        "mount": 30,
+        "name": "插座 · 清淨機",
+        "notes": "・13A 雙孔，離地 30（示意）\n・給清淨機",
+        "use": "清淨機"
+      },
+      {
+        "id": "sock-ne-desk",
+        "code": "S-11",
+        "kind": "socket",
+        "x": 388.19,
+        "y": 229.5,
+        "place": "東北房南牆 · 書桌",
+        "mount": 85,
+        "name": "插座 · 書桌",
+        "notes": "・13A 雙孔，桌面上方 85（示意）\n・書桌、檯燈、充電",
+        "use": "書桌"
+      },
+      {
+        "id": "sock-kid-east",
+        "code": "S-12",
+        "kind": "socket",
+        "x": 343.9,
+        "y": 171.69,
+        "place": "小孩房東牆",
+        "mount": 30,
+        "name": "插座 · 小孩房東牆",
+        "notes": "・13A 雙孔，離地 30（示意）\n・給 Dyson 風扇清淨機",
+        "use": "風扇清淨機"
       }
     ],
     "runs": [
