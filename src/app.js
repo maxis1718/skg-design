@@ -86,7 +86,7 @@ function bindElevation(){
 }
 function refreshElevation(){const el=$('#elevation');if(!el)return;el.outerHTML=elevationBlock();bindElevation();}
 function buildTabs(){
-  $('#tabs').innerHTML=[{id:'floor',name:t('全屋平面圖'),number:'00'},...project.rooms].map(r=>`<button class="tab" role="tab" id="tab-${r.id}" aria-controls="main-panel" aria-selected="${r.id===roomId}" tabindex="${r.id===roomId?'0':'-1'}" data-room="${r.id}"><span class="tab-number">${r.number}</span>${r.name}</button>`).join('');
+  $('#tabs').innerHTML=[{id:'floor',name:t('全屋'),number:'00'},...project.rooms].map(r=>`<button class="tab" role="tab" id="tab-${r.id}" aria-controls="main-panel" aria-selected="${r.id===roomId}" tabindex="${r.id===roomId?'0':'-1'}" data-room="${r.id}"><span class="tab-number">${r.number}</span>${r.name}</button>`).join('');
   $$('#tabs button').forEach((btn,i,buttons)=>{btn.addEventListener('click',()=>selectRoom(btn.dataset.room));btn.addEventListener('keydown',e=>{let k=i;if(e.key==='ArrowRight')k=(i+1)%buttons.length;else if(e.key==='ArrowLeft')k=(i-1+buttons.length)%buttons.length;else if(e.key==='Home')k=0;else if(e.key==='End')k=buttons.length-1;else return;e.preventDefault();selectRoom(buttons[k].dataset.room);buttons[k].focus();});});
 }
 function buildPlan(){
@@ -140,7 +140,7 @@ function renderGuestVersion(){
 function renderLayoutVersion(){
  const seg=$('#layout-version');if(!seg)return;seg.setAttribute('aria-label',t('切換格局'));
  seg.innerHTML=(project.layouts||[]).map(x=>`<button type="button" class="tool ${x.id===layoutId?'active':''}" data-layout-version="${esc(x.id)}" aria-pressed="${x.id===layoutId}" title="${esc(x.note||'')}">${esc(x.name)}</button>`).join('');
- $('#layout-version-group').hidden=!['floor','study','guest'].includes(roomId);
+ $('#layout-version-group').hidden=roomId!=='floor';
  $('#layout-a-geometry')?.toggleAttribute('hidden',layoutId!=='layout-a');$('#layout-b-geometry')?.toggleAttribute('hidden',layoutId!=='layout-b');
 }
 function chooseLayout(id){
@@ -225,8 +225,8 @@ function selectRoom(id,{keepObject=false}={}){
   if(id!=='floor'&&!room(id))return;roomId=id;if(!keepObject)objectId=null;
   $$('#tabs .tab').forEach(b=>{const selected=b.dataset.room===id;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;});
   $('#main-panel').setAttribute('aria-labelledby','tab-'+id);
-  $('#drawing-title').textContent=id==='floor'?t('全屋平面圖'):tf('{name} · 空間定位',{name:room(id).name});
-  $('#drawing-kicker').textContent=LANG==='en'?(id==='floor'?'THE PROPOSED LAYOUT':room(id).english.toUpperCase()):(id==='floor'?'全屋平面':'空間 '+room(id).number);
+  $('#drawing-title').textContent=id==='floor'?t('全屋'):tf('{name} · 空間定位',{name:room(id).name});
+  $('#drawing-kicker').textContent=LANG==='en'?(id==='floor'?'THE PROPOSED LAYOUT':room(id).english.toUpperCase()):'空間 '+(id==='floor'?'00':room(id).number);
   $$('.room-zone').forEach(z=>{z.classList.toggle('selected',z.dataset.room===id);z.classList.toggle('dimmed',id!=='floor'&&z.dataset.room!==id);});
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
   $$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId));
