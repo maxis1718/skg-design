@@ -7381,497 +7381,6 @@
       "status": "design-proposal",
       "viewpoint": "面向洗手台：左為更衣區入口端，右為外牆",
       "ceiling_cm": 240,
-      "ceiling_note": "浴室天花暫以 240 計；櫃頂留 3 收邊",
-      "states": [
-        {
-          "id": "closed",
-          "name": "關門"
-        },
-        {
-          "id": "open",
-          "name": "開門"
-        }
-      ],
-      "units": {
-        "fill-l": {
-          "w": 3,
-          "h": 125,
-          "noCarcass": true,
-          "bands": [
-            {
-              "kind": "panel",
-              "h": 125
-            }
-          ]
-        },
-        "dyson": {
-          "w": 42,
-          "d": 19,
-          "h": 125,
-          "board": 1.8,
-          "bands": [
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 83.2,
-              "glass": true,
-              "shelves": [],
-              "items": []
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 35.2,
-              "glass": true,
-              "shelves": [
-                17
-              ]
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "door",
-              "from": 0,
-              "to": 85,
-              "count": 1,
-              "hinges": [
-                "L"
-              ],
-              "mirror": true,
-              "swing": true,
-              "label": "鏡門 · 吹風機"
-            },
-            {
-              "kind": "door",
-              "from": 85,
-              "to": 122,
-              "count": 1,
-              "hinges": [
-                "L"
-              ],
-              "label": "上櫃",
-              "handle": false
-            }
-          ]
-        },
-        "mirror": {
-          "w": 100,
-          "d": 19,
-          "h": 125,
-          "board": 1.8,
-          "bands": [
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 83.2,
-              "glass": true,
-              "shelves": [],
-              "items": []
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 35.2,
-              "glass": true,
-              "shelves": [
-                17
-              ]
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "mirror",
-              "from": 0,
-              "to": 85,
-              "label": "固定鏡（不開）"
-            },
-            {
-              "kind": "door",
-              "from": 85,
-              "to": 122,
-              "count": 2,
-              "label": "上櫃",
-              "handle": false
-            }
-          ]
-        },
-        "care": {
-          "w": 49.7,
-          "d": 19,
-          "h": 125,
-          "board": 1.8,
-          "bands": [
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 83.2,
-              "glass": true,
-              "shelves": [
-                32,
-                58
-              ],
-              "items": [
-                {
-                  "name": "電動牙刷",
-                  "w": 7,
-                  "h": 24,
-                  "size": false
-                }
-              ]
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 35.2,
-              "glass": true,
-              "shelves": [
-                17
-              ]
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "door",
-              "from": 0,
-              "to": 85,
-              "count": 1,
-              "hinges": [
-                "R"
-              ],
-              "mirror": true,
-              "swing": true,
-              "label": "鏡門 · 保養品"
-            },
-            {
-              "kind": "door",
-              "from": 85,
-              "to": 122,
-              "count": 1,
-              "hinges": [
-                "R"
-              ],
-              "label": "上櫃",
-              "handle": false
-            }
-          ]
-        },
-        "fill-r": {
-          "w": 3,
-          "h": 125,
-          "noCarcass": true,
-          "bands": [
-            {
-              "kind": "panel",
-              "h": 125
-            }
-          ]
-        }
-      },
-      "views": [
-        {
-          "id": "plan",
-          "name": "空間規劃",
-          "kind": "front",
-          "detail": false,
-          "labels": true,
-          "width": 197.7,
-          "font": 6.2,
-          "units": [
-            {
-              "ref": "fill-l",
-              "x": 0,
-              "y": 115
-            },
-            {
-              "ref": "fill-r",
-              "x": 194.7,
-              "y": 115
-            },
-            {
-              "ref": "dyson",
-              "x": 3,
-              "y": 115
-            },
-            {
-              "ref": "mirror",
-              "x": 45,
-              "y": 115
-            },
-            {
-              "ref": "care",
-              "x": 145,
-              "y": 115
-            }
-          ],
-          "under": [
-            {
-              "type": "wall",
-              "x": -4,
-              "w": 4,
-              "h": 240
-            },
-            {
-              "type": "wall",
-              "x": 197.7,
-              "w": 4,
-              "h": 240
-            },
-            {
-              "type": "vanity",
-              "x": 0,
-              "w": 197.7,
-              "y": 85,
-              "top": 3,
-              "plinth": true,
-              "basin": 53,
-              "basinX": 68.5,
-              "basinDepth": 14,
-              "tapX": 95,
-              "tap": 20,
-              "tapLabel": "龍頭 20（假設）",
-              "label": "洗手台（示意）",
-              "sub": "197.7 × 50（估算）· 檯面 85（假設）"
-            }
-          ],
-          "extras": [
-            {
-              "type": "led",
-              "x": 3,
-              "y": 115,
-              "w": 191.7
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 132,
-              "y0": 85,
-              "y1": 115,
-              "label": "30"
-            },
-            {
-              "type": "clear",
-              "x0": 0,
-              "x1": 95,
-              "y": 62,
-              "label": "盆中心 95"
-            },
-            {
-              "type": "note",
-              "x": 95,
-              "y": 166,
-              "label": "除霧片在鏡後",
-              "size": 0.56,
-              "color": "#7f8c84",
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 6.5,
-              "y": 117,
-              "w": 35,
-              "h": 8,
-              "fill": "#eadcc4",
-              "stroke": "#55695f",
-              "label": "線材籃",
-              "size": 0.5,
-              "color": "#2f443c",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 30,
-              "y": 176,
-              "w": 6,
-              "h": 12,
-              "fill": "#e4e6e2",
-              "stroke": "#55695f",
-              "rx": 1.4,
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 37,
-              "y": 176,
-              "w": 4.5,
-              "h": 12,
-              "fill": "#e4e6e2",
-              "stroke": "#55695f",
-              "rx": 1.4,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 35.5,
-              "y": 190,
-              "label": "風嘴磁吸",
-              "size": 0.46,
-              "color": "#55695f",
-              "when": "open"
-            },
-            {
-              "type": "socket",
-              "x": 34,
-              "y": 140,
-              "label": "S1",
-              "fs": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "dryer",
-              "x": 16,
-              "y": 196,
-              "cord": [
-                34,
-                136
-              ],
-              "sag": 8,
-              "label": "Dyson",
-              "lx": 30,
-              "ly": 160,
-              "size": 0.5,
-              "when": "open"
-            },
-            {
-              "type": "socket",
-              "kind": "shaver",
-              "x": 186,
-              "y": 128,
-              "label": "S2",
-              "fs": 0.62,
-              "when": "open"
-            }
-          ],
-          "hcuts": [
-            0,
-            3,
-            45,
-            145,
-            194.7,
-            197.7
-          ],
-          "totalLabel": "197.7（圖面估算）",
-          "levels": [
-            {
-              "y": 85,
-              "label": "檯面（假設）"
-            },
-            {
-              "y": 115,
-              "label": "鏡櫃底"
-            },
-            {
-              "y": 200,
-              "label": "鏡面頂"
-            }
-          ]
-        }
-      ],
-      "spec": [
-        {
-          "zone": "天花收邊",
-          "h": "3",
-          "note": "假天花檢修口要避開鏡櫃頂"
-        },
-        {
-          "zone": "上櫃 · 少用備品",
-          "h": "200–237",
-          "note": "分段 42／50 ×2／49.7，玻璃層板；需踮腳"
-        },
-        {
-          "zone": "中段 · 固定鏡",
-          "h": "115–200 · 寬 100",
-          "note": "固定鏡對齊盆中心（距入口端 95）；鏡後除霧片。"
-        },
-        {
-          "zone": "左櫃 · Dyson 吹風機（S1）",
-          "h": "鏡門 42",
-          "note": "Dyson 頭朝上吊掛（深 11.3 < 內淨 15），線垂入底籃；S1 13A 離地 140。"
-        },
-        {
-          "zone": "右櫃 · 保養品＋電動牙刷（S2）",
-          "h": "鏡門 49.7",
-          "note": "玻璃層板 ×2；底層牙刷座，S2 shaver 插座離地 128"
-        },
-        {
-          "zone": "櫃深（剖面）",
-          "h": "19 · 內淨 15",
-          "note": "背板 1.8＋內淨 15＋鏡門 2.2；玻璃層板深 14。"
-        },
-        {
-          "zone": "鏡櫃底 · LED 燈帶",
-          "h": "115",
-          "note": "檯面上 30，龍頭頂（假設 105）留 10；燈帶兼夜燈"
-        },
-        {
-          "zone": "洗手台（示意）",
-          "h": "檯面 85（假設）",
-          "note": "原圖 197.7 × 50（估算），單盆；非本次設計"
-        }
-      ],
-      "hardware": [
-        "鏡門 4 mm 銀鏡＋18 mm 防潮板，外開；Blum 110° 每扇 3 支，下緣手扣。",
-        "S1 13A 附開關（左櫃）、S2 shaver unit 2-pin（右櫃）；請 LEW 確認。",
-        "燈帶、除霧片變壓器在上櫃；兩端各留 3 收邊，門可開過 90°。"
-      ],
-      "rationale": [
-        "197.7 的現場差值由右櫃 49.7 吸收",
-        "Dyson 官方 stand 深 27.5 放不下，改櫃內吊掛；用後放涼、拔插頭。"
-      ],
-      "open_questions": [
-        "浴室天花與檢修口",
-        "檯面與龍頭高度",
-        "浴室 13A 插座與 RCCB（LEW 依 SS 638 確認）",
-        "牙刷充電插頭型式",
-        "吹風機型號"
-      ],
-      "sources": [
-        "Dyson Supersonic tech spec: https://www.dyson.com/content/dam/dyson/for-business/business-refresh/docs/us/hair-care/supersonic-tech-spec-us.pdf",
-        "Dyson Supersonic stand 970516-02: https://www.dyson.com/support/journey/tools/970516-02",
-        "Dyson Supersonic r accessories: https://www.dyson.com/commercial/hair-care/supersonic-r-professional/accessories",
-        "Dyson safety instructions: https://support.dyson.co.nz/support/hd01/supersonic-black-nickel/using-your-dyson-appliance/important-safety-instructions",
-        "EMA RCCB requirement: https://www.ema.gov.sg/RCCB_Requirement.aspx",
-        "BS 7671 section 701 summary: https://www.voltimum.co.uk/news/section-701-locations-containing-bath-or"
-      ]
-    },
-    "bath2-mirror-cabinet": {
-      "object_id": "bath2-mirror-cabinet",
-      "title": "衛浴 2 整面鏡櫃",
-      "status": "design-proposal",
-      "viewpoint": "面向整面牆 169.8：左為馬桶、南牆，右為牆垛",
-      "ceiling_cm": 240,
       "ceiling_note": "浴室天花暫以 240 計，待現場確認。",
       "states": [
         {
@@ -7895,118 +7404,19 @@
             }
           ]
         },
-        "d1": {
-          "w": 27.8,
-          "d": 19,
+        "fill-r": {
+          "w": 1.5,
           "h": 125,
-          "board": 1.8,
+          "noCarcass": true,
           "bands": [
             {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 118.4,
-              "glass": true,
-              "shelves": [
-                30,
-                60,
-                90
-              ],
-              "items": [
-                {
-                  "name": "衛生紙",
-                  "w": 19,
-                  "h": 22,
-                  "box": true,
-                  "size": false
-                }
-              ]
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "door",
-              "from": 0,
-              "to": 122,
-              "count": 1,
-              "hinges": [
-                "L"
-              ],
-              "mirror": true,
-              "swing": true,
-              "label": "衛生紙",
-              "vertical": true
+              "kind": "panel",
+              "h": 125
             }
           ]
         },
-        "d2": {
-          "w": 27.8,
-          "d": 19,
-          "h": 125,
-          "board": 1.8,
-          "bands": [
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 118.4,
-              "glass": true,
-              "shelves": [
-                30,
-                60,
-                90
-              ],
-              "items": [
-                {
-                  "name": "清潔備品",
-                  "w": 19,
-                  "h": 22,
-                  "box": true,
-                  "size": false
-                }
-              ]
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "door",
-              "from": 0,
-              "to": 122,
-              "count": 1,
-              "hinges": [
-                "L"
-              ],
-              "mirror": true,
-              "swing": true,
-              "label": "清潔備品",
-              "vertical": true
-            }
-          ]
-        },
-        "d3": {
-          "w": 27.8,
+        "a-l": {
+          "w": 58.5,
           "d": 19,
           "h": 125,
           "board": 1.8,
@@ -8050,8 +7460,270 @@
             }
           ]
         },
-        "d4": {
-          "w": 27.8,
+        "a-c": {
+          "w": 70,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "漱口杯",
+                  "w": 8,
+                  "h": 11,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "洗手台 · 除霧",
+              "vertical": true
+            }
+          ]
+        },
+        "a-r": {
+          "w": 66.2,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "電動牙刷",
+                  "w": 7,
+                  "h": 24,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "保養品、牙刷",
+              "vertical": true
+            }
+          ]
+        },
+        "b-1": {
+          "w": 30,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                90
+              ],
+              "items": []
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "吹風機",
+              "vertical": true
+            }
+          ]
+        },
+        "b-2": {
+          "w": 33.5,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "備品",
+                  "w": 19,
+                  "h": 22,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "備品",
+              "vertical": true
+            }
+          ]
+        },
+        "b-3": {
+          "w": 60,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "漱口杯",
+                  "w": 8,
+                  "h": 11,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "洗手台 · 除霧",
+              "vertical": true
+            }
+          ]
+        },
+        "b-4": {
+          "w": 41.2,
           "d": 19,
           "h": 125,
           "board": 1.8,
@@ -8104,8 +7776,730 @@
             }
           ]
         },
-        "d5": {
-          "w": 27.8,
+        "b-5": {
+          "w": 30,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "電動牙刷",
+                  "w": 7,
+                  "h": 24,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "牙刷",
+              "vertical": true
+            }
+          ]
+        }
+      },
+      "views": [
+        {
+          "id": "a",
+          "name": "方案 A",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 197.7,
+          "font": 6.2,
+          "units": [
+            {
+              "ref": "fill-l",
+              "x": 0,
+              "y": 115
+            },
+            {
+              "ref": "a-l",
+              "x": 1.5,
+              "y": 115
+            },
+            {
+              "ref": "a-c",
+              "x": 60.0,
+              "y": 115
+            },
+            {
+              "ref": "a-r",
+              "x": 130.0,
+              "y": 115
+            },
+            {
+              "ref": "fill-r",
+              "x": 196.2,
+              "y": 115
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 240
+            },
+            {
+              "type": "wall",
+              "x": 197.7,
+              "w": 4,
+              "h": 240
+            },
+            {
+              "type": "vanity",
+              "x": 0,
+              "w": 197.7,
+              "y": 85,
+              "top": 3,
+              "plinth": true,
+              "basin": 53,
+              "basinX": 68.5,
+              "basinDepth": 14,
+              "tapX": 95,
+              "tap": 20,
+              "tapLabel": "龍頭 20",
+              "label": "洗手台",
+              "sub": "197.7 × 50 · 示意"
+            }
+          ],
+          "extras": [
+            {
+              "type": "led",
+              "x": 1.5,
+              "y": 115,
+              "w": 194.7
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 140,
+              "y0": 85,
+              "y1": 115,
+              "label": "30"
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 95,
+              "y": 62,
+              "label": "盆中心 95"
+            },
+            {
+              "type": "note",
+              "x": 95,
+              "y": 150,
+              "label": "除霧片",
+              "size": 0.56,
+              "color": "#7f8c84",
+              "when": "closed"
+            },
+            {
+              "type": "socket",
+              "kind": "shaver",
+              "x": 190,
+              "y": 128,
+              "label": "S2",
+              "fs": 0.62,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 6.5,
+              "y": 117,
+              "w": 35,
+              "h": 8,
+              "fill": "#eadcc4",
+              "stroke": "#55695f",
+              "label": "線材籃",
+              "size": 0.5,
+              "color": "#2f443c",
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 30,
+              "y": 176,
+              "w": 6,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 37,
+              "y": 176,
+              "w": 4.5,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
+              "when": "open"
+            },
+            {
+              "type": "socket",
+              "x": 34,
+              "y": 140,
+              "label": "S1",
+              "fs": 0.62,
+              "when": "open"
+            },
+            {
+              "type": "dryer",
+              "x": 16,
+              "y": 196,
+              "cord": [
+                34,
+                136
+              ],
+              "sag": 8,
+              "label": "Dyson",
+              "lx": 30,
+              "ly": 160,
+              "size": 0.5,
+              "when": "open"
+            }
+          ],
+          "hcuts": [
+            0,
+            1.5,
+            60.0,
+            130.0,
+            196.2,
+            197.7
+          ],
+          "totalLabel": "197.7 整面",
+          "levels": [
+            {
+              "y": 85,
+              "label": "檯面"
+            },
+            {
+              "y": 115,
+              "label": "鏡櫃底"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "name": "方案 B",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 197.7,
+          "font": 6.2,
+          "units": [
+            {
+              "ref": "fill-l",
+              "x": 0,
+              "y": 115
+            },
+            {
+              "ref": "b-1",
+              "x": 1.5,
+              "y": 115
+            },
+            {
+              "ref": "b-2",
+              "x": 31.5,
+              "y": 115
+            },
+            {
+              "ref": "b-3",
+              "x": 65.0,
+              "y": 115
+            },
+            {
+              "ref": "b-4",
+              "x": 125.0,
+              "y": 115
+            },
+            {
+              "ref": "b-5",
+              "x": 166.2,
+              "y": 115
+            },
+            {
+              "ref": "fill-r",
+              "x": 196.2,
+              "y": 115
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 240
+            },
+            {
+              "type": "wall",
+              "x": 197.7,
+              "w": 4,
+              "h": 240
+            },
+            {
+              "type": "vanity",
+              "x": 0,
+              "w": 197.7,
+              "y": 85,
+              "top": 3,
+              "plinth": true,
+              "basin": 53,
+              "basinX": 68.5,
+              "basinDepth": 14,
+              "tapX": 95,
+              "tap": 20,
+              "tapLabel": "龍頭 20",
+              "label": "洗手台",
+              "sub": "197.7 × 50 · 示意"
+            }
+          ],
+          "extras": [
+            {
+              "type": "led",
+              "x": 1.5,
+              "y": 115,
+              "w": 194.7
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 140,
+              "y0": 85,
+              "y1": 115,
+              "label": "30"
+            },
+            {
+              "type": "clear",
+              "x0": 0,
+              "x1": 95,
+              "y": 62,
+              "label": "盆中心 95"
+            },
+            {
+              "type": "note",
+              "x": 95,
+              "y": 150,
+              "label": "除霧片",
+              "size": 0.56,
+              "color": "#7f8c84",
+              "when": "closed"
+            },
+            {
+              "type": "socket",
+              "kind": "shaver",
+              "x": 190,
+              "y": 128,
+              "label": "S2",
+              "fs": 0.62,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 4,
+              "y": 117,
+              "w": 24,
+              "h": 8,
+              "fill": "#eadcc4",
+              "stroke": "#55695f",
+              "label": "線材籃",
+              "size": 0.46,
+              "color": "#2f443c",
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 19,
+              "y": 176,
+              "w": 4.5,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 24.5,
+              "y": 176,
+              "w": 4.2,
+              "h": 12,
+              "fill": "#e4e6e2",
+              "stroke": "#55695f",
+              "rx": 1.4,
+              "when": "open"
+            },
+            {
+              "type": "socket",
+              "x": 24,
+              "y": 140,
+              "label": "S1",
+              "fs": 0.62,
+              "when": "open"
+            },
+            {
+              "type": "dryer",
+              "x": 11,
+              "y": 196,
+              "cord": [
+                24,
+                136
+              ],
+              "sag": 6,
+              "label": "Dyson",
+              "lx": 11,
+              "ly": 150,
+              "size": 0.46,
+              "when": "open"
+            }
+          ],
+          "hcuts": [
+            0,
+            1.5,
+            31.5,
+            65.0,
+            125.0,
+            166.2,
+            196.2,
+            197.7
+          ],
+          "totalLabel": "197.7 整面",
+          "levels": [
+            {
+              "y": 85,
+              "label": "檯面"
+            },
+            {
+              "y": 115,
+              "label": "鏡櫃底"
+            }
+          ]
+        }
+      ],
+      "spec": [
+        {
+          "zone": "天花收邊",
+          "h": "3",
+          "note": "櫃頂 237，現場修邊。"
+        },
+        {
+          "zone": "方案 A · 鏡門 ×3",
+          "h": "115–237",
+          "note": "58.5／70／66.2；中門 70 中心 95 對齊龍頭。"
+        },
+        {
+          "zone": "方案 B · 鏡門 ×5",
+          "h": "115–237",
+          "note": "30／33.5／60／41.2／30；中門 60 中心 95 對齊龍頭。"
+        },
+        {
+          "zone": "鉸鏈",
+          "h": "全部左",
+          "note": "相鄰門不共用鉸鏈線，可同時全開；中門往左開，不擋臉。"
+        },
+        {
+          "zone": "玻璃層板",
+          "h": "146.8／176.8／206.8",
+          "note": "6 mm 強化玻璃，每格淨高約 29；吹風機門只在 206.8 一片。"
+        },
+        {
+          "zone": "吹風機門",
+          "h": "最左",
+          "note": "Dyson 頭朝上吊掛，頭頂 196；S1 13A 離地 140；底部線材籃。"
+        },
+        {
+          "zone": "中門 · 除霧片",
+          "h": "A 70／B 60",
+          "note": "除霧片貼鏡背，鉸鏈側軟管過線。"
+        },
+        {
+          "zone": "最右門 · 牙刷",
+          "h": "S2 128",
+          "note": "電動牙刷、保養品；S2 shaver 2-pin 離地 128。"
+        },
+        {
+          "zone": "兩端收邊",
+          "h": "1.5",
+          "note": "入口端與外牆各 1.5，現場修邊。"
+        },
+        {
+          "zone": "櫃深",
+          "h": "19 · 內淨 15",
+          "note": "背板 1.8＋內淨 15＋鏡門 2.2。"
+        },
+        {
+          "zone": "鏡櫃底 · LED 燈帶",
+          "h": "115",
+          "note": "檯面上 30；燈帶兼夜燈。"
+        },
+        {
+          "zone": "洗手台",
+          "h": "檯面 85",
+          "note": "197.7 × 50，單盆；示意。"
+        }
+      ],
+      "hardware": [
+        "鏡門 4 mm 銀鏡＋18 mm 防潮板；Blum CLIP top 110° 每扇 3 支，70 門 4 支，下緣手扣。",
+        "入口端那扇加開角限位，開到 90° 停，不撞牆。",
+        "S1 13A 附開關、S2 shaver 2-pin；燈帶、除霧片電源請 LEW 確認。"
+      ],
+      "rationale": [
+        "全部鏡門都能開，沒有固定鏡。",
+        "中門中心 95 對齊龍頭；兩端門寬吸收現場差值。",
+        "Dyson 官方 stand 深 27.5 放不下，改櫃內吊掛；用後放涼、拔插頭。"
+      ],
+      "open_questions": [
+        "浴室天花與檢修口",
+        "檯面與龍頭高度",
+        "浴室 13A 插座與 RCCB",
+        "牙刷充電插頭型式",
+        "吹風機型號"
+      ],
+      "sources": [
+        "Dyson Supersonic tech spec: https://www.dyson.com/content/dam/dyson/for-business/business-refresh/docs/us/hair-care/supersonic-tech-spec-us.pdf",
+        "Dyson Supersonic stand 970516-02: https://www.dyson.com/support/journey/tools/970516-02",
+        "Dyson Supersonic r accessories: https://www.dyson.com/commercial/hair-care/supersonic-r-professional/accessories",
+        "Dyson safety instructions: https://support.dyson.co.nz/support/hd01/supersonic-black-nickel/using-your-dyson-appliance/important-safety-instructions",
+        "EMA RCCB requirement: https://www.ema.gov.sg/RCCB_Requirement.aspx",
+        "BS 7671 section 701 summary: https://www.voltimum.co.uk/news/section-701-locations-containing-bath-or"
+      ],
+      "risks": [
+        "龍頭頂要低於鏡門下緣 115，選龍頭時注意。"
+      ]
+    },
+    "bath2-mirror-cabinet": {
+      "object_id": "bath2-mirror-cabinet",
+      "title": "衛浴 2 整面鏡櫃",
+      "status": "design-proposal",
+      "viewpoint": "面向整面牆 169.8：左為馬桶、南牆，右為牆垛",
+      "ceiling_cm": 240,
+      "ceiling_note": "浴室天花暫以 240 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "units": {
+        "fill-l": {
+          "w": 1.5,
+          "h": 125,
+          "noCarcass": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 125
+            }
+          ]
+        },
+        "fill-r": {
+          "w": 1.5,
+          "h": 125,
+          "noCarcass": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 125
+            }
+          ]
+        },
+        "d1": {
+          "w": 49.3,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "衛生紙",
+                  "w": 19,
+                  "h": 22,
+                  "box": true,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "衛生紙、清潔備品",
+              "vertical": true
+            }
+          ]
+        },
+        "d2": {
+          "w": 49.3,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                90
+              ],
+              "items": []
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "吹風機",
+              "vertical": true
+            }
+          ]
+        },
+        "d3": {
+          "w": 50,
+          "d": 19,
+          "h": 125,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 118.4,
+              "glass": true,
+              "shelves": [
+                30,
+                60,
+                90
+              ],
+              "items": [
+                {
+                  "name": "保養品",
+                  "w": 6,
+                  "h": 16,
+                  "size": false
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "filler",
+              "h": 3,
+              "label": "天花收邊"
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 122,
+              "count": 1,
+              "hinges": [
+                "L"
+              ],
+              "mirror": true,
+              "swing": true,
+              "label": "洗手台 · 除霧",
+              "vertical": true
+            }
+          ]
+        },
+        "d4": {
+          "w": 18.2,
           "d": 19,
           "h": 125,
           "board": 1.8,
@@ -8153,74 +8547,8 @@
               ],
               "mirror": true,
               "swing": true,
-              "label": "牙刷牙膏",
+              "label": "牙刷",
               "vertical": true
-            }
-          ]
-        },
-        "d6": {
-          "w": 27.8,
-          "d": 19,
-          "h": 125,
-          "board": 1.8,
-          "bands": [
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "cabinet",
-              "h": 118.4,
-              "glass": true,
-              "shelves": [
-                30,
-                60,
-                90
-              ],
-              "items": [
-                {
-                  "name": "藥品",
-                  "w": 12,
-                  "h": 10,
-                  "box": true,
-                  "size": false
-                }
-              ]
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "filler",
-              "h": 3,
-              "label": "天花收邊"
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "door",
-              "from": 0,
-              "to": 122,
-              "count": 1,
-              "hinges": [
-                "L"
-              ],
-              "mirror": true,
-              "swing": true,
-              "label": "藥品",
-              "vertical": true
-            }
-          ]
-        },
-        "fill-r": {
-          "w": 1.5,
-          "h": 125,
-          "noCarcass": true,
-          "bands": [
-            {
-              "kind": "panel",
-              "h": 125
             }
           ]
         }
@@ -8235,9 +8563,9 @@
           "note": "櫃頂 237，現場修邊。"
         },
         {
-          "zone": "鏡門 ×6",
+          "zone": "鏡門 ×4",
           "h": "115–237 · 高 122",
-          "note": "六扇等寬 27.8；全部左鉸鏈。"
+          "note": "49.3／49.3／50／18.2；50 中心 125.1 對齊龍頭；全部左鉸鏈。"
         },
         {
           "zone": "玻璃層板",
@@ -8246,13 +8574,18 @@
         },
         {
           "zone": "吹風機門",
-          "h": "寬 27.8",
+          "h": "寬 49.3",
           "note": "Dyson 頭朝上吊掛，頭頂 196；S1 插座 140；底部線材籃。"
         },
         {
-          "zone": "第 5 扇 · 除霧片",
-          "h": "寬 27.8",
-          "note": "除霧片貼鏡背，鉸鏈側軟管過線；中心 126.6 在盆心上方。"
+          "zone": "洗手台門 · 除霧片",
+          "h": "寬 50",
+          "note": "除霧片貼鏡背，鉸鏈側軟管過線。"
+        },
+        {
+          "zone": "牙刷門",
+          "h": "寬 18.2",
+          "note": "開口邊靠牆垛，不卡。"
         },
         {
           "zone": "兩端收邊",
@@ -8281,7 +8614,8 @@
         "S1 13A 附開關離地 140；燈帶、除霧片電源請 LEW 確認。"
       ],
       "rationale": [
-        "第 5 扇中心 126.6、盆心 124.95：臉前是整片鏡，沒有分縫。",
+        "50 門中心 125.1 對齊龍頭，臉前整片鏡。",
+        "馬桶上方兩扇等寬 49.3。",
         "全部左鉸鏈：相鄰門可同時全開，牆垛端是開口邊"
       ],
       "open_questions": [
@@ -8317,27 +8651,17 @@
             },
             {
               "ref": "d2",
-              "x": 29.3,
+              "x": 50.8,
               "y": 115
             },
             {
               "ref": "d3",
-              "x": 57.1,
+              "x": 100.1,
               "y": 115
             },
             {
               "ref": "d4",
-              "x": 84.9,
-              "y": 115
-            },
-            {
-              "ref": "d5",
-              "x": 112.7,
-              "y": 115
-            },
-            {
-              "ref": "d6",
-              "x": 140.5,
+              "x": 150.1,
               "y": 115
             },
             {
@@ -8437,7 +8761,7 @@
             },
             {
               "type": "note",
-              "x": 126.6,
+              "x": 125.1,
               "y": 150,
               "label": "除霧片",
               "size": 0.56,
@@ -8506,11 +8830,9 @@
           "hcuts": [
             0,
             1.5,
-            29.3,
-            57.1,
-            84.9,
-            112.7,
-            140.5,
+            50.8,
+            100.1,
+            150.1,
             168.3,
             169.8
           ],
