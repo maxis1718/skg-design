@@ -7,3 +7,4 @@
 <path data-layout="swing-hook-line" class="furnishing" d="M550.38 137.24V150.84" fill="none" stroke="currentColor" stroke-width="0.1" stroke-dasharray="0.6 0.6"/>
 <g data-layout="swing-hook" class="furnishing"><circle cx="550.38" cy="137.24" r="1.1" fill="#fff" stroke="currentColor" stroke-width="0.22"/><path d="M549.61 136.47L551.15 138.01M549.61 138.01L551.15 136.47" stroke="currentColor" stroke-width="0.16"/></g>
 <g data-layout="swing-hook" class="furnishing"><circle cx="550.38" cy="150.84" r="1.1" fill="#fff" stroke="currentColor" stroke-width="0.22"/><path d="M549.61 150.07L551.15 151.61M549.61 151.61L551.15 150.07" stroke="currentColor" stroke-width="0.16"/></g>
+<g data-layout="robot-vacuum" class="furnishing" fill="none" stroke="currentColor" stroke-width="0.18"><path d="M434.62 157.42H444.54V167.34H434.62Z"/><circle cx="439.58" cy="163.38" r="3.4" stroke-width="0.12"/></g>

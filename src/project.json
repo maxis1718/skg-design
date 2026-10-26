@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R37",
+    "revision": "R38",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -1632,10 +1632,10 @@
       "room_id": "living-balcony",
       "label": "Clothes drying rack",
       "bounds_pt": [
-        431.23,
-        127.4,
-        442.57,
-        159.43
+        448.24,
+        138.37,
+        480.27,
+        149.71
       ],
       "plan_horizontal_cm": 40.0,
       "plan_vertical_cm": 113.0,
@@ -1646,7 +1646,7 @@
       "uncertainty_cm": null,
       "notes": "SMARTLUX LITE ceiling-mounted drying rack, 113 x 40 cm; drop-down distance 6.6-130 cm. Living balcony west end, long axis perpendicular to facade (N-S), 10 cm off the west balcony wall x428.4, ~24 cm from the outer balcony edge y120.64 and ~3 cm north of the post/return line y160.36 (~28 cm before the sliding door line y167.44). Overhead item: drawn dashed.",
       "name": "曬衣架",
-      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130",
+      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊沿陽台東西向，離西牆 70、在陽台深度中線，兩側衣服不碰牆和玻璃",
       "dimensions": {
         "w": {
           "cm": 113,
@@ -3642,6 +3642,68 @@
       "mount": "ceiling",
       "notes": "Two ceiling hook points 48 cm apart on a N-S line, centre 120 cm from the east balcony wall x584.4 and mid-depth of the main band (y144.04, ~83 cm from the outer edge). Swing travels E-W along the balcony. Seat 50 x 40 is schematic; hook spacing slightly wider than the seat (engineerfix.com); clearance >= 50 each side (Lillagunga Classic manual), Freifrau asks 70 sides / 100 front-back. Anchor into the structural RC slab, rating >= 2x user + seat.",
       "source_note": "・吊點 ×2 間距 48，連線南北向，鞦韆東西向擺\n・吊點中心距東牆 120、在陽台深度中線\n・錨進結構樓板，每點額定 ≥ 150 kg\n・座椅 50 × 40 為示意；兩側各約 58 淨空"
+    },
+    {
+      "id": "air-purifier",
+      "code": "LIV-08",
+      "room_id": "living",
+      "name": "空氣清淨機 Electrolux Pure A9",
+      "bounds_pt": [
+        573.91,
+        243.0,
+        584.4,
+        253.49
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 37,
+          "status": "design"
+        },
+        "d": {
+          "cm": 37,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 37,
+        "d": 37,
+        "h": null,
+        "brand": "Electrolux",
+        "model": "Pure A9"
+      },
+      "source_note": "・37 × 37，靠東牆、電視櫃南側\n・背後插座 ×2（S-07、S-08）",
+      "status": "user-design"
+    },
+    {
+      "id": "robot-vacuum",
+      "code": "LBL-02",
+      "room_id": "living-balcony",
+      "name": "掃拖機器人 Dreame H14 Ultra（含底座）",
+      "bounds_pt": [
+        434.62,
+        157.42,
+        444.54,
+        167.34
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 35,
+          "status": "design"
+        },
+        "d": {
+          "cm": 35,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 35,
+        "d": 35,
+        "h": null,
+        "brand": "Dreame",
+        "model": "H14 Ultra"
+      },
+      "source_note": "・含底座 35 × 35，放陽台西南角、門邊牆垛旁\n・背後低位插座（S-09）",
+      "status": "user-design"
     }
   ],
   "source_dimensions": [
@@ -4119,6 +4181,10 @@
     {
       "id": "C45",
       "text": "衛浴 1、衛浴 2 變成可點空間；主浴鏡櫃方案 A／B（3 片／5 片，無固定鏡）；客衛鏡櫃 50 對齊水龍頭。"
+    },
+    {
+      "id": "C46",
+      "text": "客廳加 Electrolux Pure A9 清淨機（後方插座 ×2）；陽台加 Dreame H14 Ultra 底座（低位插座）；曬衣架改東西向、離西牆 70。"
     }
   ],
   "measurement_policy": {
@@ -17184,6 +17250,42 @@
           ]
         ],
         "notes": "・放門外，拉門往東滑不擋\n・離地 120（示意）"
+      },
+      {
+        "id": "sock-purifier-1",
+        "code": "S-07",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 244.7,
+        "place": "客廳東牆 · 清淨機後",
+        "mount": 30,
+        "name": "插座 · 清淨機",
+        "notes": "・13A 雙孔，離地 30（示意）\n・清淨機後方，貼牆不外露",
+        "use": "清淨機"
+      },
+      {
+        "id": "sock-purifier-2",
+        "code": "S-08",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 251.79,
+        "place": "客廳東牆 · 清淨機後",
+        "mount": 30,
+        "name": "插座 · 清淨機（備用）",
+        "notes": "・13A 雙孔，離地 30（示意）\n・同一面牆第二組，給燈或其他電器",
+        "use": "備用"
+      },
+      {
+        "id": "sock-vacuum",
+        "code": "S-09",
+        "kind": "socket",
+        "x": 434.9,
+        "y": 162.38,
+        "place": "客廳陽台 · 西南角牆垛",
+        "mount": 15,
+        "name": "插座 · 掃拖機器人",
+        "notes": "・13A，離地 15（低位，藏在底座後）\n・陽台用防水面板（IP66）",
+        "use": "掃拖機器人"
       }
     ],
     "runs": [

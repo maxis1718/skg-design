@@ -77,6 +77,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-20 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
 | MBL-01 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
 | LBL-01 | `swing-hooks` | 鞦韆 · 天花吊點 ×2 | 50 × 40 |
+| LIV-08 | `air-purifier` | 空氣清淨機 Electrolux Pure A9 | 37 × 37 |
+| LBL-02 | `robot-vacuum` | 掃拖機器人 Dreame H14 Ultra（含底座） | 35 × 35 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
