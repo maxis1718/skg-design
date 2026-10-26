@@ -1213,6 +1213,217 @@
       "english": "Living balcony",
       "number": "09",
       "focus": "曬衣架與鞦韆吊點"
+    },
+    {
+      "id": "bath1",
+      "source_label": "BATH 1",
+      "polygon_pt": [
+        [
+          197.52,
+          295
+        ],
+        [
+          266.28,
+          295
+        ],
+        [
+          266.28,
+          351.04
+        ],
+        [
+          185.52,
+          351.04
+        ],
+        [
+          185.52,
+          322.12
+        ],
+        [
+          202.56,
+          322.12
+        ],
+        [
+          202.56,
+          318.52
+        ],
+        [
+          197.52,
+          318.52
+        ]
+      ],
+      "bounds_pt": [
+        185.52,
+        295,
+        266.28,
+        351.04
+      ],
+      "parts": [
+        {
+          "label": "主區 · 含洗手台",
+          "bounds_pt": [
+            197.52,
+            295,
+            266.28,
+            351.04
+          ],
+          "horizontal_cm": 242.6,
+          "vertical_cm": 197.7
+        },
+        {
+          "label": "最大外框",
+          "bounds_pt": [
+            185.52,
+            295,
+            266.28,
+            351.04
+          ],
+          "horizontal_cm": 284.9,
+          "vertical_cm": 197.7
+        },
+        {
+          "label": "淋浴間",
+          "bounds_pt": [
+            185.52,
+            322.12,
+            222.36,
+            351.04
+          ],
+          "horizontal_cm": 130.0,
+          "vertical_cm": 102.0
+        },
+        {
+          "label": "洗手台",
+          "bounds_pt": [
+            252.12,
+            295,
+            266.28,
+            351.04
+          ],
+          "horizontal_cm": 50.0,
+          "vertical_cm": 197.7
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": {
+        "設計備註": "・主臥套房內，從更衣區拉門進出，門洞約 100\n・東牆洗手台 197.7 × 50，盆中心距入口端 95，上方鏡櫃\n・西南角淋浴間約 130 × 102，玻璃門外開\n・鏡櫃內刮鬍刀插座 S-06；開關 SW-05 在門內",
+        "待確認": "・浴室天花 240 與檢修口位置\n・插座、開關位置由電工依 SS 638 確認"
+      },
+      "name": "衛浴 1",
+      "english": "Bath 1",
+      "number": "10",
+      "focus": "洗手台與鏡櫃、淋浴間"
+    },
+    {
+      "id": "bath2",
+      "source_label": "BATH 2",
+      "polygon_pt": [
+        [
+          366.12,
+          266.68
+        ],
+        [
+          393.72,
+          266.68
+        ],
+        [
+          393.72,
+          292.24
+        ],
+        [
+          420,
+          292.24
+        ],
+        [
+          420,
+          322.6
+        ],
+        [
+          349.92,
+          322.6
+        ],
+        [
+          349.92,
+          274.48
+        ],
+        [
+          366.12,
+          274.48
+        ]
+      ],
+      "bounds_pt": [
+        349.92,
+        266.68,
+        420,
+        322.6
+      ],
+      "parts": [
+        {
+          "label": "最大內跨度",
+          "bounds_pt": [
+            349.92,
+            266.68,
+            420,
+            322.6
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 197.3
+        },
+        {
+          "label": "下半全寬區",
+          "bounds_pt": [
+            349.92,
+            292.24,
+            420,
+            322.6
+          ],
+          "horizontal_cm": 247.2,
+          "vertical_cm": 107.1
+        },
+        {
+          "label": "入口通道",
+          "bounds_pt": [
+            366.12,
+            266.68,
+            393.72,
+            292.24
+          ],
+          "horizontal_cm": 97.4,
+          "vertical_cm": 90.2
+        },
+        {
+          "label": "淋浴間",
+          "bounds_pt": [
+            393.72,
+            292.24,
+            420,
+            322.6
+          ],
+          "horizontal_cm": 92.7,
+          "vertical_cm": 107.1
+        },
+        {
+          "label": "洗手台凹位",
+          "bounds_pt": [
+            349.92,
+            274.48,
+            366.12,
+            299.92
+          ],
+          "horizontal_cm": 57.1,
+          "vertical_cm": 89.7
+        }
+      ],
+      "measurement_status": "scaled-estimate",
+      "uncertainty_cm": 2,
+      "notes": {
+        "設計備註": "・走廊側明裝拉門往東滑，門片約 84.5，淨開口 82.5\n・西牆整面鏡櫃 169.8：洗手台凹位＋馬桶後矮台\n・東南角淋浴間約 93 × 107，玻璃門外開\n・開關 SW-10 在門外走廊",
+        "待確認": "・原圖未畫臉盆，盆位暫置中凹位，示意\n・浴室天花 240 與檢修口位置"
+      },
+      "name": "衛浴 2",
+      "english": "Bath 2",
+      "number": "11",
+      "focus": "整面鏡櫃與洗手台、淋浴間"
     }
   ],
   "objects": [
@@ -1936,7 +2147,7 @@
     {
       "id": "bath1-mirror-cabinet",
       "code": "BTH-01",
-      "room_id": "master",
+      "room_id": "bath1",
       "name": "主浴洗手台＋鏡櫃",
       "label": "BATH 1 vanity (source) + mirror cabinet (design)",
       "bounds_pt": [
@@ -1982,7 +2193,7 @@
     {
       "id": "bath2-mirror-cabinet",
       "code": "BTH-02",
-      "room_id": "living",
+      "room_id": "bath2",
       "name": "衛浴 2 洗手台＋整面鏡櫃",
       "label": "BATH 2 vanity + WC ledge (source) + full-wall mirror cabinet (design)",
       "bounds_pt": [
@@ -16025,7 +16236,7 @@
         "mount": 120,
         "name": "刮鬍刀插座 · 主浴鏡櫃",
         "notes": "・鏡櫃內左端，給電動牙刷、刮鬍刀\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）\n・浴室迴路須 30 mA RCD；一般 13A 插座與淋浴區距離由電工依 SS 638 確認\n・離地 120（示意，鏡櫃內）",
-        "room": "master",
+        "room": "bath1",
         "use": "刮鬍刀、牙刷"
       },
       {
@@ -16536,7 +16747,7 @@
           ]
         ],
         "notes": "・離淋浴區與浴缸 ≥ 60，位置由電工依 SS 638 確認\n・離地 120（示意）",
-        "room": "master"
+        "room": "bath1"
       },
       {
         "id": "sw-kid",

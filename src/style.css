@@ -144,3 +144,6 @@ details>summary{font-size:15px}.auxiliary summary{font-size:14px}
 .sr-text{margin:4px 0 8px;padding-left:18px;font-size:13px;line-height:1.85;color:#4f5e49}.sr-text li{margin-bottom:2px}
 @media(max-width:760px){.smart-record{padding-top:28px}.sr-block{padding:14px;margin-left:-4px;margin-right:-4px}.sr-table th,.sr-table td{padding:7px 9px;font-size:12px}.sr-table td{min-width:130px;max-width:210px}.sr-table td:first-child{min-width:0}.sr-text{font-size:13.5px}}
 .inspector-pair>span{flex:none}
+
+/* Bathrooms: narrow free floor between fixtures, so the size line is set smaller. */
+.room-label[data-label-room^="bath"] .size{font-size:3.1px}

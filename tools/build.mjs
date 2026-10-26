@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,'src',name),'utf8');
 const project=JSON.parse(read('project.json'));
-if(project.rooms.length!==9||new Set(project.objects.map(o=>o.id)).size!==project.objects.length)throw new Error('Invalid record index');
+if(project.rooms.length!==11||new Set(project.objects.map(o=>o.id)).size!==project.objects.length)throw new Error('Invalid record index');
 const kidSource=read('furniture-kid.svg');
 // 2026-10-20 kid-room bed removed (user: no double bed; spec to come): bed frame, pillows, blanket fold and headboard band (source paths 666–688)
 // are dropped from the kid-room copy only; the guest room keeps the full mirrored symbol.

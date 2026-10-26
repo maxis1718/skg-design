@@ -15,6 +15,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | `guest` | 客房 | ≈ 250 × 290 |
 | `master-balcony` | 主臥陽台 | ≈ 269.7 × 157.9 |
 | `living-balcony` | 客廳陽台 | ≈ 550.3 × 165.1 |
+| `bath1` | 衛浴 1 | ≈ 242.6 × 197.7 |
+| `bath2` | 衛浴 2 | ≈ 247.2 × 197.3 |
 
 ## Objects
 
