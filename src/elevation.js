@@ -444,6 +444,7 @@ function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
     if (dryExtra(g, e) || toeExtra(g, e)) continue;
+    if (e.type === 'lid') { lidExtra(g, e, state); continue; }
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
     const fsz = g.f * (e.size || .7);
     if (e.type === 'wallpaper') {
@@ -594,6 +595,40 @@ function extras(g, list, state = ST) {
       else hdim(g, e.x0, e.x1, e.y, e.label);
     }
   }
+}
+
+// Horizontal lift-up lid (bed platform, bench seat) hinged along its far edge; e.open false = stays shut in the 'open' state.
+// Front (looking at the free edge): e.x, e.w, e.y (top surface), e.d (lid depth = swing radius), e.angle (deg, default 75),
+// e.t (1.8). Closed = edge strip; open = dashed ghost + raised underside d·sin(angle) high, e.holes vent-hole columns, e.label.
+// Section (e.section): hinge at the top corner (e.hx, e.y), lid runs e.d toward +x (e.dir -1 = toward -x); open = rotated
+// board, swing arc of the free edge, closed ghost and an optional gas strut e.strut = {x, y, u, label} (fixed point → lid
+// underside u from the hinge).
+function lidExtra(g, e, state) {
+  const t = e.t ?? 1.8, open = state === 'open' && e.open !== false, a = (e.angle ?? 75) * Math.PI / 180, sn = Math.sin(a), cs = Math.cos(a);
+  const fs = g.f * (e.size || .62), face = {fill:C.front, stroke:C.line, 'stroke-width':.3}, ghost = {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'};
+  if (!e.section) {
+    g.rect(e.x, e.y - t, e.w, t, open ? ghost : face);
+    if (!open) return;
+    const hh = e.d * sn, n = e.holes || 0;
+    g.rect(e.x, e.y, e.w, hh, {fill:'#f1efe8', stroke:C.line, 'stroke-width':.3});
+    g.line(e.x, e.y + hh, e.x + e.w, e.y + hh, {stroke:C.dark, 'stroke-width':.4});
+    for (let i = 0; i < n; i++) for (const k of [.2, .8]) g.out.push(`<circle cx="${+(e.x + e.w * (i + .5) / n).toFixed(2)}" cy="${+g.Y(e.y + hh * k).toFixed(2)}" r="1.5" fill="#dcd6c8" stroke="${C.thin}" stroke-width=".2"/>`);
+    fitLabel(g, e.x + e.w / 2, e.y + hh / 2, e.w, hh * .5, e.label || T('上掀'), g.f * .62, {fill:C.thin});
+    return;
+  }
+  const dir = e.dir ?? 1, hx = e.hx ?? 0, hy = e.y, L = e.d, x0 = dir > 0 ? hx : hx - L;
+  const P = (u, v) => [hx + dir * (u * cs - v * sn), hy + u * sn + v * cs], xy = ([x, y]) => `${+x.toFixed(2)} ${+g.Y(y).toFixed(2)}`;
+  g.rect(x0, hy - t, L, t, open ? ghost : face);
+  if (!open) return;
+  const arc = Array.from({length:17}, (_, i) => { const th = a * i / 16; return [hx + dir * L * Math.cos(th), hy + L * Math.sin(th)]; });
+  g.path('M' + arc.map(xy).join('L'), {fill:'none', stroke:C.dim, 'stroke-width':.22, 'stroke-dasharray':'1 .8'});
+  g.path('M' + [P(0, 0), P(L, 0), P(L, -t), P(0, -t)].map(xy).join('L') + 'Z', face);
+  if (e.strut) {
+    const s = e.strut, [ex, ey] = P(s.u, -t);
+    g.line(s.x, s.y, ex, ey, {stroke:C.dark, 'stroke-width':.7, 'stroke-linecap':'round'});
+    if (s.label) g.text((s.x + ex) / 2 + dir * 1.6, (s.y + ey) / 2, s.label, {'text-anchor':dir > 0 ? 'start' : 'end', fill:C.dim, 'font-size':fs});
+  }
+  if (e.label) { const [lx, ly] = P(L, 0); g.text(lx + dir * 1.6, ly - fs * .3, e.label, {'text-anchor':dir > 0 ? 'start' : 'end', fill:C.dim, 'font-size':fs}); }
 }
 
 // Dry-kitchen primitives: framed glass partition, countertop device, tap column, socket.
@@ -768,6 +803,7 @@ function renderFront(elev, view, state) {
 
 // Side section (depth axis horizontal; wall at x=0, room to the right). Pull-outs extend when state=open.
 // unit.pullout === 'whole' moves every band above the plinth (and the full-height front) together.
+// view.depthLabel overrides the default depth dimension text (cabinet depth), e.g. for a bed platform.
 function renderSection(elev, view, state) {
   const u = elev.units[view.ref], B = bands(u), D = u.d, t = u.board ?? 1.8, ext = view.extension ?? 55;
   const whole = u.pullout === 'whole', open = state === 'open';
@@ -898,7 +934,7 @@ function renderSection(elev, view, state) {
   if (!u.noBack) g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});
   extras(g, view.extras, state);
   if (view.chain) chain(g, u, 0, 0, W + f * .6, false);
-  hdim(g, 0, D, -f * 1.6, `${fmt(D)}（${T('櫃深')}）`, true);
+  hdim(g, 0, D, -f * 1.6, view.depthLabel || `${fmt(D)}（${T('櫃深')}）`, true);
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 

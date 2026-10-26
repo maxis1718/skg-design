@@ -6,7 +6,7 @@ src=ROOT/'src'
 def read(name):return (src/name).read_text(encoding='utf8')
 def data_image(name):return 'data:image/png;base64,'+base64.b64encode((ROOT/'assets'/name).read_bytes()).decode()
 project=json.loads(read('project.json'))
-assert len(project['rooms'])==7
+assert len(project['rooms'])==9
 assert len({o['id'] for o in project['objects']})==len(project['objects'])
 assert all(o['room_id'] in {r['id'] for r in project['rooms']} for o in project['objects'])
 for o in project['objects']:
@@ -47,7 +47,11 @@ for fragment in tv_wall:plan=plan.replace(fragment,'')
 swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*/>',plan)
 assert len(swing_doors)==4
 for fragment in swing_doors:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g>'
+# Helper room: source bed symbol (714-727: body, pillow, blanket, headboard) replaced by src/furniture-helper.svg.
+helper_bed=re.findall(r'<path\b[^>]*data-source-path="(?:71[4-9]|72[0-7])"[^>]*/>',plan)
+assert len(helper_bed)==14
+for fragment in helper_bed:plan=plan.replace(fragment,'')
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g><g id="balcony-geometry">'+read('furniture-balcony.svg')+'</g><g id="helper-geometry">'+read('furniture-helper.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
