@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R29",
+    "revision": "R30",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -2149,7 +2149,10 @@
       },
       "source_note": "原圖衣櫃，位置不變",
       "status": "user-design",
-      "code": "STD-04"
+      "code": "STD-04",
+      "onlyLayout": [
+        "layout-a"
+      ]
     },
     {
       "id": "study-desk",
@@ -2180,7 +2183,10 @@
         "model": null
       },
       "source_note": "・電腦桌 100 × 50（深度示意）\n・27 吋螢幕約 61 寬（示意）",
-      "status": "user-design"
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-a"
+      ]
     },
     {
       "id": "massage-chair",
@@ -2211,7 +2217,10 @@
         "model": "uLove 3 Well-Being Chair（OS-8218）"
       },
       "source_note": "・直立 76 × 127 × 116；躺平 185 × 76 × 97\n・背後離牆 ≥10（往前滑躺），前方留 ≥80\n・約 105 kg，平均 260 W\n・虛線＝躺平長度",
-      "status": "user-design"
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-a"
+      ]
     },
     {
       "id": "guest-bed-a",
@@ -2245,6 +2254,9 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-a"
+      ],
+      "onlyLayout": [
+        "layout-a"
       ]
     },
     {
@@ -2279,6 +2291,9 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-a"
+      ],
+      "onlyLayout": [
+        "layout-a"
       ]
     },
     {
@@ -2313,6 +2328,9 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-a"
+      ],
+      "onlyLayout": [
+        "layout-a"
       ]
     },
     {
@@ -2347,6 +2365,9 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-b"
+      ],
+      "onlyLayout": [
+        "layout-a"
       ]
     },
     {
@@ -2381,6 +2402,9 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-b"
+      ],
+      "onlyLayout": [
+        "layout-a"
       ]
     },
     {
@@ -2415,6 +2439,111 @@
       "status": "user-design",
       "onlyGuest": [
         "guest-b"
+      ],
+      "onlyLayout": [
+        "layout-a"
+      ]
+    },
+    {
+      "id": "guest-bed-lb",
+      "code": "GST-07",
+      "room_id": "guest",
+      "name": "客房床（MALM Queen）",
+      "bounds_pt": [
+        360.69,
+        149.01,
+        419.94,
+        196.07
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 166,
+          "status": "design"
+        },
+        "d": {
+          "cm": 209,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・IKEA MALM 收納床 Queen 150 × 200\n・外框 209 × 166",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ]
+    },
+    {
+      "id": "massage-chair-lb",
+      "code": "STD-06",
+      "room_id": "study",
+      "name": "按摩椅 OSIM uLove 3",
+      "bounds_pt": [
+        305.39,
+        324.51,
+        341.39,
+        346.05
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 76,
+          "status": "design"
+        },
+        "d": {
+          "cm": 127,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 76,
+        "d": 127,
+        "h": 116,
+        "brand": "OSIM",
+        "model": "uLove 3 Well-Being Chair（OS-8218）"
+      },
+      "source_note": "・直立 76 × 127 × 116；躺平 185 × 76 × 97\n・背後離牆 ≥10（往前滑躺），前方留 ≥80\n・約 105 kg，平均 260 W\n・虛線＝躺平長度",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
+      ]
+    },
+    {
+      "id": "study-desk-lb",
+      "code": "STD-07",
+      "room_id": "study",
+      "name": "書房電腦桌",
+      "bounds_pt": [
+        330.05,
+        295.03,
+        344.23,
+        323.37
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 100,
+          "status": "design"
+        },
+        "d": {
+          "cm": 50,
+          "status": "scaled"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "source_note": "・電腦桌 100 × 50（深度示意）\n・27 吋螢幕約 61 寬（示意）",
+      "status": "user-design",
+      "onlyLayout": [
+        "layout-b"
       ]
     }
   ],
@@ -2849,6 +2978,10 @@
     {
       "id": "C34",
       "text": "衛浴 2 鏡櫃：取消固定鏡與上櫃，六扇等寬 27.8 鏡門全開、做到頂；除霧片在盆前那扇。"
+    },
+    {
+      "id": "C35",
+      "text": "全屋加入格局 A／B：A 書房右上、客房下方；B 客房右上（拆原衣櫃，床靠窗、床頭靠東牆），書房移到下方。"
     }
   ],
   "measurement_policy": {
@@ -10207,5 +10340,128 @@
         }
       ]
     }
-  }
+  },
+  "layouts": [
+    {
+      "id": "layout-a",
+      "name": "格局 A",
+      "note": "書房在右上、客房在下方"
+    },
+    {
+      "id": "layout-b",
+      "name": "格局 B",
+      "note": "客房在右上、書房在下方",
+      "labels": {
+        "guest": [
+          392,
+          205
+        ],
+        "study": [
+          300,
+          290
+        ]
+      },
+      "rooms": {
+        "guest": {
+          "source_label": "STUDY ROOM",
+          "polygon_pt": [
+            [
+              349.92,
+              144.76
+            ],
+            [
+              420,
+              144.76
+            ],
+            [
+              420,
+              229.84
+            ],
+            [
+              349.92,
+              229.84
+            ]
+          ],
+          "bounds_pt": [
+            349.92,
+            144.76,
+            420,
+            229.84
+          ],
+          "parts": [
+            {
+              "label": "內牆範圍（含家具占位）",
+              "bounds_pt": [
+                349.92,
+                144.76,
+                420,
+                229.84
+              ],
+              "horizontal_cm": 247,
+              "vertical_cm": 300
+            }
+          ],
+          "measurement_status": "scaled-estimate",
+          "uncertainty_cm": null,
+          "focus": "雙人床（衣櫃拆除）",
+          "notes": {
+            "床": "・MALM Queen 209 × 166，床頭靠東牆、離窗 15（窗簾）\n・從南側上下床，收納箱往南拉",
+            "衣櫃": "原 120 衣櫃拆除；床南側留 119 深空地",
+            "門": "原內開門，開門範圍不碰床",
+            "窗簾": "床離窗留 15 給窗簾軌道與收簾"
+          }
+        },
+        "study": {
+          "source_label": "BEDROOM 3",
+          "polygon_pt": [
+            [
+              273.36,
+              266.68
+            ],
+            [
+              344.28,
+              266.68
+            ],
+            [
+              344.28,
+              348.88
+            ],
+            [
+              273.36,
+              348.88
+            ]
+          ],
+          "bounds_pt": [
+            273.36,
+            266.68,
+            344.28,
+            348.88
+          ],
+          "parts": [
+            {
+              "label": "內牆範圍（含櫃體占位）",
+              "bounds_pt": [
+                273.36,
+                266.68,
+                344.28,
+                348.88
+              ],
+              "horizontal_cm": 250,
+              "vertical_cm": 290
+            }
+          ],
+          "measurement_status": "scaled-estimate",
+          "uncertainty_cm": null,
+          "focus": "按摩椅與電腦桌",
+          "notes": {
+            "按摩椅": "・OSIM uLove 3：76 × 127 × 116，躺平 185\n・離窗 10；椅背靠東牆、離牆 10，往西躺平\n・躺平後到西牆約 55",
+            "電腦桌": "・100 × 50 靠東牆，27 吋螢幕，坐著面向東\n・桌離按摩椅 4，北端離門洞 100\n・椅子背後到西牆約 145",
+            "門": "拉門：明裝掛軌在走道側，往東滑",
+            "電源與照明": "・按摩椅旁 13A 接地插座（平均 260 W）\n・電腦桌旁插座＋網路\n・避免直曬：窗簾或百葉",
+            "搬入": "・按摩椅約 105 kg，搬入時保護地板\n・門寬需 80 以上"
+          }
+        }
+      }
+    }
+  ]
 }

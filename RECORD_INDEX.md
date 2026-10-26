@@ -55,6 +55,9 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-04 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
 | GST-05 | `guest-desk-b` | 客房書桌 B | 60 × 45 |
 | GST-06 | `guest-wardrobe-b` | 客房衣櫃 B | 80 × 60 |
+| GST-07 | `guest-bed-lb` | 客房床（MALM Queen） | 166 × 209 |
+| STD-06 | `massage-chair-lb` | 按摩椅 OSIM uLove 3 | 76 × 127 |
+| STD-07 | `study-desk-lb` | 書房電腦桌 | 100 × 50 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 

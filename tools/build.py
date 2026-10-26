@@ -28,7 +28,7 @@ study_drop=re.findall(r'<path\b[^>]*data-source-path="(?:129|64[6-9]|65\d|66[0-5
 assert len(study_drop)==41
 study=old_study
 for fragment in study_drop:study=study.replace(fragment,'')
-furniture=f'<g data-layout="kid-original">{kid}</g>\n<g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+guest_wardrobe+'</g><g id="guest-plan-a">'+read('furniture-guest-plan-a.svg')+'</g><g id="guest-plan-b" hidden>'+read('furniture-guest-plan-b.svg')+'</g>'
+furniture=f'<g data-layout="kid-original">{kid}</g>\n<g id="layout-a-geometry"><g data-layout="guest-mirrored" transform="matrix(-1 0 0 1 693.36 0)">'+guest_wardrobe+'</g><g id="guest-plan-a">'+read('furniture-guest-plan-a.svg')+'</g><g id="guest-plan-b" hidden>'+read('furniture-guest-plan-b.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g></g><g id="layout-b-geometry" hidden>'+read('furniture-layout-b.svg')+'</g>'
 html=read('shell.html')
 plan=read('plan-paths.svg')
 sink=re.findall(r'<path\b[^>]*data-source-path="(?:75[3-9]|76\d|77\d)"[^>]*/>',plan)
@@ -47,7 +47,7 @@ for fragment in tv_wall:plan=plan.replace(fragment,'')
 swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*/>',plan)
 assert len(swing_doors)==4
 for fragment in swing_doors:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="kid-study-geometry">'+read('furniture-kid-study.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g>'
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))
