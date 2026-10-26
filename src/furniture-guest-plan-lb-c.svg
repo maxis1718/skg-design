@@ -1,4 +1,4 @@
-<!-- R32 (2026-10-26): guest scheme C — wardrobe 80 + built-in desk 60 × 40 as one carpentry run; dashed = upper cabinets (depth 35) over the desk. Units: PDF pt. -->
+<!-- R32 (2026-10-26): guest scheme C — wardrobe 80 + built-in desk 60 × 40 as one carpentry run; dashed = upper cabinets (depth 30) over the desk. Units: PDF pt. -->
 <path data-layout="lb-guest-c-wardrobe" class="furnishing" d="M397.26 212.79H419.94V229.8H397.26Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
 <path data-layout="lb-guest-c-wardrobe-rail" class="furnishing" d="M397.26 221.3H419.94" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-c-wardrobe-hanger" class="furnishing" d="M401.04 215.06V227.53" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
@@ -7,6 +7,6 @@
 <path data-layout="lb-guest-c-wardrobe-hanger" class="furnishing" d="M412.38 215.06V227.53" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-c-wardrobe-hanger" class="furnishing" d="M416.16 215.06V227.53" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-c-desk" class="furnishing" d="M380.25 218.46H397.26V229.8H380.25Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="lb-guest-c-upper" class="furnishing" d="M380.25 219.88H397.26V229.8H380.25Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
+<path data-layout="lb-guest-c-upper" class="furnishing" d="M380.25 221.3H397.26V229.8H380.25Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
 <path data-layout="lb-guest-c-chair" class="furnishing" d="M383.51 204.29H394.0Q395.13 204.29 395.13 205.42V215.91Q395.13 217.04 394.0 217.04H383.51Q382.38 217.04 382.38 215.91V205.42Q382.38 204.29 383.51 204.29Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-c-chair-back" class="furnishing" d="M383.23 205.14H394.28" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
