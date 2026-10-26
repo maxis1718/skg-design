@@ -119,3 +119,15 @@ details>summary{font-size:15px}.auxiliary summary{font-size:14px}
 .reference-body{padding:15px 0 25px}
 .brand-mark{letter-spacing:1px}
 #measurement-policy{margin-bottom:22px}#measurement-policy p{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 6px}#measurement-policy b{font-weight:500;color:var(--ink)}
+/* ⚡ power & network layer */
+.tool.power-tool{font-size:14px;line-height:1;padding:5px 9px}.tool.power-tool.active{background:#fbe5d0;color:#a24d12}
+#power-layer .cam-cone{fill:#24443b;fill-opacity:.07;stroke:#24443b;stroke-opacity:.35;stroke-width:.3;stroke-dasharray:1.2 1}
+#power-layer .power-run{fill:none;stroke:#2f68a6;stroke-opacity:.55;stroke-width:.45;stroke-dasharray:1.6 1.2}
+#power-layer .power-under{pointer-events:none}.power-mark{cursor:pointer;outline:none}.power-mark .pm-hit{fill:transparent}.power-mark .pm-ring{fill:none;stroke:#a24d12;stroke-opacity:0;stroke-width:.6}.power-mark:hover .pm-ring,.power-mark:focus-visible .pm-ring,.power-mark.selected .pm-ring{stroke-opacity:1}
+.power-legend{flex-wrap:wrap;gap:6px 12px}.pk{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none;vertical-align:-1px}.pk-socket{border:1.5px solid #d9731c;background:#fff}.pk-ceiling-power{background:#d9731c}.pk-camera{background:#24443b}.pk-ap{border:1.5px solid #2f68a6;background:#fff}.pk-data{border:1.5px solid #2f68a6;border-radius:2px;background:#fff}.pk-hub{background:#2f68a6;border-radius:2px}.pk-run{width:14px;height:0;border-radius:0;border-top:1.5px dashed #2f68a6}
+.legend .pk{height:9px;width:9px}.legend .pk-run{height:0;width:14px}
+.power-counts{display:flex;flex-wrap:wrap;gap:6px 14px;margin:12px 0 10px;font-size:13px;color:#4f5e49}.power-counts span{display:inline-flex;align-items:center;gap:6px}.power-counts b{font-weight:600}
+.power-list{display:flex;flex-direction:column;margin:6px 0 10px}.power-row{display:flex;align-items:center;gap:9px;border:0;border-top:1px solid #d7e0ce;background:none;padding:8px 0;text-align:left;color:var(--ink);font-size:13px}.power-row span{flex:1;min-width:0}.power-row small{font-size:11px;color:#7b8d70;letter-spacing:.5px}.power-row:hover span{text-decoration:underline}
+.power-sources{font-size:11px;line-height:1.8;color:#75836d}.power-sources a{color:#52694b}
+.legend i.pk-socket,.legend i.pk-ceiling-power,.legend i.pk-camera,.legend i.pk-ap{border-radius:50%}.legend i.pk-data,.legend i.pk-hub{border-radius:2px}
+.drawing-foot{flex-wrap:wrap}.power-legend{justify-content:flex-end}@media(max-width:760px){.power-legend{justify-content:flex-start;width:100%}}

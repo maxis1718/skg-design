@@ -14534,5 +14534,385 @@
       "name": "格局 B",
       "note": "書房在右上、客房在下方"
     }
-  ]
+  ],
+  "electrical": {
+    "title": "電與網路",
+    "summary": "・Wi-Fi：UniFi U7 Lite ×2 吸在假天花，廚房一顆、走廊一顆；主機與 PoE 交換器放電視櫃\n・選 UniFi：33 mm 薄圓盤，比 Deco X50-PoE（68.6 mm 高）低調；有線回程，可把攝影機分到獨立網段\n・攝影機：Aqara Camera E1 ×3，倒吊天花角，USB-C 由天花電源供電；女傭房與浴室不裝，裝好後告知女傭位置\n・選 E1：69 × 69 × 104 mm，比 Camera Hub G3（123.4 × 85.1 × 67.8 mm）小一圈，2K、360° 旋轉\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "sources": [
+      {
+        "label": "Aqara Camera E1 specs",
+        "url": "https://www.aqara.com/en/product/camera-e1-specs/"
+      },
+      {
+        "label": "Aqara Camera Hub G3 specs",
+        "url": "https://aqara.cn/en/product/camera-hub-g3/specs"
+      },
+      {
+        "label": "UniFi U7 Lite",
+        "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+      },
+      {
+        "label": "UniFi U6+",
+        "url": "https://techspecs.ui.com/unifi/wifi/u6-plus"
+      },
+      {
+        "label": "TP-Link Deco X50-PoE",
+        "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50-poe/"
+      },
+      {
+        "label": "UniFi Cloud Gateway Ultra",
+        "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
+      },
+      {
+        "label": "UniFi USW Lite 8 PoE",
+        "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
+      }
+    ],
+    "points": [
+      {
+        "id": "ceil-living",
+        "code": "P-01",
+        "kind": "ceiling-power",
+        "x": 427.9,
+        "y": 174.1,
+        "place": "客廳陽台門左側天花角",
+        "mount": "ceiling",
+        "name": "天花電源 · 客廳攝影機",
+        "notes": "・給客廳攝影機，假天花內藏 5V USB-C 電源\n・出線孔對準攝影機底座，線不外露\n・此處若無假天花，改沿牆角走細線槽"
+      },
+      {
+        "id": "cam-living",
+        "code": "CAM-01",
+        "kind": "camera",
+        "x": 431.6,
+        "y": 177.6,
+        "place": "客廳陽台門左側天花角",
+        "mount": "ceiling",
+        "aim": 36,
+        "name": "攝影機 · 客餐廳",
+        "product": "Aqara Camera E1",
+        "notes": "・倒吊天花，App 內翻轉畫面\n・沙發面向東邊電視，這顆在座位左後方，看電視時不會進入視線\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・坐餐桌東側時在右上角，白色機身貼角，存在感低"
+      },
+      {
+        "id": "sock-dining-n",
+        "code": "S-01",
+        "kind": "socket",
+        "x": 427.4,
+        "y": 182.5,
+        "place": "客廳西牆 · 餐桌北端",
+        "mount": 30,
+        "name": "插座 · 餐桌北",
+        "notes": "・餐桌旁，給火鍋、筆電、桌燈\n・13A 雙孔，離地 30（示意）"
+      },
+      {
+        "id": "sock-dining-s",
+        "code": "S-02",
+        "kind": "socket",
+        "x": 427.4,
+        "y": 217,
+        "place": "客廳西牆 · 餐桌南端",
+        "mount": 30,
+        "name": "插座 · 餐桌南",
+        "notes": "・13A 雙孔，離地 30（示意）"
+      },
+      {
+        "id": "ceil-foyer",
+        "code": "P-02",
+        "kind": "ceiling-power",
+        "x": 581.6,
+        "y": 342.6,
+        "place": "玄關走道東牆天花",
+        "mount": "ceiling",
+        "name": "天花電源 · 玄關攝影機",
+        "notes": "・給玄關攝影機，做法同客廳"
+      },
+      {
+        "id": "cam-foyer",
+        "code": "CAM-02",
+        "kind": "camera",
+        "x": 581,
+        "y": 347.2,
+        "place": "玄關走道東牆天花",
+        "mount": "ceiling",
+        "aim": -120,
+        "name": "攝影機 · 廚房門與玄關",
+        "product": "Aqara Camera E1",
+        "notes": "・圖上第二個「?」位置，靠大門\n・坐沙發時在右前方約 70°、5 m 外，多半被走道牆角擋住\n・預設看廚房門與走道，可轉到大門與客廳\n・不選第一個「?」：太靠近電視，看電視時一直在視線內"
+      },
+      {
+        "id": "ceil-kid",
+        "code": "P-03",
+        "kind": "ceiling-power",
+        "x": 337.6,
+        "y": 227.6,
+        "place": "小孩房門上方天花角",
+        "mount": "ceiling",
+        "name": "天花電源 · 小孩房攝影機",
+        "notes": "・給小孩房攝影機，做法同客廳"
+      },
+      {
+        "id": "cam-kid",
+        "code": "CAM-03",
+        "kind": "camera",
+        "x": 341.4,
+        "y": 226.6,
+        "place": "小孩房門上方天花角",
+        "mount": "ceiling",
+        "aim": -130,
+        "name": "攝影機 · 小孩房",
+        "product": "Aqara Camera E1",
+        "notes": "・門上方天花角，進門時在頭頂後方\n・從房內看貼在門框上角，不正對床\n・預設看全房，可轉向窗邊"
+      },
+      {
+        "id": "sock-bed-n",
+        "code": "S-03",
+        "kind": "socket",
+        "x": 187.3,
+        "y": 196.4,
+        "place": "主臥西牆 · 床頭北側",
+        "mount": 60,
+        "name": "插座 · 床頭北",
+        "notes": "・床頭櫃上方，手機充電、床頭燈\n・13A 雙孔＋USB-C，離地 60（示意，依床頭櫃高度）"
+      },
+      {
+        "id": "sock-bed-s",
+        "code": "S-04",
+        "kind": "socket",
+        "x": 187.3,
+        "y": 240.3,
+        "place": "主臥西牆 · 床頭南側",
+        "mount": 60,
+        "name": "插座 · 床頭南",
+        "notes": "・同北側，離地 60（示意）"
+      },
+      {
+        "id": "sock-mbalcony",
+        "code": "S-05",
+        "kind": "socket",
+        "x": 263,
+        "y": 170.2,
+        "place": "主臥陽台 · 陽台門右側",
+        "mount": 30,
+        "name": "插座 · 主臥陽台",
+        "notes": "・戶外防水型，IP66 掀蓋\n・離地 30（示意）",
+        "room": "master"
+      },
+      {
+        "id": "sock-bath1",
+        "code": "S-06",
+        "kind": "socket",
+        "x": 259.2,
+        "y": 304,
+        "place": "主浴鏡櫃內 · 靠水龍頭端",
+        "mount": 120,
+        "name": "刮鬍刀插座 · 主浴鏡櫃",
+        "notes": "・鏡櫃內左端，給電動牙刷、刮鬍刀\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）\n・浴室迴路須 30 mA RCD；一般 13A 插座與淋浴區距離由電工依 SS 638 確認\n・離地 120（示意，鏡櫃內）",
+        "room": "master"
+      },
+      {
+        "id": "hub",
+        "code": "NET-00",
+        "kind": "hub",
+        "x": 575.2,
+        "y": 214,
+        "place": "電視櫃中間抽屜",
+        "mount": 30,
+        "name": "網路主機 · 電視櫃",
+        "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE",
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm，4 埠 PoE+，共 52 W，無風扇\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+      },
+      {
+        "id": "data-tv",
+        "code": "D-01",
+        "kind": "data",
+        "x": 582.2,
+        "y": 203,
+        "place": "電視牆 · 電視櫃後方",
+        "mount": 30,
+        "name": "網路孔 · 電視櫃",
+        "notes": "・電視、遊戲機走有線\n・離地 30，藏在電視櫃後方"
+      },
+      {
+        "id": "data-ne",
+        "code": "D-02",
+        "kind": "data",
+        "x": 418.2,
+        "y": 202,
+        "place": "東北房東牆",
+        "mount": 30,
+        "name": "網路孔 · 東北房",
+        "notes": "・做書房時接電腦，做客房時接電視\n・離地 30（示意）"
+      },
+      {
+        "id": "data-s",
+        "code": "D-03",
+        "kind": "data",
+        "x": 342.5,
+        "y": 309,
+        "place": "南側房東牆",
+        "mount": 30,
+        "name": "網路孔 · 南側房",
+        "notes": "・做客房時接電視追劇，做書房時接電腦\n・離地 30（示意）"
+      },
+      {
+        "id": "data-master",
+        "code": "D-04",
+        "kind": "data",
+        "x": 245,
+        "y": 246,
+        "place": "主臥天花",
+        "mount": "ceiling",
+        "name": "預留網路線 · 主臥天花",
+        "notes": "・預留一條 Cat6，先不裝 AP\n・實測主臥訊號不足再加一台 U7 Lite"
+      },
+      {
+        "id": "ap-kitchen",
+        "code": "AP-01",
+        "kind": "ap",
+        "x": 536,
+        "y": 313,
+        "place": "廚房假天花 · 走道中間",
+        "mount": "ceiling",
+        "name": "Wi-Fi AP · 廚房",
+        "product": "UniFi U7 Lite",
+        "notes": "・Ø171.5 × 33 mm 白色圓盤，貼在白色假天花上像一盞薄吸頂燈\n・PoE 供電，最大 13 W\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩"
+      },
+      {
+        "id": "ap-corridor",
+        "code": "AP-02",
+        "kind": "ap",
+        "x": 347,
+        "y": 248,
+        "place": "走廊假天花 · 北側兩房門之間",
+        "mount": "ceiling",
+        "name": "Wi-Fi AP · 走廊",
+        "product": "UniFi U7 Lite",
+        "notes": "・在東北房門外，北側兩間房門之間\n・離主臥床約 4.8 m、東北房與南側房約 3–4 m、小孩房約 2.5 m\n・按摩椅與客房追劇都在這顆範圍內"
+      }
+    ],
+    "runs": [
+      {
+        "to": "ap-kitchen",
+        "path": [
+          [
+            575.2,
+            214
+          ],
+          [
+            580,
+            214
+          ],
+          [
+            580,
+            262
+          ],
+          [
+            568,
+            276
+          ],
+          [
+            568,
+            324
+          ],
+          [
+            548,
+            324
+          ],
+          [
+            536,
+            313
+          ]
+        ]
+      },
+      {
+        "to": "ap-corridor",
+        "path": [
+          [
+            580,
+            255
+          ],
+          [
+            347,
+            255
+          ],
+          [
+            347,
+            248
+          ]
+        ]
+      },
+      {
+        "to": "data-ne",
+        "path": [
+          [
+            423,
+            255
+          ],
+          [
+            423,
+            202
+          ],
+          [
+            418.2,
+            202
+          ]
+        ]
+      },
+      {
+        "to": "data-s",
+        "path": [
+          [
+            352,
+            255
+          ],
+          [
+            346.5,
+            263.8
+          ],
+          [
+            346.5,
+            309
+          ],
+          [
+            342.5,
+            309
+          ]
+        ]
+      },
+      {
+        "to": "data-master",
+        "path": [
+          [
+            347,
+            255
+          ],
+          [
+            245,
+            255
+          ],
+          [
+            245,
+            246
+          ]
+        ]
+      },
+      {
+        "to": "data-tv",
+        "path": [
+          [
+            575.2,
+            214
+          ],
+          [
+            575.2,
+            203
+          ],
+          [
+            582.2,
+            203
+          ]
+        ]
+      }
+    ]
+  }
 }

@@ -27,6 +27,8 @@ const num=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:1});
 const statusNames={annotated:'原圖標註',scaled:'圖面估算',design:'設計配置',fit:'配適設計'};
 let elevView={},elevState='closed';
 let roomId='floor', objectId=null, showDims=true, showObjects=true;
+// Power & network layer (⚡): off by default, URL ?power=1 is the only state. powerId = selected point.
+let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=null;
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
@@ -97,7 +99,64 @@ function buildPlan(){
     hit.addEventListener('pointerenter',e=>showTip(e,object(o.id)));hit.addEventListener('pointermove',positionTip);hit.addEventListener('pointerleave',hideTip);
     hit.addEventListener('click',e=>{e.stopPropagation();selectObject(o.id);hideTip();});$('#object-hits').append(hit);
   }
+  buildPower();
 }
+// ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
+const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機'};
+const powerPoints=()=>project.electrical?.points||[];
+const powerPoint=id=>powerPoints().find(p=>p.id===id);
+const powerMount=p=>p.mount==='ceiling'?t('天花'):tf('離地 {h} cm',{h:p.mount});
+function inPoly(x,y,poly){let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const[xi,yi]=poly[i],[xj,yj]=poly[j];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c;}return c;}
+const powerRoom=p=>project.rooms.find(r=>inPoly(p.x,p.y,r.polygon_pt))?.id||p.room||null;
+function powerGlyph(p){
+  const g=svgEl('g',{class:'power-mark','data-power':p.id,transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
+  const O='#d9731c',B='#2f68a6',C='#24443b';
+  if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));}
+  else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
+  else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
+  else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
+  else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
+  else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
+  g.append(svgEl('circle',{class:'pm-ring',r:p.kind==='ap'?4.6:4.1}),svgEl('circle',{class:'pm-hit',r:5}));
+  g.addEventListener('pointerenter',e=>showTip(e,{name:p.name,code:p.code}));g.addEventListener('pointermove',positionTip);g.addEventListener('pointerleave',hideTip);
+  g.addEventListener('click',e=>{e.stopPropagation();hideTip();selectPower(p.id);});
+  g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPower(p.id);}});
+  return g;
+}
+function buildPower(){
+  const layer=$('#power-layer');if(!layer)return;layer.replaceChildren();const el=project.electrical;if(!el)return;
+  const under=svgEl('g',{class:'power-under'});
+  for(const p of el.points){
+    if(p.kind==='ap')under.append(svgEl('circle',{cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
+    if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
+      under.append(svgEl('path',{class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
+  }
+  for(const r of el.runs||[])under.append(svgEl('polyline',{class:'power-run',points:r.path.map(q=>q.join(',')).join(' ')}));
+  layer.append(under);
+  const marks=svgEl('g',{class:'power-marks'});for(const p of el.points)marks.append(powerGlyph(p));layer.append(marks);
+  renderPowerLayer();
+}
+function renderPowerLayer(){
+  const btn=$('#toggle-power');btn.classList.toggle('active',showPower);btn.setAttribute('aria-pressed',String(showPower));
+  $('#power-layer').style.display=showPower?'':'none';
+  $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
+  const lg=$('#power-legend');lg.hidden=!showPower;
+  lg.innerHTML=Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
+}
+function selectPower(id){
+  if(!powerPoint(id))return;powerId=id;objectId=null;
+  $$('.object-hit').forEach(z=>z.classList.remove('selected'));renderSelectedDimensions();
+  renderPowerLayer();renderInspector();
+  if(matchMedia('(max-width:900px)').matches)$('#inspector').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function powerSummary(){
+  const el=project.electrical,pts=el.points.filter(p=>roomId==='floor'||powerRoom(p)===roomId);
+  const kinds=Object.keys(POWER_KINDS).filter(k=>pts.some(p=>p.kind===k));
+  const counts=kinds.map(k=>`<span><i class="pk pk-${k}"></i>${esc(t(POWER_KINDS[k]))} <b>${pts.filter(p=>p.kind===k).length}</b></span>`).join('');
+  const rows=kinds.map(k=>pts.filter(p=>p.kind===k).map(p=>`<button class="power-row" data-power-open="${esc(p.id)}"><i class="pk pk-${k}"></i><span>${esc(p.name)}</span><small>${esc(p.code)}</small></button>`).join('')).join('');
+  return `<h2>${esc(el.title)}</h2><div class="power-counts">${counts||esc(t('此空間沒有電與網路點位'))}</div>${roomId==='floor'?`<p class="inspector-text">${esc(el.summary)}</p>`:''}<div class="power-list">${rows}</div>${roomId==='floor'?`<p class="power-sources">${el.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`:''}`;
+}
+function bindPowerRows(){$$('[data-power-open]').forEach(b=>b.onclick=()=>selectPower(b.dataset.powerOpen));}
 function renderKitchenVersion(){
  const version=kitchenVersion();if(!version)return;
  $('#kitchen-version').setAttribute('aria-label',t('切換廚房方案'));
@@ -213,7 +272,7 @@ function positionTip(e){
 }
 function hideTip(){$('#tooltip').hidden=true;}
 function selectRoom(id,{keepObject=false}={}){
-  if(id!=='floor'&&!room(id))return;roomId=id;if(!keepObject)objectId=null;
+  if(id!=='floor'&&!room(id))return;roomId=id;if(!keepObject){objectId=null;powerId=null;}
   $$('#tabs .tab').forEach(b=>{const selected=b.dataset.room===id;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;});
   $('#main-panel').setAttribute('aria-labelledby','tab-'+id);
   $('#drawing-title').textContent=id==='floor'?t('全屋'):room(id).name;
@@ -224,19 +283,25 @@ function selectRoom(id,{keepObject=false}={}){
   renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();hideTip();
 }
 function selectObject(id,{scroll=false}={}){
-  const o=object(id);if(!o)return;objectId=id;selectRoom(o.room_id,{keepObject:true});
+  const o=object(id);if(!o)return;objectId=id;powerId=null;selectRoom(o.room_id,{keepObject:true});
   if(scroll)$('#main-panel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
 }
 function renderInspector(){
-  const node=$('#inspector');node.hidden=!objectId&&roomId==='floor';
+  const node=$('#inspector');node.hidden=!objectId&&roomId==='floor'&&!showPower;
+  renderPowerLayer();
+  if(showPower&&powerId&&!objectId&&powerPoint(powerId)){
+    const p=powerPoint(powerId);
+    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
+    $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
+  }
   if(objectId){
     const o=object(objectId),r=room(o.room_id),a=actual(o),dims=['w','d','h'].map(k=>a[k]),brand=[a.brand,a.model].filter(Boolean).join(' / ');
     node.innerHTML=`<p class="eyebrow">${esc(o.code)}</p><h2>${esc(o.name)}</h2><div class="big-number">${size(o)}<span>cm</span></div><div class="inspector-note">W × D · ${statuses(o)}</div>${o.source_note?`<p class="inspector-text">${esc(o.source_note)}</p>`:''}${dims.some(v=>v!=null)?`<div class="inspector-pair"><span>${t('實物')}</span><strong>${dims.map(v=>v==null?'—':num(v)).join(' × ')} cm</strong></div>`:''}${brand?`<div class="inspector-pair"><span>${t('品牌')} / ${t('型號')}</span><strong>${esc(brand)}</strong></div>`:''}<button class="inspector-button" id="return-room">${tf('回到{name}概覽',{name:r.name})}</button>`;
     $('#return-room').onclick=()=>selectRoom(r.id);return;
   }
-  if(roomId==='floor'){node.innerHTML='';return;}
+  if(roomId==='floor'){node.innerHTML=showPower&&project.electrical?powerSummary():'';bindPowerRows();return;}
   const r=room(roomId),p=r.parts[0];
-  node.innerHTML=`<div class="big-number">${roomSize(r)}<span>cm</span></div><div class="inspector-note">${esc(p.label)}</div><p class="inspector-text">${r.focus}</p>`;
+  node.innerHTML=`<div class="big-number">${roomSize(r)}<span>cm</span></div><div class="inspector-note">${esc(p.label)}</div><p class="inspector-text">${r.focus}</p>${showPower&&project.electrical?`<hr class="inspector-rule">${powerSummary()}`:''}`;bindPowerRows();
 }
 function renderDetails(){
   if(roomId==='floor'){
@@ -264,6 +329,7 @@ function buildReference(){
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
+$('#toggle-power').onclick=()=>{showPower=!showPower;powerId=null;const u=new URL(location.href);if(showPower)u.searchParams.set('power','1');else u.searchParams.delete('power');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderInspector();};
 $('#object-search').addEventListener('input',renderInventory);
 $('#show-source').onclick=()=>{$('#source-dialog').showModal();};$('#close-source').onclick=()=>$('#source-dialog').close();
 $$('[data-source]').forEach(b=>b.onclick=()=>{$$('[data-source]').forEach(x=>x.classList.toggle('active',x===b));$('#source-image').src=originalSources[b.dataset.source];$('#source-caption').textContent=b.dataset.source==='new'?t('新格局來源。原圖保留原始標註（mm）；互動圖冊已統一換算 cm。'):t('原始格局，僅作比較與 5 m 比例尺校驗。原 PDF 圖面與文字為左右鏡像，此處忠實保留。');});
@@ -275,7 +341,7 @@ $('#layout-version').addEventListener('click',e=>{const b=e.target.closest('[dat
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,script,style';
+const DYNAMIC='#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -296,5 +362,5 @@ applyStatic();syncKitchenURL();
 buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)?hash:'floor');
 // Expose a read-only snapshot for focused QA and efficient future updates.
-window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
+window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
 })();
