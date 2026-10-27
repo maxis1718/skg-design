@@ -148,3 +148,4 @@ details>summary{font-size:15px}.auxiliary summary{font-size:14px}
 /* Bathrooms: narrow free floor between fixtures, so the size line is set smaller. */
 .room-label[data-label-room^="bath"] .size{font-size:3.1px}
 .version-toolbar .seg{flex-wrap:nowrap}.version-toolbar .seg .tool{min-width:44px;min-height:36px;padding:7px 16px;text-align:center}.version-group{flex-wrap:nowrap}.version-label{white-space:nowrap}
+.drawing-head .toolbar{margin-left:auto}

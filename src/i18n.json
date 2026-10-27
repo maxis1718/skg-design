@@ -403,8 +403,8 @@
   "主臥西牆 · 床頭北側": "Master west wall · north of the bed head",
   "主臥西牆 · 床頭南側": "Master west wall · south of the bed head",
   "主臥門內北側": "Inside master door, north side",
-  "主臥陽台 · 陽台門右側": "Master balcony · right of the balcony door",
-  "主臥陽台": "Master bedroom balcony",
+  "主臥陽台 · 陽台門右側": "Master Balcony · right of the balcony door",
+  "主臥陽台": "Master Balcony",
   "主要備料、瀝水區": "Main prep and draining area",
   "主要內寬 × 深": "Main internal width × depth",
   "主要區": "Main area",
@@ -652,8 +652,8 @@
   "客廳東牆 · 清淨機後": "Living east wall · behind the purifier",
   "客廳西牆 · 餐桌北端": "Living west wall · north end of the dining table",
   "客廳西牆 · 餐桌南端": "Living west wall · south end of the dining table",
-  "客廳陽台": "Living-room balcony",
-  "客廳陽台門左側天花角": "Ceiling corner left of the living balcony door",
+  "客廳陽台": "Balcony",
+  "客廳陽台門左側天花角": "Ceiling corner left of the balcony door",
   "客房 B 方案：拆 120 衣櫃，LINNMON 100 × 60 書桌": "Guest scheme B: 120 wardrobe removed, LINNMON 100 × 60 desk",
   "客房 · 北窗": "Guest room · north window",
   "客房 · 南窗": "Guest room · south window",
@@ -1417,8 +1417,9 @@
   "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊南北向（垂直客廳滑門），曬被子不擋客廳採光\n・離西牆 55、置中陽台深度": "・SMARTLUX LITE ceiling-mounted, 113 × 40\n・Lowers 6.6–130\n・Long axis north–south (perpendicular to the living-room slider) so drying bedding doesn't block living-room sun\n・55 off the west wall, centred in balcony depth",
   "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離西牆 55": "・SMARTLUX LITE ceiling-mounted 113 × 40, lowers 6.6–130\n・Balcony west end, long axis north–south, 55 off the west wall",
   "・含底座 35 × 35，背貼陽台西牆、牆垛北側，不碰玻璃門\n・背後低位插座（S-09）": "・35 × 35 incl. dock, back against the balcony west wall north of the pier, clear of the glass door\n・Low socket behind (S-09)",
-  "客廳陽台 · 西牆（底座後）": "Living balcony · west wall (behind dock)",
+  "客廳陽台 · 西牆（底座後）": "Balcony · west wall (behind dock)",
   "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。": "Balcony Dreame dock moved against the west wall; drying rack turned north–south so bedding doesn't block living-room sun.",
-  "方案切換鈕只留字母 A／B／C，加大點擊範圍。": "Scheme toggles show just the letters A / B / C, with larger tap targets."
+  "方案切換鈕只留字母 A／B／C，加大點擊範圍。": "Scheme toggles show just the letters A / B / C, with larger tap targets.",
+  "英文名：Balcony、Master Balcony；工具列固定靠右。": "English names: Balcony, Master Balcony; toolbar always right-aligned."
  }
 }

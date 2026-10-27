@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R41",
+    "revision": "R42",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -1104,7 +1104,7 @@
         "待確認": "・滑門開啟側，確認櫃前通行\n・櫃體防潑水、櫃腳墊高排水"
       },
       "name": "主臥陽台",
-      "english": "Master balcony",
+      "english": "Master Balcony",
       "number": "08",
       "focus": "西北角收納櫃"
     },
@@ -1210,7 +1210,7 @@
         "鞦韆吊點": "・錨進結構樓板，不可只鎖假天花\n・每點額定 ≥ 150 kg，約人＋座椅的 2 倍\n・座椅兩側到外緣／滑門各約 58，前後擺動各留 ≥ 100"
       },
       "name": "客廳陽台",
-      "english": "Living balcony",
+      "english": "Balcony",
       "number": "09",
       "focus": "曬衣架與鞦韆吊點"
     },
@@ -4262,6 +4262,10 @@
     {
       "id": "C49",
       "text": "方案切換鈕只留字母 A／B／C，加大點擊範圍。"
+    },
+    {
+      "id": "C50",
+      "text": "英文名：Balcony、Master Balcony；工具列固定靠右。"
     }
   ],
   "measurement_policy": {
