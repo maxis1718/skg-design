@@ -668,7 +668,7 @@
   "客房方案 A · 牆面": "Guest room Scheme A · wall",
   "客房方案 B · 牆面": "Guest room Scheme B · wall",
   "客房方案 C · 牆面": "Guest room Scheme C · wall",
-  "客房方案": "Guest room",
+  "客房方案": "Guest scheme",
   "客房書桌 A": "Guest desk A",
   "客房書桌 C": "Guest desk C",
   "客房書桌（A）": "Guest desk (A)",
@@ -787,7 +787,7 @@
   "廚房加入原配置與窗下水槽方案": "Kitchen: original layout and under-window sink scheme added",
   "廚房北牆整面立面：洗烘衣機、冰箱、Dry kitchen；上櫃底 190.5，洗衣機上方活動層板。": "Kitchen north wall elevation: washer-dryer, fridge, Dry kitchen; upper cabinets from 190.5, adjustable shelf above the washer.",
   "廚房方案 B · Wet kitchen": "Kitchen Scheme B · Wet kitchen",
-  "廚房方案": "Kitchen schemes",
+  "廚房方案": "Kitchen scheme",
   "廚房方案字母對調；電器櫃 68 → 60（內 55）；爐右加 20 拉籃；水槽櫃 71.9": "Kitchen scheme letters swapped; appliance cabinet 68 → 60 (55 inside); second 20 pull-out; sink cabinet 71.9",
   "廚房無把手平板門（縫 0.3）；淨水器主機櫃 59.5；鏡櫃深 19，衛浴 2 整面": "Handleless flat kitchen doors (0.3 gaps); purifier cabinet 59.5; mirror cabinets 19 deep, full wall in bath 2",
   "廚房門內北側": "Inside kitchen door, north side",
@@ -1418,6 +1418,7 @@
   "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離西牆 55": "・SMARTLUX LITE ceiling-mounted 113 × 40, lowers 6.6–130\n・Balcony west end, long axis north–south, 55 off the west wall",
   "・含底座 35 × 35，背貼陽台西牆、牆垛北側，不碰玻璃門\n・背後低位插座（S-09）": "・35 × 35 incl. dock, back against the balcony west wall north of the pier, clear of the glass door\n・Low socket behind (S-09)",
   "客廳陽台 · 西牆（底座後）": "Living balcony · west wall (behind dock)",
-  "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。": "Balcony Dreame dock moved against the west wall; drying rack turned north–south so bedding doesn't block living-room sun."
+  "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。": "Balcony Dreame dock moved against the west wall; drying rack turned north–south so bedding doesn't block living-room sun.",
+  "方案切換鈕只留字母 A／B／C，加大點擊範圍。": "Scheme toggles show just the letters A / B / C, with larger tap targets."
  }
 }

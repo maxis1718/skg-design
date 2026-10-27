@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R40",
+    "revision": "R41",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4258,6 +4258,10 @@
     {
       "id": "C48",
       "text": "陽台 Dreame 底座改貼西牆；曬衣架轉南北向，曬被子不擋客廳採光。"
+    },
+    {
+      "id": "C49",
+      "text": "方案切換鈕只留字母 A／B／C，加大點擊範圍。"
     }
   ],
   "measurement_policy": {

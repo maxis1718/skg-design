@@ -1,5 +1,6 @@
 (() => {
 'use strict';
+const shortV=n=>String(n).replace(/^(方案|格局|Scheme|Layout)\s*/i,'');
 const projectSource=JSON.parse(document.getElementById('project-data').textContent);
 const I18N=(()=>{try{return JSON.parse(document.getElementById('i18n-data').textContent);}catch{return {en:{}};}})();
 const langParam=()=>{const v=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();return v==='en'?'en':'zh';};
@@ -157,7 +158,7 @@ function renderPowerLayer(){
 function renderNetVersion(){
   const grp=$('#net-version-group'),seg=$('#net-version'),nets=project.electrical?.nets||[];if(!grp||!seg)return;
   grp.hidden=!showPower||!nets.length;seg.setAttribute('aria-label',t('切換網路方案'));
-  seg.innerHTML=nets.map(n=>`<button type="button" class="tool ${n.id===currentNet()?'active':''}" data-net-version="${esc(n.id)}" aria-pressed="${n.id===currentNet()}" title="${esc(n.note||'')}">${esc(n.name)}</button>`).join('');
+  seg.innerHTML=nets.map(n=>`<button type="button" class="tool ${n.id===currentNet()?'active':''}" data-net-version="${esc(n.id)}" aria-pressed="${n.id===currentNet()}" title="${esc(n.note||'')}">${esc(shortV(n.name))}</button>`).join('');
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
 }
 function chooseNet(id){
@@ -204,7 +205,7 @@ function bindPowerRows(){$$('[data-power-open]').forEach(b=>b.onclick=()=>select
 function renderKitchenVersion(){
  const version=kitchenVersion();if(!version)return;
  $('#kitchen-version').setAttribute('aria-label',t('切換廚房方案'));
- $('#kitchen-version').innerHTML=kitchenVersions().map(v=>`<button type="button" class="tool ${v.id===version.id?'active':''}" data-kitchen-version="${esc(v.id)}" aria-pressed="${v.id===version.id}">${esc(v.name)}</button>`).join('');
+ $('#kitchen-version').innerHTML=kitchenVersions().map(v=>`<button type="button" class="tool ${v.id===version.id?'active':''}" data-kitchen-version="${esc(v.id)}" aria-pressed="${v.id===version.id}" title="${esc(v.name)}">${esc(shortV(v.name))}</button>`).join('');
  const baseline={'kitchen-sink':[462.36,336.28,479.52,350.56],'kitchen-hob':[497.64,337.24,518.88,349.12]};
  for(const[id,source]of Object.entries(baseline)){
    const target=object(id).bounds_pt,sx=(target[2]-target[0])/(source[2]-source[0]),sy=(target[3]-target[1])/(source[3]-source[1]);
@@ -225,14 +226,14 @@ function renderKitchenVersion(){
 function renderGuestVersion(){
  const v=guestVersion(),seg=$('#guest-version');if(!v||!seg){$('#guest-version-group').hidden=true;return;}
  seg.setAttribute('aria-label',t('切換客房方案'));
- seg.innerHTML=guestVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-guest-version="${esc(x.id)}" aria-pressed="${x.id===v.id}">${esc(x.name)}</button>`).join('');
+ seg.innerHTML=guestVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-guest-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
  $('#guest-version-group').hidden=roomId!=='guest';
  $$('[data-guest-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.guestPlan!==v.layout));
  const lab=document.querySelector('[data-label-room="guest"]'),base=layoutSpec()?.labels?.guest||labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
 }
 function renderLayoutVersion(){
  const seg=$('#layout-version');if(!seg)return;seg.setAttribute('aria-label',t('切換格局'));
- seg.innerHTML=(project.layouts||[]).map(x=>`<button type="button" class="tool ${x.id===layoutId?'active':''}" data-layout-version="${esc(x.id)}" aria-pressed="${x.id===layoutId}" title="${esc(x.note||'')}">${esc(x.name)}</button>`).join('');
+ seg.innerHTML=(project.layouts||[]).map(x=>`<button type="button" class="tool ${x.id===layoutId?'active':''}" data-layout-version="${esc(x.id)}" aria-pressed="${x.id===layoutId}" title="${esc(x.note||'')}">${esc(shortV(x.name))}</button>`).join('');
  $('#layout-version-group').hidden=roomId!=='floor';
  $('#layout-a-geometry')?.toggleAttribute('hidden',layoutId!=='layout-a');$('#layout-b-geometry')?.toggleAttribute('hidden',layoutId!=='layout-b');
 }
@@ -372,7 +373,7 @@ function renderInventory(){
 function buildReference(){
   const p=project.measurement_policy;
   $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':Number(c.id.slice(1))<=36?'R31':Number(c.id.slice(1))<=37?'R32':Number(c.id.slice(1))<=39?'R33':Number(c.id.slice(1))<=42?'R34':Number(c.id.slice(1))<=43?'R35':Number(c.id.slice(1))<=44?'R36':Number(c.id.slice(1))<=45?'R37':Number(c.id.slice(1))<=46?'R38':Number(c.id.slice(1))<=47?'R39':'R40'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':Number(c.id.slice(1))<=36?'R31':Number(c.id.slice(1))<=37?'R32':Number(c.id.slice(1))<=39?'R33':Number(c.id.slice(1))<=42?'R34':Number(c.id.slice(1))<=43?'R35':Number(c.id.slice(1))<=44?'R36':Number(c.id.slice(1))<=45?'R37':Number(c.id.slice(1))<=46?'R38':Number(c.id.slice(1))<=47?'R39':Number(c.id.slice(1))<=48?'R40':'R41'}</span>${esc(c.text)}</div>`).join('');
   const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
   const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
   $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;
