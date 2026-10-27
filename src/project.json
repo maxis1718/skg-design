@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R42",
+    "revision": "R43",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4266,6 +4266,10 @@
     {
       "id": "C50",
       "text": "英文名：Balcony、Master Balcony；工具列固定靠右。"
+    },
+    {
+      "id": "C51",
+      "text": "刪除全屋格局 B；新增💡溝通重點清單。"
     }
   ],
   "measurement_policy": {
@@ -16490,11 +16494,6 @@
           "elevation": "guest-wall-lb-c"
         }
       ]
-    },
-    {
-      "id": "layout-a",
-      "name": "格局 B",
-      "note": "書房在右上、客房在下方"
     }
   ],
   "electrical": {
@@ -17880,5 +17879,52 @@
         }
       ]
     }
-  }
+  },
+  "briefing": [
+    {
+      "text": "🔨 廚房兩側全拆，做電器高櫃，靠女傭房牆",
+      "go": [
+        {
+          "room": "kitchen",
+          "kitchen": "kitchen-window-sink"
+        }
+      ]
+    },
+    {
+      "text": "🔨 書房全拆",
+      "go": [
+        {
+          "room": "study"
+        }
+      ]
+    },
+    {
+      "text": "🔨 客房衣櫃拆掉重做",
+      "go": [
+        {
+          "room": "guest",
+          "guest": "guest-a"
+        }
+      ]
+    },
+    {
+      "text": "🔨 兩間浴室鏡櫃拆掉重做",
+      "go": [
+        {
+          "room": "bath1"
+        },
+        {
+          "room": "bath2"
+        }
+      ]
+    },
+    {
+      "text": "🔨 主臥衣櫃拆掉重做",
+      "go": [
+        {
+          "room": "master"
+        }
+      ]
+    }
+  ]
 }
