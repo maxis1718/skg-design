@@ -8,15 +8,15 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | --- | --- | --- |
 | `living` | 客餐廳 | ≈ 560 × 325 |
 | `kitchen` | 廚房 | ≈ 320.5 × 240 |
-| `helper` | 女傭房 | ≈ 107 × 205 |
 | `master` | 主臥 | ≈ 290 × 275 |
 | `kid` | 小孩房 | ≈ 250 × 300 |
 | `study` | 書房 | ≈ 247 × 300 |
 | `guest` | 客房 | ≈ 250 × 290 |
-| `master-balcony` | 主臥陽台 | ≈ 269.7 × 157.9 |
-| `living-balcony` | 客廳陽台 | ≈ 550.3 × 165.1 |
+| `helper` | 女傭房 | ≈ 107 × 205 |
 | `bath1` | 衛浴 1 | ≈ 242.6 × 197.7 |
 | `bath2` | 衛浴 2 | ≈ 247.2 × 197.3 |
+| `living-balcony` | 客廳陽台 | ≈ 550.3 × 165.1 |
+| `master-balcony` | 主臥陽台 | ≈ 269.7 × 157.9 |
 
 ## Objects
 
