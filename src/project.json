@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R46",
+    "revision": "R47",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -625,7 +625,7 @@
         "電視與電視牆": "・Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛\n・中心高 110、下緣 61.8；櫃面到電視 21.8\n・電視牆 387.5：木作底板約 5＋wabi-sabi 淡灰壁紙到天花；分戶牆不打鑿\n・Ø32 暗管：櫃後空腔 → 電視背後\n・局部假天花（底 270）嵌線性洗牆燈",
         "電視櫃兩端留白": "・電視、櫃、沙發同中線，距陽台玻璃 130\n・櫃北端距玻璃 25，南端到牆尾 152.8",
         "餐桌尺寸與款式": "・Dahlia 岩板餐桌 150 × 90 × 75\n・北緣距陽台玻璃 50；南緣到過道 125.1\n・長邊各 2 椅，過道端不放椅\n・陽台端 Tripp Trapp 收進露約 30，拉出最多 40，距玻璃仍約 10",
-        "陽台曬衣架": "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離西牆 55",
+        "陽台曬衣架": "・SMARTLUX LITE 天花吊掛 113 × 40，下降 6.6–130\n・陽台西端，長邊南北向，離收納櫃門 20",
         "沙發與動線": "・沙發 210 × 95，與電視同中線\n・北端距玻璃 25，南端到過道 90.1\n・前緣到電視櫃 90；拉開中抽後仍約 55 可站\n・椅背到餐桌東緣 149.9\n・椅背到螢幕約 227.3，坐姿視距約 180–190",
         "材質與色彩": null
       },
@@ -1347,13 +1347,13 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": 2,
       "notes": {
-        "設計備註": "・西端：天花曬衣架 113 × 40\n・東段：鞦韆天花吊點 ×2，間距 48",
+        "設計備註": "・西北角：收納櫃 105 × 65 × 104.5\n・西端：天花曬衣架\n・東段：鞦韆天花吊點 ×2，間距 48",
         "鞦韆吊點": "・錨進結構樓板，不可只鎖假天花\n・每點額定 ≥ 150 kg，約人＋座椅的 2 倍\n・座椅兩側到外緣／滑門各約 58，前後擺動各留 ≥ 100"
       },
       "name": "客廳陽台",
       "english": "Balcony 1",
       "number": "10",
-      "focus": "曬衣架與鞦韆吊點"
+      "focus": "收納櫃、曬衣架與鞦韆吊點"
     },
     {
       "id": "master-balcony",
@@ -1417,13 +1417,12 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": 2,
       "notes": {
-        "設計備註": "・西北角放櫃 105 × 65 × 104.5，長邊貼西牆、離北緣 10\n・櫃南端到門窗線約 43",
-        "待確認": "・滑門開啟側，確認櫃前通行\n・櫃體防潑水、櫃腳墊高排水"
+        "設計備註": "・收納櫃移到客廳陽台西北角"
       },
       "name": "主臥陽台",
       "english": "Balcony 2",
       "number": "11",
-      "focus": "西北角收納櫃"
+      "focus": "主臥陽台"
     }
   ],
   "objects": [
@@ -1632,9 +1631,9 @@
       "room_id": "living-balcony",
       "label": "Clothes drying rack",
       "bounds_pt": [
-        443.99,
+        452.49,
         128.02,
-        455.33,
+        463.83,
         160.06
       ],
       "plan_horizontal_cm": 40.0,
@@ -1646,7 +1645,7 @@
       "uncertainty_cm": null,
       "notes": "SMARTLUX LITE ceiling-mounted drying rack, 113 x 40 cm. Long axis N-S (perpendicular to the living-room sliding door) so hung bedding does not block sun into the living room. West edge 55 cm off the west balcony wall, centred in balcony depth. Overhead: dashed.",
       "name": "曬衣架",
-      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊南北向（垂直客廳滑門），曬被子不擋客廳採光\n・離西牆 55、置中陽台深度",
+      "source_note": "・SMARTLUX LITE 天花吊掛 113 × 40\n・可下降 6.6–130\n・長邊南北向（垂直客廳滑門），曬被子不擋客廳採光\n・離收納櫃門 20、置中陽台深度",
       "dimensions": {
         "w": {
           "cm": 113,
@@ -3576,15 +3575,15 @@
     },
     {
       "id": "balcony-cabinet",
-      "code": "MBL-01",
-      "room_id": "master-balcony",
+      "code": "LBL-03",
+      "room_id": "living-balcony",
       "name": "陽台收納櫃",
-      "label": "Master balcony cabinet",
+      "label": "Balcony cabinet",
       "bounds_pt": [
-        188.4,
-        139.67,
-        206.83,
-        169.44
+        428.4,
+        120.64,
+        446.83,
+        150.4
       ],
       "dimensions": {
         "w": {
@@ -3605,8 +3604,8 @@
       },
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "105 W x 65 D x 104.5 H cabinet in the master-balcony NW corner: back/long side 105 against the west wall x188.4 (N-S), 65 deep into the balcony, 10 cm off the north edge y136.84 (y 10-115 cm), front facing east.",
-      "source_note": "・105 × 65 × 104.5，長邊 105 貼西牆\n・離北緣 10，門朝東\n・南端到門窗線約 43"
+      "notes": "105 W x 65 D x 104.5 H cabinet moved from the master balcony to the living-balcony NW corner: long side 105 against the west wall x428.4 (N-S, outer edge y120.64 to just north of the Dreame dock y150.44), 65 deep, front facing east.",
+      "source_note": "・105 × 65 × 104.5，長邊 105 貼西牆，門朝東\n・北端貼陽台外緣，南端接掃拖機器人底座\n・西牆淨長約 105，與櫃寬相同，待現場確認"
     },
     {
       "id": "swing-hooks",
@@ -4282,6 +4281,10 @@
     {
       "id": "C54",
       "text": "分頁去編號、重新排序；方案切換接在空間名稱後；英文：Home、Balcony 1／2。"
+    },
+    {
+      "id": "C55",
+      "text": "陽台收納櫃移到客廳陽台西北角；方案切換拿掉「方案」字、手機也放在標題列。"
     }
   ],
   "measurement_policy": {

@@ -75,7 +75,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-18 | `guest-desk-lb-b` | 客房木作書桌（B） | 60 × 40 |
 | GST-19 | `guest-chair-lb-b` | 客房書椅（B） | 45 × 45 |
 | GST-20 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
-| MBL-01 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
+| LBL-03 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
 | LBL-01 | `swing-hooks` | 鞦韆 · 天花吊點 ×2 | 50 × 40 |
 | LIV-08 | `air-purifier` | 空氣清淨機 Electrolux Pure A9 | 37 × 37 |
 | LBL-02 | `robot-vacuum` | 掃拖機器人 Dreame H14 Ultra（含底座） | 35 × 35 |

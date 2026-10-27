@@ -165,3 +165,6 @@ td .item-code,.table-muted,.change-item span,.elev-figure figcaption,.power-row 
 .tabs{gap:0;scrollbar-width:none}.tabs::-webkit-scrollbar{height:0}.tabs:hover{scrollbar-width:thin}.tabs:hover::-webkit-scrollbar{height:6px}.tabs .tab{padding-left:12px;padding-right:12px}.tab[aria-selected=true]:after{left:10px;right:10px}
 @media(min-width:761px){.drawing-head{min-height:86px}.drawing-head h2{white-space:nowrap}.drawing-head .version-toolbar{border:0;padding:0;margin:0 auto 0 8px;flex:0 1 auto}}
 @media(max-width:760px){.drawing-head .version-toolbar{order:3;flex-basis:100%;border:0;padding:0}}
+@media(max-width:760px){.drawing-head{gap:8px 10px}.drawing-head .version-toolbar{order:0;flex-basis:auto;flex:0 1 auto}.drawing-head .toolbar{margin-left:auto}.version-toolbar .seg .tool{min-width:40px;padding:7px 12px}}
+@media(max-width:760px){.drawing-head{gap:6px}.drawing-head h2{white-space:nowrap}.drawing-head .version-toolbar .seg .tool{min-width:32px;min-height:34px;padding:5px 9px}.drawing-head .toolbar .tool{padding:5px 8px}.drawing-head .toolbar{gap:2px}}
+@media(max-width:760px){.drawing-head .toolbar{flex:0 0 auto;width:auto}}
