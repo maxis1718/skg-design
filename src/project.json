@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R44",
+    "revision": "R45",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4274,6 +4274,10 @@
     {
       "id": "C52",
       "text": "廚房立面拿掉「空間規劃」視圖；洗衣機／冰箱北牆改稱「正立面」。"
+    },
+    {
+      "id": "C53",
+      "text": "廚房整面立面恢復；💡重點直接跳到該立面。"
     }
   ],
   "measurement_policy": {
@@ -4621,7 +4625,7 @@
       ],
       "include": "kitchen-b",
       "views": [
-        "tower-front",
+        "wall",
         "tower-section"
       ],
       "focus": [
@@ -6609,6 +6613,142 @@
           ],
           "marginR": 4.2,
           "clip": true
+        },
+        {
+          "id": "wall",
+          "name": "整面立面",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "width": 320.5,
+          "font": 8,
+          "units": [
+            {
+              "ref": "end",
+              "x": 0
+            },
+            {
+              "ref": "spice",
+              "x": 5
+            },
+            {
+              "ref": "oven",
+              "x": 25
+            },
+            {
+              "ref": "spice-r",
+              "x": 105
+            },
+            {
+              "ref": "dw",
+              "x": 125
+            },
+            {
+              "ref": "sink",
+              "x": 188.6
+            },
+            {
+              "ref": "tower",
+              "x": 260.5
+            },
+            {
+              "ref": "upper-h",
+              "x": 0,
+              "y": 165
+            },
+            {
+              "ref": "upper-b",
+              "x": 110,
+              "y": 165
+            }
+          ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 20,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 0,
+              "y": 87,
+              "w": 260.5,
+              "h": 3,
+              "label": "岩板檯面 · 面 90",
+              "labelX": 148,
+              "labelY": 95
+            },
+            {
+              "type": "hob",
+              "x": 27.5,
+              "y": 90,
+              "w": 75,
+              "label": "瓦斯爐"
+            },
+            {
+              "type": "sink",
+              "x": 194.55,
+              "y": 90,
+              "w": 60,
+              "depth": 20,
+              "label": "水槽",
+              "bowlWhen": "open"
+            },
+            {
+              "type": "window",
+              "x": 192.5,
+              "y": 110,
+              "w": 60,
+              "h": 130,
+              "label": "外窗 60",
+              "sub": "到天花 · 窗台高度待量"
+            },
+            {
+              "type": "clear",
+              "x0": 102.5,
+              "x1": 194.55,
+              "y": 122,
+              "label": "備菜區 92"
+            },
+            {
+              "type": "note",
+              "x": 0,
+              "y": 243,
+              "label": "← 門端",
+              "anchor": "start",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            5,
+            25,
+            105,
+            125,
+            188.6,
+            260.5,
+            320.5
+          ],
+          "totalLabel": "320.5（原標）",
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ],
+          "rightChain": {
+            "ref": "tower"
+          }
         }
       ]
     },
@@ -7362,6 +7502,139 @@
           ],
           "marginR": 4.2,
           "clip": true
+        },
+        {
+          "id": "wall",
+          "name": "整面立面",
+          "kind": "front",
+          "frontLabels": false,
+          "detail": false,
+          "width": 320.5,
+          "font": 8,
+          "units": [
+            {
+              "ref": "tower",
+              "x": 0
+            },
+            {
+              "ref": "spice",
+              "x": 60
+            },
+            {
+              "ref": "oven",
+              "x": 80
+            },
+            {
+              "ref": "spice-r",
+              "x": 160
+            },
+            {
+              "ref": "sink",
+              "x": 180
+            },
+            {
+              "ref": "dw",
+              "x": 256.9
+            },
+            {
+              "ref": "upper-h",
+              "x": 60,
+              "y": 165
+            }
+          ],
+          "under": [
+            {
+              "type": "hood",
+              "slim": true,
+              "x": 75,
+              "y": 160,
+              "w": 90,
+              "h": 5,
+              "label": "薄型排油煙機"
+            }
+          ],
+          "extras": [
+            {
+              "type": "worktop",
+              "x": 60,
+              "y": 87,
+              "w": 260.5,
+              "h": 3,
+              "label": "岩板檯面 · 面 90",
+              "labelX": 288.7,
+              "labelY": 95
+            },
+            {
+              "type": "hob",
+              "x": 82.5,
+              "y": 90,
+              "w": 75,
+              "label": "瓦斯爐"
+            },
+            {
+              "type": "sink",
+              "x": 190.5,
+              "y": 90,
+              "w": 60,
+              "depth": 20,
+              "label": "水槽",
+              "bowlWhen": "open"
+            },
+            {
+              "type": "window",
+              "x": 192.5,
+              "y": 110,
+              "w": 60,
+              "h": 130,
+              "label": "外窗 60",
+              "sub": "到天花 · 窗台高度待量"
+            },
+            {
+              "type": "clear",
+              "x0": 157.5,
+              "x1": 190.5,
+              "y": 122,
+              "label": "備菜區 33"
+            },
+            {
+              "type": "clear",
+              "x0": 250.5,
+              "x1": 320.5,
+              "y": 122,
+              "label": "水槽右側 70"
+            },
+            {
+              "type": "note",
+              "x": 0,
+              "y": 243,
+              "label": "← 門端",
+              "anchor": "start",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            0,
+            60,
+            80,
+            160,
+            180,
+            256.9,
+            320.5
+          ],
+          "totalLabel": "320.5（原標）",
+          "levels": [
+            {
+              "y": 90,
+              "label": "檯面"
+            },
+            {
+              "y": 165,
+              "label": "吊櫃底"
+            }
+          ],
+          "leftChain": {
+            "ref": "tower"
+          }
         }
       ]
     },
@@ -7388,7 +7661,7 @@
       "object_id": "kitchen-hob",
       "title": "瓦斯爐 · 烤箱 · 窄拉籃",
       "views": [
-        "hob-run",
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -7451,6 +7724,7 @@
       "object_id": "spice-pullout",
       "title": "窄拉籃",
       "views": [
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -7465,6 +7739,7 @@
       "object_id": "spice-pullout-r",
       "title": "窄拉籃 · 右",
       "views": [
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -8958,7 +9233,7 @@
       "object_id": "kitchen-oven",
       "title": "嵌入式烤箱",
       "views": [
-        "hob-run"
+        "wall"
       ],
       "focus": [
         "oven"
@@ -8991,7 +9266,7 @@
       "object_id": "dishwasher",
       "title": "洗碗機 · 水槽區",
       "views": [
-        "sink-run"
+        "wall"
       ],
       "focus": [
         "dw"
@@ -9055,7 +9330,7 @@
       "object_id": "kitchen-sink",
       "title": "水槽區",
       "views": [
-        "sink-run"
+        "wall"
       ],
       "focus": [
         "sink"
@@ -9961,6 +10236,7 @@
       "object_id": "kitchen-lower-worktop",
       "title": "Wet kitchen",
       "views": [
+        "wall",
         "hob-run",
         "sink-run"
       ],
@@ -11011,6 +11287,7 @@
       "object_id": "kitchen-upper-worktop",
       "title": "Dry kitchen",
       "views": [
+        "north-wall",
         "dry-wall",
         "dry-base"
       ],
@@ -11163,7 +11440,7 @@
       ],
       "include": "kitchen-b2",
       "views": [
-        "tower-front",
+        "wall",
         "tower-section"
       ],
       "focus": [
@@ -11193,7 +11470,7 @@
       "object_id": "kitchen-hob",
       "title": "瓦斯爐 · 烤箱 · 窄拉籃",
       "views": [
-        "hob-run",
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -11261,6 +11538,7 @@
       "object_id": "spice-pullout",
       "title": "窄拉籃",
       "views": [
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -11275,6 +11553,7 @@
       "object_id": "spice-pullout-r",
       "title": "窄拉籃 · 右",
       "views": [
+        "wall",
         "spice-section"
       ],
       "focus": [
@@ -11289,7 +11568,7 @@
       "object_id": "kitchen-oven",
       "title": "嵌入式烤箱",
       "views": [
-        "hob-run"
+        "wall"
       ],
       "focus": [
         "oven"
@@ -11322,7 +11601,7 @@
       "object_id": "dishwasher",
       "title": "洗碗機 · 水槽區",
       "views": [
-        "sink-run"
+        "wall"
       ],
       "focus": [
         "dw"
@@ -11390,7 +11669,7 @@
       "object_id": "kitchen-sink",
       "title": "水槽區",
       "views": [
-        "sink-run"
+        "wall"
       ],
       "focus": [
         "sink"
@@ -11423,6 +11702,7 @@
       "object_id": "kitchen-lower-worktop",
       "title": "Wet kitchen",
       "views": [
+        "wall",
         "hob-run",
         "sink-run"
       ],
@@ -16033,7 +16313,8 @@
       "object_id": "fridge",
       "title": "冰箱 · 北牆",
       "views": [
-        "north-wall"
+        "north-wall",
+        "wd-section"
       ],
       "focus": [
         "nw-fridge"
@@ -17613,7 +17894,8 @@
       "go": [
         {
           "room": "kitchen",
-          "kitchen": "kitchen-window-sink"
+          "kitchen": "kitchen-window-sink",
+          "object": "kitchen-lower-worktop"
         }
       ]
     },
@@ -17638,10 +17920,12 @@
       "text": "🔨 兩間浴室鏡櫃拆掉重做",
       "go": [
         {
-          "room": "bath1"
+          "room": "bath1",
+          "object": "bath1-mirror-cabinet"
         },
         {
-          "room": "bath2"
+          "room": "bath2",
+          "object": "bath2-mirror-cabinet"
         }
       ]
     },
@@ -17649,7 +17933,8 @@
       "text": "🔨 主臥衣櫃拆掉重做",
       "go": [
         {
-          "room": "master"
+          "room": "master",
+          "object": "master-wardrobe-left"
         }
       ]
     }

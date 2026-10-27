@@ -1428,6 +1428,8 @@
   "關鍵改動與溝通重點": "Key changes and talking points",
   "關閉": "Close",
   "方案": "Layout",
-  "廚房立面拿掉「空間規劃」視圖；洗衣機／冰箱北牆改稱「正立面」。": "Kitchen elevations: 'Space plan' view removed; washer/fridge north wall now labelled 'Front elevation'."
+  "廚房立面拿掉「空間規劃」視圖；洗衣機／冰箱北牆改稱「正立面」。": "Kitchen elevations: 'Space plan' view removed; washer/fridge north wall now labelled 'Front elevation'.",
+  "整面立面": "Full run",
+  "廚房整面立面恢復；💡重點直接跳到該立面。": "Kitchen 'Full run' elevation restored; 💡 key points jump straight to it."
  }
 }
