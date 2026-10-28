@@ -168,3 +168,6 @@ td .item-code,.table-muted,.change-item span,.elev-figure figcaption,.power-row 
 @media(max-width:760px){.drawing-head{gap:8px 10px}.drawing-head .version-toolbar{order:0;flex-basis:auto;flex:0 1 auto}.drawing-head .toolbar{margin-left:auto}.version-toolbar .seg .tool{min-width:40px;padding:7px 12px}}
 @media(max-width:760px){.drawing-head{gap:6px}.drawing-head h2{white-space:nowrap}.drawing-head .version-toolbar .seg .tool{min-width:32px;min-height:34px;padding:5px 9px}.drawing-head .toolbar .tool{padding:5px 8px}.drawing-head .toolbar{gap:2px}}
 @media(max-width:760px){.drawing-head .toolbar{flex:0 0 auto;width:auto}}
+.drawing-head .toolbar .tool,.drawing-head .version-toolbar .seg .tool{height:36px;min-height:0;padding-top:0;padding-bottom:0;display:inline-flex;align-items:center;justify-content:center}.drawing-head .version-toolbar .seg{height:36px;padding:0;gap:0;border:0;box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+@media(max-width:760px){.drawing-head .toolbar .tool,.drawing-head .version-toolbar .seg .tool,.drawing-head .version-toolbar .seg{height:34px}}
+.drawing-head .version-toolbar .seg{box-sizing:border-box;border:1px solid var(--line);box-shadow:none}.drawing-head .version-toolbar .seg .tool{height:100%}
