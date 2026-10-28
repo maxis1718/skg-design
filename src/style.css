@@ -171,3 +171,4 @@ td .item-code,.table-muted,.change-item span,.elev-figure figcaption,.power-row 
 .drawing-head .toolbar .tool,.drawing-head .version-toolbar .seg .tool{height:36px;min-height:0;padding-top:0;padding-bottom:0;display:inline-flex;align-items:center;justify-content:center}.drawing-head .version-toolbar .seg{height:36px;padding:0;gap:0;border:0;box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
 @media(max-width:760px){.drawing-head .toolbar .tool,.drawing-head .version-toolbar .seg .tool,.drawing-head .version-toolbar .seg{height:34px}}
 .drawing-head .version-toolbar .seg{box-sizing:border-box;border:1px solid var(--line);box-shadow:none}.drawing-head .version-toolbar .seg .tool{height:100%}
+.drawing-head .toolbar .icon-tool{min-width:40px;font-size:17px;line-height:1;padding-left:8px;padding-right:8px}.drawing-head .toolbar .icon-tool:not(.active){opacity:.45}
