@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R48",
+    "revision": "R49",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4295,6 +4295,10 @@
     {
       "id": "C56",
       "text": "每個空間平面圖下加待辦清單；調研結果可點開查看。"
+    },
+    {
+      "id": "C57",
+      "text": "新增智能家居分頁：平面圖標示智能裝置、各類方案與待辦；陽台風扇與曬衣架風險提示。"
     }
   ],
   "measurement_policy": {
@@ -16887,7 +16891,7 @@
         "place": "客餐廳 · 陽台落地門",
         "mount": "ceiling",
         "name": "電動窗簾 · 客餐廳",
-        "product": "Aqara 窗簾馬達 CD-M01D ×2",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D） ×2",
         "specs": [
           [
             "軌長",
@@ -16928,7 +16932,7 @@
         "place": "主臥 · 陽台門",
         "mount": "ceiling",
         "name": "電動窗簾 · 主臥",
-        "product": "Aqara 窗簾馬達 CD-M01D",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
         "specs": [
           [
             "軌長",
@@ -16969,7 +16973,7 @@
         "place": "小孩房 · 北窗",
         "mount": "ceiling",
         "name": "電動窗簾 · 小孩房",
-        "product": "Aqara 窗簾馬達 CD-M01D",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
         "specs": [
           [
             "軌長",
@@ -17010,7 +17014,7 @@
         "place": "客房 · 北窗",
         "mount": "ceiling",
         "name": "電動窗簾 · 客房",
-        "product": "Aqara 窗簾馬達 CD-M01D",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
         "specs": [
           [
             "軌長",
@@ -17054,7 +17058,7 @@
         "place": "客房 · 南窗",
         "mount": "ceiling",
         "name": "電動窗簾 · 客房",
-        "product": "Aqara 窗簾馬達 CD-M01D",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
         "specs": [
           [
             "軌長",
@@ -17907,51 +17911,205 @@
   },
   "smart": {
     "title": "智能家居",
-    "summary": "範例：Apple Home 為主、Matter 優先；此段由主管理者替換",
+    "summary": "Apple Home 為唯一日常 App；Aqara Hub M3 走 Zigbee 帶開關、窗簾、感應器與燈條，Apple TV 4K 有線當中樞。Matter over Thread 留作退路，等新加坡本地貨成熟再擴充。",
     "research": "smart-home",
     "categories": [
       {
+        "id": "hub",
+        "name": "中樞",
+        "kinds": [
+          "hub",
+          "data"
+        ],
+        "pick": "Apple TV 4K 有線版當家居中樞＋Aqara Hub M3 當 Zigbee 骨幹；只有這兩台中樞",
+        "options": [
+          {
+            "name": "Apple TV 4K (4th gen) + Aqara Hub M3",
+            "verdict": "pick",
+            "summary": "Apple TV 有線接網跑遠端、自動化、HKSV 與 Thread；M3 把 Aqara 設備橋接進 Apple Home",
+            "details": "- Apple TV 4K 第 4 代 S$399，Gigabit Ethernet，Thread 邊界路由器；舊款第 3 代 Wi-Fi＋Ethernet 版 S$239 有貨也可\n- Hub M3 S$289：Zigbee、Thread、Matter 控制器，可 PoE 供電\n- M3 用 HomeKit QR 加入 Apple Home，保留 Adaptive Lighting；不要再用 Matter 加一次，否則設備重複\n- M3 的 Thread 選加入 Apple 現有網路，避免分裂成兩個 Thread 網\n- 兩台都放電視櫃、接 UPS"
+          },
+          {
+            "name": "HomePod mini 2",
+            "verdict": "alt",
+            "summary": "S$199；沒有 Apple TV 時當中樞，或放臥室區當第二個中樞與 Thread 路由",
+            "details": "- 只有 Wi-Fi，沒有網口，穩定度略遜有線 Apple TV\n- Apple 自動選一台當主中樞，其餘待命，多一台等於備援"
+          },
+          {
+            "name": "iPad / Aqara Hub M2",
+            "verdict": "no",
+            "summary": "iPad 不能當新架構的家居中樞；M2 沒有 Thread 與 Matter 控制器",
+            "details": "- iPad 在 Apple Home 新架構下已不支援當中樞（待確認最新 iOS）\n- M2 較舊，沒有 PoE、沒有 Thread"
+          }
+        ]
+      },
+      {
         "id": "switch",
-        "name": "範例：開關與情境",
+        "name": "智能開關與一鍵全關",
         "kinds": [
           "switch",
           "scene"
         ],
-        "pick": "範例：Aqara H1 零火開關",
+        "pick": "Aqara H1 EU 有零線版：裝新加坡 86 方盒，按下直接切電，不靠網路",
         "options": [
           {
-            "name": "範例 Aqara H1",
+            "name": "Aqara H1 EU 有零線（WS-EUK03／WS-EUK04）",
             "verdict": "pick",
-            "summary": "範例：零火版，支援 Matter 橋接",
-            "details": "## 範例細節\n- 需零線\n- 透過 Aqara Hub 接入 Apple Home\n> ⚠️ 範例警告：開關盒深度待確認\n> 💡 範例提示：大門旁放一鍵全關"
+            "summary": "Zigbee 進 M3、再進 Apple Home；單鍵 S$55、雙鍵 S$60，Harvey Norman SG 有售",
+            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，窗簾與感應器訊號更穩\n- 大門一鍵全關：右鍵轉為無線開關；單擊由 M3 本機關全屋燈（斷網也有效），長按觸發 Apple Home「離家」\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
           },
           {
-            "name": "範例 Sonoff",
+            "name": "Aqara Z1 Pro",
             "verdict": "alt",
-            "summary": "範例：價格較低",
-            "details": "- 範例備選說明"
+            "summary": "S$77 起，有滑條與更多按鍵；想要玻璃面與多鍵時選",
+            "details": "- 同樣 Zigbee 進 M3；框是塑膠，H1 是金屬\n- 沒有調光"
           },
           {
-            "name": "範例 Philips Hue 調光器",
+            "name": "Aqara H2 EU / SmartSetup Thread 開關",
             "verdict": "no",
-            "summary": "範例：只控 Hue 燈",
-            "details": "- 範例不選原因"
+            "summary": "H2 EU 用 55 mm 模組框，不配英式盒；SmartSetup 只在 Amazon.sg，保固不明",
+            "details": "- 兩者都是 Matter over Thread，可直進 Apple Home，但新加坡沒有穩定的本地售後\n- 無零線開關有最低負載與 LED 閃爍問題，一律用有零線"
+          }
+        ]
+      },
+      {
+        "id": "curtain",
+        "name": "電動窗簾",
+        "kinds": [
+          "curtain"
+        ],
+        "pick": "Aqara C100 走 Zigbee 進 M3，與開關同一個網，一鍵全關可一起關簾",
+        "options": [
+          {
+            "name": "Aqara Curtain Controller C100（CD-M15D）",
+            "verdict": "pick",
+            "summary": "≤27 dB，長 161 mm；Zigbee 為主，Matter over Thread 當 M3 故障時的退路",
+            "details": "- 詳見電動窗簾研究\n- 直接走 Thread 進 Apple Home 也可，但會繞過 M3，H1 開關與本機自動化要跨生態，不如 Zigbee 單純\n- 新加坡價格與貨期待確認"
+          },
+          {
+            "name": "Aqara CD-M01D",
+            "verdict": "alt",
+            "summary": "S$299，本地現貨；C100 趕不上裝修時用",
+            "details": "- 同樣 Zigbee 進 M3，機身 346 mm 較長\n- 沒有 Matter"
+          },
+          {
+            "name": "Somfy / Dooya 窗簾店標配",
+            "verdict": "no",
+            "summary": "需要 TaHoma 或另一個中樞，多一套 App",
+            "details": "- 除非指定 Zigbee 3.0 或 Matter 版，否則進不了 Apple Home"
           }
         ]
       },
       {
         "id": "camera",
-        "name": "範例：攝影機",
+        "name": "攝影機",
         "kinds": [
-          "camera"
+          "camera",
+          "ceiling-power"
         ],
-        "pick": "範例：Aqara E1 ×3",
+        "pick": "Aqara Camera E1 ×3，HomeKit Secure Video 加密錄到 iCloud，microSD 本機備份",
         "options": [
           {
-            "name": "範例 Aqara E1",
+            "name": "Aqara Camera E1",
             "verdict": "pick",
-            "summary": "範例：HomeKit 安全錄影",
-            "details": "- 範例：天花 13A + USB-C"
+            "summary": "S$99，原生 HKSV、可轉向、microSD 最大 512 GB；直接出現在 Apple Home",
+            "details": "- HKSV 需要 iCloud+ 200 GB（最多 5 台），錄影不佔 iCloud 容量\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 microSD 或 NAS\n- 只有 2.4 GHz Wi-Fi：AP 的 2.4 GHz 不能關\n- 小孩房：Apple Home 設「有人在家時關閉串流與錄影」"
+          },
+          {
+            "name": "UniFi Protect（G6 Instant / G5 Flex）",
+            "verdict": "alt",
+            "summary": "要 24 小時本機錄影與 PoE 時選；需把 Cloud Gateway Ultra 換成 Max",
+            "details": "- Ultra 不跑 Protect；Max 有 NVMe 槽，最多 2 TB\n- 不原生進 Apple Home，要另開 UniFi Protect App\n- 天花已預埋 Cat6，日後可換"
+          },
+          {
+            "name": "Matter 攝影機",
+            "verdict": "no",
+            "summary": "Matter 1.5 已有攝影機規格，但 Apple Home 尚未支援（待確認）",
+            "details": "- 等 Apple 支援後再評估"
+          }
+        ]
+      },
+      {
+        "id": "plug",
+        "name": "智能插座",
+        "kinds": [
+          "socket"
+        ],
+        "pick": "TP-Link Tapo P110M：英規 13A、Matter 直進 Apple Home、本地保固 36 個月",
+        "options": [
+          {
+            "name": "TP-Link Tapo P110M",
+            "verdict": "pick",
+            "summary": "S$19.90，Matter over Wi-Fi，有電量統計；只給風扇、除濕機、燈飾這類小負載",
+            "details": "- 不接冷氣、熱水器等馬達或壓縮機（>1/6 HP）\n- 用 Matter 加入 Apple Home，本機控制不靠雲端\n- 韌體更新可能要 Tapo App（待確認）"
+          },
+          {
+            "name": "Eve Energy (UK)",
+            "verdict": "alt",
+            "summary": "Matter over Thread，會加強 Thread 網；新加坡無代理，要進口，約價待確認",
+            "details": "- 日後 Thread 設備多了再考慮"
+          },
+          {
+            "name": "非 Matter 的 Wi-Fi 插座（如 Tapo P110）",
+            "verdict": "no",
+            "summary": "只能靠廠商雲端，進不了 Apple Home",
+            "details": "- 買時認明 Matter 標誌"
+          }
+        ]
+      },
+      {
+        "id": "light",
+        "name": "燈光",
+        "kinds": [
+          "switch"
+        ],
+        "pick": "主照明用普通 LED 筒燈＋H1 開關；只在電視牆、床頭用 Aqara LED Strip T1 做 Adaptive Lighting",
+        "options": [
+          {
+            "name": "普通筒燈＋Aqara LED Strip T1",
+            "verdict": "pick",
+            "summary": "筒燈壞了隨便換；燈條 S$69／2 m，Zigbee 進 M3，支援 HomeKit Adaptive Lighting",
+            "details": "- 燈條電源要常電，不接在開關後面；用 H1 無線鍵控制\n- Adaptive Lighting 只在 M3 以 HomeKit 方式橋接時有\n- 燈條本身是 Zigbee 中繼"
+          },
+          {
+            "name": "Philips Hue",
+            "verdict": "alt",
+            "summary": "燈具選擇最多、品質最好；但要多一台 Hue Bridge 與一套 App",
+            "details": "- 想做整屋調色溫筒燈時才值得"
+          },
+          {
+            "name": "智能燈泡裝在一般開關後／Wi-Fi 燈泡",
+            "verdict": "no",
+            "summary": "開關一關燈泡就離線；Wi-Fi 燈泡多靠雲端、佔 2.4 GHz",
+            "details": "- 兩套控制互相打架，家人與幫傭最容易出錯"
+          }
+        ]
+      },
+      {
+        "id": "sensor",
+        "name": "感應器",
+        "kinds": [
+          "scene"
+        ],
+        "pick": "大門 Aqara 門窗感應器＋走廊、浴室 Motion Sensor P1，全走 Zigbee",
+        "options": [
+          {
+            "name": "Aqara Door & Window Sensor + Motion Sensor P1",
+            "verdict": "pick",
+            "summary": "P1 S$39，電池約 5 年；用於夜燈與出門提醒（門開＋無人→提示一鍵全關）",
+            "details": "- 和開關同一個 Zigbee 網，不用 Thread 路由\n- 門窗感應器新加坡價格待確認"
+          },
+          {
+            "name": "Aqara Presence Sensor FP2",
+            "verdict": "alt",
+            "summary": "毫米波，坐著不動也偵測得到；需插電、Wi-Fi",
+            "details": "- 客廳或浴室要「有人就不關燈」時加"
+          },
+          {
+            "name": "Aqara P2 系列（Thread）",
+            "verdict": "no",
+            "summary": "只走 Thread，電池設備要靠附近 Thread 路由；家中 Thread 設備少，不穩",
+            "details": "- 待 Thread 設備變多再換"
           }
         ]
       }
@@ -18055,6 +18213,66 @@
       "id": "todo-floor-ups",
       "room": "floor",
       "text": "決定網路設備是否加 UPS",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-neutral",
+      "room": "smart",
+      "text": "告訴電工：每個開關盒拉零線 N",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-box-depth",
+      "room": "smart",
+      "text": "開關用 86 方盒，盒深 ≥ 35 mm",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-circuits",
+      "room": "smart",
+      "text": "數各房燈光迴路，定 H1 單鍵或雙鍵",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-strip-power",
+      "room": "smart",
+      "text": "燈條變壓器處留常電插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-tv-cat6",
+      "room": "smart",
+      "text": "電視櫃留 2 條 Cat6 給 Apple TV、M3",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-ups",
+      "room": "smart",
+      "text": "光纖、網路、Apple TV、M3 接 UPS",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-apple-tv",
+      "room": "smart",
+      "text": "買 Apple TV 4K 有線版當中樞",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-c100",
+      "room": "smart",
+      "text": "問 Aqara SG：C100 貨期與價格",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-icloud",
+      "room": "smart",
+      "text": "升級 iCloud+ 200 GB 開 HKSV",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-all-off",
+      "room": "smart",
+      "text": "定一鍵全關的範圍：燈、窗簾、插座",
       "status": "open"
     },
     {
@@ -18422,12 +18640,6 @@
       "room": "master-balcony",
       "text": "請電工確認陽台 IP66 防水插座",
       "status": "open"
-    },
-    {
-      "id": "todo-smart-sample",
-      "room": "smart",
-      "text": "範例待辦：確認智能家居生態系",
-      "status": "open"
     }
   ],
   "research": {
@@ -18632,6 +18844,90 @@
         {
           "title": "Blanco – Subline 500-U datasheet",
           "url": "https://a.storyblok.com/f/290949323615605/2ce39bcdc6/blanco-subline-500-u-527170-datasheet-int.pdf"
+        }
+      ]
+    },
+    "smart-home": {
+      "title": "全屋智能家居方案",
+      "updated": "2026-10-29",
+      "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋Apple TV 4K 有線中樞。因為牆上開關與一鍵全關斷網照常用、新加坡有現貨與保固、家人用 Apple 帳號就能共用。",
+      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋Apple TV 4K 有線中樞** — 開關、窗簾、感應器、燈條都走 Zigbee 進 M3，以 HomeKit 方式橋接進 Apple Home；Apple TV 負責遠端、自動化、HKSV 與 Thread。\n- **備選：全部 Matter over Thread 直連 Apple Home** — 少一台 Aqara 中樞；但 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨與保固，等兩三年再轉。\n- **不選：Aqara Home 當主 App** — 家人要另裝 App、另開帳號，且失去 Apple 帳號分享。\n- **不選：再加 Hue／SwitchBot／Tuya 中樞** — 每多一台中樞就多一個故障點、一套韌體。\n- **各類**：開關 Aqara H1 EU 有零線；窗簾 Aqara C100（Zigbee）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；一鍵全關在 M3 本機執行，網路或 Apple TV 掛了也有效。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台**：Apple TV＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶；中樞與網路接 UPS。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | ATV＋M3 | ATV | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 英規插座 | Matter Wi-Fi | Eve 進口 | 待確認 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | Apple TV 4K＋Hub M3 | S$399＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 窗簾 ×5–6 | C100 | 待確認 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座 | Tapo P110M | S$19.90 |\n| 燈條 | LED Strip T1 2 m | S$69 |\n| 感應器 | Motion P1 | S$39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；用 86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路，超過就並排兩個 86 盒。\n- **告訴電工（燈條）**：變壓器處留常電 13A 插座或 fused spur，不接在牆上開關後面。\n- **告訴電工（網路）**：電視櫃留 2 條 Cat6 給 Apple TV 與 M3（M3 可吃 PoE）；天花攝影機 13A＋Cat6、窗簾盒 13A 照現有圖。\n- **UPS**：光纖終端、Cloud Gateway、PoE 交換器、Apple TV 同接一台小 UPS。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 用頻道 25，2.4 GHz Wi-Fi 固定頻道 1 或 6。\n- **網段**：Apple TV、攝影機、插座放同一網段；Apple Home 與 Matter 靠 mDNS 與 IPv6，分 VLAN 易斷線。\n- **一鍵全關**：大門 H1 右鍵轉無線開關；單擊由 M3 本機關全屋燈與窗簾，長按觸發 Apple Home「離家」含插座。\n- **家人**：伴侶設為 Apple Home 管理員；幫傭只用實體開關。\n\n## 風險與待確認\n> ⚠️ Hub M3 是單點：壞了開關仍可手按、窗簾可手拉，但 App 控制與自動化全停；接 UPS，C100 保留 Thread 退路。\n> ⚠️ Apple TV、HomePod、M3 都是 Thread 邊界路由器，若各自建網會分裂，M3 必須加入 Apple 網路。\n> ⚠️ HKSV 只錄事件，不錄 24 小時；要連續錄影靠 E1 的 microSD。\n> ⚠️ Camera E1 只有 2.4 GHz：UniFi 的 2.4 GHz 不能關。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- C100 新加坡價格與貨期 待確認；趕不上用 CD-M01D（S$299）。\n- Tapo P110M 只用 Matter 時韌體更新方式 待確認。\n- H1 EU 入牆深度與 35 mm 盒是否足夠 待確認。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
+      "sources": [
+        {
+          "title": "Apple: HomeKit Secure Video and iCloud+",
+          "url": "https://support.apple.com/guide/icloud/mme054c72692"
+        },
+        {
+          "title": "Matter Alpha: Apple TV 4K (4th generation)",
+          "url": "https://www.matteralpha.com/apple/apple-tv-4k-4th-generation-p5709"
+        },
+        {
+          "title": "EveryMac: Apple TV prices in Singapore",
+          "url": "https://everymac.com/devices/global-prices/all-msrp-apple-tv-prices-in-singapore.html"
+        },
+        {
+          "title": "EveryMac: HomePod prices in Singapore",
+          "url": "https://everymac.com/devices/global-prices/all-msrp-apple-homepod-prices-in-singapore.html"
+        },
+        {
+          "title": "The Star: Apple unveils new Apple TV 4K",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/10/14/apple-unveils-new-apple-tv-4k-priced-at-rm1349"
+        },
+        {
+          "title": "HomeKit News: Aqara Hub M3 review",
+          "url": "https://homekitnews.com/2024/05/27/aqara-hub-m3-review/"
+        },
+        {
+          "title": "Aqara: Smart Wall Switch H1 EU (with neutral)",
+          "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara H1 neutral double rocker WS-EUK04",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-h1-neutral-double-rocker-smart-wall-switch-white-ws-euk04.html"
+        },
+        {
+          "title": "Lester Chan: Aqara Smart Wall Switch Z1 Pro",
+          "url": "https://lesterchan.net/blog/2024/02/19/aqara-smart-wall-switch-z1-pro/"
+        },
+        {
+          "title": "Smart Secure: Aqara Light Switch H2 EU",
+          "url": "https://www.smart-secure.co.uk/product/aqara-light-switch-h2-eu/"
+        },
+        {
+          "title": "HomeKit News: SmartSetup Matter/Thread switches in Singapore",
+          "url": "https://homekitnews.com/2025/03/02/smartsetup-matter-thread-switches-available-in-singapore-uae/"
+        },
+        {
+          "title": "Aqara: Curtain Controller C100",
+          "url": "https://www.aqara.com/en/product/curtain-controller-c100/"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara Camera E1",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/cameras-en/security-cameras-en/aqara-e1-camera-white-ch-c01e.html"
+        },
+        {
+          "title": "Apple Hacks: Matter 1.5 camera support and Apple Home",
+          "url": "https://www.apple-hacks.com/entry/matter-1-5-camera-support-apple-home"
+        },
+        {
+          "title": "Unihosted: Cloud Gateway Max vs Ultra",
+          "url": "https://www.unihosted.com/blog/cloud-gateway-max-vs-cloud-gateway-ultra-which-unifi-gateway-is-right-for-you"
+        },
+        {
+          "title": "Harvey Norman SG: Tapo P110M",
+          "url": "https://www.harveynorman.com.sg/computing/networking-en/switches-and-adapters/tp-link-tapo-p110m-mini-smart-wi-fi-energy-monitoring-plug-white.html"
+        },
+        {
+          "title": "Matter Alpha: Eve Energy (UK)",
+          "url": "https://www.matteralpha.com/evehome/eve-energy-u-k-p174"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara LED Strip T1",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-t1-2m-smart-led-strip-white-rls-k01d.html"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara Motion Sensor P1",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-p1-zigbee-version-motion-sensor-white-ms-s02.html"
         }
       ]
     }
