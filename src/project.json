@@ -1353,7 +1353,10 @@
       "name": "客廳陽台",
       "english": "Balcony 1",
       "number": "10",
-      "focus": "收納櫃、曬衣架與鞦韆吊點"
+      "focus": "收納櫃、曬衣架與鞦韆吊點",
+      "risks": [
+        "曬衣架在西端、風扇在陽台中間：衣物拉高後是否碰到扇葉，現場量"
+      ]
     },
     {
       "id": "master-balcony",
@@ -1664,7 +1667,10 @@
         "model": "SMARTLUX LITE"
       },
       "code": "LIV-06",
-      "mount": "ceiling"
+      "mount": "ceiling",
+      "risks": [
+        "曬衣架在西端、風扇在陽台中間：衣物拉高後是否碰到扇葉，現場量"
+      ]
     },
     {
       "id": "living-tv",
@@ -17899,6 +17905,58 @@
       ]
     }
   },
+  "smart": {
+    "title": "智能家居",
+    "summary": "範例：Apple Home 為主、Matter 優先；此段由主管理者替換",
+    "research": "smart-home",
+    "categories": [
+      {
+        "id": "switch",
+        "name": "範例：開關與情境",
+        "kinds": [
+          "switch",
+          "scene"
+        ],
+        "pick": "範例：Aqara H1 零火開關",
+        "options": [
+          {
+            "name": "範例 Aqara H1",
+            "verdict": "pick",
+            "summary": "範例：零火版，支援 Matter 橋接",
+            "details": "## 範例細節\n- 需零線\n- 透過 Aqara Hub 接入 Apple Home\n> ⚠️ 範例警告：開關盒深度待確認\n> 💡 範例提示：大門旁放一鍵全關"
+          },
+          {
+            "name": "範例 Sonoff",
+            "verdict": "alt",
+            "summary": "範例：價格較低",
+            "details": "- 範例備選說明"
+          },
+          {
+            "name": "範例 Philips Hue 調光器",
+            "verdict": "no",
+            "summary": "範例：只控 Hue 燈",
+            "details": "- 範例不選原因"
+          }
+        ]
+      },
+      {
+        "id": "camera",
+        "name": "範例：攝影機",
+        "kinds": [
+          "camera"
+        ],
+        "pick": "範例：Aqara E1 ×3",
+        "options": [
+          {
+            "name": "範例 Aqara E1",
+            "verdict": "pick",
+            "summary": "範例：HomeKit 安全錄影",
+            "details": "- 範例：天花 13A + USB-C"
+          }
+        ]
+      }
+    ]
+  },
   "briefing": [
     {
       "text": "🔨 廚房兩側全拆，做電器高櫃，靠女傭房牆",
@@ -18363,6 +18421,12 @@
       "id": "todo-master-balcony-socket",
       "room": "master-balcony",
       "text": "請電工確認陽台 IP66 防水插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-smart-sample",
+      "room": "smart",
+      "text": "範例待辦：確認智能家居生態系",
       "status": "open"
     }
   ],
