@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R47",
+    "revision": "R48",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4285,6 +4285,10 @@
     {
       "id": "C55",
       "text": "陽台收納櫃移到客廳陽台西北角；方案切換拿掉「方案」字、手機也放在標題列。"
+    },
+    {
+      "id": "C56",
+      "text": "每個空間平面圖下加待辦清單；調研結果可點開查看。"
     }
   ],
   "measurement_policy": {
@@ -17948,33 +17952,496 @@
   ],
   "todos": [
     {
-      "id": "sample-todo-kitchen-sink",
-      "room": "kitchen",
-      "text": "選水槽：Blanco／Franke 約 60",
-      "research": "sample-research",
+      "id": "todo-floor-network",
+      "room": "floor",
+      "text": "選定網路方案：Deco 或 UniFi",
       "status": "open"
     },
     {
-      "id": "sample-todo-floor-network",
+      "id": "todo-floor-ceiling-height",
       "room": "floor",
-      "text": "確認網路方案",
+      "text": "現場量天花淨高：280 或 275",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-false-ceiling",
+      "room": "floor",
+      "text": "確認各房有無假天花與檢修口位置",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-neutral",
+      "room": "floor",
+      "text": "請電工確認每個開關盒都有零線",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-fibre",
+      "room": "floor",
+      "text": "確認光纖終端位置，拉 Cat6 到電視櫃",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-electrical-points",
+      "room": "floor",
+      "text": "與電工逐點核對插座與天花電源",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-smart-switch",
+      "room": "floor",
+      "text": "買 Aqara H1 開關與 Hub M3",
+      "status": "open"
+    },
+    {
+      "id": "todo-floor-ups",
+      "room": "floor",
+      "text": "決定網路設備是否加 UPS",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-curtain-box",
+      "room": "living",
+      "text": "做窗簾盒：淨深 20，雙軌",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-curtain-motor",
+      "room": "living",
+      "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
+      "status": "open",
+      "research_pending": "curtain-motor"
+    },
+    {
+      "id": "todo-living-curtain-socket",
+      "room": "living",
+      "text": "請電工確認窗簾盒內 13A 插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-tripp-trapp",
+      "room": "living",
+      "text": "決定窗簾盒改 15 或用餐時收椅",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-wallpaper",
+      "room": "living",
+      "text": "選電視牆壁紙並確認木作底板厚度",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-tv-ceiling",
+      "room": "living",
+      "text": "確認電視牆局部假天花能做到底 270",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-av",
+      "room": "living",
+      "text": "決定遊戲機、Soundbar 與喇叭配置",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-cabinet",
+      "room": "living",
+      "text": "確認客餐廳 190 櫃體的用途",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-scheme",
+      "room": "kitchen",
+      "text": "定案廚房方案 A 或 B",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-sink",
+      "room": "kitchen",
+      "text": "選水槽：Blanco／Franke 約 60",
+      "status": "open",
+      "research_pending": "kitchen-sink"
+    },
+    {
+      "id": "todo-kitchen-site-measure",
+      "room": "kitchen",
+      "text": "現場量假天花 240、窗台高度與檢修口",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-worktop",
+      "room": "kitchen",
+      "text": "選岩板檯面品牌、色號與板厚",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-laminate",
+      "room": "kitchen",
+      "text": "選櫃體 laminate 品牌與色號",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-hob-oven",
+      "room": "kitchen",
+      "text": "選爐具與嵌入式烤箱型號",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-tower-appliances",
+      "room": "kitchen",
+      "text": "選微波爐、電子鍋並量大同電鍋深",
+      "status": "open"
+    },
+    {
+      "id": "todo-kitchen-plumbing",
+      "room": "kitchen",
+      "text": "請水電確認洗衣機與 Dry kitchen 給排水",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-curtain-box",
+      "room": "master",
+      "text": "做窗簾盒：淨深 15",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-curtain-motor",
+      "room": "master",
+      "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
+      "status": "open",
+      "research_pending": "curtain-motor"
+    },
+    {
+      "id": "todo-master-curtain-socket",
+      "room": "master",
+      "text": "請電工確認窗簾盒內 13A 插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-wardrobe-laminate",
+      "room": "master",
+      "text": "選衣櫃門片材質與 laminate 色號",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-trouser-rack",
+      "room": "master",
+      "text": "向 Hettich 要褲架原廠圖確認勾長",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-sensor",
+      "room": "master",
+      "text": "決定衣櫃燈感應：門控或 PIR",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-unlabelled",
+      "room": "master",
+      "text": "現場確認未標示櫃體是衣櫃或管道",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-bed",
+      "room": "master",
+      "text": "選床架與床墊，確認實際尺寸",
+      "status": "open"
+    },
+    {
+      "id": "todo-kid-curtain-box",
+      "room": "kid",
+      "text": "做窗簾盒：淨深 15",
+      "status": "open"
+    },
+    {
+      "id": "todo-kid-curtain-motor",
+      "room": "kid",
+      "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
+      "status": "open",
+      "research_pending": "curtain-motor"
+    },
+    {
+      "id": "todo-kid-curtain-socket",
+      "room": "kid",
+      "text": "請電工確認窗簾盒內 13A 插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-kid-bed",
+      "room": "kid",
+      "text": "規劃床位，床離窗至少 15",
+      "status": "open"
+    },
+    {
+      "id": "todo-study-curtain",
+      "room": "study",
+      "text": "決定書房做窗簾或百葉",
+      "status": "open"
+    },
+    {
+      "id": "todo-study-power",
+      "room": "study",
+      "text": "請電工確認按摩椅接地插座與窗邊電源",
+      "status": "open"
+    },
+    {
+      "id": "todo-study-move-in",
+      "room": "study",
+      "text": "量門淨寬 ≥ 80，安排按摩椅搬入",
+      "status": "open"
+    },
+    {
+      "id": "todo-study-desk",
+      "room": "study",
+      "text": "選 100 × 50 電腦桌",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-scheme",
+      "room": "guest",
+      "text": "定案客房方案 A／B／C",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-curtain-box",
+      "room": "guest",
+      "text": "做窗簾盒：淨深 15",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-curtain-motor",
+      "room": "guest",
+      "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
+      "status": "open",
+      "research_pending": "curtain-motor"
+    },
+    {
+      "id": "todo-guest-curtain-socket",
+      "room": "guest",
+      "text": "請電工確認窗簾盒內 13A 插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-wardrobe",
+      "room": "guest",
+      "text": "選衣櫃門片色號，定掛桿高度",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-door-stop",
+      "room": "guest",
+      "text": "請木工為衣櫃門加開角限位",
+      "status": "open"
+    },
+    {
+      "id": "todo-guest-furniture",
+      "room": "guest",
+      "text": "買 MALM Queen 收納床與無輪書椅",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-window",
+      "room": "helper",
+      "text": "量西牆窗台高度與窗扇開法",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-mattress",
+      "room": "helper",
+      "text": "選三折床墊型號與厚度",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-board",
+      "room": "helper",
+      "text": "選床台板材與色號",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-socket",
+      "room": "helper",
+      "text": "決定床頭插座並告知電工",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath1-ceiling",
+      "room": "bath1",
+      "text": "現場確認浴室天花 240 與檢修口",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath1-electrical",
+      "room": "bath1",
+      "text": "請電工依 SS 638 確認插座、開關與 RCD",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath1-tap",
+      "room": "bath1",
+      "text": "確認檯面高度，選龍頭頂低於 115",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath1-devices",
+      "room": "bath1",
+      "text": "確認牙刷充電頭與吹風機型號",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath2-basin",
+      "room": "bath2",
+      "text": "選臉盆尺寸並定盆位",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath2-tap",
+      "room": "bath2",
+      "text": "選龍頭，頂端須低於鏡門下緣 115",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath2-ledge",
+      "room": "bath2",
+      "text": "確認矮台高度、沖水面板與水箱檢修口",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath2-ceiling",
+      "room": "bath2",
+      "text": "現場確認浴室天花 240 與檢修口",
+      "status": "open"
+    },
+    {
+      "id": "todo-bath2-socket",
+      "room": "bath2",
+      "text": "請電工確認浴室 13A 插座位置",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-drying-rack",
+      "room": "living-balcony",
+      "text": "選電動曬衣架型號",
+      "research": "drying-rack",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-rack-prep",
+      "room": "living-balcony",
+      "text": "曬衣架處預留天花 13A 與吊筋",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-cabinet-wall",
+      "room": "living-balcony",
+      "text": "現場量西牆淨長是否夠放 105 櫃",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-swing-anchor",
+      "room": "living-balcony",
+      "text": "鞦韆吊點錨進結構樓板，每點 ≥ 150 kg",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-swing-seat",
+      "room": "living-balcony",
+      "text": "選鞦韆座椅，兩側淨空 ≥ 50",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-balcony-vacuum-socket",
+      "room": "living-balcony",
+      "text": "請電工確認掃拖機底座 IP66 低位插座",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-balcony-socket",
+      "room": "master-balcony",
+      "text": "請電工確認陽台 IP66 防水插座",
       "status": "open"
     }
   ],
   "research": {
-    "sample-research": {
-      "title": "水槽選擇（示意）",
-      "updated": "2026-10-29",
-      "summary": "單槽 60、下嵌；Blanco 與 Franke 二選一，待到店確認。",
-      "body": "## 結論\n- **單槽 60** 最順：Blanco 或 Franke 都可\n  - 下嵌優先，檯面好擦\n- 搭配 `60` 水槽櫃，待確認\n## 比較\n| 品牌 | 型號 | 外尺寸 | 價格 |\n|---|---|---|---|\n| Blanco | 示意 | 60 × 45 | 待確認 |\n| Franke | 示意 | 60 × 44 | 待確認 |\n### 下一步\n- 到店量實物，參考 [Blanco](https://www.blanco.com/)",
+    "drying-rack": {
+      "title": "客廳陽台電動曬衣架選型",
+      "updated": "2026-10-28",
+      "summary": "首選 GoodLiving Platinum Mini 2.0，備選 Steigen Dryer Mini；Steigen Flexi 已停售，米家無新加坡保固。",
+      "body": "## 結論\n- **首選 GoodLiving Platinum Mini 2.0**：機身 100 × 40，杆伸到 100–180，在 165 深度內可拉到約 150；7 杆＋2 支晾被杆；燈 2 × 24 W 三色溫；馬達保固 10 年。缺點：帶加熱，機身厚度未公布。\n- **備選 Steigen Dryer Mini**：Steigen Flexi 已停售，這是後繼款；伸縮 1.0–1.6 m、7 杆、800 W 加熱。燈亮度未公布，**到 Paya Lebar 門市現場看**。\n- **最薄最亮但無本地保固：米家智能雙控晾衣機 2**：厚 7 cm、50 W、3000 lm；水貨、只能用米家 App，不接 Aqara／Matter。\n- 排除 SMARTLUX LITE：最薄（6.6）但不能伸縮，大被攤不開。\n\n## 新加坡本地售後款\n| 型號 | 尺寸 L×W×厚 | 伸縮／杆 | 燈 | 加熱 | 智能 | SGD |\n|---|---|---|---|---|---|---|\n| **GoodLiving Platinum Mini 2.0** | 100×40；厚待確認 | 100→180；7＋2 晾被杆 | 2×24 W 三色溫 | 4×400 W | App＋語音＋遙控 | 999 |\n| GoodLiving Platinum Pro Ultra | 130×40 | 130→220；7 | 2×24 W＋RGB | 有 | App＋遙控 | 1,199 |\n| **Steigen Dryer Mini** | 杆 1.0–1.6 m；天花 110–144 × 60 | 1.0–1.6 m；7 | 未公布 | 800 W | App＋離線語音 | 799 起 |\n| YU HOME YU FLEX | 134×57.2×21.5 | 7 支伸縮杆 | 50 W 單色溫 | 未列 | App＋遙控 | 449 |\n| YU HOME SMARTLUX LITE | 113×40×6.6 | 不能伸縮 | 25 W 雙色溫 | 無 | App＋遙控 | 549 |\n| PRISM+ Solaris 1.0 m | 100.6×49.8 | 1.0→1.6 m；5 | 24 W 三色 | 有 | 只有遙控 | 449 起 |\n| Mensch Mark 2 | 厚 14 | 待確認 | 16 W | 待確認 | 待確認 | 568 |\n\n## 米家各代\n新加坡無官方通路，Lazada／Shopee 為水貨無保固；只能用米家 App。長杆展開 2.0–2.4 m，在 165 深度垂直安裝**拉不開**。\n\n| 型號 | 上市 | 厚 | 伸縮 | 承重 | 燈 | 加熱 | CN 價 |\n|---|---|---|---|---|---|---|---|\n| 初代 | 2020-04 | 待確認 | 展開 2.2 m | 35 kg | 有 | 無 | 899 |\n| 烘乾款 | 2021–22 | 待確認 | 兩側伸縮 | 35 kg | 兩側燈 | 1000 W | 1299 |\n| 1S | 2023-04 | 9.9 | 2.2 m；4 杆 | 35 kg | 20 W | 無 | 949 |\n| 1S 多功能 | 2023 | 14 | 2.2 m | 待確認 | 20 W | 320 W＋UVC | 約 1249 |\n| Pro | 約 2023 | 9.8 | 4 杆 | 35 kg | 大燈板 | 暖風 | 1139–1249 |\n| 雙控（一代） | 2024-10 | 約 6 | 雙杆各 2 m | 35 kg | 22 W | 無 | 1249 |\n| 1C | 2024-08 | 槽深 13 | 晾被杆 2.2 m | 35 kg | 22 W | 無 | 799 |\n| 2 | 2025-07 | 9.1 | 細杆側展 40 | 35 kg | 31 吋柔光 | 無 | 999 |\n| 2 Pro | 2025-07 | 9.5 | 細杆＋2 晾被杆 | 35 kg | 穹頂燈 Ra97 | 無 | 1699–1799 |\n| 隱形雙杆 2.4 m | 約 2025 | 嵌入 11.8 | 無 | 60 kg | 2.4 m 線燈 | 無 | 待確認 |\n| 3 | 2026-04 | 待確認 | 20 細杆位＋2 晾被杆 | 35 kg | 36 W 3000 lm | 無 | 1299 |\n| 3 Max | 2026-10 | 約 9 | 5 分區，總長 2.4 m | 45 kg | 42 吋 Ra95 | 1250 W | 2699 |\n| **雙控 2** | 2026-09 | **7** | 伸縮多 73.6% 晾位 | 40 kg | **50 W 3000 lm** | 無 | 1399 |\n\n## 平面圖占位\n- GoodLiving Mini 2.0：機身 **100 × 48**；晾杆沿深度最多約 150 × 寬 57，寬向淨空留 90；置中於 165 深度。\n- Steigen Dryer Mini：天花預留 **144 × 60**。\n\n## 安裝與下單前\n- 天花預留隱藏式 **13A 插座或 fused spur**，在機身投影內。\n- 這些機型都**不能**直接接 Aqara／Matter；H1 只當總電源，不要用它斷電，會打斷升降記憶。\n- 假天花要加吊筋或鋼件**錨到樓板**；下降行程約 130，2.6–2.8 m 層高可用。\n- 下單前向 GoodLiving／Steigen 要 spec sheet：實際機身厚度、燈的流明與色溫。",
       "sources": [
         {
-          "title": "Blanco",
-          "url": "https://www.blanco.com/"
+          "title": "Steigen Flexi (redirects to Dryer)",
+          "url": "https://www.steigen.com.sg/products/flexi"
         },
         {
-          "title": "Franke",
-          "url": "https://www.franke.com/"
+          "title": "Steigen product list",
+          "url": "https://www.steigen.com.sg/collections/all"
+        },
+        {
+          "title": "HipVan · GoodLiving Platinum Mini 2.0",
+          "url": "https://hipvan.com/products/goodliving-platinum-mini-2-0-laundry-rack-ceramic-white"
+        },
+        {
+          "title": "HipVan · GoodLiving Platinum Pro Ultra",
+          "url": "https://www.hipvan.com/products/goodliving-platinum-pro-ultra-laundry-rack-metallic-grey"
+        },
+        {
+          "title": "YU HOME · YU FLEX",
+          "url": "https://yuhome.com.sg/products/automated-laundry-system-yu-flex"
+        },
+        {
+          "title": "YU HOME · SMARTLUX LITE",
+          "url": "https://yuhome.com.sg/products/automated-laundry-system-smartlux-lite"
+        },
+        {
+          "title": "PRISM+ Solaris XL",
+          "url": "https://prismplus.sg/products/prism-solaris-xl"
+        },
+        {
+          "title": "PRISM+ Solaris range compared",
+          "url": "https://prismplus.sg/blogs/blog/guide-prism-solaris-range-compared"
+        },
+        {
+          "title": "Home & Decor · best drying racks (Mensch Mark 2)",
+          "url": "https://www.homeanddecor.com.sg/shopping/best-electric-clothes-laundry-drying-rack/"
+        },
+        {
+          "title": "IT之家 · 米家雙控晾衣機 2",
+          "url": "https://www.ithome.com/1/004/983.htm"
+        },
+        {
+          "title": "IT之家 · 米家晾衣機 3",
+          "url": "https://www.ithome.com/0/941/031.htm"
+        },
+        {
+          "title": "鳳凰科技 · 米家晾衣機 3 Max",
+          "url": "https://tech.ifeng.com/c/8x0zGkZ3cFb"
+        },
+        {
+          "title": "IT之家 · 米家晾衣機 2",
+          "url": "https://www.ithome.com/0/865/916.htm"
+        },
+        {
+          "title": "少數派 · 米家晾衣機 2 Pro",
+          "url": "https://sspai.com/post/101597"
+        },
+        {
+          "title": "IT之家 · 米家晾衣機 1S",
+          "url": "https://www.ithome.com/0/957/811.htm"
+        },
+        {
+          "title": "IT之家 · 米家雙控晾衣機",
+          "url": "https://www.ithome.com/0/802/875.htm"
+        },
+        {
+          "title": "IT之家 · 米家晾衣機 1C",
+          "url": "https://www.ithome.com/0/790/372.htm"
+        },
+        {
+          "title": "Women's Weekly SG · Mijia no local warranty",
+          "url": "https://www.womensweekly.com.sg/family/best-automated-laundry-drying-rack-singapore"
+        },
+        {
+          "title": "Ezzi Living · ceiling installation",
+          "url": "https://ezziliving.com/ez-lift-extendable-gear-system"
         }
       ]
     }
