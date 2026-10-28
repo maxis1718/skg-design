@@ -18057,7 +18057,7 @@
     {
       "id": "todo-kitchen-sink",
       "room": "kitchen",
-      "text": "選水槽：Blanco／Franke 約 60",
+      "text": "選水槽：建議 Franke Box 54",
       "research": "kitchen-sink",
       "status": "open"
     },
@@ -18364,44 +18364,28 @@
     "drying-rack": {
       "title": "客廳陽台電動曬衣架",
       "updated": "2026-10-29",
-      "summary": "選 Steigen Dryer Mini（Solar 版）。因為 1.0–1.6 m 伸縮杆剛好放進 165 深度、是 Flexi 的後繼款、Paya Lebar 有門市且零件保固 5 年。",
-      "body": "## 結論\n- **選：Steigen Dryer Mini（Solar 版）**（S$799 起／官網或 Paya Lebar 門市）— 杆 1.0–1.6 m 伸縮剛好放進 165 深度，Flexi 的後繼款，本地 5 年零件保固。\n- **備選：GoodLiving Platinum Mini 2.0**（S$999／HipVan）— Steigen 現場看燈太暗時改選；48 W 三色溫、2 支伸縮晾被杆、馬達保固 10 年，但機身高 24 cm。\n- **不選：米家智能雙控晾衣機 2** — 7 cm、50 W 3000 lm 最符合外型和燈，但新加坡無保固、只能用中國區米家 App、機身長度未公布。\n- **不選：YU HOME SMARTLUX LITE** — 6.6 cm 最薄且無加熱，但杆不能伸縮，大被攤不開。\n- **不選：YU HOME YU FLEX** — 厚 21.5 cm、單色溫。\n- **不選：PRISM+ Solaris Pro 1.0 m** — 規格接近 Steigen，但燈只有 24 W，保固 2 年（馬達／LED 5 年）。\n\n## 評判標準\n- **長度**：伸縮後 ≤ 約 150 cm，才放得進 165 深度且兩端留空；只能拉到 2 m 以上的長杆款直接出局。\n- **伸縮晾被**：杆能拉長，或有獨立晾被杆，大被才能分兩杆攤開。\n- **本地售後**：新加坡有門市或上門維修，馬達保固 ≥ 5 年；升降機構壞了沒人修就是天花上一個廢物。\n- **燈**：≥ 40 W 或 ≥ 3000 lm、可調色溫；陽台晚上要兼主燈用。\n- **薄**：收起後 ≤ 10 cm 看起來才乾淨；本地伸縮款普遍 20 cm 以上，這項要靠現場看。\n- **無加熱優先**：多數衣物進烘乾機，加熱只增加厚度與耗電；本地伸縮款幾乎都內建，接受但不付費升級 Halo。\n- **智能**：沒有一款能進 Aqara／Matter；能有 App＋遙控即可。\n\n## 比較\n| 項目 | Steigen Mini | GoodLiving | 米家雙控 2 |\n|---|---|---|---|\n| 伸縮 | 1.0–1.6 m | 1.0–1.8 m | 有，長度未公布 |\n| 收起厚度 | 待確認 | 24 cm | 7 cm |\n| 燈 | 未公布 | 2×24 W | 50 W 3000 lm |\n| 色溫 | 未公布 | 三段 | 2700–5700 K |\n| 加熱 | 800 W | 4×400 W | 無 |\n| 新加坡保固 | 5 年零件 | 馬達 10 年 | 無 |\n| 價格 | S$799 起 | S$999 | ¥1,399 |\n\n| 項目 | PRISM+ Pro | SMARTLUX LITE | YU FLEX |\n|---|---|---|---|\n| 伸縮 | 1.0–1.6 m | 不能 | 有，範圍未公布 |\n| 收起厚度 | 待確認 | 6.6 cm | 21.5 cm |\n| 燈 | 24 W 三段 | 25 W 雙色 | 50 W 單色 |\n| 加熱 | 有 | 無 | 未列 |\n| App | 有＋離線語音 | 有 | 有 |\n| 價格 | S$699 | S$549 | S$449 |\n\n米家近幾代（中國價，均無新加坡保固）：\n| 型號 | 厚 | 燈 | 價格 |\n|---|---|---|---|\n| 雙控 2（2026-09） | 7 cm | 50 W 3000 lm | ¥1,399 |\n| 3（2026-04） | 待確認 | 36 W 3000 lm | ¥1,299 |\n| 3 Max（2026-10） | 約 9 cm | 42 吋 Ra95 | ¥2,699 |\n| 2 Pro（2025-07） | 9.5 cm | Ra97 穹頂燈 | ¥1,699 |\n\n其他代（初代、烘乾款、1S、1S 多功能、Pro、雙控一代、1C、2、隱形雙杆 2.4 m）燈較弱或杆長 2.2–2.4 m，在 165 深度拉不開。\n\n## 要先做的事\n- **到 Steigen 門市看 Mini 的燈和收起厚度**：140 Paya Lebar Rd, AZ@Paya Lebar #08-26（MacPherson 站 A 出口），週一至五 10–18、週末 12–18；WhatsApp 8833 0005。拿 spec sheet，問燈的 W／lm／色溫、IP 等級、機身高度。\n- **告訴電工**：機身投影內天花預留一個隱藏式 13A fused spur（Steigen 最大 1,010 W），開關裝在室內可及處，不接 H1 調光。\n- **告訴安裝師傅**：長軸 N–S 置中於 165 深度，杆伸到約 150 cm 為止；距 NW 櫃門 ≥ 20 cm；鑽孔前掃描樓板內管線。\n- **向 MCST 確認**陽台天花鑽孔與安裝是否需申請。\n\n## 風險與待確認\n- Steigen Mini 價格頁面同時出現 S$799 與 S$999，以門市報價為準（待確認）。\n- Steigen 與 PRISM+ 收起厚度未公布；若現場 ≥ 20 cm，與 GoodLiving 差距消失，改用燈較亮的 GoodLiving。\n- 開放陽台會淋雨：GoodLiving 為 IP44，Steigen IP 等級待確認。\n- 若用 H1 或其他智能開關切電，會失去升降位置記憶；只當總電源。\n- 大被（Queen 約 230 × 220）垂下約 110 cm，下降後底部可能碰到櫃頂高度 104.5，晾大被時不要降到底。",
+      "summary": "選米家智能雙控晾衣機 2，淘寶買、集運海運。因為 7 cm 最薄、50 W 3000 lm 可調色溫、兩杆各自升降可攤大被，且無加熱。",
+      "body": "## 結論\n- **選：米家智能雙控晾衣機 2**（¥1,399／淘寶米家旗艦店＋淘寶集運海運）— 7 cm 最薄、50 W 3000 lm 可調色溫、兩杆相距 114 cm 各自升降，大被直接跨兩杆攤開，無加熱。\n- **備選：米家智能晾衣機 3**（¥1,299）— 雙控 2 的機身長度放不進 165 深度，或想要固定的 2 支晾被杆時改選；36 W 3000 lm，2026-04 上市、批次較穩。\n- **不選：米家智能晾衣機 2 Pro**（¥1,699 起）— 燈 Ra97 好但瓦數未公布，比雙控 2 貴且厚。\n- **不選：米家智能晾衣機 3 Max** — 帶 1,250 W 烘乾，用不到又更重。\n- **不選：舊代**（1S、1C、2、3C 柔光版、雙控一代、隱形雙杆）— 燈 ≤ 2000 lm 或杆長 2.2–2.4 m 在 165 深度拉不開。\n- **本地後備：Steigen Dryer Mini**（S$799 起）— 只在不想承擔無保固風險時考慮；有 800 W 加熱，燈未公布。\n\n## 評判標準\n- **長度**：機身與杆 ≤ 約 150 cm，才能沿 N–S 放進 165 深度並留兩端空隙；這是唯一的硬門檻。\n- **燈**：≥ 3000 lm 且可調色溫，晚上兼陽台主燈。\n- **晾大被**：雙杆可分開升降，或有獨立晾被杆。\n- **薄**：收起 ≤ 10 cm，混凝土天花直接外露，厚度一眼就看到。\n- **無加熱**：衣物多數進烘乾機，加熱只多重量與耗電。\n- **實體操作**：附遙控器可固定在牆上當按鍵用，不登入 App 也能升降、開燈。\n\n## 比較\n| 項目 | 雙控 2 | 晾衣機 3 | 2 Pro |\n|---|---|---|---|\n| 上市 | 2026-09 | 2026-04 | 2025-07 |\n| 收起厚度 | 7 cm | 待確認 | 9.5 cm |\n| 燈 | 50 W 3000 lm | 36 W 3000 lm | Ra97，W 未公布 |\n| 色溫 | 2700–5700 K | 3000–5700 K | 三段 |\n| 晾被 | 雙杆各自升降 | 2 支晾被杆 | 2 支晾被杆 |\n| 承重 | 40 kg | 35 kg | 35 kg |\n| 價格 | ¥1,399 | ¥1,299 | ¥1,699 |\n\n| 費用（雙控 2） | 約 SGD |\n|---|---|\n| 機器 ¥1,399 | 255 |\n| GST 9%（淘寶結帳收） | 23 |\n| 海運集運（最低 0.5 CBM） | 45–100 |\n| 電工：防水 FCU＋線槽 | 150–300（待確認） |\n| 安裝（承包商或師傅） | 100–200（待確認） |\n\n## 要先做的事\n- **下單前**：向淘寶客服要雙控 2 的產品尺寸圖，確認機身與杆長 ≤ 150 cm、出線位置、附帶的膨脹螺絲規格、遙控器是否出廠已配對。\n- **運送**：用淘寶官方集運或 Oops!／EK Link／ezShip 海運，約 8–16 天；先確認集運對 1.5 m 長包裹有無長度限制。\n- **電源（告訴電工）**：從最近的陽台或客廳電源點，沿牆角走短白色 PVC 線槽上天花，接到機身出線端；牆上裝 IP55 以上防水型 13A 帶保險絲接線盒（FCU，3A 保險絲）兼總開關；剪掉中國插頭直接接入 FCU。230 V 在 220 V ±10% 內可用。不要開槽打鑿樓板。\n- **安裝（告訴承包商）**：長軸 N–S 置中於 165 深度、距 NW 櫃門 ≥ 20 cm；鑽孔前掃描樓板內管線；用 M8 不鏽鋼膨脹螺栓錨入混凝土（以原廠附件為準）；安裝板調水平；核對層高減下降行程後杆高約 1.4–1.6 m。承包商不做時，找本地晾衣架安裝師傅。\n- **向 MCST 提交裝修申請**，列明陽台天花鑽孔與外露線槽。\n- **設定**：米家 App 地區選「中國大陸」才能綁定；只用遙控器可完全不登入。\n\n## 風險與待確認\n- **無新加坡保固**：壞了只能從淘寶買遙控、燈板、馬達自行或請師傅換；米家零件供應年限待確認。\n- **新品風險**：雙控 2 2026-09 才眾籌，首批品質未經驗證；介意就選晾衣機 3。\n- **離線操作**：遙控器不經 Wi-Fi 也能用，是各代慣例，雙控 2 本身待確認。\n- **MCST 規定**：部分新加坡公寓禁止在陽台晾衣，或要求外露安裝與線槽先批准；Sengkang Grand Residences 的 by-laws 待確認。\n- **開放陽台淋雨**：米家晾衣機為室內陽台設計，防水等級待確認；FCU 和線槽必須用戶外型。\n- **大被下垂約 110 cm**，降到底可能碰到 104.5 cm 高的櫃頂，晾大被時不要降到底。",
       "sources": [
-        {
-          "title": "Steigen Dryer (Mini / Mega, Solar / Halo)",
-          "url": "https://www.steigen.com.sg/products/steigen-dryer"
-        },
-        {
-          "title": "Steigen Flexi (redirects to Steigen Dryer)",
-          "url": "https://www.steigen.com.sg/products/flexi"
-        },
-        {
-          "title": "HipVan: GoodLiving Platinum Mini 2.0",
-          "url": "https://hipvan.com/products/goodliving-platinum-mini-2-0-laundry-rack-ceramic-white"
-        },
-        {
-          "title": "PRISM+ Solaris Pro",
-          "url": "https://prismplus.sg/products/prism-solaris-pro"
-        },
-        {
-          "title": "PRISM+ Solaris range compared",
-          "url": "https://prismplus.sg/blogs/blog/guide-prism-solaris-range-compared"
-        },
-        {
-          "title": "YU HOME YU FLEX",
-          "url": "https://yuhome.com.sg/products/automated-laundry-system-yu-flex"
-        },
-        {
-          "title": "YU HOME SMARTLUX LITE",
-          "url": "https://yuhome.com.sg/products/automated-laundry-system-smartlux-lite"
-        },
         {
           "title": "IT之家：米家智能雙控晾衣機 2",
           "url": "https://www.ithome.com/1/004/983.htm"
         },
         {
+          "title": "新浪科技：米家智能雙控晾衣機 2 發佈",
+          "url": "https://finance.sina.com.cn/tech/digi/2026-09-20/doc-inisnssw6532462.shtml"
+        },
+        {
           "title": "IT之家：米家智能晾衣機 3",
           "url": "https://www.ithome.com/0/941/031.htm"
+        },
+        {
+          "title": "IT之家：米家智能晾衣機 3 開售",
+          "url": "https://www.ithome.com/0/945/836.htm"
+        },
+        {
+          "title": "IT之家：米家智能晾衣機 3C 柔光版",
+          "url": "https://www.ithome.com/0/993/394.htm"
         },
         {
           "title": "鳳凰科技：米家智能晾衣機 3 Max",
@@ -18412,12 +18396,32 @@
           "url": "https://sspai.com/post/101597"
         },
         {
+          "title": "IT之家：米家智能晾衣機 2",
+          "url": "https://www.ithome.com/0/865/916.htm"
+        },
+        {
+          "title": "IT之家：米家智能雙控晾衣機（一代）",
+          "url": "https://www.ithome.com/0/802/875.htm"
+        },
+        {
+          "title": "識物：米家智能晾衣機 1S 體驗",
+          "url": "https://www.shihuo.cn/article/detail/110441.html"
+        },
+        {
+          "title": "YOU.co: Taobao bulky shipping guide",
+          "url": "https://www.you.co/sg/blog/taobao-bulky-shipping-guide"
+        },
+        {
           "title": "Women's Weekly SG: Mijia racks have no local warranty",
           "url": "https://www.womensweekly.com.sg/family/best-automated-laundry-drying-rack-singapore"
         },
         {
-          "title": "Ezzi Living: ceiling installation for racks",
-          "url": "https://ezziliving.com/ez-lift-extendable-gear-system"
+          "title": "Uchify: condo by-laws (balcony laundry bans)",
+          "url": "https://uchify.com/ridiculous-condo-by-laws/"
+        },
+        {
+          "title": "Steigen Dryer (Mini)",
+          "url": "https://www.steigen.com.sg/products/steigen-dryer"
         }
       ]
     },
@@ -18498,10 +18502,10 @@
       ]
     },
     "kitchen-sink": {
-      "title": "廚房水槽：Blanco／Franke 選型與新加坡展示間",
+      "title": "廚房水槽：下嵌單槽選型",
       "updated": "2026-10-29",
-      "summary": "71.9 櫃內淨寬約 68，放不下盆寬 60 的下嵌盆。首選 Franke Box BXX 210/110-54（盆 54，外 58），到 Marina Square 的 Franke Kitchen Studio 看；備選 Blanco Solis 500-U，到 Hoe Kee 看。",
-      "body": "## 先講結論：「60 cm 盆」放不進 71.9 櫃\n- 水槽櫃 71.9，板厚 1.8 → **櫃內淨寬約 68.3**。下嵌盆的外框要落在這 68.3 裡，兩側還要留空間鎖夾具。\n- Blanco 單盆沒有 60 這個尺寸，從 500 直接跳到 700（要 80 櫃）。Franke Box 系列是 54 → 72（要 80 櫃）；DrainMax 盆寬 65，要 75 櫃。\n- 所以這個櫃的「60 級」= **外框約 58–61、盆寬 50–55**。如果一定要盆寬 ≥ 60，櫃子要 ≥ 75（B 方案 76.9 可放 Franke BDX 210/110-65）。\n\n## 放得進 71.9 櫃的型號\n| 型號 | 外框 | 盆內 寬×深×高 | 材質／安裝 | 最小櫃 | 新加坡價（約） |\n|---|---|---|---|---|---|\n| **Franke Box BXX 210/110-54**（127.0677.190） | 58 × 45 | 54 × 41 × 20，R12 直角 | 不鏽鋼 N4 拉絲；下嵌／平嵌／Slimtop | 60 | S$650 標價（Econflo） |\n| Franke Bell BCX 110-55TL（122.0469.279） | 61 × 48 | 54.5 × 41.5 × 20，R50 圓角 | 不鏽鋼；下嵌，有龍頭平台 | 待確認 | S$330（Econflo，網店缺貨） |\n| **Blanco Solis 500-U**（526122） | 54 × 44 | 50 × 40 × 18.5 | 不鏽鋼拉絲；下嵌，附 InFino 排水 | 60 | S$529（原價 807，Hoe Kee） |\n| Blanco Subline 500-U | 53 × 46 | 50 × 40 × 19 | Silgranit 花崗岩複合材，黑／白／灰；下嵌 | 60 | S$908 起（Hoe Kee）；S$1,222（Bathroom Warehouse，缺貨） |\n| *參考* Franke BDX 210/110-65（127.0754.857） | 69 × 45 | 65 × 41 × 20 | 不鏽鋼；下嵌 | **75** | 新加坡價待確認；只適用 B 方案 |\n\n- 花崗岩盆（Fragranite／Silgranit）的邊框比較厚，同樣的櫃寬盆內會小一號。例如 Franke Kubus KNG 110-62 盆寬 62，外框卻有 76，要 80 櫃。\n- 價格是網店標價，可能是促銷價；Econflo 有 Franke 全店 25–35% 折扣（不含配件）。實際價錢以門市報價為準。\n\n## 去哪裡看實品\n- **Franke Kitchen Studio（Econflo，獨家代理）**：6 Raffles Blvd #02-274/274A Marina Square，每日 11:00–19:30，WhatsApp +65 9814 7277。Econflo 辦公室：401 Commonwealth Dr #01-01 Haw Par Technocentre，週一至六 10–18。Box 54 有沒有展示，**要先 WhatsApp 確認**。\n- 另一處 Franke 地點 33 Ubi Ave 3 #01-38 Vertex，資料來自媒體文章，**待確認**。\n- **Blanco @ Hoe Kee**（網店有 Solis／Subline 的價格）：Tai Seng 27 Playfair Rd（每日 9:30–18:30）；GRH Gallery 33 Ubi Ave 4 #01-34 Vertex（每日 10–19）；IMM #03-08（每日 11–20:30）等。哪間有展示實品，**待確認**。\n- Bathroom Warehouse（Changi／Bukit Merah／Ubi Vertex #01-51）也有 Blanco 的網上標價，展示**待確認**。\n- 有媒體寫 Blanco 在 23 New Bridge Rd #02-00 有展示間（週一至五 9–18），但 blanco.com 找不到新加坡的聯絡資料，**待確認**。\n- Gain City、Courts、Best Denki、Harvey Norman 查不到賣這兩個牌子的嵌入式水槽，不建議去這幾間找。\n\n## 配件、龍頭\n- 不鏽鋼底格柵：Franke Box 有原廠格柵和瀝水籃，Blanco Solis 也有原廠格柵，**以實際型號的配件表為準**。可以保護盆底，碗盤也比較好瀝水。\n- 龍頭孔開在岩板上，位置在盆後方，孔徑約 35 mm（**以選定龍頭的安裝圖為準**）。抽拉龍頭要留軟管下垂的空間；櫃內的層板只有前半深，正好不會擋到。\n- 排水口靠後放，給洗碗機進排水和濾水器騰出空間。洗碗機排水管接在水槽存水彎的支管上。\n\n## 下嵌盆 × 岩板：交給石材師傅的重點\n- 岩板面高 90、總厚 3，是 1.2 板加厚，斜接是否可行待確認。**下嵌盆的開孔邊會露出岩板的切面**，要確認選的色號是通體還是只有表面印花。如果是印花款，切面顏色會不一樣，要問廠商能不能做倒角或補色。\n- 開孔內角要留 R ≥ 5–10 mm，不要切成直角，否則容易從角落裂開。開孔邊緣要磨光。\n- 盆要用原廠夾具加結構膠固定在岩板底面。盆的重量（加上滿水約 40 kg 以上）建議由櫃頂兩條橫撐分擔，不要只靠膠。\n- 開孔尺寸 = 盆內尺寸 + 想要的露邊（常見做法：露邊 0–3 mm，或做負邊）。**要等實品到了再拿樣板開孔**，不要只看型錄上的尺寸。\n- 平嵌（flushmount）要在 1.2 岩板上銑出凹槽，風險高，不建議。\n\n## 建議\n- **首選：Franke Box BXX 210/110-54**。在這個櫃寬內盆最大（54），R12 直角跟岩板的線條最搭，不鏽鋼也比較耐撞。可以到 Marina Square 的 Franke Kitchen Studio 看實品，並跟 Econflo 一起確認配件和折扣。\n- **備選：Blanco Solis 500-U**。價格比較低，有 InFino 排水，但盆小一點（50）。可以到 Hoe Kee 看，Tai Seng 或 GRH Vertex 店，先打電話確認有沒有展示。想要黑色石材感的話，選 Subline 500-U。\n- 一定要 60 以上的盆：把水槽櫃改成 ≥ 75（B 方案），再選 Franke BDX 210/110-65。\n",
+      "summary": "選 Franke Box BXX 210/110-54，A、B 兩案都一樣。因為它是 71.9 櫃放得進的最大不鏽鋼下嵌盆（54×41×20），輕、適合 1.2 岩板，有 10 年保固，Marina Square 看得到實品。",
+      "body": "## 結論\n- **選：Franke Box BXX 210/110-54（127.0677.190）**（S$650／Econflo，Marina Square Franke Kitchen Studio）— A、B 兩案都選它：71.9 櫃放得進的最大不鏽鋼下嵌盆，輕、耐撞，10 年保固。\n- **備選：Franke Maris MRG 110-62（125.0686.724，Fragranite Onyx 黑）**— 想要盆寬 60 級、比較安靜時選它。盆 62×40，最小櫃 70，A 案也放得進；但官方要求檯面厚 ≥ 20 mm，1.2 岩板開孔一圈要加厚。\n- **不選：Blanco Solis 500-U** — 盆只有 50，R42 大圓角，重量僅 3 kg 左右，鋼板偏薄。\n- **不選：Blanco Subline 500-U** — 盆 50，S$908 起，比 Box 54 貴卻更小。\n- **不選：Franke Mythos MYX 110-55** — 盆 55，但官方最小櫃 80。\n- **不選：Box 210-72、Felix FEX 110-70、Solis 700-U** — 外框 74–76，B 案櫃內淨寬約 73.3 也放不下。\n\n## 評判標準\n- **櫃寬**：外框要小於櫃內淨寬（A 約 68.3、B 約 73.3），官方最小櫃 ≤ 71.9。B 案多出的 5 cm 只多放得下 MRG 110-62，不改變首選。\n- **盆內可用尺寸**：寬 ≥ 50、前後 ≥ 40、深 ≥ 18。Ø28 湯鍋連耳約 38，要能平放沖洗；越寬越好放烤盤和炒鍋。\n- **岩板下嵌**：1.2 板開孔，盆越輕越好；不能要求 20 mm 以上檯面，否則開孔周圍要加厚。\n- **耐用與噪音**：不鏽鋼不怕敲、會有細刮痕；花崗岩複合盆安靜、耐刮，但重鍋掉落可能崩角。\n- **轉角半徑**：R12 線條俐落、角落要用刷子；R40 以上最好擦，但看起來圓鈍。\n- **排水與配件**：3½\" 排水、附存水彎，存水彎要有洗碗機排水接口；排水口靠後，讓出抽拉龍頭軟管的空間。\n- **新加坡保固與實品**：有代理、展示間、保固在本地處理。\n\n## 比較\n| 項目 | Box 54 | MRG 110-62 | Solis 500-U |\n|---|---|---|---|\n| 外框 | 58×45 | 65.3×43.3 | 54×44 |\n| 盆內 | 54×41×20 | 62×40×20 | 50×40×18.5 |\n| 最小櫃 | 60 | 70 | 60 |\n| 材質 | 不鏽鋼 N4 | 花崗岩複合 | 不鏽鋼拉絲 |\n| 轉角 | R12 | 待確認 | R42 |\n| 檯面厚 | 未要求 | ≥ 20 mm | 未要求 |\n| 保固 | 10 年 | 待確認 | 25 年（英國） |\n| 新加坡價 | S$650 | 待確認 | S$529 |\n\n## 要先做的事\n- WhatsApp Econflo +65 9814 7277：確認 Box 54 交期（網店顯示缺貨）、現行折扣、排水口位置圖，以及存水彎有沒有洗碗機接口。\n- 看實品：Franke Kitchen Studio，6 Raffles Blvd #02-274/274A Marina Square，每日 11:00–19:30。Econflo 辦公室在 401 Commonwealth Dr #01-01 Haw Par Technocentre Lobby B，週一至六 10:00–18:00。\n- 交給石材師傅：等實品到了再拿樣板開孔；開孔內角 R ≥ 10；Fastfix 夾具要用環氧樹脂黏螺柱固定在岩板底面；櫃頂加兩條橫撐托盆。\n- 交給木工：洗碗機進排水管穿過水槽櫃側板的孔，開在後方下緣；前半深層板要避開存水彎和龍頭軟管。\n- 定龍頭：龍頭孔開在盆後方（孔徑依龍頭安裝圖，常見 35 mm），抽拉龍頭的高度要避開窗扇開啟範圍。\n\n## 風險與待確認\n- Box 54 的鋼板厚度、隔音墊、排水口位置，官網都沒有列，**待確認**。\n- 岩板色號如果不是通體，下嵌開孔會露出不同色的切面，要選通體款或問能不能補色。\n- Econflo 2025 年 9 月起的 Franke 全店 25–35% 折扣，現在是否仍有效**待確認**。\n- 選 MRG 110-62 的話，新加坡售價、顏色選項、保固都**待確認**，而且 1.2 岩板要先在開孔周圍加厚到 20 mm 以上。\n",
       "sources": [
         {
           "title": "Franke SG – Box BXX 210/110-54 (127.0677.190)",
@@ -18512,56 +18516,52 @@
           "url": "https://www.franke.com/sg/en/home-solutions/products/maris/product-detail-page.html/127.0677.201.html"
         },
         {
-          "title": "Econflo – Franke Singapore showroom / exclusive distributor",
-          "url": "https://econflo.com/pages/franke-singapore-flagship-showroom-exclusive-distributor"
+          "title": "Franke SG – Maris MRG 110-62 (125.0686.724)",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/kitchen-sinks/product-detail-page.html/125.0686.724.html"
+        },
+        {
+          "title": "Franke SG – Mythos MYX 110-55 (122.0601.341)",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/kitchen-sinks/product-detail-page.html/122.0601.341.html"
+        },
+        {
+          "title": "Franke SG – Felix FEX 110-70 (122.0702.614)",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/kitchen-sinks/product-detail-page.html/122.0702.614.html"
+        },
+        {
+          "title": "Franke SG – Kitchen sinks catalogue",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/kitchen-sinks.html"
         },
         {
           "title": "Econflo – Franke Box 210-54",
           "url": "https://econflo.com/products/franke-box-kitchen-sink-stainless-steel-single-bowl-bwx-210-54"
         },
         {
-          "title": "Econflo – Franke Bell BCX 110-55",
-          "url": "https://econflo.com/products/franke-bell-kitchen-sink-stainless-steel-single-bowl-bcx-110-55"
+          "title": "Econflo – Franke Singapore showrooms / exclusive distributor",
+          "url": "https://econflo.com/pages/franke-singapore-flagship-showroom-exclusive-distributor"
         },
         {
-          "title": "sinks.co.uk – Franke Box DrainMax BDX 210/110-65",
-          "url": "https://www.sinks.co.uk/franke-bdx-210-110-65-undermount-single-bowl-kitchen-sink-stainless-steel/"
+          "title": "Hoe Kee – Blanco Solis 500-U (526122)",
+          "url": "https://www.hoekee.com.sg/brands/blanco/blanco-solis-500-u-single-bowl-stainless-steel-kitchen-sink-526122.html"
         },
         {
-          "title": "Appliance House – Franke KNG 110-62 Kubus",
-          "url": "https://appliancehouse.co.uk/franke-kng-110-62-kubus-undermount-fragranite-sink"
+          "title": "Hoe Kee – Blanco Subline 500-U",
+          "url": "https://www.hoekee.com.sg/brands/blanco/blanco-subline-500u-silgranit-sink.html"
         },
         {
-          "title": "Hoe Kee – Blanco",
+          "title": "Hoe Kee – Blanco range",
           "url": "https://www.hoekee.com.sg/brands/blanco.html"
         },
         {
-          "title": "Hoe Kee – Showrooms",
-          "url": "https://www.hoekee.com.sg/our-showrooms/"
+          "title": "Appliances Direct – Blanco Solis 500-U 526122 specs",
+          "url": "https://www.appliancesdirect.co.uk/p/526122/blanco-526122-sink"
         },
         {
-          "title": "Trading Depot – Blanco Solis 500-U 526122 specs",
-          "url": "https://www.tradingdepot.co.uk/526122-blanco-solis-undermount-kitchen-sink"
+          "title": "Appliances Direct – Blanco Solis 700-U 526125 specs",
+          "url": "https://www.appliancesdirect.co.uk/p/526125/blanco-526125-sink"
         },
         {
-          "title": "Blanco UK – Subline range",
-          "url": "https://blanco.co.uk/sinks/subline"
-        },
-        {
-          "title": "Vieffe Trade – Blanco Subline 500-U 53 × 46",
-          "url": "https://www.vieffetrade.com/es_es/blanco-subline-500-u-fregadero-bajo-encimera-de-1-seno-cm-53-x-46-gris-volcan-567203.html"
-        },
-        {
-          "title": "Bathroom Guru (Bathroom Warehouse) – Blanco",
-          "url": "https://bathroomguru.sg/collections/blanco-singapore"
-        },
-        {
-          "title": "Kaizenaire – sink showrooms Singapore",
-          "url": "https://kaizenaire.com/best-of-singapore/the-finest-drop-in-kitchen-sinks-in-singapore-a-curated-selection-for-discerning-homeowners/"
-        },
-        {
-          "title": "Honeycombers – kitchen renovation shops Singapore",
-          "url": "https://thehoneycombers.com/singapore/kitchen-renovation-singapore/"
+          "title": "Blanco – Subline 500-U datasheet",
+          "url": "https://a.storyblok.com/f/290949323615605/2ce39bcdc6/blanco-subline-500-u-527170-datasheet-int.pdf"
         }
       ]
     }
