@@ -331,7 +331,7 @@ function selectRoom(id,{keepObject=false}={}){
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
   const grp=objectId&&object(objectId)?.group;$$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId||(!!grp&&object(z.dataset.object)?.group===grp)));
   history.replaceState(null,'','#'+(objectId?'object-'+objectId:id));
-  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();hideTip();
+  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();renderTodos();hideTip();
 }
 function selectObject(id,{scroll=false}={}){
   const o=object(id);if(!o)return;objectId=id;powerId=null;selectRoom(o.room_id,{keepObject:true});
@@ -393,7 +393,7 @@ $('#net-version').addEventListener('click',e=>{const b=e.target.closest('[data-n
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#brief-list,#smart-record,#net-version,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,script,style';
+const DYNAMIC='#brief-list,#smart-record,#net-version,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -407,7 +407,7 @@ function setLang(next){
   if(next===LANG)return;LANG=next;project=withLayout(localize(projectSource));
   const u=new URL(location.href);u.searchParams.set('lang',LANG);history.replaceState(null,'',u.pathname+u.search+u.hash);
   for(const id of ['#room-zones','#room-labels','#object-fills','#object-hits'])$(id).replaceChildren();
-  applyStatic();buildTabs();buildPlan();buildReference();renderKitchenVersion();selectRoom(roomId,{keepObject:true});if(!$('#brief-panel').hidden)renderBrief();
+  applyStatic();buildTabs();buildPlan();buildReference();renderKitchenVersion();selectRoom(roomId,{keepObject:true});if(!$('#brief-panel').hidden)renderBrief();if($('#research-dialog').open)renderResearch(researchId);
 }
 
 // R43 💡 key points: project.briefing [{text, go:[{room, kitchen?, guest?, object?}]}]; list maintained by hand.
@@ -421,10 +421,34 @@ function jumpBrief(i,j){const g=project.briefing?.[i]?.go?.[j];if(!g)return;togg
 $('#brief-btn')?.addEventListener('click',()=>toggleBrief());$('#brief-close')?.addEventListener('click',()=>toggleBrief(false));
 $('#brief-list')?.addEventListener('click',e=>{const b=e.target.closest('[data-brief]');if(b){const[i,j]=b.dataset.brief.split(':').map(Number);jumpBrief(i,j);}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#brief-panel').hidden)toggleBrief(false);});
+// To-do + research: project.todos [{id, room ('floor' = whole home), text, research?, status open|done}], project.research {id: {title, updated, summary, body (md subset), sources [{title,url}]}}.
+// List sits under the plan card for the selected room; 調研 opens #research-dialog, URL ?research=<id>.
+function renderTodos(){const box=$('#todo-block');if(!box)return;const items=(project.todos||[]).filter(x=>x.room===roomId);box.hidden=!items.length;$('#todo-count').textContent=items.length?String(items.length):'';
+ $('#todo-list').innerHTML=items.map(x=>{const done=x.status==='done',r=x.research&&project.research?.[x.research];return `<li class="todo-item${done?' done':''}"><span class="todo-check" aria-hidden="true">${done?'✓':''}</span><span class="todo-text">${done?`<s>${esc(x.text)}</s>`:esc(x.text)}</span>${r?`<button type="button" class="research-link" data-research="${esc(x.research)}">${esc(t('調研 ↗'))}</button>`:''}</li>`;}).join('');}
+function mdInline(s){return s.split(/(`[^`]+`)/).map(p=>p.length>1&&p[0]==='`'&&p.endsWith('`')?`<code>${p.slice(1,-1)}</code>`:p.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')).join('');}
+// Safe markdown subset: escape everything first, then ## / ### headings, - bullets (nest by 2 spaces), | tables | (first row = header), **bold**, `code`, [text](https://…).
+function md(src){const lines=esc(src).split('\n'),out=[];let depth=0,i=0;const close=d=>{while(depth>d){out.push('</li></ul>');depth--;}};
+ while(i<lines.length){const l=lines[i];let m;
+  if((m=l.match(/^(\s*)- (.*)$/))){const d=Math.floor(m[1].length/2)+1;if(d>depth){while(depth<d){out.push('<ul><li>');depth++;}}else{close(d);out.push('</li><li>');}out.push(mdInline(m[2]));i++;continue;}
+  close(0);
+  if(/^\s*\|/.test(l)){const rows=[];while(i<lines.length&&/^\s*\|/.test(lines[i]))rows.push(lines[i++]);const cells=r=>r.trim().replace(/^\||\|$/g,'').split('|').map(c=>mdInline(c.trim()));const body=rows.slice(1).filter(r=>!/^\s*\|[\s:|-]+\|?\s*$/.test(r));
+   out.push(`<div class="md-table"><table><thead><tr>${cells(rows[0]).map(c=>`<th>${c}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${cells(r).map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);continue;}
+  if((m=l.match(/^(#{2,3}) (.*)$/)))out.push(`<h${m[1].length+1}>${mdInline(m[2])}</h${m[1].length+1}>`);else if(l.trim())out.push(`<p>${mdInline(l)}</p>`);i++;}
+ close(0);return out.join('');}
+let researchId=null;
+function renderResearch(id){const r=project.research?.[id];if(!r)return false;researchId=id;$('#research-title').textContent=r.title||id;
+ $('#research-content').innerHTML=`${r.updated?`<p class="research-date">${esc(t('更新'))} ${esc(r.updated)}</p>`:''}${r.summary?`<p class="research-summary">${mdInline(esc(r.summary))}</p>`:''}<div class="research-md">${md(r.body||'')}</div>${(r.sources||[]).length?`<h3>${esc(t('來源'))}</h3><ol class="research-sources">${r.sources.map(s=>`<li><a href="${esc(/^https?:\/\//.test(s.url)?s.url:'#')}" target="_blank" rel="noopener noreferrer">${esc(s.title||s.url)}</a></li>`).join('')}</ol>`:''}`;return true;}
+function setResearchURL(id){const u=new URL(location.href);if(id)u.searchParams.set('research',id);else u.searchParams.delete('research');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();}
+function openResearch(id){const d=$('#research-dialog');if(!d||!renderResearch(id))return;if(!d.open)d.showModal();$('#research-content').scrollTop=0;setResearchURL(id);}
+$('#todo-list')?.addEventListener('click',e=>{const b=e.target.closest('[data-research]');if(b)openResearch(b.dataset.research);});
+$('#close-research')?.addEventListener('click',()=>$('#research-dialog').close());
+$('#research-dialog')?.addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
+$('#research-dialog')?.addEventListener('close',()=>{researchId=null;setResearchURL(null);});
 $$('[data-lang]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setLang(a.dataset.lang);}));
 applyStatic();syncKitchenURL();
 buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)?hash:'floor');
+{const rid=new URLSearchParams(location.search).get('research');if(rid)openResearch(rid);}
 // Expose a read-only snapshot for focused QA and efficient future updates.
 window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,net:currentNet(),selectedVersions:{...selectedVersions},project:structuredClone(project)})};
 })();

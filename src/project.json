@@ -17945,5 +17945,38 @@
         }
       ]
     }
-  ]
+  ],
+  "todos": [
+    {
+      "id": "sample-todo-kitchen-sink",
+      "room": "kitchen",
+      "text": "選水槽：Blanco／Franke 約 60",
+      "research": "sample-research",
+      "status": "open"
+    },
+    {
+      "id": "sample-todo-floor-network",
+      "room": "floor",
+      "text": "確認網路方案",
+      "status": "open"
+    }
+  ],
+  "research": {
+    "sample-research": {
+      "title": "水槽選擇（示意）",
+      "updated": "2026-10-29",
+      "summary": "單槽 60、下嵌；Blanco 與 Franke 二選一，待到店確認。",
+      "body": "## 結論\n- **單槽 60** 最順：Blanco 或 Franke 都可\n  - 下嵌優先，檯面好擦\n- 搭配 `60` 水槽櫃，待確認\n## 比較\n| 品牌 | 型號 | 外尺寸 | 價格 |\n|---|---|---|---|\n| Blanco | 示意 | 60 × 45 | 待確認 |\n| Franke | 示意 | 60 × 44 | 待確認 |\n### 下一步\n- 到店量實物，參考 [Blanco](https://www.blanco.com/)",
+      "sources": [
+        {
+          "title": "Blanco",
+          "url": "https://www.blanco.com/"
+        },
+        {
+          "title": "Franke",
+          "url": "https://www.franke.com/"
+        }
+      ]
+    }
+  }
 }
