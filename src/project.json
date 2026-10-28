@@ -18058,8 +18058,8 @@
       "id": "todo-kitchen-sink",
       "room": "kitchen",
       "text": "選水槽：Blanco／Franke 約 60",
-      "status": "open",
-      "research_pending": "kitchen-sink"
+      "research": "kitchen-sink",
+      "status": "open"
     },
     {
       "id": "todo-kitchen-site-measure",
@@ -18510,6 +18510,74 @@
         {
           "title": "Synced.sg: Best smart curtains in Singapore",
           "url": "https://synced.sg/blogs/news/best-smart-curtain-singapore-with-price"
+        }
+      ]
+    },
+    "kitchen-sink": {
+      "title": "廚房水槽：Blanco／Franke 選型與新加坡展示間",
+      "updated": "2026-10-29",
+      "summary": "71.9 櫃內淨寬約 68，放不下盆寬 60 的下嵌盆。首選 Franke Box BXX 210/110-54（盆 54，外 58），到 Marina Square 的 Franke Kitchen Studio 看；備選 Blanco Solis 500-U，到 Hoe Kee 看。",
+      "body": "## 先講結論：「60 cm 盆」放不進 71.9 櫃\n- 水槽櫃 71.9，板厚 1.8 → **櫃內淨寬約 68.3**。下嵌盆的外框要落在這 68.3 裡，兩側還要留空間鎖夾具。\n- Blanco 單盆沒有 60 這個尺寸，從 500 直接跳到 700（要 80 櫃）。Franke Box 系列是 54 → 72（要 80 櫃）；DrainMax 盆寬 65，要 75 櫃。\n- 所以這個櫃的「60 級」= **外框約 58–61、盆寬 50–55**。如果一定要盆寬 ≥ 60，櫃子要 ≥ 75（B 方案 76.9 可放 Franke BDX 210/110-65）。\n\n## 放得進 71.9 櫃的型號\n| 型號 | 外框 | 盆內 寬×深×高 | 材質／安裝 | 最小櫃 | 新加坡價（約） |\n|---|---|---|---|---|---|\n| **Franke Box BXX 210/110-54**（127.0677.190） | 58 × 45 | 54 × 41 × 20，R12 直角 | 不鏽鋼 N4 拉絲；下嵌／平嵌／Slimtop | 60 | S$650 標價（Econflo） |\n| Franke Bell BCX 110-55TL（122.0469.279） | 61 × 48 | 54.5 × 41.5 × 20，R50 圓角 | 不鏽鋼；下嵌，有龍頭平台 | 待確認 | S$330（Econflo，網店缺貨） |\n| **Blanco Solis 500-U**（526122） | 54 × 44 | 50 × 40 × 18.5 | 不鏽鋼拉絲；下嵌，附 InFino 排水 | 60 | S$529（原價 807，Hoe Kee） |\n| Blanco Subline 500-U | 53 × 46 | 50 × 40 × 19 | Silgranit 花崗岩複合材，黑／白／灰；下嵌 | 60 | S$908 起（Hoe Kee）；S$1,222（Bathroom Warehouse，缺貨） |\n| *參考* Franke BDX 210/110-65（127.0754.857） | 69 × 45 | 65 × 41 × 20 | 不鏽鋼；下嵌 | **75** | 新加坡價待確認；只適用 B 方案 |\n\n- 花崗岩盆（Fragranite／Silgranit）的邊框比較厚，同樣的櫃寬盆內會小一號。例如 Franke Kubus KNG 110-62 盆寬 62，外框卻有 76，要 80 櫃。\n- 價格是網店標價，可能是促銷價；Econflo 有 Franke 全店 25–35% 折扣（不含配件）。實際價錢以門市報價為準。\n\n## 去哪裡看實品\n- **Franke Kitchen Studio（Econflo，獨家代理）**：6 Raffles Blvd #02-274/274A Marina Square，每日 11:00–19:30，WhatsApp +65 9814 7277。Econflo 辦公室：401 Commonwealth Dr #01-01 Haw Par Technocentre，週一至六 10–18。Box 54 有沒有展示，**要先 WhatsApp 確認**。\n- 另一處 Franke 地點 33 Ubi Ave 3 #01-38 Vertex，資料來自媒體文章，**待確認**。\n- **Blanco @ Hoe Kee**（網店有 Solis／Subline 的價格）：Tai Seng 27 Playfair Rd（每日 9:30–18:30）；GRH Gallery 33 Ubi Ave 4 #01-34 Vertex（每日 10–19）；IMM #03-08（每日 11–20:30）等。哪間有展示實品，**待確認**。\n- Bathroom Warehouse（Changi／Bukit Merah／Ubi Vertex #01-51）也有 Blanco 的網上標價，展示**待確認**。\n- 有媒體寫 Blanco 在 23 New Bridge Rd #02-00 有展示間（週一至五 9–18），但 blanco.com 找不到新加坡的聯絡資料，**待確認**。\n- Gain City、Courts、Best Denki、Harvey Norman 查不到賣這兩個牌子的嵌入式水槽，不建議去這幾間找。\n\n## 配件、龍頭\n- 不鏽鋼底格柵：Franke Box 有原廠格柵和瀝水籃，Blanco Solis 也有原廠格柵，**以實際型號的配件表為準**。可以保護盆底，碗盤也比較好瀝水。\n- 龍頭孔開在岩板上，位置在盆後方，孔徑約 35 mm（**以選定龍頭的安裝圖為準**）。抽拉龍頭要留軟管下垂的空間；櫃內的層板只有前半深，正好不會擋到。\n- 排水口靠後放，給洗碗機進排水和濾水器騰出空間。洗碗機排水管接在水槽存水彎的支管上。\n\n## 下嵌盆 × 岩板：交給石材師傅的重點\n- 岩板面高 90、總厚 3，是 1.2 板加厚，斜接是否可行待確認。**下嵌盆的開孔邊會露出岩板的切面**，要確認選的色號是通體還是只有表面印花。如果是印花款，切面顏色會不一樣，要問廠商能不能做倒角或補色。\n- 開孔內角要留 R ≥ 5–10 mm，不要切成直角，否則容易從角落裂開。開孔邊緣要磨光。\n- 盆要用原廠夾具加結構膠固定在岩板底面。盆的重量（加上滿水約 40 kg 以上）建議由櫃頂兩條橫撐分擔，不要只靠膠。\n- 開孔尺寸 = 盆內尺寸 + 想要的露邊（常見做法：露邊 0–3 mm，或做負邊）。**要等實品到了再拿樣板開孔**，不要只看型錄上的尺寸。\n- 平嵌（flushmount）要在 1.2 岩板上銑出凹槽，風險高，不建議。\n\n## 建議\n- **首選：Franke Box BXX 210/110-54**。在這個櫃寬內盆最大（54），R12 直角跟岩板的線條最搭，不鏽鋼也比較耐撞。可以到 Marina Square 的 Franke Kitchen Studio 看實品，並跟 Econflo 一起確認配件和折扣。\n- **備選：Blanco Solis 500-U**。價格比較低，有 InFino 排水，但盆小一點（50）。可以到 Hoe Kee 看，Tai Seng 或 GRH Vertex 店，先打電話確認有沒有展示。想要黑色石材感的話，選 Subline 500-U。\n- 一定要 60 以上的盆：把水槽櫃改成 ≥ 75（B 方案），再選 Franke BDX 210/110-65。\n",
+      "sources": [
+        {
+          "title": "Franke SG – Box BXX 210/110-54 (127.0677.190)",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/maris/product-detail-page.html/127.0677.190.html"
+        },
+        {
+          "title": "Franke SG – Box BXX 210/110-72 (127.0677.201)",
+          "url": "https://www.franke.com/sg/en/home-solutions/products/maris/product-detail-page.html/127.0677.201.html"
+        },
+        {
+          "title": "Econflo – Franke Singapore showroom / exclusive distributor",
+          "url": "https://econflo.com/pages/franke-singapore-flagship-showroom-exclusive-distributor"
+        },
+        {
+          "title": "Econflo – Franke Box 210-54",
+          "url": "https://econflo.com/products/franke-box-kitchen-sink-stainless-steel-single-bowl-bwx-210-54"
+        },
+        {
+          "title": "Econflo – Franke Bell BCX 110-55",
+          "url": "https://econflo.com/products/franke-bell-kitchen-sink-stainless-steel-single-bowl-bcx-110-55"
+        },
+        {
+          "title": "sinks.co.uk – Franke Box DrainMax BDX 210/110-65",
+          "url": "https://www.sinks.co.uk/franke-bdx-210-110-65-undermount-single-bowl-kitchen-sink-stainless-steel/"
+        },
+        {
+          "title": "Appliance House – Franke KNG 110-62 Kubus",
+          "url": "https://appliancehouse.co.uk/franke-kng-110-62-kubus-undermount-fragranite-sink"
+        },
+        {
+          "title": "Hoe Kee – Blanco",
+          "url": "https://www.hoekee.com.sg/brands/blanco.html"
+        },
+        {
+          "title": "Hoe Kee – Showrooms",
+          "url": "https://www.hoekee.com.sg/our-showrooms/"
+        },
+        {
+          "title": "Trading Depot – Blanco Solis 500-U 526122 specs",
+          "url": "https://www.tradingdepot.co.uk/526122-blanco-solis-undermount-kitchen-sink"
+        },
+        {
+          "title": "Blanco UK – Subline range",
+          "url": "https://blanco.co.uk/sinks/subline"
+        },
+        {
+          "title": "Vieffe Trade – Blanco Subline 500-U 53 × 46",
+          "url": "https://www.vieffetrade.com/es_es/blanco-subline-500-u-fregadero-bajo-encimera-de-1-seno-cm-53-x-46-gris-volcan-567203.html"
+        },
+        {
+          "title": "Bathroom Guru (Bathroom Warehouse) – Blanco",
+          "url": "https://bathroomguru.sg/collections/blanco-singapore"
+        },
+        {
+          "title": "Kaizenaire – sink showrooms Singapore",
+          "url": "https://kaizenaire.com/best-of-singapore/the-finest-drop-in-kitchen-sinks-in-singapore-a-curated-selection-for-discerning-homeowners/"
+        },
+        {
+          "title": "Honeycombers – kitchen renovation shops Singapore",
+          "url": "https://thehoneycombers.com/singapore/kitchen-renovation-singapore/"
         }
       ]
     }
