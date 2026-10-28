@@ -18009,8 +18009,8 @@
       "id": "todo-living-curtain-motor",
       "room": "living",
       "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
-      "status": "open",
-      "research_pending": "curtain-motor"
+      "research": "curtain-motor",
+      "status": "open"
     },
     {
       "id": "todo-living-curtain-socket",
@@ -18107,8 +18107,8 @@
       "id": "todo-master-curtain-motor",
       "room": "master",
       "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
-      "status": "open",
-      "research_pending": "curtain-motor"
+      "research": "curtain-motor",
+      "status": "open"
     },
     {
       "id": "todo-master-curtain-socket",
@@ -18156,8 +18156,8 @@
       "id": "todo-kid-curtain-motor",
       "room": "kid",
       "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
-      "status": "open",
-      "research_pending": "curtain-motor"
+      "research": "curtain-motor",
+      "status": "open"
     },
     {
       "id": "todo-kid-curtain-socket",
@@ -18211,8 +18211,8 @@
       "id": "todo-guest-curtain-motor",
       "room": "guest",
       "text": "選電動窗簾馬達：Aqara C200 或 CD-M01D",
-      "status": "open",
-      "research_pending": "curtain-motor"
+      "research": "curtain-motor",
+      "status": "open"
     },
     {
       "id": "todo-guest-curtain-socket",
@@ -18442,6 +18442,74 @@
         {
           "title": "Ezzi Living · ceiling installation",
           "url": "https://ezziliving.com/ez-lift-extendable-gear-system"
+        }
+      ]
+    },
+    "curtain-motor": {
+      "title": "電動窗簾電機選擇（Aqara C200 vs 國際版）",
+      "updated": "2026-10-29",
+      "summary": "「C 兩百」是中國大陸版 Aqara C200，新加坡無售且無法接入國際版 Hub M3；建議改用國際版 Aqara Curtain Motor（CD-M01D）× 4 搭配本地軌道安裝。",
+      "body": "## 結論\n- **「C 兩百」= Aqara 智能隱形窗簾電機 C200**（2025-09 中國發佈，Zigbee 型號 `lumi.curtain.acn018`，`acn` = **中國大陸版**）。\n- **新加坡無官方銷售**；與你的國際版 Hub M3 / H1 開關**不在同一區域，官方 App 無法配對**。**不建議從淘寶買。**\n- **建議：國際版 Aqara Curtain Motor（CD-M01D，Zigbee 3.0，100–240 V）× 4 + 本地窗簾師傅做軌道**，直接接入 Hub M3。\n\n## C200 是什麼\n| 項目 | 內容 |\n|---|---|\n| 類型 | 軌道式「隱形」開合簾電機，機身扁平，高 5.5 cm，可整機藏入窗簾盒 |\n| 協定 | Zigbee（經 Aqara 網關接入；網關開 HomeKit 後進 Apple Home）；本身**非 Matter/Thread** |\n| 電源 | 中國 220 V，底部出線、Z 型（貼牆）國標插頭；電壓上限 待確認 |\n| 載重 / 噪音 | 最大 50 kg 簾布；29 dB；1.5 N·m 直流無刷 |\n| 軌道 | 直軌、L 型、U 型訂製軌，與簾布套裝賣，含上門測量安裝（僅限中國） |\n| 拉簾啟動 | Zigbee2MQTT 有 manual open/close 選項，應支援 |\n| 價格 | 單電機 ¥499 起 |\n| 窗簾盒 | 宣稱標準 ≥ 6 cm 即可嵌入（寬度/雙軌要求 待確認） |\n\n## 淘寶買回新加坡自裝？→ 不建議\n- **區域鎖**：大陸版 Aqara 設備只能綁中國伺服器；國際版 Hub M3 無法加入。要用就得另買**中國版網關 + 中國區帳號**，與 H1 開關、M3 分成兩套系統。\n- **Matter 無解**：C200 本身不是 Matter；M3 第三方 Matter 支援為實驗功能，清單未含窗簾。\n- **電壓 OK、插頭不 OK**：SG 230 V/50 Hz 可用，但需剪線換 BS1363 13A 插頭（窗簾盒內不宜用轉接頭）。\n- **無保固**：本地無售後；軌道訂製長軌（>3 m）跨境運費高、須自行測量與安裝。\n- 唯一後門：Zigbee2MQTT / Home Assistant 已支援 C200，但脫離 Aqara App 生態。\n\n## 新加坡能買到的 Aqara 方案\n| 型號 | 類型 | 價格 (SGD) | 備註 |\n|---|---|---|---|\n| **Curtain Motor CD-M01D**（國際版） | 插電軌道電機 | S$299 單機；S$409 含 2 m 軌 + 安裝（Harvey Norman） | 100–240 V、50 kg、<30 dB、70×50×346 mm；目前網頁缺貨 |\n| Curtain Driver E1 Track (CM-M01) | 電池外掛驅動器 | S$139–140 | 12 kg 上限、60–65 dB、適合現有 U/I 軌改裝 |\n| Hub M3 | 網關 | S$209 | 已有 |\n- 本地經銷：Souky（Shopee/Lazada 官方店）、Harvey Norman、iShopChangi。\n\n## 替代方案\n- **Aqara E1 驅動器**：便宜、免插座，但吵、載重低、要充電；不適合新裝修。\n- **Somfy / Dooya 本地窗簾商**：每窗馬達+軌道約 S$350–900，品質/保固好；Somfy Glydea 有 Zigbee 版，但接 Aqara M3 **待確認**（大概率不行）。\n- **小米/米家電機**：同樣大陸區域鎖，不建議。\n\n## 窗簾盒要求（CD-M01D + 雙軌）\n- **淨寬（離牆深度）≥ 200 mm**，建議 220–250 mm（紗簾軌 + 遮光軌，各約 80–100 mm）。\n- **淨高 ≥ 100 mm**；CD-M01D 為直立式，機身約 346 mm 垂掛於軌道端下方，由簾布遮擋。\n- **13A 插座**：在電機那端窗簾盒頂板或側板內，距端牆 100–150 mm；電源線 1.2 m。\n- 雙軌都要電動 → 每窗 2 台電機、2 個插座（或雙位插座）。\n- 軌道端與牆/側板留 ≥ 50 mm 給電機 + 簾頭；確認 CD-M01D 原廠插頭規格 待確認。\n\n## 建議採購（4 房）\n- 國際版 **Aqara Curtain Motor CD-M01D × 4**（遮光層），客廳可加第 5 台給紗簾。\n- 本地窗簾師傅訂製 Aqara 相容電動軌道；**先確認師傅能拿到 Aqara 軌道或相容驅動頭**（待確認）。\n- 全部接入現有 Hub M3，經 M3 進 Apple Home / Matter 橋接。\n",
+      "sources": [
+        {
+          "title": "新浪科技：Aqara 智能隱形窗簾電機 C200 發佈",
+          "url": "https://finance.sina.com.cn/tech/roll/2025-09-19/doc-infqzzeh4698296.shtml"
+        },
+        {
+          "title": "新浪眾測：Aqara C200 評測",
+          "url": "https://zhongce.sina.com.cn/interface/article/view/192745/"
+        },
+        {
+          "title": "東方財富：C200 規格（50 kg / 29 dB / ¥499）",
+          "url": "https://caifuhao.eastmoney.com/news/20250921180231431212670"
+        },
+        {
+          "title": "Zigbee2MQTT: Aqara C200",
+          "url": "https://www.zigbee2mqtt.io/devices/C200.html"
+        },
+        {
+          "title": "zigbee-herdsman-converters lumi.ts (C200 = lumi.curtain.acn018)",
+          "url": "https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices/lumi.ts"
+        },
+        {
+          "title": "Homey Community: Aqara Chinese products region lock",
+          "url": "https://community.homey.app/t/aqara-chinese-products/102072"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara Curtain Motor + 2m track + installation (CD-M01D)",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-curtain-motor-with-2m-track-and-installation-white-cd-m01d.html"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara curtain motor ZNCLDJ11LM",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-c3-curtain-motor-white-zncldj11lm.html"
+        },
+        {
+          "title": "YOHO HK: CD-M01D specs",
+          "url": "https://www.yohohongkong.com/en-us/product/113444-Aqara-Smart-Curtain-Motor-Zigbee-Opening-and-Closing-Curtain-Version-CD-M01D-Clean-Machine-Apple-Homekit"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara E1 Curtain Driver Track (CM-M01)",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-e1-smart-curtain-driver-track-version-white-cm-m01.html"
+        },
+        {
+          "title": "Lester Chan: Aqara Curtain Driver E1 Track review (SG)",
+          "url": "https://lesterchan.net/blog/2024/06/18/aqara-curtain-driver-e1-track-version-review/"
+        },
+        {
+          "title": "Lester Chan: Aqara tag (Hub M3 SG price)",
+          "url": "https://lesterchan.net/blog/tag/aqara"
+        },
+        {
+          "title": "Aqara Hub M3 third-party Matter device support",
+          "url": "https://restechtoday.com/aqara-updates-hub-m3-firmware-for-third-party-device"
+        },
+        {
+          "title": "Curtains and blinds in Singapore: 2026 cost guide",
+          "url": "https://themoneybees.co/blog/curtains-and-blinds-singapore"
+        },
+        {
+          "title": "Synced.sg: Best smart curtains in Singapore",
+          "url": "https://synced.sg/blogs/news/best-smart-curtain-singapore-with-price"
         }
       ]
     }
