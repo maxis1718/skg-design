@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R60",
+    "revision": "R61",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4633,6 +4633,10 @@
     {
       "id": "C68",
       "text": "網路定案 UniFi、拿掉方案切換並併入智能家居；客廳 AP 移到鋼琴上方；主臥預留 Cat6；客房網路孔移到書桌下；女傭房不做電動窗簾；陽台插座改拖地機 H14 Ultra。"
+    },
+    {
+      "id": "C69",
+      "text": "曬衣架改輕薄款 YU HOME SMARTLUX LITE（113 × 40 × 6.6，無風扇無加熱）。"
     }
   ],
   "measurement_policy": {
@@ -19812,7 +19816,7 @@
     {
       "id": "todo-living-balcony-drying-rack",
       "room": "living-balcony",
-      "text": "買曬衣架：PRISM+ Solaris XL（含安裝 S$469）",
+      "text": "買曬衣架：YU HOME SMARTLUX LITE（S$549 含安裝）",
       "research": "drying-rack",
       "status": "open"
     },
@@ -19833,72 +19837,100 @@
     "drying-rack": {
       "title": "客廳陽台電動曬衣架",
       "updated": "2026-10-29",
-      "summary": "選 PRISM+ Solaris XL（S$669，RACK200 減 S$200 → S$469，含安裝）。因為剪式升降、杆上沒有鋼索，被子可掛滿整支杆；沒有 App，暖光直接用遙控切；和淘寶加安裝（S$423–578）同價位，還有本地保固。",
-      "body": "## 結論\n- **選：PRISM+ Solaris XL**（S$669，結帳輸入 RACK200 減 S$200 → S$469，含標準安裝；prismplus.sg）— 剪式升降，杆上沒有鋼索；沒有 App，三種燈色全靠遙控切換；到手價和淘寶加安裝同價位。\n- **晾被方法**：被子沿長邊對折，掛在最外側那支杆上。杆長 131、兩端懸空，200 寬的被子可整片攤開，兩端各多出約 35，下垂約 115，底下有風扇往下吹。\n- **備選：PRISM+ Solaris Pro XL**（S$899，RACK200 後 S$699）— 想讓厚被、牛仔褲乾得更快就選它。6 個 9 m/s 風扇、12 片 PTC 加熱（最高 75°C）、載重 50 kg；另有離線英語語音與 PRISM+ Connect App，但遙控器照樣全功能。安裝需求同為 131 × 49.8。\n- **米家智能双控晾衣机 2 有問題 → 改 PRISM+ Solaris XL**：亮度和色溫（2700–5700K）只能在米家 App 調；每支杆由兩條吊索吊著，被子只能攤在吊索之間（吊索位置待確認）。\n- **不選：米家智能晾衣机 3、米家智能晾衣机 2 Pro** — 有 2 支晾被杆，但遙控只有升、停、降、燈 4 鍵，亮度和色溫要在 App 調。\n- **不選：米家智能晾衣机 3 Max、好太太 Q60、Philips Beta-AB0** — 杆長 2.2–2.4 m，165 的深度放不下；遙控同樣只能開關燈。\n- **不選：邦先生 M31、Aqara 智能晾衣机 Lite、EZ Slim** — 邦先生 M31 色溫只能在 App 調；Aqara 智能晾衣机 Lite 是 20 W 單色溫；EZ Slim 只有 1 支杆、9 W。\n\n## 評判標準\n- **晾被可用長 ≥ 120**：杆上要沒有鋼索，或兩條鋼索之間 ≥ 120。南北向最長只放得下約 150，被子 200 寬，只能從杆的兩端垂出去。\n- **燈色用按鍵切換**：遙控器要能切到暖光，不靠 App。\n- **長度 ≤ 150**：165 深度置中擺，兩端各留 ≥ 7。\n- **到手總價**：機器、運費、安裝、電工全部加起來比。\n- **厚度與外觀**：天花是外露混凝土，機身一眼就看得到。\n- **亮度**：晚上要兼當陽台主燈。\n\n## 比較\n| 項目 | Solaris XL | Solaris Pro XL | 双控晾衣机 2 |\n|---|---|---|---|\n| 升降 | 剪式 | 剪式 | 每杆 2 條鋼索 |\n| 晾被可用長 | 131，兩端空 | 131，兩端空 | 只在鋼索間 |\n| 燈色 | 遙控切 3 色 | 遙控／語音／App | 只在 App |\n| 燈 | 24 W | 24 W | 50 W 3000 lm |\n| 安裝需求 | 131 × 49.8 | 131 × 49.8 | 長度待確認 |\n| 厚度 | 待確認 | 待確認 | 7 cm |\n| 風扇／加熱 | 4 扇／6 片 | 6 扇／12 片 | 無 |\n| 到手價 | S$469 | S$699 | S$423–578 |\n| 保固 | 2＋5 年 | 2＋5 年 | 無 |\n\n## 要先做的事\n- **下單**：在 prismplus.sg 用 RACK200 促銷碼買 PRISM+ Solaris XL，預約時寫明「外露混凝土天花，長邊南北向」；標準安裝涵蓋 3.3 m 以下混凝土天花、電源點已備好的情況，所以電工要先把插座做好；需要第二趟才裝得上要另收 S$60。\n- **電源（告訴電工）**：機器有電熱，不從吊扇點取電（照明迴路的開關器通常只有 6–10 A）。改從西牆 S-09 的插座迴路接出：在西牆離地 150 裝帶開關的保險絲接線盒（FCU，13 A 保險絲），用 PVC 線槽上到天花，再往東約 1 m，到機身西端裝一個 IP66 的 13A 插座；線槽漆成天花色。\n- **安裝位置（告訴 PRISM+ 師傅）**：長軸南北向、置中於 165 深度，西緣離收納櫃門 20；鑽孔前先掃描樓板內的管線。\n- **遙控器**：用隨附的壁掛座裝在陽台門邊，離地 120。\n- **向 MCST 提交裝修申請**，寫明陽台天花鑽孔與外露線槽。\n\n## 風險與待確認\n- **厚度未公布**：有風扇和加熱，可能比米家（7–9.5 cm）厚；PRISM+ 預約時順便取得尺寸圖，待確認。\n- **兩端間隙**：南北兩端各約 17，官方建議離牆 ≥ 20；伸縮杆只拉到總長 150 為止。\n- **燈色怎麼切**：官網寫明遙控可調燈光，且沒有 App，三種燈色只能從遙控切；按鍵是循環切換還是分開的鍵，待確認。\n- **亮度**：只公布 24 W，流明未公布，約 2000 lm（估）；要更亮就在門邊加一盞壁燈。\n- **開放陽台淋雨**：PRISM+ 只標示室內使用，未公布防水等級（待確認）；插座與 FCU 用 IP66 戶外型，機身放在雨淋不到的內側。\n- **MCST 規定**：Sengkang Grand Residences 的 by-laws 可能禁止在陽台晾衣，待確認。\n\n## 控制與電源（已查證）\n- **完全不用 App**：PRISM+ Solaris XL 沒有 App，也沒有語音；升降、燈、燈色、加熱、定時都在遙控器上，遙控器附壁掛座。\n- **米家各款為什麼不行**：米家智能双控晾衣机 2 官方寫明亮度與色溫在米家 App 調；米家晾衣机的遙控器只有 4 個基本鍵，Philips、Aqara 的說明書也一樣只能開關燈。\n- **電源加獨立開關**：西牆的 FCU 平常開著，長期出門或維修時切斷；不要和吊扇共用開關。230 V、英規插頭原生支援，不用剪插頭。\n\n## 為什麼不在意新加坡保固\n- 這次選新加坡貨不是為了保固，是因為含安裝後價格和淘寶同級：PRISM+ Solaris XL 到手 **S$469**，含標準安裝與 GST。\n- 淘寶米家智能双控晾衣机 2：众筹價 ¥1,399 ≈ S$255，加 GST S$23、海運 S$45–100、師傅安裝 S$100–200，約 **S$423–578**，還要自己找人裝。\n- 本地 2 年保固加馬達與燈 5 年，是額外的好處；就算 3 年內換代停產，也不影響決定。",
+      "summary": "選 YU HOME SMARTLUX LITE（S$549 含安裝）。因為機身 113 × 40 × 6.6 最薄、放得進 150，沒有風扇和電熱，雙色溫燈可調亮度、有遙控；和淘寶米家智能双控晾衣机 2 加運費、安裝同價位，還有到府保固。",
+      "body": "## 結論\n- **選：YU HOME SMARTLUX LITE**（S$549，原價 S$899，含混凝土天花安裝；yuhome.com.sg）— 113 × 40 × 6.6，一體晾衣框不伸縮，長度固定放得進 150；25 W 雙色溫燈可調亮度；無風扇、無電熱；2 年到府保固、馬達 5 年。\n- **備選：米家智能双控晾衣机 2**（众筹 ¥1,399，到手約 S$420–575）— 燈最強：50 W、3000 lm、2700–5700K、顯色 97；7 cm 厚、兩支杆分開升降。問題是亮度和色溫官方寫明只在米家 App 調 → 選它就在安裝時用 App 設好 2700K 與亮度一次，之後遙控只開關燈。\n- **兩款正面比較**：都夠薄、都無電熱、價格同級；SMARTLUX LITE 勝在長度確定、本地安裝與保固、燈控不靠 App；米家勝在燈更亮更暖、晾杆可伸縮。\n- **不選：Aqara 智能晾衣机 H1** — 唯一查證遙控有亮度±、色溫±鍵，但有風干、烘干、UV，750 W，9.5 cm。\n- **不選：米家智能晾衣机 2／3、米家智能双控晾衣机（一代）、米家智能晾衣机 Pro** — 調光調色都在 App，遙控只有 4 個基本鍵；晾衣机 2 厚 9.1 cm。\n- **不選：米家智能晾衣机 1S、米家智能隐形晾衣机 双杆2.4米、米家智能晾衣机 3 Max** — 1S 厚 9.9 cm；另兩款 2.2–2.4 m 放不下。\n- **不選：Aqara 智能晾衣机 Lite、邦先生 轻空 M31C** — Lite 20 W 單色溫；M31C 調光只在 App／語音。\n- **不選：Philips 3000 Series SDR301、松下 JM-BB6AW／JM-EN6UW** — Philips 遙控只開關燈；松下只在中國經銷商安裝，遙控按鍵未公開。\n- **不選：PRISM+ Solaris XL、Steigen Solar、GoodLiving Platinum Mini 2.0、GoodWife Lite Mini** — 前三款有風扇和電熱；GoodWife 晾桿伸到 180。\n- 好太太、晾霸、九牧、云米、欧普、鸿蒙智选：公開規格查無「薄、無電熱、遙控調光」的款式；米家智能晾衣机 3C 柔光版查無官方規格。\n\n## 評判標準\n- **無風扇、無電熱**：只當晾衣架和陽台燈，多數衣物烘乾。\n- **燈控不靠 App**：遙控器或牆面按鍵能開關燈，最好能調亮度與色溫。\n- **厚度 ≤ 8–10 cm**：天花是外露混凝土，機身一眼看得到。\n- **長度 ≤ 150**：165 深度置中，兩端各留 ≥ 7；伸縮杆要能收在 150 內。\n- **燈亮且暖**：≥ 2000 lm、可到 3000K 以下，兼當陽台主燈。\n- **到手總價**：機器、GST、運費、安裝全部加起來比。\n\n## 比較\n| 項目 | SMARTLUX LITE | 双控晾衣机 2 | Aqara H1 |\n|---|---|---|---|\n| 厚度 | 6.6 cm | 7 cm | 9.5 cm |\n| 機身 | 113 × 40 | 約 115 × 45 | 128 × 31.5 |\n| 晾杆 | 一體框 113 | 2 杆可伸縮 | 145–247 |\n| 風扇／電熱 | 無 | 無 | 有，750 W |\n| 燈 | 25 W 雙色溫 | 50 W 3000 lm | 18 W |\n| 色溫 | 雙色，K 未公布 | 2700–5700K | 可調 |\n| 遙控調光 | 待確認 | 否，App | 是，±鍵 |\n| 其他 | 藍牙喇叭 | 洗完自動降 | UV 消毒 |\n| 到手價 | S$549 含安裝 | S$420–575 | 不考慮 |\n| 保固 | 2 年到府 | 無 | 無 |\n\n## 要先做的事\n- **下單前（我方 WhatsApp YU HOME）**：要遙控器正反面照片，確認有亮度與色溫鍵；沒有就改米家智能双控晾衣机 2。\n- **下單**：yuhome.com.sg 買 SMARTLUX LITE；預約安裝寫明「外露混凝土天花、長邊南北向、西緣離收納櫃門 20、置中於 165 深度」。天花高於 2.8 m 加 S$160。\n- **電源（告訴 Patrick）**：沒有電熱，一般 13A 插座就夠，不用 FCU。從西牆 S-09 插座迴路用 PVC 線槽上天花，往東約 1 m 到機身西端，裝 IP66 戶外型 13A 插座；線槽漆成天花色。\n- **遙控器**：貼在陽台門邊牆上，離地 120。\n- **向 MCST 提交裝修申請**，寫明陽台天花鑽孔與外露線槽。\n\n## 風險與待確認\n- **遙控按鍵**：官網列出可調亮度、遙控、App，按鍵配置未公布，待確認。\n- **色溫**：只寫雙色溫，K 值與流明未公布；25 W 約 2000–2500 lm（估）。\n- **晾衣量**：框長 113、不伸縮，適合 1–2 人；大被子要對折掛。\n- **開放陽台**：YU HOME 寫明室內用，有遮蔽的戶外可裝；機身放在雨淋不到的內側。\n- **MCST 規定**：by-laws 可能限制陽台晾衣，待確認。\n\n## 控制與電源（已查證）\n- **SMARTLUX LITE**：附遙控；官網另列 App，但升降與開關燈都在遙控上；內建藍牙喇叭可不用。\n- **米家智能双控晾衣机 2**：官方發布寫明「米家 App 亮度無級調節、2700k~5700k 色溫多檔切換」；遙控只做升降與開關燈。\n- **電源**：YU HOME 接受燈位（6 A）或一般插座；P-06 從 S-09 插座迴路接出，不接吊扇點，關閉由配電箱斷路器。\n\n## 為什麼不在意新加坡保固\n- 這次買新加坡貨不是為了保固，是因為同價：SMARTLUX LITE 到手 **S$549**，含安裝與 GST。\n- 淘寶米家智能双控晾衣机 2：¥1,399 ≈ S$252，加 GST S$23、海運 S$45–100、師傅安裝 S$100–200，約 **S$420–575**，還要自己找人裝、換英規插頭。",
       "sources": [
         {
-          "title": "PRISM+ Solaris XL",
-          "url": "https://prismplus.sg/products/prism-solaris-xl"
+          "title": "YU HOME SMARTLUX LITE",
+          "url": "https://yuhome.com.sg/products/automated-laundry-system-smartlux-lite"
         },
         {
-          "title": "PRISM+ Solaris",
-          "url": "https://prismplus.sg/products/prism-solaris"
+          "title": "YU HOME SMARTLUX PRO",
+          "url": "https://yuhome.com.sg/products/automated-laundry-system-smartlux-pro"
         },
         {
-          "title": "PRISM+ Solaris Pro XL",
-          "url": "https://prismplus.sg/products/prism-solaris-pro-xl"
-        },
-        {
-          "title": "PRISM+ Solaris Pro",
-          "url": "https://prismplus.sg/products/prism-solaris-pro"
-        },
-        {
-          "title": "PRISM+ Solaris range compared",
-          "url": "https://prismplus.sg/blogs/blog/guide-prism-solaris-range-compared"
-        },
-        {
-          "title": "PRISM+: how to choose a smart laundry rack",
-          "url": "https://prismplus.sg/blogs/blog/how-to-choose-a-smart-laundry-rack-in-singapore-8-factors"
-        },
-        {
-          "title": "Save Point: Prism+ Solaris Pro XL review",
-          "url": "https://savepointgaming.co/review/prism-solaris-pro-xl-review-singapore/"
+          "title": "YU HOME FAQ (installation, power, warranty)",
+          "url": "https://yuhome.com.sg/pages/frequently-asked-questions"
         },
         {
           "title": "IT之家：米家智能双控晾衣机 2",
           "url": "https://www.ithome.com/1/004/983.htm"
         },
         {
+          "title": "新浪科技：米家智能双控晾衣机 2",
+          "url": "https://finance.sina.com.cn/tech/digi/2026-09-20/doc-inisnssw6532462.shtml"
+        },
+        {
+          "title": "IT之家：米家智能双控晾衣机",
+          "url": "https://www.ithome.com/0/802/875.htm"
+        },
+        {
+          "title": "蘇寧：米家智能双控晾衣机 MJLYJ4QC 規格",
+          "url": "https://m.suning.com/product/0010359293/12439343072.html"
+        },
+        {
+          "title": "IT之家：米家智能晾衣机 2",
+          "url": "https://www.ithome.com/0/865/916.htm"
+        },
+        {
           "title": "IT之家：米家智能晾衣机 3",
           "url": "https://www.ithome.com/0/941/031.htm"
         },
         {
-          "title": "少數派：米家智能晾衣机 2 Pro",
-          "url": "https://sspai.com/post/101597"
+          "title": "IT之家：米家智能晾衣机 1S",
+          "url": "https://www.ithome.com/0/957/811.htm"
         },
         {
           "title": "新浪眾測：米家智能晾衣机 Pro 遙控器",
           "url": "https://zhongce.sina.com.cn/interface/article/view/149750/"
         },
         {
-          "title": "鳳凰科技：米家智能晾衣机 3 Max",
-          "url": "https://tech.ifeng.com/c/8x0zGkZ3cFb"
+          "title": "Miot Spec：米家智能隐形晾衣机 双杆2.4米",
+          "url": "https://home.miot-spec.com/p/xiaomi.airer.sg24"
         },
         {
-          "title": "新浪眾測：邦先生 M31",
-          "url": "https://zhongce.sina.com.cn/interface/article/view/84480/"
+          "title": "Aqara 智能晾衣机 H1 說明書",
+          "url": "https://static-resource.aqara.com/temp/%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%9AAqara%E6%99%BA%E8%83%BD%E6%99%BE%E8%A1%A3%E6%9C%BAH1%E8%AF%B4%E6%98%8E%E4%B9%A6_1656555931326.pdf"
         },
         {
-          "title": "Philips Beta-AB0 user manual",
-          "url": "https://www.documents.philips.com/assets/20230823/d5263c62039c45e78bb2b06700745923.pdf"
+          "title": "OFweek：Aqara 智能晾衣机 H1 發布",
+          "url": "https://smarthome.ofweek.com/2022-06/ART-91000-8200-30565748.html"
         },
         {
           "title": "Aqara 智能晾衣机 Lite 說明書",
           "url": "https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/Aqara%E6%99%BA%E8%83%BD%E6%99%BE%E8%A1%A3%E6%9C%BA%20Lite%20%E8%AF%B4%E6%98%8E%E4%B9%A6%20.pdf"
         },
         {
-          "title": "EZ Slim electric drying rack",
-          "url": "https://ezziliving.com/ez-slim-electric-clothes-drying-rack-automated"
+          "title": "新浪眾測：邦先生 轻空 M31C",
+          "url": "https://zhongce.sina.com.cn/article/view/122197/"
+        },
+        {
+          "title": "Philips 3000 Series 智能晾衣架 SDR301",
+          "url": "https://www.philips.com.cn/c-p/SDR301AIW0_93/3000-series-smart-drying-rack"
+        },
+        {
+          "title": "什麼值得買：松下晾衣架",
+          "url": "https://www.smzdm.com/ju/sp7qr0r/"
+        },
+        {
+          "title": "什麼值得買：2025 電動晾衣架選購",
+          "url": "https://post.smzdm.com/p/ago55xd3/"
+        },
+        {
+          "title": "GoodWife Lite Mini",
+          "url": "https://goodwife.sg/products/lite-mini-1"
+        },
+        {
+          "title": "GoodLiving Platinum Mini 2.0 (HipVan)",
+          "url": "https://hipvan.com/products/goodliving-platinum-mini-2-0-laundry-rack-ceramic-white"
+        },
+        {
+          "title": "TheSmartLocal: Steigen laundry racks",
+          "url": "https://thesmartlocal.com/read/steigen/"
+        },
+        {
+          "title": "PRISM+ Solaris XL",
+          "url": "https://prismplus.sg/products/prism-solaris-xl"
         },
         {
           "title": "Uchify: condo by-laws (balcony laundry bans)",
