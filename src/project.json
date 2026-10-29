@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R49",
+    "revision": "R50",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4299,6 +4299,10 @@
     {
       "id": "C57",
       "text": "新增智能家居分頁：平面圖標示智能裝置、各類方案與待辦；陽台風扇與曬衣架風險提示。"
+    },
+    {
+      "id": "C58",
+      "text": "全屋電動窗簾：書房改一般布簾＋電動；衣櫃燈定案 PIR 人體感應。"
     }
   ],
   "measurement_policy": {
@@ -5137,8 +5141,7 @@
         "天花淨高（280 或 brochure 275）",
         "門片材質／Laminate 色號",
         "浴室側門片能開幾度",
-        "Hettich 褲架長度與勾長（原廠圖）",
-        "感應方式：門控或 PIR"
+        "Hettich 褲架長度與勾長（原廠圖）"
       ],
       "sources": [
         "Vertical grip reach / stature percentiles: https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-34_36.htm , https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-1.htm",
@@ -5715,7 +5718,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "24 V LED 鋁槽燈，門控：開門亮、全關滅"
+          "note": "24 V LED 鋁槽燈，PIR 人體感應：有人亮、離開自動滅"
         },
         {
           "zone": "掛衣區",
@@ -5751,8 +5754,7 @@
         "天花淨高（280 或 brochure 275）",
         "門片材質／Laminate 色號",
         "大衣是否一定要長掛",
-        "全身鏡放哪一扇",
-        "感應方式：門控或 PIR"
+        "全身鏡放哪一扇"
       ],
       "sources": [
         "Vertical grip reach / stature percentiles: https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-34_36.htm , https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-1.htm",
@@ -11998,7 +12000,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈長 42，門控：開門亮、關門滅。"
+          "note": "LED 鋁槽燈長 42，PIR 人體感應：有人亮、離開自動滅。"
         },
         {
           "zone": "掛衣區",
@@ -12034,8 +12036,7 @@
         "天花淨高 280 或 275",
         "客人掛桿高度，可降至 185",
         "門片色號",
-        "門內全身鏡",
-        "感應方式：門控或 PIR"
+        "門內全身鏡"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -12352,7 +12353,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈，門控：開門亮、全關滅。"
+          "note": "LED 鋁槽燈，PIR 人體感應：有人亮、離開自動滅。"
         },
         {
           "zone": "掛衣區",
@@ -12391,8 +12392,7 @@
         "客人掛桿高度，可降至 185",
         "床架高度",
         "門片色號",
-        "全身鏡放哪一扇",
-        "感應方式：門控或 PIR"
+        "全身鏡放哪一扇"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -12715,7 +12715,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈長 52，門控：開門亮、關門滅。"
+          "note": "LED 鋁槽燈長 52，PIR 人體感應：有人亮、離開自動滅。"
         },
         {
           "zone": "掛衣區",
@@ -12751,8 +12751,7 @@
         "天花淨高 280 或 275",
         "客人掛桿高度，可降至 185",
         "門片色號",
-        "門內全身鏡",
-        "感應方式：門控或 PIR"
+        "門內全身鏡"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -13069,7 +13068,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈，門控：開門亮、全關滅。"
+          "note": "LED 鋁槽燈，PIR 人體感應：有人亮、離開自動滅。"
         },
         {
           "zone": "掛衣區",
@@ -13106,8 +13105,7 @@
         "天花淨高 280 或 275",
         "客人掛桿高度，可降至 185",
         "門片色號",
-        "全身鏡放哪一扇",
-        "感應方式：門控或 PIR"
+        "全身鏡放哪一扇"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -17103,19 +17101,47 @@
         "notes": "・窗簾盒位置預留 13A 插座，先不裝馬達\n・按摩椅離窗 10，要做窗簾需先把椅子往內移"
       },
       {
-        "id": "rs-s",
-        "code": "P-05",
-        "kind": "ceiling-power",
+        "id": "ct-study",
+        "code": "CT-06",
+        "kind": "curtain",
         "x": 342,
         "y": 346,
         "place": "書房 · 南窗東端天花",
         "mount": "ceiling",
-        "name": "預留電源 · 書房窗簾",
+        "name": "電動窗簾 · 書房",
         "onlyLayout": [
           "layout-b"
         ],
-        "use": "預留窗簾",
-        "notes": "・窗簾盒位置預留 13A 插座，先不裝馬達\n・按摩椅離窗 10，要做窗簾需先把椅子往內移"
+        "notes": "・落地窗用一般布簾，不用百葉\n・遮光簾電動，紗簾手動\n・按摩椅原本離窗 10，窗簾盒 15 需把椅子往內移 ≥ 5",
+        "pocket": [
+          273.36,
+          344.63,
+          344.28,
+          348.88
+        ],
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
+        "specs": [
+          [
+            "軌長",
+            "250 cm 牆到牆"
+          ],
+          [
+            "軌道／馬達",
+            "雙軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "東端"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ]
       },
       {
         "id": "sc-entry",
@@ -18261,12 +18287,6 @@
       "status": "open"
     },
     {
-      "id": "todo-master-sensor",
-      "room": "master",
-      "text": "決定衣櫃燈感應：門控或 PIR",
-      "status": "open"
-    },
-    {
       "id": "todo-master-bed",
       "room": "master",
       "text": "選床架與床墊，確認實際尺寸",
@@ -18288,7 +18308,8 @@
     {
       "id": "todo-study-curtain",
       "room": "study",
-      "text": "決定書房做窗簾或百葉",
+      "text": "選電動窗簾：建議 Aqara C100",
+      "research": "curtain-motor",
       "status": "open"
     },
     {
@@ -18323,6 +18344,13 @@
       "status": "open"
     },
     {
+      "id": "todo-helper-curtain",
+      "room": "helper",
+      "text": "選電動窗簾：建議 Aqara C100",
+      "research": "curtain-motor",
+      "status": "open"
+    },
+    {
       "id": "todo-helper-mattress",
       "room": "helper",
       "text": "選三折床墊型號與厚度",
@@ -18335,27 +18363,9 @@
       "status": "open"
     },
     {
-      "id": "todo-helper-socket",
-      "room": "helper",
-      "text": "決定床頭要不要插座",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath1-tap",
-      "room": "bath1",
-      "text": "選龍頭：頂端低於鏡櫃下緣 115",
-      "status": "open"
-    },
-    {
       "id": "todo-bath2-basin",
       "room": "bath2",
       "text": "選臉盆尺寸並定盆位",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath2-tap",
-      "room": "bath2",
-      "text": "選龍頭，頂端須低於鏡門下緣 115",
       "status": "open"
     },
     {
