@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R55",
+    "revision": "R56",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4535,6 +4535,10 @@
     {
       "id": "C63",
       "text": "全面校對：臥室窗簾改單軌遮光（盒深 15 放不下雙軌）；水槽、曬衣架、窗簾、智能家居、女傭房調研逐條查證修正。"
+    },
+    {
+      "id": "C64",
+      "text": "Wet kitchen 立面標水槽本體寬 61.5；女傭房吸頂燈改 IKEA BARLAST（新加坡有售）。"
     }
   ],
   "measurement_policy": {
@@ -19725,7 +19729,7 @@
     {
       "id": "todo-helper-ceiling-light",
       "room": "helper",
-      "text": "買 IKEA STOFTMOLN 24 cm 2700K 吸頂燈",
+      "text": "買 IKEA BARLAST 25 cm 吸頂燈",
       "research": "helper-fan-light",
       "status": "open"
     },
@@ -20091,8 +20095,8 @@
     "helper-fan-light": {
       "title": "女傭房風扇與燈",
       "updated": "2026-10-29",
-      "summary": "選 Mistral MWF1454DR-G 14 吋 DC 壁扇掛床尾、IKEA STOFTMOLN 2700K 吸頂燈、IKEA NYMÅNE 閱讀燈。因為天花 240，站在床上頭頂約 213，任何吸頂風扇都在頭手高度。",
-      "body": "## 結論\n- **吸頂風扇燈有問題 → 改用壁扇。**天花 240，站在床上頭頂約 213、舉手約 260；20 吋吸頂風扇燈高 21.5，扇葉底約 218，正在頭手高度。\n- **選風扇：Mistral MWF1454DR-G 14 吋 DC 壁扇**（S$129，Courts／Harvey Norman）— 33 寬塞得進床尾西側；新加坡三腳插頭與 Safety Mark，不用轉接頭。\n- **選吸頂燈：IKEA STOFTMOLN LED ceiling/wall lamp 24 cm（smart wireless dimmable／warm white）**（IKEA SG 貨況待確認）— Ø24 × 6、800 lm、2700K、9 W，站著頭頂離燈約 21；單色溫，H1 斷電再通電不跳色。\n- **選閱讀燈：IKEA NYMÅNE Wall/reading lamp, wired-in inst**（S$25.90，不附燈泡）＋ SOLHETTA GU10 345 lm 可調光（S$4.90），接 SW-11 左鍵。\n- **風扇固定不擺頭：**14 吋的風吹到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭只會一陣有一陣無。安裝時朝床中段、往下斜。\n- **開關：**H1 EU 有零線雙鍵支援「轉為無線開關」，右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈。\n- **不選：20 吋吸頂風扇燈（¥244）** — 開放扇葉在頭頂高度。\n- **不選：無葉／隱形扇葉風扇燈** — GONEO ATTO GF19AT 高 24.6、9 kg，多數 15–25 厚，一樣在頭頂高度。\n- **不選：三色變光吸頂燈** — 靠開關斷電切色，和 H1 智能開關衝突。\n\n## 評判標準\n- **站在床上安全**：頭頂 213 上方沒有會轉的東西；天花燈具 ≤ 6 厚\n- **風向**：從床尾沿床長吹，不近距離對臉\n- **尺寸**：風扇寬 ≤ 35，放得進吊櫃與窗簾之間\n- **到手總價**：淘寶價＋9% GST＋運費，對比新加坡價；新加坡貴 2 倍以上才選淘寶\n- **插頭與安規**：插電電器要新加坡三腳插頭與 Safety Mark\n- **乾淨**：插座藏在吊櫃上方，線不垂過床\n\n## 到手總價\n| 品項 | 新加坡 | 淘寶同級到手 | 結論 |\n|---|---|---|---|\n| 14 吋 DC 壁扇 | S$129 | 約 S$55–70 | 新加坡 |\n| 閱讀壁燈 | S$30.80 | 約 S$20–25 | IKEA |\n| 吸頂燈 | 約 S$25–30 | 約 S$15–20 | IKEA |\n\n- 壁扇淘寶約 ¥200–300 一台，加 GST 與 3–4 kg 運費約 S$55–70，便宜一半；但是中國插頭、沒有 Safety Mark，要轉接頭插在床尾高處，不值得\n- 兩盞燈差價都不到 2 倍，IKEA 當天買得到，壞了也好換\n\n## 要先做的事\n- 告訴電工：S-14 13A 帶開關，南牆吊櫃上方離地 220、離西牆 75；開關常開\n- 壁扇離西牆 17、離地 180–233，鎖進牆體，朝床中段往下斜\n- 北牆離地 100 留 NYMÅNE 線盒接 SW-11 左鍵；天花中央留吸頂燈出線接 SW-03\n- 吊櫃改 55 寬，靠東牆\n\n## 風險與待確認\n- 床尾 35 上方有吊櫃與壁扇：坐著沒問題，站起來要在床中段\n- 窗扇若向內開會碰到壁扇，窗扇開法待確認\n- 吸頂燈與淘寶價格是估算；IKEA SG 網站目前查不到 STOFTMOLN（台灣 NT$499），新加坡貨況與價格待確認\n",
+      "summary": "選 Mistral MWF1454DR-G 14 吋 DC 壁扇掛床尾、IKEA BARLAST 2700K 吸頂燈、IKEA NYMÅNE 閱讀燈。因為天花 240，站在床上頭頂約 213，任何吸頂風扇都在頭手高度。",
+      "body": "## 結論\n- **吸頂風扇燈有問題 → 改用壁扇。**天花 240，站在床上頭頂約 213、舉手約 260；20 吋吸頂風扇燈高 21.5，扇葉底約 218，正在頭手高度。\n- **選風扇：Mistral MWF1454DR-G 14 吋 DC 壁扇**（S$129，Courts／Harvey Norman）— 33 寬塞得進床尾西側；新加坡三腳插頭與 Safety Mark，不用轉接頭。\n- **選吸頂燈：IKEA BARLAST LED ceiling/wall lamp 25 cm 白色**（S$9.90，IKEA SG 505.259.96）— Ø25 × 6.7、910 lm、2700K、9.5 W、IP44，站著頭頂離燈約 20；單色溫、不可調光，H1 斷電再通電不跳色。\n- **不選：IKEA STOFTMOLN 24 cm** — IKEA SG 不賣。\n- **選閱讀燈：IKEA NYMÅNE Wall/reading lamp, wired-in inst**（S$25.90，不附燈泡）＋ SOLHETTA GU10 345 lm 可調光（S$4.90），接 SW-11 左鍵。\n- **風扇固定不擺頭：**14 吋的風吹到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭只會一陣有一陣無。安裝時朝床中段、往下斜。\n- **開關：**H1 EU 有零線雙鍵支援「轉為無線開關」，右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈。\n- **不選：20 吋吸頂風扇燈（¥244）** — 開放扇葉在頭頂高度。\n- **不選：無葉／隱形扇葉風扇燈** — GONEO ATTO GF19AT 高 24.6、9 kg，多數 15–25 厚，一樣在頭頂高度。\n- **不選：三色變光吸頂燈** — 靠開關斷電切色，和 H1 智能開關衝突。\n\n## 評判標準\n- **站在床上安全**：頭頂 213 上方沒有會轉的東西；天花燈具 ≤ 7 厚\n- **風向**：從床尾沿床長吹，不近距離對臉\n- **尺寸**：風扇寬 ≤ 35，放得進吊櫃與窗簾之間\n- **到手總價**：淘寶價＋9% GST＋運費，對比新加坡價；新加坡貴 2 倍以上才選淘寶\n- **插頭與安規**：插電電器要新加坡三腳插頭與 Safety Mark\n- **乾淨**：插座藏在吊櫃上方，線不垂過床\n\n## 到手總價\n| 品項 | 新加坡 | 淘寶同級到手 | 結論 |\n|---|---|---|---|\n| 14 吋 DC 壁扇 | S$129 | 約 S$55–70 | 新加坡 |\n| 閱讀壁燈 | S$30.80 | 約 S$20–25 | IKEA |\n| 吸頂燈 | S$9.90 | 約 S$12–18 | IKEA |\n\n- 壁扇淘寶約 ¥200–300 一台，加 GST 與 3–4 kg 運費約 S$55–70，便宜一半；但是中國插頭、沒有 Safety Mark，要轉接頭插在床尾高處，不值得\n- 兩盞燈 IKEA 都不比淘寶貴；BARLAST 內建 LED 約 25,000 小時，壞了 S$9.90 整盞換\n\n## 要先做的事\n- 告訴電工：S-14 13A 帶開關，南牆吊櫃上方離地 220、離西牆 75；開關常開\n- 壁扇離西牆 17、離地 180–233，鎖進牆體，朝床中段往下斜\n- 北牆離地 100 留 NYMÅNE 線盒接 SW-11 左鍵；天花中央留吸頂燈出線接 SW-03，BARLAST 為接線式，用 2 顆螺絲鎖天花\n- 吊櫃改 55 寬，靠東牆\n\n## 風險與待確認\n- 床尾 35 上方有吊櫃與壁扇：坐著沒問題，站起來要在床中段\n- 窗扇若向內開會碰到壁扇，窗扇開法待確認\n- 淘寶價格是估算\n- BARLAST 是 IP44 浴室款，燈罩為乳白塑膠、外觀較樸素；門市庫存待確認\n",
       "sources": [
         {
           "title": "Mistral MWF1454DR-G 14\" DC Wall Fan – Harvey Norman SG",
@@ -20103,8 +20107,8 @@
           "url": "https://www.courts.com.sg/mistral-14-in-dc-wall-fan-with-remote-mwf1454dr-g-IP193786.html"
         },
         {
-          "title": "IKEA STOFTMOLN 24 cm specs (2700K, 800 lm, H 6) – IKEA TW",
-          "url": "https://ikea.com.tw/en/products/luminaires/ceiling-lamps-and-spotlights/stoftmoln-art-60505554"
+          "title": "IKEA BARLAST LED ceiling/wall lamp, white, 25 cm – IKEA SG",
+          "url": "https://www.ikea.com/sg/en/p/barlast-led-ceiling-wall-lamp-white-50525996/"
         },
         {
           "title": "IKEA NYMÅNE wall/reading lamp, wired-in – IKEA SG",
