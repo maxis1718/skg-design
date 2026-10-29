@@ -579,6 +579,15 @@ function extras(g, list, state = ST) {
       if (bowl) g.rect(e.x, e.y - e.depth, e.w, e.depth, {fill:'none', stroke:C.thin, 'stroke-width':.3, 'stroke-dasharray':'1.4 1'});
       g.path(`M${e.x + e.w / 2} ${g.Y(e.y)}v-14h5v2`, {fill:'none', stroke:C.line, 'stroke-width':.6});
       if (e.label && bowl) g.text(e.x + e.w / 2, e.y - e.depth / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * .78});
+      // e.outer: sink body (rim) width — rim strip on the worktop + its dimension above the tap; open state also dims the bowl.
+      if (e.outer) {
+        const ox = e.x + e.w / 2 - e.outer / 2, dy = e.y + (e.dimY ?? 6.5);
+        g.rect(ox, e.y, e.outer, .9, {fill:'#f3f1ea', stroke:C.line, 'stroke-width':.3});
+        for (const xx of [ox, ox + e.outer]) g.line(xx, e.y + .9, xx, dy + 1.2, {stroke:C.dim, 'stroke-width':.18, 'stroke-dasharray':'1.2 1'});
+        { const sd = {stroke:C.dim, 'stroke-width':.6}; g.line(ox, dy, ox + e.outer, dy, sd); g.line(ox, dy - 1.2, ox, dy + 1.2, sd); g.line(ox + e.outer, dy - 1.2, ox + e.outer, dy + 1.2, sd);
+          g.text(ox + e.outer / 2, dy + .9, `${T('水槽本體')} ${fmt(e.outer)}`, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * .85, 'font-weight':600, stroke:'#fff', 'stroke-width':g.f * .35, 'paint-order':'stroke'}); }
+        if (bowl) hdim(g, e.x, e.x + e.w, e.y - e.depth - 3, `${T('盆')} ${fmt(e.w)}`);
+      }
     } else if (e.type === 'optional' && e.leaves) {
       // Possible future cabinet: faint dashed slab leaves (same reveal / lip as the wall units), small label inside.
       const n = e.leaves, gp = FS?.gap ?? .3, lw = (e.w - gp * n) / n, lip = e.lip ?? 0;
