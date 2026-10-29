@@ -18174,81 +18174,9 @@
       "status": "open"
     },
     {
-      "id": "todo-floor-ceiling-height",
-      "room": "floor",
-      "text": "現場量天花淨高：280 或 275",
-      "status": "open"
-    },
-    {
-      "id": "todo-floor-false-ceiling",
-      "room": "floor",
-      "text": "確認各房有無假天花與檢修口位置",
-      "status": "open"
-    },
-    {
-      "id": "todo-floor-neutral",
-      "room": "floor",
-      "text": "請電工確認每個開關盒都有零線",
-      "status": "open"
-    },
-    {
-      "id": "todo-floor-fibre",
-      "room": "floor",
-      "text": "確認光纖終端位置，拉 Cat6 到電視櫃",
-      "status": "open"
-    },
-    {
-      "id": "todo-floor-electrical-points",
-      "room": "floor",
-      "text": "與電工逐點核對插座與天花電源",
-      "status": "open"
-    },
-    {
-      "id": "todo-floor-smart-switch",
-      "room": "floor",
-      "text": "買 Aqara H1 開關與 Hub M3",
-      "status": "open"
-    },
-    {
       "id": "todo-floor-ups",
       "room": "floor",
-      "text": "決定網路設備是否加 UPS",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-neutral",
-      "room": "smart",
-      "text": "告訴電工：每個開關盒拉零線 N",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-box-depth",
-      "room": "smart",
-      "text": "開關用 86 方盒，盒深 ≥ 35 mm",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-circuits",
-      "room": "smart",
-      "text": "數各房燈光迴路，定 H1 單鍵或雙鍵",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-strip-power",
-      "room": "smart",
-      "text": "燈條變壓器處留常電插座",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-tv-cat6",
-      "room": "smart",
-      "text": "電視櫃留 2 條 Cat6 給 Apple TV、M3",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-ups",
-      "room": "smart",
-      "text": "光纖、網路、Apple TV、M3 接 UPS",
+      "text": "決定網路設備與中樞是否接 UPS",
       "status": "open"
     },
     {
@@ -18276,40 +18204,10 @@
       "status": "open"
     },
     {
-      "id": "todo-living-curtain-box",
-      "room": "living",
-      "text": "做窗簾盒：淨深 20，雙軌",
-      "status": "open"
-    },
-    {
       "id": "todo-living-curtain-motor",
       "room": "living",
-      "text": "選電動窗簾馬達：建議 Aqara C100",
+      "text": "選電動窗簾：建議 Aqara C100",
       "research": "curtain-motor",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-curtain-socket",
-      "room": "living",
-      "text": "請電工確認窗簾盒內 13A 插座",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-tripp-trapp",
-      "room": "living",
-      "text": "決定窗簾盒改 15 或用餐時收椅",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-wallpaper",
-      "room": "living",
-      "text": "選電視牆壁紙並確認木作底板厚度",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-tv-ceiling",
-      "room": "living",
-      "text": "確認電視牆局部假天花能做到底 270",
       "status": "open"
     },
     {
@@ -18338,70 +18236,28 @@
       "status": "open"
     },
     {
-      "id": "todo-kitchen-site-measure",
-      "room": "kitchen",
-      "text": "現場量假天花 240、窗台高度與檢修口",
-      "status": "open"
-    },
-    {
-      "id": "todo-kitchen-worktop",
-      "room": "kitchen",
-      "text": "選岩板檯面品牌、色號與板厚",
-      "status": "open"
-    },
-    {
       "id": "todo-kitchen-laminate",
       "room": "kitchen",
       "text": "選櫃體 laminate 品牌與色號",
       "status": "open"
     },
     {
-      "id": "todo-kitchen-hob-oven",
-      "room": "kitchen",
-      "text": "選爐具與嵌入式烤箱型號",
-      "status": "open"
-    },
-    {
       "id": "todo-kitchen-tower-appliances",
       "room": "kitchen",
-      "text": "選微波爐、電子鍋並量大同電鍋深",
-      "status": "open"
-    },
-    {
-      "id": "todo-kitchen-plumbing",
-      "room": "kitchen",
-      "text": "請水電確認洗衣機與 Dry kitchen 給排水",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-curtain-box",
-      "room": "master",
-      "text": "做窗簾盒：淨深 15",
+      "text": "選微波爐、電子鍋型號",
       "status": "open"
     },
     {
       "id": "todo-master-curtain-motor",
       "room": "master",
-      "text": "選電動窗簾馬達：建議 Aqara C100",
+      "text": "選電動窗簾：建議 Aqara C100",
       "research": "curtain-motor",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-curtain-socket",
-      "room": "master",
-      "text": "請電工確認窗簾盒內 13A 插座",
       "status": "open"
     },
     {
       "id": "todo-master-wardrobe-laminate",
       "room": "master",
-      "text": "選衣櫃門片材質與 laminate 色號",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-trouser-rack",
-      "room": "master",
-      "text": "向 Hettich 要褲架原廠圖確認勾長",
+      "text": "選衣櫃門片 laminate 色號",
       "status": "open"
     },
     {
@@ -18411,58 +18267,28 @@
       "status": "open"
     },
     {
-      "id": "todo-master-unlabelled",
-      "room": "master",
-      "text": "現場確認未標示櫃體是衣櫃或管道",
-      "status": "open"
-    },
-    {
       "id": "todo-master-bed",
       "room": "master",
       "text": "選床架與床墊，確認實際尺寸",
       "status": "open"
     },
     {
-      "id": "todo-kid-curtain-box",
-      "room": "kid",
-      "text": "做窗簾盒：淨深 15",
-      "status": "open"
-    },
-    {
       "id": "todo-kid-curtain-motor",
       "room": "kid",
-      "text": "選電動窗簾馬達：建議 Aqara C100",
+      "text": "選電動窗簾：建議 Aqara C100",
       "research": "curtain-motor",
-      "status": "open"
-    },
-    {
-      "id": "todo-kid-curtain-socket",
-      "room": "kid",
-      "text": "請電工確認窗簾盒內 13A 插座",
       "status": "open"
     },
     {
       "id": "todo-kid-bed",
       "room": "kid",
-      "text": "規劃床位，床離窗至少 15",
+      "text": "決定床位",
       "status": "open"
     },
     {
       "id": "todo-study-curtain",
       "room": "study",
       "text": "決定書房做窗簾或百葉",
-      "status": "open"
-    },
-    {
-      "id": "todo-study-power",
-      "room": "study",
-      "text": "請電工確認按摩椅接地插座與窗邊電源",
-      "status": "open"
-    },
-    {
-      "id": "todo-study-move-in",
-      "room": "study",
-      "text": "量門淨寬 ≥ 80，安排按摩椅搬入",
       "status": "open"
     },
     {
@@ -18478,46 +18304,22 @@
       "status": "open"
     },
     {
-      "id": "todo-guest-curtain-box",
-      "room": "guest",
-      "text": "做窗簾盒：淨深 15",
-      "status": "open"
-    },
-    {
       "id": "todo-guest-curtain-motor",
       "room": "guest",
-      "text": "選電動窗簾馬達：建議 Aqara C100",
+      "text": "選電動窗簾：建議 Aqara C100",
       "research": "curtain-motor",
-      "status": "open"
-    },
-    {
-      "id": "todo-guest-curtain-socket",
-      "room": "guest",
-      "text": "請電工確認窗簾盒內 13A 插座",
       "status": "open"
     },
     {
       "id": "todo-guest-wardrobe",
       "room": "guest",
-      "text": "選衣櫃門片色號，定掛桿高度",
-      "status": "open"
-    },
-    {
-      "id": "todo-guest-door-stop",
-      "room": "guest",
-      "text": "請木工為衣櫃門加開角限位",
+      "text": "選衣櫃門片色號",
       "status": "open"
     },
     {
       "id": "todo-guest-furniture",
       "room": "guest",
       "text": "買 MALM Queen 收納床與無輪書椅",
-      "status": "open"
-    },
-    {
-      "id": "todo-helper-window",
-      "room": "helper",
-      "text": "量西牆窗台高度與窗扇開法",
       "status": "open"
     },
     {
@@ -18535,31 +18337,13 @@
     {
       "id": "todo-helper-socket",
       "room": "helper",
-      "text": "決定床頭插座並告知電工",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath1-ceiling",
-      "room": "bath1",
-      "text": "現場確認浴室天花 240 與檢修口",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath1-electrical",
-      "room": "bath1",
-      "text": "請電工依 SS 638 確認插座、開關與 RCD",
+      "text": "決定床頭要不要插座",
       "status": "open"
     },
     {
       "id": "todo-bath1-tap",
       "room": "bath1",
-      "text": "確認檯面高度，選龍頭頂低於 115",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath1-devices",
-      "room": "bath1",
-      "text": "確認牙刷充電頭與吹風機型號",
+      "text": "選龍頭：頂端低於鏡櫃下緣 115",
       "status": "open"
     },
     {
@@ -18575,34 +18359,10 @@
       "status": "open"
     },
     {
-      "id": "todo-bath2-ledge",
-      "room": "bath2",
-      "text": "確認矮台高度、沖水面板與水箱檢修口",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath2-ceiling",
-      "room": "bath2",
-      "text": "現場確認浴室天花 240 與檢修口",
-      "status": "open"
-    },
-    {
-      "id": "todo-bath2-socket",
-      "room": "bath2",
-      "text": "請電工確認浴室 13A 插座位置",
-      "status": "open"
-    },
-    {
       "id": "todo-living-balcony-drying-rack",
       "room": "living-balcony",
       "text": "選曬衣架：建議米家雙控晾衣機 2",
       "research": "drying-rack",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-balcony-rack-prep",
-      "room": "living-balcony",
-      "text": "請電工從風扇位拉常電明線到曬衣架",
       "status": "open"
     },
     {
@@ -18612,33 +18372,9 @@
       "status": "open"
     },
     {
-      "id": "todo-living-balcony-cabinet-wall",
-      "room": "living-balcony",
-      "text": "現場量西牆淨長是否夠放 105 櫃",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-balcony-swing-anchor",
-      "room": "living-balcony",
-      "text": "鞦韆吊點錨進結構樓板，每點 ≥ 150 kg",
-      "status": "open"
-    },
-    {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
       "text": "選鞦韆座椅，兩側淨空 ≥ 50",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-balcony-vacuum-socket",
-      "room": "living-balcony",
-      "text": "請電工確認掃拖機底座 IP66 低位插座",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-balcony-socket",
-      "room": "master-balcony",
-      "text": "請電工確認陽台 IP66 防水插座",
       "status": "open"
     }
   ],
