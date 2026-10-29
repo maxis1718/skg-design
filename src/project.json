@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R50",
+    "revision": "R51",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4514,6 +4514,10 @@
     {
       "id": "C58",
       "text": "全屋電動窗簾：書房改一般布簾＋電動；衣櫃燈定案 PIR 人體感應。"
+    },
+    {
+      "id": "C59",
+      "text": "女傭房完整設計：四面牆立面、床頭插座、壁扇、吸頂燈與閱讀燈、電動窗簾、吊櫃與掛鉤。"
     }
   ],
   "measurement_policy": {
@@ -17748,7 +17752,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：方案 A Deco X50-PoE／方案 B UniFi U7 Lite，天花 AP 位置相同；建議 B\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：客廳、主臥、小孩房、客房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "summary": "・網路：方案 A Deco X50-PoE／方案 B UniFi U7 Lite，天花 AP 位置相同；建議 B\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：全屋各房，客廳、主臥、小孩房、書房、客房、女傭房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -19688,6 +19692,18 @@
       "id": "todo-helper-board",
       "room": "helper",
       "text": "選床台板材與色號",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-fan-lamp",
+      "room": "helper",
+      "text": "買 40 cm 遙控壁扇與搖臂閱讀燈",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-window",
+      "room": "helper",
+      "text": "定窄窗用軌道窗簾或電動捲簾",
       "status": "open"
     },
     {
