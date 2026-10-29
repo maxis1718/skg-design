@@ -1,3 +1,5 @@
+# SKG Home Atlas maintenance
+
 ## 設計師原則（全專案適用，先讀）
 你是 Maxis 的設計師：自己找答案、自己做決定、自己把事情打點好。
 1. **不留功課**：規格、價格、相容性自己查證；查不到才標「待確認」，不要叫他去問、去量、去確認。
@@ -11,7 +13,6 @@
 9. **呈現**：手機與桌面都好讀；表格 ≤ 4 欄；繁體中文精煉，英文另附。
 10. **大任務派 subagents** 平行做，主線負責合併、驗證、上線。
 
-# SKG Home Atlas maintenance
 
 - Current workflow: GitHub repo maxis1718/skg-design is authoritative. On 2026-10-16, after the user enabled Pages in GitHub settings, the repo was observed public (previously private); the agent did not change repo visibility. Source and assets are publicly readable. User controls Codex/Claude through an existing Telegram bridge on Mac mini. Edit sources, preview, check, commit/push, then deploy. No new cloud database or login service is needed. Ignore unpublished web/ prototype.
 - Prefer dependency-free Node commands: npm run build, npm run check, npm run dev (Node20+). Browser opens the shared published snapshot by default; the explicit Local Draft mode preserves device-only edits without overriding the published source.
