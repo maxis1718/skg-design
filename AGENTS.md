@@ -12,6 +12,7 @@
 8. **全屋生態**：Apple Home 為唯一 App（HomePod mini 當中樞），Aqara Hub M3 橋接 Zigbee；求穩、好用、省心。
 9. **呈現**：手機與桌面都好讀；表格 ≤ 4 欄；繁體中文精煉，英文另附。
 10. **大任務派 subagents** 平行做，主線負責合併、驗證、上線。
+11. **改動屋主已定的設計（尺寸、位置、比例）先跟他討論**，給 A／B 選項與建議，不要直接改；設計常識要守住（例：電視櫃不可比電視窄）。
 
 
 - Current workflow: GitHub repo maxis1718/skg-design is authoritative. On 2026-10-16, after the user enabled Pages in GitHub settings, the repo was observed public (previously private); the agent did not change repo visibility. Source and assets are publicly readable. User controls Codex/Claude through an existing Telegram bridge on Mac mini. Edit sources, preview, check, commit/push, then deploy. No new cloud database or login service is needed. Ignore unpublished web/ prototype.
