@@ -41,18 +41,23 @@ let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search)
 // Guest-room scheme (R34 order): A = guest-a (loose wardrobe 70 + desk 70 × 40, default), B = guest-b (built-in wardrobe + desk), C = guest-c (narrow wardrobe + desk). URL ?guest=a|b|c.
 const GUEST_KEYS={a:'guest-a',b:'guest-b',c:'guest-c'};
 selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||GUEST_KEYS.a;
+// Master-bedroom scheme: A = master-a (R58 owner's sketch, default), B = master-b (R57: bed on the curtain line, cot south). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
+const MASTER_KEYS={a:'master-a',b:'master-b'};
+selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
 function layoutSpec(){return (project.layouts||[]).find(l=>l.id===layoutId);}
 function guestVersions(){return project.roomVersions?.guest||[];}
+function masterVersions(){return project.roomVersions?.master||[];}
+function masterVersion(){const vs=masterVersions();return vs.find(v=>v.id===selectedVersions.master)||vs[0];}
 function guestVersion(){const vs=guestVersions();return vs.find(v=>v.id===selectedVersions.guest)||vs[0];}
 function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===selectedVersions.kitchen)||vs.find(v=>v.id===KITCHEN_KEYS.a)||vs[0];}
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
 function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KEYS[k]===kitchenVersion()?.id);if(!key)return;const u=new URL(location.href);if(u.searchParams.get('kitchen')!==key){u.searchParams.set('kitchen',key);history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
-function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
+function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
 function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
-const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.notes;
+const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.id==='master'&&masterVersion()?{...r.notes,...masterVersion().notes}:r.notes;
 const note=(r,key)=>String(fieldsFor(r)?.[key]??'');
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
@@ -111,7 +116,7 @@ function buildPlan(){
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',curtain:'電動窗簾',switch:'智能開關',scene:'一鍵全關'};
 const currentNet=()=>netId||project.electrical?.defaultNet||'b';
-const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyNet||p.onlyNet.includes(currentNet()))&&(!p.onlyLayout||p.onlyLayout.includes(layoutId)));
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyNet||p.onlyNet.includes(currentNet()))&&(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
@@ -224,7 +229,7 @@ function renderKitchenVersion(){
    tower.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,fill:'#d5c2a5','fill-opacity':'.65',stroke:'#8e704c','stroke-width':'.5'}));
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
  }
- renderGuestVersion();
+ renderGuestVersion();renderMasterVersion();
  $('#kitchen-version-group').hidden=roomId!=='kitchen';renderLayoutVersion();$('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
  const visible=new Set(visibleObjects().map(o=>o.id));
  $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);}});
@@ -237,6 +242,18 @@ function renderGuestVersion(){
  $('#guest-version-group').hidden=roomId!=='guest';
  $$('[data-guest-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.guestPlan!==v.layout));
  const lab=document.querySelector('[data-label-room="guest"]'),base=layoutSpec()?.labels?.guest||labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
+}
+function renderMasterVersion(){
+ const v=masterVersion(),seg=$('#master-version');if(!v||!seg){$('#master-version-group')&&($('#master-version-group').hidden=true);return;}
+ seg.setAttribute('aria-label',t('切換主臥方案'));
+ seg.innerHTML=masterVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-master-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
+ $('#master-version-group').hidden=roomId!=='master';
+ $$('[data-master-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.masterPlan!==v.layout));
+}
+function chooseMasterVersion(id){
+ if(!masterVersions().some(v=>v.id===id)||id===masterVersion()?.id)return;selectedVersions.master=id;
+ const key=Object.keys(MASTER_KEYS).find(k=>MASTER_KEYS[k]===id),u=new URL(location.href);u.searchParams.set('master',key);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
+ buildPower();selectRoom(roomId,{keepObject:true});
 }
 function renderLayoutVersion(){
  const seg=$('#layout-version');if(!seg)return;seg.setAttribute('aria-label',t('切換格局'));
@@ -368,7 +385,7 @@ function renderDetails(){
     $('#elevation-slot').innerHTML='';$('#details-content').innerHTML=`<div class="room-grid">${project.rooms.map(r=>`<button class="room-index" data-open-room="${r.id}"><h3>${r.name}</h3><div class="room-index-dim">${roomSize(r)} cm${['master','living'].includes(r.id)?t(' · 主區'):''}</div><p class="room-index-focus">${r.focus}</p></button>`).join('')}</div>`;
     $$('[data-open-room]').forEach(b=>b.onclick=()=>{selectRoom(b.dataset.openRoom);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});return;
   }
-  const r=room(roomId),noteKeys=Object.keys(fieldsFor(r)||{}).filter(k=>note(r,k).trim()),risks=[...(r.risks||[]),...((r.id==='guest'&&guestVersion()?.risks)||[])];$('#details-title').textContent=r.name;
+  const r=room(roomId),noteKeys=Object.keys(fieldsFor(r)||{}).filter(k=>note(r,k).trim()),risks=[...((r.id==='master'&&masterVersion()?.risks)||[]),...(r.risks||[]),...((r.id==='guest'&&guestVersion()?.risks)||[])];$('#details-title').textContent=r.name;
   $('#elevation-slot').innerHTML=elevationBlock();$('#details-content').innerHTML=`<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>cm</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':num(p.horizontal_cm)+' × '}${num(p.vertical_cm)}</strong></div>`).join('')}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('整面立面')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-upper-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-upper-worktop">'+esc(object('kitchen-upper-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('tv-console')?'<button class="plain-button elev-link" data-elev-open="tv-console">'+t('電視牆 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath1'&&elevationFor('bath1-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath1-mirror-cabinet">'+t('主浴鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath2'&&elevationFor('bath2-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath2-mirror-cabinet">'+t('衛浴 2 鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='helper'&&elevationFor('helper-bed')?'<button class="plain-button elev-link" data-elev-open="helper-bed">'+t('收納床台 · 立面設計 ↗')+'</button>':''}</div>${noteKeys.length||risks.length?`<div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):r.id==='guest'&&guestVersions().length?esc(guestVersion().name)+t(' · 筆記'):t('設計筆記')}</h3></div>${riskBox(risks)}${noteKeys.map(key=>`<div class="note-field"><span class="note-key">${esc(t(key))}</span><p class="note-text">${esc(note(r,key))}</p></div>`).join('')}</div>`:''}</div>`;
   bindElevation();$$('[data-elev-open]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.elevOpen);$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});});
 }
@@ -399,6 +416,7 @@ $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[da
 $('#layout-version').addEventListener('click',e=>{const b=e.target.closest('[data-layout-version]');if(b)chooseLayout(b.dataset.layoutVersion);});
 $('#net-version').addEventListener('click',e=>{const b=e.target.closest('[data-net-version]');if(b)chooseNet(b.dataset.netVersion);});
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
+$('#master-version').addEventListener('click',e=>{const b=e.target.closest('[data-master-version]');if(b)chooseMasterVersion(b.dataset.masterVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
 const DYNAMIC='#smart-block,#brief-list,#smart-record,#net-version,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';

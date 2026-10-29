@@ -803,17 +803,13 @@
       "notes": {
         "衣櫃 layout": "兩櫃各 90 × 60，中間淨寬約 130",
         "衣櫃內部分區": "・兩櫃：掛桿 195、層板底 203；上方 SKUBB 兩層\n・左櫃：落地門 8–272；褲架 ×3、全寬內抽、掛衣淨高 96\n・右櫃：外抽 24／24／20、高門 76–272、掛衣淨高 117.2\n・PIR 人體感應燈；靠浴室門內貼全身鏡",
-        "衣櫃門片／Laminate": null,
-        "床與床頭設計": "・床 220 × 200，床頭貼西牆，南緣推到衣櫃線\n・言言的床 60 × 170 靠床北側，離西牆 60–230\n・收納抽屜在兩長邊與床尾，記錄用，不保留全拉空間",
-        "動線": "・依屋主擺法：窗簾盒 15＋言言的床 60＋床 200＝275，剛好頂到衣櫃線\n・床尾走道 70，從房門進\n・衣櫃門開向兩櫃間走道，不受床影響"
+        "衣櫃門片／Laminate": null
       },
       "name": "主臥",
       "english": "Master bedroom",
       "number": "03",
       "focus": "衣櫃設計與臥室配置",
       "risks": [
-        "衛浴 1 入口被床擋：床尾到右衣櫃只剩 10，進浴室要從床尾走道擠過或上床",
-        "陽台門前是言言的床，只能從床尾走道東端進出",
         "房深 275 為圖面推算、零餘裕；現場不足時窗簾盒縮到 12"
       ]
     },
@@ -2341,10 +2337,10 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Owner's bed 220 head-to-foot x 200 wide, headboard on the west wall, north edge on the 15 cm curtain-pocket line (y190.17), south edge 215 cm from the north wall. Storage drawers on both long sides and the foot (fronts drawn as 5 cm dashed bands, divisions schematic). Source KING SIZE symbol paths 329-345 omitted at build; drawn in src/furniture-master.svg. Foot aisle to the east wall 70; reachable balcony glass east of the foot ~35 (x247.88-257.76).",
+      "notes": "Scheme A (R58, owner's sketch): bed 220 head-to-foot x 200 wide, headboard on the west wall, south edge on the wardrobe-zone line y263.8 (y207.11-263.81). Storage drawers on both long sides and the foot (recorded only). Foot aisle to the east wall 70; bed foot to the right wardrobe 10 (Bath 1 entry). Source KING SIZE symbol paths 329-345 omitted at build; drawn in src/furniture-master.svg (#master-plan-a / -b).",
       "physical_drawing_indices": [],
       "name": "主臥床",
-      "source_note": "・床 220 × 200，床頭貼西牆，北緣貼窗簾盒 15\n・兩長邊與床尾有收納抽屜：床尾、南側東段可拉開；北側貼窗簾、南側西段在床邊床後，要挪開才拿得到\n・床頭板厚 8 為示意",
+      "source_note": "・床 220 × 200，床頭貼西牆，南緣推到衣櫃線\n・兩長邊與床尾有收納抽屜，記錄用，不保留全拉空間\n・床頭板厚 8 為示意",
       "dimensions": {
         "w": {
           "cm": 200,
@@ -2372,6 +2368,15 @@
             235.5
           ],
           "label": "70"
+        },
+        {
+          "line": [
+            247.88,
+            261,
+            250.68,
+            261
+          ],
+          "label": "10"
         }
       ]
     },
@@ -2394,8 +2399,8 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Co-sleeper 60 x 170 for the owner's child, long side against the bed's south side from the head end (x 0-170 from the west wall), south edge on the wardrobe-zone line y263.8 (room depth 274.7 scaled = pocket 15 + bed 200 + crib 59.7). Not on the north side: there the bed would sit on the wardrobe line and cover the Bath 1 passage mouth (x 100-230) up to x220, leaving 10. Here the mouth stays open x170-230 = 60.",
-      "source_note": "・60 × 170，長邊貼床南側，從床頭起\n・東端到右衣櫃 60＝衛浴 1 入口",
+      "notes": "Scheme A: co-sleeper 60 x 170 on the bed's north side, x 60-230 from the west wall, north edge on the curtain pocket line y190.17; sits in front of the balcony door. Room depth 275 = pocket 15 + cot 60 + bed 200, zero slack.",
+      "source_note": "・60 × 170，長邊貼床北側，離西牆 60–230\n・北緣貼窗簾盒 15，正對陽台門",
       "dimensions": {
         "w": {
           "cm": 170,
@@ -4862,6 +4867,98 @@
           "床下收納箱被書桌、椅子擋住，只剩一個能用（靠窗那側不能拉）"
         ],
         "elevation": "guest-wall-c"
+      }
+    ],
+    "master": [
+      {
+        "id": "master-a",
+        "name": "方案 A",
+        "layout": "master-a",
+        "notes": {
+          "床與床頭設計": "・床 220 × 200，床頭貼西牆，南緣推到衣櫃線\n・言言的床 60 × 170 靠床北側，離西牆 60–230\n・收納抽屜在兩長邊與床尾，記錄用，不保留全拉空間",
+          "動線": "・依屋主擺法：窗簾盒 15＋言言的床 60＋床 200＝275，剛好頂到衣櫃線\n・床尾走道 70，從房門進\n・衣櫃門開向兩櫃間走道，不受床影響",
+          "取捨": "・優：言言的床靠窗，離浴室入口與走道最遠\n・缺：衛浴 1 入口只剩 10、陽台門被擋 → 要好走改方案 B"
+        },
+        "risks": [
+          "衛浴 1 入口被床擋：床尾到右衣櫃只剩 10，進浴室要從床尾走道擠過或上床",
+          "陽台門前是言言的床，只能從床尾走道東端進出"
+        ]
+      },
+      {
+        "id": "master-b",
+        "name": "方案 B",
+        "layout": "master-b",
+        "notes": {
+          "床與床頭設計": "・床 220 × 200，床頭貼西牆，北緣貼窗簾盒 15\n・言言的床 60 × 170 靠床南側，離西牆 0–170\n・收納抽屜在兩長邊與床尾：床尾、南側東段可拉開，其餘要挪床或言言的床",
+          "動線": "・衛浴 1 入口 60：言言的床東端到右衣櫃\n・床尾走道 70，從房門進\n・衣櫃門開向兩櫃間走道，不受床影響",
+          "取捨": "・優：衛浴 1 入口 60，陽台門從床尾走道可進\n・缺：言言的床在浴室入口旁，夜裡進出浴室會經過他"
+        },
+        "risks": [
+          "陽台門只能從床尾走道進：床北緣到玻璃只剩窗簾盒 15，床尾前可用的玻璃約 35，要側身進出"
+        ],
+        "objectOverrides": {
+          "master-bed": {
+            "bounds_pt": [
+              185.52,
+              190.17,
+              247.88,
+              246.87
+            ],
+            "source_note": "・床 220 × 200，床頭貼西牆，北緣貼窗簾盒 15\n・兩長邊與床尾有收納抽屜：床尾、南側東段可拉開；北側貼窗簾、南側西段在床邊床後，要挪開才拿得到\n・床頭板厚 8 為示意",
+            "notes": "Scheme B (R57): bed north edge on the 15 cm curtain-pocket line (y190.17-246.87). Foot aisle to the east wall 70; reachable balcony glass east of the foot ~35 (x247.88-257.76).",
+            "clearances": [
+              {
+                "line": [
+                  247.88,
+                  218.52,
+                  267.72,
+                  218.52
+                ],
+                "label": "70"
+              },
+              {
+                "line": [
+                  247.88,
+                  192.5,
+                  257.76,
+                  192.5
+                ],
+                "label": "35"
+              }
+            ]
+          },
+          "master-crib": {
+            "bounds_pt": [
+              185.52,
+              246.87,
+              233.71,
+              263.8
+            ],
+            "source_note": "・60 × 170，長邊貼床南側，從床頭起\n・東端到右衣櫃 60＝衛浴 1 入口",
+            "notes": "Co-sleeper 60 x 170 for the owner's child, long side against the bed's south side from the head end (x 0-170 from the west wall), south edge on the wardrobe-zone line y263.8 (room depth 274.7 scaled = pocket 15 + bed 200 + crib 59.7). Not on the north side: there the bed would sit on the wardrobe line and cover the Bath 1 passage mouth (x 100-230) up to x220, leaving 10. Here the mouth stays open x170-230 = 60.",
+            "clearances": [
+              {
+                "line": [
+                  233.71,
+                  255.3,
+                  250.68,
+                  255.3
+                ],
+                "label": "60"
+              }
+            ]
+          }
+        },
+        "pointOverrides": {
+          "sock-bed-n": {
+            "y": 194.42,
+            "notes": "・床頭板上方，床北段；離北牆 30、離地 100 示意\n・13A 雙孔＋USB-C"
+          },
+          "sock-bed-s": {
+            "y": 242.61,
+            "notes": "・床頭板上方，離南床緣 15，兼供言言的床夜燈\n・離地 100 示意"
+          }
+        }
       }
     ]
   },
