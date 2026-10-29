@@ -1676,7 +1676,6 @@
   "主臥西牆 · 床頭南段": "Master west wall · headboard south",
   "床邊床 · 言言": "Co-sleeper · 言言",
   "主臥床改實際 220 × 200（兩側與床尾抽屜）；言言的床 60 × 170 放床南側，留 60 進衛浴。": "Master bed set to its real 220 × 200 (drawers on both sides and the foot); 言言's cot 60 × 170 on the bed's south side, leaving 60 into Bath 1.",
-  "・床 220 × 200，床頭貼西牆，南緣推到衣櫃線\n・言言的床 60 × 170 靠床北側，離西牆 60–230\n・收納抽屜在兩長邊與床尾，記錄用，不保留全拉空間": "・Bed 220 × 200, headboard on the west wall, south edge pushed to the wardrobe line\n・言言's cot 60 × 170 on the bed's north side, 60–230 from the west wall\n・Storage drawers on both long sides and the foot — recorded only, no full pull-out clearance kept",
   "・依屋主擺法：窗簾盒 15＋言言的床 60＋床 200＝275，剛好頂到衣櫃線\n・床尾走道 70，從房門進\n・衣櫃門開向兩櫃間走道，不受床影響": "・Owner's layout: pocket 15 + cot 60 + bed 200 = 275, exactly to the wardrobe line\n・Foot aisle 70 from the bedroom door\n・Wardrobe doors open into the passage between them, not blocked by the bed",
   "衛浴 1 入口被床擋：床尾到右衣櫃只剩 10，進浴室要從床尾走道擠過或上床": "Bath 1 entry blocked by the bed: only 10 between the bed foot and the right wardrobe — reaching the bathroom means squeezing past the foot or crossing the bed",
   "陽台門前是言言的床，只能從床尾走道東端進出": "言言's cot sits in front of the balcony door; it's only reachable from the east end of the foot aisle",
@@ -1684,7 +1683,6 @@
   "・床頭板上方，床北段；離地 100 示意\n・13A 雙孔＋USB-C": "・Above the headboard, north part of the bed; 100 high (indicative)\n・13A twin + USB-C",
   "・床頭板上方，床南段；離地 100 示意": "・Above the headboard, south part of the bed; 100 high (indicative)",
   "主臥改回屋主擺法：床推到衣櫃線，言言的床放北側。": "Master bedroom back to the owner's layout: bed pushed to the wardrobe line, 言言's cot on the north side.",
-  "・60 × 170，長邊貼床北側，離西牆 60–230\n・北緣貼窗簾盒 15，正對陽台門": "・60 × 170, long side against the bed's north side, 60–230 from the west wall\n・North edge on the 15 curtain pocket, right in front of the balcony door",
   "・優：衛浴 1 入口 60，陽台門從床尾走道可進\n・缺：言言的床在浴室入口旁，夜裡進出浴室會經過他": "・Pro: Bath 1 entry 60; balcony door reachable from the foot aisle\n・Con: 言言's cot is next to the bathroom entry — night trips to the bathroom pass right by him",
   "・優：言言的床靠窗，離浴室入口與走道最遠\n・缺：衛浴 1 入口只剩 10、陽台門被擋 → 要好走改方案 B": "・Pro: 言言's cot is by the window, farthest from the bathroom entry and the aisle\n・Con: Bath 1 entry only 10 and the balcony door is blocked → for easy access switch to scheme B",
   "・床 220 × 200，床頭貼西牆，北緣貼窗簾盒 15\n・言言的床 60 × 170 靠床南側，離西牆 0–170\n・收納抽屜在兩長邊與床尾：床尾、南側東段可拉開，其餘要挪床或言言的床": "・Bed 220 × 200, headboard on the west wall, north edge on the 15 curtain pocket\n・言言's cot 60 × 170 on the bed's south side, 0–170 from the west wall\n・Storage drawers on both long sides and the foot: the foot and the east part of the south side open freely; the rest need the bed or the cot moved",
@@ -1694,6 +1692,8 @@
   "・衛浴 1 入口 60：言言的床東端到右衣櫃\n・床尾走道 70，從房門進\n・衣櫃門開向兩櫃間走道，不受床影響": "・Bath 1 entry 60: east end of 言言's cot to the right wardrobe\n・Foot aisle 70 from the bedroom door\n・Wardrobe doors open into the passage between them, not blocked by the bed",
   "切換主臥方案": "Switch master bedroom scheme",
   "陽台門只能從床尾走道進：床北緣到玻璃只剩窗簾盒 15，床尾前可用的玻璃約 35，要側身進出": "The balcony door is reached only from the foot aisle: just the 15 pocket between bed and glass, and ≈35 of glass in front of the foot aisle — step through sideways",
-  "主臥加方案 A／B：A 屋主擺法（床到衣櫃線、言言的床在北側），B 床靠北、言言的床在南側。": "Master bedroom gets schemes A / B: A is the owner's layout (bed to the wardrobe line, 言言's cot north), B puts the bed north and the cot south."
+  "主臥加方案 A／B：A 屋主擺法（床到衣櫃線、言言的床在北側），B 床靠北、言言的床在南側。": "Master bedroom gets schemes A / B: A is the owner's layout (bed to the wardrobe line, 言言's cot north), B puts the bed north and the cot south.",
+  "・60 × 170，長邊貼床北側，離西牆 50–220，東端對齊大床床尾；到陽台過道 70\n・北緣貼窗簾盒 15，正對陽台門": "・60 × 170, long side against the bed's north side, 50–220 from the west wall, east end flush with the bed foot; 70 passage to the balcony\n・North edge on the 15 curtain pocket, right in front of the balcony door",
+  "・床 220 × 200，床頭貼西牆，南緣推到衣櫃線\n・言言的床 60 × 170 靠床北側，離西牆 50–220，東端對齊大床床尾；到陽台過道 70\n・收納抽屜在兩長邊與床尾，記錄用，不保留全拉空間": "・Bed 220 × 200, headboard on the west wall, south edge pushed to the wardrobe line\n・言言's cot 60 × 170 on the bed's north side, 50–220 from the west wall, east end flush with the bed foot; 70 passage to the balcony\n・Storage drawers on both long sides and the foot — recorded only, no full pull-out clearance kept"
  }
 }

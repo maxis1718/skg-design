@@ -1,5 +1,5 @@
 <!-- Master bedroom schemes (toggled by data-master-plan, ?master=a|b). Bed 220 (E–W) × 200 (N–S), headboard on the west wall; headboard band 8 (schematic); drawer fronts = 5-wide dashed bands along north, south and foot with division ticks (sides 3 × ≈70.7, foot 2 × 100); two minimal pillows. Co-sleeper (言言) 60 × 170. Replaces source bed paths 329–345. Units: PDF pt.
- 方案 A (R58, owner's sketch): bed south edge on the wardrobe-zone line y263.8 (y207.11–263.81); co-sleeper on the bed's north side x 60–230 from the west wall, on the curtain pocket line y190.17.
+ 方案 A (R58, owner's sketch): bed south edge on the wardrobe-zone line y263.8 (y207.11–263.81); co-sleeper on the bed's north side x 50–220 from the west wall (east end flush with the bed foot), on the curtain pocket line y190.17.
  方案 B (R57): bed north edge on the curtain pocket line (y190.17–246.87); co-sleeper on the bed's south side x 0–170, south edge y263.8 → Bath 1 entry 60. -->
 <g id="master-plan-a" data-master-plan="master-a">
 <g data-layout="master-bed" class="furnishing" fill="none" stroke="currentColor">
@@ -10,8 +10,8 @@
 <path d="M189.49 211.36H198.99Q199.84 211.36 199.84 212.21V230.35Q199.84 231.20 198.99 231.20H189.49Q188.64 231.20 188.64 230.35V212.21Q188.64 211.36 189.49 211.36ZM189.49 239.71H198.99Q199.84 239.71 199.84 240.56V258.70Q199.84 259.55 198.99 259.55H189.49Q188.64 259.55 188.64 258.70V240.56Q188.64 239.71 189.49 239.71Z" stroke-width="0.1"/>
 </g>
 <g data-layout="master-crib" class="furnishing" fill="none" stroke="currentColor">
-<path d="M202.53 190.17H250.72V207.18H202.53Z" stroke-width="0.22" stroke-linejoin="round"/>
-<path d="M203.38 191.02H249.87V206.33H203.38Z" stroke-width="0.1"/>
+<path d="M199.69 190.17H247.88V207.18H199.69Z" stroke-width="0.22" stroke-linejoin="round"/>
+<path d="M200.54 191.02H247.03V206.33H200.54Z" stroke-width="0.1"/>
 </g>
 </g>
 <g id="master-plan-b" data-master-plan="master-b" hidden>
