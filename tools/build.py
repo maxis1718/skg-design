@@ -51,7 +51,11 @@ for fragment in swing_doors:plan=plan.replace(fragment,'')
 helper_bed=re.findall(r'<path\b[^>]*data-source-path="(?:71[4-9]|72[0-7])"[^>]*/>',plan)
 assert len(helper_bed)==14
 for fragment in helper_bed:plan=plan.replace(fragment,'')
-furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g><g id="balcony-geometry">'+read('furniture-balcony.svg')+'</g><g id="helper-geometry">'+read('furniture-helper.svg')+'</g>'
+# Master bed: source KING SIZE symbol (329–345: frame, headboard line, pillows) replaced by src/furniture-master.svg (bed 220 × 200 + co-sleeper).
+master_bed=re.findall(r'<path\b[^>]*data-source-path="(?:329|33\d|34[0-5])"[^>]*/>',plan)
+assert len(master_bed)==17
+for fragment in master_bed:plan=plan.replace(fragment,'')
+furniture+='\n<g id="kitchen-sink-geometry">'+''.join(sink)+'</g><g id="kitchen-hob-geometry">'+''.join(hob)+'</g><g id="appliance-tower-geometry" hidden></g><g id="living-geometry">'+read('furniture-living.svg')+'</g><g id="door-geometry">'+read('furniture-doors.svg')+'</g><g id="balcony-geometry">'+read('furniture-balcony.svg')+'</g><g id="helper-geometry">'+read('furniture-helper.svg')+'</g><g id="master-geometry">'+read('furniture-master.svg')+'</g>'
 replacements={'STYLE':read('style.css'),'PLAN':plan,'FURNITURE':furniture,'DATA':json.dumps(project,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'ELEVATION':read('elevation.js'),'I18N':json.dumps(json.loads(read('i18n.json')) if (src/'i18n.json').exists() else {'en':{}},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),'APP':read('app.js')}
 for key,value in replacements.items():html=html.replace('/*__'+key+'__*/',value)
 html=html.replace('/*__SOURCE_NEW__*/',data_image('layout-source.png')).replace('/*__SOURCE_OLD__*/',data_image('summary-original.png'))

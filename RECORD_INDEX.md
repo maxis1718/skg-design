@@ -44,7 +44,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | MST-01 | `master-wardrobe-left` | 主臥左側衣櫃 | 90 × 60 |
 | MST-02 | `master-wardrobe-right` | 主臥右側衣櫃 | 90 × 60 |
 | MST-03 | `master-unlabelled-cross-cabinet` | 未標示櫃體 | 173 × 33 |
-| MST-04 | `master-bed` | 主臥床 | 185 × 200 |
+| MST-04 | `master-bed` | 主臥床 | 200 × 220 |
+| MST-05 | `master-crib` | 床邊床 · 言言 | 170 × 60 |
 | BTH-01 | `bath1-mirror-cabinet` | 主浴洗手台＋鏡櫃 | 197.7 × 50 |
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |

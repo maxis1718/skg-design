@@ -58,7 +58,7 @@ const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
 const statuses=o=>[...new Set(Object.values(o.dimensions).map(d=>t(statusNames[d.status])))].join(' / ');
-const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[230,252],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[495,141],bath1:[237,315],bath2:[380,284]};
+const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[222,224],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[495,141],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 // A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
