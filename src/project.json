@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R58",
+    "revision": "R59",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4606,6 +4606,10 @@
     {
       "id": "C66",
       "text": "主臥改回屋主擺法：床推到衣櫃線，言言的床放北側。"
+    },
+    {
+      "id": "C67",
+      "text": "主臥加方案 A／B：A 屋主擺法（床到衣櫃線、言言的床在北側），B 床靠北、言言的床在南側。"
     }
   ],
   "measurement_policy": {
