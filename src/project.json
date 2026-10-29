@@ -625,7 +625,7 @@
         "電視與電視牆": "・Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛\n・中心高 110、下緣 61.8；櫃面到電視 21.8\n・電視牆 387.5：木作底板約 5＋wabi-sabi 淡灰壁紙到天花；分戶牆不打鑿\n・Ø32 暗管：櫃後空腔 → 電視背後\n・局部假天花（底 270）嵌線性洗牆燈",
         "電視櫃兩端留白": "・電視、櫃、沙發同中線，距陽台玻璃 130\n・櫃北端距玻璃 25，南端到牆尾 152.8",
         "餐桌尺寸與款式": "・Dahlia 岩板餐桌 150 × 90 × 75\n・北緣距陽台玻璃 50；南緣到過道 125.1\n・長邊各 2 椅，過道端不放椅\n・陽台端 Tripp Trapp 收進露約 30，拉出最多 40，距玻璃仍約 10",
-        "陽台曬衣架": "・PRISM+ Solaris XL 天花吊掛 131 × 49.8，剪叉升降\n・陽台西端，長邊南北向，離收納櫃門 20",
+        "陽台曬衣架": "・YU HOME SMARTLUX LITE 天花吊掛 113 × 40 × 6.6，無風扇、無電熱\n・陽台西端，長邊南北向，離收納櫃門 20",
         "沙發與動線": "・沙發 210 × 95，與電視同中線\n・北端距玻璃 25，南端到過道 90.1\n・前緣到電視櫃 90；拉開中抽後仍約 55 可站\n・椅背到餐桌東緣 149.9\n・椅背到螢幕約 227.3，坐姿視距約 180–190",
         "材質與色彩": null
       },
@@ -1356,7 +1356,7 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": 2,
       "notes": {
-        "設計備註": "・西北角：收納櫃 105 × 65 × 104.5\n・西端：天花曬衣架 PRISM+ Solaris XL 131 × 49.8\n・東段：鞦韆天花吊點 ×2，間距 48\n・曬衣架電源 P-06：西牆插座迴路 → 帶開關 FCU → 天花",
+        "設計備註": "・西北角：收納櫃 105 × 65 × 104.5\n・西端：天花曬衣架 YU HOME SMARTLUX LITE 113 × 40 × 6.6\n・東段：鞦韆天花吊點 ×2，間距 48\n・曬衣架電源 P-06：西牆 S-09 插座迴路 → 天花 13A 插座，無電熱不用 FCU",
         "鞦韆吊點": "・錨進結構樓板，不可只鎖假天花\n・每點額定 ≥ 150 kg，約人＋座椅的 2 倍\n・座椅兩側到外緣／滑門各約 58，前後擺動各留 ≥ 100"
       },
       "name": "客廳陽台",
@@ -1644,36 +1644,36 @@
       "label": "Clothes drying rack",
       "bounds_pt": [
         452.49,
-        125.47,
-        466.61,
-        162.61
+        128.02,
+        463.83,
+        160.06
       ],
-      "plan_horizontal_cm": 49.8,
-      "plan_vertical_cm": 131.0,
-      "nominal_width_cm": 131,
-      "nominal_depth_cm": 49.8,
-      "height_cm": null,
+      "plan_horizontal_cm": 40.0,
+      "plan_vertical_cm": 113.0,
+      "nominal_width_cm": 113,
+      "nominal_depth_cm": 40,
+      "height_cm": 6.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "PRISM+ Solaris XL ceiling rack, housing 131 x 49.8 cm (clearance per PRISM+ spec), scissor lift so no cables cross the poles. Long axis N-S across the balcony depth, 20 cm from the cabinet doors, centred in depth. Overhead: dashed.",
+      "notes": "YU HOME SMARTLUX LITE ceiling rack, 113 x 40 x 6.6 cm, one-piece hanging frame (no telescopic rods), no fan or heater. Long axis N-S across the balcony depth, west edge kept 20 cm from the cabinet doors, centred in depth (y144.04). Overhead: dashed.",
       "name": "曬衣架",
-      "source_note": "・PRISM+ Solaris XL：機身 131 × 49.8，剪叉升降，晾桿不掛鋼索\n・5 支桿，伸縮到約 150（陽台深度上限）\n・24 W 燈，白／暖白／黃三色用遙控切\n・被子對折掛在最外側桿，200 寬可整片攤開\n・有電熱：電源 P-06 由西牆插座迴路經帶開關 FCU 接出，不接吊扇點",
+      "source_note": "・YU HOME SMARTLUX LITE：機身 113 × 40 × 6.6，一體晾衣框不伸縮\n・25 W 雙色溫燈，可調亮度；遙控升降、開關燈\n・無風扇、無電熱；被子對折掛\n・電源 P-06：一般 13A 插座，西牆 S-09 迴路接出",
       "dimensions": {
         "w": {
-          "cm": 131,
+          "cm": 113,
           "status": "design"
         },
         "d": {
-          "cm": 49.8,
+          "cm": 40,
           "status": "design"
         }
       },
       "actual": {
-        "w": 131,
-        "d": 49.8,
-        "h": null,
-        "brand": "PRISM+",
-        "model": "Solaris XL"
+        "w": 113,
+        "d": 40,
+        "h": 6.6,
+        "brand": "YU HOME",
+        "model": "SMARTLUX LITE"
       },
       "code": "LIV-06",
       "mount": "ceiling",
@@ -18785,7 +18785,7 @@
         "place": "客廳陽台 · 曬衣架西端天花",
         "mount": "ceiling",
         "name": "天花電源 · 曬衣架",
-        "notes": "・曬衣架有電熱，不從吊扇點取電\n・西牆 S-09 插座迴路接出：西牆離地 150 裝帶開關 FCU（13 A 保險絲），線槽上天花到這裡\n・天花 IP66 戶外型 13A 插座；FCU 平時常開，出遠門或維修時切斷\n・線槽漆成天花色",
+        "notes": "・曬衣架無電熱，一般 13A 插座即可，不用 FCU\n・從西牆 S-09 插座迴路以線槽上天花到這裡，不接吊扇點\n・天花 IP66 戶外型 13A 插座，由配電箱斷路器關閉\n・線槽漆成天花色",
         "room": "living-balcony",
         "use": "曬衣架"
       },
