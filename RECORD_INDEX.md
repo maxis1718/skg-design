@@ -27,7 +27,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | LIV-03 | `tv-console` | 電視櫃 | 210 × 45 |
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |
 | LIV-05 | `dining-table` | 餐桌 | 150 × 90 |
-| LIV-06 | `drying-rack` | 曬衣架 | 113 × 40 |
+| LIV-06 | `drying-rack` | 曬衣架 | 131 × 49.8 |
 | LIV-07 | `living-tv` | 電視 · Samsung The Frame 75" | 168.5 × 2.7 |
 | KIT-01 | `washer-dryer` | 洗烘衣機 W/D | 60 × 65 |
 | KIT-02 | `fridge` | 冰箱 F | 80 × 70 |
