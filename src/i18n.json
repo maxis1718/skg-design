@@ -1436,7 +1436,6 @@
   "設計配置": "Design layout",
   "調研 ↗": "Research ↗",
   "象印電子鍋": "Zojirushi",
-  "買 Aqara C100 窗簾馬達 ×7（客廳 2、主臥、小孩房、書房、客房、女傭房）": "Buy 7 × Aqara C100 curtain motors (living ×2, master, kid, study, guest, helper)",
   "買 IKEA BARLAST 25 cm 吸頂燈": "Buy IKEA BARLAST 25 cm ceiling lamp",
   "買 IKEA NYMÅNE 閱讀壁燈＋SOLHETTA GU10 2700K": "Buy IKEA NYMÅNE wall reading lamp + SOLHETTA GU10 2700K",
   "買 MALM Queen 收納床與無輪書椅": "Buy the MALM Queen storage bed and a desk chair without castors",
@@ -1464,7 +1463,6 @@
   "選 PRISM+ Solaris XL（S$669，RACK200 減 S$200 → S$469，含安裝）。因為剪式升降、杆上沒有鋼索，被子可掛滿整支杆；沒有 App，暖光直接用遙控切；和淘寶加安裝（S$423–578）同價位，還有本地保固。": "Pick the PRISM+ Solaris XL (S$669, S$469 with code RACK200, installed). It lifts on a scissor with no cables on the poles, so a duvet uses the whole pole; it has no app, so warm light is a remote button; and it lands at the same price as Taobao plus installation (S$423–578), with a local warranty.",
   "選": "pick",
   "選三折床墊型號與厚度": "Choose the tri-fold mattress model and thickness",
-  "選定網路方案：Deco 或 UniFi": "Choose the network scheme: Deco or UniFi",
   "選床台板材與色號": "Choose the platform-bed board and colour",
   "選微波爐、電子鍋型號": "Choose microwave and rice-cooker models",
   "選擇空間": "Select space",
@@ -1683,6 +1681,9 @@
   "🔨 廚房兩側全拆，做電器高櫃，靠女傭房牆": "🔨 Kitchen: strip both sides; new appliance tower against the helper's-room wall",
   "🔨 書房全拆": "🔨 Study: strip everything",
   "＋": "+",
-  "，": ", "
+  "，": ", ",
+  "網路定案 UniFi、拿掉方案切換並併入智能家居；客廳 AP 移到鋼琴上方；主臥預留 Cat6；客房網路孔移到書桌下；女傭房不做電動窗簾；陽台插座改拖地機 H14 Ultra。": "Network set to UniFi, scheme toggle removed and merged into Smart home; living AP moved above the piano; Cat6 pre-wired to the master; guest data jack under the desk; no motorised curtain in the helper's room; balcony socket renamed to the H14 Ultra floor washer.",
+  "買 UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE（約 S$733）": "Buy UniFi U7 Lite ×2 + Cloud Gateway Ultra + USW Lite 8 PoE (about S$733)",
+  "買 Aqara C100 窗簾馬達 ×6（客廳 2、主臥、小孩房、書房、客房）": "Buy 6 × Aqara C100 curtain motors (living ×2, master, kid, study, guest)"
  }
 }

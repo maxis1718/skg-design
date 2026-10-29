@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R59",
+    "revision": "R60",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4629,6 +4629,10 @@
     {
       "id": "C67",
       "text": "主臥加方案 A／B：A 屋主擺法（床到衣櫃線、言言的床在北側），B 床靠北、言言的床在南側。"
+    },
+    {
+      "id": "C68",
+      "text": "網路定案 UniFi、拿掉方案切換並併入智能家居；客廳 AP 移到鋼琴上方；主臥預留 Cat6；客房網路孔移到書桌下；女傭房不做電動窗簾；陽台插座改拖地機 H14 Ultra。"
     }
   ],
   "measurement_policy": {
@@ -19663,9 +19667,9 @@
   ],
   "todos": [
     {
-      "id": "todo-floor-network",
-      "room": "floor",
-      "text": "選定網路方案：Deco 或 UniFi",
+      "id": "todo-smart-unifi",
+      "room": "smart",
+      "text": "買 UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE（約 S$733）",
       "status": "open"
     },
     {
@@ -19677,7 +19681,7 @@
     {
       "id": "todo-smart-curtains",
       "room": "smart",
-      "text": "買 Aqara C100 窗簾馬達 ×7（客廳 2、主臥、小孩房、書房、客房、女傭房）",
+      "text": "買 Aqara C100 窗簾馬達 ×6（客廳 2、主臥、小孩房、書房、客房）",
       "research": "curtain-motor",
       "status": "open"
     },
