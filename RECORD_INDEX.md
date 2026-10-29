@@ -36,8 +36,8 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-22 | `water-purifier` | 淨水器 Wells The One | 8.8 × 8.8 |
 | KIT-04 | `kitchen-lower-worktop` | Wet kitchen | 320.5 × 65 |
 | HLP-01 | `helper-bed` | 女傭房收納床台 | 107 × 205 |
-| HLP-02 | `helper-fan` | 女傭房壁扇 | 40 × 25 |
-| HLP-03 | `helper-wall-cabinet` | 女傭房床尾吊櫃 | 70 × 30 |
+| HLP-02 | `helper-fan` | 女傭房壁扇 | 33.1 × 35.5 |
+| HLP-03 | `helper-wall-cabinet` | 女傭房床尾吊櫃 | 55 × 30 |
 | HLP-04 | `helper-mirror` | 女傭房鏡子 | 3 × 30 |
 | HLP-05 | `helper-hooks` | 女傭房掛鉤 ×3 | 5 × 32 |
 | HLP-06 | `helper-reading-lamp` | 女傭房閱讀壁燈 | 18 × 16 |

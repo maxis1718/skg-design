@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R51",
+    "revision": "R52",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -1030,9 +1030,9 @@
       "uncertainty_cm": null,
       "notes": {
         "床型與實際尺寸": "・訂製收納床台 107 × 205，台面 38\n・三折床墊 107 × 190 × 10，坐高約 48",
-        "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位，也當手機置物檯\n・床尾上方吊櫃 70 × 30 × 40，底 165\n・東牆門北側掛鉤 ×3，門南側鏡子 30 × 45",
-        "電與燈光": "・床頭北牆：S-13 13A 雙孔＋USB-C 離地 60、SW-11 雙鍵離地 78、閱讀壁燈離地 100\n・天花中央薄型 LED 吸頂燈 Ø30，門邊 SW-03 與床頭 SW-11 都能開關\n・壁扇插座 S-14 在南牆離地 245\n・西牆窗電動窗簾 CT-07",
-        "通風與風扇": "・不裝吊扇，用 40 cm 壁扇，掛南牆床尾向床頭吹\n・窗只有西牆一扇 42 寬，對冷氣平台；睡覺時開窗＋壁扇，門下留 1.5 通風縫",
+        "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位，也當手機置物檯\n・床尾上方吊櫃 55 × 30 × 40，底 165\n・東牆門北側掛鉤 ×3，門南側鏡子 30 × 45",
+        "電與燈光": "・床頭北牆：S-13 13A 雙孔＋USB-C 離地 60、SW-11 雙鍵離地 78、閱讀壁燈離地 100\n・天花中央 IKEA STOFTMOLN 24 cm 2700K 吸頂燈，Ø24 × 6；站在床上頭頂離燈約 21\n・門邊 SW-03 與床頭 SW-11 右鍵都能開關吸頂燈\n・壁扇插座 S-14 在南牆吊櫃上方，離地 220\n・西牆窗電動窗簾 CT-07",
+        "通風與風扇": "・天花 240，站在床上頭頂約 213；吸頂風扇燈扇葉底約 218 會打到頭手 → 改用 14 吋 DC 壁扇\n・壁扇掛南牆床尾西側，離地 180–233，固定朝床中段往下斜吹，不擺頭；風沿床長吹向床頭\n・窗只有西牆一扇 42 寬，對冷氣平台；睡覺時開窗＋壁扇，門下留 1.5 通風縫",
         "設計備註": "・內寬 107；北端 55 段西牆外退 5，寬 112\n・床台全寬，床邊沒有走道，從門洞 80 取物\n・西牆是上掀蓋翻轉範圍，牆上不裝東西"
       },
       "name": "女傭房",
@@ -1041,7 +1041,8 @@
       "focus": "收納床台、床頭電源、壁扇與床尾吊櫃",
       "elevation": "helper-wall",
       "risks": [
-        "只有西牆一扇 42 寬小窗，開向冷氣平台；外機若正對此窗，熱風與噪音直接進房，外機位置待確認"
+        "只有西牆一扇 42 寬小窗，開向冷氣平台；外機若正對此窗，熱風與噪音直接進房，外機位置待確認",
+        "床尾 35 上方有吊櫃底 165、壁扇底 180：坐著頭頂約 133 不會碰；站起來換衣服要在床中段"
       ]
     },
     {
@@ -2000,29 +2001,29 @@
       "room_id": "helper",
       "label": "Wall fan",
       "bounds_pt": [
-        441.82,
-        334.71,
-        453.16,
+        431.9,
+        331.74,
+        441.28,
         341.8
       ],
-      "plan_horizontal_cm": 40.0,
-      "plan_vertical_cm": 25.0,
+      "plan_horizontal_cm": 33.1,
+      "plan_vertical_cm": 35.5,
       "nominal_width_cm": null,
       "nominal_depth_cm": null,
-      "height_cm": 45,
+      "height_cm": 52.7,
       "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "40 cm remote wall fan (schematic) on the south wall above the bed foot, centre 72 from the west wall at 232 high, blowing north along the bed; socket S-14 beside it at 245.",
+      "notes": "Mistral MWF1454DR-G 14\" DC wall fan (33.1 W x 35.5 D x 52.7 H) on the south wall over the bed foot, west side 17-50 from the west wall, 180-233 high; aimed fixed and tilted down at the middle of the bed (no oscillation), blowing north along the bed. Socket S-14 above the cabinet at 220. Replaces the 40 cm fan, which would have topped 252 under a 240 ceiling.",
       "physical_drawing_indices": [],
       "name": "女傭房壁扇",
-      "source_note": "・40 cm 壁扇附遙控，可擺頭，示意\n・掛南牆床尾，中心離西牆 72、離地 232，向床頭吹\n・插座 S-14 在右側，離地 245",
+      "source_note": "・選 Mistral MWF1454DR-G 14 吋 DC 壁扇，S$129，Courts／Harvey Norman\n・33 × 36 × 53，5 段風速、遙控、定時\n・南牆床尾西側，離西牆 17，離地 180–233；固定朝床中段，不擺頭",
       "dimensions": {
         "w": {
-          "cm": 40,
+          "cm": 33.1,
           "status": "design"
         },
         "d": {
-          "cm": 25,
+          "cm": 35.5,
           "status": "design"
         }
       },
@@ -2041,25 +2042,25 @@
       "room_id": "helper",
       "label": "Wall cabinet over the bed foot",
       "bounds_pt": [
-        437.57,
+        441.82,
         333.3,
         457.32,
         341.8
       ],
-      "plan_horizontal_cm": 69.7,
+      "plan_horizontal_cm": 55.0,
       "plan_vertical_cm": 30.0,
       "nominal_width_cm": null,
       "nominal_depth_cm": null,
       "height_cm": 40,
       "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "Wall cabinet 70 W x 30 D x 40 H on the south wall, underside 165, against the east wall; 37 left clear on the window side. The foot lid sweep stays below about 138 under it.",
+      "notes": "Wall cabinet 55 W x 30 D x 40 H on the south wall, underside 165, against the east wall; the 52 on the window side is left for the wall fan and the curtain. The foot lid sweep stays below about 132 under it; seated head at the foot about 133.",
       "physical_drawing_indices": [],
       "name": "女傭房床尾吊櫃",
-      "source_note": "・70 × 30 × 40，底 165、頂 205，雙開門，內一層板\n・靠東牆；西側留 37 不擋窗\n・床尾蓋翻轉在此最高約 138，不碰櫃底",
+      "source_note": "・55 × 30 × 40，底 165、頂 205，雙開門，內一層板\n・靠東牆；西側 52 留給壁扇與窗簾\n・床尾蓋翻轉在此最高約 132；坐在床尾頭頂約 133，離櫃底 32",
       "dimensions": {
         "w": {
-          "cm": 70,
+          "cm": 55,
           "status": "design"
         },
         "d": {
@@ -2176,10 +2177,10 @@
       "height_cm": null,
       "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "Swing-arm reading lamp (schematic) on the north wall, west side, 100 high; switched from SW-11 at the bedhead.",
+      "notes": "IKEA NYMÅNE wall/reading lamp, wired-in (903.569.63) with a SOLHETTA GU10 2700K bulb, north wall west side at 100; hardwired to SW-11 left key.",
       "physical_drawing_indices": [],
       "name": "女傭房閱讀壁燈",
-      "source_note": "・可調臂壁燈，裝北牆西側，離地 100，示意\n・照向枕頭與胸前，床頭 SW-11 左鍵開關",
+      "source_note": "・選 IKEA NYMÅNE 壁燈／閱讀燈 嵌入式接線，S$25.90\n・配 SOLHETTA GU10 2700K 燈泡，S$4.90\n・北牆西側離地 100，燈頭可調，照向枕頭；SW-11 左鍵開關",
       "dimensions": {
         "w": {
           "cm": 18,
@@ -4518,6 +4519,10 @@
     {
       "id": "C59",
       "text": "女傭房完整設計：四面牆立面、床頭插座、壁扇、吸頂燈與閱讀燈、電動窗簾、吊櫃與掛鉤。"
+    },
+    {
+      "id": "C60",
+      "text": "女傭房天花改 240：不裝吊扇，改 Mistral 14 吋 DC 壁扇；吸頂燈與閱讀燈選定 IKEA。"
     }
   ],
   "measurement_policy": {
@@ -16007,7 +16012,7 @@
       "title": "女傭房收納床台",
       "viewpoint": "站在門口面向西牆：左為床尾，右為床頭",
       "status": "design-proposal",
-      "ceiling_cm": 280,
+      "ceiling_cm": 240,
       "states": [
         {
           "id": "closed",
@@ -16584,7 +16589,7 @@
           ]
         },
         "cab": {
-          "w": 70,
+          "w": 55,
           "d": 30,
           "h": 40,
           "board": 1.8,
@@ -16646,13 +16651,13 @@
               "type": "wall",
               "x": -4,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "wall",
               "x": 205,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "window",
@@ -16668,7 +16673,7 @@
               "x": 46,
               "y": 96,
               "w": 13,
-              "h": 169,
+              "h": 129,
               "fill": "#ece8f2",
               "stroke": "#b5a9c9",
               "sw": 0.25
@@ -16676,7 +16681,7 @@
             {
               "type": "rect",
               "x": 0,
-              "y": 265,
+              "y": 225,
               "w": 60,
               "h": 15,
               "fill": "#f3f0f8",
@@ -16702,11 +16707,9 @@
               "type": "h-fan",
               "side": true,
               "x": 0,
-              "y": 232,
-              "r": 20,
-              "dir": 1,
-              "label": "壁扇",
-              "size": 0.5
+              "y": 206.5,
+              "r": 18,
+              "dir": 1
             }
           ],
           "extras": [
@@ -16865,10 +16868,11 @@
             },
             {
               "type": "h-light",
-              "x": 87.5,
-              "w": 30,
-              "y": 280,
-              "label": "吸頂燈"
+              "x": 90.5,
+              "w": 24,
+              "y": 240,
+              "label": "吸頂燈",
+              "h": 6
             },
             {
               "type": "h-lamp",
@@ -16878,6 +16882,15 @@
               "dir": -1,
               "glowTo": 48,
               "label": "閱讀壁燈"
+            },
+            {
+              "type": "callout",
+              "x": 14,
+              "y": 200,
+              "lx": 85,
+              "ly": 195,
+              "label": "壁扇",
+              "size": 0.6
             }
           ],
           "hcuts": [
@@ -16913,13 +16926,13 @@
               "type": "wall",
               "x": -4,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "wall",
               "x": 112,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "rect",
@@ -17019,10 +17032,11 @@
           "extras": [
             {
               "type": "h-light",
-              "x": 43.5,
-              "w": 30,
-              "y": 280,
-              "label": "吸頂燈"
+              "x": 46.5,
+              "w": 24,
+              "y": 240,
+              "label": "吸頂燈",
+              "h": 6
             },
             {
               "type": "h-lamp",
@@ -17106,13 +17120,13 @@
               "type": "wall",
               "x": -4,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "wall",
               "x": 107,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "rect",
@@ -17174,15 +17188,15 @@
             },
             {
               "type": "h-fan",
-              "x": 35,
-              "y": 232,
-              "r": 20,
-              "label": "壁扇 40"
+              "x": 73.5,
+              "y": 206.5,
+              "r": 18,
+              "label": "壁扇 14 吋"
             },
             {
               "type": "socket",
-              "x": 2.7,
-              "y": 240.7,
+              "x": 27.7,
+              "y": 215.7,
               "w": 8.6,
               "h": 8.6,
               "n": 1,
@@ -17200,7 +17214,9 @@
           ],
           "hcuts": [
             0,
-            70,
+            55,
+            57,
+            90,
             107
           ],
           "totalLabel": "107 南牆",
@@ -17212,6 +17228,10 @@
             {
               "y": 165,
               "label": "櫃底"
+            },
+            {
+              "y": 180,
+              "label": "扇底"
             },
             {
               "y": 205,
@@ -17233,13 +17253,13 @@
               "type": "wall",
               "x": -4,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "wall",
               "x": 205,
               "w": 4,
-              "h": 280
+              "h": 240
             },
             {
               "type": "rect",
@@ -17343,16 +17363,6 @@
               "dashed": true,
               "label": "吊櫃",
               "size": 0.5
-            },
-            {
-              "type": "h-fan",
-              "side": true,
-              "x": 205,
-              "y": 232,
-              "r": 20,
-              "dir": -1,
-              "label": "壁扇",
-              "size": 0.5
             }
           ],
           "extras": [
@@ -17365,10 +17375,11 @@
             },
             {
               "type": "h-light",
-              "x": 87.5,
-              "w": 30,
-              "y": 280,
-              "label": "吸頂燈"
+              "x": 90.5,
+              "w": 24,
+              "y": 240,
+              "label": "吸頂燈",
+              "h": 6
             },
             {
               "type": "h-switch",
@@ -17438,8 +17449,8 @@
       "title": "女傭房 · 四面牆",
       "viewpoint": "西牆從門口看；北牆床頭、南牆床尾、東牆門側都從床上看。",
       "status": "design-proposal",
-      "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "ceiling_cm": 240,
+      "ceiling_note": "天花 240。",
       "states": [
         {
           "id": "closed",
@@ -17458,7 +17469,7 @@
         {
           "zone": "吸頂燈",
           "h": "天花",
-          "note": "薄型 LED 吸頂燈 Ø30 示意，房間中央；SW-03、SW-11 都能開關。"
+          "note": "IKEA STOFTMOLN 24 cm 2700K，Ø24 × 6、800 lm，房間中央；站在床上頭頂離燈約 21。SW-03、SW-11 右鍵都能開關。"
         },
         {
           "zone": "窗簾 CT-07",
@@ -17467,13 +17478,13 @@
         },
         {
           "zone": "壁扇",
-          "h": "212–252",
-          "note": "40 cm 附遙控，南牆床尾中間，向床頭吹；S-14 離地 245。"
+          "h": "180–233",
+          "note": "Mistral MWF1454DR-G 14 吋 DC，南牆床尾西側；固定朝床中段往下斜吹，沿床長吹向床頭。S-14 在吊櫃上方離地 220。"
         },
         {
           "zone": "床尾吊櫃",
           "h": "165–205",
-          "note": "70 × 30 × 40，雙開門，內一層板；下緣扣手，不裝把手。"
+          "note": "55 × 30 × 40，雙開門，內一層板；下緣扣手，不裝把手。"
         },
         {
           "zone": "掛鉤 ×3",
@@ -17488,7 +17499,7 @@
         {
           "zone": "閱讀壁燈",
           "h": "100",
-          "note": "北牆西側，可調臂，照向枕頭與胸前。"
+          "note": "IKEA NYMÅNE 嵌入式接線＋SOLHETTA GU10 2700K，北牆西側，燈頭照向枕頭。"
         },
         {
           "zone": "床頭開關 SW-11",
@@ -17509,19 +17520,20 @@
       "hardware": [
         "SW-11 Aqara H1 EU 有零線雙鍵，與全屋同款。",
         "S-13 選帶 USB-C 的 13A 雙孔面板。",
-        "壁扇與吊櫃鎖進牆體，用膨脹螺絲，不鎖在石膏板上。"
+        "壁扇與吊櫃鎖進牆體，用膨脹螺絲，不鎖在石膏板上。",
+        "閱讀壁燈在北牆離地 100 留出線盒，接 SW-11 左鍵。"
       ],
       "rationale": [
-        "不裝吊扇：房寬 107，最小吊扇 76–91 貼牆，站在床上頭頂約 210，舉手會碰到扇葉。",
-        "壁扇在床尾向床頭吹：風沿床長走，擺頭可蓋全床，不近距離對臉吹。",
+        "天花 240，站在床上頭頂約 213、舉手約 260；吸頂風扇燈扇葉底約 218 → 不裝吸頂風扇，改用壁扇。無葉風扇燈厚 15–25，也正好在頭頂高度。",
+        "壁扇放床尾西側高處、固定不擺頭：14 吋風到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭反而一陣有一陣無。旁邊就是窗，順帶把窗邊空氣帶進來。",
+        "原 40 cm 壁扇頂到 252，高過天花 → 改 14 吋，機身寬 33；吊櫃縮為 55 寬讓位。",
+        "吸頂燈用 IKEA STOFTMOLN 2700K 單色溫：厚 6，站在床上頭頂離燈約 21；單色溫，智能開關斷電再通電不會跳色。",
         "西牆不裝東西：三片上掀蓋往西牆翻，床尾蓋最高到 141。",
-        "吊櫃底 165：蓋子翻轉在吊櫃下方最高約 138；坐在床尾頭頂約 135。"
+        "吊櫃底 165：蓋子翻轉在吊櫃下方最高約 132；坐在床尾頭頂約 133。"
       ],
       "open_questions": [
         "窗台高度與窗扇開法",
-        "天花高度與有無假天花",
-        "壁扇型號",
-        "閱讀壁燈型號"
+        "有無假天花"
       ],
       "sources": []
     },
@@ -18701,12 +18713,12 @@
         "id": "sock-helper-fan",
         "code": "S-14",
         "kind": "socket",
-        "x": 455.43,
+        "x": 448.34,
         "y": 339.2,
-        "place": "女傭房南牆 · 壁扇旁",
-        "mount": 245,
+        "place": "女傭房南牆 · 吊櫃上方",
+        "mount": 220,
         "name": "插座 · 女傭房壁扇",
-        "notes": "・13A 單孔帶開關，離地 245\n・壁扇線短，不垂過床\n・改裝吊扇或掛扇時沿用",
+        "notes": "・13A 單孔帶開關，離地 220，在吊櫃上方、壁扇東側\n・開關常開，壁扇用遙控\n・扇線短，不垂過床",
         "use": "壁扇"
       },
       {
@@ -18729,7 +18741,7 @@
             "左：閱讀壁燈；右：吸頂燈"
           ]
         ],
-        "notes": "・躺著伸手可及，離地 78\n・右鍵解耦，和門邊 SW-03 同控吸頂燈"
+        "notes": "・躺著伸手可及，離地 78\n・左鍵直接接閱讀壁燈\n・右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈"
       },
       {
         "id": "ct-helper",
@@ -19695,9 +19707,24 @@
       "status": "open"
     },
     {
-      "id": "todo-helper-fan-lamp",
+      "id": "todo-helper-fan",
       "room": "helper",
-      "text": "買 40 cm 遙控壁扇與搖臂閱讀燈",
+      "text": "買 Mistral MWF1454DR-G 14 吋 DC 壁扇",
+      "research": "helper-fan-light",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-reading-lamp",
+      "room": "helper",
+      "text": "買 IKEA NYMÅNE 閱讀壁燈＋SOLHETTA GU10 2700K",
+      "research": "helper-fan-light",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-ceiling-light",
+      "room": "helper",
+      "text": "買 IKEA STOFTMOLN 24 cm 2700K 吸頂燈",
+      "research": "helper-fan-light",
       "status": "open"
     },
     {
@@ -20042,6 +20069,42 @@
         {
           "title": "Harvey Norman SG: Aqara Motion Sensor P1",
           "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-p1-zigbee-version-motion-sensor-white-ms-s02.html"
+        }
+      ]
+    },
+    "helper-fan-light": {
+      "title": "女傭房風扇與燈",
+      "updated": "2026-10-29",
+      "summary": "選 Mistral MWF1454DR-G 14 吋 DC 壁扇掛床尾、IKEA STOFTMOLN 2700K 吸頂燈、IKEA NYMÅNE 閱讀燈。因為天花 240，站在床上頭頂約 213，任何吸頂風扇都在頭手高度。",
+      "body": "## 結論\n- **吸頂風扇燈有問題 → 改用壁扇。**天花 240，站在床上頭頂約 213、舉手約 260；20 吋吸頂風扇燈高 21.5，扇葉底約 218，正在頭手高度。\n- **選風扇：Mistral MWF1454DR-G 14 吋 DC 壁扇**（S$129，Courts／Harvey Norman）— 33 寬塞得進床尾西側；新加坡三腳插頭與 Safety Mark，不用轉接頭。\n- **選吸頂燈：IKEA STOFTMOLN 24 cm 2700K**（IKEA SG）— Ø24 × 6、800 lm，站著頭頂離燈約 21；單色溫，H1 斷電再通電不跳色。\n- **選閱讀燈：IKEA NYMÅNE 嵌入式接線**（S$25.90）＋ SOLHETTA GU10 2700K（S$4.90），接 SW-11 左鍵。\n- **風扇固定不擺頭：**14 吋的風吹到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭只會一陣有一陣無。安裝時朝床中段、往下斜。\n- **開關：**H1 EU 有零線雙鍵支援「轉為無線開關」，右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈。\n- **不選：20 吋吸頂風扇燈（¥244）** — 開放扇葉在頭頂高度。\n- **不選：無葉／隱形扇葉風扇燈** — 公牛 GF19AT 高 24.6、9 kg，多數 15–25 厚，一樣在頭頂高度。\n- **不選：三色變光吸頂燈** — 靠開關斷電切色，和 H1 智能開關衝突。\n\n## 評判標準\n- **站在床上安全**：頭頂 213 上方沒有會轉的東西；天花燈具 ≤ 6 厚\n- **風向**：從床尾沿床長吹，不近距離對臉\n- **尺寸**：風扇寬 ≤ 35，放得進吊櫃與窗簾之間\n- **到手總價**：淘寶價＋9% GST＋運費，對比新加坡價；新加坡貴 2 倍以上才選淘寶\n- **插頭與安規**：插電電器要新加坡三腳插頭與 Safety Mark\n- **乾淨**：插座藏在吊櫃上方，線不垂過床\n\n## 到手總價\n| 品項 | 新加坡 | 淘寶同級到手 | 結論 |\n|---|---|---|---|\n| 14 吋 DC 壁扇 | S$129 | 約 S$55–70 | 新加坡 |\n| 閱讀壁燈 | S$30.80 | 約 S$20–25 | IKEA |\n| 吸頂燈 | 約 S$25–30 | 約 S$15–20 | IKEA |\n\n- 壁扇淘寶約 ¥200–300 一台，加 GST 與 3–4 kg 運費約 S$55–70，便宜一半；但是中國插頭、沒有 Safety Mark，要轉接頭插在床尾高處，不值得\n- 兩盞燈差價都不到 2 倍，IKEA 當天買得到，壞了也好換\n\n## 要先做的事\n- 告訴電工：S-14 13A 帶開關，南牆吊櫃上方離地 220、離西牆 75；開關常開\n- 壁扇離西牆 17、離地 180–233，鎖進牆體，朝床中段往下斜\n- 北牆離地 100 留 NYMÅNE 線盒接 SW-11 左鍵；天花中央留吸頂燈出線接 SW-03\n- 吊櫃改 55 寬，靠東牆\n\n## 風險與待確認\n- 床尾 35 上方有吊櫃與壁扇：坐著沒問題，站起來要在床中段\n- 窗扇若向內開會碰到壁扇，窗扇開法待確認\n- 吸頂燈與淘寶價格是估算，IKEA SG 吸頂燈價格待確認\n",
+      "sources": [
+        {
+          "title": "Mistral MWF1454DR-G 14\" DC Wall Fan – Harvey Norman SG",
+          "url": "https://www.harveynorman.com.sg/home-appliances/fans/dc-motor-fans/mistral-mwf1454dr-g-14-dc-wall-fan-with-remote-control.html"
+        },
+        {
+          "title": "Mistral 14\" DC Wall Fan MWF1454DR-G – COURTS",
+          "url": "https://www.courts.com.sg/mistral-14-in-dc-wall-fan-with-remote-mwf1454dr-g-IP193786.html"
+        },
+        {
+          "title": "IKEA STOFTMOLN LED ceiling/wall lamp 24 cm – IKEA SG",
+          "url": "https://www.ikea.com/sg/en/p/stoftmoln-led-ceiling-wall-lamp-smart-wireless-dimmable-warm-white-white-30497490/"
+        },
+        {
+          "title": "IKEA STOFTMOLN 24 cm specs (2700K, 800 lm, H 6) – IKEA TW",
+          "url": "https://ikea.com.tw/en/products/luminaires/ceiling-lamps-and-spotlights/stoftmoln-art-60505554"
+        },
+        {
+          "title": "IKEA NYMÅNE wall/reading lamp, wired-in – IKEA SG",
+          "url": "https://www.ikea.com/sg/en/p/nymane-wall-reading-lamp-wired-in-inst-white-90356963/"
+        },
+        {
+          "title": "Aqara H1 with neutral double rocker – Convert to Wireless Switch",
+          "url": "https://www.smart-secure.co.uk/product/aqara-smart-wall-switch-h1-with-neutral-double-rocker/"
+        },
+        {
+          "title": "GONEO ATTO GF19AT bladeless ceiling fan – HomePro",
+          "url": "https://www.homepro.co.th/p/888232100001"
         }
       ]
     }
