@@ -1030,13 +1030,19 @@
       "uncertainty_cm": null,
       "notes": {
         "床型與實際尺寸": "・訂製收納床台 107 × 205，台面 38\n・三折床墊 107 × 190 × 10，坐高約 48",
-        "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位",
-        "設計備註": "・內寬 107；北端 55 段西牆外退 5，寬 112\n・床台全寬，床邊沒有走道，從門洞 80 取物"
+        "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位，也當手機置物檯\n・床尾上方吊櫃 70 × 30 × 40，底 165\n・東牆門北側掛鉤 ×3，門南側鏡子 30 × 45",
+        "電與燈光": "・床頭北牆：S-13 13A 雙孔＋USB-C 離地 60、SW-11 雙鍵離地 78、閱讀壁燈離地 100\n・天花中央薄型 LED 吸頂燈 Ø30，門邊 SW-03 與床頭 SW-11 都能開關\n・壁扇插座 S-14 在南牆離地 245\n・西牆窗電動窗簾 CT-07",
+        "通風與風扇": "・不裝吊扇，用 40 cm 壁扇，掛南牆床尾向床頭吹\n・窗只有西牆一扇 42 寬，對冷氣平台；睡覺時開窗＋壁扇，門下留 1.5 通風縫",
+        "設計備註": "・內寬 107；北端 55 段西牆外退 5，寬 112\n・床台全寬，床邊沒有走道，從門洞 80 取物\n・西牆是上掀蓋翻轉範圍，牆上不裝東西"
       },
       "name": "女傭房",
       "english": "Helper’s room",
       "number": "07",
-      "focus": "收納床台與床底上掀收納"
+      "focus": "收納床台、床頭電源、壁扇與床尾吊櫃",
+      "elevation": "helper-wall",
+      "risks": [
+        "只有西牆一扇 42 寬小窗，開向冷氣平台；外機若正對此窗，熱風與噪音直接進房，外機位置待確認"
+      ]
     },
     {
       "id": "bath1",
@@ -1988,6 +1994,211 @@
         "model": null
       },
       "code": "HLP-01"
+    },
+    {
+      "id": "helper-fan",
+      "room_id": "helper",
+      "label": "Wall fan",
+      "bounds_pt": [
+        441.82,
+        334.71,
+        453.16,
+        341.8
+      ],
+      "plan_horizontal_cm": 40.0,
+      "plan_vertical_cm": 25.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": 45,
+      "status": "design-proposal",
+      "uncertainty_cm": null,
+      "notes": "40 cm remote wall fan (schematic) on the south wall above the bed foot, centre 72 from the west wall at 232 high, blowing north along the bed; socket S-14 beside it at 245.",
+      "physical_drawing_indices": [],
+      "name": "女傭房壁扇",
+      "source_note": "・40 cm 壁扇附遙控，可擺頭，示意\n・掛南牆床尾，中心離西牆 72、離地 232，向床頭吹\n・插座 S-14 在右側，離地 245",
+      "dimensions": {
+        "w": {
+          "cm": 40,
+          "status": "design"
+        },
+        "d": {
+          "cm": 25,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-02",
+      "mount": "wall"
+    },
+    {
+      "id": "helper-wall-cabinet",
+      "room_id": "helper",
+      "label": "Wall cabinet over the bed foot",
+      "bounds_pt": [
+        437.57,
+        333.3,
+        457.32,
+        341.8
+      ],
+      "plan_horizontal_cm": 69.7,
+      "plan_vertical_cm": 30.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": 40,
+      "status": "design-proposal",
+      "uncertainty_cm": null,
+      "notes": "Wall cabinet 70 W x 30 D x 40 H on the south wall, underside 165, against the east wall; 37 left clear on the window side. The foot lid sweep stays below about 138 under it.",
+      "physical_drawing_indices": [],
+      "name": "女傭房床尾吊櫃",
+      "source_note": "・70 × 30 × 40，底 165、頂 205，雙開門，內一層板\n・靠東牆；西側留 37 不擋窗\n・床尾蓋翻轉在此最高約 138，不碰櫃底",
+      "dimensions": {
+        "w": {
+          "cm": 70,
+          "status": "design"
+        },
+        "d": {
+          "cm": 30,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-03",
+      "mount": "wall"
+    },
+    {
+      "id": "helper-mirror",
+      "room_id": "helper",
+      "label": "Mirror",
+      "bounds_pt": [
+        456.47,
+        331.17,
+        457.32,
+        339.67
+      ],
+      "plan_horizontal_cm": 3.0,
+      "plan_vertical_cm": 30.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": 45,
+      "status": "design-proposal",
+      "uncertainty_cm": null,
+      "notes": "Mirror 30 x 45 on the east wall south of the door, bottom at 100.",
+      "physical_drawing_indices": [],
+      "name": "女傭房鏡子",
+      "source_note": "・30 × 45，底 100，東牆門南側\n・坐在床邊轉頭照得到",
+      "dimensions": {
+        "w": {
+          "cm": 3,
+          "status": "design"
+        },
+        "d": {
+          "cm": 30,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-04",
+      "mount": "wall"
+    },
+    {
+      "id": "helper-hooks",
+      "room_id": "helper",
+      "label": "Wall hooks x3",
+      "bounds_pt": [
+        455.9,
+        295.06,
+        457.32,
+        304.13
+      ],
+      "plan_horizontal_cm": 5.0,
+      "plan_vertical_cm": 32.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "design-proposal",
+      "uncertainty_cm": null,
+      "notes": "Three hooks at 160 on the east wall north of the door, reachable from the doorway.",
+      "physical_drawing_indices": [],
+      "name": "女傭房掛鉤 ×3",
+      "source_note": "・3 個掛鉤，離地 160，東牆門北側\n・掛毛巾、包、制服；站在門口就拿得到",
+      "dimensions": {
+        "w": {
+          "cm": 5,
+          "status": "design"
+        },
+        "d": {
+          "cm": 32,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-05",
+      "mount": "wall"
+    },
+    {
+      "id": "helper-reading-lamp",
+      "room_id": "helper",
+      "label": "Reading wall lamp",
+      "bounds_pt": [
+        430.77,
+        283.72,
+        435.87,
+        288.26
+      ],
+      "plan_horizontal_cm": 18.0,
+      "plan_vertical_cm": 16.0,
+      "nominal_width_cm": null,
+      "nominal_depth_cm": null,
+      "height_cm": null,
+      "status": "design-proposal",
+      "uncertainty_cm": null,
+      "notes": "Swing-arm reading lamp (schematic) on the north wall, west side, 100 high; switched from SW-11 at the bedhead.",
+      "physical_drawing_indices": [],
+      "name": "女傭房閱讀壁燈",
+      "source_note": "・可調臂壁燈，裝北牆西側，離地 100，示意\n・照向枕頭與胸前，床頭 SW-11 左鍵開關",
+      "dimensions": {
+        "w": {
+          "cm": 18,
+          "status": "design"
+        },
+        "d": {
+          "cm": 16,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "code": "HLP-06",
+      "mount": "wall"
     },
     {
       "id": "master-wardrobe-left",
@@ -15873,8 +16084,7 @@
       "open_questions": [
         "床墊厚度與型號",
         "西牆窗台高度",
-        "板材與色號",
-        "床頭插座"
+        "板材與色號"
       ],
       "views": [
         {
@@ -16341,6 +16551,1019 @@
       "specFirst": [
         "冰箱 HITACHI R-HW620RS",
         "上櫃 ×2"
+      ]
+    },
+    "helper-wall-set": {
+      "shared": true,
+      "units": {
+        "main": {
+          "w": 205,
+          "d": 107,
+          "h": 38,
+          "board": 1.8,
+          "noCarcass": true,
+          "noBack": true,
+          "bands": [
+            {
+              "kind": "panel",
+              "h": 34.2,
+              "label": "封板"
+            },
+            {
+              "kind": "groove",
+              "h": 2
+            },
+            {
+              "kind": "lid",
+              "h": 1.8
+            }
+          ]
+        },
+        "cab": {
+          "w": 70,
+          "d": 30,
+          "h": 40,
+          "board": 1.8,
+          "bands": [
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "cabinet",
+              "h": 36.4,
+              "label": "吊櫃",
+              "shelves": [
+                17.3
+              ],
+              "items": [
+                {
+                  "name": "收納盒",
+                  "w": 26,
+                  "h": 14,
+                  "box": true
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            }
+          ],
+          "fronts": [
+            {
+              "kind": "door",
+              "from": 0,
+              "to": 40,
+              "count": 2,
+              "handle": false,
+              "label": "雙開門"
+            }
+          ]
+        }
+      },
+      "views": [
+        {
+          "id": "west",
+          "name": "西牆 · 床側",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 205,
+          "font": 7,
+          "units": [
+            {
+              "ref": "main",
+              "x": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 205,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "window",
+              "x": 2.5,
+              "y": 100,
+              "w": 42.4,
+              "h": 110,
+              "label": "窗 42",
+              "sub": "高度待確認"
+            },
+            {
+              "type": "rect",
+              "x": 46,
+              "y": 96,
+              "w": 13,
+              "h": 169,
+              "fill": "#ece8f2",
+              "stroke": "#b5a9c9",
+              "sw": 0.25
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 265,
+              "w": 60,
+              "h": 15,
+              "fill": "#f3f0f8",
+              "stroke": "#6a4f97",
+              "sw": 0.3,
+              "label": "CT-07 窗簾盒",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 165,
+              "w": 30,
+              "h": 40,
+              "fill": "#fbfaf5",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true,
+              "label": "吊櫃",
+              "size": 0.5
+            },
+            {
+              "type": "h-fan",
+              "side": true,
+              "x": 0,
+              "y": 232,
+              "r": 20,
+              "dir": 1,
+              "label": "壁扇",
+              "size": 0.5
+            }
+          ],
+          "extras": [
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 34.2,
+              "w": 190,
+              "h": 2,
+              "fill": "#b9b2a3",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 190,
+              "y": 36.2,
+              "w": 15,
+              "h": 1.8,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "callout",
+              "x": 197.5,
+              "y": 37.5,
+              "lx": 140,
+              "ly": 70,
+              "label": "床頭固定段",
+              "size": 0.6
+            },
+            {
+              "type": "lid",
+              "x": 0.15,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "床尾"
+            },
+            {
+              "type": "lid",
+              "x": 63.48,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "中段"
+            },
+            {
+              "type": "lid",
+              "x": 126.82,
+              "w": 63.03,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "holes": 4,
+              "label": "床頭",
+              "open": false
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 63.33,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "label": "三折床墊 107 × 190 × 10",
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 48,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 126.67,
+              "y": 58,
+              "w": 63.33,
+              "h": 10,
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2,
+              "label": "床墊疊起",
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "when": "open",
+              "x": 4,
+              "y": 3.8,
+              "w": 55,
+              "h": 23,
+              "dashed": true,
+              "label": "登機箱平放"
+            },
+            {
+              "type": "device",
+              "when": "open",
+              "x": 67,
+              "y": 3.8,
+              "w": 56,
+              "h": 28,
+              "dashed": true,
+              "label": "收納箱 ×2"
+            },
+            {
+              "type": "h-light",
+              "x": 87.5,
+              "w": 30,
+              "y": 280,
+              "label": "吸頂燈"
+            },
+            {
+              "type": "h-lamp",
+              "x": 205,
+              "y": 100,
+              "reach": 14,
+              "dir": -1,
+              "glowTo": 48,
+              "label": "閱讀壁燈"
+            }
+          ],
+          "hcuts": [
+            0,
+            63.33,
+            126.67,
+            190,
+            205
+          ],
+          "totalLabel": "205 西牆",
+          "levels": [
+            {
+              "y": 38,
+              "label": "台面"
+            },
+            {
+              "y": 48,
+              "label": "床面"
+            }
+          ]
+        },
+        {
+          "id": "north",
+          "name": "北牆 · 床頭",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 112,
+          "font": 5.4,
+          "units": [],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 112,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 5,
+              "h": 38,
+              "fill": "url(#elev-hatch)",
+              "stroke": "#7f8c84",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 0,
+              "w": 107,
+              "h": 36.2,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 36.2,
+              "w": 107,
+              "h": 1.8,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 38,
+              "w": 107,
+              "h": 10,
+              "label": "床墊",
+              "when": "closed",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 26,
+              "y": 48,
+              "w": 62,
+              "h": 12,
+              "fill": "#f4f5f1",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 3,
+              "label": "枕頭",
+              "size": 0.5,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 38,
+              "w": 107,
+              "h": 10,
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 48,
+              "w": 107,
+              "h": 10,
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 5,
+              "y": 58,
+              "w": 107,
+              "h": 10,
+              "label": "床墊疊起",
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            }
+          ],
+          "extras": [
+            {
+              "type": "h-light",
+              "x": 43.5,
+              "w": 30,
+              "y": 280,
+              "label": "吸頂燈"
+            },
+            {
+              "type": "h-lamp",
+              "x": 20,
+              "y": 100,
+              "reach": 14,
+              "dir": 1,
+              "glowTo": 60,
+              "label": "閱讀壁燈"
+            },
+            {
+              "type": "h-switch",
+              "x": 81,
+              "y": 78,
+              "n": 2,
+              "label": "SW-11"
+            },
+            {
+              "type": "socket",
+              "x": 93.7,
+              "y": 55.7,
+              "w": 14.6,
+              "h": 8.6,
+              "n": 2,
+              "usb": true,
+              "label": "S-13",
+              "size": 0.58
+            },
+            {
+              "type": "note",
+              "x": 58.5,
+              "y": 20,
+              "label": "床頭固定段 15 放手機",
+              "size": 0.6
+            }
+          ],
+          "hcuts": [
+            5,
+            20,
+            81,
+            101,
+            112
+          ],
+          "totalLabel": "107 北牆",
+          "levels": [
+            {
+              "y": 48,
+              "label": "床面"
+            },
+            {
+              "y": 60,
+              "label": "插座"
+            },
+            {
+              "y": 78,
+              "label": "開關"
+            },
+            {
+              "y": 100,
+              "label": "壁燈"
+            }
+          ]
+        },
+        {
+          "id": "south",
+          "name": "南牆 · 床尾",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 107,
+          "font": 5.4,
+          "units": [
+            {
+              "ref": "cab",
+              "x": 0,
+              "y": 165
+            }
+          ],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 107,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 107,
+              "h": 34.2,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 34.2,
+              "w": 107,
+              "h": 2,
+              "fill": "#b9b2a3",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 107,
+              "h": 10,
+              "label": "床墊",
+              "when": "closed",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 107,
+              "h": 30,
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "sw": 0.25,
+              "dashed": true,
+              "label": "床墊疊在床頭段",
+              "size": 0.5,
+              "when": "open"
+            }
+          ],
+          "extras": [
+            {
+              "type": "lid",
+              "section": true,
+              "hx": 107,
+              "dir": -1,
+              "y": 38,
+              "d": 107,
+              "angle": 75,
+              "label": "床尾蓋 75°"
+            },
+            {
+              "type": "h-fan",
+              "x": 35,
+              "y": 232,
+              "r": 20,
+              "label": "壁扇 40"
+            },
+            {
+              "type": "socket",
+              "x": 2.7,
+              "y": 240.7,
+              "w": 8.6,
+              "h": 8.6,
+              "n": 1,
+              "label": "S-14",
+              "size": 0.58
+            },
+            {
+              "type": "note",
+              "x": 104,
+              "y": 150,
+              "label": "右側轉角為西牆窗",
+              "anchor": "end",
+              "size": 0.55
+            }
+          ],
+          "hcuts": [
+            0,
+            70,
+            107
+          ],
+          "totalLabel": "107 南牆",
+          "levels": [
+            {
+              "y": 38,
+              "label": "台面"
+            },
+            {
+              "y": 165,
+              "label": "櫃底"
+            },
+            {
+              "y": 205,
+              "label": "櫃頂"
+            }
+          ]
+        },
+        {
+          "id": "east",
+          "name": "東牆 · 門側",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "width": 205,
+          "font": 7,
+          "units": [],
+          "under": [
+            {
+              "type": "wall",
+              "x": -4,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "wall",
+              "x": 205,
+              "w": 4,
+              "h": 280
+            },
+            {
+              "type": "rect",
+              "x": 80,
+              "y": 0,
+              "w": 80,
+              "h": 210,
+              "fill": "#eef1ea",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 205,
+              "h": 34.2,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 34.2,
+              "w": 205,
+              "h": 2,
+              "fill": "#b9b2a3",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 36.2,
+              "w": 205,
+              "h": 1.8,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 38,
+              "w": 190,
+              "h": 10,
+              "label": "三折床墊",
+              "when": "closed",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 38,
+              "w": 63.33,
+              "h": 10,
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 48,
+              "w": 63.33,
+              "h": 10,
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 15,
+              "y": 58,
+              "w": 63.33,
+              "h": 10,
+              "label": "床墊疊起",
+              "when": "open",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 175,
+              "y": 165,
+              "w": 30,
+              "h": 40,
+              "fill": "#fbfaf5",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true,
+              "label": "吊櫃",
+              "size": 0.5
+            },
+            {
+              "type": "h-fan",
+              "side": true,
+              "x": 205,
+              "y": 232,
+              "r": 20,
+              "dir": -1,
+              "label": "壁扇",
+              "size": 0.5
+            }
+          ],
+          "extras": [
+            {
+              "type": "note",
+              "x": 120,
+              "y": 180,
+              "label": "門洞 80",
+              "size": 0.7
+            },
+            {
+              "type": "h-light",
+              "x": 87.5,
+              "w": 30,
+              "y": 280,
+              "label": "吸頂燈"
+            },
+            {
+              "type": "h-switch",
+              "x": 75,
+              "y": 120,
+              "n": 1,
+              "label": "SW-03"
+            },
+            {
+              "type": "h-hook",
+              "x": 42,
+              "y": 160
+            },
+            {
+              "type": "h-hook",
+              "x": 54,
+              "y": 160,
+              "label": "掛鉤 ×3"
+            },
+            {
+              "type": "h-hook",
+              "x": 66,
+              "y": 160
+            },
+            {
+              "type": "h-mirror",
+              "x": 167.5,
+              "y": 100,
+              "w": 30,
+              "h": 45,
+              "label": "鏡 30 × 45"
+            }
+          ],
+          "hcuts": [
+            0,
+            80,
+            160,
+            205
+          ],
+          "totalLabel": "205 東牆",
+          "levels": [
+            {
+              "y": 38,
+              "label": "台面"
+            },
+            {
+              "y": 120,
+              "label": "開關"
+            },
+            {
+              "y": 160,
+              "label": "掛鉤"
+            }
+          ]
+        }
+      ]
+    },
+    "helper-wall": {
+      "wall": true,
+      "include": "helper-wall-set",
+      "views": [
+        "west",
+        "north",
+        "south",
+        "east"
+      ],
+      "title": "女傭房 · 四面牆",
+      "viewpoint": "西牆從門口看；北牆床頭、南牆床尾、東牆門側都從床上看。",
+      "status": "design-proposal",
+      "ceiling_cm": 280,
+      "ceiling_note": "天花暫以 280 計，待現場確認。",
+      "states": [
+        {
+          "id": "closed",
+          "name": "蓋上"
+        },
+        {
+          "id": "open",
+          "name": "掀開"
+        }
+      ],
+      "risks": [
+        "窗簾下緣要 ≥ 95：床尾蓋掀到 75° 時，離地 95 處板面距西牆約 15，正好是窗簾盒深度",
+        "北牆開槽埋 S-13、SW-11 與壁燈線前，確認牆內與牆後管道間沒有管線"
+      ],
+      "spec": [
+        {
+          "zone": "吸頂燈",
+          "h": "天花",
+          "note": "薄型 LED 吸頂燈 Ø30 示意，房間中央；SW-03、SW-11 都能開關。"
+        },
+        {
+          "zone": "窗簾 CT-07",
+          "h": "天花",
+          "note": "Aqara C100，窗簾盒 60 × 15 沿西牆，馬達在南端牆角；單片往北收。"
+        },
+        {
+          "zone": "壁扇",
+          "h": "212–252",
+          "note": "40 cm 附遙控，南牆床尾中間，向床頭吹；S-14 離地 245。"
+        },
+        {
+          "zone": "床尾吊櫃",
+          "h": "165–205",
+          "note": "70 × 30 × 40，雙開門，內一層板；下緣扣手，不裝把手。"
+        },
+        {
+          "zone": "掛鉤 ×3",
+          "h": "160",
+          "note": "東牆門北側，站在門口就拿得到。"
+        },
+        {
+          "zone": "鏡子",
+          "h": "100–145",
+          "note": "30 × 45，東牆門南側。"
+        },
+        {
+          "zone": "閱讀壁燈",
+          "h": "100",
+          "note": "北牆西側，可調臂，照向枕頭與胸前。"
+        },
+        {
+          "zone": "床頭開關 SW-11",
+          "h": "78",
+          "note": "Aqara H1 雙鍵：左閱讀壁燈、右吸頂燈。"
+        },
+        {
+          "zone": "床頭插座 S-13",
+          "h": "60",
+          "note": "13A 雙孔＋USB-C，北牆東側；手機放床頭固定段充電。"
+        },
+        {
+          "zone": "收納床台",
+          "h": "38",
+          "note": "上掀蓋 ×3，見收納床台立面。"
+        }
+      ],
+      "hardware": [
+        "SW-11 Aqara H1 EU 有零線雙鍵，與全屋同款。",
+        "S-13 選帶 USB-C 的 13A 雙孔面板。",
+        "壁扇與吊櫃鎖進牆體，用膨脹螺絲，不鎖在石膏板上。"
+      ],
+      "rationale": [
+        "不裝吊扇：房寬 107，最小吊扇 76–91 貼牆，站在床上頭頂約 210，舉手會碰到扇葉。",
+        "壁扇在床尾向床頭吹：風沿床長走，擺頭可蓋全床，不近距離對臉吹。",
+        "西牆不裝東西：三片上掀蓋往西牆翻，床尾蓋最高到 141。",
+        "吊櫃底 165：蓋子翻轉在吊櫃下方最高約 138；坐在床尾頭頂約 135。"
+      ],
+      "open_questions": [
+        "窗台高度與窗扇開法",
+        "天花高度與有無假天花",
+        "壁扇型號",
+        "閱讀壁燈型號"
+      ],
+      "sources": []
+    },
+    "helper-fan": {
+      "alias": "helper-wall",
+      "views": [
+        "south",
+        "west",
+        "north",
+        "east"
+      ]
+    },
+    "helper-wall-cabinet": {
+      "alias": "helper-wall",
+      "views": [
+        "south",
+        "west",
+        "north",
+        "east"
+      ]
+    },
+    "helper-mirror": {
+      "alias": "helper-wall",
+      "views": [
+        "east",
+        "west",
+        "north",
+        "south"
+      ]
+    },
+    "helper-hooks": {
+      "alias": "helper-wall",
+      "views": [
+        "east",
+        "west",
+        "north",
+        "south"
+      ]
+    },
+    "helper-reading-lamp": {
+      "alias": "helper-wall",
+      "views": [
+        "north",
+        "west",
+        "south",
+        "east"
       ]
     }
   },
@@ -17226,10 +18449,10 @@
           ],
           [
             "控制",
-            "女傭房燈"
+            "吸頂燈"
           ]
         ],
-        "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
+        "notes": "・離地 120\n・床頭 SW-11 右鍵同控吸頂燈"
       },
       {
         "id": "sw-master",
@@ -17457,6 +18680,93 @@
         "name": "插座 · 小孩房東牆",
         "notes": "・13A 雙孔，離地 30（示意）\n・給 Dyson 風扇清淨機",
         "use": "風扇清淨機"
+      },
+      {
+        "id": "sock-helper-bed",
+        "code": "S-13",
+        "kind": "socket",
+        "x": 454.2,
+        "y": 286.0,
+        "place": "女傭房北牆 · 床頭東側",
+        "mount": 60,
+        "name": "插座 · 女傭房床頭",
+        "notes": "・13A 雙孔＋USB-C，離地 60，比床面高 12\n・手機放床頭固定段充電；小風扇也插這裡\n・在枕頭東側，不在枕頭正後方",
+        "use": "床頭"
+      },
+      {
+        "id": "sock-helper-fan",
+        "code": "S-14",
+        "kind": "socket",
+        "x": 455.43,
+        "y": 339.2,
+        "place": "女傭房南牆 · 壁扇旁",
+        "mount": 245,
+        "name": "插座 · 女傭房壁扇",
+        "notes": "・13A 單孔帶開關，離地 245\n・壁扇線短，不垂過床\n・改裝吊扇或掛扇時沿用",
+        "use": "壁扇"
+      },
+      {
+        "id": "sw-helper-bed",
+        "code": "SW-11",
+        "kind": "switch",
+        "x": 448.6,
+        "y": 286.0,
+        "place": "女傭房北牆 · 床頭",
+        "mount": 78,
+        "name": "開關 · 女傭房床頭",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "specs": [
+          [
+            "鍵數",
+            "雙鍵"
+          ],
+          [
+            "控制",
+            "左：閱讀壁燈；右：吸頂燈"
+          ]
+        ],
+        "notes": "・躺著伸手可及，離地 78\n・右鍵解耦，和門邊 SW-03 同控吸頂燈"
+      },
+      {
+        "id": "ct-helper",
+        "code": "CT-07",
+        "kind": "curtain",
+        "x": 429.3,
+        "y": 339.0,
+        "pocket": [
+          427.08,
+          324.79,
+          431.33,
+          341.8
+        ],
+        "place": "女傭房 · 西牆窗",
+        "mount": "ceiling",
+        "name": "電動窗簾 · 女傭房",
+        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
+        "specs": [
+          [
+            "軌長",
+            "60 cm"
+          ],
+          [
+            "軌道／馬達",
+            "單軌 · 1 顆馬達"
+          ],
+          [
+            "馬達端",
+            "南端 · 牆角"
+          ],
+          [
+            "供電",
+            "窗簾盒內 13A 插座"
+          ],
+          [
+            "窗簾盒淨深",
+            "15 cm"
+          ]
+        ],
+        "notes": "・窗寬 42，單片遮光簾往北收\n・窗簾下緣停在窗台，不垂到床面；要 ≥ 95，床尾蓋掀起才不壓到\n・窗位、窗台高度與窗扇開法待確認\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "use": "窗簾馬達"
       }
     ],
     "runs": [
