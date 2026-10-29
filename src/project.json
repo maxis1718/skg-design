@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R61",
+    "revision": "R62",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4743,6 +4743,10 @@
     {
       "id": "C69",
       "text": "曬衣架改輕薄款 YU HOME SMARTLUX LITE（113 × 40 × 6.6，無風扇無加熱）。"
+    },
+    {
+      "id": "C70",
+      "text": "電視牆加 KEF LS50 Wireless II＋S2 腳架與 KC62；電視櫃維持 210，整組往南移 25（軸線離玻璃 155）。"
     }
   ],
   "measurement_policy": {
@@ -20130,9 +20134,23 @@
       "status": "open"
     },
     {
+      "id": "todo-living-kef",
+      "room": "living",
+      "text": "買 KEF LS50 Wireless II＋S2 落地腳架（Mineral White）",
+      "research": "kef-audio",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-kc62",
+      "room": "living",
+      "text": "買 KEF KC62 重低音（Mineral White）",
+      "research": "kef-audio",
+      "status": "open"
+    },
+    {
       "id": "todo-living-av",
       "room": "living",
-      "text": "決定遊戲機、Soundbar 與喇叭配置",
+      "text": "決定遊戲機",
       "status": "open"
     },
     {
@@ -20651,6 +20669,54 @@
         {
           "title": "GONEO ATTO GF19AT bladeless ceiling fan – HomePro",
           "url": "https://www.homepro.co.th/p/888232100001"
+        }
+      ]
+    },
+    "kef-audio": {
+      "title": "電視牆喇叭與重低音配置",
+      "updated": "2026-10-30",
+      "summary": "選 KEF LS50 Wireless II 上 KEF S2 Floor Stand，放在 210 電視櫃兩端外側，重低音 KEF KC62。電視櫃 210 不縮；電視、櫃、沙發整條中線南移 25（130 → 155），左腳架離窗簾盒與電視櫃各 3.7，沙發南端到過道 65.1；中心距 240、到耳約 200、夾角約 74°。",
+      "body": "## 結論\n- **選：KEF LS50 Wireless II ×2 上 KEF S2 Floor Stand，放在電視櫃兩端外側**（HK 官網 HK$18,380／對＋S2 HK$3,580／對，約 S$3,700；新加坡售價待確認）— 喇叭中心距 240、到坐姿耳朵約 200、夾角約 74°；高音約 81，俯角約 5°。\n- **電視櫃 210 × 45 × 40 不變**：櫃不可比電視 168.5 窄，抽屜、One Connect、插座都不動。\n- **整條中線南移 25（130 → 155）**：櫃北端距玻璃 50；左腳架中心距玻璃 35，底座 22.6 兩側離窗簾盒（20）與電視櫃各 3.7；右腳架中心 275，離櫃南端 3.7。\n- **沙發跟著南移 25**：北端距玻璃 50，南端到過道 65.1（原 90.1）。\n- **腳架正對前方，不內轉**：中線 155 時內轉 5° 淨距只剩 2.4；Uni-Q 偏軸 37° 仍平順，聽感偏暗再調 Treble Trim。\n- **重低音選：KEF KC62**（HK$13,800，約 S$2,330）— 25.6 × 24.8 × 24.6 最小，11 Hz 起，補 LS50 Wireless II 45 Hz 以下；放右腳架南側（距玻璃 295–320.6），貼牆 10。\n- **清淨機南移到 329–366**：原位會撞右腳架；S-07／S-08 跟著移，離牆尾還有 21.8。\n- **不選：電視櫃縮到 150**— 櫃比電視窄，比例不對。\n- **不選：喇叭放電視櫃上**— 高音只有約 56，比耳朵低 44；空心抽屜櫃共振。\n\n## 評判標準\n- **腳架淨距**：底座離窗簾盒與電視櫃各 ≥ 3。\n- **沙發到過道**：≥ 70 最好，不可 < 60。\n- **聆聽三角**：夾角 60–70° 最好；腳架在 210 櫃外，中心距至少約 238，夾角下限約 73°。\n- **對稱**：電視、櫃、沙發同一中線；沙發偏一側會讓左右聲音到耳時間差。\n- **後牆距離**：背距牆 14，KEF Connect 開 Wall Mode。\n- **線材全藏**：每支喇叭直插牆座（KEF 不建議延長座）；連線、HDMI 走暗管。\n\n## 比較\n| 準則 | 中線 150 | 中線 155 | 中線 160 |\n|---|---|---|---|\n| 左腳架淨距（不內轉） | 1.2 | 3.7 | 6.2 |\n| 淨距 ≥ 3.7 可內轉 | 不行 | 0° | 10° |\n| 沙發南端到過道 | 70.1 | 65.1 | 60.1 |\n| 中心距 · 夾角 | 235 · 72° | 240 · 74° | 245 · 75° |\n\n| 重低音 | KC62 | Kube 8 MIE |\n|---|---|---|\n| 寬 × 深 × 高 | 25.6×24.8×24.6 | 29.3×31×29.3 |\n| 低頻 | 11 Hz ±3 dB | 34 Hz −6 dB |\n| 功率 | 1000 W | 300 W |\n| 價格 HK$ | 13,800 | 4,980 |\n\n## 要先做的事\n- 跟 Patrick：電視牆整組南移 25，電視中心距玻璃 155；網路孔 D-01、中抽網路主機跟著移。\n- 跟 Patrick：木作層加 Ø32 暗管，左腳架 ↔ 電視櫃後空腔 ↔ 右腳架，兩端出線口離地 10。\n- 跟 Patrick：插座 S-17（左喇叭，距玻璃 35）、S-18（右主喇叭，275）、S-19（KC62，307.8）各一組 13A 雙孔，離地 30；S-07／S-08 移到清淨機新位置。\n- 主喇叭放右（KEF 預設右聲道）：HDMI eARC 接 The Frame One Connect 的 eARC 埠，電視開 HDMI-CEC；Sub Out 用 RCA 線（約 1 m）接 KC62，不用 KW1。\n- 裝好後在 KEF Connect 開 Wall Mode；KC62 擺位 EQ 設 Wall。\n- 顏色選 Mineral White（喇叭與 KC62），配淡灰壁紙；S2 同色。\n- 在新加坡授權店買：一對 20.1 kg＋KC62 14 kg、易碎，淘寶運費與退換不划算。\n\n## 風險與待確認\n- 新加坡售價待確認，表內以 HK 官網價換算。\n- 沙發南端到過道 65.1，比 70 少 5；要更寬只能讓喇叭貼得更緊或沙發偏離中線。\n- 夾角約 74°，比 60–70° 寬；坐中間最準，兩端偏一側。\n- 左腳架離窗簾盒只有 3.7：窗簾布垂下時可能擦到腳架。",
+      "sources": [
+        {
+          "title": "KEF LS50 Wireless II — specifications (KEF US)",
+          "url": "https://us.kef.com/products/ls50-wireless-2"
+        },
+        {
+          "title": "KEF LS50 Wireless II — KEF Hong Kong (price, 45 Hz–28 kHz)",
+          "url": "https://hk.kef.com/products/ls50-wireless-2"
+        },
+        {
+          "title": "KEF LS50 Wireless II FAQ (primary = right, cable 10 m, no extension strips, eARC)",
+          "url": "https://international.kef.com/pages/ls50-wireless-2-faq"
+        },
+        {
+          "title": "KEF LS50 Wireless II — unbox & set up (3 m inter-speaker cable, 2 m power cords)",
+          "url": "https://soundlab.kef.com/connect/wireless-speakers/ls50-wireless-2/unbox-and-set-up/"
+        },
+        {
+          "title": "KEF S2 Floor Stand (657 mm, 226 × 308 mm)",
+          "url": "https://us.kef.com/products/kef-s2-floor-stand"
+        },
+        {
+          "title": "KEF's Room, Desk and Wall EQ Settings",
+          "url": "https://us.kef.com/blogs/news/kef-s-room-desk-and-wall-eq-settings"
+        },
+        {
+          "title": "KEF KC62 subwoofer — specifications",
+          "url": "https://international.kef.com/products/kc62-subwoofer"
+        },
+        {
+          "title": "KEF KC62 — KEF Hong Kong price",
+          "url": "https://hk.kef.com/products/kc62-open-box"
+        },
+        {
+          "title": "KEF Kube 8 MIE — specifications",
+          "url": "https://eu.kef.com/products/kube8b-subwoofer"
+        },
+        {
+          "title": "KEF Kube 8 MIE — KEF Hong Kong price",
+          "url": "https://hk.kef.com/products/kube-8-mie-open-box"
         }
       ]
     }
