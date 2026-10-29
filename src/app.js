@@ -33,8 +33,6 @@ const SMART='smart',isHome=id=>id==='floor'||id===SMART;
 let smartCat=null,smartHover=null;
 // Power & network layer (⚡): off by default, URL ?power=1 is the only state. powerId = selected point.
 let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=null;
-// Wi-Fi scheme inside the ⚡ layer: a = Deco X50-PoE, b = UniFi U7 Lite (default). URL ?net=a|b. Points with onlyNet / onlyLayout are filtered.
-let netId=(()=>{const v=(new URLSearchParams(location.search).get('net')||'').toLowerCase();return v==='a'||v==='b'?v:null;})();
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
@@ -115,8 +113,7 @@ function buildPlan(){
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',curtain:'電動窗簾',switch:'智能開關',scene:'一鍵全關'};
-const currentNet=()=>netId||project.electrical?.defaultNet||'b';
-const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyNet||p.onlyNet.includes(currentNet()))&&(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
@@ -129,7 +126,6 @@ function powerGlyph(p){
   if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));}
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
-  else if(p.kind==='ap'&&p.shape==='square'){g.append(svgEl('rect',{x:-3.1,y:-3.1,width:6.2,height:6.2,rx:1,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
   else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
   else if(p.kind==='curtain'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.9,fill:V}),svgEl('path',{d:'M-1.2 -1.1v2.2M0 -1.1v2.2M1.2 -1.1v2.2',stroke:'#fff','stroke-width':.45}),svgEl('circle',{cx:2.4,cy:-2.4,r:1.05,fill:O,stroke:'#fff','stroke-width':.3}));}
@@ -165,18 +161,7 @@ function renderPowerLayer(){
   $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
   const lg=$('#power-legend');lg.hidden=!powerOn();
   lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
-  renderNetVersion();renderSmartRecord();
-}
-function renderNetVersion(){
-  const grp=$('#net-version-group'),seg=$('#net-version'),nets=project.electrical?.nets||[];if(!grp||!seg)return;
-  grp.hidden=!showPower||!nets.length;seg.setAttribute('aria-label',t('切換網路方案'));
-  seg.innerHTML=nets.map(n=>`<button type="button" class="tool ${n.id===currentNet()?'active':''}" data-net-version="${esc(n.id)}" aria-pressed="${n.id===currentNet()}" title="${esc(n.note||'')}">${esc(shortV(n.name))}</button>`).join('');
-  $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
-}
-function chooseNet(id){
-  if(id===currentNet()||!(project.electrical?.nets||[]).some(n=>n.id===id))return;netId=id;
-  const u=new URL(location.href);u.searchParams.set('net',id);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
-  if(powerId&&!powerPoint(powerId))powerId=null;buildPower();renderInspector();
+  $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
 // 電與智能家居 record: shown under the plan on the whole-home view while ⚡ is on. `auto` sections are tables built from the visible points.
 const specOf=(p,k)=>(p.specs||[]).find(s=>s[0]===k)?.[1]??'';
@@ -414,12 +399,11 @@ $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog
 window.addEventListener('scroll',hideTip,{passive:true});$('#plan-stage').addEventListener('pointerleave',hideTip);
 $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[data-kitchen-version]');if(b)chooseKitchenVersion(b.dataset.kitchenVersion);});
 $('#layout-version').addEventListener('click',e=>{const b=e.target.closest('[data-layout-version]');if(b)chooseLayout(b.dataset.layoutVersion);});
-$('#net-version').addEventListener('click',e=>{const b=e.target.closest('[data-net-version]');if(b)chooseNet(b.dataset.netVersion);});
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
 $('#master-version').addEventListener('click',e=>{const b=e.target.closest('[data-master-version]');if(b)chooseMasterVersion(b.dataset.masterVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#smart-block,#brief-list,#smart-record,#net-version,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
+const DYNAMIC='#smart-block,#brief-list,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -488,5 +472,5 @@ buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)||(hash===SMART&&project.smart)?hash:'floor');
 {const rid=new URLSearchParams(location.search).get('research');if(rid)openResearch(rid);}
 // Expose a read-only snapshot for focused QA and efficient future updates.
-window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,net:currentNet(),selectedVersions:{...selectedVersions},project:structuredClone(project)})};
+window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
 })();

@@ -84,7 +84,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | LBL-03 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
 | LBL-01 | `swing-hooks` | 鞦韆 · 天花吊點 ×2 | 50 × 40 |
 | LIV-08 | `air-purifier` | 空氣清淨機 Electrolux Pure A9 | 37 × 37 |
-| LBL-02 | `robot-vacuum` | 掃拖機器人 Dreame H14 Ultra（含底座） | 35 × 35 |
+| LBL-02 | `robot-vacuum` | 拖地機 Dreame H14 Ultra（含底座） | 35 × 35 |
 | KID-02 | `kid-fan` | 風扇清淨機 Dyson TP09 | 22 × 22 |
 | GST-21 | `guest-purifier` | 清淨機 Electrolux UltimateHome 300 | 23.4 × 23.4 |
 

@@ -1033,7 +1033,7 @@
       "notes": {
         "床型與實際尺寸": "・訂製收納床台 107 × 205，台面 38\n・三折床墊 107 × 190 × 10，坐高約 48",
         "收納設計": "・整個床底分 3 格，各配一片上掀蓋 63.3 × 107\n・蓋子鉸鏈在西牆側，從門側掀起；封板頂留手扣槽，無把手\n・床頭固定段 15，補平西牆退 5 的凹位，也當手機置物檯\n・床尾上方吊櫃 55 × 30 × 40，底 165\n・東牆門北側掛鉤 ×3，門南側鏡子 30 × 45",
-        "電與燈光": "・床頭北牆：S-13 13A 雙孔＋USB-C 離地 60、SW-11 雙鍵離地 78、閱讀壁燈離地 100\n・天花中央 IKEA BARLAST 25 cm 2700K 吸頂燈，Ø25 × 6.7；站在床上頭頂離燈約 20\n・門邊 SW-03 與床頭 SW-11 右鍵都能開關吸頂燈\n・壁扇插座 S-14 在南牆吊櫃上方，離地 220\n・西牆窗電動窗簾 CT-07",
+        "電與燈光": "・床頭北牆：S-13 13A 雙孔＋USB-C 離地 60、SW-11 雙鍵離地 78、閱讀壁燈離地 100\n・天花中央 IKEA BARLAST 25 cm 2700K 吸頂燈，Ø25 × 6.7；站在床上頭頂離燈約 20\n・門邊 SW-03 與床頭 SW-11 右鍵都能開關吸頂燈\n・壁扇插座 S-14 在南牆吊櫃上方，離地 220\n・西窗用窗框內捲簾，不做窗簾盒，不擋上掀蓋",
         "通風與風扇": "・天花 240，站在床上頭頂約 213；吸頂風扇燈扇葉底約 218 會打到頭手 → 改用 14 吋 DC 壁扇\n・壁扇掛南牆床尾西側，離地 180–233，固定朝床中段往下斜吹，不擺頭；風沿床長吹向床頭\n・窗只有西牆一扇 42 寬，對冷氣平台；睡覺時開窗＋壁扇，門下留 1.5 通風縫",
         "設計備註": "・內寬 107；北端 55 段西牆外退 5，寬 112\n・床台全寬，床邊沒有走道，從門洞 80 取物\n・西牆是上掀蓋翻轉範圍，牆上不裝東西"
       },
@@ -3901,7 +3901,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "105 W x 65 D x 104.5 H cabinet moved from the master balcony to the living-balcony NW corner: long side 105 against the west wall x428.4 (N-S, outer edge y120.64 to just north of the Dreame dock y150.44), 65 deep, front facing east.",
-      "source_note": "・105 × 65 × 104.5，長邊 105 貼西牆，門朝東\n・北端貼陽台外緣，南端接掃拖機器人底座\n・西牆淨長約 105，與櫃寬相同，待現場確認"
+      "source_note": "・105 × 65 × 104.5，長邊 105 貼西牆，門朝東\n・北端貼陽台外緣，南端接拖地機 H14 Ultra 底座\n・西牆淨長約 105，與櫃寬相同，待現場確認"
     },
     {
       "id": "swing-hooks",
@@ -3973,7 +3973,7 @@
       "id": "robot-vacuum",
       "code": "LBL-02",
       "room_id": "living-balcony",
-      "name": "掃拖機器人 Dreame H14 Ultra（含底座）",
+      "name": "拖地機 Dreame H14 Ultra（含底座）",
       "bounds_pt": [
         428.4,
         150.44,
@@ -16868,28 +16868,6 @@
             },
             {
               "type": "rect",
-              "x": 46,
-              "y": 96,
-              "w": 13,
-              "h": 129,
-              "fill": "#ece8f2",
-              "stroke": "#b5a9c9",
-              "sw": 0.25
-            },
-            {
-              "type": "rect",
-              "x": 0,
-              "y": 225,
-              "w": 60,
-              "h": 15,
-              "fill": "#f3f0f8",
-              "stroke": "#6a4f97",
-              "sw": 0.3,
-              "label": "CT-07 窗簾盒",
-              "size": 0.5
-            },
-            {
-              "type": "rect",
               "x": 0,
               "y": 165,
               "w": 30,
@@ -17660,7 +17638,6 @@
         }
       ],
       "risks": [
-        "窗簾下緣要 ≥ 95：床尾蓋掀到 75° 時，離地 95 處板面距西牆約 15，正好是窗簾盒深度",
         "北牆開槽埋 S-13、SW-11 與壁燈線前，確認牆內與牆後管道間沒有管線"
       ],
       "spec": [
@@ -17668,11 +17645,6 @@
           "zone": "吸頂燈",
           "h": "天花",
           "note": "IKEA BARLAST LED ceiling/wall lamp 25 cm，2700K、910 lm、Ø25 × 6.7，房間中央；站在床上頭頂離燈約 20。SW-03、SW-11 右鍵都能開關。"
-        },
-        {
-          "zone": "窗簾 CT-07",
-          "h": "天花",
-          "note": "Aqara C100，窗簾盒 60 × 15 沿西牆，馬達在南端牆角；單片往北收。"
         },
         {
           "zone": "壁扇",
@@ -17906,7 +17878,7 @@
             172
           ],
           "notes": {
-            "書桌": "70 × 40",
+            "書桌": "70 × 40；桌下網路孔 D-02 離地 30，桌上插座 S-11 離地 85",
             "衣櫃": "訂製到頂 70 × 60，雙門朝北",
             "動線": "・桌到床 79；坐著時椅背到床約 29，可直接後推起身\n・衣櫃到床 59：抽屜拉出剩約 14（NL 450）\n・書桌離門扇 7",
             "取捨": "・優：書桌 70，坐得寬鬆\n・缺：衣櫃 70；椅子背後就是床"
@@ -17962,7 +17934,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：方案 A Deco X50-PoE／方案 B UniFi U7 Lite，天花 AP 位置相同；建議 B\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：全屋各房，客廳、主臥、小孩房、書房、客房、女傭房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：全屋各房，客廳、主臥、小孩房、書房、客房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -17981,28 +17953,12 @@
         "url": "https://techspecs.ui.com/unifi/wifi/u6-plus"
       },
       {
-        "label": "TP-Link Deco X50-PoE",
-        "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50-poe/"
-      },
-      {
         "label": "UniFi Cloud Gateway Ultra",
         "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
       },
       {
         "label": "UniFi USW Lite 8 PoE",
         "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
-      },
-      {
-        "label": "Deco X50-PoE PoE FAQ",
-        "url": "https://www.tp-link.com/support/faq/3484/"
-      },
-      {
-        "label": "TP-Link Deco X50",
-        "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50/"
-      },
-      {
-        "label": "TP-Link TL-SG108PE",
-        "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
       },
       {
         "label": "UniFi Cloud Gateway Max",
@@ -18198,10 +18154,7 @@
         "mount": 30,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與窗簾馬達，USB-C 供電\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡",
-        "onlyNet": [
-          "b"
-        ]
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：主路由，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與窗簾馬達\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
@@ -18218,12 +18171,12 @@
         "id": "data-ne",
         "code": "D-02",
         "kind": "data",
-        "x": 418.2,
-        "y": 202,
-        "place": "東北房東牆",
+        "x": 392.5,
+        "y": 229.5,
+        "place": "客房南牆 · 書桌下（方案 A）",
         "mount": 30,
-        "name": "網路孔 · 東北房",
-        "notes": "・客房電視有線上網\n・離地 30（示意）"
+        "name": "網路孔 · 客房書桌",
+        "notes": "・方案 A 書桌下，離地 30，旁邊 S-11 插座在桌上 85\n・筆電或桌機有線上網"
       },
       {
         "id": "data-s",
@@ -18240,27 +18193,24 @@
         "id": "data-master",
         "code": "D-04",
         "kind": "data",
-        "x": 245,
-        "y": 246,
-        "place": "主臥天花",
+        "x": 257.8,
+        "y": 226,
+        "place": "主臥天花 · 床尾走道上方",
         "mount": "ceiling",
         "name": "預留網路線 · 主臥天花",
-        "notes": "・預留一條 Cat6，先不裝 AP\n・實測主臥訊號不足再加一顆同款 AP"
+        "notes": "・預留一條 Cat6 收在天花內，先不裝 AP\n・兩顆 AP 已夠：主臥床頭預估 −48 dBm，最差的主臥陽台 −71 dBm\n・現在拉約 S$100–120；完工後再拉要開天花補漆，約 S$300 起（示意）\n・日後要加 AP：接上同款 U7 Lite 即可，PoE 預算夠"
       },
       {
-        "id": "ap-kitchen",
+        "id": "ap-living",
         "code": "AP-01",
         "kind": "ap",
-        "x": 536,
-        "y": 313,
-        "place": "廚房假天花 · 走道中間",
+        "x": 522.4,
+        "y": 272.4,
+        "place": "客廳假天花 · 鋼琴上方",
         "mount": "ceiling",
-        "name": "Wi-Fi AP · 廚房",
+        "name": "Wi-Fi AP · 客廳鋼琴上方",
         "product": "UniFi U7 Lite",
-        "notes": "・Ø171.5 × 33 mm 白色圓盤，貼在白色假天花上像一盞薄吸頂燈\n・PoE 供電，最大 13 W，接交換器 PoE+ 埠\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩",
-        "onlyNet": [
-          "b"
-        ]
+        "notes": "・Ø171.5 × 33 mm 白色圓盤，吸頂；PoE 供電，最大 13 W\n・客廳、餐桌、電視無牆阻隔，約 3–3.6 m，預估 −35 dBm\n・廚房隔一道約 8 cm 輕隔間，爐具、水槽約 3–3.6 m，預估 −39 dBm\n・女傭房床約 3.6 m、大門約 4.9 m，各隔兩道牆，預估 −56／−54 dBm\n・直立鋼琴不掀頂蓋，AP 在正上方不影響使用"
       },
       {
         "id": "ap-corridor",
@@ -18272,57 +18222,7 @@
         "mount": "ceiling",
         "name": "Wi-Fi AP · 走廊",
         "product": "UniFi U7 Lite",
-        "notes": "・在東北房門外，北側兩間房門之間\n・離主臥床約 4.8 m、東北房與南側房約 3–4 m、小孩房約 2.5 m\n・按摩椅與客房追劇都在這顆範圍內",
-        "onlyNet": [
-          "b"
-        ]
-      },
-      {
-        "id": "hub-a",
-        "code": "NET-00",
-        "kind": "hub",
-        "x": 575.2,
-        "y": 214,
-        "place": "電視櫃中間抽屜",
-        "mount": 30,
-        "name": "網路主機 · 電視櫃",
-        "product": "Deco X50-PoE 主路由 + TP-Link TL-SG108PE + Aqara Hub M3",
-        "onlyNet": [
-          "a"
-        ],
-        "notes": "・第 3 顆 Deco X50-PoE 當主路由，用隨附 12 V DC 變壓器供電\n・Deco 只有 2 個網口：1G 接光纖終端，2.5G 接交換器\n・TL-SG108PE 158 × 101 × 25 mm：8 埠，4 埠 PoE 802.3af/at，共 64 W，無風扇\n・PoE 負載：Deco X50-PoE 2 × 14.4 W = 28.8 W，剩 35.2 W\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，USB-C 供電\n・抽屜面板不可用金屬，否則擋主路由的 Wi-Fi"
-      },
-      {
-        "code": "AP-01",
-        "kind": "ap",
-        "x": 536,
-        "y": 313,
-        "place": "廚房假天花 · 走道中間",
-        "mount": "ceiling",
-        "name": "Wi-Fi AP · 廚房",
-        "id": "ap-kitchen-a",
-        "product": "TP-Link Deco X50-PoE",
-        "onlyNet": [
-          "a"
-        ],
-        "notes": "・154 × 154 × 68.6 mm 白色方盒，吸頂，比 U7 Lite 厚一倍\n・只吃 802.3at／bt PoE，不支援 802.3af；EU 版最大 14.4 W\n・有線回程；也可改用隨附 12 V DC 變壓器供電\n・離沙發約 3.9 m、餐桌約 4.5 m、女傭房床約 3 m，各隔一道牆\n・避開爐具上方排煙罩",
-        "shape": "square"
-      },
-      {
-        "code": "AP-02",
-        "kind": "ap",
-        "x": 347,
-        "y": 248,
-        "place": "走廊假天花 · 北側兩房門之間",
-        "mount": "ceiling",
-        "name": "Wi-Fi AP · 走廊",
-        "id": "ap-corridor-a",
-        "product": "TP-Link Deco X50-PoE",
-        "onlyNet": [
-          "a"
-        ],
-        "notes": "・154 × 154 × 68.6 mm 白色方盒，吸頂，比 U7 Lite 厚一倍\n・只吃 802.3at／bt PoE，不支援 802.3af；EU 版最大 14.4 W\n・有線回程；也可改用隨附 12 V DC 變壓器供電\n・按摩椅與客房追劇都在這顆範圍內",
-        "shape": "square"
+        "notes": "・在客房門外，北側兩房門之間\n・主臥床頭約 5.8 m 隔一道牆，預估 −48 dBm；主臥西北角 −64、主浴 −59\n・小孩房、客房、書房、客衛約 2.5–3.7 m 各隔一道牆，預估 −40 至 −45 dBm\n・按摩椅與客房追劇都在這顆範圍內"
       },
       {
         "id": "ct-living",
@@ -18868,9 +18768,9 @@
         "y": 155.4,
         "place": "客廳陽台 · 西牆（底座後）",
         "mount": 15,
-        "name": "插座 · 掃拖機器人",
+        "name": "插座 · 拖地機 H14 Ultra",
         "notes": "・13A，離地 15（低位，藏在底座後）\n・陽台用防水面板（IP66）",
-        "use": "掃拖機器人"
+        "use": "拖地機 H14 Ultra"
       },
       {
         "id": "ceil-rack",
@@ -18968,47 +18868,6 @@
         "notes": "・躺著伸手可及，離地 78\n・左鍵直接接閱讀壁燈\n・右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈"
       },
       {
-        "id": "ct-helper",
-        "code": "CT-07",
-        "kind": "curtain",
-        "x": 429.3,
-        "y": 339.0,
-        "pocket": [
-          427.08,
-          324.79,
-          431.33,
-          341.8
-        ],
-        "place": "女傭房 · 西牆窗",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 女傭房",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "60 cm"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "南端 · 牆角"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ],
-        "notes": "・窗寬 42，單片遮光簾往北收\n・窗簾下緣停在窗台，不垂到床面；要 ≥ 95，床尾蓋掀起才不壓到\n・窗位、窗台高度與窗扇開法待確認\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達"
-      },
-      {
         "id": "sock-bath2-dryer",
         "code": "S-16",
         "kind": "socket",
@@ -19024,7 +18883,7 @@
     ],
     "runs": [
       {
-        "to": "ap-kitchen",
+        "to": "ap-living",
         "path": [
           [
             575.2,
@@ -19036,23 +18895,11 @@
           ],
           [
             580,
-            262
+            272.4
           ],
           [
-            568,
-            276
-          ],
-          [
-            568,
-            324
-          ],
-          [
-            548,
-            324
-          ],
-          [
-            536,
-            313
+            522.4,
+            272.4
           ]
         ]
       },
@@ -19077,16 +18924,12 @@
         "to": "data-ne",
         "path": [
           [
-            423,
+            392.5,
             255
           ],
           [
-            423,
-            202
-          ],
-          [
-            418.2,
-            202
+            392.5,
+            229.5
           ]
         ]
       },
@@ -19119,12 +18962,12 @@
             255
           ],
           [
-            245,
+            257.8,
             255
           ],
           [
-            245,
-            246
+            257.8,
+            226
           ]
         ]
       },
@@ -19146,109 +18989,49 @@
         ]
       }
     ],
-    "nets": [
-      {
-        "id": "a",
-        "name": "方案 A · Deco",
-        "note": "TP-Link Deco X50-PoE ×3＋TL-SG108PE"
-      },
-      {
-        "id": "b",
-        "name": "方案 B · UniFi",
-        "note": "UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE"
-      }
-    ],
-    "defaultNet": "b",
     "record": {
       "title": "電與智能家居",
-      "asof": "規格與價格查詢日期 2026-10-26；價格含 GST，約數",
+      "asof": "規格與價格查詢日期 2026-10-29；價格含 GST，約數",
       "sections": [
         {
           "id": "net",
-          "title": "網路方案 A／B",
+          "title": "網路 · UniFi",
           "table": {
             "head": [
-              "",
-              "方案 A · Deco X50-PoE",
-              "方案 B · UniFi U7 Lite"
+              "項目",
+              "型號 · 位置",
+              "約價"
             ],
             "rows": [
               [
-                "天花 AP",
-                "Deco X50-PoE ×2 · 廚房、走廊",
-                "U7 Lite ×2 · 廚房、走廊"
+                "Wi-Fi AP ×2",
+                "U7 Lite · 客廳鋼琴上方、走廊天花",
+                "S$164 ×2"
               ],
               [
                 "主路由",
-                "第 3 顆 Deco X50-PoE，電視櫃，12 V DC",
-                "Cloud Gateway Ultra，電視櫃"
+                "Cloud Gateway Ultra · 電視櫃中抽",
+                "S$219"
               ],
               [
                 "PoE 交換器",
-                "TL-SG108PE · 8 埠，4 埠 PoE，64 W",
-                "USW Lite 8 PoE · 8 埠，4 埠 PoE+，52 W"
+                "USW Lite 8 PoE · 電視櫃中抽",
+                "S$186"
               ],
               [
-                "AP 供電",
-                "只吃 802.3at／bt，不支援 802.3af；最大 14.4 W",
-                "PoE，最大 13 W"
+                "網路線",
+                "Cat6 ×6：AP ×2、電視、客房書桌、書房、主臥預留；另光纖盒到電視櫃 1 條",
+                "約 S$100–120／點"
               ],
               [
-                "天花外形",
-                "154 × 154 × 68.6 mm 方盒",
-                "Ø171.5 × 33 mm 圓盤"
-              ],
-              [
-                "Wi-Fi",
-                "Wi-Fi 6 · 5 GHz 2402 + 2.4 GHz 574 Mbps",
-                "Wi-Fi 7 · 5 GHz 4.3 Gbps + 2.4 GHz 688 Mbps"
-              ],
-              [
-                "網口",
-                "每顆 2.5G ×1 + 1G ×1",
-                "2.5G ×1"
-              ],
-              [
-                "有線回程",
-                "支援",
-                "支援"
-              ],
-              [
-                "管理",
-                "Deco App，需 TP-Link 帳號",
-                "UniFi Network，跑在 Cloud Gateway 本機"
-              ],
-              [
-                "約價",
-                "3 顆裝 S$417；交換器待查",
-                "S$164 ×2 + S$219 + S$186 ≈ S$733"
-              ],
-              [
-                "優點",
-                "便宜、App 簡單",
-                "薄一半、Wi-Fi 7、本機管理"
-              ],
-              [
-                "缺點",
-                "天花上較厚；每顆只有 2 個網口",
-                "貴約 S$300；設定項目多"
+                "設備合計",
+                "",
+                "S$733"
               ]
             ]
           },
-          "text": "・建議方案 B：天花上最顯眼的是 AP，U7 Lite 厚 33 mm，Deco 68.6 mm\n・兩案 AP 位置、網路線、PoE 交換器位置完全相同，水電可先照圖施工，晚點再決定\n・兩顆天花 AP 夠用：U7 Lite 每顆標示 115 m²；主臥預留 Cat6，不足再加第 3 顆\n・不選一般 Deco X50：桌上型 110 × 110 × 114 mm，沒有 PoE，天花要多一個插座且無吸頂件",
+          "text": "・選 UniFi：U7 Lite 吸頂只有 33 mm 厚、Wi-Fi 7、PoE 一條線供電，UniFi Network 跑在本機\n・U7 Lite 只有 2.4／5 GHz，沒有 6 GHz；手機與電視用 5 GHz 已夠\n・兩顆 AP 同一組 SSID，5 GHz 用不重疊頻道；2.4 GHz 保留給 Camera E1\n・不選 Deco X50-PoE：便宜約 S$300，但 68.6 mm 厚方盒、Wi-Fi 6、每顆只有 2 個網口",
           "sources": [
-            {
-              "label": "TP-Link Deco X50-PoE",
-              "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50-poe/"
-            },
-            {
-              "label": "Deco X50-PoE PoE FAQ",
-              "url": "https://www.tp-link.com/support/faq/3484/"
-            },
-            {
-              "label": "TP-Link Deco X50",
-              "url": "https://www.tp-link.com/sg/home-networking/deco/deco-x50/"
-            },
             {
               "label": "UniFi U7 Lite",
               "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
@@ -19262,14 +19045,6 @@
               "url": "https://techspecs.ui.com/unifi/switching/usw-lite-8-poe"
             },
             {
-              "label": "TP-Link TL-SG108PE",
-              "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
-            },
-            {
-              "label": "SourceIT SG · Deco X50-PoE 3-pack",
-              "url": "https://sourceit.com.sg/products/tp-link-deco-x50-poe-ax3000-whole-home-mesh-wi-fi-6-system-with-poe-3-pack"
-            },
-            {
               "label": "UI Store SG · U7 Lite",
               "url": "https://sg.store.ui.com/sg/en/products/u7-lite"
             },
@@ -19280,6 +19055,105 @@
             {
               "label": "UI Store SG · USW Lite 8 PoE",
               "url": "https://sg.store.ui.com/sg/en/products/usw-lite-8-poe"
+            },
+            {
+              "label": "UI Store SG · U7 Pro",
+              "url": "https://sg.store.ui.com/sg/en/products/u7-pro"
+            },
+            {
+              "label": "MoneySmart · 新加坡電工價格",
+              "url": "https://blog.moneysmart.sg/budgeting/electrician-singapore-electrical-services"
+            }
+          ]
+        },
+        {
+          "id": "coverage",
+          "title": "Wi-Fi 覆蓋估算 · 5 GHz",
+          "table": {
+            "head": [
+              "位置",
+              "AP · 距離",
+              "牆",
+              "預估"
+            ],
+            "rows": [
+              [
+                "客廳沙發、餐桌、電視",
+                "AP-01 · 2.9–3.6 m",
+                "0",
+                "−34 至 −35 dBm"
+              ],
+              [
+                "廚房爐具、水槽",
+                "AP-01 · 3.1–3.6 m",
+                "1 · 輕隔間 8",
+                "−38／−39 dBm"
+              ],
+              [
+                "女傭房床",
+                "AP-01 · 3.6 m",
+                "2",
+                "−56 dBm"
+              ],
+              [
+                "大門玄關",
+                "AP-01 · 4.9 m",
+                "2",
+                "−54 dBm"
+              ],
+              [
+                "客廳陽台",
+                "AP-01 · 5.1 m",
+                "1 · 玻璃門",
+                "−42 dBm"
+              ],
+              [
+                "小孩房、客房、書房",
+                "AP-02 · 2.5–3.7 m",
+                "1 · 牆 10",
+                "−40 至 −44 dBm"
+              ],
+              [
+                "客衛",
+                "AP-02 · 2.8 m",
+                "1",
+                "−45 dBm"
+              ],
+              [
+                "主臥床頭",
+                "AP-02 · 5.8 m",
+                "1 · 牆 10",
+                "−48 dBm"
+              ],
+              [
+                "主臥西北角",
+                "AP-02 · 6.3 m",
+                "2",
+                "−64 dBm"
+              ],
+              [
+                "主浴",
+                "AP-02 · 5.5 m",
+                "2",
+                "−59 dBm"
+              ],
+              [
+                "主臥陽台",
+                "AP-02 · 5.6 m",
+                "3",
+                "−71 dBm"
+              ]
+            ]
+          },
+          "text": "・全屋 5 GHz 都在 −71 dBm 以上；室內 ≥ −67 可順跑視訊，主臥陽台只是邊緣\n・主臥：預留 Cat6，不裝第 3 顆 AP。床頭 −48 dBm 已足夠；現在拉線約 S$100–120，完工後再拉約 S$300 起\n・若主臥與走廊之間是 20 cm RC 牆，床頭約 −52 dBm，結論不變\n・AP-01 從廚房移到鋼琴上方：客廳、陽台更強，廚房 −32 → −38、女傭房 −44 → −56 dBm，都在可用範圍\n・估算：U7 Lite 5 GHz 24 dBm＋5 dBi，自由空間衰減，AP 天花對手機高差 1.8 m，再扣 6 dB 手機天線與遮擋\n・每道牆：≤ 8 cm 輕隔間 4 dB、10 cm 磚或預鑄 8 dB、≥ 15 cm 視為 RC 12 dB；牆厚由平面量得，材質待確認\n・6 GHz：U7 Lite 不支援；若換 U7 Pro（S$329），主臥床頭約 −57 dBm\n・官方標示每顆 115 m²，兩顆 230 m²；全屋室內約 98 m²",
+          "sources": [
+            {
+              "label": "UniFi U7 Lite",
+              "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+            },
+            {
+              "label": "UI Store SG · U7 Pro",
+              "url": "https://sg.store.ui.com/sg/en/products/u7-pro"
             }
           ]
         },
@@ -19289,50 +19163,36 @@
           "table": {
             "head": [
               "",
-              "方案 A · TL-SG108PE",
-              "方案 B · USW Lite 8 PoE"
+              "USW Lite 8 PoE"
             ],
             "rows": [
               [
                 "PoE 預算",
-                "64 W",
                 "52 W"
               ],
               [
                 "AP 負載",
-                "2 × 14.4 = 28.8 W",
                 "2 × 13 = 26 W"
               ],
               [
                 "餘量",
-                "35.2 W",
                 "26 W"
               ],
               [
                 "主臥加第 3 顆 AP",
-                "43.2 W，夠",
                 "39 W，夠"
               ],
               [
                 "埠數",
-                "上聯、AP ×2、網路孔 ×4、Hub M3 = 8／8",
-                "上聯、AP ×2、網路孔 ×3 = 6／8；電視與 Hub M3 接 UCG"
+                "上聯、AP ×2、網路孔 ×3（客房、書房、主臥預留）= 6／8；電視與 Hub M3 接 Cloud Gateway"
               ]
             ]
           },
-          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・方案 A 埠數用滿；要再接設備需加小交換器\n・光纖終端、主路由、交換器建議同接一台小型 UPS（待確認）",
+          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・光纖終端、主路由、交換器建議同接一台小型 UPS（待確認）",
           "sources": [
-            {
-              "label": "Deco X50-PoE PoE FAQ",
-              "url": "https://www.tp-link.com/support/faq/3484/"
-            },
             {
               "label": "UniFi U7 Lite",
               "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
-            },
-            {
-              "label": "TP-Link TL-SG108PE",
-              "url": "https://www.tp-link.com/sg/business-networking/easy-smart-switch/tl-sg108pe/"
             },
             {
               "label": "UniFi USW Lite 8 PoE",
@@ -19382,7 +19242,7 @@
               [
                 "錄影與隱私",
                 "microSD ≤ 512 GB；HomeKit Secure Video",
-                "要 UniFi Protect：UCG Ultra 不支援，需改 UCG Max S$483＋SSD；方案 A 無錄影主機"
+                "要 UniFi Protect：UCG Ultra 不支援，需改 UCG Max S$483＋SSD"
               ],
               [
                 "生態",
@@ -19497,7 +19357,7 @@
         {
           "id": "todo",
           "title": "待確認",
-          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10，窗簾盒 15：椅子往內移 ≥ 5\n・C100 新加坡價格與貨期\n・TL-SG108PE 新加坡售價"
+          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10，窗簾盒 15：椅子往內移 ≥ 5\n・C100 新加坡價格與貨期\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP（示意）"
         }
       ]
     }
@@ -19511,8 +19371,7 @@
         "id": "hub",
         "name": "中樞",
         "kinds": [
-          "hub",
-          "data"
+          "hub"
         ],
         "pick": "已有的 HomePod mini 當家居中樞（S$0）＋Aqara Hub M3 當 Zigbee 骨幹；The Frame 的 Apple TV App 不能當中樞",
         "options": [
@@ -19545,6 +19404,37 @@
             "verdict": "no",
             "summary": "iPad 不能當新架構的家居中樞；M2 沒有 Thread 與 Matter 控制器",
             "details": "- iPad 在 Apple Home 新架構下已不支援當中樞（待確認最新 iOS）\n- M2 較舊，沒有 PoE、沒有 Thread"
+          }
+        ]
+      },
+      {
+        "id": "network",
+        "name": "網路",
+        "kinds": [
+          "ap",
+          "data",
+          "hub",
+          "run"
+        ],
+        "pick": "UniFi：U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE 放電視櫃中抽，全部 Cat6 有線回程；主臥只預留 Cat6",
+        "options": [
+          {
+            "name": "UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE",
+            "verdict": "pick",
+            "summary": "設備約 S$733；吸頂 33 mm 薄、Wi-Fi 7、一條 Cat6 供電加回程；全屋 5 GHz 預估 ≥ −71 dBm",
+            "details": "- AP-01 客廳鋼琴上方：客廳、餐桌、電視 −35 dBm，廚房 −39，女傭房床 −56，大門 −54\n- AP-02 走廊：小孩房、客房、書房 −40 至 −44 dBm，主臥床頭 −48，主浴 −59\n- 主路由 Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE（S$186，4 埠 PoE+，52 W）放電視櫃中抽\n- Cat6：AP ×2、電視、客房書桌、書房、主臥天花預留，另光纖盒到電視櫃 1 條\n- 主臥不裝第 3 顆 AP：床頭已 −48 dBm；預留 Cat6 現在約 S$100–120，完工後再拉約 S$300 起\n- 兩顆同一組 SSID；2.4 GHz 保留給 Camera E1，HomePod mini、攝影機同一網段\n- 估算假設與每道牆衰減見電與智能家居的覆蓋估算"
+          },
+          {
+            "name": "UniFi U7 Pro",
+            "verdict": "alt",
+            "summary": "S$329／顆，多 6 GHz；要 6 GHz 時才換，PoE+ 21 W，兩顆 42 W 仍在 52 W 內",
+            "details": "- 6 GHz 穿牆比 5 GHz 弱，主臥床頭約 −57 dBm\n- 同樣吸頂、同一條 Cat6，日後直接替換"
+          },
+          {
+            "name": "TP-Link Deco X50-PoE ×3＋TL-SG108PE",
+            "verdict": "no",
+            "summary": "便宜約 S$300，但吸頂方盒 68.6 mm 厚、Wi-Fi 6、每顆只有 2 個網口",
+            "details": "- 只吃 802.3at／bt PoE\n- 管理靠 Deco App 與 TP-Link 帳號"
           }
         ]
       },
