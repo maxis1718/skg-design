@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R56",
+    "revision": "R57",
     "unit": "cm",
     "date": "2026-10-26"
   },
@@ -4611,6 +4611,10 @@
     {
       "id": "C64",
       "text": "Wet kitchen 立面標水槽本體寬 61.5；女傭房吸頂燈改 IKEA BARLAST（新加坡有售）。"
+    },
+    {
+      "id": "C65",
+      "text": "主臥床改實際 220 × 200（兩側與床尾抽屜）；言言的床 60 × 170 放床南側，留 60 進衛浴。"
     }
   ],
   "measurement_policy": {
@@ -19734,12 +19738,6 @@
       "id": "todo-master-wardrobe-laminate",
       "room": "master",
       "text": "選衣櫃門片 laminate 色號",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-bed",
-      "room": "master",
-      "text": "選床架與床墊，確認實際尺寸",
       "status": "open"
     },
     {

@@ -1479,7 +1479,6 @@
   "確認客餐廳 190 櫃體的用途": "Confirm what the 190 living/dining cabinet is for",
   "定案廚房方案 A 或 B": "Finalise kitchen scheme A or B",
   "選櫃體 laminate 品牌與色號": "Choose the cabinet laminate brand and colour code",
-  "選床架與床墊，確認實際尺寸": "Choose the bed frame and mattress and confirm the real size",
   "選 100 × 50 電腦桌": "Choose a 100 × 50 computer desk",
   "定案客房方案 A／B／C": "Finalise guest-room scheme A / B / C",
   "買 MALM Queen 收納床與無輪書椅": "Buy the MALM Queen storage bed and a desk chair without castors",
@@ -1681,6 +1680,7 @@
   "主臥西牆 · 床頭南段": "Master west wall · headboard south",
   "床邊床 · 言言": "Co-sleeper · 言言",
   "房深 275 為圖面推算，窗簾盒＋床＋床邊床剛好 275；現場不足時窗簾盒縮到 12，單軌最少 10": "Room depth 275 is scaled from the plan and pocket + bed + co-sleeper is exactly 275; if site is short, cut the curtain pocket to 12 (single track needs ≥ 10)",
-  "陽台門只能從床尾走道進：床北緣到玻璃只剩窗簾盒 15，床尾前可用的玻璃約 35，要側身進出": "The balcony door is reached only from the foot aisle: just the 15 pocket between bed and glass, and ≈35 of glass in front of the foot aisle — step through sideways"
+  "陽台門只能從床尾走道進：床北緣到玻璃只剩窗簾盒 15，床尾前可用的玻璃約 35，要側身進出": "The balcony door is reached only from the foot aisle: just the 15 pocket between bed and glass, and ≈35 of glass in front of the foot aisle — step through sideways",
+  "主臥床改實際 220 × 200（兩側與床尾抽屜）；言言的床 60 × 170 放床南側，留 60 進衛浴。": "Master bed set to its real 220 × 200 (drawers on both sides and the foot); 言言's cot 60 × 170 on the bed's south side, leaving 60 into Bath 1."
  }
 }
