@@ -621,12 +621,13 @@
       "measurement_status": "scaled-estimate",
       "uncertainty_cm": null,
       "notes": {
-        "電視櫃設計": "・落地 210 × 45 × 40，3 抽各 70，中抽對齊電視\n・插座全在中抽：4 位 13A 延長座＋USB，線走摺疊線架隨抽屜進出\n・面板上緣弧形缺口＝把手兼出線口\n・櫃後空腔 8.2：固定插座、網路孔；頂板後緣通風縫\n・踢腳內退，3000K 燈條洗地，獨立開關",
+        "電視櫃設計": "・落地 150 × 45 × 40，抽屜 40／70／40，中抽對齊電視\n・插座全在中抽：4 位 13A 延長座＋USB，線走摺疊線架隨抽屜進出\n・面板上緣弧形缺口＝把手兼出線口\n・櫃後空腔 8.2：固定插座、網路孔；頂板後緣通風縫\n・踢腳內退，3000K 燈條洗地，獨立開關",
         "電視與電視牆": "・Samsung The Frame 75\"（168.5 × 96.5 × 2.7）壁掛\n・中心高 110、下緣 61.8；櫃面到電視 21.8\n・電視牆 387.5：木作底板約 5＋wabi-sabi 淡灰壁紙到天花；分戶牆不打鑿\n・Ø32 暗管：櫃後空腔 → 電視背後\n・局部假天花（底 270）嵌線性洗牆燈",
-        "電視櫃兩端留白": "・電視、櫃、沙發同中線，距陽台玻璃 130\n・櫃北端距玻璃 25，南端到牆尾 152.8",
+        "電視櫃兩端留白": "・電視、櫃、沙發同中線，距陽台玻璃 140\n・櫃兩端各留 20 放喇叭腳架\n・櫃北端距玻璃 65，南端到牆尾 172.5",
+        "喇叭與重低音": "・KEF LS50 Wireless II ×2 上 KEF S2 Floor Stand，夾電視兩側，中心距 190\n・喇叭頂 96.2，背距牆 14，前緣齊電視櫃，內轉約 20°\n・到坐姿耳朵約 171，夾角約 67°，近等邊三角形\n・左喇叭腳架距玻璃 29，離窗簾盒 9\n・主喇叭在右：HDMI eARC 接 One Connect，Sub Out 接 KEF KC62\n・KC62 貼牆 10，在主喇叭與清淨機之間\n・插座 S-17／S-18／S-19 離地 30，不用延長座\n・木作層 Ø32 暗管：左腳架 ↔ 櫃後空腔 ↔ 右腳架，出線口離地 10",
         "餐桌尺寸與款式": "・Dahlia 岩板餐桌 150 × 90 × 75\n・北緣距陽台玻璃 50；南緣到過道 125.1\n・長邊各 2 椅，過道端不放椅\n・陽台端 Tripp Trapp 收進露約 30，拉出最多 40，距玻璃仍約 10",
         "陽台曬衣架": "・YU HOME SMARTLUX LITE 天花吊掛 113 × 40 × 6.6，無風扇、無電熱\n・陽台西端，長邊南北向，離收納櫃門 20",
-        "沙發與動線": "・沙發 210 × 95，與電視同中線\n・北端距玻璃 25，南端到過道 90.1\n・前緣到電視櫃 90；拉開中抽後仍約 55 可站\n・椅背到餐桌東緣 149.9\n・椅背到螢幕約 227.3，坐姿視距約 180–190",
+        "沙發與動線": "・沙發 210 × 95，與電視同中線\n・北端距玻璃 35，南端到過道 80.1\n・前緣到電視櫃 90；拉開中抽後仍約 55 可站\n・椅背到餐桌東緣 149.9\n・椅背到螢幕約 227.3，坐姿視距約 180–190",
         "材質與色彩": null
       },
       "name": "客餐廳",
@@ -1522,25 +1523,25 @@
       "label": "TV console",
       "bounds_pt": [
         570.23,
-        178.73,
+        190.065,
         582.98,
-        238.25
+        232.585
       ],
       "plan_horizontal_cm": 45,
-      "plan_vertical_cm": 210,
-      "nominal_width_cm": 210,
+      "plan_vertical_cm": 150,
+      "nominal_width_cm": 150,
       "nominal_depth_cm": 45,
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 130 cm from the balcony glass (north end 25, south end 152.5 to the passage). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
+      "notes": "Design R08, resized for the KEF pair (kef-tv): floor-standing 3-drawer console 150 W x 45 D x 40 H (drawers 40/70/40, centre drawer unchanged) on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 140 cm from the balcony glass (north end 65, south end 172.5 to the passage); 20 cm each side holds a KEF S2 stand (4 cm gap). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) under the carcass base, 146 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
-      "source_note": "・高 40，3 抽各 70\n・插座全在中抽，拉出即可插拔\n・底板 5＋櫃深 45，前緣距結構牆 50\n・踢腳內退 10；45° 鋁槽 COB 3000K 洗地燈，驅動器在櫃後空腔",
+      "source_note": "・高 40，抽屜 40／70／40，中抽對齊電視\n・插座全在中抽，拉出即可插拔\n・底板 5＋櫃深 45，前緣距結構牆 50\n・兩端各留 20 給喇叭腳架\n・踢腳內退 10；45° 鋁槽 COB 3000K 洗地燈，驅動器在櫃後空腔",
       "dimensions": {
         "w": {
-          "cm": 210,
+          "cm": 150,
           "status": "design"
         },
         "d": {
@@ -1564,9 +1565,9 @@
       "label": "Sofa",
       "bounds_pt": [
         517.79,
-        178.73,
+        181.565,
         544.71,
-        238.25
+        241.085
       ],
       "plan_horizontal_cm": 95,
       "plan_vertical_cm": 210,
@@ -1575,7 +1576,7 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred on the TV axis 130 cm from the glass: north end 25.0 cm from the glass, south end 90.1 cm to the corridor line y263.8; front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
+      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred on the TV axis 140 cm from the glass (shifted 10 south for the KEF stands): north end 35.0 cm from the glass, south end 80.1 cm to the corridor line y263.8; front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
       "name": "沙發",
       "source_note": "扶手、靠背寬度未定，圖面示意",
       "dimensions": {
@@ -1687,9 +1688,9 @@
       "label": "TV",
       "bounds_pt": [
         582.22,
-        184.61,
+        187.445,
         582.98,
-        232.37
+        235.205
       ],
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
@@ -1698,7 +1699,7 @@
       "height_cm": 96.5,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Samsung The Frame 75\", user-supplied 1685.3 x 965.4 x 26.9 mm. Wall-mounted on the feature wall (Slim Fit mount), centre height 110 cm (bottom 61.8, top 158.3); horizontal centre on the sofa/console axis 130 cm from the balcony glass. Cross-check: LS03D 75\" listed 168 x 96 x 2.79 cm without stand, VESA 400 x 400, 35.3 kg; One Connect box 34.8 x 13.7 x 6.6 cm (https://www.shidirect.com/product/47644342/2024-75IN-LS03D-THE-FRAME-4K-TVLS03D-SERIES-LIFESTYLE). Plan line drawn on the wall face, above the console (console top 40).",
+      "notes": "Samsung The Frame 75\", user-supplied 1685.3 x 965.4 x 26.9 mm. Wall-mounted on the feature wall (Slim Fit mount), centre height 110 cm (bottom 61.8, top 158.3); horizontal centre on the sofa/console axis 140 cm from the balcony glass. Cross-check: LS03D 75\" listed 168 x 96 x 2.79 cm without stand, VESA 400 x 400, 35.3 kg; One Connect box 34.8 x 13.7 x 6.6 cm (https://www.shidirect.com/product/47644342/2024-75IN-LS03D-THE-FRAME-4K-TVLS03D-SERIES-LIFESTYLE). Plan line drawn on the wall face, above the console (console top 40).",
       "mount": "wall",
       "name": "電視 · Samsung The Frame 75\"",
       "source_note": "・Samsung The Frame 75\" 168.53 × 96.54 × 2.69\n・壁掛：中心高 110，下緣 61.8，上緣 158.3",
@@ -3945,9 +3946,9 @@
       "name": "空氣清淨機 Electrolux Pure A9",
       "bounds_pt": [
         573.91,
-        243.0,
+        254.979,
         584.4,
-        253.49
+        265.467
       ],
       "dimensions": {
         "w": {
@@ -3966,8 +3967,113 @@
         "brand": "Electrolux",
         "model": "Pure A9"
       },
-      "source_note": "・37 × 37，靠東牆、電視櫃南側\n・背後插座 ×2（S-07、S-08）",
+      "source_note": "・37 × 37，靠東牆、重低音南側\n・背後插座 ×2（S-07、S-08）",
       "status": "user-design"
+    },
+    {
+      "id": "kef-speaker-l",
+      "code": "LIV-09",
+      "room_id": "living",
+      "name": "左喇叭 KEF LS50 Wireless II",
+      "label": "KEF LS50 Wireless II, left (secondary)",
+      "bounds_pt": [
+        570.195,
+        181.561,
+        579.011,
+        187.231
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 20,
+          "status": "design"
+        },
+        "d": {
+          "cm": 31.1,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 20,
+        "d": 31.1,
+        "h": 30.5,
+        "brand": "KEF",
+        "model": "LS50 Wireless II"
+      },
+      "height_cm": 96.2,
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (schematic). Centre 45 cm from the balcony glass, rear 14 cm from the feature wall (front flush with the console front), toe-in ~20° toward the sofa. Stand footprint incl. toe-in reaches 29 cm from the glass = 9 cm clear of the 20 cm curtain pocket; 4 cm gap to the console. Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
+      "source_note": "・KEF LS50 Wireless II 20 × 31.1 × 30.5，10.1 kg\n・KEF S2 Floor Stand 高 65.7：喇叭頂 96.2\n・中心距玻璃 45，背距牆 14，前緣齊電視櫃\n・內轉約 20° 對沙發\n・電源 S-17；連線走木作層 Ø32 暗管到主喇叭"
+    },
+    {
+      "id": "kef-speaker-r",
+      "code": "LIV-10",
+      "room_id": "living",
+      "name": "右主喇叭 KEF LS50 Wireless II",
+      "label": "KEF LS50 Wireless II, right (primary)",
+      "bounds_pt": [
+        570.195,
+        235.419,
+        579.011,
+        241.089
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 20,
+          "status": "design"
+        },
+        "d": {
+          "cm": 31.1,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 20,
+        "d": 31.1,
+        "h": 30.5,
+        "brand": "KEF",
+        "model": "LS50 Wireless II"
+      },
+      "height_cm": 96.2,
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 235 cm from the glass (axis 140 + 95), rear 14 cm from the wall, toe-in ~20°. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
+      "source_note": "・主喇叭在右，KEF 預設即右聲道；接 HDMI eARC、網路、重低音\n・KEF S2 Floor Stand，中心距玻璃 235，背距牆 14\n・內轉約 20° 對沙發\n・HDMI 從 One Connect、網路從中抽交換器，走 Ø32 暗管\n・電源 S-18"
+    },
+    {
+      "id": "kef-sub",
+      "code": "LIV-11",
+      "room_id": "living",
+      "name": "重低音 KEF KC62",
+      "label": "Subwoofer KEF KC62",
+      "bounds_pt": [
+        573.115,
+        245.341,
+        580.145,
+        252.597
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 25.6,
+          "status": "design"
+        },
+        "d": {
+          "cm": 24.8,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 25.6,
+        "d": 24.8,
+        "h": 24.6,
+        "brand": "KEF",
+        "model": "KC62"
+      },
+      "height_cm": 24.6,
+      "status": "user-design",
+      "uncertainty_cm": null,
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 260-285.6 cm from the glass: ~9 cm from the primary stand footprint and 8.4 cm from the purifier. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "source_note": "・KEF KC62 25.6 × 24.8 × 24.6，14 kg，11–200 Hz\n・貼牆 10，夾在主喇叭與清淨機之間\n・RCA 線接主喇叭 Sub Out，約 1 m\n・擺位 EQ 設 Wall；樓下嫌吵改 Apartment\n・電源 S-19"
     },
     {
       "id": "robot-vacuum",
@@ -9811,7 +9917,7 @@
       ],
       "units": {
         "console": {
-          "w": 210,
+          "w": 150,
           "d": 45,
           "h": 40,
           "board": 1.8,
@@ -9846,7 +9952,6 @@
               "kind": "drawer",
               "from": 8,
               "to": 38,
-              "count": 3,
               "notch": {
                 "w": 14,
                 "h": 3.5
@@ -9857,14 +9962,14 @@
               "inside": [
                 {
                   "type": "cavity",
-                  "x": 71.06666666666668,
+                  "x": 41.067,
                   "y": 9.8,
                   "w": 67.86666666666667,
                   "h": 27.8
                 },
                 {
                   "type": "socket",
-                  "x": 86.26666666666668,
+                  "x": 56.267,
                   "y": 22.6,
                   "w": 34,
                   "h": 5.4,
@@ -9873,7 +9978,7 @@
                 },
                 {
                   "type": "device",
-                  "x": 73.26666666666668,
+                  "x": 43.267,
                   "y": 12.4,
                   "w": 34.8,
                   "h": 6.6,
@@ -9882,18 +9987,32 @@
                 },
                 {
                   "type": "device",
-                  "x": 110.06666666666668,
+                  "x": 80.067,
                   "y": 12.4,
                   "w": 9.3,
                   "h": 3.1
                 },
                 {
                   "type": "device",
-                  "x": 121.26666666666668,
+                  "x": 91.267,
                   "y": 12.4,
                   "w": 15,
                   "h": 10.5,
                   "dashed": true
+                }
+              ],
+              "leaves": [
+                {
+                  "x": 0.4,
+                  "w": 39.4
+                },
+                {
+                  "x": 40.2,
+                  "w": 69.6
+                },
+                {
+                  "x": 110.2,
+                  "w": 39.4
                 }
               ]
             }
@@ -9911,7 +10030,7 @@
           "units": [
             {
               "ref": "console",
-              "x": 25.0
+              "x": 65
             }
           ],
           "under": [
@@ -9940,18 +10059,39 @@
               "type": "conduit",
               "pts": [
                 [
-                  138.0,
+                  148,
                   28
                 ],
                 [
-                  138.0,
+                  148,
                   98
                 ]
               ],
               "label": "Ø32 暗管",
-              "lx": 141.0,
+              "lx": 151,
               "ly": 49,
               "size": 0.55
+            },
+            {
+              "type": "conduit",
+              "pts": [
+                [
+                  45,
+                  10
+                ],
+                [
+                  45,
+                  15
+                ],
+                [
+                  235,
+                  15
+                ],
+                [
+                  235,
+                  10
+                ]
+              ]
             }
           ],
           "extras": [
@@ -9970,7 +10110,7 @@
             },
             {
               "type": "tv",
-              "x": 45.75,
+              "x": 55.75,
               "y": 61.8,
               "w": 168.5,
               "h": 96.5,
@@ -9980,31 +10120,31 @@
             },
             {
               "type": "toe-light",
-              "x": 26.8,
-              "w": 206.4,
+              "x": 66.8,
+              "w": 146.4,
               "y": 8,
               "p": 1.8
             },
             {
               "type": "note",
-              "x": 255.0,
+              "x": 140,
               "y": 2.2,
               "label": "底燈 3000K",
-              "anchor": "start",
+              "anchor": "middle",
               "size": 0.55,
               "tvlight": true
             },
             {
               "type": "clear",
-              "x0": 45.75,
-              "x1": 214.25,
+              "x0": 55.75,
+              "x1": 224.25,
               "y": 164.3,
               "label": "TV 168.5"
             },
             {
               "type": "clear",
               "vertical": true,
-              "x": 240.0,
+              "x": 60.5,
               "y0": 40,
               "y1": 61.8,
               "label": "21.8"
@@ -10012,7 +10152,7 @@
             {
               "type": "clear",
               "vertical": true,
-              "x": 240.0,
+              "x": 60.5,
               "y0": 0,
               "y1": 40,
               "label": "40"
@@ -10035,7 +10175,7 @@
             },
             {
               "type": "note",
-              "x": 134.0,
+              "x": 144.0,
               "y": 44,
               "label": "弧形缺口＝把手＋出線口",
               "anchor": "end",
@@ -10044,20 +10184,252 @@
             },
             {
               "type": "note",
-              "x": 134.0,
+              "x": 144.0,
               "y": 44,
               "label": "中抽全拉：插座、One Connect、路由器",
               "anchor": "end",
               "size": 0.58,
               "when": "open"
+            },
+            {
+              "type": "socket",
+              "x": 37.7,
+              "y": 25.7,
+              "w": 14.6,
+              "h": 8.6,
+              "n": 2
+            },
+            {
+              "type": "rect",
+              "x": 41,
+              "y": 8.5,
+              "w": 8,
+              "h": 3,
+              "fill": "#55605a",
+              "stroke": "#2f443c",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 33.7,
+              "y": 0,
+              "w": 22.6,
+              "h": 1.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 0.4
+            },
+            {
+              "type": "rect",
+              "x": 42.5,
+              "y": 1.2,
+              "w": 5,
+              "h": 63.3,
+              "fill": "#8a948e",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 35,
+              "y": 64.5,
+              "w": 20,
+              "h": 1.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 35,
+              "y": 65.7,
+              "w": 20,
+              "h": 30.5,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 38.5,
+              "y": 74.5,
+              "w": 13,
+              "h": 13,
+              "fill": "#d9d6cc",
+              "stroke": "#55695f",
+              "sw": 0.25,
+              "rx": 6.5
+            },
+            {
+              "type": "rect",
+              "x": 43.4,
+              "y": 79.4,
+              "w": 3.2,
+              "h": 3.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 1.6
+            },
+            {
+              "type": "note",
+              "x": 55,
+              "y": 99,
+              "label": "LS50 Wireless II",
+              "size": 0.5,
+              "color": "#2f443c",
+              "anchor": "end"
+            },
+            {
+              "type": "note",
+              "x": 55,
+              "y": 104,
+              "label": "左 · 副",
+              "size": 0.5,
+              "color": "#7f8c84",
+              "anchor": "end"
+            },
+            {
+              "type": "socket",
+              "x": 227.7,
+              "y": 25.7,
+              "w": 14.6,
+              "h": 8.6,
+              "n": 2
+            },
+            {
+              "type": "rect",
+              "x": 231,
+              "y": 8.5,
+              "w": 8,
+              "h": 3,
+              "fill": "#55605a",
+              "stroke": "#2f443c",
+              "sw": 0.2
+            },
+            {
+              "type": "rect",
+              "x": 223.7,
+              "y": 0,
+              "w": 22.6,
+              "h": 1.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 0.4
+            },
+            {
+              "type": "rect",
+              "x": 232.5,
+              "y": 1.2,
+              "w": 5,
+              "h": 63.3,
+              "fill": "#8a948e",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 225,
+              "y": 64.5,
+              "w": 20,
+              "h": 1.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 225,
+              "y": 65.7,
+              "w": 20,
+              "h": 30.5,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "rx": 1.2
+            },
+            {
+              "type": "rect",
+              "x": 228.5,
+              "y": 74.5,
+              "w": 13,
+              "h": 13,
+              "fill": "#d9d6cc",
+              "stroke": "#55695f",
+              "sw": 0.25,
+              "rx": 6.5
+            },
+            {
+              "type": "rect",
+              "x": 233.4,
+              "y": 79.4,
+              "w": 3.2,
+              "h": 3.2,
+              "fill": "#4b5751",
+              "stroke": "none",
+              "rx": 1.6
+            },
+            {
+              "type": "note",
+              "x": 225,
+              "y": 99,
+              "label": "LS50 Wireless II",
+              "size": 0.5,
+              "color": "#2f443c",
+              "anchor": "start"
+            },
+            {
+              "type": "note",
+              "x": 225,
+              "y": 104,
+              "label": "右 · 主",
+              "size": 0.5,
+              "color": "#7f8c84",
+              "anchor": "start"
+            },
+            {
+              "type": "socket",
+              "x": 265.5,
+              "y": 25.7,
+              "w": 14.6,
+              "h": 8.6,
+              "n": 2
+            },
+            {
+              "type": "rect",
+              "x": 260,
+              "y": 0,
+              "w": 25.6,
+              "h": 24.6,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "rx": 1.5,
+              "label": "KC62",
+              "color": "#2f443c",
+              "size": 0.55
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 22,
+              "y0": 0,
+              "y1": 65.7,
+              "label": "65.7"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 22,
+              "y0": 65.7,
+              "y1": 96.2,
+              "label": "30.5"
             }
           ],
           "hcuts": [
             0,
-            25.0,
-            95.0,
-            165.0,
-            235.0,
+            45,
+            65,
+            215,
+            235,
             387.5
           ],
           "totalLabel": "387.5（原標）",
@@ -10069,6 +10441,10 @@
             {
               "y": 61.8,
               "label": "TV 下緣"
+            },
+            {
+              "y": 81,
+              "label": "Uni-Q 中心 · 示意"
             },
             {
               "y": 110,
@@ -10093,13 +10469,13 @@
           "font": 5.6,
           "height": 72,
           "noCeiling": true,
-          "width": 210,
+          "width": 168.5,
           "chain": 0,
           "marginR": 7.5,
           "units": [
             {
               "ref": "console",
-              "x": 0
+              "x": 9.25
             }
           ],
           "under": [
@@ -10107,7 +10483,7 @@
               "type": "wallpaper",
               "x": -2,
               "y": 0,
-              "w": 214,
+              "w": 172.5,
               "h": 72
             }
           ],
@@ -10115,7 +10491,7 @@
             {
               "type": "tv",
               "cut": true,
-              "x": 20.75,
+              "x": 0,
               "y": 61.8,
               "w": 168.5,
               "h": 10.200000000000003,
@@ -10125,22 +10501,22 @@
             },
             {
               "type": "toe-light",
-              "x": 1.8,
-              "w": 206.4,
+              "x": 11.05,
+              "w": 146.4,
               "y": 8,
               "p": 1.8
             },
             {
               "type": "clear",
               "vertical": true,
-              "x": 232,
+              "x": 164,
               "y0": 40,
               "y1": 61.8,
               "label": "21.8"
             },
             {
               "type": "note",
-              "x": 105.0,
+              "x": 84.25,
               "y": 50,
               "label": "弧形缺口 14 × 3.5：把手＋出線口",
               "size": 0.66,
@@ -10148,7 +10524,7 @@
             },
             {
               "type": "note",
-              "x": 35,
+              "x": 29.25,
               "y": 21,
               "label": "外抽屜",
               "size": 0.66,
@@ -10157,7 +10533,7 @@
             },
             {
               "type": "note",
-              "x": 175,
+              "x": 139.25,
               "y": 21,
               "label": "外抽屜",
               "size": 0.66,
@@ -10166,7 +10542,7 @@
             },
             {
               "type": "note",
-              "x": 105.0,
+              "x": 84.25,
               "y": 21,
               "label": "中間抽屜 · 插座",
               "size": 0.66,
@@ -10175,7 +10551,7 @@
             },
             {
               "type": "note",
-              "x": 105.0,
+              "x": 84.25,
               "y": 54,
               "label": "中抽全拉：4 位 13A 延長座＋USB",
               "size": 0.62,
@@ -10183,7 +10559,7 @@
             },
             {
               "type": "note",
-              "x": 105.0,
+              "x": 84.25,
               "y": 46,
               "label": "One Connect · 路由器 · Hub M3",
               "size": 0.62,
@@ -10191,7 +10567,7 @@
             },
             {
               "type": "note",
-              "x": 105.0,
+              "x": 84.25,
               "y": 2.2,
               "label": "內退 10 · 3000K",
               "size": 0.58,
@@ -10200,12 +10576,12 @@
             }
           ],
           "hcuts": [
-            0,
-            70,
-            140,
-            210
+            9.25,
+            49.25,
+            119.25,
+            159.25
           ],
-          "totalLabel": "210",
+          "totalLabel": "150",
           "levels": [
             {
               "y": 40,
@@ -10614,8 +10990,23 @@
         },
         {
           "zone": "電視櫃",
-          "h": "210 × 45 × 40",
-          "note": "3 抽各 70；前緣距結構牆 50"
+          "h": "150 × 45 × 40",
+          "note": "抽屜 40／70／40；前緣距結構牆 50；兩端各留 20 給喇叭腳架"
+        },
+        {
+          "zone": "喇叭 · KEF LS50 Wireless II",
+          "h": "中心距 190 · 頂 96.2",
+          "note": "KEF S2 Floor Stand 高 65.7；背距牆 14、前緣齊電視櫃，內轉約 20°"
+        },
+        {
+          "zone": "重低音 · KEF KC62",
+          "h": "25.6 × 24.8 × 24.6",
+          "note": "主喇叭右側，貼牆 10；RCA 接主喇叭 Sub Out"
+        },
+        {
+          "zone": "喇叭電源與連線",
+          "h": "插座 30 · 出線口 10",
+          "note": "S-17／S-18／S-19 各一組 13A 雙孔；木作層 Ø32 暗管串兩支腳架與櫃後空腔"
         },
         {
           "zone": "中間抽屜 · 插座",
@@ -10639,23 +11030,24 @@
         },
         {
           "zone": "底燈電源",
-          "h": "24 V · 約 16.5 W",
+          "h": "24 V · 約 11.7 W",
           "note": "驅動器在後腔，拆中抽可換；牆面獨立開關。"
         }
       ],
       "hardware": [
         "Blum LEGRABOX 全拉緩衝 NL 350；中抽 C 高側板、40 kg 級。",
         "SIRIM 4 位 13A 延長座鎖抽屜背板；後腔雙位插座離地 17。",
-        "底燈：45° 鋁槽 206＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。"
+        "底燈：45° 鋁槽 146＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。"
       ],
       "rationale": [
         "3 抽不選 5：中抽內淨 65 才放得下 One Connect 等設備。",
-        "燈藏內退 10，視線 110 看不到燈"
+        "燈藏內退 10，視線 110 看不到燈",
+        "櫃從 210 縮到 150：喇叭要貼電視兩側，中心距 190 才近等邊三角形"
       ],
       "open_questions": [
         "The Frame 是否另需電源",
         "光纖終端位置",
-        "遊戲機、Soundbar、喇叭",
+        "遊戲機",
         "天花淨高、能否做局部假天花",
         "壁紙型號與木作底板厚度"
       ]
@@ -17759,6 +18151,21 @@
         "south",
         "east"
       ]
+    },
+    "kef-speaker-l": {
+      "alias": "tv-console",
+      "object_id": "kef-speaker-l",
+      "title": "電視牆"
+    },
+    "kef-speaker-r": {
+      "alias": "tv-console",
+      "object_id": "kef-speaker-r",
+      "title": "電視牆"
+    },
+    "kef-sub": {
+      "alias": "tv-console",
+      "object_id": "kef-sub",
+      "title": "電視牆"
     }
   },
   "layouts": [
@@ -18157,7 +18564,7 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 214,
+        "y": 216.835,
         "place": "電視櫃中間抽屜",
         "mount": 30,
         "name": "網路主機 · 電視櫃",
@@ -18169,7 +18576,7 @@
         "code": "D-01",
         "kind": "data",
         "x": 582.2,
-        "y": 203,
+        "y": 205.835,
         "place": "電視牆 · 電視櫃後方",
         "mount": 30,
         "name": "網路孔 · 電視櫃",
@@ -18270,7 +18677,7 @@
             "20 cm"
           ]
         ],
-        "notes": "・紗簾與遮光簾都電動，中分，兩側收攏\n・電視櫃、沙發北端距玻璃 25，窗簾盒 20 後剩約 5\n・餐桌 Tripp Trapp 拉出時距玻璃約 10，會碰到垂下的窗簾\n・230 V 有線馬達，Zigbee，進 Apple Home",
+        "notes": "・紗簾與遮光簾都電動，中分，兩側收攏\n・沙發北端距玻璃 35、左喇叭腳架 29，窗簾盒 20 後剩 15／9\n・餐桌 Tripp Trapp 拉出時距玻璃約 10，會碰到垂下的窗簾\n・230 V 有線馬達，Zigbee，進 Apple Home",
         "use": "窗簾馬達"
       },
       {
@@ -18749,7 +19156,7 @@
         "code": "S-07",
         "kind": "socket",
         "x": 584.0,
-        "y": 244.7,
+        "y": 256.679,
         "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機",
@@ -18761,12 +19168,48 @@
         "code": "S-08",
         "kind": "socket",
         "x": 584.0,
-        "y": 251.79,
+        "y": 263.769,
         "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機（備用）",
         "notes": "・13A 雙孔，離地 30（示意）\n・同一面牆第二組，給燈或其他電器",
         "use": "備用"
+      },
+      {
+        "id": "sock-kef-l",
+        "code": "S-17",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 184.396,
+        "place": "電視牆 · 左喇叭腳架後",
+        "mount": 30,
+        "name": "插座 · 左喇叭",
+        "notes": "・13A 雙孔，離地 30，藏在腳架後\n・KEF 不建議接延長座，直接插牆\n・下方離地 10 出線口：喇叭連線從 Ø32 暗管出來",
+        "use": "喇叭"
+      },
+      {
+        "id": "sock-kef-r",
+        "code": "S-18",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 238.254,
+        "place": "電視牆 · 右喇叭腳架後",
+        "mount": 30,
+        "name": "插座 · 右主喇叭",
+        "notes": "・13A 雙孔，離地 30，藏在腳架後\n・下方離地 10 出線口：HDMI eARC、喇叭連線、Cat6 從 Ø32 暗管出來",
+        "use": "喇叭"
+      },
+      {
+        "id": "sock-kef-sub",
+        "code": "S-19",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 248.969,
+        "place": "電視牆 · 重低音後",
+        "mount": 30,
+        "name": "插座 · 重低音",
+        "notes": "・13A 雙孔，離地 30，在 KC62 正上方\n・KC62 背距牆 10，插頭有空間",
+        "use": "重低音"
       },
       {
         "id": "sock-vacuum",
@@ -18895,11 +19338,11 @@
         "path": [
           [
             575.2,
-            214
+            216.835
           ],
           [
             580,
-            214
+            216.835
           ],
           [
             580,
@@ -18984,15 +19427,15 @@
         "path": [
           [
             575.2,
-            214
+            216.835
           ],
           [
             575.2,
-            203
+            205.835
           ],
           [
             582.2,
-            203
+            205.835
           ]
         ]
       }
