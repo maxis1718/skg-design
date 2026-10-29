@@ -69,7 +69,8 @@ function elevationFor(id){
  if(e.include){const s=all[e.include];e={...e,units:{...(s?.units||{}),...(e.units||{})},views:e.views.map(v=>typeof v==='string'?s?.views.find(x=>x.id===v):v).filter(Boolean)};}
  return e;
 }
-const elevId=()=>objectId||(roomId==='guest'?guestVersion()?.elevation:null);
+// Room-level elevation: guest follows its scheme; other rooms may carry `elevation` (wall view, e.g. helper-wall).
+const elevId=()=>objectId||(roomId==='guest'?guestVersion()?.elevation:room(roomId)?.elevation||null);
 function elevationBlock(){
  const eid=elevId(),e=eid&&elevationFor(eid);if(!e)return '';
  const view=e.views.find(v=>v.id===elevView[eid])||e.views[0],names=view.stateNames||{};

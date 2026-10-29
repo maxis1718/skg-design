@@ -450,7 +450,7 @@ function levels(g, view, x0, x1) {
 function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
-    if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e)) continue;
+    if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e) || helperExtra(g, e)) continue;
     if (e.type === 'lid') { lidExtra(g, e, state); continue; }
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
     const fsz = g.f * (e.size || .7);
@@ -727,6 +727,65 @@ function nwExtra(g, e) {
       const hy = e.y0 + i * e.pitch, pin = e.pin != null && Math.abs(hy - e.pin) < .05;
       g.out.push(`<circle cx="${hx}" cy="${+g.Y(hy).toFixed(2)}" r="${pin ? r * 1.25 : r}" fill="${pin ? C.dark : '#fff'}" stroke="${pin ? 'none' : C.dim}" stroke-width=".18"/>`);
     }
+    return true;
+  }
+  return false;
+}
+
+// Helper-room wall items (h-*), all schematic: h-fan {x, y centre, r, side} wall fan (front grille / side profile with bracket,
+// e.dir = wall side ±1); h-lamp {x wall, y, reach, dir, glowTo} swing-arm reading lamp with light cone down to glowTo;
+// h-switch {x, y centre, n keys}; h-hook {x, y}; h-mirror {x, y, w, h}; h-light {x, w, y ceiling} slim ceiling light.
+function helperExtra(g, e) {
+  const fs = g.f * (e.size || .58), lab = (x, y, a = {}) => e.label && g.text(x, y, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':fs, ...a});
+  const circ = (cx, cy, r, a) => g.out.push(`<circle cx="${+cx.toFixed(2)}" cy="${+g.Y(cy).toFixed(2)}" r="${r}" ${attrs(a)}/>`);
+  if (e.type === 'h-fan') {
+    const r = e.r ?? 20, s = {fill:'none', stroke:C.itemLine, 'stroke-width':.3};
+    if (e.side) {
+      const d = e.dir ?? 1, w0 = e.x, mx = w0 + d * 9, gx = w0 + d * 17;
+      g.rect(Math.min(w0, w0 + d * 3), e.y - 4, 3, 8, {fill:C.steel, stroke:C.line, 'stroke-width':.3});
+      g.rect(Math.min(w0 + d * 3, mx), e.y - 1, Math.abs(mx - w0 - d * 3), 2, {fill:'#9aa39d', stroke:'none'});
+      g.rect(Math.min(mx, mx + d * 8), e.y - 5, 8, 10, {fill:'#fbfbf8', stroke:C.line, 'stroke-width':.3, rx:2});
+      g.rect(Math.min(gx, gx + d * 6), e.y - r, 6, 2 * r, {fill:'none', stroke:C.itemLine, 'stroke-width':.3, rx:3});
+      lab(w0 + d * 12, e.y + r + fs * .5);
+      return true;
+    }
+    g.rect(e.x - 1.5, e.y + r - 2, 3, 8, {fill:'#9aa39d', stroke:'none'});
+    g.rect(e.x - 5, e.y + r + 5, 10, 3, {fill:C.steel, stroke:C.line, 'stroke-width':.3, rx:.6});
+    circ(e.x, e.y, r, {fill:'#fbfbf8', stroke:C.line, 'stroke-width':.4});
+    for (const k of [.4, .7]) circ(e.x, e.y, +(r * k).toFixed(2), s);
+    for (let i = 0; i < 3; i++) { const a = i * 2.094 + .5; g.path(`M${e.x} ${g.Y(e.y)}Q${+(e.x + r * .55 * Math.cos(a + .5)).toFixed(2)} ${+g.Y(e.y + r * .55 * Math.sin(a + .5)).toFixed(2)} ${+(e.x + r * .85 * Math.cos(a)).toFixed(2)} ${+g.Y(e.y + r * .85 * Math.sin(a)).toFixed(2)}`, {fill:'none', stroke:'#b7c4bb', 'stroke-width':2.4, 'stroke-linecap':'round'}); }
+    circ(e.x, e.y, 2.4, {fill:C.dark, stroke:'none'});
+    lab(e.x, e.y - r - fs * 1.3);
+    return true;
+  }
+  if (e.type === 'h-lamp') {
+    const d = e.dir ?? 1, R = e.reach ?? 14, hx = e.x + d * R, hy = e.y - 3;
+    if (e.glowTo != null) g.path(`M${hx - 2} ${g.Y(hy - 2)}L${hx + 2} ${g.Y(hy - 2)}L${hx + 9} ${g.Y(e.glowTo)}L${hx - 9} ${g.Y(e.glowTo)}Z`, {fill:'#fbe7a1', opacity:.45, stroke:'none'});
+    g.rect(d > 0 ? e.x : e.x - 2, e.y - 4.5, 2, 9, {fill:C.steel, stroke:C.line, 'stroke-width':.3, rx:.4});
+    g.path(`M${e.x + d * 2} ${g.Y(e.y)}L${hx} ${g.Y(hy)}`, {stroke:C.dark, 'stroke-width':.6, fill:'none', 'stroke-linecap':'round'});
+    g.path(`M${hx - 2.6} ${g.Y(hy - 2.4)}L${hx + 2.6} ${g.Y(hy - 2.4)}L${hx + 1.4} ${g.Y(hy + .6)}L${hx - 1.4} ${g.Y(hy + .6)}Z`, {fill:'#fbfbf8', stroke:C.line, 'stroke-width':.3});
+    lab(hx, e.y + 4.5 + fs * .4);
+    return true;
+  }
+  if (e.type === 'h-switch') {
+    const w = 8.6, n = e.n ?? 1;
+    g.rect(e.x - w / 2, e.y - w / 2, w, w, {fill:'#fff', stroke:'#6a4f97', 'stroke-width':.35, rx:.7});
+    for (let i = 1; i < n; i++) g.line(e.x - w / 2 + w * i / n, e.y - w / 2 + .8, e.x - w / 2 + w * i / n, e.y + w / 2 - .8, {stroke:'#b9b0cc', 'stroke-width':.3});
+    lab(e.x, e.y + w / 2 + fs * .45, {fill:'#6a4f97'});
+    return true;
+  }
+  if (e.type === 'h-hook') {
+    g.rect(e.x - 1.2, e.y - 1.5, 2.4, 3, {fill:C.steel, stroke:C.line, 'stroke-width':.25, rx:.4});
+    g.path(`M${e.x} ${g.Y(e.y - 1.5)}V${g.Y(e.y - 5)}A1.8 1.8 0 0 0 ${e.x + 3.6} ${g.Y(e.y - 5)}V${g.Y(e.y - 3.6)}`, {fill:'none', stroke:C.dark, 'stroke-width':.5, 'stroke-linecap':'round'});
+    lab(e.x, e.y + 1.5 + fs * .4);
+    return true;
+  }
+  if (e.type === 'h-mirror') { mirrorFace(g, e.x, e.y, e.w, e.h, .35); lab(e.x + e.w / 2, e.y - fs * 1.3); return true; }
+  if (e.type === 'h-light') {
+    const h = e.h ?? 3;
+    g.path(`M${e.x + 2} ${g.Y(e.y - h)}L${e.x + e.w - 2} ${g.Y(e.y - h)}L${e.x + e.w + 14} ${g.Y(e.y - h - 30)}L${e.x - 14} ${g.Y(e.y - h - 30)}Z`, {fill:'#fbe7a1', opacity:.35, stroke:'none'});
+    g.rect(e.x, e.y - h, e.w, h, {fill:'#fbfbf8', stroke:C.line, 'stroke-width':.3, rx:1});
+    lab(e.x + e.w / 2, e.y - h - fs * 1.4);
     return true;
   }
   return false;
