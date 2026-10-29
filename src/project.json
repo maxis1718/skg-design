@@ -19585,27 +19585,16 @@
       "status": "open"
     },
     {
-      "id": "todo-smart-circuits",
-      "room": "smart",
-      "text": "數各房燈光迴路，定 H1 單鍵或雙鍵",
-      "status": "open"
-    },
-    {
       "id": "todo-smart-ups",
       "room": "smart",
       "text": "買小型 UPS：光纖、網路、M3、HomePod mini",
       "status": "open"
     },
     {
-      "id": "todo-smart-homepod-hub",
+      "id": "todo-smart-curtains",
       "room": "smart",
-      "text": "定 HomePod mini 位置：客廳中央、靠近 AP",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-c100",
-      "room": "smart",
-      "text": "問 Aqara SG：C100 貨期與價格",
+      "text": "買 Aqara C100 窗簾馬達 ×7（客廳 2、主臥、小孩房、書房、客房、女傭房）",
+      "research": "curtain-motor",
       "status": "open"
     },
     {
@@ -19618,13 +19607,6 @@
       "id": "todo-smart-all-off",
       "room": "smart",
       "text": "定一鍵全關的範圍：燈、窗簾、插座",
-      "status": "open"
-    },
-    {
-      "id": "todo-living-curtain-motor",
-      "room": "living",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
       "status": "open"
     },
     {
@@ -19665,13 +19647,6 @@
       "status": "open"
     },
     {
-      "id": "todo-master-curtain-motor",
-      "room": "master",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
-      "status": "open"
-    },
-    {
       "id": "todo-master-wardrobe-laminate",
       "room": "master",
       "text": "選衣櫃門片 laminate 色號",
@@ -19684,23 +19659,9 @@
       "status": "open"
     },
     {
-      "id": "todo-kid-curtain-motor",
-      "room": "kid",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
-      "status": "open"
-    },
-    {
       "id": "todo-kid-bed",
       "room": "kid",
       "text": "決定床位",
-      "status": "open"
-    },
-    {
-      "id": "todo-study-curtain",
-      "room": "study",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
       "status": "open"
     },
     {
@@ -19716,13 +19677,6 @@
       "status": "open"
     },
     {
-      "id": "todo-guest-curtain-motor",
-      "room": "guest",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
-      "status": "open"
-    },
-    {
       "id": "todo-guest-wardrobe",
       "room": "guest",
       "text": "選衣櫃門片色號",
@@ -19732,13 +19686,6 @@
       "id": "todo-guest-furniture",
       "room": "guest",
       "text": "買 MALM Queen 收納床與無輪書椅",
-      "status": "open"
-    },
-    {
-      "id": "todo-helper-curtain",
-      "room": "helper",
-      "text": "選電動窗簾：建議 Aqara C100",
-      "research": "curtain-motor",
       "status": "open"
     },
     {
@@ -19772,12 +19719,6 @@
       "room": "helper",
       "text": "買 IKEA STOFTMOLN 24 cm 2700K 吸頂燈",
       "research": "helper-fan-light",
-      "status": "open"
-    },
-    {
-      "id": "todo-helper-window",
-      "room": "helper",
-      "text": "定窄窗用軌道窗簾或電動捲簾",
       "status": "open"
     },
     {
