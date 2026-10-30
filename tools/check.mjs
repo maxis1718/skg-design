@@ -4,7 +4,7 @@ assert.equal(d.rooms.length,11);assert.equal(new Set(d.objects.map(o=>o.id)).siz
 for(const o of d.objects){assert(d.rooms.some(r=>r.id===o.room_id));const b=o.bounds_pt;assert(b.length===4&&b.every(Number.isFinite)&&b[0]<b[2]&&b[1]<b[3]);for(const axis of ['w','d'])assert(o.dimensions[axis].cm>0);}
 assert.deepEqual(d.roomVersions.kitchen.map(v=>v.id).sort(),['kitchen-current','kitchen-tower-left','kitchen-window-sink'],'kitchen needs schemes A, B and original');
 for(const v of d.roomVersions.kitchen){for(const[id,p]of Object.entries(v.objectOverrides)){assert(d.objects.some(o=>o.id===id));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}}
-assert.deepEqual(d.roomVersions.master.map(v=>v.id),['master-a','master-b'],'master needs schemes A and B');
+assert.deepEqual(d.roomVersions.master.map(v=>v.id).sort(),['master-a','master-b'],'master needs schemes A and B');
 for(const v of d.roomVersions.master){for(const[id,p]of Object.entries(v.objectOverrides||{})){assert(d.objects.some(o=>o.id===id&&o.room_id==='master'));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}for(const id of Object.keys(v.pointOverrides||{}))assert(d.electrical.points.some(p=>p.id===id),'master pointOverride for unknown point '+id);}
 new vm.Script(fs.readFileSync(path.join(root,'src','app.js'),'utf8'));
 const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');assert(!html.includes('每一寸，都有依據。'));assert(!/class="[^"]*unit-stamp/.test(html));assert(!html.includes('/*__'));assert(!html.includes('SKG_CLOUD_ENABLED=true'));
