@@ -5,6 +5,7 @@ for(const o of d.objects){assert(d.rooms.some(r=>r.id===o.room_id));const b=o.bo
 assert.deepEqual(d.roomVersions.kitchen.map(v=>v.id).sort(),['kitchen-current','kitchen-tower-left','kitchen-window-sink'],'kitchen needs schemes A, B and original');
 for(const v of d.roomVersions.kitchen){for(const[id,p]of Object.entries(v.objectOverrides)){assert(d.objects.some(o=>o.id===id));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}}
 assert.deepEqual(d.roomVersions.master.map(v=>v.id).sort(),['master-a','master-b'],'master needs schemes A and B');
+assert.deepEqual(d.roomVersions.living.map(v=>v.id),['console-a','console-b','console-c','console-d'],'living needs TV-console schemes A–D');for(const v of d.roomVersions.living)assert((d.elevations||{})[`tv-console@${v.layout}`],'missing tv-console elevation for '+v.id);
 for(const v of d.roomVersions.master){for(const[id,p]of Object.entries(v.objectOverrides||{})){assert(d.objects.some(o=>o.id===id&&o.room_id==='master'));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}for(const id of Object.keys(v.pointOverrides||{}))assert(d.electrical.points.some(p=>p.id===id),'master pointOverride for unknown point '+id);}
 new vm.Script(fs.readFileSync(path.join(root,'src','app.js'),'utf8'));
 const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');assert(!html.includes('每一寸，都有依據。'));assert(!/class="[^"]*unit-stamp/.test(html));assert(!html.includes('/*__'));assert(!html.includes('SKG_CLOUD_ENABLED=true'));
@@ -15,7 +16,7 @@ const checkViews=(id,views,units)=>{for(const v of views){assert(v,id+' referenc
 for(const[id,e]of Object.entries(E)){
   if(e.shared){checkUnits(id,e.units);checkViews(id,e.views,e.units);continue;}
   // 'objectId@layout' = layout-specific elevation (kitchen scheme B); the layout must exist in roomVersions.kitchen.
-  const[oid,lay]=id.split('@');assert(e.wall||d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert(d.roomVersions.kitchen.some(v=>v.layout===lay),'elevation for unknown layout '+id);
+  const[oid,lay]=id.split('@');assert(e.wall||d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert([...d.roomVersions.kitchen,...(d.roomVersions.living||[])].some(v=>v.layout===lay),'elevation for unknown layout '+id);
   if(e.alias)assert(E[e.alias]&&!E[e.alias].alias,id+' alias must point at a concrete elevation');
   const b=e.alias?{...E[e.alias],...e}:e,inc=b.include?E[b.include]:null;if(b.include)assert(inc?.shared,id+' include must be shared');
   const units={...(inc?.units||{}),...(b.units||{})},views=b.views.map(v=>typeof v==='string'?inc?.views.find(x=>x.id===v):v);

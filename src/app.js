@@ -42,12 +42,17 @@ selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('gue
 // Master-bedroom scheme (R63 swap): displayed A = master-b (bed on the curtain line, cot south; default), B = master-a (owner's sketch, bed to the wardrobe line). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
 const MASTER_KEYS={a:'master-b',b:'master-a'}; // R63: displayed A = master-b (bed north), B = master-a
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
+// TV-console game scheme (R67): A = console-a (vented drawers, default), B = console-b (lift-up flap), C = console-c (open niche), D = console-d (on top). URL ?console=a|b|c|d. Elevations 'objectId@console-x' override the living objects' elevation.
+const LIVING_KEYS={a:'console-a',b:'console-b',c:'console-c',d:'console-d'};
+selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
 function layoutSpec(){return (project.layouts||[]).find(l=>l.id===layoutId);}
 function guestVersions(){return project.roomVersions?.guest||[];}
 function masterVersions(){return project.roomVersions?.master||[];}
 function masterVersion(){const vs=masterVersions();return vs.find(v=>v.id===selectedVersions.master)||vs[0];}
+function livingVersions(){return project.roomVersions?.living||[];}
+function livingVersion(){const vs=livingVersions();return vs.find(v=>v.id===selectedVersions.living)||vs[0];}
 function guestVersion(){const vs=guestVersions();return vs.find(v=>v.id===selectedVersions.guest)||vs[0];}
 function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===selectedVersions.kitchen)||vs.find(v=>v.id===KITCHEN_KEYS.a)||vs[0];}
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
@@ -55,7 +60,7 @@ function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KE
 function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
 function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
-const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.id==='master'&&masterVersion()?{...r.notes,...masterVersion().notes}:r.notes;
+const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.id==='master'&&masterVersion()?{...r.notes,...masterVersion().notes}:r.id==='living'&&livingVersion()?{...livingVersion().notes,...r.notes}:r.notes;
 const note=(r,key)=>String(fieldsFor(r)?.[key]??'');
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
@@ -65,9 +70,11 @@ const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 // A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
+// Living objects follow the TV-console scheme: 'objectId@console-x' (also through an alias such as living-tv → tv-console).
+const pickElev=(all,id)=>all[id+'@'+kitchenVersion()?.layout]||all[id+'@'+livingVersion()?.layout]||all[id];
 function elevationFor(id){
- const all=project.elevations||{};let e=all[id+'@'+kitchenVersion()?.layout]||all[id];if(!e||e.shared||!window.SKGElevation)return null;
- if(e.alias){const{alias,...own}=e;e={...all[alias],...own};}
+ const all=project.elevations||{};let e=pickElev(all,id);if(!e||e.shared||!window.SKGElevation)return null;
+ if(e.alias){const{alias,...own}=e;e={...pickElev(all,alias),...own};}
  if(e.onlyLayouts&&!e.onlyLayouts.includes(kitchenVersion()?.layout))return null;
  if(e.include){const s=all[e.include];e={...e,units:{...(s?.units||{}),...(e.units||{})},views:e.views.map(v=>typeof v==='string'?s?.views.find(x=>x.id===v):v).filter(Boolean)};}
  return e;
@@ -214,7 +221,7 @@ function renderKitchenVersion(){
    tower.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,fill:'#d5c2a5','fill-opacity':'.65',stroke:'#8e704c','stroke-width':'.5'}));
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
  }
- renderGuestVersion();renderMasterVersion();
+ renderGuestVersion();renderMasterVersion();renderLivingVersion();
  $('#kitchen-version-group').hidden=roomId!=='kitchen';renderLayoutVersion();$('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
  const visible=new Set(visibleObjects().map(o=>o.id));
  $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);}});
@@ -234,6 +241,17 @@ function renderMasterVersion(){
  seg.innerHTML=masterVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-master-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
  $('#master-version-group').hidden=roomId!=='master';
  $$('[data-master-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.masterPlan!==v.layout));
+}
+function renderLivingVersion(){
+ const v=livingVersion(),seg=$('#living-version');if(!v||!seg){$('#living-version-group')&&($('#living-version-group').hidden=true);return;}
+ seg.setAttribute('aria-label',t('切換電視櫃方案'));
+ seg.innerHTML=livingVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-living-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
+ $('#living-version-group').hidden=roomId!=='living';
+}
+function chooseLivingVersion(id){
+ if(!livingVersions().some(v=>v.id===id)||id===livingVersion()?.id)return;selectedVersions.living=id;
+ const key=Object.keys(LIVING_KEYS).find(k=>LIVING_KEYS[k]===id),u=new URL(location.href);u.searchParams.set('console',key);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
+ selectRoom(roomId,{keepObject:true});
 }
 function chooseMasterVersion(id){
  if(!masterVersions().some(v=>v.id===id)||id===masterVersion()?.id)return;selectedVersions.master=id;
@@ -372,7 +390,7 @@ function renderDetails(){
     $('#elevation-slot').innerHTML='';$('#details-content').innerHTML=`<div class="room-grid">${project.rooms.map(r=>`<button class="room-index" data-open-room="${r.id}"><h3>${r.name}</h3><div class="room-index-dim">${roomSize(r)} cm${['master','living'].includes(r.id)?t(' · 主區'):''}</div><p class="room-index-focus">${r.focus}</p></button>`).join('')}</div>`;
     $$('[data-open-room]').forEach(b=>b.onclick=()=>{selectRoom(b.dataset.openRoom);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});return;
   }
-  const r=room(roomId),noteKeys=Object.keys(fieldsFor(r)||{}).filter(k=>note(r,k).trim()),risks=[...((r.id==='master'&&masterVersion()?.risks)||[]),...(r.risks||[]),...((r.id==='guest'&&guestVersion()?.risks)||[])];$('#details-title').textContent=r.name;
+  const r=room(roomId),noteKeys=Object.keys(fieldsFor(r)||{}).filter(k=>note(r,k).trim()),risks=[...((r.id==='master'&&masterVersion()?.risks)||[]),...((r.id==='living'&&livingVersion()?.risks)||[]),...(r.risks||[]),...((r.id==='guest'&&guestVersion()?.risks)||[])];$('#details-title').textContent=r.name;
   $('#elevation-slot').innerHTML=elevationBlock();$('#details-content').innerHTML=`<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>cm</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':num(p.horizontal_cm)+' × '}${num(p.vertical_cm)}</strong></div>`).join('')}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('整面立面')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-upper-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-upper-worktop">'+esc(object('kitchen-upper-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('tv-console')?'<button class="plain-button elev-link" data-elev-open="tv-console">'+t('電視牆 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath1'&&elevationFor('bath1-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath1-mirror-cabinet">'+t('主浴鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath2'&&elevationFor('bath2-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath2-mirror-cabinet">'+t('衛浴 2 鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='helper'&&elevationFor('helper-bed')?'<button class="plain-button elev-link" data-elev-open="helper-bed">'+t('收納床台 · 立面設計 ↗')+'</button>':''}</div>${noteKeys.length||risks.length?`<div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):r.id==='guest'&&guestVersions().length?esc(guestVersion().name)+t(' · 筆記'):t('設計筆記')}</h3></div>${riskBox(risks)}${noteKeys.map(key=>`<div class="note-field"><span class="note-key">${esc(t(key))}</span><p class="note-text">${esc(note(r,key))}</p></div>`).join('')}</div>`:''}</div>`;
   bindElevation();$$('[data-elev-open]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.elevOpen);$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});});
 }
@@ -403,6 +421,7 @@ $('#kitchen-version').addEventListener('click',e=>{const b=e.target.closest('[da
 $('#layout-version').addEventListener('click',e=>{const b=e.target.closest('[data-layout-version]');if(b)chooseLayout(b.dataset.layoutVersion);});
 $('#guest-version').addEventListener('click',e=>{const b=e.target.closest('[data-guest-version]');if(b)chooseGuestVersion(b.dataset.guestVersion);});
 $('#master-version').addEventListener('click',e=>{const b=e.target.closest('[data-master-version]');if(b)chooseMasterVersion(b.dataset.masterVersion);});
+$('#living-version').addEventListener('click',e=>{const b=e.target.closest('[data-living-version]');if(b)chooseLivingVersion(b.dataset.livingVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
 const DYNAMIC='#smart-block,#brief-list,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';

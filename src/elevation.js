@@ -488,9 +488,25 @@ function extras(g, list, state = ST) {
       if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h + fsz * .45, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.line, 'font-size':fsz});
       continue;
     }
+    // Ventilation slots milled into a front (vertical, e.pitch apart, e.slot wide) inside the box x, y, w, h.
+    if (e.type === 'vent') {
+      const p = e.pitch ?? 2, sl = e.slot ?? .5, n = Math.floor((e.w - sl) / p) + 1, x0 = e.x + (e.w - sl - (n - 1) * p) / 2;
+      for (let i = 0; i < n; i++) g.rect(x0 + i * p, e.y, sl, e.h, {fill:'#8d968f', stroke:'none', rx:sl / 2});
+      continue;
+    }
+    // Airflow arrow along e.pts: e.warm = exhaust (orange), otherwise intake (blue); arrowhead at the last point.
+    if (e.type === 'airflow') {
+      const col = e.color || (e.warm ? '#c9682e' : '#3f7fb0'), P = e.pts, [ax, ay] = P[P.length - 2], [bx, by] = P[P.length - 1];
+      g.path(`M${P.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}`, {fill:'none', stroke:col, 'stroke-width':.55, 'stroke-dasharray':'1.6 .9', 'stroke-linejoin':'round'});
+      const L = Math.hypot(bx - ax, by - ay) || 1, ux = (bx - ax) / L, uy = (by - ay) / L, k = e.head ?? 1.8;
+      const p1 = [bx - ux * k - uy * k * .55, by - uy * k + ux * k * .55], p2 = [bx - ux * k + uy * k * .55, by - uy * k - ux * k * .55];
+      g.path(`M${bx} ${g.Y(by)}L${p1[0]} ${g.Y(p1[1])}L${p2[0]} ${g.Y(p2[1])}Z`, {fill:col, stroke:'none'});
+      if (e.label) g.text(e.lx ?? bx, e.ly ?? by + fsz * .4, e.label, {'text-anchor':e.anchor || 'middle', fill:col, 'font-size':fsz});
+      continue;
+    }
     if (e.type === 'device' || e.type === 'cavity') {
       const cav = e.type === 'cavity';
-      g.rect(e.x, e.y, e.w, e.h, {fill:cav ? C.cavity : e.dashed ? 'none' : C.item, stroke:cav ? C.thin : e.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':e.dashed ? '1.4 1' : null, rx:cav ? 0 : .5});
+      g.rect(e.x, e.y, e.w, e.h, {fill:e.fill || (cav ? C.cavity : e.dashed ? 'none' : C.item), stroke:cav ? C.thin : e.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':e.dashed ? '1.4 1' : null, rx:cav ? 0 : .5});
       if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h / 2 - fsz * .35, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.line, 'font-size':fsz});
       continue;
     }
