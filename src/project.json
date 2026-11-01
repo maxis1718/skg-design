@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R67",
+    "revision": "R66",
     "unit": "cm",
     "date": "2026-10-31"
   },
@@ -4796,6 +4796,10 @@
     {
       "id": "C74",
       "text": "客房床改 HipVan Zephyr Queen 204 × 162，床墊 Origin Hybrid Queen 152 × 190；衣櫃到床 63、桌到床 83、床尾 43。"
+    },
+    {
+      "id": "C74",
+      "text": "廚房改電磁爐：點爐具可比較方案 A 60 cm（Brandt BPI6603B）與方案 B 5 口（Electrolux KIS87553IT）俯視圖。"
     }
   ],
   "measurement_policy": {
@@ -27107,7 +27111,7 @@
     {
       "id": "todo-living-av",
       "room": "living",
-      "text": "定遊戲機擺放：建議 A 通風抽屜（PS5 Pro 左抽、Switch 2 右抽）",
+      "text": "決定遊戲機",
       "status": "open"
     },
     {
@@ -27174,8 +27178,7 @@
     {
       "id": "todo-guest-furniture",
       "room": "guest",
-      "text": "買 HipVan Zephyr Queen 收納床、Origin Hybrid Queen 床墊與無輪書椅",
-      "research": "guest-bed",
+      "text": "買 MALM Queen 收納床與無輪書椅",
       "status": "open"
     },
     {
@@ -27238,34 +27241,6 @@
     }
   ],
   "research": {
-    "guest-bed": {
-      "title": "客房收納床與床墊",
-      "updated": "2026-10-31",
-      "summary": "選 HipVan Zephyr 4 Drawer Queen（S$899）配 Origin Hybrid Queen 152 × 190（S$799）。因為外框 204 × 162 比 MALM 短 5、窄 4，南側 2 抽能用，有床頭、橡木貼皮、5 年保固；最高的使用者 173 cm，190 長的床墊就夠。",
-      "body": "## 結論\n- **選：HipVan Zephyr 4 Drawer Queen** — 162 × 204 × 112，S$899，含組裝，5 年保固、100 天退貨；兩側各 2 抽，北側靠窗不用，南側 2 抽可用。\n- **床墊：Origin Hybrid Queen** — 152 × 190 × 25.4，S$799，試睡 120 晚、15 年保固。\n- **備選：IKEA MALM 高床＋2 收納箱** — 166 × 209，S$449；床墊配 Origin Hybrid Queen XL 150 × 200（S$939）。\n- 不考慮沒有床頭的床架（NORDLI、BRIMNES）。\n\n## 套進客房（247 × 300）\n| 床架 | 外框 | 床尾到牆 | 衣櫃到床 |\n|---|---|---|---|\n| Zephyr | 162 × 204 | 43 | 63 |\n| NORDLI | 160 × 202 | 45 | 65 |\n| GULLABERG | 161 × 208 | 39 | 64 |\n| MALM | 166 × 209 | 38 | 59 |\n\n- 床尾只有 38–45：床尾抽屜要 ≤ 36 深才拉得開，TONSTAD 床尾抽深 58 不行。\n- 使用者：岳母約 164 cm 常住，爸爸 173 cm 和阿姨偶爾來；身高加 15–20，190 長夠用。\n\n> ⚠️ Zephyr 抽屜位置與深度官網未列；靠床頭那格對衣櫃，間距 63。",
-      "sources": [
-        {
-          "title": "HipVan Zephyr 4 Drawer Queen Bed",
-          "url": "https://www.hipvan.com/products/zephyr-4-drawer-queen-bed-oak-grey-mist"
-        },
-        {
-          "title": "Origin Hybrid Mattress",
-          "url": "https://originmattress.com.sg/products/origin-hybrid-mattress"
-        },
-        {
-          "title": "IKEA MALM bed frame, high, w 2 storage boxes",
-          "url": "https://www.ikea.com/sg/en/p/malm-bed-frame-high-w-2-storage-boxes-white-stained-oak-veneer-luroey-s79200968/"
-        },
-        {
-          "title": "IKEA TONSTAD bed frame with storage",
-          "url": "https://www.ikea.com/sg/en/p/tonstad-bed-frame-with-storage-brown-stained-oak-veneer-50556921/"
-        },
-        {
-          "title": "Sealy Singapore mattress sizes",
-          "url": "https://www.sealy.com.sg/mattress-sizes"
-        }
-      ]
-    },
     "drying-rack": {
       "title": "客廳陽台電動曬衣架",
       "updated": "2026-10-29",
