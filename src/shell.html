@@ -9,9 +9,10 @@
 <body>
 <header class="masthead">
   <a class="brand" href="#floor"><span class="brand-mark">SKG</span></a>
-  <div class="edition"><button type="button" class="brief-btn" id="brief-btn" aria-expanded="false" aria-controls="brief-panel" aria-label="溝通重點" title="溝通重點">💡</button><nav class="lang-switch" aria-label="Language / 語言"><a href="?lang=zh" data-lang="zh" lang="zh-Hant">中文</a><a href="?lang=en" data-lang="en" lang="en">EN</a></nav><b>R31</b></div>
+  <div class="edition"><button type="button" class="brief-btn todo-btn" id="todo-btn" aria-expanded="false" aria-controls="todo-panel" aria-label="待拍板" title="待拍板">☑<span class="todo-badge" id="todo-badge"></span></button><button type="button" class="brief-btn" id="brief-btn" aria-expanded="false" aria-controls="brief-panel" aria-label="溝通重點" title="溝通重點">💡</button><nav class="lang-switch" aria-label="Language / 語言"><a href="?lang=zh" data-lang="zh" lang="zh-Hant">中文</a><a href="?lang=en" data-lang="en" lang="en">EN</a></nav><b>R31</b></div>
 </header>
 <div class="brief-panel" id="brief-panel" hidden><div class="brief-inner"><div class="brief-head"><h2>關鍵改動與溝通重點</h2><button type="button" class="tool" id="brief-close" aria-label="關閉">×</button></div><ol id="brief-list"></ol></div></div>
+<div class="brief-panel todo-panel" id="todo-panel" hidden><div class="brief-inner"><div class="brief-head"><h2>待拍板 · 要去看、去選的</h2><button type="button" class="tool" id="todo-close" aria-label="關閉">×</button></div><div id="todo-all"></div></div></div>
 <main>
   <nav class="tabs" role="tablist" aria-label="選擇空間" id="tabs"></nav>
   <section class="workspace" id="main-panel" role="tabpanel" aria-labelledby="tab-floor">

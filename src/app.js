@@ -411,9 +411,9 @@ function renderDetails(){
   $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
   $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{if(!showPower)$('#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
 }
-const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70'],[79,'R71']];
+const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70'],[79,'R71'],[80,'R72']];
 function buildReference(){
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R72'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R73'}</span>${esc(c.text)}</div>`).join('');
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
@@ -430,7 +430,7 @@ $('#master-version').addEventListener('click',e=>{const b=e.target.closest('[dat
 $('#living-version').addEventListener('click',e=>{const b=e.target.closest('[data-living-version]');if(b)chooseLivingVersion(b.dataset.livingVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#smart-block,#brief-list,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#tabs,#room-labels,#tooltip,#change-list,#kitchen-version,#drawing-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
+const DYNAMIC='#smart-block,#brief-list,#todo-all,#todo-badge,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#tabs,#room-labels,#tooltip,#change-list,#kitchen-version,#drawing-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -444,20 +444,29 @@ function setLang(next){
   if(next===LANG)return;LANG=next;project=withLayout(localize(projectSource));
   const u=new URL(location.href);u.searchParams.set('lang',LANG);history.replaceState(null,'',u.pathname+u.search+u.hash);
   for(const id of ['#room-zones','#room-labels','#object-fills','#object-hits'])$(id).replaceChildren();
-  applyStatic();buildTabs();buildPlan();buildReference();renderKitchenVersion();selectRoom(roomId,{keepObject:true});if(!$('#brief-panel').hidden)renderBrief();if($('#research-dialog').open)renderResearch(researchId);
+  applyStatic();buildTabs();buildPlan();buildReference();renderKitchenVersion();selectRoom(roomId,{keepObject:true});if(!$('#brief-panel').hidden)renderBrief();if(!$('#todo-panel').hidden)renderTodoPanel();if($('#research-dialog').open)renderResearch(researchId);
 }
 
 // R43 💡 key points: project.briefing [{text, go:[{room, kitchen?, guest?, object?}]}]; list maintained by hand.
 function goLabel(g){const r=room(g.room);let n=r?r.name:g.room;const v=g.kitchen?kitchenVersions().find(x=>x.id===g.kitchen):g.guest?guestVersions().find(x=>x.id===g.guest):null;return v?`${n} · ${shortV(v.name)}`:n;}
 function renderBrief(){const ol=$('#brief-list');if(!ol)return;ol.innerHTML=(project.briefing||[]).map((b,i)=>`<li><span>${esc(b.text)}</span><span class="brief-go">${(b.go||[]).map((g,j)=>`<button type="button" class="tool" data-brief="${i}:${j}">${esc(goLabel(g))} →</button>`).join('')}</span></li>`).join('');}
-function toggleBrief(open){const p=$('#brief-panel'),b=$('#brief-btn');if(!p)return;open=open??p.hidden;if(open)renderBrief();p.hidden=!open;b.setAttribute('aria-expanded',String(open));}
+function toggleBrief(open){const p=$('#brief-panel'),b=$('#brief-btn');if(!p)return;open=open??p.hidden;if(open){renderBrief();$('#todo-panel')&&($('#todo-panel').hidden=true);}p.hidden=!open;b.setAttribute('aria-expanded',String(open));}
 // R45: go.object selects that object after room/scheme (hash #object-…) and its elevation (first view) is scrolled into view.
 function jumpBrief(i,j){const g=project.briefing?.[i]?.go?.[j];if(!g)return;toggleBrief(false);if(g.kitchen)chooseKitchenVersion(g.kitchen);if(g.guest)chooseGuestVersion(g.guest);
  if(g.object&&object(g.object)){delete elevView[g.object];selectObject(g.object);}else{selectRoom(g.room);const id=elevId();if(id&&elevView[id]){delete elevView[id];refreshElevation();}}
  const target=$('#elevation')||$('#main-panel');target?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});}
 $('#brief-btn')?.addEventListener('click',()=>toggleBrief());$('#brief-close')?.addEventListener('click',()=>toggleBrief(false));
 $('#brief-list')?.addEventListener('click',e=>{const b=e.target.closest('[data-brief]');if(b){const[i,j]=b.dataset.brief.split(':').map(Number);jumpBrief(i,j);}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#brief-panel').hidden)toggleBrief(false);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#brief-panel').hidden)toggleBrief(false);if(e.key==='Escape'&&!$('#todo-panel').hidden)toggleTodoPanel(false);});
+// R73 ☑ all open todos across rooms (things the owner must go see / choose), grouped by room in tab order.
+function allOpenTodos(){return (project.todos||[]).filter(x=>x.status!=='done');}
+function renderTodoBadge(){const n=allOpenTodos().length,b=$('#todo-badge');if(b)b.textContent=n?String(n):'';}
+function renderTodoPanel(){const box=$('#todo-all');if(!box)return;const open=allOpenTodos(),order=['floor',...project.rooms.map(r=>r.id),SMART];const ids=[...new Set([...order.filter(id=>open.some(x=>x.room===id)),...open.map(x=>x.room)])];
+ box.innerHTML=ids.map(id=>{const r=room(id),name=id===SMART?t('智能家居'):id==='floor'?t('全屋'):(r?r.name:id);return `<section class="todo-group"><div class="todo-group-head"><h3>${esc(name)}</h3><button type="button" class="tool" data-todo-room="${esc(id)}">${esc(t('看房間'))} →</button></div><ul class="todo-list">${open.filter(x=>x.room===id).map(todoLi).join('')}</ul></section>`;}).join('')||`<p>${esc(t('無待拍板'))}</p>`;}
+function toggleTodoPanel(open){const p=$('#todo-panel'),b=$('#todo-btn');if(!p)return;open=open??p.hidden;if(open){toggleBrief(false);renderTodoPanel();}p.hidden=!open;b.setAttribute('aria-expanded',String(open));}
+$('#todo-btn')?.addEventListener('click',()=>toggleTodoPanel());$('#todo-close')?.addEventListener('click',()=>toggleTodoPanel(false));
+$('#todo-all')?.addEventListener('click',e=>{const r=e.target.closest('[data-research]');if(r){openResearch(r.dataset.research);return;}const g=e.target.closest('[data-todo-room]');if(g){toggleTodoPanel(false);selectRoom(g.dataset.todoRoom);$('#main-panel')?.scrollIntoView({behavior:'smooth',block:'start'});}});
+renderTodoBadge();
 // To-do + research: project.todos [{id, room ('floor' = whole home), text, research?, status open|done}], project.research {id: {title, updated, summary, body (md subset), sources [{title,url}]}}.
 // List sits under the plan card for the selected room; 調研 opens #research-dialog, URL ?research=<id>.
 // Smart-home tab body: summary + 完整調研, one <details> per category (closed), options with verdict badges and nested 細節 (md). Opening / hovering a category filters the plan to its kinds.

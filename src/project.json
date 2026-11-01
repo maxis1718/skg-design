@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R72",
+    "revision": "R73",
     "unit": "cm",
     "date": "2026-10-31"
   },
@@ -4810,6 +4810,10 @@
     {
       "id": "C80",
       "text": "電視櫃改兩方案：A 中格格柵上掀門藏 PS5 Pro（關門玩）、B 都放櫃面；電視暫定 Xiaomi 75；爐具建議 Brandt BPI2638UB；各方案加一句說明。"
+    },
+    {
+      "id": "C81",
+      "text": "右上新增 ☑ 待拍板總表：全屋要去看、去選的事，按房間分組。"
     }
   ],
   "measurement_policy": {
@@ -23109,6 +23113,12 @@
     }
   ],
   "todos": [
+    {
+      "id": "todo-home-paint",
+      "room": "floor",
+      "text": "選全屋牆面油漆色號",
+      "status": "open"
+    },
     {
       "id": "todo-smart-unifi",
       "room": "smart",

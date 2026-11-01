@@ -259,3 +259,7 @@ button.rc-pt:hover{background:var(--wash);filter:none}
 }
 @media print{.room-card,.obj-card,.home-room{break-inside:avoid;box-shadow:none}}
 html[lang=en] .rc-item{grid-template-columns:6.6em minmax(0,1fr) auto}
+
+/* R73 ☑ todo panel */
+.todo-btn{position:relative}.todo-badge{position:absolute;top:-6px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:#8a5a2b;color:#fff;font-size:10px;line-height:16px;font-weight:600}.todo-badge:empty{display:none}
+.todo-panel{background:#fbfcf8;border-bottom-color:var(--line)}#todo-all{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 28px}.todo-group{padding:8px 0;border-top:1px solid var(--line)}.todo-group-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:2px}.todo-group-head h3{margin:0;font-size:14px}.todo-group-head .tool{font-size:12px;min-height:26px;padding:2px 8px}
