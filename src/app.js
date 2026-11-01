@@ -25,7 +25,6 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const NS='http://www.w3.org/2000/svg';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:1});
-const statusNames={annotated:'原圖標註',scaled:'圖面估算',design:'設計配置',fit:'配適設計'};
 let elevView={},elevState='closed';
 let roomId='floor', objectId=null, showDims=true, showObjects=true;
 // Smart-home tab (#smart): not a room — whole-home plan with the ⚡ layer filtered to project.smart.categories[].kinds. smartCat = opened category, smartHover = hovered header.
@@ -60,12 +59,9 @@ function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KE
 function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
 function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
-const fieldsFor=r=>r.id==='kitchen'?kitchenVersion()?.notes||r.notes:r.id==='guest'&&guestVersion()?{...r.notes,...guestVersion().notes}:r.id==='master'&&masterVersion()?{...r.notes,...masterVersion().notes}:r.id==='living'&&livingVersion()?{...livingVersion().notes,...r.notes}:r.notes;
-const note=(r,key)=>String(fieldsFor(r)?.[key]??'');
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
-const statuses=o=>[...new Set(Object.values(o.dimensions).map(d=>t(statusNames[d.status])))].join(' / ');
 const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[222,224],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[495,141],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
@@ -356,58 +352,70 @@ function selectRoom(id,{keepObject=false}={}){
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
   const grp=objectId&&object(objectId)?.group;$$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId||(!!grp&&object(z.dataset.object)?.group===grp)));
   history.replaceState(null,'','#'+(objectId?'object-'+objectId:id));
-  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderInventory();renderSmart();renderTodos();hideTip();
+  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderSmart();renderTodos();hideTip();
 }
 function selectObject(id,{scroll=false}={}){
   const o=object(id);if(!o)return;objectId=id;powerId=null;selectRoom(o.room_id,{keepObject:true});
   if(scroll)$('#main-panel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
 }
+// R69: below the plan = power inspector (only for ⚡ points / home summary) + one card (home rooms / room plan / object) + elevation.
 function renderInspector(){
-  const node=$('#inspector');node.hidden=!objectId&&roomId==='floor'&&!showPower;
-  renderPowerLayer();
+  const node=$('#inspector');renderPowerLayer();
   if(powerOn()&&powerId&&!objectId&&powerPoint(powerId)){
-    const p=powerPoint(powerId);
+    const p=powerPoint(powerId);node.hidden=false;
     node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
     $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
   }
-  if(objectId){
-    const o=object(objectId),r=room(o.room_id),a=actual(o),dims=['w','d','h'].map(k=>a[k]),brand=[a.brand,a.model].filter(Boolean).join(' / ');
-    node.innerHTML=`<p class="eyebrow">${esc(o.code)}</p><h2>${esc(o.name)}</h2>${riskBox(o.risks)}<div class="big-number">${size(o)}<span>cm</span></div><div class="inspector-note">W × D · ${statuses(o)}</div>${o.source_note?`<p class="inspector-text">${esc(o.source_note)}</p>`:''}${dims.some(v=>v!=null)?`<div class="inspector-pair"><span>${t('實物')}</span><strong>${dims.map(v=>v==null?'—':num(v)).join(' × ')} cm</strong></div>`:''}${brand?`<div class="inspector-pair"><span>${t('品牌')} / ${t('型號')}</span><strong>${esc(brand)}</strong></div>`:''}<button class="inspector-button" id="return-room">${tf('回到{name}概覽',{name:r.name})}</button>`;
-    $('#return-room').onclick=()=>selectRoom(r.id);return;
-  }
-  if(isHome(roomId)){node.innerHTML=powerOn()&&project.electrical?powerSummary():'';bindPowerRows();return;}
-  const r=room(roomId),p=r.parts[0];
-  node.innerHTML=`<div class="big-number">${roomSize(r)}<span>cm</span></div><div class="inspector-note">${esc(p.label)}</div><p class="inspector-text">${r.focus}</p>${showPower&&project.electrical?`<hr class="inspector-rule">${powerSummary()}`:''}`;bindPowerRows();
+  const show=!objectId&&isHome(roomId)&&powerOn()&&!!project.electrical;node.hidden=!show;node.innerHTML=show?powerSummary():'';bindPowerRows();
 }
-const riskBox=rk=>rk?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t('需評估')}</h4><ul class="elev-risks">${rk.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
+const riskBox=(rk,title='需評估')=>rk?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t(title)}</h4><ul class="elev-risks">${rk.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
+// plan {summary, watch[], items[{label,value,object?,status 定|建議}], clearances[{label,value}], build[]}: schemes carry their own full copy.
+function planFor(r){if(!r)return null;const v=r.id==='kitchen'?kitchenVersion():r.id==='guest'?guestVersion():r.id==='master'?masterVersion():r.id==='living'?livingVersion():null;return v?.plan||r.plan||null;}
+const openTodos=id=>(project.todos||[]).filter(x=>x.room===id&&x.status!=='done').length;
+const roomPower=id=>powerPoints().filter(p=>powerRoom(p)===id).sort((a,b)=>String(a.code).localeCompare(String(b.code),'en',{numeric:true}));
+const scrollTo=el=>el?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
+const todosOf=id=>(project.todos||[]).filter(x=>x.room===id);
+const todoLi=x=>{const done=x.status==='done',r=x.research&&project.research?.[x.research];return `<li class="todo-item${done?' done':''}"><span class="todo-check" aria-hidden="true">${done?'✓':''}</span><span class="todo-text">${done?`<s>${esc(x.text)}</s>`:esc(x.text)}</span>${r?`<button type="button" class="research-link" data-research="${esc(x.research)}">${esc(t('調研 ↗'))}</button>`:''}</li>`;};
+// Home: each room = name + 「待拍板 n · 注意 n」 + its first open decisions (plan.summary is never shown).
+function homeCards(){
+  return `<div class="home-rooms">${project.rooms.map(r=>{const p=planFor(r),open=todosOf(r.id).filter(x=>x.status!=='done'),n=open.length,w=p?.watch?.length||0,counts=[n?`<span class="hc-todo">${esc(tf('待拍板 {n}',{n}))}</span>`:'',w?`<span class="hc-watch">${esc(tf('注意 {n}',{n:w}))}</span>`:''].filter(Boolean).join('<span aria-hidden="true"> · </span>');
+    return `<button type="button" class="home-room" data-open-room="${esc(r.id)}"><h3>${esc(r.name)}</h3>${counts?`<div class="hc-counts">${counts}</div>`:`<div class="hc-counts hc-none">${esc(t('無待拍板'))}</div>`}${n?`<ul class="hc-todos">${open.slice(0,2).map(x=>`<li>${esc(x.text)}</li>`).join('')}</ul>`:''}</button>`;}).join('')}</div>`;
+}
+// Room card order: 待拍板 (todos) → 注意 (watch) → 配置 (items) → 淨距 → 施工交代 → 電點.
+function roomCard(r){
+  const p=planFor(r)||{},pts=roomPower(r.id),DEC=t('定'),all=todosOf(r.id),open=all.filter(x=>x.status!=='done'),done=all.filter(x=>x.status==='done');
+  const items=(p.items||[]).map(it=>{const o=it.object&&object(it.object),el=o&&elevationFor(it.object),chip=it.status?`<span class="rc-chip ${it.status===DEC||it.status==='定'?'is-decided':'is-suggested'}">${esc(it.status)}</span>`:'';
+    const body=`<span class="rc-label">${esc(it.label)}</span><span class="rc-value">${esc(it.value)}${el?`<span class="rc-elev">${esc(t('立面 ↗'))}</span>`:''}</span>${chip}`;
+    return `<li>${o?`<button type="button" class="rc-item" data-open-object="${esc(it.object)}" title="${esc(it.label+' · '+it.value)}">${body}</button>`:`<div class="rc-item">${body}</div>`}</li>`;}).join('');
+  const sec=(cls,title,inner,n)=>inner?`<section class="rc-sec ${cls}"><h3>${esc(t(title))}${n?` <span class="rc-n">${n}</span>`:''}</h3>${inner}</section>`:'';
+  const todos=all.length?`${open.length?`<ul class="todo-list">${open.map(todoLi).join('')}</ul>`:`<p class="rc-none">${esc(t('無待拍板'))}</p>`}${done.length?`<details class="rc-done"><summary>${esc(tf('已完成 {n}',{n:done.length}))}</summary><ul class="todo-list">${done.map(todoLi).join('')}</ul></details>`:''}`:'';
+  const main=`${sec('rc-todos','待拍板',todos,open.length)}${sec('rc-items','配置',items&&`<ul>${items}</ul>`)}${sec('rc-clear','淨距',(p.clearances||[]).length&&`<ul>${p.clearances.map(c=>`<li><span>${esc(c.label)}</span><b>${esc(c.value)}</b></li>`).join('')}</ul>`)}`;
+  const side=`${p.watch?.length?`<div class="rc-watch">${riskBox(p.watch,'注意')}</div>`:''}${sec('rc-build','施工交代',(p.build||[]).length&&`<ul>${p.build.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}${pts.length?powerList(pts):''}`;
+  if(!main&&!side)return '';
+  return `<article class="room-card"><div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
+}
+function powerList(pts){return `<section class="rc-sec rc-power"><h3>${esc(t('電點'))} <span class="rc-n">${pts.length}</span></h3><ul>${pts.map(p=>`<li><button type="button" class="rc-pt" data-room-power="${esc(p.id)}"><i class="pk pk-${esc(p.kind)}" aria-hidden="true"></i><span class="rc-pt-code">${esc(p.code)}</span><span class="rc-pt-name">${esc(p.name)}</span><span class="rc-pt-mount">${esc(powerMount(p))}</span></button></li>`).join('')}</ul></section>`;}
+function objectCard(o){
+  const r=room(o.room_id),a=actual(o),h=a.h??o.dimensions.h?.cm,dims=`${size(o)}${h!=null?` × ${num(h)}`:''}`;
+  const model=a.model&&a.brand&&String(a.model).toLowerCase().includes(String(a.brand).toLowerCase())?a.model:[a.brand,a.model].filter(Boolean).join(' ');
+  return `<article class="obj-card"><p class="eyebrow">${esc(o.code)}</p><h2>${esc(o.name)}</h2><div class="obj-size">${dims}<span>cm</span></div>${model?`<p class="obj-model">${esc(model)}</p>`:''}${o.source_note?`<p class="obj-note">${esc(o.source_note)}</p>`:''}${riskBox(o.risks)}<button type="button" class="obj-back" data-open-room="${esc(r.id)}">← ${esc(tf('回到{name}',{name:r.name}))}</button></article>`;
+}
 function renderDetails(){
-  if(isHome(roomId)){
-    $('#details-title').textContent=t('空間索引');
-    $('#elevation-slot').innerHTML='';$('#details-content').innerHTML=`<div class="room-grid">${project.rooms.map(r=>`<button class="room-index" data-open-room="${r.id}"><h3>${r.name}</h3><div class="room-index-dim">${roomSize(r)} cm${['master','living'].includes(r.id)?t(' · 主區'):''}</div><p class="room-index-focus">${r.focus}</p></button>`).join('')}</div>`;
-    $$('[data-open-room]').forEach(b=>b.onclick=()=>{selectRoom(b.dataset.openRoom);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});return;
-  }
-  const r=room(roomId),noteKeys=Object.keys(fieldsFor(r)||{}).filter(k=>note(r,k).trim()),risks=[...((r.id==='master'&&masterVersion()?.risks)||[]),...((r.id==='living'&&livingVersion()?.risks)||[]),...(r.risks||[]),...((r.id==='guest'&&guestVersion()?.risks)||[])];$('#details-title').textContent=r.name;
-  $('#elevation-slot').innerHTML=elevationBlock();$('#details-content').innerHTML=`<div class="room-detail-grid"><div class="dimension-list"><div class="detail-subhead"><h3>${t('分區量測')}</h3><small>cm</small></div>${r.parts.map(p=>`<div class="dimension-row"><span>${esc(p.label)}</span><strong>${p.horizontal_cm===0?'':num(p.horizontal_cm)+' × '}${num(p.vertical_cm)}</strong></div>`).join('')}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-lower-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-lower-worktop">'+esc(object('kitchen-lower-worktop').name)+' · '+t('整面立面')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('kitchen-upper-worktop')?'<button class="plain-button elev-link" data-elev-open="kitchen-upper-worktop">'+esc(object('kitchen-upper-worktop').name)+' · '+t('空間規劃')+' ↗</button>':''}${!objectId&&r.id==='kitchen'&&elevationFor('appliance-tower')?'<button class="plain-button elev-link" data-elev-open="appliance-tower">'+t('電器櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='living'&&elevationFor('tv-console')?'<button class="plain-button elev-link" data-elev-open="tv-console">'+t('電視牆 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath1'&&elevationFor('bath1-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath1-mirror-cabinet">'+t('主浴鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='bath2'&&elevationFor('bath2-mirror-cabinet')?'<button class="plain-button elev-link" data-elev-open="bath2-mirror-cabinet">'+t('衛浴 2 鏡櫃 · 空間規劃 ↗')+'</button>':''}${!objectId&&r.id==='master'?'<button class="plain-button elev-link" data-elev-open="master-wardrobe-left">'+t('左側衣櫃 · 立面設計 ↗')+'</button><button class="plain-button elev-link" data-elev-open="master-wardrobe-right">'+t('右側衣櫃 · 立面設計 ↗')+'</button>':''}${!objectId&&r.id==='helper'&&elevationFor('helper-bed')?'<button class="plain-button elev-link" data-elev-open="helper-bed">'+t('收納床台 · 立面設計 ↗')+'</button>':''}</div>${noteKeys.length||risks.length?`<div class="notes-panel"><div class="detail-subhead"><h3>${r.id==='kitchen'?esc(kitchenVersion().name)+t(' · 筆記'):r.id==='guest'&&guestVersions().length?esc(guestVersion().name)+t(' · 筆記'):t('設計筆記')}</h3></div>${riskBox(risks)}${noteKeys.map(key=>`<div class="note-field"><span class="note-key">${esc(t(key))}</span><p class="note-text">${esc(note(r,key))}</p></div>`).join('')}</div>`:''}</div>`;
-  bindElevation();$$('[data-elev-open]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.elevOpen);$('#elevation')?.scrollIntoView({behavior:'smooth',block:'start'});});
+  const box=$('#details-content');
+  if(isHome(roomId)){$('#elevation-slot').innerHTML='';box.innerHTML=homeCards();}
+  else{box.innerHTML=objectId&&object(objectId)?objectCard(object(objectId)):roomCard(room(roomId));$('#elevation-slot').innerHTML=elevationBlock();bindElevation();}
+  $$('#details-content [data-open-room]').forEach(b=>b.onclick=()=>{const home=isHome(roomId);selectRoom(b.dataset.openRoom);if(home)scrollTo($('#main-panel'));});
+  $$('#details-content [data-open-object]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.openObject);scrollTo($('#elevation')||$('#details-content'));});
+  $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
+  $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{if(!showPower)$('#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
 }
-function renderInventory(){
-  const q=$('#object-search').value.trim().toLowerCase();const filtered=visibleObjects().filter(o=>(isHome(roomId)||o.room_id===roomId)&&`${o.name} ${o.code} ${o.id} ${room(o.room_id).name}`.toLowerCase().includes(q));
-  $('#inventory-title').textContent=isHome(roomId)?t('大型物件尺寸簿'):tf('{name} · 物件尺寸簿',{name:room(roomId).name});
-  $('#inventory-body').innerHTML=filtered.map(o=>{const r=room(o.room_id),a=actual(o);const vals=['w','d','h'].map(k=>a[k]==null?'—':num(a[k]));return `<tr data-item-row="${o.id}" class="${o.id===objectId?'is-selected':''}"><td><button data-open-object="${o.id}"><span class="item-code">${o.code}</span>${esc(o.name)}</button></td><td>${r.name}</td><td>${size(o)}</td><td><span class="status-tag ${/design|fit/.test(Object.values(o.dimensions).map(d=>d.status).join())?'design':''}">${statuses(o)}</span></td><td class="${vals.every(v=>v==='—')?'table-muted':''}">${vals.join(' × ')}</td><td class="table-muted">${esc([a.brand,a.model].filter(Boolean).join(' / ')||t('待提供'))}</td></tr>`;}).join('');
-  $('#no-results').hidden=filtered.length>0;$$('[data-open-object]').forEach(b=>b.onclick=()=>selectObject(b.dataset.openObject,{scroll:true}));
-}
+const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66']];
 function buildReference(){
-  const p=project.measurement_policy;
-  $('#measurement-policy').innerHTML=[['基準',p.basis],['原標',p.annotated],['估算',p.scaled],['配適',p.fit],['實物',p.actual],['校準',p.calibration],['範圍',p.scope]].map(([k,v])=>`<p><b>${t(k)}</b>${LANG==='en'?' ':'\u3000'}${esc(v)}</p>`).join('');
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${c.id} / ${Number(c.id.slice(1))<=3?'R02':Number(c.id.slice(1))<=6?'R03':Number(c.id.slice(1))<=7?'R04':Number(c.id.slice(1))<=8?'R05':Number(c.id.slice(1))<=9?'R06':Number(c.id.slice(1))<=11?'R07':Number(c.id.slice(1))<=12?'R08':Number(c.id.slice(1))<=13?'R09':Number(c.id.slice(1))<=14?'R10':Number(c.id.slice(1))<=15?'R11':Number(c.id.slice(1))<=16?'R12':Number(c.id.slice(1))<=18?'R13':Number(c.id.slice(1))<=19?'R14':Number(c.id.slice(1))<=20?'R15':Number(c.id.slice(1))<=21?'R16':Number(c.id.slice(1))<=22?'R17':Number(c.id.slice(1))<=23?'R18':Number(c.id.slice(1))<=24?'R19':Number(c.id.slice(1))<=25?'R20':Number(c.id.slice(1))<=26?'R21':Number(c.id.slice(1))<=27?'R22':Number(c.id.slice(1))<=28?'R23':Number(c.id.slice(1))<=29?'R24':Number(c.id.slice(1))<=30?'R25':Number(c.id.slice(1))<=31?'R26':Number(c.id.slice(1))<=32?'R27':Number(c.id.slice(1))<=33?'R28':Number(c.id.slice(1))<=34?'R29':Number(c.id.slice(1))<=35?'R30':Number(c.id.slice(1))<=36?'R31':Number(c.id.slice(1))<=37?'R32':Number(c.id.slice(1))<=39?'R33':Number(c.id.slice(1))<=42?'R34':Number(c.id.slice(1))<=43?'R35':Number(c.id.slice(1))<=44?'R36':Number(c.id.slice(1))<=45?'R37':Number(c.id.slice(1))<=46?'R38':Number(c.id.slice(1))<=47?'R39':Number(c.id.slice(1))<=48?'R40':Number(c.id.slice(1))<=49?'R41':Number(c.id.slice(1))<=50?'R42':Number(c.id.slice(1))<=51?'R43':Number(c.id.slice(1))<=52?'R44':Number(c.id.slice(1))<=53?'R45':Number(c.id.slice(1))<=54?'R46':Number(c.id.slice(1))<=55?'R47':Number(c.id.slice(1))<=56?'R48':Number(c.id.slice(1))<=57?'R49':Number(c.id.slice(1))<=58?'R50':Number(c.id.slice(1))<=59?'R51':Number(c.id.slice(1))<=60?'R52':Number(c.id.slice(1))<=61?'R53':Number(c.id.slice(1))<=62?'R54':Number(c.id.slice(1))<=63?'R55':Number(c.id.slice(1))<=64?'R56':Number(c.id.slice(1))<=65?'R57':Number(c.id.slice(1))<=66?'R58':Number(c.id.slice(1))<=67?'R59':Number(c.id.slice(1))<=68?'R60':Number(c.id.slice(1))<=69?'R61':Number(c.id.slice(1))<=70?'R62':Number(c.id.slice(1))<=71?'R63':Number(c.id.slice(1))<=72?'R64':Number(c.id.slice(1))<=73?'R65':Number(c.id.slice(1))<=75?'R66':'R68'}</span>${esc(c.text)}</div>`).join('');
-  const names={'master-balcony':'主臥陽台','living-balcony':'客廳陽台',bath1:'主臥衛浴 1',bath2:'衛浴 2','ac-ledge-west':'西側冷氣平台','ac-ledge-south':'南側冷氣平台'};
-  const notes={'master-balcony':'右下有缺角，為最大內跨度。','living-balcony':'滑門線有階差，中央深度再增加約 10 cm。',bath1:'不規則；主要區約 243 × 198，最大外框約 285 × 218 cm。',bath2:'不規則；為最大內跨度，下半區約 247 × 107 cm。','ac-ledge-west':'主體內側跨度，含平台區，非居住空間。','ac-ledge-south':'主體內側跨度，未加入右側小凹位。'};
-  $('#auxiliary-list').innerHTML=`<div class="auxiliary-grid">${project.auxiliary.spaces.map(s=>{const p=s.parts[0];return `<div>${t(names[s.id])} · ${Math.round(p.horizontal_cm)} × ${Math.round(p.vertical_cm)} cm<small>${t(notes[s.id])}</small></div>`;}).join('')}</div>`;
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R68'}</span>${esc(c.text)}</div>`).join('');
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
 $('#toggle-power').onclick=()=>{showPower=!showPower;powerId=null;const u=new URL(location.href);if(showPower)u.searchParams.set('power','1');else u.searchParams.delete('power');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderInspector();};
-$('#object-search').addEventListener('input',renderInventory);
 $('#show-source').onclick=()=>{$('#source-dialog').showModal();};$('#close-source').onclick=()=>$('#source-dialog').close();
 $$('[data-source]').forEach(b=>b.onclick=()=>{$$('[data-source]').forEach(x=>x.classList.toggle('active',x===b));$('#source-image').src=originalSources[b.dataset.source];$('#source-caption').textContent=b.dataset.source==='new'?t('新格局來源。原圖保留原始標註（mm）；互動圖冊已統一換算 cm。'):t('原始格局，僅作比較與 5 m 比例尺校驗。原 PDF 圖面與文字為左右鏡像，此處忠實保留。');});
 $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
@@ -420,7 +428,7 @@ $('#master-version').addEventListener('click',e=>{const b=e.target.closest('[dat
 $('#living-version').addEventListener('click',e=>{const b=e.target.closest('[data-living-version]');if(b)chooseLivingVersion(b.dataset.livingVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#smart-block,#brief-list,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#inventory-body,#tabs,#room-labels,#tooltip,#measurement-policy,#change-list,#auxiliary-list,#kitchen-version,#drawing-title,#details-title,#inventory-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
+const DYNAMIC='#smart-block,#brief-list,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#tabs,#room-labels,#tooltip,#change-list,#kitchen-version,#drawing-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
@@ -460,8 +468,9 @@ function renderSmart(){const box=$('#smart-block');if(!box)return;const s=projec
  box.addEventListener('toggle',e=>{const d=e.target;if(!d.matches?.('.smart-cat'))return;const id=d.dataset.smartCat;if(d.open)smartCat=id;else if(smartCat===id)smartCat=[...box.querySelectorAll('.smart-cat[open]')].pop()?.dataset.smartCat||null;renderPowerLayer();},true);
  box.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return;const id=e.target.closest('.smart-cat>summary')?.parentElement.dataset.smartCat||null;if(id!==smartHover){smartHover=id;renderPowerLayer();}});
  box.addEventListener('pointerleave',()=>{if(smartHover){smartHover=null;renderPowerLayer();}});}}
-function renderTodos(){const box=$('#todo-block');if(!box)return;const items=(project.todos||[]).filter(x=>x.room===roomId);box.hidden=!items.length;$('#todo-count').textContent=items.length?String(items.length):'';
- $('#todo-list').innerHTML=items.map(x=>{const done=x.status==='done',r=x.research&&project.research?.[x.research];return `<li class="todo-item${done?' done':''}"><span class="todo-check" aria-hidden="true">${done?'✓':''}</span><span class="todo-text">${done?`<s>${esc(x.text)}</s>`:esc(x.text)}</span>${r?`<button type="button" class="research-link" data-research="${esc(x.research)}">${esc(t('調研 ↗'))}</button>`:''}</li>`;}).join('');}
+// R69: rooms show their todos at the top of the room card (待拍板); the block under the plan stays only for home / smart.
+function renderTodos(){const box=$('#todo-block');if(!box)return;const items=isHome(roomId)?(project.todos||[]).filter(x=>x.room===roomId):[];box.hidden=!items.length;$('#todo-count').textContent=items.length?String(items.length):'';
+ $('#todo-list').innerHTML=items.map(todoLi).join('');}
 function mdInline(s){return s.split(/(`[^`]+`)/).map(p=>p.length>1&&p[0]==='`'&&p.endsWith('`')?`<code>${p.slice(1,-1)}</code>`:p.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')).join('');}
 // Safe markdown subset: escape everything first, then ## / ### headings, - bullets (nest by 2 spaces), | tables | (first row = header), **bold**, `code`, [text](https://…).
 function md(src){const lines=esc(src).split('\n'),out=[];let depth=0,i=0;const close=d=>{while(depth>d){out.push('</li></ul>');depth--;}};
