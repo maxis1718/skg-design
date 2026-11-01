@@ -120,7 +120,7 @@ function buildPlan(){
   buildPower();
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
-const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',curtain:'電動窗簾',switch:'智能開關',scene:'一鍵全關'};
+const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'一鍵全關'};
 const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
@@ -136,7 +136,6 @@ function powerGlyph(p){
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
   else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
-  else if(p.kind==='curtain'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.9,fill:V}),svgEl('path',{d:'M-1.2 -1.1v2.2M0 -1.1v2.2M1.2 -1.1v2.2',stroke:'#fff','stroke-width':.45}),svgEl('circle',{cx:2.4,cy:-2.4,r:1.05,fill:O,stroke:'#fff','stroke-width':.3}));}
   else if(p.kind==='switch'){g.append(svgEl('rect',{x:-2.1,y:-2.1,width:4.2,height:4.2,rx:.5,fill:'#fff',stroke:V,'stroke-width':.6}),svgEl('rect',{x:-.55,y:-1.25,width:1.1,height:2.5,rx:.3,fill:V}));}
   else if(p.kind==='scene'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.6,fill:V}),svgEl('path',{d:'M-.95 -.75A1.3 1.3 0 1 0 .95 -.75M0 -1.5V0',fill:'none',stroke:'#fff','stroke-width':.45,'stroke-linecap':'round'}));}
   else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
@@ -151,8 +150,6 @@ function buildPower(){
   const under=svgEl('g',{class:'power-under'});
   const pts=powerPoints();
   for(const p of pts){
-    if(p.kind==='curtain'&&p.pocket){const[x0,y0,x1,y1]=p.pocket,vert=x1-x0<y1-y0;under.append(svgEl('rect',{'data-kind':'curtain',class:'curtain-pocket',x:x0,y:y0,width:x1-x0,height:y1-y0}));
-      for(const f of [.32,.68]){under.append(svgEl('path',{'data-kind':'curtain',class:'curtain-track',d:vert?`M${x0+(x1-x0)*f} ${y0}V${y1}`:`M${x0} ${y0+(y1-y0)*f}H${x1}`}));}}
     if(p.kind==='ap')under.append(svgEl('circle',{'data-kind':'ap',cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
     if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
       under.append(svgEl('path',{'data-kind':'camera',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
@@ -178,12 +175,10 @@ function recordTable(head,rows,first=false){
 }
 function recordAuto(kind){
   const pts=powerPoints(),open=p=>({id:p.id,kind:p.kind,label:p.code});
-  if(kind==='curtain'){const ps=pts.filter(p=>p.kind==='curtain'),ks=['軌長','軌道／馬達','馬達端','窗簾盒淨深'];
-    return recordTable([t('編號'),t('位置'),...ks.map(t)],ps.map(p=>[open(p),p.place,...ks.map(k=>specOf(p,t(k))||specOf(p,k))]),true);}
   if(kind==='switch'){const ps=pts.filter(p=>p.kind==='scene'||p.kind==='switch');
     return recordTable([t('編號'),t('位置'),t('鍵數'),t('控制')],ps.map(p=>[open(p),p.place,specOf(p,t('鍵數'))||specOf(p,'鍵數'),specOf(p,t('控制'))||specOf(p,'控制')]),true);}
-  if(kind==='power'){const ps=pts.filter(p=>['socket','ceiling-power','curtain'].includes(p.kind));
-    return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,p.kind==='curtain'?t('13A 插座 · 窗簾盒'):t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
+  if(kind==='power'){const ps=pts.filter(p=>['socket','ceiling-power'].includes(p.kind));
+    return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
   return '';
 }
 function renderSmartRecord(){

@@ -25300,7 +25300,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・電動窗簾：全屋各房，客廳、主臥、小孩房、書房、客房，馬達端窗簾盒內留 13A 插座\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -25333,10 +25333,6 @@
       {
         "label": "UniFi G5 Flex",
         "url": "https://techspecs.ui.com/unifi/cameras-nvrs/uvc-g5-flex"
-      },
-      {
-        "label": "Aqara Curtain Driver E1",
-        "url": "https://www.aqara.com/en/product/curtain-driver-e1/"
       },
       {
         "label": "Aqara H1 EU (with neutral)",
@@ -25520,7 +25516,7 @@
         "mount": 30,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：主路由，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與窗簾馬達\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：主路由，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
@@ -25589,275 +25585,6 @@
         "name": "Wi-Fi AP · 走廊",
         "product": "UniFi U7 Lite",
         "notes": "・在客房門外，北側兩房門之間\n・主臥床頭約 5.8 m 隔一道牆，預估 −48 dBm；主臥西北角 −64、主浴 −59\n・小孩房、客房、書房、客衛約 2.5–3.7 m 各隔一道牆，預估 −40 至 −45 dBm\n・按摩椅與客房追劇都在這顆範圍內"
-      },
-      {
-        "id": "ct-living",
-        "code": "CT-01",
-        "kind": "curtain",
-        "x": 582.3,
-        "y": 174.5,
-        "pocket": [
-          425.64,
-          171.64,
-          584.4,
-          177.31
-        ],
-        "place": "客餐廳 · 陽台落地門",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 客餐廳",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D） ×2",
-        "specs": [
-          [
-            "軌長",
-            "560 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "雙軌 · 2 顆馬達"
-          ],
-          [
-            "馬達端",
-            "東端 · 電視牆側"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "20 cm"
-          ]
-        ],
-        "notes": "・紗簾與遮光簾都電動，中分，兩側收攏\n・左喇叭腳架距玻璃 23.7，離窗簾盒 3.7\n・電視櫃、沙發北端距玻璃 50\n・餐桌 Tripp Trapp 拉出時距玻璃約 10，會碰到垂下的窗簾\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達"
-      },
-      {
-        "id": "ct-master",
-        "code": "CT-02",
-        "kind": "curtain",
-        "x": 265.8,
-        "y": 188,
-        "pocket": [
-          185.52,
-          185.92,
-          267.72,
-          190.17
-        ],
-        "place": "主臥 · 陽台門",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 主臥",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "290 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "東端 · 離床頭遠"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ],
-        "notes": "・單軌遮光簾電動，不做紗簾：窗簾盒 15，Aqara 要求雙軌 ≥ 20\n・床北緣貼窗簾盒 15，簾布不碰床\n・開簾往西收，東端約 35 留給陽台門\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達"
-      },
-      {
-        "id": "ct-kid",
-        "code": "CT-03",
-        "kind": "curtain",
-        "x": 342.4,
-        "y": 146.9,
-        "pocket": [
-          273.36,
-          144.76,
-          344.28,
-          149.01
-        ],
-        "place": "小孩房 · 北窗",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 小孩房",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "250 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "東端 · 門側"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ],
-        "notes": "・單軌遮光簾電動，不做紗簾：窗簾盒 15，Aqara 要求雙軌 ≥ 20\n・床位待定：床離窗至少 15\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達"
-      },
-      {
-        "id": "ct-ne",
-        "code": "CT-04",
-        "kind": "curtain",
-        "x": 351.8,
-        "y": 146.9,
-        "pocket": [
-          349.92,
-          144.76,
-          420,
-          149.01
-        ],
-        "place": "客房 · 北窗",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 客房",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "247 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "西端 · 床尾側"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ],
-        "notes": "・單軌遮光簾電動，不做紗簾：窗簾盒 15，Aqara 要求雙軌 ≥ 20\n・床離窗 15，正好留給窗簾盒\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達",
-        "onlyLayout": [
-          "layout-b"
-        ]
-      },
-      {
-        "id": "ct-s",
-        "code": "CT-05",
-        "kind": "curtain",
-        "x": 342.4,
-        "y": 346.75,
-        "pocket": [
-          273.36,
-          344.63,
-          344.28,
-          348.88
-        ],
-        "place": "客房 · 南窗",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 客房",
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "250 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "東端 · 床尾側"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ],
-        "notes": "・單軌遮光簾電動，不做紗簾：窗簾盒 15，Aqara 要求雙軌 ≥ 20\n・床離窗 15，正好留給窗簾盒\n・230 V 有線馬達，Zigbee，進 Apple Home",
-        "use": "窗簾馬達",
-        "onlyLayout": [
-          "layout-a"
-        ]
-      },
-      {
-        "id": "rs-ne",
-        "code": "P-04",
-        "kind": "ceiling-power",
-        "x": 352,
-        "y": 147.6,
-        "place": "書房 · 北窗西端天花",
-        "mount": "ceiling",
-        "name": "預留電源 · 書房窗簾",
-        "onlyLayout": [
-          "layout-a"
-        ],
-        "use": "預留窗簾",
-        "notes": "・窗簾盒位置預留 13A 插座，先不裝馬達\n・按摩椅離窗 10，要做窗簾需先把椅子往內移"
-      },
-      {
-        "id": "ct-study",
-        "code": "CT-06",
-        "kind": "curtain",
-        "x": 342,
-        "y": 346,
-        "place": "書房 · 南窗東端天花",
-        "mount": "ceiling",
-        "name": "電動窗簾 · 書房",
-        "onlyLayout": [
-          "layout-b"
-        ],
-        "notes": "・落地窗用一般布簾，不用百葉\n・單軌遮光簾電動，不做紗簾：窗簾盒 15，Aqara 要求雙軌 ≥ 20\n・按摩椅原本離窗 10，窗簾盒 15 需把椅子往內移 ≥ 5",
-        "pocket": [
-          273.36,
-          344.63,
-          344.28,
-          348.88
-        ],
-        "product": "Aqara 窗簾馬達 C100（CD-M15D）",
-        "specs": [
-          [
-            "軌長",
-            "250 cm 牆到牆"
-          ],
-          [
-            "軌道／馬達",
-            "單軌 · 1 顆馬達"
-          ],
-          [
-            "馬達端",
-            "東端"
-          ],
-          [
-            "供電",
-            "窗簾盒內 13A 插座"
-          ],
-          [
-            "窗簾盒淨深",
-            "15 cm"
-          ]
-        ]
       },
       {
         "id": "sc-entry",
@@ -26696,34 +26423,6 @@
           ]
         },
         {
-          "id": "curtain",
-          "title": "電動窗簾",
-          "auto": "curtain",
-          "text": "・馬達：Aqara 窗簾馬達 C100（CD-M15D），Zigbee 進 Hub M3、再進 Apple Home，可切 Matter over Thread；≤27 dB，長 161 mm，負重 50 kg，100–240 V；新加坡價格與貨期待確認\n・備選 CD-M01D：S$299，本地現貨，C100 趕不上裝修時用\n・臥室與書房單軌遮光簾電動、不做紗簾（盒深 15，Aqara 雙軌要 ≥ 20）；客廳盒深 20 雙軌，兩層都電動\n・窗簾盒淨深：臥室 15，配合床離窗 15；客廳 20\n・電源：馬達端窗簾盒內留 13A 插座，接插座迴路\n・不選 Curtain Driver E1：電池外掛、60–65 dB，只適合舊軌改裝\n・本地窗簾店常配 Dooya／Somfy：要指定 Zigbee 3.0 或 Matter 版才能進 Aqara／Apple Home",
-          "sources": [
-            {
-              "label": "Aqara Curtain Controller C100 (CD-M15D)",
-              "url": "https://www.aqara.com/en/product/curtain-controller-c100/"
-            },
-            {
-              "label": "Harvey Norman SG · Aqara 窗簾馬達 CD-M01D",
-              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-curtain-motor-with-2m-track-and-installation-white-cd-m01d.html"
-            },
-            {
-              "label": "CD-M01D 經銷商規格",
-              "url": "https://www.yohohongkong.com/en-us/product/113444-Aqara-Smart-Curtain-Motor-Zigbee-Opening-and-Closing-Curtain-Version-CD-M01D-Clean-Machine-Apple-Homekit"
-            },
-            {
-              "label": "Aqara Curtain Driver E1",
-              "url": "https://www.aqara.com/en/product/curtain-driver-e1/"
-            },
-            {
-              "label": "Harvey Norman SG · Curtain Driver E1",
-              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-e1-smart-curtain-driver-track-version-white-cm-m01.html"
-            }
-          ]
-        },
-        {
           "id": "switch",
           "title": "智能開關",
           "auto": "switch",
@@ -26759,14 +26458,14 @@
         {
           "id": "todo",
           "title": "待確認",
-          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10，窗簾盒 15：椅子往內移 ≥ 5\n・C100 新加坡價格與貨期\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP（示意）"
+          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10，窗簾盒 15：椅子往內移 ≥ 5\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP（示意）"
         }
       ]
     }
   },
   "smart": {
     "title": "智能家居",
-    "summary": "Apple Home 為唯一日常 App；Aqara Hub M3 走 Zigbee 帶開關、窗簾、感應器與燈條，已有的 HomePod mini 當家居中樞。Matter over Thread 留作退路，等新加坡本地貨成熟再擴充。",
+    "summary": "Apple Home 為唯一日常 App；Aqara Hub M3 走 Zigbee 帶開關、感應器與燈條，已有的 HomePod mini 當家居中樞。Matter over Thread 留作退路，等新加坡本地貨成熟再擴充。",
     "research": "smart-home",
     "categories": [
       {
@@ -26853,7 +26552,7 @@
             "name": "Aqara H1 EU 有零線（WS-EUK03／WS-EUK04）",
             "verdict": "pick",
             "summary": "Zigbee 進 M3、再進 Apple Home；單鍵 S$55、雙鍵 S$60，Harvey Norman SG 有售",
-            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，窗簾與感應器訊號更穩\n- 大門一鍵全關：右鍵轉為無線開關；單擊由 M3 本機關全屋燈（斷網也有效），長按觸發 Apple Home「離家」\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
+            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，感應器訊號更穩\n- 大門一鍵全關：右鍵轉為無線開關；單擊由 M3 本機關全屋燈（斷網也有效），長按觸發 Apple Home「離家」\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
           },
           {
             "name": "Aqara Z1 Pro",
@@ -26866,34 +26565,6 @@
             "verdict": "no",
             "summary": "H2 EU 用 55 mm 模組框，不配英式盒；SmartSetup 只在 Amazon.sg，保固不明",
             "details": "- 兩者都是 Matter over Thread，可直進 Apple Home，但新加坡沒有穩定的本地售後\n- 無零線開關有最低負載與 LED 閃爍問題，一律用有零線"
-          }
-        ]
-      },
-      {
-        "id": "curtain",
-        "name": "電動窗簾",
-        "kinds": [
-          "curtain"
-        ],
-        "pick": "Aqara C100 走 Zigbee 進 M3，與開關同一個網，一鍵全關可一起關簾",
-        "options": [
-          {
-            "name": "Aqara Curtain Controller C100（CD-M15D）",
-            "verdict": "pick",
-            "summary": "≤27 dB，長 161 mm；Zigbee 為主，Matter over Thread 當 M3 故障時的退路",
-            "details": "- 詳見電動窗簾研究\n- 直接走 Thread 進 Apple Home 也可，但會繞過 M3，H1 開關與本機自動化要跨生態，不如 Zigbee 單純\n- 新加坡價格與貨期待確認"
-          },
-          {
-            "name": "Aqara CD-M01D",
-            "verdict": "alt",
-            "summary": "S$299，本地現貨；C100 趕不上裝修時用",
-            "details": "- 同樣 Zigbee 進 M3，機身 346 mm 較長\n- 沒有 Matter"
-          },
-          {
-            "name": "Somfy / Dooya 窗簾店標配",
-            "verdict": "no",
-            "summary": "需要 TaHoma 或另一個中樞，多一套 App",
-            "details": "- 除非指定 Zigbee 3.0 或 Matter 版，否則進不了 Apple Home"
           }
         ]
       },
@@ -27077,13 +26748,6 @@
       "status": "open"
     },
     {
-      "id": "todo-smart-curtains",
-      "room": "smart",
-      "text": "買 Aqara C100 窗簾馬達 ×6（客廳 2、主臥、小孩房、書房、客房）",
-      "research": "curtain-motor",
-      "status": "open"
-    },
-    {
       "id": "todo-smart-icloud",
       "room": "smart",
       "text": "升級 iCloud+ 200 GB 開 HKSV",
@@ -27092,7 +26756,7 @@
     {
       "id": "todo-smart-all-off",
       "room": "smart",
-      "text": "定一鍵全關的範圍：燈、窗簾、插座",
+      "text": "定一鍵全關的範圍：燈、插座",
       "status": "open"
     },
     {
@@ -27346,82 +27010,6 @@
         }
       ]
     },
-    "curtain-motor": {
-      "title": "電動窗簾電機選擇",
-      "updated": "2026-10-29",
-      "summary": "選 Aqara Curtain Controller C100（CD-M15D）。因為 Zigbee 直連 Hub M3 並可切 Matter over Thread、≤27 dB 適合臥室、機身只有舊款一半；臥室 15 cm 窗簾盒改單軌電動遮光簾；新加坡貨期趕不上就用 Aqara Smart Curtain Controller（ZNCLDJ11LM）。",
-      "body": "## 結論\n- **選：Aqara Curtain Controller C100（CD-M15D，國際版）**（新加坡價格待確認；陸版 Aqara 智能窗帘电机 C100 ¥399／Aqara SG Experience Centre、HomeSmart）— Zigbee 直連 Hub M3，可切 Matter over Thread，≤27 dB，機身長 161 mm，不到舊款一半。\n- **臥室 15 cm 窗簾盒放不下雙軌 → 改單軌**：Aqara 官方要求窗簾盒內寬單軌 ≥ 4 in（約 10 cm）、雙軌 ≥ 8 in（約 20 cm）。主臥 CT-02、兒童房 CT-03、客房 CT-04、書房 CT-06 床與家具離窗約 15，盒加深到 20 簾子會碰到家具。所以這四間在 15 cm 盒內只裝 1 條 C100 軌道掛遮光簾；紗簾取消。客廳要雙層就把盒做到 ≥ 20。\n- **備選：Aqara Smart Curtain Controller（ZNCLDJ11LM，Harvey Norman 標 CD-M01D）**（PFE S$299 電機、有現貨；HomeSmart 含軌道安裝 S$409–999）— C100 在新加坡沒貨或趕不上裝修時用；同樣 Zigbee 進 M3。\n- **不選：Aqara 智能隐形窗帘电机 C200**（¥499 起）— 只在中國賣（陸版、區域鎖），國際版 Hub M3 配不到，無本地保固。\n- **不選：Aqara Curtain Driver E1** — 電池外掛式，60–65 dB、載重低，適合舊軌改裝，不適合新做窗簾盒。\n- **不選：Somfy Glydea Ultra / SwitchBot Curtain 3** — 進不了 Aqara Home（要 TaHoma／SwitchBot Hub），多一套 App。\n\n## 評判標準\n- **生態整合**：Zigbee 直接配 Hub M3，經 M3 橋接進 Apple Home，和 H1 開關一起在 Apple Home 控制；一鍵全關等本機自動化在 M3 上跑；Matter 僅作備援。\n- **噪音**：臥室 ≤ 30 dB，晚上自動關簾不吵醒小孩。\n- **隱藏與尺寸**：官方要求窗簾盒內寬單軌 ≥ 10 cm、雙軌 ≥ 20 cm；電機垂直掛在軌道端，越短越不露。\n- **電源**：100–240 V；附 1 m 線、不附插頭 → 電機端要 13A 插座或直接接線。\n- **載重與軌長**：遮光布 + 襯布 50 kg 以內足夠；長軌需訂製並確認無接縫卡頓。\n- **手拉啟動與斷電**：輕拉即自動開關；斷電後能手拉，長時間停電可能需重新校準行程。\n- **本地售後**：新加坡代理 12–24 個月保固、可上門安裝與維修。\n- **牆面按鍵**：日常用實體按鍵開關窗簾，不靠手機。\n\n## 比較\n| 標準 | C100 | ZNCLDJ11LM | C200 |\n|---|---|---|---|\n| 進 Hub M3 | Zigbee 直連 | Zigbee 直連 | 不可 |\n| Matter | Thread | 無 | 待確認 |\n| 噪音 | ≤27 dB | <30 dB | 29 dB |\n| 機身 | 長 161 mm | 長 346 mm | 高 55 mm |\n| 電壓 | 100–240 V | 100–240 V | 中國 220 V |\n| 載重 | 50 kg（經銷商） | 50 kg | 50 kg |\n| 手拉啟動 | 有 | 有 | 有 |\n| SG 價格 | 待確認 | S$299 | 無售 |\n\n| 標準 | E1 驅動器 | Glydea Ultra | SwitchBot 3 |\n|---|---|---|---|\n| 類型 | 電池外掛 | 有線軌道 | 電池外掛 |\n| 進 Hub M3 | 可 | 不可 | 不可 |\n| 噪音 | 60–65 dB | 30–45 dBA | <25 dB |\n| 載重 | 12 kg | 60 kg | 15 kg |\n\n## 要先做的事\n- **先定電機再做軌道**：不同型號軌道不通用（C100 用 DT82 驅動口）；訂製軌道約 2 週。\n- **問 C100 貨期**：WhatsApp Aqara SG（PFE）+65 8840 4660 或 HomeSmart +65 8876 8104；Experience Centre 24 Keong Saik Road，每日 10am–7pm（公眾假期休），建議預約。問現貨、單價、雙軌套裝與保固年限。\n- **告訴電工**：每條電動軌在窗簾盒內電機端裝 1 個 13A 插座（雙軌窗用雙位插座），或改接 fused spur 直接接線；窗簾盒內不用轉接頭。\n- **告訴木工**：臥室 CT-02／03／04／06 維持 15 cm 盒、單軌；客廳雙軌盒 ≥ 20 cm（建議 22–25 cm）；C100 不支援石膏板天花，軌道要鎖在混凝土或木作補強上。\n- **牆面按鍵**：每間房的 H1 開關留一鍵設成「無線開關」，在 Aqara Home 綁定開／關窗簾。\n- **數量與預算**：臥室 4 間各 1 台（單軌遮光）＋客廳依窗數。HomeSmart 含軌道安裝每窗 S$409–999（依軌長）。\n- **軌長量法**：牆到牆每端各留 2 cm；只遮窗則每邊多出約 40 cm。\n\n## 風險與待確認\n- C100 國際版（CD-M15D）已列在 Aqara 官網；新加坡現貨、價格、保固 待確認；官方頁未列載重，50 kg 來自經銷商。\n- 陸版 C100（¥399）配新加坡 Hub M3 是否被區域鎖 待確認，所以選國際版。\n- ZNCLDJ11LM 保固各家不同：PFE 12 個月，HomeSmart、Harvey Norman 24 個月（Harvey Norman 目前缺貨）。\n- 長時間停電後 ZNCLDJ11LM 可能需重新校準；C100 斷電行為 待確認。\n- Aqara 智能隐形窗帘电机 C200 未列於 Aqara 國際官網（2026-10），陸版只能配中國區網關；是否支援 Matter 待確認。\n",
-      "sources": [
-        {
-          "title": "Aqara: Curtain Controller C100 (CD-M15D)",
-          "url": "https://www.aqara.com/en/product/curtain-controller-c100/"
-        },
-        {
-          "title": "Aqara: Smart Curtain Controllers (global lineup)",
-          "url": "https://www.aqara.com/en/product/curtain-controller/"
-        },
-        {
-          "title": "Thai Hung Smart Home: Aqara C100 specs (overseas CD-M15D)",
-          "url": "https://thaihungsmarthome.com/dong-co-rem-aqara-c100/"
-        },
-        {
-          "title": "騰訊新聞：Aqara 智能窗帘电机 C100 開售",
-          "url": "https://news.qq.com/rain/a/20260828A05WGT00"
-        },
-        {
-          "title": "東方財富：Aqara 智能隐形窗帘电机 C200 規格（50 kg / 29 dB / ¥499）",
-          "url": "https://caifuhao.eastmoney.com/news/20250921180231431212670"
-        },
-        {
-          "title": "Zigbee2MQTT: Aqara C200",
-          "url": "https://www.zigbee2mqtt.io/devices/C200.html"
-        },
-        {
-          "title": "Homey Community: Aqara Chinese products region lock",
-          "url": "https://community.homey.app/t/aqara-chinese-products/102072"
-        },
-        {
-          "title": "Aqara Singapore (PFE): Smart Curtain Controller ZNCLDJ11LM",
-          "url": "https://pfetech.com/aqara/product/aqara-smart-curtain-controller/"
-        },
-        {
-          "title": "HomeSmart SG: Aqara Smart Curtain system",
-          "url": "https://homesmart.sg/product/aqara-smart-curtain/"
-        },
-        {
-          "title": "HomeSmart SG: Aqara Curtain Controller Zigbee specs",
-          "url": "https://homesmart.sg/product/aqara-curtain-controller/"
-        },
-        {
-          "title": "HomeSmart SG: How to order Aqara smart curtains",
-          "url": "https://homesmart.sg/how-to-order-aqara-smart-curtains/"
-        },
-        {
-          "title": "Harvey Norman SG: Aqara Curtain Motor + 2 m track + installation (CD-M01D)",
-          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/aqara-curtain-motor-with-2m-track-and-installation-white-cd-m01d.html"
-        },
-        {
-          "title": "YOHO HK: Aqara CD-M01D specs",
-          "url": "https://www.yohohongkong.com/en-us/product/113444-Aqara-Smart-Curtain-Motor-Zigbee-Opening-and-Closing-Curtain-Version-CD-M01D-Clean-Machine-Apple-Homekit"
-        },
-        {
-          "title": "private@homelab: Aqara ZNCLDJ11LM calibration and power loss",
-          "url": "https://privatehomelab.com/aqara-curtain-motor-zncldj11lm-zigbee2mqtt-home-assistant/"
-        },
-        {
-          "title": "Lester Chan: Aqara Curtain Driver E1 Track review (SG)",
-          "url": "https://lesterchan.net/blog/2024/06/18/aqara-curtain-driver-e1-track-version-review/"
-        },
-        {
-          "title": "Somfy: Curtain databook Feb 2026 (Glydea Ultra)",
-          "url": "https://service.somfy.com/downloads/au_v5/somfycurtain_databook_feb_2026.pdf"
-        },
-        {
-          "title": "SwitchBot: Curtain 3",
-          "url": "https://eu.switch-bot.com/products/switchbot-curtain-3"
-        }
-      ]
-    },
     "kitchen-sink": {
       "title": "廚房水槽選型",
       "updated": "2026-10-29",
@@ -27498,7 +27086,7 @@
       "title": "全屋智能家居方案",
       "updated": "2026-10-29",
       "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋已有的 HomePod mini 當家居中樞。因為牆上開關與一鍵全關斷網照常用、新加坡有現貨與保固、中樞不用再花錢。",
-      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、窗簾、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器，一鍵全關在 M3 本機跑，中樞掛了也照常。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；窗簾 Aqara Curtain Controller C100（Zigbee）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；一鍵全關在 M3 本機執行，網路或 HomePod mini 掛了也有效。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶；中樞與網路接 UPS。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **UPS**：光纖終端、Cloud Gateway、PoE 交換器、M3、HomePod mini 同接一台小 UPS。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **一鍵全關**：大門 H1 右鍵轉無線開關；單擊由 M3 本機關燈與窗簾，長按觸發 Apple Home「離家」含插座。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按、窗簾可手拉，但 Aqara 設備的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- C100 新加坡價格與貨期 待確認；趕不上用 Aqara Smart Curtain Controller ZNCLDJ11LM（S$299）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
+      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器，一鍵全關在 M3 本機跑，中樞掛了也照常。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；一鍵全關在 M3 本機執行，網路或 HomePod mini 掛了也有效。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶；中樞與網路接 UPS。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **UPS**：光纖終端、Cloud Gateway、PoE 交換器、M3、HomePod mini 同接一台小 UPS。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **一鍵全關**：大門 H1 右鍵轉無線開關；單擊由 M3 本機關燈，長按觸發 Apple Home「離家」含插座。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
       "sources": [
         {
           "title": "Apple: Set up HomePod, HomePod mini or Apple TV as a home hub",
@@ -27563,10 +27151,6 @@
         {
           "title": "HomeKit News: SmartSetup Matter/Thread switches in Singapore",
           "url": "https://homekitnews.com/2025/03/02/smartsetup-matter-thread-switches-available-in-singapore-uae/"
-        },
-        {
-          "title": "Aqara: Curtain Controller C100",
-          "url": "https://www.aqara.com/en/product/curtain-controller-c100/"
         },
         {
           "title": "Harvey Norman SG: Aqara Camera E1",
