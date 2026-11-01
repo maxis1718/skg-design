@@ -587,8 +587,9 @@ function extras(g, list, state = ST) {
       // Optional material label (e.g. 岩板檯面 · 面 90) placed above the worktop at labelX/labelY.
       if (e.label) g.text(e.labelX ?? e.x + e.w / 2, e.labelY ?? e.y + e.h + g.f * .5, e.label, {'text-anchor':'middle', fill:C.thin, 'font-size':g.f * (e.size || .62)});
     } else if (e.type === 'hob') {
-      g.rect(e.x, e.y, e.w, 1.2, {fill:C.dark, stroke:'none'});
-      for (const k of [.22, .5, .78]) g.rect(e.x + e.w * k - 4, e.y + 1.2, 8, 1.6, {fill:C.dark, stroke:'none'});
+      // e.glass = induction (flat glass top, no pan supports); otherwise a gas hob with three burner grates.
+      g.rect(e.x, e.y, e.w, e.glass ? .8 : 1.2, {fill:C.dark, stroke:'none'});
+      if (!e.glass) for (const k of [.22, .5, .78]) g.rect(e.x + e.w * k - 4, e.y + 1.2, 8, 1.6, {fill:C.dark, stroke:'none'});
       if (e.label) g.text(e.x + e.w / 2, e.y + 4.6, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * .78});
     } else if (e.type === 'sink') {
       const bowl = !e.bowlWhen || e.bowlWhen === state;
@@ -1082,6 +1083,73 @@ function renderSection(elev, view, state) {
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
+// Top view (plan) of a hob over its cabinet run (view.kind 'plan-top'). x = cm from the left edge of the run, y = cm from the
+// worktop front edge (0, bottom) to the back wall (view.depth, top). view.run [{x, w, label, main}] = cabinets under the worktop
+// (main = under-hob cabinet, drawn with its side boards view.board); view.hood {x, w, d} = hood above (dashed);
+// view.hob {x, y, w, d, label, cut {x, y, w, d, label}, zones [{shape 'circle' {x, y, r} | 'rect' {x, y, w, h}}],
+// bridges [{x, y, w, h}], control {x, y, w, h}} — zone/control coordinates are relative to the hob's front-left corner.
+// Dimensions: hob width + side margins to the main cabinet, cabinet cuts, cut-out depth chain (front / cut-out / back) and
+// hob depth on the right, cut-out + hood widths above the wall; view.interior adds the main cabinet's clear width.
+function renderPlanTop(elev, view) {
+  const D = view.depth ?? 60, run = view.run, W = Math.max(...run.map(r => r.x + r.w)), f = view.font ?? 5.2, t = view.board ?? 1.8;
+  const h = view.hob, c = h.cut, main = run.find(r => r.main), hood = view.hood;
+  const m = {l: f * 1.2, r: f * 10.6, t: f * 7.6, b: f * (view.interior ? 7.2 : 5.6)};
+  const g = canvas(D, f), sdim = {stroke:C.dim, 'stroke-width':.25};
+  const vdim = (x, y0, y1, label, strong) => {
+    const s = {stroke:C.dim, 'stroke-width':strong ? .5 : .25};
+    g.line(x, y0, x, y1, s); g.line(x - 1.2, y0, x + 1.2, y0, s); g.line(x - 1.2, y1, x + 1.2, y1, s);
+    g.text(x + 1.4, (y0 + y1) / 2 - f * .3, label, {fill:C.dim, 'font-size':f * .74, 'font-weight':strong ? 600 : null});
+  };
+  // Worktop, back wall
+  g.rect(-m.l * .6, 0, W + m.l * .6 + 3, D, {fill:C.stone, 'fill-opacity':.45, stroke:'none'});
+  g.line(-m.l * .6, 0, W + 3, 0, {stroke:C.line, 'stroke-width':.5});
+  g.rect(-m.l * .6, D, W + m.l * .6 + 3, 3.2, {fill:'url(#elev-wall)', stroke:'none'});
+  g.line(-m.l * .6, D, W + 3, D, {stroke:C.line, 'stroke-width':.6});
+  g.text(-m.l * .6 + 1, D + 3.2 + f * .35, T('後牆'), {fill:C.thin, 'font-size':f * .62});
+  // Cabinets below the worktop (faint dashed; main cabinet with its side boards)
+  for (const r of run) {
+    g.rect(r.x, 0, r.w, D, {fill:'none', stroke:r.main ? C.thin : C.faint, 'stroke-width':r.main ? .3 : .22, 'stroke-dasharray':'1.6 1'});
+    if (r.main) for (const x of [r.x, r.x + r.w - t]) g.rect(x, 0, t, D, {fill:C.board, 'fill-opacity':.45, stroke:'none'});
+    else if (r.label) fitLabel(g, r.x + r.w / 2, D * .2, r.w, D * .3, r.label, f * .62, {fill:C.thin});
+  }
+  // Hob: glass, zones, bridge outlines, control strip, cut-out (dashed)
+  g.rect(h.x, h.y, h.w, h.d, {fill:'#2e3532', stroke:C.line, 'stroke-width':.4, rx:1.2});
+  const zs = {fill:'none', stroke:'#b7c1bc', 'stroke-width':.35};
+  for (const b of h.bridges || []) g.rect(h.x + b.x, h.y + b.y, b.w, b.h, {fill:'none', stroke:'#8d9993', 'stroke-width':.25, 'stroke-dasharray':'1.2 .9', rx:1});
+  for (const z of h.zones || []) {
+    if (z.shape === 'circle') { g.out.push(`<circle cx="${h.x + z.x}" cy="${g.Y(h.y + z.y)}" r="${z.r}" ${attrs(zs)}/>`); g.out.push(`<circle cx="${h.x + z.x}" cy="${g.Y(h.y + z.y)}" r="${+(z.r * .62).toFixed(2)}" ${attrs({...zs, 'stroke-width':.2, 'stroke-opacity':.6})}/>`); }
+    else g.rect(h.x + z.x, h.y + z.y, z.w, z.h, {...zs, rx:1.4});
+  }
+  if (h.control) { const k = h.control; g.rect(h.x + k.x, h.y + k.y, k.w, k.h, {fill:'#46504c', stroke:'#8d9993', 'stroke-width':.2, rx:.8}); for (let i = 1; i < 6; i++) g.rect(h.x + k.x + k.w * i / 6 - .5, h.y + k.y + k.h / 2 - .5, 1, 1, {fill:'#d9dfdb'}); }
+  g.rect(c.x, c.y, c.w, c.d, {fill:'none', stroke:C.warm, 'stroke-width':.4, 'stroke-dasharray':'1.6 1'});
+  // Hood above the hob (dashed, against the wall), drawn over everything below it
+  if (hood) g.rect(hood.x, D - hood.d, hood.w, hood.d, {fill:'none', stroke:'#a9c2b5', 'stroke-width':.35, 'stroke-dasharray':'2.4 1.4'});
+  // Bottom: hob width with side margins to the main cabinet; cabinet cuts; optional cabinet clear width
+  const y1 = -f * 1.6, y2 = -f * 3.4, y3 = -f * 5.2;
+  const cuts1 = [main.x, h.x, h.x + h.w, main.x + main.w];
+  for (let i = 0; i < 3; i++) {
+    const w = cuts1[i + 1] - cuts1[i], tight = i !== 1 && em(fmt(w)) * f * .74 > w - 1;
+    hdim(g, cuts1[i], cuts1[i + 1], y1, tight ? '' : fmt(w), i === 1, i === 1);
+    // Narrow side margin: number sits outside the dimension, away from the hob
+    if (tight) g.text(i === 0 ? cuts1[0] - 1 : cuts1[3] + 1, y1 + .9, fmt(w), {'text-anchor':i === 0 ? 'end' : 'start', fill:C.dim, 'font-size':f * .74});
+  }
+  for (const r of run) hdim(g, r.x, r.x + r.w, y2, r.main ? `${r.label || ''} ${fmt(r.w)}`.trim() : fmt(r.w), r.main);
+  if (view.interior) hdim(g, main.x + t, main.x + main.w - t, y3, view.interior);
+  for (const x of [h.x, h.x + h.w]) g.line(x, h.y, x, y1 - 1.2, {...sdim, 'stroke-width':.15, 'stroke-dasharray':'1 .8'});
+  // Right: cut-out depth chain, hob depth, worktop depth
+  const xr = W + f * .9;
+  vdim(xr, 0, c.y, fmt(c.y)); vdim(xr, c.y, c.y + c.d, fmt(c.d)); vdim(xr, c.y + c.d, D, fmt(D - c.y - c.d));
+  vdim(xr + f * 3.4, h.y, h.y + h.d, fmt(h.d), true);
+  vdim(xr + f * 6.4, 0, D, fmt(D));
+  g.text(xr + f * 6.4 + 1.4, D / 2 - f * 1.3, T('檯面'), {fill:C.thin, 'font-size':f * .62});
+  // Top (above the wall): cut-out width, hood width, hob label
+  const yt1 = D + 3.2 + f * 1.4, yt2 = yt1 + f * 1.9;
+  hdim(g, c.x, c.x + c.w, yt1, c.label || `${T('開孔')} ${fmt(c.w)} × ${fmt(c.d)}`);
+  if (hood) hdim(g, hood.x, hood.x + hood.w, yt2, `${T('排油煙機')} ${fmt(hood.w)}`);
+  if (h.label) g.text(W / 2, yt2 + f * 1.7, h.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .86, 'font-weight':600});
+  return svg([-m.l, -m.t, W + m.l + m.r, D + m.t + m.b], g.out, view.aria || elev.title);
+}
+
 // Lift-up flap in section, opened by `angle` about its top hinge (hx, hy): rotated front, dashed edge path, closed ghost.
 function liftSection(g, hx, hy, L, lift, f) {
   const a = (lift.angle ?? 86) * Math.PI / 180, sn = Math.sin(a), cs = Math.cos(a), t = 1.8;
@@ -1104,7 +1172,7 @@ function render(elev, viewId, state, translate) {
   const fsIn = elev.frontStyle;
   FS = fsIn ? {...FRONT_STYLES.slab, ...(typeof fsIn === 'string' ? FRONT_STYLES[fsIn] : fsIn)} : null;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
-  return view.kind === 'section' ? renderSection(elev, view, state) : renderFront(elev, view, state);
+  return view.kind === 'section' ? renderSection(elev, view, state) : view.kind === 'plan-top' ? renderPlanTop(elev, view) : renderFront(elev, view, state);
 }
 
 window.SKGElevation = {render, bands, checkUnit};
