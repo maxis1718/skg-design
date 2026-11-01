@@ -5,15 +5,15 @@
 <path data-layout="lb-guest-bed-pillow" class="furnishing" d="M408.88 171.69H415.68Q416.53 171.69 416.53 172.54V189.54Q416.53 190.39 415.68 190.39H408.88Q408.03 190.39 408.03 189.54V172.54Q408.03 171.69 408.88 171.69Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-bed-duvet" class="furnishing" d="M400.09 149.01V192.68M398.39 149.01V192.68" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-curtain-track" class="furnishing" d="M350.49 147.03H419.37" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="2 0.8"/>
-<path data-layout="lb-massage-chair" class="furnishing" d="M306.38 324.51H340.4Q341.39 324.51 341.39 325.5V345.06Q341.39 346.05 340.4 346.05H306.38Q305.39 346.05 305.39 345.06V325.5Q305.39 324.51 306.38 324.51Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-arms" class="furnishing" d="M341.39 326.92H313.9M341.39 343.64H313.9" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-back" class="furnishing" d="M334.3 326.92V343.64" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-footrest" class="furnishing" d="M313.9 324.51V346.05" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-recline" class="furnishing" d="M305.39 324.51H288.95V346.05H305.39" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
-<path data-layout="lb-study-desk" class="furnishing" d="M330.05 295.03H344.23V323.37H330.05Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="lb-study-monitor" class="furnishing" d="M341.11 300.5H342.24V317.9H341.11Z" fill="none" stroke="currentColor" stroke-width="0.18" stroke-linejoin="round"/>
-<path data-layout="lb-study-monitor-stand" class="furnishing" d="M338.84 306.37H342.24V312.03H338.84Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-study-chair" class="furnishing" d="M315.6 302.11H327.5Q328.64 302.11 328.64 303.25V315.15Q328.64 316.29 327.5 316.29H315.6Q314.46 316.29 314.46 315.15V303.25Q314.46 302.11 315.6 302.11Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-study-chair-back" class="furnishing" d="M315.6 303.25V315.15" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair" class="furnishing" d="M306.38 323.09H340.4Q341.39 323.09 341.39 324.08V343.64Q341.39 344.63 340.4 344.63H306.38Q305.39 344.63 305.39 343.64V324.08Q305.39 323.09 306.38 323.09Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-arms" class="furnishing" d="M341.39 325.5H313.9M341.39 342.22H313.9" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-back" class="furnishing" d="M334.3 325.5V342.22" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-footrest" class="furnishing" d="M313.9 323.09V344.63" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-recline" class="furnishing" d="M305.39 323.09H288.95V344.63H305.39" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
+<path data-layout="lb-study-desk" class="furnishing" d="M330.05 293.61H344.23V321.95H330.05Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="lb-study-monitor" class="furnishing" d="M341.11 299.08H342.24V316.48H341.11Z" fill="none" stroke="currentColor" stroke-width="0.18" stroke-linejoin="round"/>
+<path data-layout="lb-study-monitor-stand" class="furnishing" d="M338.84 304.95H342.24V310.61H338.84Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-study-chair" class="furnishing" d="M315.6 300.69H327.5Q328.64 300.69 328.64 301.83V313.73Q328.64 314.87 327.5 314.87H315.6Q314.46 314.87 314.46 313.73V301.83Q314.46 300.69 315.6 300.69Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-study-chair-back" class="furnishing" d="M315.6 301.83V313.73" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-study-curtain-track" class="furnishing" d="M273.93 346.62H343.66" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="2 0.8"/>
 <g data-layout="guest-purifier" class="furnishing" fill="none" stroke="currentColor" stroke-width="0.18"><path d="M351.34 149.3H357.97V155.93H351.34Z"/><circle cx="354.65" cy="152.62" r="2.2" stroke-width="0.12"/></g>

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R69",
+    "revision": "R70",
     "unit": "cm",
     "date": "2026-10-31"
   },
@@ -3338,9 +3338,9 @@
       "name": "按摩椅 OSIM uLove 3",
       "bounds_pt": [
         305.39,
-        324.51,
+        323.09,
         341.39,
-        346.05
+        344.63
       ],
       "dimensions": {
         "w": {
@@ -3372,9 +3372,9 @@
       "name": "書房電腦桌",
       "bounds_pt": [
         330.05,
-        295.03,
+        293.61,
         344.23,
-        323.37
+        321.95
       ],
       "dimensions": {
         "w": {
@@ -4962,6 +4962,10 @@
     {
       "id": "C77",
       "text": "房間下方改成房間卡：待拍板、注意、配置、淨距、施工交代；刪除分區量測與尺寸簿；取消全屋電動窗簾。"
+    },
+    {
+      "id": "C78",
+      "text": "書房按摩椅與電腦桌北移 5：按摩椅離窗 15，讓出窗簾盒。"
     }
   ],
   "measurement_policy": {
@@ -25916,9 +25920,7 @@
           "uncertainty_cm": null,
           "focus": "按摩椅與電腦桌",
           "plan": {
-            "watch": [
-              "窗簾盒 15 比按摩椅離窗 10 多 5 → 椅與書桌北移 5"
-            ],
+            "watch": [],
             "items": [
               {
                 "label": "按摩椅",
@@ -25943,12 +25945,12 @@
                 "value": "55"
               },
               {
-                "label": "書桌椅背到西牆",
-                "value": "145"
+                "label": "按摩椅到窗",
+                "value": "15"
               },
               {
                 "label": "書桌到門洞",
-                "value": "100"
+                "value": "95"
               }
             ],
             "build": [
@@ -27825,12 +27827,6 @@
       "id": "todo-master-scheme",
       "room": "master",
       "text": "定主臥方案 A／B",
-      "status": "open"
-    },
-    {
-      "id": "todo-study-chair-shift",
-      "room": "study",
-      "text": "定按摩椅與書桌北移 5，讓出窗簾盒",
       "status": "open"
     },
     {
