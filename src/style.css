@@ -208,11 +208,11 @@ details>summary{font-size:15px}
 .rc-done .todo-item{font-size:13px}
 .rc-watch .elev-risk-callout{margin:0}.rc-watch h4.elev-risk-title{font-size:16px}.rc-watch .elev-risks li{font-size:15px;line-height:1.6}
 /* 配置: compact, quiet one-line rows; 建議 stands out */
-.rc-item{display:grid;grid-template-columns:4.2em minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:5px 2px;color:#525f4c;font-size:13px;line-height:1.4;border-radius:0}
+.rc-item{display:grid;grid-template-columns:4.2em minmax(0,1fr) auto;gap:10px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:5px 2px;color:#525f4c;font-size:13px;line-height:1.4;border-radius:0}
 .rc-items li:first-child .rc-item{border-top:0}
 button.rc-item:hover{background:var(--wash);filter:none}
-.rc-label{color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rc-value{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.rc-label{color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.rc-value{min-width:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 .rc-elev{margin-left:6px;font-size:11.5px;color:var(--teal);border-bottom:1px solid #acbaa4}
 .rc-chip{font-size:11px;line-height:1;padding:3px 0;white-space:nowrap}
 .rc-chip.is-decided{color:var(--teal);opacity:.75}
