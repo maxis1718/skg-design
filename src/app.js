@@ -36,8 +36,8 @@ let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=n
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
 // Guest-room scheme (R34 order): A = guest-a (loose wardrobe 70 + desk 70 × 40, default), B = guest-b (built-in wardrobe + desk), C = guest-c (narrow wardrobe + desk). URL ?guest=a|b|c.
-const GUEST_KEYS={a:'guest-a',b:'guest-b',c:'guest-c'};
-selectedVersions.guest=GUEST_KEYS[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||GUEST_KEYS.a;
+const GUEST_KEYS={a:'guest-a',b:'guest-c'}; // R71: old B removed; displayed B = guest-c
+selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||(new URLSearchParams(location.search).get('guest')||'').toLowerCase())]||GUEST_KEYS.a;
 // Master-bedroom scheme (R63 swap): displayed A = master-b (bed on the curtain line, cot south; default), B = master-a (owner's sketch, bed to the wardrobe line). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
 const MASTER_KEYS={a:'master-b',b:'master-a'}; // R63: displayed A = master-b (bed north), B = master-a
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
@@ -409,9 +409,9 @@ function renderDetails(){
   $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
   $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{if(!showPower)$('#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
 }
-const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69']];
+const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70']];
 function buildReference(){
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R70'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R71'}</span>${esc(c.text)}</div>`).join('');
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
