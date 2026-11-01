@@ -41,8 +41,8 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme (R63 swap): displayed A = master-b (bed on the curtain line, cot south; default), B = master-a (owner's sketch, bed to the wardrobe line). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
 const MASTER_KEYS={a:'master-b',b:'master-a'}; // R63: displayed A = master-b (bed north), B = master-a
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV-console game scheme (R67): A = console-a (vented drawers, default), B = console-b (lift-up flap), C = console-c (open niche), D = console-d (on top). URL ?console=a|b|c|d. Elevations 'objectId@console-x' override the living objects' elevation.
-const LIVING_KEYS={a:'console-a',b:'console-b',c:'console-c',d:'console-d'};
+// TV-console game scheme (R72): A = console-a (centre game bay: PS5 Pro behind a slatted lift-up flap, Switch 2 on top; default), B = console-b (both consoles on top). URL ?console=a|b; old c/d fall back to A. Elevations 'objectId@console-x' override the living objects' elevation.
+const LIVING_KEYS={a:'console-a',b:'console-b'};
 selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
@@ -370,7 +370,8 @@ function renderInspector(){
 }
 const riskBox=(rk,title='需評估')=>rk?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t(title)}</h4><ul class="elev-risks">${rk.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
 // plan {summary, watch[], items[{label,value,object?,status 定|建議}], clearances[{label,value}], build[]}: schemes carry their own full copy.
-function planFor(r){if(!r)return null;const v=r.id==='kitchen'?kitchenVersion():r.id==='guest'?guestVersion():r.id==='master'?masterVersion():r.id==='living'?livingVersion():null;return v?.plan||r.plan||null;}
+function versionFor(r){return !r?null:r.id==='kitchen'?kitchenVersion():r.id==='guest'?guestVersion():r.id==='master'?masterVersion():r.id==='living'?livingVersion():null;}
+function planFor(r){if(!r)return null;return versionFor(r)?.plan||r.plan||null;}
 const openTodos=id=>(project.todos||[]).filter(x=>x.room===id&&x.status!=='done').length;
 const roomPower=id=>powerPoints().filter(p=>powerRoom(p)===id).sort((a,b)=>String(a.code).localeCompare(String(b.code),'en',{numeric:true}));
 const scrollTo=el=>el?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
@@ -391,8 +392,9 @@ function roomCard(r){
   const todos=all.length?`${open.length?`<ul class="todo-list">${open.map(todoLi).join('')}</ul>`:`<p class="rc-none">${esc(t('無待拍板'))}</p>`}${done.length?`<details class="rc-done"><summary>${esc(tf('已完成 {n}',{n:done.length}))}</summary><ul class="todo-list">${done.map(todoLi).join('')}</ul></details>`:''}`:'';
   const main=`${sec('rc-todos','待拍板',todos,open.length)}${sec('rc-items','配置',items&&`<ul>${items}</ul>`)}${sec('rc-clear','淨距',(p.clearances||[]).length&&`<ul>${p.clearances.map(c=>`<li><span>${esc(c.label)}</span><b>${esc(c.value)}</b></li>`).join('')}</ul>`)}`;
   const side=`${p.watch?.length?`<div class="rc-watch">${riskBox(p.watch,'注意')}</div>`:''}${sec('rc-build','施工交代',(p.build||[]).length&&`<ul>${p.build.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}${pts.length?powerList(pts):''}`;
+  const tag=versionFor(r)?.tagline;
   if(!main&&!side)return '';
-  return `<article class="room-card"><div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
+  return `<article class="room-card">${tag?`<p class="rc-tagline">${esc(tag)}</p>`:''}<div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
 }
 function powerList(pts){return `<section class="rc-sec rc-power"><h3>${esc(t('電點'))} <span class="rc-n">${pts.length}</span></h3><ul>${pts.map(p=>`<li><button type="button" class="rc-pt" data-room-power="${esc(p.id)}"><i class="pk pk-${esc(p.kind)}" aria-hidden="true"></i><span class="rc-pt-code">${esc(p.code)}</span><span class="rc-pt-name">${esc(p.name)}</span><span class="rc-pt-mount">${esc(powerMount(p))}</span></button></li>`).join('')}</ul></section>`;}
 function objectCard(o){

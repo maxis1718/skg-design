@@ -191,6 +191,7 @@ details>summary{font-size:15px}
 .details-section{padding-top:22px}
 .details-section>.inspector{margin-bottom:16px;max-width:560px}
 .room-card,.obj-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px 16px 18px;margin-bottom:22px;box-shadow:0 4px 20px #253c3604}
+.rc-tagline{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.45}
 .rc-cols{display:flex;flex-direction:column;gap:18px}
 .rc-col{display:contents}
 .rc-todos{order:1}.rc-watch{order:2}.rc-items{order:3}.rc-clear{order:4}.rc-build{order:5}.rc-power{order:6}

@@ -192,8 +192,10 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
         else g.rect(x + lf.w * .3, y0 + h - 2.6, lf.w * .4, .7, {fill:C.thin, stroke:'none', rx:.35});
       } else {
         g.rect(x, y0 + .2, lf.w, h - .4, {fill:C.front, stroke:C.line, 'stroke-width':sw});
+        // fr.notch on a lift-up flap: same arc finger-pull as the drawers beside it (keeps the row's grip rhythm).
+        if (fr.kind === 'lift' && fr.notch) notch(g, x + lf.w / 2, y0 + h - .2, fr.notch.w, fr.notch.h);
         // fr.handle === false: handleless (finger pull) door — no bar handle and no swing diagonals on the closed face.
-        if (fr.handle !== false) {
+        else if (fr.handle !== false) {
           const hx = lf.hinge === 'L' ? x : x + lf.w, fx = lf.hinge === 'L' ? x + lf.w : x, my = y0 + h / 2;
           g.path(`M${fx} ${g.Y(y0 + h - .2)}L${hx} ${g.Y(my)}L${fx} ${g.Y(y0 + .2)}`, {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'});
           const hy = Math.min(Math.max(y0 + 4, 100), y0 + h - 14), handleX = lf.hinge === 'L' ? x + lf.w - 1.6 : x + 1;
