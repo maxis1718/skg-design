@@ -65,7 +65,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-04 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
 | GST-05 | `guest-desk-a` | 客房書桌 A | 70 × 40 |
 | GST-06 | `guest-wardrobe-a` | 客房衣櫃 A | 70 × 60 |
-| GST-07 | `guest-bed-lb` | 客房床（HipVan Zephyr Queen） | 162 × 204 |
+| GST-07 | `guest-bed-lb` | 客房床 Queen 154 × 194 | 154 × 194 |
 | STD-06 | `massage-chair-lb` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | STD-07 | `study-desk-lb` | 書房電腦桌 | 100 × 50 |
 | GST-08 | `guest-desk-lb-c` | 客房書桌（C） | 60 × 45 |
