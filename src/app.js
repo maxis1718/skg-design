@@ -38,8 +38,8 @@ let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search)
 // Guest-room scheme (R34 order): A = guest-a (loose wardrobe 70 + desk 70 × 40, default), B = guest-b (built-in wardrobe + desk), C = guest-c (narrow wardrobe + desk). URL ?guest=a|b|c.
 const GUEST_KEYS={a:'guest-a',b:'guest-c'}; // R71: old B removed; displayed B = guest-c
 selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||(new URLSearchParams(location.search).get('guest')||'').toLowerCase())]||GUEST_KEYS.a;
-// Master-bedroom scheme (R63 swap): displayed A = master-b (bed on the curtain line, cot south; default), B = master-a (owner's sketch, bed to the wardrobe line). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
-const MASTER_KEYS={a:'master-b',b:'master-a'}; // R63: displayed A = master-b (bed north), B = master-a
+// Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
+const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
 // TV-console game scheme (R72): A = console-a (centre game bay: PS5 Pro behind a slatted lift-up flap, Switch 2 on top; default), B = console-b (both consoles on top). URL ?console=a|b; old c/d fall back to A. Elevations 'objectId@console-x' override the living objects' elevation.
 const LIVING_KEYS={a:'console-a',b:'console-b'};
@@ -214,7 +214,7 @@ function renderKitchenVersion(){
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
  }
  renderGuestVersion();renderMasterVersion();renderLivingVersion();
- $('#kitchen-version-group').hidden=roomId!=='kitchen';renderLayoutVersion();$('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
+ $('#kitchen-version-group').hidden=roomId!=='kitchen'||kitchenVersions().length<2;renderLayoutVersion();$('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);
  const visible=new Set(visibleObjects().map(o=>o.id));
  $$('.object-hit,.object-fill').forEach(el=>{const o=object(el.dataset.object);el.style.display=visible.has(o.id)?'':'none';const[x0,y0,x1,y1]=o.bounds_pt;for(const[k,v]of Object.entries({x:x0,y:y0,width:x1-x0,height:y1-y0}))el.setAttribute(k,v);if(el.classList.contains('object-hit')){el.setAttribute('aria-label',`${o.name}${t('，')}${size(o)} cm`);}});
  if(objectId&&!visible.has(objectId)){objectId=null;try{history.replaceState(null,'',location.search+'#'+roomId);}catch(e){}}
@@ -223,7 +223,7 @@ function renderGuestVersion(){
  const v=guestVersion(),seg=$('#guest-version');if(!v||!seg){$('#guest-version-group').hidden=true;return;}
  seg.setAttribute('aria-label',t('切換客房方案'));
  seg.innerHTML=guestVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-guest-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
- $('#guest-version-group').hidden=roomId!=='guest';
+ $('#guest-version-group').hidden=roomId!=='guest'||guestVersions().length<2;
  $$('[data-guest-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.guestPlan!==v.layout));
  const lab=document.querySelector('[data-label-room="guest"]'),base=layoutSpec()?.labels?.guest||labelPositions.guest;if(lab&&v.label)lab.setAttribute('transform',`translate(${v.label[0]-base[0]} ${v.label[1]-base[1]})`);
 }
@@ -231,14 +231,14 @@ function renderMasterVersion(){
  const v=masterVersion(),seg=$('#master-version');if(!v||!seg){$('#master-version-group')&&($('#master-version-group').hidden=true);return;}
  seg.setAttribute('aria-label',t('切換主臥方案'));
  seg.innerHTML=masterVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-master-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
- $('#master-version-group').hidden=roomId!=='master';
+ $('#master-version-group').hidden=roomId!=='master'||masterVersions().length<2;
  $$('[data-master-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.masterPlan!==v.layout));
 }
 function renderLivingVersion(){
  const v=livingVersion(),seg=$('#living-version');if(!v||!seg){$('#living-version-group')&&($('#living-version-group').hidden=true);return;}
  seg.setAttribute('aria-label',t('切換電視櫃方案'));
  seg.innerHTML=livingVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-living-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
- $('#living-version-group').hidden=roomId!=='living';
+ $('#living-version-group').hidden=roomId!=='living'||livingVersions().length<2;
 }
 function chooseLivingVersion(id){
  if(!livingVersions().some(v=>v.id===id)||id===livingVersion()?.id)return;selectedVersions.living=id;

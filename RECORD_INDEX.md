@@ -22,7 +22,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 
 | Code | Stable ID | 名稱 | 圖面 W × D cm |
 | --- | --- | --- | --- |
-| LIV-01 | `living-cabinet` | 客餐廳櫃體 | 190 × 60 |
+| LIV-01 | `living-cabinet` | 走道口 190 櫃 | 190 × 60 |
 | LIV-02 | `piano` | 鋼琴 | 130 × 61 |
 | LIV-03 | `tv-console` | 電視櫃 | 210 × 45 |
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |

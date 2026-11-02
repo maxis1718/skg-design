@@ -1611,8 +1611,8 @@
       "status": "source-annotated-length",
       "uncertainty_cm": null,
       "notes": "Length190cm annotated; depth60cm scaled. Crossed cabinet symbol, actual function/material not given.",
-      "name": "客餐廳櫃體",
-      "source_note": "用途待確認",
+      "name": "走道口 190 櫃",
+      "source_note": "平面圖標 190 × 60 打叉櫃體，在走道口、鋼琴西側，用途未標",
       "dimensions": {
         "w": {
           "cm": 190,
@@ -2481,9 +2481,9 @@
       "label": "Bed",
       "bounds_pt": [
         185.52,
-        207.11,
+        190.17,
         247.88,
-        263.8
+        246.87
       ],
       "plan_horizontal_cm": 220,
       "plan_vertical_cm": 200,
@@ -2492,7 +2492,7 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Scheme A (R58, owner's sketch): bed 220 head-to-foot x 200 wide, headboard on the west wall, south edge on the wardrobe-zone line y263.8 (y207.11-263.81). Storage drawers on both long sides and the foot (recorded only). Foot aisle to the east wall 70; bed foot to the right wardrobe 10 (Bath 1 entry). Source KING SIZE symbol paths 329-345 omitted at build; drawn in src/furniture-master.svg (#master-plan-a / -b).",
+      "notes": "Bed 220 head-to-foot x 200 wide, headboard on the west wall, north edge on the 15 cm curtain-pocket line (y190.17-246.87). Storage drawers on both long sides and the foot (recorded only). Foot aisle to the east wall 70; reachable balcony glass east of the foot ~35 (x247.88-257.76). Source KING SIZE symbol paths 329-345 omitted at build; drawn in src/furniture-master.svg.",
       "physical_drawing_indices": [],
       "name": "主臥床",
       "source_note": "220 × 200，兩長邊與床尾有收納抽屜",
@@ -2518,29 +2518,20 @@
         {
           "line": [
             247.88,
-            235.5,
+            218.52,
             267.72,
-            235.5
+            218.52
           ],
           "label": "70"
         },
         {
           "line": [
             247.88,
-            261,
-            250.68,
-            261
+            192.5,
+            257.76,
+            192.5
           ],
-          "label": "10"
-        },
-        {
-          "line": [
-            247.88,
-            198.7,
-            267.72,
-            198.7
-          ],
-          "label": "70"
+          "label": "35"
         }
       ]
     },
@@ -2551,10 +2542,10 @@
       "name": "床邊床 · 言言",
       "label": "Co-sleeper",
       "bounds_pt": [
-        199.69,
-        190.17,
-        247.88,
-        207.18
+        185.52,
+        246.87,
+        233.71,
+        263.8
       ],
       "plan_horizontal_cm": 170,
       "plan_vertical_cm": 60,
@@ -2563,7 +2554,7 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Scheme A: co-sleeper 60 x 170 on the bed's north side, x 60-230 from the west wall, north edge on the curtain pocket line y190.17; sits in front of the balcony door. Room depth 275 = pocket 15 + cot 60 + bed 200, zero slack.",
+      "notes": "Co-sleeper 60 x 170 for the owner's child, long side against the bed's south side from the head end (x 0-170 from the west wall), south edge on the wardrobe-zone line y263.8 (room depth 274.7 scaled = pocket 15 + bed 200 + crib 59.7). Not on the north side: there the bed would sit on the wardrobe line and cover the Bath 1 passage mouth (x 100-230) up to x220, leaving 10. Here the mouth stays open x170-230 = 60.",
       "source_note": "言言的床 60 × 170",
       "dimensions": {
         "w": {
@@ -2585,12 +2576,12 @@
       "clearances": [
         {
           "line": [
-            247.88,
-            198.7,
-            267.72,
-            198.7
+            233.71,
+            255.3,
+            250.68,
+            255.3
           ],
-          "label": "70"
+          "label": "60"
         }
       ]
     },
@@ -2737,7 +2728,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "・爐下櫃 80 × 60：上餐具抽屜、下 60 烤箱\n・烤箱型號待選",
+      "source_note": "・爐下櫃 80 × 60：上餐具抽屜、下 60 烤箱\n・現有嵌入式烤箱",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink",
@@ -4908,7 +4899,7 @@
             },
             {
               "label": "爐下櫃",
-              "value": "80 · 餐具抽屜＋60 嵌入烤箱",
+              "value": "80 · 餐具抽屜＋現有嵌入式烤箱",
               "status": "定",
               "object": "kitchen-oven"
             },
@@ -5101,7 +5092,7 @@
             },
             {
               "label": "爐下櫃",
-              "value": "80 · 餐具抽屜＋60 嵌入烤箱",
+              "value": "80 · 餐具抽屜＋現有嵌入式烤箱",
               "status": "定",
               "object": "kitchen-oven"
             },
@@ -5268,67 +5259,6 @@
         "id": "master-b",
         "name": "方案 A",
         "layout": "master-b",
-        "objectOverrides": {
-          "master-bed": {
-            "bounds_pt": [
-              185.52,
-              190.17,
-              247.88,
-              246.87
-            ],
-            "notes": "Scheme B (R57): bed north edge on the 15 cm curtain-pocket line (y190.17-246.87). Foot aisle to the east wall 70; reachable balcony glass east of the foot ~35 (x247.88-257.76).",
-            "clearances": [
-              {
-                "line": [
-                  247.88,
-                  218.52,
-                  267.72,
-                  218.52
-                ],
-                "label": "70"
-              },
-              {
-                "line": [
-                  247.88,
-                  192.5,
-                  257.76,
-                  192.5
-                ],
-                "label": "35"
-              }
-            ]
-          },
-          "master-crib": {
-            "bounds_pt": [
-              185.52,
-              246.87,
-              233.71,
-              263.8
-            ],
-            "notes": "Co-sleeper 60 x 170 for the owner's child, long side against the bed's south side from the head end (x 0-170 from the west wall), south edge on the wardrobe-zone line y263.8 (room depth 274.7 scaled = pocket 15 + bed 200 + crib 59.7). Not on the north side: there the bed would sit on the wardrobe line and cover the Bath 1 passage mouth (x 100-230) up to x220, leaving 10. Here the mouth stays open x170-230 = 60.",
-            "clearances": [
-              {
-                "line": [
-                  233.71,
-                  255.3,
-                  250.68,
-                  255.3
-                ],
-                "label": "60"
-              }
-            ]
-          }
-        },
-        "pointOverrides": {
-          "sock-bed-n": {
-            "y": 194.42,
-            "notes": "・床頭板上方，床北段；離北牆 30、離地 100 示意\n・13A 雙孔＋USB-C"
-          },
-          "sock-bed-s": {
-            "y": 242.61,
-            "notes": "・床頭板上方，離南床緣 15，兼供言言的床夜燈\n・離地 100 示意"
-          }
-        },
         "plan": {
           "watch": [
             "陽台門只能從床尾進，可用玻璃約 35 → 側身進出",
@@ -5379,66 +5309,7 @@
             "陽台門窗簾盒深 15，單軌遮光簾",
             "天花若只有 275，衣櫃頂收邊 8 現場裁到 3"
           ]
-        },
-        "tagline": "床靠北，言言的床在南側"
-      },
-      {
-        "id": "master-a",
-        "name": "方案 B",
-        "layout": "master-a",
-        "plan": {
-          "watch": [
-            "床尾到右衣櫃 10 → 進衛浴 1 要從床尾擠過",
-            "陽台門前是言言的床 → 只能從床尾東端進出",
-            "房深 275 零餘裕 → 現場不足時窗簾盒縮到 12"
-          ],
-          "items": [
-            {
-              "label": "床",
-              "value": "220 × 200",
-              "status": "定",
-              "object": "master-bed"
-            },
-            {
-              "label": "言言的床",
-              "value": "60 × 170",
-              "status": "定",
-              "object": "master-crib"
-            },
-            {
-              "label": "左衣櫃",
-              "value": "90 × 60 · 落地門",
-              "status": "定",
-              "object": "master-wardrobe-left"
-            },
-            {
-              "label": "右衣櫃",
-              "value": "90 × 60 · 外抽 ×3＋高門",
-              "status": "定",
-              "object": "master-wardrobe-right"
-            }
-          ],
-          "clearances": [
-            {
-              "label": "床尾走道",
-              "value": "70"
-            },
-            {
-              "label": "床尾到右衣櫃",
-              "value": "10"
-            }
-          ],
-          "build": [
-            "兩衣櫃到頂 272，掛桿 195、層板底 203，上方放 SKUBB 兩層",
-            "左櫃落地門 8–272 每扇 6 鉸鍊；右櫃高門 76–272",
-            "層板底 24 V LED＋PIR 感應，驅動器放可拆踢腳內",
-            "靠浴室那扇內貼全身鏡，鉸鍊側加 2.5 墊條",
-            "衣櫃後預留低位插座供 LED 驅動器",
-            "陽台門窗簾盒深 15，單軌遮光簾",
-            "天花若只有 275，衣櫃頂收邊 8 現場裁到 3"
-          ]
-        },
-        "tagline": "床推到衣櫃線（屋主手稿）"
+        }
       }
     ],
     "living": [
@@ -5700,7 +5571,7 @@
         {
           "zone": "下層 · 象印電子鍋＋飯匙",
           "h": "淨高 31.6",
-          "note": "56.8–88.4；象印 NS-ZAQ10（示意）＋飯匙"
+          "note": "56.8–88.4；現有象印電子鍋（圖以 NS-ZAQ10 示意）＋飯匙"
         },
         {
           "zone": "鍋具抽屜",
@@ -5723,9 +5594,8 @@
       ],
       "open_questions": [
         "假天花高度、檢修口位置",
-        "微波爐型號與散熱要求",
+        "現有微波爐的尺寸與散熱要求",
         "大同電鍋 15 人份的深度",
-        "電子鍋實購型號",
         "櫃深 65 是否和下櫃門面齊平"
       ],
       "sources": [
@@ -8867,7 +8737,7 @@
             {
               "zone": "安裝",
               "h": "檯面下 5.4",
-              "note": "爐下抽屜頂留通風縫；烤箱選有冷卻風扇的嵌入式"
+              "note": "爐下抽屜頂留通風縫，烤箱櫃底後留風口"
             }
           ]
         },
@@ -9030,7 +8900,7 @@
         {
           "zone": "嵌入式烤箱",
           "h": "開口 60",
-          "note": "開口 56.5×60×55；示意 Bosch HBA534ES0A，兩側飾板封平。"
+          "note": "開口 56.5×60×55；現有烤箱，圖以 Bosch HBA534ES0A 示意，兩側飾板封平。"
         },
         {
           "zone": "窄拉籃",
@@ -9052,7 +8922,7 @@
       ],
       "open_questions": [
         "電磁爐選 60 款或 80 款",
-        "烤箱型號與嵌入尺寸",
+        "現有烤箱的嵌入尺寸",
         "爐具 32A 與烤箱電源位置",
         "排油煙機排風方式與面板間隙",
         "岩板開孔處厚度與補強"
@@ -13013,7 +12883,7 @@
         {
           "zone": "下層 · 象印電子鍋＋飯匙",
           "h": "淨高 31.6",
-          "note": "56.8–88.4；象印 NS-ZAQ10（示意）＋飯匙"
+          "note": "56.8–88.4；現有象印電子鍋（圖以 NS-ZAQ10 示意）＋飯匙"
         },
         {
           "zone": "鍋具抽屜",
@@ -13037,9 +12907,8 @@
       ],
       "open_questions": [
         "假天花高度、檢修口位置",
-        "微波爐型號與散熱要求",
+        "現有微波爐的尺寸與散熱要求",
         "大同電鍋 15 人份的深度",
-        "電子鍋實購型號",
         "櫃深 65 是否和下櫃門面齊平"
       ],
       "sources": [
@@ -13179,7 +13048,7 @@
             {
               "zone": "安裝",
               "h": "檯面下 5.4",
-              "note": "爐下抽屜頂留通風縫；烤箱選有冷卻風扇的嵌入式"
+              "note": "爐下抽屜頂留通風縫，烤箱櫃底後留風口"
             }
           ]
         },
@@ -13342,7 +13211,7 @@
         {
           "zone": "嵌入式烤箱",
           "h": "開口 60",
-          "note": "開口 56.5×60×55；示意 Bosch HBA534ES0A，兩側飾板封平。"
+          "note": "開口 56.5×60×55；現有烤箱，圖以 Bosch HBA534ES0A 示意，兩側飾板封平。"
         },
         {
           "zone": "窄拉籃",
@@ -13365,7 +13234,7 @@
       ],
       "open_questions": [
         "電磁爐選 60 款或 80 款",
-        "烤箱型號與嵌入尺寸",
+        "現有烤箱的嵌入尺寸",
         "爐具 32A 與烤箱電源位置",
         "排油煙機排風方式與面板間隙",
         "岩板開孔處厚度與補強",
@@ -21553,13 +21422,13 @@
               {
                 "label": "衣櫃",
                 "value": "70 × 60 · 到頂，雙門",
-                "status": "建議",
+                "status": "定",
                 "object": "guest-wardrobe-lb-a"
               },
               {
                 "label": "書桌",
                 "value": "70 × 40 · 活動書桌",
-                "status": "建議",
+                "status": "定",
                 "object": "guest-desk-lb-a"
               },
               {
@@ -21824,11 +21693,11 @@
         "code": "S-03",
         "kind": "socket",
         "x": 187.3,
-        "y": 211.36,
+        "y": 194.42,
         "place": "主臥西牆 · 床頭北段",
         "mount": 100,
         "name": "插座 · 床頭北",
-        "notes": "・床頭板上方，床北段；離地 100 示意\n・13A 雙孔＋USB-C",
+        "notes": "・床頭板上方，床北段；離北牆 30、離地 100 示意\n・13A 雙孔＋USB-C",
         "use": "床頭"
       },
       {
@@ -21836,11 +21705,11 @@
         "code": "S-04",
         "kind": "socket",
         "x": 187.3,
-        "y": 259.55,
+        "y": 242.61,
         "place": "主臥西牆 · 床頭南段",
         "mount": 100,
         "name": "插座 · 床頭南",
-        "notes": "・床頭板上方，床南段；離地 100 示意",
+        "notes": "・床頭板上方，離南床緣 15，兼供言言的床夜燈\n・離地 100 示意",
         "use": "床頭"
       },
       {
