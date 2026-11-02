@@ -41,7 +41,7 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme (R63 swap): displayed A = master-b (bed on the curtain line, cot south; default), B = master-a (owner's sketch, bed to the wardrobe line). URL ?master=a|b. Versions carry notes/risks, objectOverrides (bed/cot) and pointOverrides (S-03/S-04).
 const MASTER_KEYS={a:'master-b',b:'master-a'}; // R63: displayed A = master-b (bed north), B = master-a
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV-console game scheme (R72): A = console-a (centre game bay: PS5 Pro behind a slatted lift-up flap, Switch 2 on top; default), B = console-b (both consoles on top). URL ?console=a|b; old c/d fall back to A. Elevations 'objectId@console-x' override the living objects' elevation.
+// TV-console game scheme (R72): A = console-a (open centre niche, no door: PS5 Pro flat and centred, Switch 2 on top; default — R75: a closed flap fails Sony's 35 °C / no-closed-cabinet rule), B = console-b (both consoles on top). URL ?console=a|b; old c/d fall back to A. Elevations 'objectId@console-x' override the living objects' elevation.
 const LIVING_KEYS={a:'console-a',b:'console-b'};
 selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
