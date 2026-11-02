@@ -116,7 +116,7 @@ function buildPlan(){
   buildPower();
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
-const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'一鍵全關'};
+const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
 const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};

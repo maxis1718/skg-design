@@ -21545,7 +21545,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內一鍵全關\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
+    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內場景按鈕\n・虛線為網路線走向示意，實際由水電依天花與牆內路徑調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -21761,7 +21761,7 @@
         "mount": 30,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：主路由，UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
@@ -21839,19 +21839,23 @@
         "y": 392.5,
         "place": "大門內左手牆",
         "mount": 120,
-        "name": "一鍵全關 · 大門",
-        "product": "Aqara H1 EU 有零線 · 雙鍵",
+        "name": "場景按鈕 · 大門",
+        "product": "Aqara Wireless Remote Switch H1 (Double Rocker) · WRS-R02",
         "specs": [
           [
             "鍵數",
             "雙鍵"
           ],
           [
-            "控制",
-            "左：玄關燈；右：一鍵全關"
+            "場景",
+            "每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個"
+          ],
+          [
+            "供電",
+            "鈕扣電池約 5 年，免拉線"
           ]
         ],
-        "notes": "・右鍵轉為無線開關，不接燈\n・單擊：M3 本機關全屋燈，斷網也有效；長按：Apple Home「離家」\n・離地 120，與客廳開關並排"
+        "notes": "・左鍵單擊「離家」：全屋燈、插座關\n・右鍵單擊「回家」；雙擊、長按在 Apple Home 自訂\n・場景由 HomePod mini 執行，不靠網際網路\n・離地 120，鎖在開關盒上，與客廳開關並排"
       },
       {
         "id": "sw-living",
@@ -21859,7 +21863,7 @@
         "kind": "switch",
         "x": 544.9,
         "y": 383.5,
-        "place": "大門內左手牆 · 一鍵全關上方",
+        "place": "大門內左手牆 · 場景按鈕上方",
         "mount": 120,
         "name": "開關 · 客餐廳",
         "product": "Aqara H1 EU 有零線 · 雙鍵",
@@ -21870,7 +21874,7 @@
           ],
           [
             "控制",
-            "客廳主燈、餐桌吊燈、洗牆燈、電視櫃燈條"
+            "玄關燈、客廳主燈、餐桌吊燈、洗牆燈、電視櫃燈條"
           ]
         ],
         "notes": "・離地 120（示意）；鍵數依燈光迴路調整"
@@ -22404,7 +22408,7 @@
               ]
             ]
           },
-          "text": "・選 UniFi：U7 Lite 吸頂只有 33 mm 厚、Wi-Fi 7、PoE 一條線供電，UniFi Network 跑在本機\n・U7 Lite 只有 2.4／5 GHz，沒有 6 GHz；手機與電視用 5 GHz 已夠\n・兩顆 AP 同一組 SSID，5 GHz 用不重疊頻道；2.4 GHz 保留給 Camera E1\n・不選 Deco X50-PoE：便宜約 S$300，但 68.6 mm 厚方盒、Wi-Fi 6、每顆只有 2 個網口",
+          "text": "・選 UniFi：U7 Lite 吸頂只有 33 mm 厚、Wi-Fi 7、PoE 一條線供電，UniFi Network 跑在本機\n・U7 Lite 只有 2.4／5 GHz，沒有 6 GHz；手機與電視用 5 GHz 已夠\n・兩顆 AP 同一組 SSID，5 GHz 用不重疊頻道；2.4 GHz 保留給 Camera E1\n・不選 Deco X50-PoE：便宜約 S$300，但 68.6 mm 厚方盒、Wi-Fi 6、每顆只有 2 個網口\n・要 Cloud Gateway：沒有它 AP 只能逐顆單獨設定，沒有快速漫遊、沒有遠端管理\n・購買：UI Store SG 官網（含 GST、原廠保固）；授權經銷 Win-Pro，38 Jalan Pemimpin #07-04 M38；未查到可看實機的門市",
           "sources": [
             {
               "label": "UniFi U7 Lite",
@@ -22437,6 +22441,14 @@
             {
               "label": "MoneySmart · 新加坡電工價格",
               "url": "https://blog.moneysmart.sg/budgeting/electrician-singapore-electrical-services"
+            },
+            {
+              "label": "UniFi Help · AP 獨立模式",
+              "url": "https://help.ui.com/hc/en-us/articles/12594679474071"
+            },
+            {
+              "label": "Win-Pro · UniFi 授權經銷",
+              "url": "https://shop.winpro.com.sg/blogs/news/ubiquiti-unifi-singapore"
             }
           ]
         },
@@ -22562,7 +22574,7 @@
               ]
             ]
           },
-          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・光纖終端、主路由、交換器建議同接一台小型 UPS（待確認）",
+          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算",
           "sources": [
             {
               "label": "UniFi U7 Lite",
@@ -22611,7 +22623,7 @@
               [
                 "停電",
                 "一起斷電；錄到 microSD 為止",
-                "交換器接 UPS 可續錄"
+                "一起斷電"
               ],
               [
                 "錄影與隱私",
@@ -22725,7 +22737,7 @@
             "name": "HomePod mini（已有）+ Aqara Hub M3",
             "verdict": "pick",
             "summary": "HomePod mini 跑遠端、自動化、HKSV 分析、Thread 與 Matter；M3 把 Aqara 設備橋接進 Apple Home",
-            "details": "- HomePod mini 設定好就自動成為家居中樞，不用另設\n- 內建 Thread 邊界路由器與 Matter 控制器；Adaptive Lighting、HKSV 都可用它當中樞\n- 只有 Wi-Fi、沒有網口：放客廳中央、靠近 AP，不塞進封閉櫃\n- Hub M3 S$289：Zigbee、Thread、Matter，可 PoE 供電；用 HomeKit QR 加入 Apple Home，不要再用 Matter 加一次\n- M3 的 Thread 加入 Apple 現有網路，避免分裂成兩個 Thread 網\n- HomePod mini 與 M3 接 UPS"
+            "details": "- HomePod mini 設定好就自動成為家居中樞，不用另設\n- 內建 Thread 邊界路由器與 Matter 控制器；Adaptive Lighting、HKSV 都可用它當中樞\n- 只有 Wi-Fi、沒有網口：放客廳中央、靠近 AP，不塞進封閉櫃\n- Hub M3 S$289：Zigbee、Thread、Matter，可 PoE 供電；用 HomeKit QR 加入 Apple Home，不要再用 Matter 加一次\n- M3 的 Thread 加入 Apple 現有網路，避免分裂成兩個 Thread 網"
           },
           {
             "name": "Apple TV 4K（4th gen）有線版",
@@ -22743,7 +22755,7 @@
             "name": "第二台 HomePod mini",
             "verdict": "no",
             "summary": "現在不需要：一次只有一台主中樞，M3 已是第二個 Thread 邊界路由；想要臥室音響時再買",
-            "details": "- Apple 自動選一台當主中樞，其餘只是待命\n- 本案以 Zigbee 為骨幹，Thread 設備很少，不需要加 Thread 路由\n- 一鍵全關在 M3 本機跑，中樞掛了照常"
+            "details": "- Apple 自動選一台當主中樞，其餘只是待命\n- 本案以 Zigbee 為骨幹，Thread 設備很少，不需要加 Thread 路由"
           },
           {
             "name": "iPad / Aqara Hub M2",
@@ -22762,19 +22774,31 @@
           "hub",
           "run"
         ],
-        "pick": "UniFi：U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE 放電視櫃中抽，全部 Cat6 有線回程；主臥只預留 Cat6",
+        "pick": "UniFi：U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra 取代 ISP 路由＋USW Lite 8 PoE 放電視櫃中抽；主臥只預留 Cat6",
         "options": [
           {
             "name": "UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE",
             "verdict": "pick",
             "summary": "設備約 S$733；吸頂 33 mm 薄、Wi-Fi 7、一條 Cat6 供電加回程；全屋 5 GHz 預估 ≥ −71 dBm",
-            "details": "- AP-01 客廳鋼琴上方：客廳、餐桌、電視 −35 dBm，廚房 −39，女傭房床 −56，大門 −54\n- AP-02 走廊：小孩房、客房、書房 −40 至 −44 dBm，主臥床頭 −48，主浴 −59\n- 主路由 Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE（S$186，4 埠 PoE+，52 W）放電視櫃中抽\n- Cat6：AP ×2、電視、客房書桌、書房、主臥天花預留，另光纖盒到電視櫃 1 條\n- 主臥不裝第 3 顆 AP：床頭已 −48 dBm；預留 Cat6 現在約 S$100–120，完工後再拉約 S$300 起\n- 兩顆同一組 SSID；2.4 GHz 保留給 Camera E1，HomePod mini、攝影機同一網段\n- 估算假設與每道牆衰減見電與智能家居的覆蓋估算"
+            "details": "- AP-01 客廳鋼琴上方：客廳、餐桌、電視 −35 dBm，廚房 −39，女傭房床 −56，大門 −54\n- AP-02 走廊：小孩房、客房、書房 −40 至 −44 dBm，主臥床頭 −48，主浴 −59\n- Cloud Gateway Ultra（S$219）：路由＋UniFi Network 控制器，光纖盒直接接它，ISP 路由不用\n- 有它才有快速漫遊、一個 App 管全部、遠端管理\n- USW Lite 8 PoE（S$186，4 埠 PoE+，52 W）放電視櫃中抽\n- 買：UI Store SG 官網；或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）\n- Cat6：AP ×2、電視、客房書桌、書房、主臥天花預留，另光纖盒到電視櫃 1 條\n- 主臥不裝第 3 顆 AP：床頭已 −48 dBm；預留 Cat6 現在約 S$100–120，完工後再拉約 S$300 起\n- 兩顆同一組 SSID；2.4 GHz 保留給 Camera E1，HomePod mini、攝影機同一網段\n- 估算假設與每道牆衰減見電與智能家居的覆蓋估算"
           },
           {
             "name": "UniFi U7 Pro",
             "verdict": "alt",
             "summary": "S$329／顆，多 6 GHz；要 6 GHz 時才換，PoE+ 21 W，兩顆 42 W 仍在 52 W 內",
             "details": "- 6 GHz 穿牆比 5 GHz 弱，主臥床頭約 −57 dBm\n- 同樣吸頂、同一條 Cat6，日後直接替換"
+          },
+          {
+            "name": "不買 Gateway：ISP 路由＋U7 Lite 獨立模式",
+            "verdict": "no",
+            "summary": "省 S$219，但每顆 AP 要分開設定、沒有快速漫遊、沒有遠端管理",
+            "details": "- UniFi 官方：獨立模式只能用手機 App 逐顆設定\n- 在 Mac mini 自架控制器可補回，但多一台要一直開著的機器"
+          },
+          {
+            "name": "UniFi Express 7",
+            "verdict": "no",
+            "summary": "S$340，路由＋Wi-Fi 7 AP 二合一；放電視櫃抽屜裡當 AP 浪費，貴 S$121",
+            "details": "- 只要路由與控制器，Cloud Gateway Ultra 就夠"
           },
           {
             "name": "TP-Link Deco X50-PoE ×3＋TL-SG108PE",
@@ -22786,18 +22810,24 @@
       },
       {
         "id": "switch",
-        "name": "智能開關與一鍵全關",
+        "name": "智能開關與場景按鈕",
         "kinds": [
           "switch",
           "scene"
         ],
-        "pick": "Aqara H1 EU 有零線版：裝新加坡 86 方盒，按下直接切電，不靠網路",
+        "pick": "Aqara H1 EU 有零線版：裝新加坡 86 方盒，按下直接切電，不靠網路；大門場景按鈕用 Aqara Wireless Remote Switch H1 (Double Rocker)",
         "options": [
           {
             "name": "Aqara H1 EU 有零線（WS-EUK03／WS-EUK04）",
             "verdict": "pick",
             "summary": "Zigbee 進 M3、再進 Apple Home；單鍵 S$55、雙鍵 S$60，Harvey Norman SG 有售",
-            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，感應器訊號更穩\n- 大門一鍵全關：右鍵轉為無線開關；單擊由 M3 本機關全屋燈（斷網也有效），長按觸發 Apple Home「離家」\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
+            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，感應器訊號更穩\n- 大門場景按鈕另用 Aqara Wireless Remote Switch H1 (Double Rocker)，見下\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
+          },
+          {
+            "name": "Aqara Wireless Remote Switch H1 (Double Rocker) · WRS-R02",
+            "verdict": "pick",
+            "summary": "大門場景按鈕：S$45，Harvey Norman SG；Zigbee 進 M3，Apple Home 每鍵可設場景",
+            "details": "- 單擊、雙擊、長按、雙鍵同按，最多 7 個場景\n- 鈕扣電池約 5 年，免拉線；可鎖在開關盒上或背膠\n- 與 H1 開關同系列外觀，並排一致\n- 建議：左鍵單擊「離家」關全屋燈與插座，右鍵單擊「回家」"
           },
           {
             "name": "Aqara Z1 Pro",
@@ -22909,7 +22939,7 @@
           {
             "name": "Aqara Door & Window Sensor + Motion Sensor P1",
             "verdict": "pick",
-            "summary": "P1 S$39，電池約 5 年；用於夜燈與出門提醒（門開＋無人→提示一鍵全關）",
+            "summary": "P1 S$39，電池約 5 年；用於夜燈與出門提醒（門開＋無人→提示按「離家」）",
             "details": "- 和開關同一個 Zigbee 網，不用 Thread 路由\n- 門窗感應器新加坡價格待確認"
           },
           {
