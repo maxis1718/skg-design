@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R73",
+    "revision": "R74",
     "unit": "cm",
     "date": "2026-10-31"
   },
@@ -4814,6 +4814,10 @@
     {
       "id": "C81",
       "text": "右上新增 ☑ 待拍板總表：全屋要去看、去選的事，按房間分組。"
+    },
+    {
+      "id": "C82",
+      "text": "廚房方案 A 定案：電器櫃在女傭房端；拿掉視覺壓迫的提醒。"
     }
   ],
   "measurement_policy": {
@@ -5738,9 +5742,6 @@
       ],
       "focus": [
         "tower"
-      ],
-      "risks": [
-        "進門正對到天花的電器櫃，視覺壓迫"
       ]
     },
     "master-wardrobe-left": {
@@ -11914,9 +11915,6 @@
         "https://ea.blum.com/en/number-of-hinges/",
         "https://www.blum.com/sg/en/products/liftsystems/aventos-hk-xs/programme/",
         "https://www.blum.com/us/en/products/motion-technologies/tip-on-doors/overview/"
-      ],
-      "risks": [
-        "進門正對到天花的電器櫃，視覺壓迫"
       ]
     },
     "kitchen-dry": {
@@ -23173,8 +23171,8 @@
     {
       "id": "todo-kitchen-scheme",
       "room": "kitchen",
-      "text": "定廚房方案：建議 A",
-      "status": "open"
+      "text": "定廚房方案 A",
+      "status": "done"
     },
     {
       "id": "todo-kitchen-sink",

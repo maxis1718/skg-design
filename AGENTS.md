@@ -106,6 +106,7 @@
 - R65 (2026-10-30): guest versions can carry dims [{line,label}] drawn on the guest room view (renderDimensions); wardrobe→bed clear 59 (A/B) / 60 (C), also as wardrobe clearances.
 - R68 (2026-11-01): guest bed decided — Taobao frame 194 × 154 (`guest-bed-lb`, x364.9–419.94, y149.01–192.68, head east, 15 off the window) + Tempur Prima SmartCool Firm Queen 150 × 190 × 21; no bed drawers. Clears: wardrobe→bed 71 (A/B) / 72 (C), desk→bed 91, foot→west wall 53. MALM/HipVan dropped from the current layout.
 - R69 (2026-11-01): motorized curtains cancelled — no CT points, no curtain category, no curtain-motor research/todos.
+- R74 (2026-11-02): owner chose kitchen scheme A (電器櫃 at the helper-room end); removed the tower visual-pressure risk from appliance-tower / kitchen-lower-worktop; todo-kitchen-scheme done; REV table [81,'R73'].
 - R73 (2026-11-01): header ☑ button (#todo-btn, left of 💡, badge = open todo count) opens #todo-panel: all open project.todos grouped by room in tab order, research links, 看房間 jump. Brief and todo panels are mutually exclusive.
 - R71 (2026-11-01): guest scheme B (guest-b) removed with its objects/elevations/svg; displayed B = guest-c (GUEST_KEYS {a:'guest-a',b:'guest-c'}, ?guest=c → B). WashTower ≥177 notes dropped (site crew handles).
 - R70 (2026-11-01): study massage chair + desk moved 5 north (chair 15 off the window, desk 95 to the door opening) to clear the 15 curtain pocket; rule 12 added (fix conflicts directly, then report).
