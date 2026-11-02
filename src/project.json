@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R74",
+    "revision": "R75",
     "unit": "cm",
     "date": "2026-10-31"
   },
@@ -4809,6 +4809,10 @@
     {
       "id": "C82",
       "text": "廚房方案 A 定案：電器櫃在女傭房端；拿掉視覺壓迫的提醒。"
+    },
+    {
+      "id": "C83",
+      "text": "主臥只留 A；客房定 A；廚房微波爐、電子鍋、烤箱沿用現有；PS5 Pro 改中格開放（不做門）；智能家居刪 UPS、場景按鈕改 Aqara H1。"
     }
   ],
   "measurement_policy": {
@@ -23007,25 +23011,19 @@
     {
       "id": "todo-smart-unifi",
       "room": "smart",
-      "text": "買 UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE（約 S$733）",
-      "status": "open"
-    },
-    {
-      "id": "todo-smart-ups",
-      "room": "smart",
-      "text": "買小型 UPS：光纖、網路、M3、HomePod mini",
+      "text": "買 UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE（S$733，UI Store SG）",
       "status": "open"
     },
     {
       "id": "todo-smart-icloud",
       "room": "smart",
-      "text": "升級 iCloud+ 200 GB 開 HKSV",
+      "text": "升級 iCloud+ 200 GB（3 台 E1 雲端錄影）",
       "status": "open"
     },
     {
       "id": "todo-smart-all-off",
       "room": "smart",
-      "text": "定一鍵全關的範圍：燈、插座",
+      "text": "選大門場景按鈕：建議 Aqara Wireless Remote Switch H1 (Double Rocker)，S$45",
       "status": "open"
     },
     {
@@ -23045,14 +23043,14 @@
     {
       "id": "todo-living-av",
       "room": "living",
-      "text": "定遊戲機位置：建議 A 中格格柵門（關門玩）",
+      "text": "定遊戲機：建議 A 中格開放（不做門）",
       "research": "console-gaming",
       "status": "open"
     },
     {
       "id": "todo-living-cabinet",
       "room": "living",
-      "text": "確認客餐廳 190 櫃體的用途",
+      "text": "定走道口 190 櫃：做不做、做什麼用",
       "status": "open"
     },
     {
@@ -23072,12 +23070,6 @@
       "id": "todo-kitchen-laminate",
       "room": "kitchen",
       "text": "選櫃體 laminate 品牌與色號",
-      "status": "open"
-    },
-    {
-      "id": "todo-kitchen-tower-appliances",
-      "room": "kitchen",
-      "text": "選微波爐、電子鍋型號",
       "status": "open"
     },
     {
@@ -23101,8 +23093,8 @@
     {
       "id": "todo-guest-scheme",
       "room": "guest",
-      "text": "定案客房方案 A／B",
-      "status": "open"
+      "text": "定客房方案 A",
+      "status": "done"
     },
     {
       "id": "todo-guest-wardrobe",
@@ -23182,22 +23174,10 @@
       "status": "open"
     },
     {
-      "id": "todo-kitchen-oven",
-      "room": "kitchen",
-      "text": "選嵌入式烤箱（開口 60）",
-      "status": "open"
-    },
-    {
       "id": "todo-living-tv",
       "room": "living",
       "text": "去 VivoCity 看 Xiaomi TV S Pro Mini LED 75 2026 實機",
       "research": "tv-xiaomi",
-      "status": "open"
-    },
-    {
-      "id": "todo-master-scheme",
-      "room": "master",
-      "text": "定主臥方案 A／B",
       "status": "open"
     },
     {
@@ -23386,9 +23366,9 @@
     },
     "smart-home": {
       "title": "全屋智能家居方案",
-      "updated": "2026-10-29",
-      "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋已有的 HomePod mini 當家居中樞。因為牆上開關與一鍵全關斷網照常用、新加坡有現貨與保固、中樞不用再花錢。",
-      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器，一鍵全關在 M3 本機跑，中樞掛了也照常。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；一鍵全關在 M3 本機執行，網路或 HomePod mini 掛了也有效。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶；中樞與網路接 UPS。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **UPS**：光纖終端、Cloud Gateway、PoE 交換器、M3、HomePod mini 同接一台小 UPS。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **一鍵全關**：大門 H1 右鍵轉無線開關；單擊由 M3 本機關燈，長按觸發 Apple Home「離家」含插座。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
+      "updated": "2026-11-02",
+      "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋已有的 HomePod mini 當家居中樞；網路用 UniFi＋Cloud Gateway Ultra；大門裝 Wireless Remote Switch H1 場景按鈕；不買 UPS。",
+      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi U7 Lite ×2＋Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE** — Gateway 取代 ISP 路由並跑 UniFi Network；沒有它，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **iCloud+ 200 GB**：3 台 E1 走 HKSV 的必要條件（50 GB 只能 1 台，200 GB 最多 5 台）；錄影不佔容量。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由 HomePod mini 本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | U7 Lite ×2＋UCG Ultra＋USW Lite 8 PoE | S$733 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
       "sources": [
         {
           "title": "Apple: Set up HomePod, HomePod mini or Apple TV as a home hub",
@@ -23485,6 +23465,30 @@
         {
           "title": "Aqara Singapore (PFE): Hub M3 (S$289, PoE)",
           "url": "https://pfetech.com/aqara/product/aqara-hub-m3/"
+        },
+        {
+          "title": "EMA: SAIDI / SAIFI 2020–2024 (Annual Sustainability Report 2024/25)",
+          "url": "https://ema.gov.sg/resources/corporate-publications/annual-sustainability-report-2024-2025/building-resilient-energy-markets-and-systems"
+        },
+        {
+          "title": "UniFi Help: APs in standalone mode",
+          "url": "https://help.ui.com/hc/en-us/articles/12594679474071"
+        },
+        {
+          "title": "UI Store SG: UniFi Express 7 (S$340 incl. GST)",
+          "url": "https://sg.store.ui.com/sg/en/products/ux7"
+        },
+        {
+          "title": "Win-Pro: authorised Ubiquiti reseller Singapore",
+          "url": "https://shop.winpro.com.sg/blogs/news/ubiquiti-unifi-singapore"
+        },
+        {
+          "title": "Aqara: Wireless Remote Switch H1",
+          "url": "https://aqara.cn/eu/product/wireless-remote-switch-h1/"
+        },
+        {
+          "title": "Harvey Norman SG: Aqara H1 wireless double rocker WRS-R02 (S$45)",
+          "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-h1-wireless-double-rocker-remote-switch-white-wrs-r02.html"
         }
       ]
     },
@@ -23674,33 +23678,45 @@
     },
     "console-gaming": {
       "title": "電視櫃遊戲機收納：PS5 Pro 與 Switch 2",
-      "updated": "2026-11-01",
-      "summary": "選 A：中格改遊戲格，PS5 Pro 固定在格柵上掀門後面、關著門玩，背板加 AC Infinity AIRPLATE S5 DUAL 抽風；Switch 2 底座放櫃面右端。因為拿手把就能玩、熱有出口、三格 70 的立面不變。",
-      "body": "## 結論\n- **選：A 中格遊戲格**：中抽改固定格，PS5 Pro 橫放置中，前面是直條格柵上掀門（Blum AVENTOS HK-XS），平時關著玩；背板開孔裝 AC Infinity AIRPLATE S5 DUAL（USB，2 × 80 mm，52 CFM）往後腔抽風，經頂板後緣通風縫排出。Switch 2 底座放櫃面右端。網通移到左抽，右抽放手把、遊戲片。\n- **備選：B 兩台都放櫃面**：零五金、散熱最好；代價是兩台白色主機與線在電視正下方，言言搆得到。\n- **不選：抽屜裝主機（舊 A）**：玩之前要拉抽屜，是錯的。**開放格**：主機外露積灰、立面破格。**實心掀門**：關門玩會悶，等於要開著玩。\n\n## 為什麼是「掀開」也可以\n- 過去不做掀門，是因為每次用都要掀。A 的門是格柵：PS5 用手把開機，DualSense 走藍牙，關門照玩；只有換光碟、清灰才掀，一年幾次。\n- 上掀（不是下翻）：門往上停在 86°，像小雨棚外伸 30，不擋電視、不擋腳。\n- Switch 2 要常拔出來掌機玩，所以不放門後，放櫃面最順手。\n\n## 評判標準\n- **不開門就能玩**：PS5 Pro 由手把開機、藍牙連線；Switch 2 拿起就走。\n- **散熱**：PS5 Pro 遊戲約 230–240 W；Sony 建議四周約 10 cm、別放狹窄空間。A：左右各 13.8、上方 18.3，前格柵進風、後方抽風。\n- **立面**：三格 70 同款格柵＋弧形缺口，中格對齊電視中線。\n- **線**：電視 HDMI 1 → PS5 Pro、2 eARC → KEF、3 → Switch 2；全部經 Ø50 暗管上電視背後，主機不動、線不動。\n- **小孩與灰塵**：主機在門後；格柵與風扇每半年吸塵。\n\n## 比較\n| 項目 | A 中格格柵門 | B 都放櫃面 |\n|---|---|---|\n| 玩前動作 | 無 | 無 |\n| PS5 散熱 | 前進後抽 | 開放最好 |\n| 外觀 | 主機藏起 | 兩台外露 |\n| 換光碟 | 掀門 | 直接 |\n| 額外五金 | HK-XS＋風扇 | 無 |\n| 言言搆得到 | Switch | 兩台 |\n\n## 要先做的事\n- 交代 Patrick：中格做固定底板＋背板（風扇開孔），門用 HK-XS，三格前板同款直條格柵（開孔約 50%）、頂板後緣通風縫全長。\n- 風扇接 PS5 背面 USB；PS5「休眠模式 USB 供電」設關，風扇只在開機時轉。\n\n## 風險與待確認\n- PS5 Pro 的進、出風都在背面與底面（Sony 拆解說明），所以背板一定要開孔加抽風，不能封死。\n- Switch 2 頂離電視下緣約 7.6，別再疊東西。\n- HK-XS 能否撐 70 × 30 格柵門，依門重以 Blum 配置器確認（待確認）。",
+      "updated": "2026-11-02",
+      "summary": "關門格撤回：PS5 Pro 遊戲 228–240 W，關門靠 52 CFM 換氣格內升 8–14 °C，新加坡 30 °C 室溫進風 38–44 °C，超過 Sony 35 °C，且說明書禁止放密閉櫃。改選 A 中格開放不做門：PS5 Pro 置中，左右 13.8、上 18.3、後 11 都過 Sony 10 cm，背板抽風；Switch 2 放櫃面。備選 B 兩台放櫃面。",
+      "body": "## 結論\n- **關門格（含格柵上掀門）不成立，撤回。** Sony 的 PS5 Pro 說明書寫「不要放在密閉櫃或會積熱的地方」，規格室溫上限 35 °C。PS5 Pro 遊戲 228–240 W，關門時熱只能靠 AIRPLATE S5 DUAL 的 52 CFM 排出：格內升 8–14 °C，新加坡 30 °C 室溫下主機進風 38–44 °C，超規格。\n- **選：A 中格開放（不做門）**：三格 70 不變，左右抽格柵，中間開放格。PS5 Pro 橫放置中、前緣退 3：左右各 13.8、上 18.3、後 11，四邊都超過 Sony 的 10 cm；前面全開進風，開槽背板後的 AIRPLATE S5 DUAL 把 PS5 背面的熱風抽到後腔，從頂板後緣通風縫出去。Switch 2 底座照舊放櫃面右端。\n- **備選：B 兩台都放櫃面**：散熱最好（後方離牆 21、上方離電視 13.2），零施工；代價是 PS5 Pro 白色主機直接在電視下方，最不整齊。\n- **不選：電視櫃上直放**：PS5 Pro 直放高 38.8，櫃面 40 → 頂 ≥ 78.8，電視下緣 62.1，撞到。**不選：放腳架旁地上**：左腳架離窗簾盒只有 3.7、右腳架與 KC62 之間 8.7，放不下 21.6 × 38.8；放前面就擋走道、掃地機和言言都碰得到。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck 轉述） |\n| 額定最大功率 | 390 W | 說明書規格（VGC） |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| 擺放 | 四周 ≥ 10 cm、不放狹窄空間 | PlayStation Support |\n| 密閉櫃 | 不要放密閉櫃或積熱處 | PS5 Pro 設定說明（EB Games 轉載） |\n| 進出風位置 | 背面與底面 | PlayStation Blog 拆解 |\n| PS5 出風溫度 | 室溫 +20 K（28 → 48 °C） | Igor's Lab 實測（初代 PS5） |\n| AIRPLATE S5 DUAL | 52 CFM、18 dBA、靜壓 1.6 mm-H₂O | AC Infinity |\n\n## 關門格怎麼算\n- 換氣升溫：ΔT = P ÷ (ρ·cp·Q)。30 °C 空氣 ρ·cp ≈ 1,170 J/(m³·K)。\n- 52 CFM（0.0245 m³/s）是風扇不受阻的最大風量：235 W → **+8.2 °C**。\n- 實際要穿過格柵、8.2 後腔與通風縫，風扇靜壓只有 1.6 mm-H₂O，風量打到 30–40 CFM → **+10.6 ~ +14.2 °C**。\n- 進風 = 30 + 8~14 = **38–44 °C**，高於 Sony 的 35 °C；開冷氣 26 °C 也有 34–40 °C。\n- 要守住 35 °C（升溫 ≤ 5 °C）需要實際 ≥ 85 CFM 穿過門片，這個尺寸的安靜風扇做不到。\n- 再加上 PS5 Pro 進出風都在背面：關門時它會吸回自己 +20 K 的熱風，混合估算還偏樂觀。\n- 找不到 PS5／PS5 Pro 關門櫃內的正式量測；能找到的是 Best Buy 展示櫃 PS5 跳過熱警告（Tom's Guide），沒有溫度數字。\n\n## 為什麼開放格可以\n- 不是密閉櫃：前面 66.4 × 28.2 全開，進風不受限。\n- Sony 唯一給的數字是四周 10 cm：左右 13.8、上 18.3、後 11 都過。\n- 進出風都在背面，所以後方 11 不能塞東西；背板開槽＋風扇把熱風送進後腔往上走，不讓它在主機背後打轉。\n- 跟 B 放櫃面比，A 少了上方開放空間，但多了主動抽風；兩者都符合 Sony 說明。\n\n## 外觀\n- 中格對齊電視中線，PS5 Pro 置中、前緣退 3，像刻意留的展示格；左右兩格同款直條格柵＋弧形缺口。\n- 線全部從開槽背板進後腔，走 Ø50 暗管上電視背後；正面看不到線。\n- 中格內側板、底板用前板同款飾面，不做燈（避免在電視下方反光）。\n\n## 要先做的事\n- 交代 Patrick：中格不做門，固定底板＋開槽背板；AIRPLATE S5 DUAL 裝在背板後側（後腔內）；頂板後緣通風縫全長。\n- PS5「休眠模式 USB 供電」關，風扇只在開機時轉。\n\n> ⚠️ 沒有 PS5 Pro 放在開放格的公開實測；開放格是依 Sony 說明書條件＋換氣計算判斷。中格開放也會積灰，每半年吸一次 PS5 背面與背板開槽。\n",
       "sources": [
+        {
+          "title": "PS5 Pro vs PS5 power consumption — Digital Foundry figures (Notebookcheck)",
+          "url": "https://www.notebookcheck.net/PS5-Pro-vs-PS5-power-consumption-Pro-console-shows-impressive-efficiency-with-30-FPS-uplift-for-modest-energy-increase.920303.0.html"
+        },
+        {
+          "title": "The official PlayStation 5 Pro specifications (VGC, from the manual)",
+          "url": "https://www.videogameschronicle.com/news/the-official-playstation-5-pro-specifications-have-been-revealed"
+        },
         {
           "title": "PS5 console noise and placement (PlayStation Support)",
           "url": "https://www.playstation.com/en-ae/support/hardware/ps5-console-noise"
+        },
+        {
+          "title": "PlayStation 5 Pro Console Setup Guide (EB Games)",
+          "url": "https://support.ebgames.com.au/hc/en-us/articles/15353041550223-PlayStation-5-Pro-Console-Setup-Guide"
         },
         {
           "title": "PlayStation 5 Pro Teardown (PlayStation Blog)",
           "url": "https://blog.playstation.com/2025/04/21/playstation-5-pro-teardown-an-inside-look-at-the-most-advanced-playstation-console-to-date/"
         },
         {
-          "title": "PS5 Pro vs PS5 power consumption (Notebookcheck)",
-          "url": "https://www.notebookcheck.net/PS5-Pro-vs-PS5-power-consumption-Pro-console-shows-impressive-efficiency-with-30-FPS-uplift-for-modest-energy-increase.920303.0.html"
+          "title": "We measure the new PS5 again — exhaust temperature (Igor's Lab)",
+          "url": "https://igorslab.de/en/we-measure-the-new-ps5-again-aris-igor-the-magnificent-12-sensors-for-truth-and-justice/3"
+        },
+        {
+          "title": "AIRPLATE S5 cabinet cooling fan system (AC Infinity)",
+          "url": "https://www.acinfinity.com/component-cooling/cabinet-fan-systems/airplate-s5-home-theater-and-av-quiet-cabinet-cooling-fan-system-8-inch/"
+        },
+        {
+          "title": "PS5 overheats in Best Buy display (Tom's Guide)",
+          "url": "https://www.tomsguide.com/news/ps5-overheats-in-best-buy-this-is-what-you-shouldnt-do"
         },
         {
           "title": "Teardown of Nintendo Switch 2 official dock (ChargerLAB)",
           "url": "https://www.chargerlab.com/teardown-of-nintendo-switch-2-official-charging-dock/"
-        },
-        {
-          "title": "Blum AVENTOS HK-XS",
-          "url": "https://www.blum.com/sg/en/01/10/60/"
-        },
-        {
-          "title": "AC Infinity AIRPLATE S5 DUAL (JB Hi-Fi)",
-          "url": "https://www.jbhifi.com.au/products/ac-infinity-airplate-s5-dual-52-cfm-cabinet-cooler-usb-powered-80mm"
         },
         {
           "title": "Xiaomi TV S Pro Mini LED 75 2026 Specs",
