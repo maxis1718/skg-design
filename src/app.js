@@ -274,6 +274,11 @@ function chooseKitchenVersion(id){
 }
 function dimensionLine(group,x1,y1,x2,y2,label,selected=false){
   const vertical=x1===x2, klass=selected?'selected-dim':'dimension-line', tklass=selected?'selected-dim-text':'dimension-text';
+  // Diagonal (e.g. living walkway piano corner → speaker stand): ticks perpendicular, label above the line, kept upright.
+  if(!vertical&&y1!==y2){const L=Math.hypot(x2-x1,y2-y1),nx=-(y2-y1)/L*1.4,ny=(x2-x1)/L*1.4;let ang=Math.atan2(y2-y1,x2-x1)*180/Math.PI;if(ang>90)ang-=180;if(ang<-90)ang+=180;
+    group.append(svgEl('path',{d:`M${x1-nx} ${y1-ny}L${x1+nx} ${y1+ny}M${x1} ${y1}L${x2} ${y2}M${x2-nx} ${y2-ny}L${x2+nx} ${y2+ny}`,class:klass}));
+    const r=ang*Math.PI/180,tx=(x1+x2)/2+Math.sin(r)*2,ty=(y1+y2)/2-Math.cos(r)*2;
+    group.append(svgEl('text',{x:tx,y:ty,class:tklass,transform:`rotate(${ang} ${tx} ${ty})`},label));return;}
   const path=vertical?`M${x1-1.4} ${y1}h2.8M${x1} ${y1}V${y2}M${x2-1.4} ${y2}h2.8`:`M${x1} ${y1-1.4}v2.8M${x1} ${y1}H${x2}M${x2} ${y2-1.4}v2.8`;
   group.append(svgEl('path',{d:path,class:klass}));
   const x=vertical?x1+3:(x1+x2)/2,y=vertical?(y1+y2)/2:y1-2;
@@ -306,12 +311,14 @@ function renderDimensions(){
       dimensionLine(g,x0,346,x1,346,num(p.horizontal_cm));
       dimensionLine(g,454,y0,454,y1,num(p.vertical_cm));
     }else if(id==='living'){
-      dimensionLine(g,x0,177,x1,177,num(p.horizontal_cm));
+      // R77: room width moved out to the balcony side (the old y177 line read as a curtain; y177.3 is now the real 20 cm curtain-pocket face).
+      dimensionLine(g,x0,164.5,x1,164.5,num(p.horizontal_cm));
       dimensionLine(g,603,171.64,603,281.56,'387.5');
     }
   }
   // Version-level clear dims (e.g. guest wardrobe ↔ bed) on the room view.
-  if(roomId==='guest')for(const c of guestVersion()?.dims||[]){const[a,b,c2,d]=c.line;dimensionLine(g,a,b,c2,d,c.label,true);}
+  const vdims=roomId==='guest'?guestVersion()?.dims:roomId==='living'?livingVersion()?.dims:null;
+  for(const c of vdims||[]){const[a,b,c2,d]=c.line;dimensionLine(g,a,b,c2,d,c.label,true);}
   renderSelectedDimensions();
 }
 function renderSelectedDimensions(){
@@ -321,7 +328,8 @@ function renderSelectedDimensions(){
   const w=o.dimensions.w,d=o.dimensions.d;
   const hd=Math.abs(horizontal-w.cm)<Math.abs(horizontal-d.cm)?w:d,vd=hd===w?d:w;
   // Dining table: chairs flank the long sides and the Tripp Trapp sits at the north end, so put the width below (corridor end, no chair) and the length outside the east chairs.
-  const dining=o.id==='dining-table',hy=dining?y1+7:y0-3,vx=dining?x1+7.5:x1+4;
+  // TV console: speaker stands sit against both ends, so its depth reads across the middle (R77; the old y0-3 "45" read as a gap to the glass).
+  const dining=o.id==='dining-table',hy=dining?y1+7:o.id==='tv-console'?(y0+y1)/2+8:y0-3,vx=dining?x1+7.5:x1+4;
   dimensionLine(g,x0,hy,x1,hy,dimension(hd)+' cm',true);
   const vx2=o.clearances?x0-4:vx;dimensionLine(g,vx2,y0,vx2,y1,dimension(vd)+' cm',true);
   for(const c of o.clearances||[]){const[a,b,c2,d]=c.line;dimensionLine(g,a,b,c2,d,c.label,true);}

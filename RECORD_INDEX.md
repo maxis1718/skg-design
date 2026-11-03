@@ -24,7 +24,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | --- | --- | --- | --- |
 | LIV-01 | `living-cabinet` | 走道口 190 櫃 | 190 × 60 |
 | LIV-02 | `piano` | 鋼琴 | 130 × 61 |
-| LIV-03 | `tv-console` | 電視櫃 | 210 × 45 |
+| LIV-03 | `tv-console` | 電視櫃 | 225 × 45 |
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |
 | LIV-05 | `dining-table` | 餐桌 | 150 × 90 |
 | LIV-06 | `drying-rack` | 曬衣架 | 113 × 40 |
@@ -80,10 +80,11 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-20 | `guest-bed-b` | 客房床 B · MALM Queen | 166 × 209 |
 | LBL-03 | `balcony-cabinet` | 陽台收納櫃 | 105 × 65 |
 | LBL-01 | `swing-hooks` | 鞦韆 · 天花吊點 ×2 | 50 × 40 |
-| LIV-08 | `air-purifier` | 空氣清淨機 Electrolux Pure A9 | 37 × 37 |
+| LIV-08 | `air-purifier` | 空氣清淨機 Electrolux UltimateHome 300 | 23.4 × 23.4 |
 | LIV-09 | `kef-speaker-l` | 左喇叭 KEF LS50 Wireless II | 20 × 31.1 |
 | LIV-10 | `kef-speaker-r` | 右主喇叭 KEF LS50 Wireless II | 20 × 31.1 |
 | LIV-11 | `kef-sub` | 重低音 KEF KC62 | 25.6 × 24.8 |
+| LIV-12 | `living-curtain` | 窗簾盒（雙軌） | 560 × 20 |
 | LBL-02 | `robot-vacuum` | 拖地機 Dreame H14 Ultra（含底座） | 35 × 35 |
 | KID-02 | `kid-fan` | 風扇清淨機 Dyson TP09 | 22 × 22 |
 | GST-21 | `guest-purifier` | 清淨機 Electrolux UltimateHome 300 | 23.4 × 23.4 |

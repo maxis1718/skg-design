@@ -1677,25 +1677,25 @@
       "label": "TV console",
       "bounds_pt": [
         570.23,
-        185.817,
+        185.813,
         582.98,
-        245.337
+        249.593
       ],
       "plan_horizontal_cm": 45,
-      "plan_vertical_cm": 210,
-      "nominal_width_cm": 210,
+      "plan_vertical_cm": 225,
+      "nominal_width_cm": 225,
       "nominal_depth_cm": 45,
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R08: floor-standing 3-drawer console 210 W x 45 D x 40 H on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Centred on the TV/sofa axis 155 cm from the balcony glass (north end 50, south end 127.5 to the end of the wall; axis moved 25 south from 130 so a KEF S2 stand fits outside each end, 3.7 clear). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
+      "notes": "Design R08/R77: floor-standing console 225 W x 45 D x 40 H (R77: owner's ≥1.3 × TV width rule — LG G6 77 171.2 → 222.6, Xiaomi 75 166.7 → 216.7; front corners rounded R7.5) on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. R77 plan: north end 50 from the balcony glass = 30 from the 20 cm double-track curtain pocket (KEF S2 stand fits between, 3.7 clear each side); south end 275; TV/sofa axis 162.5 from the glass (7.5 south of R76). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
       "source_note": "3 抽各 70，中抽放全部插座\n踢腳內退 10，3000K 洗地燈",
       "dimensions": {
         "w": {
-          "cm": 210,
+          "cm": 225,
           "status": "design"
         },
         "d": {
@@ -1719,9 +1719,9 @@
       "label": "Sofa",
       "bounds_pt": [
         517.79,
-        185.817,
+        187.939,
         544.71,
-        245.337
+        247.467
       ],
       "plan_horizontal_cm": 95,
       "plan_vertical_cm": 210,
@@ -1730,7 +1730,7 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred on the TV axis 155 cm from the glass (moved 25 south with the TV wall for the KEF stands): north end 50.0 cm from the glass, south end 65.1 cm to the corridor line y263.8; front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
+      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred on the TV axis 162.5 cm from the glass (R77: moved 7.5 south with the 225 console): north end 57.5 from the glass = 37.5 to the curtain pocket, south end 57.6 to the corridor line y263.8 (piano front); front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
       "name": "沙發",
       "source_note": "扶手、靠背寬度未定，圖面示意",
       "dimensions": {
@@ -1842,9 +1842,9 @@
       "label": "TV",
       "bounds_pt": [
         582.22,
-        191.697,
+        193.823,
         582.98,
-        239.457
+        241.583
       ],
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
@@ -3957,31 +3957,31 @@
       "id": "air-purifier",
       "code": "LIV-08",
       "room_id": "living",
-      "name": "空氣清淨機 Electrolux Pure A9",
+      "name": "空氣清淨機 Electrolux UltimateHome 300",
       "bounds_pt": [
-        573.91,
-        264.903,
-        584.4,
-        275.391
+        574.93,
+        269.237,
+        581.563,
+        275.87
       ],
       "dimensions": {
         "w": {
-          "cm": 37,
+          "cm": 23.4,
           "status": "design"
         },
         "d": {
-          "cm": 37,
+          "cm": 23.4,
           "status": "design"
         }
       },
       "actual": {
-        "w": 37,
-        "d": 37,
-        "h": null,
+        "w": 23.4,
+        "d": 23.4,
+        "h": 40.5,
         "brand": "Electrolux",
-        "model": "Pure A9"
+        "model": "UltimateHome 300"
       },
-      "source_note": "・37 × 37，靠東牆、重低音南側\n・背後插座 ×2（S-07、S-08）",
+      "source_note": "・23.4 × 23.4 × 40.5，東牆重低音南側，離牆 5\n・背後插座 ×2（S-07、S-08）",
       "status": "user-design"
     },
     {
@@ -4016,7 +4016,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 35 cm from the balcony glass; the 22.6 stand base spans 23.7-46.3 = 3.7 clear of the 20 cm curtain pocket and 3.7 clear of the console north end (50). Rear 14 cm from the feature wall, front flush with the console front; stand square to the wall (5° toe-in would cut the clearances to 2.4). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
+      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 35 cm from the balcony glass; the 22.6 stand base spans 23.7-46.3 = 3.7 clear of the 20 cm curtain pocket face and 3.7 clear of the console north end (50). Pair 255 apart (R77), ≈79° to the centre seat (ear ≈195 from the wall); 10° toe-in would need +5 of wall per end, so stands stay square. Rear 14 cm from the feature wall, front flush with the console front; stand square to the wall (5° toe-in would cut the clearances to 2.4). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
       "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 35，背距牆 14"
     },
     {
@@ -4027,9 +4027,9 @@
       "label": "KEF LS50 Wireless II, right (primary)",
       "bounds_pt": [
         570.195,
-        246.761,
+        251.013,
         579.011,
-        252.431
+        256.683
       ],
       "dimensions": {
         "w": {
@@ -4051,7 +4051,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 275 cm from the glass (axis 155 + 120), base 263.7-286.3 = 3.7 clear of the console south end (260); rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 290 cm from the glass (axis 162.5 + 127.5), base 278.7-301.3 = 3.7 clear of the console south end (275); 106 diagonal to the piano corner; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
       "source_note": "主喇叭：KEF LS50 Wireless II on KEF S2 Floor Stand\n接 HDMI eARC、網路、KC62"
     },
     {
@@ -4062,9 +4062,9 @@
       "label": "Subwoofer KEF KC62",
       "bounds_pt": [
         573.115,
-        255.265,
+        259.517,
         580.145,
-        262.522
+        266.774
       ],
       "dimensions": {
         "w": {
@@ -4086,8 +4086,42 @@
       "height_cm": 24.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 295-320.6 cm from the glass: 8.7 cm from the primary stand base and 8.4 cm from the purifier. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 310-335.6 cm from the glass: 8.7 cm from the primary stand base and 8.7 cm from the purifier. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
       "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n貼牆 10，RCA 接主喇叭 Sub Out"
+    },
+    {
+      "id": "living-curtain",
+      "code": "LIV-12",
+      "room_id": "living",
+      "name": "窗簾盒（雙軌）",
+      "label": "Curtain pocket, double track",
+      "bounds_pt": [
+        425.64,
+        171.64,
+        584.4,
+        177.309
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 560,
+          "status": "design"
+        },
+        "d": {
+          "cm": 20,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": null,
+        "d": null,
+        "h": null,
+        "brand": null,
+        "model": null
+      },
+      "mount": "ceiling",
+      "status": "user-design",
+      "notes": "R55/R77: ceiling curtain pocket 20 deep along the whole balcony glass (560), double track — sheer on the glass side (≈6), blackout inside (≈14). All living clearances are measured from the pocket face (20 from the glass). Curtains manual (R69), hem 1 above the floor.",
+      "source_note": "天花窗簾盒深 20、沿陽台玻璃全長\n雙軌：紗簾靠玻璃、遮光在內；手動，離地 1"
     },
     {
       "id": "robot-vacuum",
@@ -5336,8 +5370,8 @@
             "門關著別玩：只在休眠（0.3–3.6 W）關；玩時門推進櫃內",
             "翻門那 2–3 秒外伸 27 → 收好後 0；兩個位置都有磁吸童鎖",
             "Switch 2 在櫃面、頂離電視下緣 7.6 → 不要再疊東西",
-            "沙發南端到過道 65 → 沙發不可超過 210，邊几放北端",
-            "左腳架離窗簾盒 3.7 → 窗簾離地 1、不拖地"
+            "沙發南端到鋼琴前緣 57.6 → 沙發不可超過 210，邊几放北端",
+            "左腳架離窗簾盒面 3.7 → 窗簾離地 1、不拖地"
           ],
           "items": [
             {
@@ -5384,7 +5418,7 @@
             },
             {
               "label": "喇叭",
-              "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand，中心距 240",
+              "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand，中心距 255",
               "status": "定",
               "object": "kef-speaker-l"
             },
@@ -5393,6 +5427,12 @@
               "value": "KEF KC62",
               "status": "建議",
               "object": "kef-sub"
+            },
+            {
+              "label": "窗簾",
+              "value": "雙軌（紗簾＋遮光）· 天花窗簾盒深 20",
+              "status": "定",
+              "object": "living-curtain"
             },
             {
               "label": "沙發",
@@ -5415,6 +5455,14 @@
           ],
           "clearances": [
             {
+              "label": "電視櫃北端到窗簾盒／玻璃",
+              "value": "30／50"
+            },
+            {
+              "label": "鋼琴角到右腳架（斜向走道）",
+              "value": "106 · 到電視櫃角 115"
+            },
+            {
               "label": "沙發到電視櫃",
               "value": "90 · 拉抽剩 55 · 翻門瞬間 63"
             },
@@ -5428,18 +5476,28 @@
             },
             {
               "label": "沙發南端到過道",
-              "value": "65"
+              "value": "57.6"
             },
             {
               "label": "餐桌南緣到過道",
               "value": "125"
             },
             {
-              "label": "Tripp Trapp 拉出到玻璃",
+              "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
+            },
+            {
+              "label": "沙發北端到窗簾盒",
+              "value": "37.5"
+            },
+            {
+              "label": "餐桌北緣到窗簾盒",
+              "value": "30"
             }
           ],
           "build": [
+            "客廳窗簾盒：天花內嵌深 20、沿陽台玻璃全長 560，雙軌（紗簾靠玻璃、遮光在內）",
+            "電視櫃長 225，北端離陽台玻璃 50（離窗簾盒 30），電視與沙發中心離玻璃 162.5",
             "電視牆不打鑿：木作底板 5＋淡灰壁紙到天花",
             "電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈",
             "電視背後嵌入盒＋13A 插座，Ø50 暗管下到櫃後空腔；木作底板在壁架處加夾板背襯",
@@ -5454,7 +5512,54 @@
             "6 位 13A 延長座與底燈驅動器固定在右抽後腔牆面；左抽網通裝摺疊線架",
             "踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器在後腔，獨立開關"
           ]
-        }
+        },
+        "dims": [
+          {
+            "line": [
+              565,
+              177.309,
+              565,
+              185.813
+            ],
+            "label": "30"
+          },
+          {
+            "line": [
+              556,
+              171.64,
+              556,
+              185.813
+            ],
+            "label": "50"
+          },
+          {
+            "line": [
+              540.84,
+              263.68,
+              570.238,
+              257.048
+            ],
+            "label": "106"
+          },
+          {
+            "line": [
+              544.71,
+              243,
+              570.23,
+              243
+            ],
+            "label": "90"
+          },
+          {
+            "line": [
+              531,
+              247.467,
+              531,
+              263.8
+            ],
+            "label": "57.6"
+          }
+        ]
       },
       {
         "id": "console-b",
@@ -5466,8 +5571,8 @@
             "玩時左抽被橫推門擋住，打不開",
             "SlideLine M 最小門高未公布 → 29.6 高的門待確認",
             "Switch 2 在櫃面、頂離電視下緣 7.6 → 不要再疊東西",
-            "沙發南端到過道 65 → 沙發不可超過 210，邊几放北端",
-            "左腳架離窗簾盒 3.7 → 窗簾離地 1、不拖地"
+            "沙發南端到鋼琴前緣 57.6 → 沙發不可超過 210，邊几放北端",
+            "左腳架離窗簾盒面 3.7 → 窗簾離地 1、不拖地"
           ],
           "items": [
             {
@@ -5514,7 +5619,7 @@
             },
             {
               "label": "喇叭",
-              "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand，中心距 240",
+              "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand，中心距 255",
               "status": "定",
               "object": "kef-speaker-l"
             },
@@ -5523,6 +5628,12 @@
               "value": "KEF KC62",
               "status": "建議",
               "object": "kef-sub"
+            },
+            {
+              "label": "窗簾",
+              "value": "雙軌（紗簾＋遮光）· 天花窗簾盒深 20",
+              "status": "定",
+              "object": "living-curtain"
             },
             {
               "label": "沙發",
@@ -5545,6 +5656,14 @@
           ],
           "clearances": [
             {
+              "label": "電視櫃北端到窗簾盒／玻璃",
+              "value": "30／50"
+            },
+            {
+              "label": "鋼琴角到右腳架（斜向走道）",
+              "value": "106 · 到電視櫃角 115"
+            },
+            {
               "label": "沙發到電視櫃",
               "value": "90 · 拉抽剩 55 · 推門 0 外伸"
             },
@@ -5558,18 +5677,28 @@
             },
             {
               "label": "沙發南端到過道",
-              "value": "65"
+              "value": "57.6"
             },
             {
               "label": "餐桌南緣到過道",
               "value": "125"
             },
             {
-              "label": "Tripp Trapp 拉出到玻璃",
+              "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
+            },
+            {
+              "label": "沙發北端到窗簾盒",
+              "value": "37.5"
+            },
+            {
+              "label": "餐桌北緣到窗簾盒",
+              "value": "30"
             }
           ],
           "build": [
+            "客廳窗簾盒：天花內嵌深 20、沿陽台玻璃全長 560，雙軌（紗簾靠玻璃、遮光在內）",
+            "電視櫃長 225，北端離陽台玻璃 50（離窗簾盒 30），電視與沙發中心離玻璃 162.5",
             "電視牆不打鑿：木作底板 5＋淡灰壁紙到天花",
             "電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈",
             "電視背後嵌入盒＋13A 插座，Ø50 暗管下到櫃後空腔；木作底板在壁架處加夾板背襯",
@@ -5581,7 +5710,54 @@
             "6 位 13A 延長座固定在左格後腔牆面；左抽網通裝摺疊線架",
             "踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器在後腔，獨立開關"
           ]
-        }
+        },
+        "dims": [
+          {
+            "line": [
+              565,
+              177.309,
+              565,
+              185.813
+            ],
+            "label": "30"
+          },
+          {
+            "line": [
+              556,
+              171.64,
+              556,
+              185.813
+            ],
+            "label": "50"
+          },
+          {
+            "line": [
+              540.84,
+              263.68,
+              570.238,
+              257.048
+            ],
+            "label": "106"
+          },
+          {
+            "line": [
+              544.71,
+              243,
+              570.23,
+              243
+            ],
+            "label": "90"
+          },
+          {
+            "line": [
+              531,
+              247.467,
+              531,
+              263.8
+            ],
+            "label": "57.6"
+          }
+        ]
       }
     ]
   },
@@ -22770,7 +22946,7 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 221.087,
+        "y": 223.213,
         "place": "電視櫃中間抽屜",
         "mount": 30,
         "name": "網路主機 · 電視櫃",
@@ -22782,7 +22958,7 @@
         "code": "D-01",
         "kind": "data",
         "x": 582.2,
-        "y": 210.087,
+        "y": 212.213,
         "place": "電視牆 · 電視櫃後方",
         "mount": 30,
         "name": "網路孔 · 電視櫃",
@@ -23097,7 +23273,7 @@
         "code": "S-07",
         "kind": "socket",
         "x": 584.0,
-        "y": 266.603,
+        "y": 270.853,
         "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機",
@@ -23109,7 +23285,7 @@
         "code": "S-08",
         "kind": "socket",
         "x": 584.0,
-        "y": 273.693,
+        "y": 274.255,
         "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機（備用）",
@@ -23133,7 +23309,7 @@
         "code": "S-18",
         "kind": "socket",
         "x": 584.0,
-        "y": 249.596,
+        "y": 253.848,
         "place": "電視牆 · 右喇叭腳架後",
         "mount": 30,
         "name": "插座 · 右主喇叭",
@@ -23145,7 +23321,7 @@
         "code": "S-19",
         "kind": "socket",
         "x": 584.0,
-        "y": 258.894,
+        "y": 263.145,
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
@@ -23279,11 +23455,11 @@
         "path": [
           [
             575.2,
-            221.087
+            223.213
           ],
           [
             580,
-            221.087
+            223.213
           ],
           [
             580,
@@ -23368,15 +23544,15 @@
         "path": [
           [
             575.2,
-            221.087
+            223.213
           ],
           [
             575.2,
-            210.087
+            212.213
           ],
           [
             582.2,
-            210.087
+            212.213
           ]
         ]
       }
