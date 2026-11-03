@@ -506,6 +506,12 @@ function extras(g, list, state = ST) {
       if (e.label) g.text(e.lx ?? bx, e.ly ?? by + fsz * .4, e.label, {'text-anchor':e.anchor || 'middle', fill:col, 'font-size':fsz});
       continue;
     }
+    // Dashed travel / swing path (e.g. a flipper door's brief arc) along e.pts; optional label at lx, ly.
+    if (e.type === 'sweep') {
+      g.path(`M${e.pts.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}`, {fill:'none', stroke:e.color || C.dim, 'stroke-width':.28, 'stroke-dasharray':'1 .8'});
+      if (e.label) g.text(e.lx, e.ly, e.label, {'text-anchor':e.anchor || 'start', fill:e.color || C.dim, 'font-size':fsz});
+      continue;
+    }
     if (e.type === 'device' || e.type === 'cavity') {
       const cav = e.type === 'cavity';
       g.rect(e.x, e.y, e.w, e.h, {fill:e.fill || (cav ? C.cavity : e.dashed ? 'none' : C.item), stroke:cav ? C.thin : e.dashed ? C.faint : C.itemLine, 'stroke-width':.3, 'stroke-dasharray':e.dashed ? '1.4 1' : null, rx:cav ? 0 : .5});
