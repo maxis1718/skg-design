@@ -1679,23 +1679,23 @@
         570.23,
         185.813,
         582.98,
-        252.427
+        249.593
       ],
       "plan_horizontal_cm": 45,
-      "plan_vertical_cm": 235,
-      "nominal_width_cm": 235,
+      "plan_vertical_cm": 225,
+      "nominal_width_cm": 225,
       "nominal_depth_cm": 45,
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R08/R77: floor-standing console 225 W x 45 D x 40 H (R77: owner's ≥1.3 × TV width rule — LG G6 77 171.2 → 222.6, Xiaomi 75 166.7 → 216.7; front corners rounded R7.5) on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. R77 plan: north end 50 from the balcony glass = 30 from the 20 cm double-track curtain pocket (KEF S2 stand fits between, 3.7 clear each side); south end 275; TV/sofa axis 162.5 from the glass (7.5 south of R76). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10 between floor-length end gables; 45° aluminium LED profile (~1.8 x 1.8, opal diffuser) in the corner under the carcass base, 206 long, 24 V COB 3000K CRI>=90 ~8 W/m washing the floor; driver in the rear void (reached by removing the centre drawer), separate wall switch.",
+      "notes": "Design R08/R80: floor-standing console 225 W x 45 D x 40 H (owner's >=1.3 x TV width rule: Xiaomi 75 166.7 -> 1.35, LG G6 77 171.2 -> 1.314) on a 5 cm feature-wall build-up; front 50 cm from the structural wall = original console front x570.24. Plan (R80, R77 position): north end 50 from the balcony glass = 30 from the 20 cm curtain pocket, south end 275; TV/console axis 162.5 = sofa axis. Front corners R7.5. Three equal fronts 69.6 (F1 flipper 7.8-77.4 | F2 drawer 77.7-147.3 | F3 drawer 147.6-217.2 from the north end, 0.3 joints, ends 7.5); partitions P1 78.9-80.7 and P2 145.7-147.5 sit behind F2 so the left flipper bay is 72.9 wide. Left (north) bay: Knape & Vogt 8070PEZ-14 in-case flipper, PS5 Pro on a shelf + Switch 2 dock rotated along P1, network tray under the PS5 (NET-00), sockets S-22; only the north end panel vents. Middle and right: Blum LEGRABOX drawers, 4 cm rear void behind them; south end has no openings. Top-board ㄇ cut 63.6 x 10 along the back edge at 80.7-144.3 (over F2 only, symmetric about the TV), sockets S-20 under it; TV Ø50 conduit exits 152.2 from the north end. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Lighting (tv-light): plinth recessed 10; 45° aluminium LED profile, 24 V COB 3000K CRI>=90 washing the floor; driver on S-20, separate wall switch.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
-      "source_note": "235 × 45 × 40，四面等寬 54.7，兩端翻門（PS5 Pro／Switch 2），中間兩抽\n踢腳內退 10，3000K 洗地燈",
+      "source_note": "225 × 45 × 40，三面等寬 69.6，左端翻門（PS5 Pro＋Switch 2），中、右兩抽\n踢腳內退 10，3000K 洗地燈",
       "dimensions": {
         "w": {
-          "cm": 235,
+          "cm": 225,
           "status": "design"
         },
         "d": {
@@ -1842,9 +1842,9 @@
       "label": "TV",
       "bounds_pt": [
         582.22,
-        195.238,
+        193.821,
         582.98,
-        243.002
+        241.585
       ],
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
@@ -3959,10 +3959,10 @@
       "room_id": "living",
       "name": "空氣清淨機 Electrolux UltimateHome 300",
       "bounds_pt": [
-        543.675,
-        272.092,
-        550.308,
-        278.725
+        574.93,
+        269.605,
+        581.563,
+        276.238
       ],
       "dimensions": {
         "w": {
@@ -3981,9 +3981,9 @@
         "brand": "Electrolux",
         "model": "UltimateHome 300"
       },
-      "source_note": "・23.4 × 23.4 × 40.5，鋼琴東側凹位，離鋼琴、牆、過道角各 10\n・背後插座 S-07（離地 30）",
+      "source_note": "・23.4 × 23.4 × 40.5，東牆重低音南側，離牆 5\n・背後插座 ×2（S-07、S-08）",
       "status": "user-design",
-      "notes": "R79: moved from the east wall (the 235 console would push it to 354-378 and pinch the passage mouth to 77) into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so the passage mouth stays 82 / 81 to the KC62."
+      "notes": "R80: back on the east wall (R79's piano-alcove move cancelled with the 225 console): 345.6-369.0 from the glass, 5 off the wall, 8.7 south of the KC62. Narrowest point of the entry->sofa path = entry-passage corner to the purifier, 78.9 (pre-R79 layout 79.2)."
     },
     {
       "id": "kef-speaker-l",
@@ -3993,9 +3993,9 @@
       "label": "KEF LS50 Wireless II, left (secondary)",
       "bounds_pt": [
         570.195,
-        178.362,
+        178.358,
         579.011,
-        184.032
+        184.028
       ],
       "dimensions": {
         "w": {
@@ -4017,7 +4017,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass (R79: moved 1.3 north); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50), the exhaust side of the PS5 bay. Pair 266.3 apart (R79), ≈81° to the centre seat (ear ≈195 from the wall); 10° toe-in would need +5 of wall per end, so stands stay square. Rear 14 cm from the feature wall, front flush with the console front; stand square to the wall (5° toe-in would cut the clearances to 2.4). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
+      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). R80: centre 33.7 cm from the glass; the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50), the vented end of the PS5 bay. Pair 257.6 apart, symmetric about the TV axis 162.5 (128.8 each side); stands square to the wall, rear 14 from the feature wall, front flush with the console front. Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
       "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 33.7，背距牆 14"
     },
     {
@@ -4028,9 +4028,9 @@
       "label": "KEF LS50 Wireless II, right (primary)",
       "bounds_pt": [
         570.195,
-        253.844,
+        251.378,
         579.011,
-        259.514
+        257.048
       ],
       "dimensions": {
         "w": {
@@ -4052,7 +4052,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 300 cm from the glass (R79: console 235, axis 167.5 + 132.5), base 288.7-311.3 = 3.7 clear of the console south end (285); 104.5 diagonal to the piano corner; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. R80: centre 291.3 cm from the glass (axis 162.5 + 128.8, mirror of the left), base 280.0-302.6 = 5.0 clear of the console south end (275); 106.0 diagonal to the piano corner; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from the TV (via the Ø50 conduit and the rear void), Cat6 from the USW Lite 8 PoE in the console's left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
       "source_note": "主喇叭：KEF LS50 Wireless II on KEF S2 Floor Stand\n接 HDMI eARC、網路、KC62"
     },
     {
@@ -4063,9 +4063,9 @@
       "label": "Subwoofer KEF KC62",
       "bounds_pt": [
         573.115,
-        262.349,
+        259.883,
         580.145,
-        269.605
+        267.139
       ],
       "dimensions": {
         "w": {
@@ -4087,7 +4087,7 @@
       "height_cm": 24.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 320-345.6 cm from the glass (R79): 8.7 cm from the primary stand base; the purifier moved to the piano alcove (81 from its corner). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, R80: 311.3-336.9 cm from the glass, 8.7 from the primary stand base and 8.7 from the purifier; 86.7 to the entry-passage corner. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
       "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n貼牆 10，RCA 接主喇叭 Sub Out"
     },
     {
@@ -5484,40 +5484,40 @@
               "value": "30／50"
             },
             {
-              "label": "左腳架到電視櫃北端／窗簾盒",
-              "value": "5／2.4"
+              "label": "喇叭腳架到電視櫃兩端",
+              "value": "5／5 · 左腳架離窗簾盒 2.4"
             },
             {
               "label": "電視中心離玻璃",
-              "value": "167.5 · 對齊電視櫃，比沙發中心偏南 5"
-            },
-            {
-              "label": "PS5 Pro 左右／上／後",
-              "value": "8.25／15／14.4"
-            },
-            {
-              "label": "Switch 2 到門",
-              "value": "9.4"
+              "value": "162.5 · 對齊沙發中心"
             },
             {
               "label": "喇叭中心距",
-              "value": "266.3 · 離玻璃 33.7／300"
+              "value": "257.6 · 離玻璃 33.7／291.3，對電視左右對稱"
+            },
+            {
+              "label": "PS5 Pro 左右／上／後",
+              "value": "13.7／6.9／15.6（上 = 到收起的門）"
+            },
+            {
+              "label": "Switch 2 頂到收起的門",
+              "value": "7.5"
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "104.5 · 到電視櫃圓角 113"
+              "value": "106 · 到電視櫃圓角 117.5"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "82"
+              "value": "86.7"
             },
             {
-              "label": "清淨機到重低音",
-              "value": "81 · 清淨機離鋼琴、牆、過道角各 10"
+              "label": "過道口牆角到清淨機（最窄）",
+              "value": "78.9 · 改前 79.2"
             },
             {
               "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 翻門 0 外伸"
+              "value": "90 · 拉抽剩 55 · 翻門開時掃 30"
             },
             {
               "label": "沙發南端到過道",
@@ -5561,9 +5561,9 @@
         "dims": [
           {
             "line": [
-              565,
+              562,
               177.309,
-              565,
+              562,
               185.813
             ],
             "label": "30"
@@ -5579,30 +5579,30 @@
           },
           {
             "line": [
-              566.5,
+              562,
               185.813,
-              566.5,
-              252.427
+              562,
+              249.593
             ],
-            "label": "235"
+            "label": "225"
           },
           {
             "line": [
               540.84,
               263.68,
               570.238,
-              259.883
+              257.416
             ],
-            "label": "104.5"
+            "label": "106"
           },
           {
             "line": [
-              550.308,
-              272.092,
-              573.115,
-              269.605
+              553.2,
+              281.56,
+              574.93,
+              276.238
             ],
-            "label": "81"
+            "label": "78.9"
           },
           {
             "line": [
@@ -5624,12 +5624,12 @@
           },
           {
             "line": [
-              587,
+              595.5,
               181.193,
-              587,
-              256.679
+              595.5,
+              254.213
             ],
-            "label": "266.3"
+            "label": "257.6"
           }
         ]
       },
@@ -5743,40 +5743,40 @@
               "value": "30／50"
             },
             {
-              "label": "左腳架到電視櫃北端／窗簾盒",
-              "value": "5／2.4"
+              "label": "喇叭腳架到電視櫃兩端",
+              "value": "5／5 · 左腳架離窗簾盒 2.4"
             },
             {
               "label": "電視中心離玻璃",
-              "value": "167.5 · 對齊電視櫃，比沙發中心偏南 5"
-            },
-            {
-              "label": "PS5 Pro 左右／上／後",
-              "value": "8.25／15／14.4"
-            },
-            {
-              "label": "Switch 2 到門",
-              "value": "9.4"
+              "value": "162.5 · 對齊沙發中心"
             },
             {
               "label": "喇叭中心距",
-              "value": "266.3 · 離玻璃 33.7／300"
+              "value": "257.6 · 離玻璃 33.7／291.3，對電視左右對稱"
+            },
+            {
+              "label": "PS5 Pro 左右／上／後",
+              "value": "13.7／6.9／15.6（上 = 到收起的門）"
+            },
+            {
+              "label": "Switch 2 頂到收起的門",
+              "value": "7.5"
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "104.5 · 到電視櫃圓角 113"
+              "value": "106 · 到電視櫃圓角 117.5"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "82"
+              "value": "86.7"
             },
             {
-              "label": "清淨機到重低音",
-              "value": "81 · 清淨機離鋼琴、牆、過道角各 10"
+              "label": "過道口牆角到清淨機（最窄）",
+              "value": "78.9 · 改前 79.2"
             },
             {
               "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 翻門 0 外伸"
+              "value": "90 · 拉抽剩 55 · 翻門開時掃 30"
             },
             {
               "label": "沙發南端到過道",
@@ -5820,9 +5820,9 @@
         "dims": [
           {
             "line": [
-              565,
+              562,
               177.309,
-              565,
+              562,
               185.813
             ],
             "label": "30"
@@ -5838,30 +5838,30 @@
           },
           {
             "line": [
-              566.5,
+              562,
               185.813,
-              566.5,
-              252.427
+              562,
+              249.593
             ],
-            "label": "235"
+            "label": "225"
           },
           {
             "line": [
               540.84,
               263.68,
               570.238,
-              259.883
+              257.416
             ],
-            "label": "104.5"
+            "label": "106"
           },
           {
             "line": [
-              550.308,
-              272.092,
-              573.115,
-              269.605
+              553.2,
+              281.56,
+              574.93,
+              276.238
             ],
-            "label": "81"
+            "label": "78.9"
           },
           {
             "line": [
@@ -5883,12 +5883,12 @@
           },
           {
             "line": [
-              587,
+              595.5,
               181.193,
-              587,
-              256.679
+              595.5,
+              254.213
             ],
-            "label": "266.3"
+            "label": "257.6"
           }
         ]
       },
@@ -6003,40 +6003,40 @@
               "value": "30／50"
             },
             {
-              "label": "左腳架到電視櫃北端／窗簾盒",
-              "value": "5／2.4"
+              "label": "喇叭腳架到電視櫃兩端",
+              "value": "5／5 · 左腳架離窗簾盒 2.4"
             },
             {
               "label": "電視中心離玻璃",
-              "value": "167.5 · 對齊電視櫃，比沙發中心偏南 5"
-            },
-            {
-              "label": "PS5 Pro 左右／上／後",
-              "value": "8.25／15／14.4"
-            },
-            {
-              "label": "Switch 2 到門",
-              "value": "9.4"
+              "value": "162.5 · 對齊沙發中心"
             },
             {
               "label": "喇叭中心距",
-              "value": "266.3 · 離玻璃 33.7／300"
+              "value": "257.6 · 離玻璃 33.7／291.3，對電視左右對稱"
+            },
+            {
+              "label": "PS5 Pro 左右／上／後",
+              "value": "13.7／6.9／15.6（上 = 到收起的門）"
+            },
+            {
+              "label": "Switch 2 頂到收起的門",
+              "value": "7.5"
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "104.5 · 到電視櫃圓角 113"
+              "value": "106 · 到電視櫃圓角 117.5"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "82"
+              "value": "86.7"
             },
             {
-              "label": "清淨機到重低音",
-              "value": "81 · 清淨機離鋼琴、牆、過道角各 10"
+              "label": "過道口牆角到清淨機（最窄）",
+              "value": "78.9 · 改前 79.2"
             },
             {
               "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 翻門 0 外伸"
+              "value": "90 · 拉抽剩 55 · 翻門開時掃 30"
             },
             {
               "label": "沙發南端到過道",
@@ -6080,9 +6080,9 @@
         "dims": [
           {
             "line": [
-              565,
+              562,
               177.309,
-              565,
+              562,
               185.813
             ],
             "label": "30"
@@ -6098,30 +6098,30 @@
           },
           {
             "line": [
-              566.5,
+              562,
               185.813,
-              566.5,
-              252.427
+              562,
+              249.593
             ],
-            "label": "235"
+            "label": "225"
           },
           {
             "line": [
               540.84,
               263.68,
               570.238,
-              259.883
+              257.416
             ],
-            "label": "104.5"
+            "label": "106"
           },
           {
             "line": [
-              550.308,
-              272.092,
-              573.115,
-              269.605
+              553.2,
+              281.56,
+              574.93,
+              276.238
             ],
-            "label": "81"
+            "label": "78.9"
           },
           {
             "line": [
@@ -6143,12 +6143,12 @@
           },
           {
             "line": [
-              587,
+              595.5,
               181.193,
-              587,
-              256.679
+              595.5,
+              254.213
             ],
-            "label": "266.3"
+            "label": "257.6"
           }
         ]
       },
@@ -6261,40 +6261,40 @@
               "value": "30／50"
             },
             {
-              "label": "左腳架到電視櫃北端／窗簾盒",
-              "value": "5／2.4"
+              "label": "喇叭腳架到電視櫃兩端",
+              "value": "5／5 · 左腳架離窗簾盒 2.4"
             },
             {
               "label": "電視中心離玻璃",
-              "value": "167.5 · 對齊電視櫃，比沙發中心偏南 5"
-            },
-            {
-              "label": "PS5 Pro 左右／上／後",
-              "value": "8.25／15／14.4"
-            },
-            {
-              "label": "Switch 2 到門",
-              "value": "9.4"
+              "value": "162.5 · 對齊沙發中心"
             },
             {
               "label": "喇叭中心距",
-              "value": "266.3 · 離玻璃 33.7／300"
+              "value": "257.6 · 離玻璃 33.7／291.3，對電視左右對稱"
+            },
+            {
+              "label": "PS5 Pro 左右／上／後",
+              "value": "13.7／6.9／15.6（上 = 到收起的門）"
+            },
+            {
+              "label": "Switch 2 頂到收起的門",
+              "value": "7.5"
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "104.5 · 到電視櫃圓角 113"
+              "value": "106 · 到電視櫃圓角 117.5"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "82"
+              "value": "86.7"
             },
             {
-              "label": "清淨機到重低音",
-              "value": "81 · 清淨機離鋼琴、牆、過道角各 10"
+              "label": "過道口牆角到清淨機（最窄）",
+              "value": "78.9 · 改前 79.2"
             },
             {
               "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 翻門 0 外伸"
+              "value": "90 · 拉抽剩 55 · 翻門開時掃 30"
             },
             {
               "label": "沙發南端到過道",
@@ -6339,9 +6339,9 @@
         "dims": [
           {
             "line": [
-              565,
+              562,
               177.309,
-              565,
+              562,
               185.813
             ],
             "label": "30"
@@ -6357,30 +6357,30 @@
           },
           {
             "line": [
-              566.5,
+              562,
               185.813,
-              566.5,
-              252.427
+              562,
+              249.593
             ],
-            "label": "235"
+            "label": "225"
           },
           {
             "line": [
               540.84,
               263.68,
               570.238,
-              259.883
+              257.416
             ],
-            "label": "104.5"
+            "label": "106"
           },
           {
             "line": [
-              550.308,
-              272.092,
-              573.115,
-              269.605
+              553.2,
+              281.56,
+              574.93,
+              276.238
             ],
-            "label": "81"
+            "label": "78.9"
           },
           {
             "line": [
@@ -6402,12 +6402,12 @@
           },
           {
             "line": [
-              587,
+              595.5,
               181.193,
-              587,
-              256.679
+              595.5,
+              254.213
             ],
-            "label": "266.3"
+            "label": "257.6"
           }
         ]
       }
@@ -31467,23 +31467,23 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 242.463,
-        "place": "電視櫃右端格（Switch 2 旁）",
-        "mount": 30,
+        "y": 196.727,
+        "place": "電視櫃左端格 · PS5 下方托盤",
+        "mount": 10,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃右中格後方，插 S-21；Hub M3 由 USW Lite 8 PoE 供電\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・兩台平放在左端格 PS5 層板下的托盤（高 5），網口朝後；Hub M3 立在格內右後角，由 USW Lite 8 PoE 供電；電源插 S-22\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
         "code": "D-01",
         "kind": "data",
         "x": 582.2,
-        "y": 215.0,
-        "place": "電視牆 · 電視櫃後方",
-        "mount": 30,
+        "y": 202.821,
+        "place": "電視牆 · 電視櫃左端格後方",
+        "mount": 22,
         "name": "網路孔 · 電視櫃",
-        "notes": "・電視、遊戲機走有線\n・離地 30，藏在電視櫃後方"
+        "notes": "・光纖盒來的 Cat6 在此出線，接 UCG Ultra WAN\n・離地 22，在左端格背牆，門收起的位置之下"
       },
       {
         "id": "data-ne",
@@ -31793,9 +31793,9 @@
         "id": "sock-purifier-1",
         "code": "S-07",
         "kind": "socket",
-        "x": 546.991,
-        "y": 281.2,
-        "place": "鋼琴東側凹位南牆 · 清淨機後",
+        "x": 584.0,
+        "y": 271.222,
+        "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機",
         "notes": "・13A 雙孔，離地 30（示意）\n・清淨機後方，貼牆不外露",
@@ -31806,11 +31806,11 @@
         "code": "S-08",
         "kind": "socket",
         "x": 584.0,
-        "y": 274.255,
-        "place": "客廳東牆 · 重低音南側",
+        "y": 274.622,
+        "place": "客廳東牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機（備用）",
-        "notes": "・13A 雙孔，離地 30（示意）\n・清淨機移到鋼琴旁後當備用，給燈或其他電器",
+        "notes": "・13A 雙孔，離地 30（示意）\n・同一面牆第二組，給燈或其他電器",
         "use": "備用"
       },
       {
@@ -31830,7 +31830,7 @@
         "code": "S-18",
         "kind": "socket",
         "x": 584.0,
-        "y": 256.679,
+        "y": 254.213,
         "place": "電視牆 · 右喇叭腳架後",
         "mount": 30,
         "name": "插座 · 右主喇叭",
@@ -31842,7 +31842,7 @@
         "code": "S-19",
         "kind": "socket",
         "x": 584.0,
-        "y": 265.977,
+        "y": 263.511,
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
@@ -31974,23 +31974,11 @@
         "code": "S-20",
         "kind": "socket",
         "x": 584.0,
-        "y": 211.367,
-        "place": "電視牆 · 電視櫃線槽下",
+        "y": 217.703,
+        "place": "電視牆 · ㄇ 蓋板下（中格後）",
         "mount": 24,
-        "name": "插座 · 電視櫃左中格後",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・底燈驅動器、備用",
-        "use": "電視櫃"
-      },
-      {
-        "id": "sock-tv-r",
-        "code": "S-21",
-        "kind": "socket",
-        "x": 584.0,
-        "y": 226.873,
-        "place": "電視牆 · 電視櫃線槽下",
-        "mount": 24,
-        "name": "插座 · 電視櫃右中格後",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・UCG Ultra、USW Lite 8 PoE；Hub M3 走 PoE",
+        "name": "插座 · 電視櫃中格後",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在 ㄇ 蓋板下、對齊電視中心\n・電視、底燈驅動器、備用；中格抽屜背板開窗 26 × 11，用扁平或斜出插頭",
         "use": "電視櫃"
       },
       {
@@ -31998,23 +31986,11 @@
         "code": "S-22",
         "kind": "socket",
         "x": 584.0,
-        "y": 195.777,
-        "place": "電視櫃左端格後方",
-        "mount": 15,
-        "name": "插座 · 電視櫃左端格（PS5）",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 15，在頂板下、門停放區之外\n・PS5 Pro；風扇走 PS5 USB",
-        "use": "電視櫃"
-      },
-      {
-        "id": "sock-console-r",
-        "code": "S-23",
-        "kind": "socket",
-        "x": 584.0,
-        "y": 242.463,
-        "place": "電視櫃右端格後方",
-        "mount": 15,
-        "name": "插座 · 電視櫃右端格（Switch 2）",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 15，在頂板下、門停放區之外\n・Switch 2 底座、備用",
+        "y": 198.569,
+        "place": "電視櫃左端格背牆",
+        "mount": 22,
+        "name": "插座 · 電視櫃左端格",
+        "notes": "・13A 雙孔 × 2（其一帶 USB-A／C），中心離地 22，距櫃北端 30–60\n・PS5 Pro、Switch 2 變壓器、UCG Ultra、USW Lite 8 PoE；USB 給 CONTROLLER 1 與風扇\n・在門收起的位置之下，線不經過門的停放區",
         "use": "電視櫃"
       }
     ],
@@ -32024,11 +32000,11 @@
         "path": [
           [
             575.2,
-            222.504
+            196.727
           ],
           [
             580,
-            222.504
+            196.727
           ],
           [
             580,
@@ -32113,15 +32089,15 @@
         "path": [
           [
             575.2,
-            222.504
+            196.727
           ],
           [
             575.2,
-            215.0
+            202.821
           ],
           [
             582.2,
-            215.0
+            202.821
           ]
         ]
       }
@@ -32147,12 +32123,12 @@
               ],
               [
                 "主路由",
-                "Cloud Gateway Ultra · 電視櫃中抽",
+                "Cloud Gateway Ultra · 電視櫃左端格托盤",
                 "S$219"
               ],
               [
                 "PoE 交換器",
-                "USW Lite 8 PoE · 電視櫃中抽",
+                "USW Lite 8 PoE · 電視櫃左端格托盤",
                 "S$186"
               ],
               [
@@ -32533,7 +32509,7 @@
           "hub",
           "run"
         ],
-        "pick": "UniFi：U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra 取代 ISP 路由＋USW Lite 8 PoE 放電視櫃中抽；主臥只預留 Cat6",
+        "pick": "UniFi：U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra 取代 ISP 路由＋USW Lite 8 PoE 放電視櫃左端格托盤；主臥只預留 Cat6",
         "options": [
           {
             "name": "UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE",
