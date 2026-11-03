@@ -4855,6 +4855,10 @@
     {
       "id": "C85",
       "text": "衛浴 2 拉門改 laminate 實心平開門，向浴室內開"
+    },
+    {
+      "id": "C85",
+      "text": "客廳：電視櫃 225 四格（兩端抽屜、中間兩扇橫推門、圓角 R 7.5、頂板線槽）；北端離玻璃 50；補窗簾盒 20 雙軌；標鋼琴角斜向走道 106。"
     }
   ],
   "measurement_policy": {
@@ -5363,14 +5367,12 @@
         "id": "console-a",
         "name": "方案 A",
         "layout": "console-a",
-        "tagline": "中格翻轉推入門，玩時門收進櫃內",
+        "tagline": "四格：兩端抽屜、中間兩扇橫推門",
         "plan": {
           "watch": [
-            "滑軌 40.6 佔滿中格頂下全深 → 線全改走兩根 10 立柱；左右抽 70 → 60（各 −14%）",
-            "門關著別玩：只在休眠（0.3–3.6 W）關；玩時門推進櫃內",
-            "翻門那 2–3 秒外伸 27 → 收好後 0；兩個位置都有磁吸童鎖",
-            "Switch 2 在櫃面、頂離電視下緣 7.6 → 不要再疊東西",
-            "沙發南端到鋼琴前緣 57.6 → 沙發不可超過 210，邊几放北端",
+            "PS5 左右各 4（Sony 建議 10）→ 玩時前面全開＋背板 T7 抽風",
+            "兩扇門一次開一格：玩 PS5 時 Switch 2 格關著",
+            "沙發南端到過道 57.6 → 沙發不可超過 210，邊几放北端",
             "左腳架離窗簾盒面 3.7 → 窗簾離地 1、不拖地"
           ],
           "items": [
@@ -5382,233 +5384,38 @@
             },
             {
               "label": "電視櫃",
-              "value": "210 × 45 × 40 · 60｜10｜70｜10｜60",
-              "status": "建議",
+              "value": "225 × 45 × 40 · 抽 56｜門 50｜門 50｜抽 56 · 圓角 R 7.5",
+              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "遊戲機",
-              "value": "PS5 Pro 中格橫放置中 · Switch 2 櫃面右端",
+              "value": "PS5 Pro 右格 · Switch 2 左格（底座）",
               "status": "建議",
               "object": "tv-console"
             },
             {
-              "label": "中格門",
-              "value": "Accuride CB1155 翻轉推入門 66 × 27 · 16 吋",
+              "label": "橫推門",
+              "value": "Hettich SlideLine M 雙軌 · 50 × 30 · 指槽",
               "status": "建議",
               "object": "tv-console"
             },
             {
               "label": "散熱",
-              "value": "AC Infinity AIRPLATE T7 · 溫控，背板後抽到後腔",
+              "value": "AC Infinity AIRPLATE T7 · 右格背板，溫控",
               "status": "建議",
               "object": "tv-console"
             },
             {
               "label": "抽屜",
-              "value": "左抽網通 · 右抽手把、遊戲片（各 60）",
+              "value": "左抽手把 · 右抽遊戲片 · LEGRABOX NL 350",
               "status": "建議",
               "object": "tv-console"
             },
             {
-              "label": "HDMI",
-              "value": "1 PS5 Pro · 2 eARC KEF · 3 Switch 2",
-              "status": "建議",
-              "object": "living-tv"
-            },
-            {
-              "label": "喇叭",
-              "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand，中心距 255",
+              "label": "線槽",
+              "value": "頂板後緣活動蓋 96.8 × 8.6 · 牆插 2 × 3",
               "status": "定",
-              "object": "kef-speaker-l"
-            },
-            {
-              "label": "重低音",
-              "value": "KEF KC62",
-              "status": "建議",
-              "object": "kef-sub"
-            },
-            {
-              "label": "窗簾",
-              "value": "雙軌（紗簾＋遮光）· 天花窗簾盒深 20",
-              "status": "定",
-              "object": "living-curtain"
-            },
-            {
-              "label": "沙發",
-              "value": "210 × 95",
-              "status": "定",
-              "object": "sofa"
-            },
-            {
-              "label": "餐桌",
-              "value": "150 × 90 × 75 · Dahlia Sintered Stone Dining Table",
-              "status": "定",
-              "object": "dining-table"
-            },
-            {
-              "label": "櫃體",
-              "value": "190 × 60 · 用途未定",
-              "status": "建議",
-              "object": "living-cabinet"
-            }
-          ],
-          "clearances": [
-            {
-              "label": "電視櫃北端到窗簾盒／玻璃",
-              "value": "30／50"
-            },
-            {
-              "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "106 · 到電視櫃角 115"
-            },
-            {
-              "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 翻門瞬間 63"
-            },
-            {
-              "label": "PS5 Pro 左右／上／後",
-              "value": "13.8／13.8（門收起）／11（Sony 要 10）"
-            },
-            {
-              "label": "Switch 2 頂到電視下緣",
-              "value": "7.6"
-            },
-            {
-              "label": "沙發南端到過道",
-              "value": "57.6"
-            },
-            {
-              "label": "餐桌南緣到過道",
-              "value": "125"
-            },
-            {
-              "label": "Tripp Trapp 拉出到窗簾盒",
-              "value": "10"
-            },
-            {
-              "label": "沙發北端到窗簾盒",
-              "value": "37.5"
-            },
-            {
-              "label": "餐桌北緣到窗簾盒",
-              "value": "30"
-            }
-          ],
-          "build": [
-            "客廳窗簾盒：天花內嵌深 20、沿陽台玻璃全長 560，雙軌（紗簾靠玻璃、遮光在內）",
-            "電視櫃長 225，北端離陽台玻璃 50（離窗簾盒 30），電視與沙發中心離玻璃 162.5",
-            "電視牆不打鑿：木作底板 5＋淡灰壁紙到天花",
-            "電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈",
-            "電視背後嵌入盒＋13A 插座，Ø50 暗管下到櫃後空腔；木作底板在壁架處加夾板背襯",
-            "Ø32 暗管：左腳架 ↔ 櫃後空腔 ↔ 右腳架，出線口離地 10",
-            "電視櫃落地，前緣距結構牆 50；櫃後空腔 8.2，頂板後緣通風縫全長",
-            "中格：Accuride CB1155 16 吋滑軌鎖頂板下（頂板依安裝圖開槽），尾端穿背板兩個小孔進後腔上段",
-            "櫃體分 60｜10｜70｜10｜60；兩根 10 立柱做固定直條格柵面（可拆），右柱走 PS5 電源／HDMI，左柱走網通與 KEF 線",
-            "中格頂板下 5 cm 內不得走線；中格與其後腔整格不走線，PS5 線從中格右側板底部 6 × 3 孔進右立柱",
-            "Ø50 暗管出口改到右立柱（距櫃左端 145，仍在電視背後）",
-            "中門 66 × 27 內嵌、與左右抽同款直條格柵，下緣指槽；關門與收起位置各裝磁吸童鎖",
-            "中格背板開 25.7 × 13.6 裝 AIRPLATE T7（背面），電源插後腔延長座",
-            "6 位 13A 延長座與底燈驅動器固定在右抽後腔牆面；左抽網通裝摺疊線架",
-            "踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器在後腔，獨立開關"
-          ]
-        },
-        "dims": [
-          {
-            "line": [
-              565,
-              177.309,
-              565,
-              185.813
-            ],
-            "label": "30"
-          },
-          {
-            "line": [
-              556,
-              171.64,
-              556,
-              185.813
-            ],
-            "label": "50"
-          },
-          {
-            "line": [
-              540.84,
-              263.68,
-              570.238,
-              257.048
-            ],
-            "label": "106"
-          },
-          {
-            "line": [
-              544.71,
-              243,
-              570.23,
-              243
-            ],
-            "label": "90"
-          },
-          {
-            "line": [
-              531,
-              247.467,
-              531,
-              263.8
-            ],
-            "label": "57.6"
-          }
-        ]
-      },
-      {
-        "id": "console-b",
-        "name": "方案 B",
-        "layout": "console-b",
-        "tagline": "中格橫推門，玩時推到左側",
-        "plan": {
-          "watch": [
-            "玩時左抽被橫推門擋住，打不開",
-            "SlideLine M 最小門高未公布 → 29.6 高的門待確認",
-            "Switch 2 在櫃面、頂離電視下緣 7.6 → 不要再疊東西",
-            "沙發南端到鋼琴前緣 57.6 → 沙發不可超過 210，邊几放北端",
-            "左腳架離窗簾盒面 3.7 → 窗簾離地 1、不拖地"
-          ],
-          "items": [
-            {
-              "label": "電視",
-              "value": "Xiaomi TV S Pro Mini LED 75 2026 · 壁掛（暫定）",
-              "status": "建議",
-              "object": "living-tv"
-            },
-            {
-              "label": "電視櫃",
-              "value": "210 × 45 × 40 · 3 格各 70",
-              "status": "建議",
-              "object": "tv-console"
-            },
-            {
-              "label": "遊戲機",
-              "value": "PS5 Pro 中格橫放置中 · Switch 2 櫃面右端",
-              "status": "建議",
-              "object": "tv-console"
-            },
-            {
-              "label": "中格門",
-              "value": "Hettich SlideLine M 橫推門 69.5 × 29.6 · 軟關",
-              "status": "建議",
-              "object": "tv-console"
-            },
-            {
-              "label": "散熱",
-              "value": "AC Infinity AIRPLATE T7 · 溫控，背板後抽到後腔",
-              "status": "建議",
-              "object": "tv-console"
-            },
-            {
-              "label": "抽屜",
-              "value": "左抽網通 · 右抽手把、遊戲片 · NL 300",
-              "status": "建議",
               "object": "tv-console"
             },
             {
@@ -5669,11 +5476,11 @@
             },
             {
               "label": "PS5 Pro 左右／上／後",
-              "value": "13.8／18.3／11（Sony 要 10）"
+              "value": "4／17.5／8.6（背板開孔）"
             },
             {
-              "label": "Switch 2 頂到電視下緣",
-              "value": "7.6"
+              "label": "Switch 2 頂到格內頂",
+              "value": "11.9"
             },
             {
               "label": "沙發南端到過道",
@@ -5701,14 +5508,14 @@
             "電視櫃長 225，北端離陽台玻璃 50（離窗簾盒 30），電視與沙發中心離玻璃 162.5",
             "電視牆不打鑿：木作底板 5＋淡灰壁紙到天花",
             "電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈",
-            "電視背後嵌入盒＋13A 插座，Ø50 暗管下到櫃後空腔；木作底板在壁架處加夾板背襯",
+            "電視背後嵌入盒＋13A 插座，Ø50 暗管下到線槽（出口離地 31、距櫃左端 152.2）；木作底板在壁架處加夾板背襯",
             "Ø32 暗管：左腳架 ↔ 櫃後空腔 ↔ 右腳架，出線口離地 10",
-            "電視櫃落地，前緣距結構牆 50；櫃後空腔 8.2，頂板後緣通風縫全長",
-            "中格：Hettich SlideLine M 單軌，軌長 140（中格＋左格）；中門與左右抽同款直條格柵，右緣指槽",
-            "左右抽前板內退 2.5，抽屜改 LEGRABOX NL 300",
-            "中格背板開 25.7 × 13.6 裝 AIRPLATE T7（背面），電源插後腔延長座",
-            "6 位 13A 延長座固定在左格後腔牆面；左抽網通裝摺疊線架",
-            "踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器在後腔，獨立開關"
+            "電視櫃落地，前緣距結構牆 50；前角平面 R 7.5，頂板同半徑；分格 7.5｜56｜50｜50｜56｜7.5，縫 0.3",
+            "中間兩格：Hettich SlideLine M 雙軌（右門前軌、左門後軌），內箱前緣退 5.4 給軌道；門 50 × 30 × 1.8，外緣銑指槽 1.2 × 12",
+            "中間兩格後方 8.2 線槽，頂板留活動蓋 96.8 × 8.6（同頂板，兩端 Ø2.5 指孔），靠牆 0.8 通風縫",
+            "每個中格後方牆面 13A 雙孔＋單孔一組，中心離地 24；背板頂角各開 15 × 3 線口",
+            "右格背板開 25.7 × 13.6 裝 AIRPLATE T7（背面），插右格後方牆插",
+            "踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器插右格後方牆插，獨立開關"
           ]
         },
         "dims": [
@@ -10786,7 +10593,7 @@
     },
     "tv-console": {
       "object_id": "tv-console",
-      "title": "電視牆",
+      "title": "電視牆 · 四格橫推門",
       "status": "design-proposal",
       "viewpoint": "左為陽台門，右通玄關",
       "ceiling_cm": 280,
@@ -10794,16 +10601,16 @@
       "states": [
         {
           "id": "closed",
-          "name": "收合"
+          "name": "平時"
         },
         {
           "id": "open",
-          "name": "拉開中間抽屜"
+          "name": "打開"
         }
       ],
       "units": {
         "console": {
-          "w": 210,
+          "w": 225.0,
           "d": 45,
           "h": 40,
           "board": 1.8,
@@ -10820,8 +10627,8 @@
             {
               "kind": "drawers",
               "h": 30,
-              "label": "抽屜 ×3",
-              "short": "中間抽屜",
+              "label": "抽屜 ×2",
+              "short": "抽屜",
               "boxFrom": 8.2,
               "boxTo": 43.2,
               "boxLift": 2.8,
@@ -10838,56 +10645,57 @@
               "kind": "drawer",
               "from": 8,
               "to": 38,
-              "count": 3,
+              "leaves": [
+                {
+                  "x": 7.8,
+                  "w": 56.0
+                },
+                {
+                  "x": 161.2,
+                  "w": 56.0
+                }
+              ],
               "notch": {
                 "w": 14,
                 "h": 3.5
               },
-              "openLeaves": [
-                1
-              ],
-              "inside": [
-                {
-                  "type": "cavity",
-                  "x": 71.06666666666668,
-                  "y": 9.8,
-                  "w": 67.86666666666667,
-                  "h": 27.8
-                },
-                {
-                  "type": "socket",
-                  "x": 82.0,
-                  "y": 22.6,
-                  "w": 46,
-                  "h": 5.4,
-                  "n": 6,
-                  "usb": true
-                },
-                {
-                  "type": "device",
-                  "x": 73.26666666666668,
-                  "y": 12.4,
-                  "w": 34.8,
-                  "h": 6.6,
-                  "label": "One Connect",
-                  "size": 0.5
-                },
-                {
-                  "type": "device",
-                  "x": 110.06666666666668,
-                  "y": 12.4,
-                  "w": 9.3,
-                  "h": 3.1
-                },
-                {
-                  "type": "device",
-                  "x": 121.26666666666668,
-                  "y": 12.4,
-                  "w": 15,
-                  "h": 10.5,
-                  "dashed": true
-                }
-              ]
+              "openLeaves": []
+            }
+          ]
+        },
+        "console-mid": {
+          "w": 46.75,
+          "d": 45,
+          "h": 40,
+          "board": 1.8,
+          "noBack": true,
+          "bands": [
+            {
+              "kind": "plinth",
+              "h": 8,
+              "label": "踢腳",
+              "recess": 10,
+              "inset": 1.8,
+              "fill": "#c5cac1"
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 39.6
+            },
+            {
+              "kind": "open",
+              "h": 26.4,
+              "label": ""
+            },
+            {
+              "kind": "board",
+              "h": 1.8,
+              "depth": 39.6
+            },
+            {
+              "kind": "board",
+              "h": 2
             }
           ]
         }
@@ -10903,7 +10711,7 @@
           "units": [
             {
               "ref": "console",
-              "x": 50
+              "x": 50.0
             }
           ],
           "under": [
@@ -10915,7 +10723,7 @@
               "h": 270,
               "gaps": true,
               "label": "木作底板＋wabi-sabi 淡灰壁紙",
-              "lx": 311,
+              "lx": 330,
               "ly": 228,
               "anchor": "middle",
               "size": 0.62
@@ -10932,16 +10740,16 @@
               "type": "conduit",
               "pts": [
                 [
-                  163,
-                  28
+                  202.15,
+                  31
                 ],
                 [
-                  163,
+                  202.15,
                   98
                 ]
               ],
               "label": "Ø50 暗管",
-              "lx": 166,
+              "lx": 205.15,
               "ly": 49,
               "size": 0.55
             },
@@ -10957,11 +10765,11 @@
                   15
                 ],
                 [
-                  275,
+                  290,
                   15
                 ],
                 [
-                  275,
+                  290,
                   10
                 ]
               ]
@@ -10983,52 +10791,13 @@
             },
             {
               "type": "tv",
-              "x": 71.65,
+              "x": 79.15,
               "y": 62.1,
               "w": 166.7,
               "h": 95.8,
               "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定）",
               "sub": "166.7 × 95.8 × 7.3",
               "size": 0.78
-            },
-            {
-              "type": "toe-light",
-              "x": 51.8,
-              "w": 206.4,
-              "y": 8,
-              "p": 1.8
-            },
-            {
-              "type": "note",
-              "x": 155,
-              "y": 2.2,
-              "label": "底燈 3000K",
-              "anchor": "middle",
-              "size": 0.55,
-              "tvlight": true
-            },
-            {
-              "type": "clear",
-              "x0": 71.65,
-              "x1": 238.35,
-              "y": 162.9,
-              "label": "TV 166.7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 40,
-              "y1": 62.1,
-              "label": "22.1"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 0,
-              "y1": 40,
-              "label": "40"
             },
             {
               "type": "note",
@@ -11045,24 +10814,6 @@
               "label": "玄關過道 →",
               "anchor": "end",
               "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 159.0,
-              "y": 44,
-              "label": "弧形缺口＝把手＋出線口",
-              "anchor": "end",
-              "size": 0.58,
-              "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 159.0,
-              "y": 44,
-              "label": "中抽全拉：插座、One Connect、路由器",
-              "anchor": "end",
-              "size": 0.58,
-              "when": "open"
             },
             {
               "type": "socket",
@@ -11161,7 +10912,7 @@
             },
             {
               "type": "socket",
-              "x": 267.7,
+              "x": 282.7,
               "y": 25.7,
               "w": 14.6,
               "h": 8.6,
@@ -11169,7 +10920,7 @@
             },
             {
               "type": "rect",
-              "x": 271,
+              "x": 286,
               "y": 8.5,
               "w": 8,
               "h": 3,
@@ -11179,7 +10930,7 @@
             },
             {
               "type": "rect",
-              "x": 263.7,
+              "x": 278.7,
               "y": 0,
               "w": 22.6,
               "h": 1.2,
@@ -11189,7 +10940,7 @@
             },
             {
               "type": "rect",
-              "x": 272.5,
+              "x": 287.5,
               "y": 1.2,
               "w": 5,
               "h": 63.3,
@@ -11198,7 +10949,7 @@
             },
             {
               "type": "rect",
-              "x": 265,
+              "x": 280,
               "y": 64.5,
               "w": 20,
               "h": 1.2,
@@ -11208,7 +10959,7 @@
             },
             {
               "type": "rect",
-              "x": 265,
+              "x": 280,
               "y": 65.7,
               "w": 20,
               "h": 30.5,
@@ -11219,7 +10970,7 @@
             },
             {
               "type": "rect",
-              "x": 268.5,
+              "x": 283.5,
               "y": 74.5,
               "w": 13,
               "h": 13,
@@ -11230,7 +10981,7 @@
             },
             {
               "type": "rect",
-              "x": 273.4,
+              "x": 288.4,
               "y": 79.4,
               "w": 3.2,
               "h": 3.2,
@@ -11240,7 +10991,7 @@
             },
             {
               "type": "note",
-              "x": 275,
+              "x": 290,
               "y": 99,
               "label": "LS50 Wireless II",
               "size": 0.5,
@@ -11248,7 +10999,7 @@
             },
             {
               "type": "note",
-              "x": 275,
+              "x": 290,
               "y": 104,
               "label": "右 · 主",
               "size": 0.5,
@@ -11256,7 +11007,7 @@
             },
             {
               "type": "socket",
-              "x": 300.5,
+              "x": 315.5,
               "y": 25.7,
               "w": 14.6,
               "h": 8.6,
@@ -11264,7 +11015,7 @@
             },
             {
               "type": "rect",
-              "x": 295,
+              "x": 310,
               "y": 0,
               "w": 25.6,
               "h": 24.6,
@@ -11291,19 +11042,192 @@
               "y0": 65.7,
               "y1": 96.2,
               "label": "30.5"
+            },
+            {
+              "type": "cavity",
+              "x": 121.8,
+              "y": 9.8,
+              "w": 66.4,
+              "h": 28.2,
+              "fill": "#ddd6c8",
+              "when": "open"
+            },
+            {
+              "type": "lc-end",
+              "x": 50.0,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "left"
+            },
+            {
+              "type": "lc-end",
+              "x": 267.5,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "right"
+            },
+            {
+              "type": "lc-door",
+              "x": 114.1,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "left",
+              "rear": true,
+              "when": "closed"
+            },
+            {
+              "type": "lc-door",
+              "x": 160.9,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 163.4,
+              "y": 9.8,
+              "w": 46.75,
+              "h": 26.4,
+              "fill": "#ddd6c8",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 210.15,
+              "y": 8.0,
+              "w": 0.75,
+              "h": 30.0,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 164.1,
+              "y": 8.0,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 164.1,
+              "y": 36.2,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 173.93,
+              "y": 9.9,
+              "w": 25.7,
+              "h": 13.6,
+              "dashed": true,
+              "when": "open",
+              "label": "AIRPLATE T7（背板後）",
+              "size": 0.42,
+              "ly": 21.2
+            },
+            {
+              "type": "rect",
+              "x": 194.65,
+              "y": 33.2,
+              "w": 15,
+              "h": 3,
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "sw": 0.25,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 167.38,
+              "y": 9.8,
+              "w": 38.8,
+              "h": 8.9,
+              "label": "PS5 Pro",
+              "size": 0.5,
+              "fill": "#f4f3ee",
+              "when": "open"
+            },
+            {
+              "type": "lc-door",
+              "x": 114.1,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "open"
+            },
+            {
+              "type": "toe-light",
+              "x": 51.8,
+              "w": 221.4,
+              "y": 8,
+              "p": 1.8
+            },
+            {
+              "type": "note",
+              "x": 162.5,
+              "y": 2.2,
+              "label": "底燈 3000K",
+              "anchor": "middle",
+              "size": 0.55,
+              "tvlight": true
+            },
+            {
+              "type": "clear",
+              "x0": 79.15,
+              "x1": 245.85,
+              "y": 162.9,
+              "label": "TV 166.7"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 372,
+              "y0": 40,
+              "y1": 62.1,
+              "label": "22.1"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 372,
+              "y0": 0,
+              "y1": 40,
+              "label": "40"
             }
           ],
           "hcuts": [
             0,
             35,
-            50,
-            120,
-            190,
-            260,
-            275,
+            50.0,
+            275.0,
+            290,
             387.5
           ],
           "totalLabel": "387.5（原標）",
+          "stateNames": {
+            "closed": "平時",
+            "open": "玩 PS5"
+          },
           "levels": [
             {
               "y": 40,
@@ -11333,14 +11257,14 @@
         },
         {
           "id": "console",
-          "name": "電視櫃正立面",
+          "name": "正立面 · PS5",
           "kind": "front",
           "detail": false,
           "labels": true,
           "font": 5.6,
           "height": 72,
           "noCeiling": true,
-          "width": 210,
+          "width": 225.0,
           "chain": 0,
           "marginR": 7.5,
           "units": [
@@ -11354,7 +11278,7 @@
               "type": "wallpaper",
               "x": -2,
               "y": 0,
-              "w": 214,
+              "w": 229.0,
               "h": 72
             }
           ],
@@ -11362,7 +11286,7 @@
             {
               "type": "tv",
               "cut": true,
-              "x": 21.65,
+              "x": 29.15,
               "y": 62.1,
               "w": 166.7,
               "h": 9.9,
@@ -11371,88 +11295,582 @@
               "size": 0.7
             },
             {
+              "type": "lc-end",
+              "x": 0,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "left"
+            },
+            {
+              "type": "lc-end",
+              "x": 217.5,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "right"
+            },
+            {
+              "type": "lc-door",
+              "x": 64.1,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "left",
+              "rear": true,
+              "when": "closed"
+            },
+            {
+              "type": "lc-door",
+              "x": 110.9,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 113.4,
+              "y": 9.8,
+              "w": 46.75,
+              "h": 26.4,
+              "fill": "#ddd6c8",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 160.15,
+              "y": 8.0,
+              "w": 0.75,
+              "h": 30.0,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 114.1,
+              "y": 8.0,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 114.1,
+              "y": 36.2,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 123.93,
+              "y": 9.9,
+              "w": 25.7,
+              "h": 13.6,
+              "dashed": true,
+              "when": "open",
+              "label": "AIRPLATE T7（背板後）",
+              "size": 0.42,
+              "ly": 21.2
+            },
+            {
+              "type": "rect",
+              "x": 144.65,
+              "y": 33.2,
+              "w": 15,
+              "h": 3,
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "sw": 0.25,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 117.38,
+              "y": 9.8,
+              "w": 38.8,
+              "h": 8.9,
+              "label": "PS5 Pro",
+              "size": 0.5,
+              "fill": "#f4f3ee",
+              "when": "open"
+            },
+            {
+              "type": "lc-door",
+              "x": 64.1,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 113.4,
+              "x1": 117.38,
+              "y": 13.4,
+              "label": "4",
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 156.18,
+              "x1": 160.15,
+              "y": 13.4,
+              "label": "4",
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 123.38,
+              "y0": 18.7,
+              "y1": 36.2,
+              "label": "17.5",
+              "when": "open"
+            },
+            {
               "type": "toe-light",
               "x": 1.8,
-              "w": 206.4,
+              "w": 221.4,
               "y": 8,
               "p": 1.8
             },
             {
               "type": "clear",
               "vertical": true,
-              "x": 232,
+              "x": 232.0,
               "y0": 40,
               "y1": 62.1,
               "label": "22.1"
             },
             {
               "type": "note",
-              "x": 105.0,
-              "y": 50,
-              "label": "弧形缺口 14 × 3.5：把手＋出線口",
-              "size": 0.66,
-              "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 35,
-              "y": 21,
-              "label": "外抽屜",
-              "size": 0.66,
-              "when": "closed",
-              "color": "#7f8c84"
-            },
-            {
-              "type": "note",
-              "x": 175,
-              "y": 21,
-              "label": "外抽屜",
-              "size": 0.66,
-              "when": "closed",
-              "color": "#7f8c84"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
-              "y": 21,
-              "label": "中間抽屜 · 插座",
-              "size": 0.66,
-              "when": "closed",
-              "color": "#7f8c84"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
-              "y": 54,
-              "label": "中抽全拉：6 位 13A 延長座＋USB",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
-              "y": 46,
-              "label": "One Connect · 路由器 · Hub M3",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
+              "x": 112.5,
               "y": 2.2,
               "label": "內退 10 · 3000K",
               "size": 0.58,
               "color": "#7a5a35",
               "tvlight": true
+            },
+            {
+              "type": "clear",
+              "x0": 64.1,
+              "x1": 114.1,
+              "y": 45.5,
+              "label": "門 50",
+              "when": "closed"
+            },
+            {
+              "type": "clear",
+              "x0": 110.9,
+              "x1": 160.9,
+              "y": 49.5,
+              "label": "門 50",
+              "when": "closed"
+            },
+            {
+              "type": "clear",
+              "x0": 7.8,
+              "x1": 63.8,
+              "y": 45.5,
+              "label": "抽屜面 56",
+              "when": "closed"
+            },
+            {
+              "type": "clear",
+              "x0": 161.2,
+              "x1": 217.2,
+              "y": 45.5,
+              "label": "抽屜面 56",
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 54,
+              "label": "重疊 3.2 · 中縫在中線左 1.6",
+              "size": 0.55,
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 54,
+              "label": "右門推到左門前 → 右格開口 46",
+              "size": 0.58,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 75.62,
+              "y": 19.7,
+              "w": 25.2,
+              "h": 8.6,
+              "fill": "none",
+              "stroke": "#a96f47",
+              "sw": 0.22,
+              "dashed": true,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 124.18,
+              "y": 19.7,
+              "w": 25.2,
+              "h": 8.6,
+              "fill": "none",
+              "stroke": "#a96f47",
+              "sw": 0.22,
+              "dashed": true,
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 88.22,
+              "y": 16.8,
+              "label": "牆插 3 位（櫃後）",
+              "size": 0.42,
+              "color": "#a96f47",
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 136.78,
+              "y": 16.8,
+              "label": "牆插 3 位（櫃後）",
+              "size": 0.42,
+              "color": "#a96f47",
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 35.8,
+              "y": 3.4,
+              "label": "左抽",
+              "size": 0.5,
+              "color": "#7f8c84"
+            },
+            {
+              "type": "note",
+              "x": 189.2,
+              "y": 3.4,
+              "label": "右抽",
+              "size": 0.5,
+              "color": "#7f8c84"
             }
           ],
           "hcuts": [
             0,
-            70,
-            140,
-            210
+            7.65,
+            63.95,
+            161.05,
+            217.35,
+            225.0
           ],
-          "totalLabel": "210",
+          "totalLabel": "225",
+          "stateNames": {
+            "closed": "平時",
+            "open": "玩 PS5"
+          },
+          "levels": [
+            {
+              "y": 40,
+              "label": "櫃面"
+            },
+            {
+              "y": 62.1,
+              "label": "TV 下緣"
+            }
+          ]
+        },
+        {
+          "id": "console-switch",
+          "name": "正立面 · Switch 2",
+          "kind": "front",
+          "detail": false,
+          "labels": true,
+          "font": 5.6,
+          "height": 72,
+          "noCeiling": true,
+          "width": 225.0,
+          "chain": 0,
+          "marginR": 7.5,
+          "units": [
+            {
+              "ref": "console",
+              "x": 0
+            }
+          ],
+          "under": [
+            {
+              "type": "wallpaper",
+              "x": -2,
+              "y": 0,
+              "w": 229.0,
+              "h": 72
+            }
+          ],
+          "extras": [
+            {
+              "type": "tv",
+              "cut": true,
+              "x": 29.15,
+              "y": 62.1,
+              "w": 166.7,
+              "h": 9.9,
+              "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定 · 下緣 62.1）",
+              "ly": 65.4,
+              "size": 0.7
+            },
+            {
+              "type": "lc-end",
+              "x": 0,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "left"
+            },
+            {
+              "type": "lc-end",
+              "x": 217.5,
+              "y": 8.0,
+              "w": 7.5,
+              "h": 32.0,
+              "side": "right"
+            },
+            {
+              "type": "lc-door",
+              "x": 64.1,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "left",
+              "rear": true,
+              "when": "closed"
+            },
+            {
+              "type": "lc-door",
+              "x": 110.9,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 64.85,
+              "y": 9.8,
+              "w": 46.75,
+              "h": 26.4,
+              "fill": "#ddd6c8",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 64.1,
+              "y": 8.0,
+              "w": 0.75,
+              "h": 30.0,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 64.85,
+              "y": 8.0,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 64.85,
+              "y": 36.2,
+              "w": 46.05,
+              "h": 1.8,
+              "fill": "#d3c4aa",
+              "stroke": "none",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 66.85,
+              "y": 9.8,
+              "w": 16.4,
+              "h": 3.2,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 67.35,
+              "y": 13.0,
+              "w": 14.2,
+              "h": 3,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 99.1,
+              "y": 9.8,
+              "w": 10.5,
+              "h": 4.4,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "rect",
+              "x": 65.35,
+              "y": 33.2,
+              "w": 15,
+              "h": 3,
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "sw": 0.25,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 78.17,
+              "y": 9.8,
+              "w": 20.1,
+              "h": 11.5,
+              "fill": "#3d4743",
+              "when": "open"
+            },
+            {
+              "type": "device",
+              "x": 74.62,
+              "y": 12.7,
+              "w": 27.2,
+              "h": 11.6,
+              "label": "Switch 2",
+              "size": 0.45,
+              "fill": "#e9ebe7",
+              "when": "open"
+            },
+            {
+              "type": "lc-door",
+              "x": 110.9,
+              "y": 8.0,
+              "w": 50.0,
+              "h": 30.0,
+              "pull": "right",
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 103.72,
+              "y0": 24.3,
+              "y1": 36.2,
+              "label": "11.9",
+              "when": "open"
+            },
+            {
+              "type": "toe-light",
+              "x": 1.8,
+              "w": 221.4,
+              "y": 8,
+              "p": 1.8
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 232.0,
+              "y0": 40,
+              "y1": 62.1,
+              "label": "22.1"
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 2.2,
+              "label": "內退 10 · 3000K",
+              "size": 0.58,
+              "color": "#7a5a35",
+              "tvlight": true
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 50,
+              "label": "玩 Switch 2：左門推到右門後 → 左格開口 46",
+              "size": 0.58,
+              "when": "open"
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 45.5,
+              "label": "虛線：後方 USW Lite 8 PoE＋UCG Ultra、Hub M3",
+              "size": 0.5,
+              "color": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 50,
+              "label": "左格：Switch 2 底座＋網通",
+              "size": 0.58,
+              "when": "closed"
+            },
+            {
+              "type": "note",
+              "x": 35.8,
+              "y": 3.4,
+              "label": "左抽",
+              "size": 0.5,
+              "color": "#7f8c84"
+            },
+            {
+              "type": "note",
+              "x": 189.2,
+              "y": 3.4,
+              "label": "右抽",
+              "size": 0.5,
+              "color": "#7f8c84"
+            }
+          ],
+          "hcuts": [
+            0,
+            7.65,
+            63.95,
+            161.05,
+            217.35,
+            225.0
+          ],
+          "totalLabel": "225",
+          "stateNames": {
+            "closed": "平時",
+            "open": "玩 Switch 2"
+          },
           "levels": [
             {
               "y": 40,
@@ -11466,9 +11884,9 @@
         },
         {
           "id": "section",
-          "name": "側剖面 · 中間抽屜",
+          "name": "側剖面 · PS5 格",
           "kind": "section",
-          "ref": "console",
+          "ref": "console-mid",
           "extension": 40,
           "drawerExtension": 35,
           "labelRoom": 58,
@@ -11476,8 +11894,8 @@
           "noCeiling": true,
           "wallAt": -5,
           "stateNames": {
-            "closed": "收合",
-            "open": "拉出"
+            "closed": "平時",
+            "open": "玩 PS5"
           },
           "under": [
             {
@@ -11500,31 +11918,6 @@
               "a1": 10,
               "a2": 80,
               "reach": 77
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  -2.6,
-                  16
-                ],
-                [
-                  -2.6,
-                  104
-                ],
-                [
-                  0,
-                  108
-                ]
-              ]
-            },
-            {
-              "type": "socket",
-              "side": true,
-              "x": 0,
-              "y": 13,
-              "w": 1.2,
-              "h": 8.6
             },
             {
               "type": "rect",
@@ -11577,227 +11970,12 @@
               "size": 0.55
             },
             {
-              "type": "cavity",
-              "x": 0.4,
-              "y": 38,
-              "w": 3,
-              "h": 2
-            },
-            {
-              "type": "socket",
-              "side": true,
-              "x": 9.7,
-              "y": 21.5,
-              "w": 3.6,
-              "h": 4.6,
-              "dxOpen": 35
-            },
-            {
-              "type": "device",
-              "x": 14.2,
-              "y": 12.4,
-              "w": 13.7,
-              "h": 6.6,
-              "dxOpen": 35
-            },
-            {
-              "type": "device",
-              "x": 29.6,
-              "y": 12.4,
-              "w": 9.3,
-              "h": 3.1,
-              "dxOpen": 35
-            },
-            {
-              "type": "cablearm",
-              "x0": 1.2,
-              "x1": 8.2,
-              "y": 12,
-              "h": 3,
-              "links": 3,
-              "when": "closed"
-            },
-            {
-              "type": "cablearm",
-              "x0": 1.2,
-              "x1": 43.2,
-              "y": 12,
-              "h": 3,
-              "links": 7,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 0,
-              "x1": 8.2,
-              "y": 33,
-              "label": "8.2",
-              "when": "closed"
-            },
-            {
-              "type": "clear",
-              "x0": 45,
-              "x1": 80,
-              "y": 47,
-              "label": "全拉 35",
-              "when": "open"
-            },
-            {
-              "type": "callout",
-              "x": 0.6,
-              "y": 17,
-              "lx": 50,
-              "ly": 13.5,
-              "label": "固定插座＋網路孔（櫃後空腔）",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 11.5,
-              "y": 24,
-              "lx": 50,
-              "ly": 30.5,
-              "label": "延長座鎖在抽屜背板",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 4.5,
-              "y": 13.5,
-              "lx": 50,
-              "ly": 6.5,
-              "label": "摺疊線架（收合）",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 2,
-              "y": 39.5,
-              "lx": 50,
-              "ly": 44,
-              "label": "頂板後緣 3 通風縫",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 26,
-              "y": 20,
-              "lx": 50,
-              "ly": 22,
-              "label": "中間抽屜（箱深 35）",
-              "when": "closed",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 0.6,
-              "y": 17,
-              "lx": 86,
-              "ly": 9,
-              "label": "固定插座（不動）",
-              "when": "open",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 24,
-              "y": 13.5,
-              "lx": 86,
-              "ly": 3,
-              "label": "線架展開",
-              "when": "open",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 46.5,
-              "y": 24,
-              "lx": 86,
-              "ly": 30.5,
-              "label": "延長座隨抽屜拉出",
-              "when": "open",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 70,
-              "y": 20,
-              "lx": 86,
-              "ly": 21,
-              "label": "中間抽屜全拉 35",
-              "when": "open",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 2,
-              "y": 39.5,
-              "lx": 86,
-              "ly": 39,
-              "label": "通風縫",
-              "when": "open",
-              "size": 0.62
-            },
-            {
-              "type": "device",
-              "x": 0.2,
-              "y": 26,
-              "w": 3.2,
-              "h": 4.3,
-              "tvlight": true
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  1.8,
-                  26
-                ],
-                [
-                  1.8,
-                  6.6
-                ],
-                [
-                  34.6,
-                  6.6
-                ]
-              ],
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 1.8,
-              "y": 28.2,
-              "lx": 50,
-              "ly": 37.5,
-              "label": "24V 驅動器",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
               "type": "callout",
               "x": 35.9,
               "y": 7.1,
               "lx": 50,
               "ly": 1,
               "label": "45° 鋁槽燈",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 86,
-              "ly": 15,
-              "label": "底燈不動",
-              "when": "open",
               "size": 0.62,
               "tvlight": true
             },
@@ -11830,6 +12008,295 @@
                 "angle": "45°"
               },
               "tvlight": true
+            },
+            {
+              "type": "conduit",
+              "pts": [
+                [
+                  -2.6,
+                  104
+                ],
+                [
+                  -2.6,
+                  31
+                ],
+                [
+                  0,
+                  31
+                ]
+              ]
+            },
+            {
+              "type": "rect",
+              "x": 8.2,
+              "y": 23.6,
+              "w": 1.2,
+              "h": 9.6,
+              "fill": "#d3c4aa",
+              "stroke": "#b9a98d",
+              "sw": 0.2
+            },
+            {
+              "type": "device",
+              "x": 4.9,
+              "y": 9.9,
+              "w": 3.3,
+              "h": 13.6,
+              "fill": "#3d4743"
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 19.7,
+              "w": 1,
+              "h": 8.6,
+              "fill": "#f7f7f4",
+              "stroke": "#2f443c",
+              "sw": 0.25
+            },
+            {
+              "type": "device",
+              "x": 1,
+              "y": 21.8,
+              "w": 3.8,
+              "h": 4.4,
+              "fill": "#e9ebe7"
+            },
+            {
+              "type": "rect",
+              "x": 0.8,
+              "y": 38,
+              "w": 8.6,
+              "h": 2,
+              "fill": "#efe6d6",
+              "stroke": "#2f443c",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 38,
+              "w": 0.8,
+              "h": 2,
+              "fill": "#ffffff",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "device",
+              "x": 18.0,
+              "y": 9.8,
+              "w": 21.6,
+              "h": 8.9,
+              "label": "PS5 Pro",
+              "size": 0.5,
+              "fill": "#f4f3ee"
+            },
+            {
+              "type": "clear",
+              "x0": 9.4,
+              "x1": 18.0,
+              "y": 22.8,
+              "label": "8.6"
+            },
+            {
+              "type": "clear",
+              "vertical": true,
+              "x": 22.0,
+              "y0": 18.7,
+              "y1": 36.2,
+              "label": "17.5"
+            },
+            {
+              "type": "rect",
+              "x": 38.8,
+              "y": 8.0,
+              "w": 0.8,
+              "h": 1.8,
+              "fill": "#55605a",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 38.8,
+              "y": 36.2,
+              "w": 0.8,
+              "h": 1.8,
+              "fill": "#55605a",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 43.2,
+              "y": 8.0,
+              "w": 1.8,
+              "h": 30.0,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "when": "closed"
+            },
+            {
+              "type": "device",
+              "x": 43.2,
+              "y": 8.0,
+              "w": 1.8,
+              "h": 30.0,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  18.0,
+                  12.5
+                ],
+                [
+                  10,
+                  12.5
+                ],
+                [
+                  10,
+                  34.6
+                ],
+                [
+                  6.2,
+                  34.6
+                ],
+                [
+                  6.2,
+                  24
+                ],
+                [
+                  4.8,
+                  24
+                ]
+              ]
+            },
+            {
+              "type": "airflow",
+              "pts": [
+                [
+                  62,
+                  16
+                ],
+                [
+                  50,
+                  16
+                ],
+                [
+                  40.2,
+                  16
+                ]
+              ],
+              "when": "open"
+            },
+            {
+              "type": "airflow",
+              "pts": [
+                [
+                  18.0,
+                  14
+                ],
+                [
+                  12.5,
+                  14
+                ],
+                [
+                  7.199999999999999,
+                  15
+                ],
+                [
+                  3.4,
+                  24
+                ],
+                [
+                  2,
+                  32
+                ],
+                [
+                  0.4,
+                  40.6
+                ]
+              ],
+              "warm": true
+            },
+            {
+              "type": "callout",
+              "x": 44.1,
+              "y": 30,
+              "lx": 64,
+              "ly": 31.5,
+              "label": "右門（前軌）· 平時關",
+              "size": 0.62,
+              "when": "closed"
+            },
+            {
+              "type": "callout",
+              "x": 44,
+              "y": 30,
+              "lx": 64,
+              "ly": 31.5,
+              "label": "右門已推到左格前 → 前面全開",
+              "size": 0.62,
+              "when": "open"
+            },
+            {
+              "type": "callout",
+              "x": 39.2,
+              "y": 37.1,
+              "lx": 64,
+              "ly": 36.5,
+              "label": "Hettich SlideLine M 雙軌（上導、下行）",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 37,
+              "y": 18.700000000000003,
+              "lx": 64,
+              "ly": 22,
+              "label": "PS5 Pro 橫放，後留 8.6",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 6.6,
+              "y": 17,
+              "lx": 64,
+              "ly": 17.5,
+              "label": "背板 AIRPLATE T7 溫控抽到後槽",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 2.4,
+              "y": 26,
+              "lx": 12,
+              "ly": 47.5,
+              "label": "牆插 3 位 · 中心離地 24",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 5,
+              "y": 39,
+              "lx": 12,
+              "ly": 58,
+              "label": "活動線槽蓋 8.6 深 · 靠牆留 0.8 通風縫",
+              "size": 0.62
+            },
+            {
+              "type": "callout",
+              "x": 8.8,
+              "y": 34.6,
+              "lx": 12,
+              "ly": 52.8,
+              "label": "背板頂 15 × 3 線口",
+              "size": 0.62
             }
           ],
           "levels": [
@@ -11846,6 +12313,294 @@
               "label": "TV 中心"
             }
           ]
+        },
+        {
+          "id": "top",
+          "name": "俯視 · 線槽",
+          "kind": "plan-top",
+          "depth": 45,
+          "width": 225.0,
+          "font": 5.2,
+          "marginR": 5.2,
+          "marginT": 4.4,
+          "wallLabel": "電視牆（木作底板）",
+          "extras": [
+            {
+              "type": "lc-top",
+              "x": 0,
+              "y": 0,
+              "w": 225.0,
+              "h": 45,
+              "r": 7.5,
+              "fill": "#efe6d6"
+            },
+            {
+              "type": "device",
+              "x": 110.9,
+              "y": 0,
+              "w": 50.0,
+              "h": 1.8,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 64.1,
+              "y": 2.6,
+              "w": 50.0,
+              "h": 1.8,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 63.05,
+              "y": 5.4,
+              "w": 1.8,
+              "h": 30.2,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 160.15,
+              "y": 5.4,
+              "w": 1.8,
+              "h": 30.2,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 111.6,
+              "y": 5.4,
+              "w": 1.8,
+              "h": 30.2,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 7.5,
+              "y": 1.8,
+              "w": 1.8,
+              "h": 35.0,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 215.7,
+              "y": 1.8,
+              "w": 1.8,
+              "h": 35.0,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 64.85,
+              "y": 35.6,
+              "w": 95.3,
+              "h": 1.2,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 117.38,
+              "y": 5.4,
+              "w": 38.8,
+              "h": 21.6,
+              "dashed": true,
+              "fill": "none",
+              "label": "PS5 Pro",
+              "size": 0.55,
+              "color": "#55695f"
+            },
+            {
+              "type": "device",
+              "x": 123.93,
+              "y": 33.8,
+              "w": 25.7,
+              "h": 1.8,
+              "dashed": true,
+              "fill": "none"
+            },
+            {
+              "type": "device",
+              "x": 78.17,
+              "y": 6.4,
+              "w": 20.1,
+              "h": 5.12,
+              "dashed": true,
+              "fill": "none",
+              "label": "Switch 2",
+              "size": 0.5,
+              "color": "#55695f"
+            },
+            {
+              "type": "device",
+              "x": 66.85,
+              "y": 21.6,
+              "w": 16.4,
+              "h": 10,
+              "dashed": true,
+              "fill": "none",
+              "label": "USW · UCG",
+              "size": 0.45,
+              "color": "#55695f"
+            },
+            {
+              "type": "device",
+              "x": 99.1,
+              "y": 23,
+              "w": 10.5,
+              "h": 10.5,
+              "dashed": true,
+              "fill": "none",
+              "label": "Hub M3",
+              "size": 0.45,
+              "color": "#55695f"
+            },
+            {
+              "type": "device",
+              "x": 9.3,
+              "y": 1.8,
+              "w": 53.0,
+              "h": 35,
+              "dashed": true,
+              "fill": "none",
+              "label": "左抽 · 手把",
+              "size": 0.55,
+              "color": "#55695f"
+            },
+            {
+              "type": "device",
+              "x": 162.7,
+              "y": 1.8,
+              "w": 53.0,
+              "h": 35,
+              "dashed": true,
+              "fill": "none",
+              "label": "右抽 · 遊戲片",
+              "size": 0.55,
+              "color": "#55695f"
+            },
+            {
+              "type": "rect",
+              "x": 64.1,
+              "y": 35.6,
+              "w": 96.8,
+              "h": 8.6,
+              "fill": "#e2d5bd",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 44.2,
+              "w": 225.0,
+              "h": 0.8,
+              "fill": "#5f6b64",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "lc-hole",
+              "x": 69.1,
+              "y": 39.9,
+              "r": 1.25
+            },
+            {
+              "type": "lc-hole",
+              "x": 155.9,
+              "y": 39.9,
+              "r": 1.25
+            },
+            {
+              "type": "note",
+              "x": 112.5,
+              "y": 38.9,
+              "label": "活動線槽蓋 96.8 × 8.6 · 同頂板",
+              "size": 0.6,
+              "color": "#2f443c"
+            },
+            {
+              "type": "note",
+              "x": 69.1,
+              "y": 32.4,
+              "label": "Ø2.5 指孔",
+              "size": 0.5
+            },
+            {
+              "type": "lc-hole",
+              "x": 152.15,
+              "y": 42.5,
+              "r": 2.5,
+              "fill": "none"
+            },
+            {
+              "type": "note",
+              "x": 152.15,
+              "y": 31.2,
+              "label": "Ø50 進槽",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 75.62,
+              "y": 44.4,
+              "w": 25.2,
+              "h": 0.6,
+              "fill": "#a96f47",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 124.18,
+              "y": 44.4,
+              "w": 25.2,
+              "h": 0.6,
+              "fill": "#a96f47",
+              "stroke": "none",
+              "sw": 0.3
+            },
+            {
+              "type": "note",
+              "x": 88.22,
+              "y": 47.6,
+              "label": "牆插 3 位",
+              "size": 0.5,
+              "color": "#a96f47"
+            },
+            {
+              "type": "note",
+              "x": 136.78,
+              "y": 47.6,
+              "label": "牆插 3 位",
+              "size": 0.5,
+              "color": "#a96f47"
+            }
+          ],
+          "hcuts": [
+            0,
+            7.65,
+            63.95,
+            161.05,
+            217.35,
+            225.0
+          ],
+          "totalLabel": "225",
+          "vcuts": [
+            0,
+            4.4,
+            35.6,
+            45
+          ],
+          "caption": "頂板前角 R 7.5（平面圓角）；虛線為頂板下的門、隔板與設備"
         }
       ],
       "spec": [
@@ -11862,27 +12617,67 @@
         {
           "zone": "電視",
           "h": "中心 110 · 下緣 62.1",
-          "note": "Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、25.6 kg、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），前緣離牆約 8.8"
-        },
-        {
-          "zone": "暗管",
-          "h": "Ø50",
-          "note": "藏木作層內，從櫃後空腔直上電視背後嵌入盒（含 13A 插座）；所有線接電視背面"
-        },
-        {
-          "zone": "HDMI",
-          "h": "3 × HDMI 2.1",
-          "note": "1 → PS5 Pro（4K120／VRR）· 2 eARC → KEF LS50 Wireless II · 3 → Switch 2"
+          "note": "Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、25.6 kg、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），置中對電視櫃"
         },
         {
           "zone": "電視櫃",
-          "h": "210 × 45 × 40",
-          "note": "3 抽各 70；前緣距結構牆 50"
+          "h": "225 × 45 × 40",
+          "note": "四格：圓角端 7.5｜左抽 56｜門 50｜門 50｜右抽 56｜圓角端 7.5（縫 0.3）；前緣距結構牆 50"
+        },
+        {
+          "zone": "圓角端",
+          "h": "平面 R 7.5",
+          "note": "前角垂直圓角（像現在的櫃）：頂板與側板同半徑；端部內側一片隔板，抽屜不碰弧面"
+        },
+        {
+          "zone": "橫推門 ×2",
+          "h": "50 × 30 · 厚 1.8",
+          "note": "Hettich SlideLine M 雙軌、Silent System 緩衝；右門前軌、左門後軌，前後錯開約 2.6，重疊 3.2；外緣嵌入式指槽 1.2 × 12，無把手"
+        },
+        {
+          "zone": "右格 · PS5 Pro",
+          "h": "內寬 46.8 · 內高 26.4",
+          "note": "PS5 Pro 橫放置中：左右 4、上 17.5、後 8.6 到背板；玩時右門推到左門前，前面開口 46"
+        },
+        {
+          "zone": "散熱",
+          "h": "前進後出",
+          "note": "玩時右格前面全開 → PS5 背面出風 → 背板 AIRPLATE T7（開孔 25.7 × 13.6、溫控）→ 後槽 → 線槽蓋靠牆 0.8 通風縫；門只在休眠時關"
+        },
+        {
+          "zone": "左格 · Switch 2＋網通",
+          "h": "內寬 46.8",
+          "note": "Switch 2 底座 20.1 × 11.5 × 5.1 放前面中間，插上主機頂 24.3、上方留 11.9；玩時左門推到右門後。後面放 USW Lite 8 PoE、UCG Ultra（疊放）、Aqara Hub M3（PoE）"
+        },
+        {
+          "zone": "線槽",
+          "h": "96.8 × 8.2",
+          "note": "中間兩格後方通長；活動蓋 96.8 × 8.6 × 2、同頂板木紋，兩端 Ø2.5 指孔，擱在兩側頂板與背板企口上"
+        },
+        {
+          "zone": "牆插 2 × 3",
+          "h": "中心離地 24",
+          "note": "每格後方一組 13A 雙孔＋單孔（線槽蓋下）。左：UCG Ultra、USW Lite 8 PoE、Switch 2 底座（Hub M3 走 PoE）；右：PS5 Pro、AIRPLATE T7、底燈驅動器"
+        },
+        {
+          "zone": "Ø50 暗管",
+          "h": "出口離地 31",
+          "note": "從電視背後嵌入盒下到線槽（距櫃左端 152.2，右格後方）"
+        },
+        {
+          "zone": "線路",
+          "h": "背板頂線口",
+          "note": "每格背板頂角開 15 × 3 線口：插頭在牆上、線從線槽下到設備；HDMI 1 → PS5 Pro、2 eARC → KEF、3 → Switch 2"
+        },
+        {
+          "zone": "抽屜 ×2",
+          "h": "面 56 × 30 · 內寬 53.8",
+          "note": "Blum LEGRABOX 全拉緩衝 NL 350；上緣弧形指槽；左抽手把、右抽遊戲片"
         },
         {
           "zone": "喇叭 · KEF LS50 Wireless II",
-          "h": "中心距 240 · 頂 96.2",
-          "note": "KEF S2 Floor Stand 高 65.7；離電視櫃 3.7、背距牆 14、前緣齊電視櫃"
+          "h": "中心距 255 · 頂 96.2",
+          "note": "KEF S2 Floor Stand 高 65.7；離電視櫃 3.7、前緣齊電視櫃"
         },
         {
           "zone": "重低音 · KEF KC62",
@@ -11890,51 +12685,30 @@
           "note": "右腳架南側，貼牆 10；RCA 接主喇叭 Sub Out"
         },
         {
-          "zone": "喇叭電源與連線",
-          "h": "插座 30 · 出線口 10",
-          "note": "S-17／S-18／S-19 各一組 13A 雙孔；木作層 Ø32 暗管串兩支腳架與櫃後空腔"
-        },
-        {
-          "zone": "中間抽屜 · 插座",
-          "h": "全拉 35",
-          "note": "所有插座在此：6 位 13A 延長座；路由器、Hub M3 同放。"
-        },
-        {
-          "zone": "弧形缺口",
-          "h": "14 寬 · 3.5 深",
-          "note": "把手；中抽兼出線口"
-        },
-        {
-          "zone": "櫃後空腔",
-          "h": "8.2",
-          "note": "後留 8.2：固定插座＋網路孔；線經摺疊線架隨抽屜進出。"
-        },
-        {
           "zone": "踢腳 · 底燈",
           "h": "8 高 · 內退 10",
-          "note": "45° 鋁槽、乳白罩，兩端側板落地遮光；亮面地磚用 COB 無光點燈條"
-        },
-        {
-          "zone": "底燈電源",
-          "h": "24 V · 約 16.5 W",
-          "note": "驅動器在後腔，拆中抽可換；牆面獨立開關。"
+          "note": "45° 鋁槽、乳白罩，3000K COB；驅動器插右格後方牆插，獨立開關"
         }
       ],
       "hardware": [
-        "Blum LEGRABOX 全拉緩衝 NL 350；中抽 C 高側板、40 kg 級。",
-        "SIRIM 6 位 13A 延長座鎖抽屜背板；後腔雙位插座離地 17。",
-        "底燈：45° 鋁槽 206＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。"
+        "Hettich SlideLine M 雙軌套件 ×1（Silent System，門寬 ≥ 45、門高 30–200、≤ 30 kg／扇）；上下雙軌型材長 96.8。",
+        "AC Infinity AIRPLATE T7（溫控，開孔 25.7 × 13.6）裝右格背板後側。",
+        "Blum LEGRABOX 全拉緩衝 NL 350 ×2（左、右抽）。",
+        "牆插：13A 雙孔＋單孔 ×2 組（每個中格後方一組），離地 24。",
+        "底燈：45° 鋁槽＋COB 24V 3000K CRI≥90；LEW 獨立迴路。"
       ],
       "rationale": [
-        "3 抽不選 5：中抽內淨 65 才放得下 One Connect 等設備。",
-        "燈藏內退 10，視線 110 看不到燈",
-        "喇叭放櫃外：櫃 210 不縮，中線南移 25 讓出左腳架位置"
+        "屋主定：四格、兩端抽屜、中間兩扇橫推門、圓角端、線槽蓋",
+        "門 50 等寬，兩條抽屜縫對電視中線對稱",
+        "玩時只推門，不拉抽屜、不外伸"
       ],
       "open_questions": [
-        "光纖終端位置",
-        "遊戲機",
-        "天花淨高、能否做局部假天花",
-        "壁紙型號與木作底板厚度"
+        "SlideLine M 雙軌型材前後間距（Hettich 圖，約 2.6 待確認）",
+        "櫃面木紋色號"
+      ],
+      "risks": [
+        "PS5 左右只有 4（Sony 建議 10）→ 玩時前面全開＋背後 T7 抽風補；要 10 得門寬 59",
+        "兩扇門一次只能開一格：玩 PS5 時左格關著"
       ]
     },
     "living-tv": {
@@ -18532,3907 +19306,6 @@
     "kef-sub": {
       "alias": "tv-console",
       "object_id": "kef-sub"
-    },
-    "tv-console@console-a": {
-      "object_id": "tv-console",
-      "title": "電視牆 · A 中格翻轉推入門",
-      "status": "design-proposal",
-      "viewpoint": "左為陽台門，右通玄關",
-      "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計（brochure 275）；洗牆燈假天花底 270",
-      "states": [
-        {
-          "id": "closed",
-          "name": "平時"
-        },
-        {
-          "id": "open",
-          "name": "玩遊戲"
-        }
-      ],
-      "units": {
-        "console": {
-          "w": 210,
-          "d": 45,
-          "h": 40,
-          "board": 1.8,
-          "noBack": true,
-          "bands": [
-            {
-              "kind": "plinth",
-              "h": 8,
-              "label": "踢腳",
-              "recess": 10,
-              "inset": 1.8,
-              "fill": "#c5cac1"
-            },
-            {
-              "kind": "drawers",
-              "h": 30,
-              "label": "抽屜 ×2",
-              "short": "中間抽屜",
-              "boxFrom": 8.2,
-              "boxTo": 43.2,
-              "boxLift": 2.8,
-              "boxH": 17.7,
-              "noLabel": true
-            },
-            {
-              "kind": "board",
-              "h": 2
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "drawer",
-              "from": 8,
-              "to": 38,
-              "leaves": [
-                {
-                  "x": 0.4,
-                  "w": 59.4
-                },
-                {
-                  "x": 150.2,
-                  "w": 59.4
-                }
-              ],
-              "notch": {
-                "w": 14,
-                "h": 3.5
-              },
-              "openLeaves": []
-            }
-          ]
-        },
-        "console-a-mid": {
-          "w": 70,
-          "d": 45,
-          "h": 40,
-          "board": 1.8,
-          "noBack": true,
-          "bands": [
-            {
-              "kind": "plinth",
-              "h": 8,
-              "label": "踢腳",
-              "recess": 10,
-              "inset": 1.8,
-              "fill": "#c5cac1"
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "open",
-              "h": 28.2,
-              "label": ""
-            },
-            {
-              "kind": "board",
-              "h": 2
-            }
-          ]
-        }
-      },
-      "views": [
-        {
-          "id": "wall",
-          "name": "空間規劃",
-          "kind": "front",
-          "detail": false,
-          "width": 387.5,
-          "font": 8,
-          "units": [
-            {
-              "ref": "console",
-              "x": 50
-            }
-          ],
-          "under": [
-            {
-              "type": "wallpaper",
-              "x": 0,
-              "y": 0,
-              "w": 387.5,
-              "h": 270,
-              "gaps": true,
-              "label": "木作底板＋wabi-sabi 淡灰壁紙",
-              "lx": 311,
-              "ly": 228,
-              "anchor": "middle",
-              "size": 0.62
-            },
-            {
-              "type": "wash",
-              "x": 0.8,
-              "y": 180,
-              "w": 385.9,
-              "h": 90,
-              "opacity": 0.42
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  195,
-                  28
-                ],
-                [
-                  195,
-                  98
-                ]
-              ],
-              "label": "Ø50 暗管",
-              "lx": 198,
-              "ly": 49,
-              "size": 0.55
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  35,
-                  10
-                ],
-                [
-                  35,
-                  15
-                ],
-                [
-                  275,
-                  15
-                ],
-                [
-                  275,
-                  10
-                ]
-              ]
-            }
-          ],
-          "extras": [
-            {
-              "type": "rect",
-              "x": 110.2,
-              "y": 8.2,
-              "w": 11.4,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
-            },
-            {
-              "type": "vent",
-              "x": 111.7,
-              "y": 10.5,
-              "w": 8.4,
-              "h": 25,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 188.4,
-              "y": 8.2,
-              "w": 11.4,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
-            },
-            {
-              "type": "vent",
-              "x": 189.9,
-              "y": 10.5,
-              "w": 8.4,
-              "h": 25,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "soffit",
-              "x": 0,
-              "y": 270,
-              "w": 387.5,
-              "h": 10,
-              "slot": [
-                0,
-                387.5
-              ],
-              "label": "局部假天花 · 線性洗牆燈 3000K",
-              "size": 0.6
-            },
-            {
-              "type": "tv",
-              "x": 71.65,
-              "y": 62.1,
-              "w": 166.7,
-              "h": 95.8,
-              "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定）",
-              "sub": "166.7 × 95.8 × 7.3",
-              "size": 0.78
-            },
-            {
-              "type": "toe-light",
-              "x": 51.8,
-              "w": 206.4,
-              "y": 8,
-              "p": 1.8
-            },
-            {
-              "type": "note",
-              "x": 155,
-              "y": 2.2,
-              "label": "底燈 3000K",
-              "anchor": "middle",
-              "size": 0.55,
-              "tvlight": true
-            },
-            {
-              "type": "clear",
-              "x0": 71.65,
-              "x1": 238.35,
-              "y": 162.9,
-              "label": "TV 166.7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 40,
-              "y1": 62.1,
-              "label": "22.1"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 0,
-              "y1": 40,
-              "label": "40"
-            },
-            {
-              "type": "note",
-              "x": 3,
-              "y": 140,
-              "label": "← 陽台玻璃門",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 384.5,
-              "y": 140,
-              "label": "玄關過道 →",
-              "anchor": "end",
-              "size": 0.62
-            },
-            {
-              "type": "socket",
-              "x": 27.7,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 31,
-              "y": 8.5,
-              "w": 8,
-              "h": 3,
-              "fill": "#55605a",
-              "stroke": "#2f443c",
-              "sw": 0.2
-            },
-            {
-              "type": "rect",
-              "x": 23.7,
-              "y": 0,
-              "w": 22.6,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.4
-            },
-            {
-              "type": "rect",
-              "x": 32.5,
-              "y": 1.2,
-              "w": 5,
-              "h": 63.3,
-              "fill": "#8a948e",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 25,
-              "y": 64.5,
-              "w": 20,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.3
-            },
-            {
-              "type": "rect",
-              "x": 25,
-              "y": 65.7,
-              "w": 20,
-              "h": 30.5,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.2
-            },
-            {
-              "type": "rect",
-              "x": 28.5,
-              "y": 74.5,
-              "w": 13,
-              "h": 13,
-              "fill": "#d9d6cc",
-              "stroke": "#55695f",
-              "sw": 0.25,
-              "rx": 6.5
-            },
-            {
-              "type": "rect",
-              "x": 33.4,
-              "y": 79.4,
-              "w": 3.2,
-              "h": 3.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 1.6
-            },
-            {
-              "type": "note",
-              "x": 35,
-              "y": 99,
-              "label": "LS50 Wireless II",
-              "size": 0.5,
-              "color": "#2f443c"
-            },
-            {
-              "type": "note",
-              "x": 35,
-              "y": 104,
-              "label": "左 · 副",
-              "size": 0.5,
-              "color": "#7f8c84"
-            },
-            {
-              "type": "socket",
-              "x": 267.7,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 271,
-              "y": 8.5,
-              "w": 8,
-              "h": 3,
-              "fill": "#55605a",
-              "stroke": "#2f443c",
-              "sw": 0.2
-            },
-            {
-              "type": "rect",
-              "x": 263.7,
-              "y": 0,
-              "w": 22.6,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.4
-            },
-            {
-              "type": "rect",
-              "x": 272.5,
-              "y": 1.2,
-              "w": 5,
-              "h": 63.3,
-              "fill": "#8a948e",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 265,
-              "y": 64.5,
-              "w": 20,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.3
-            },
-            {
-              "type": "rect",
-              "x": 265,
-              "y": 65.7,
-              "w": 20,
-              "h": 30.5,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.2
-            },
-            {
-              "type": "rect",
-              "x": 268.5,
-              "y": 74.5,
-              "w": 13,
-              "h": 13,
-              "fill": "#d9d6cc",
-              "stroke": "#55695f",
-              "sw": 0.25,
-              "rx": 6.5
-            },
-            {
-              "type": "rect",
-              "x": 273.4,
-              "y": 79.4,
-              "w": 3.2,
-              "h": 3.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 1.6
-            },
-            {
-              "type": "note",
-              "x": 275,
-              "y": 99,
-              "label": "LS50 Wireless II",
-              "size": 0.5,
-              "color": "#2f443c"
-            },
-            {
-              "type": "note",
-              "x": 275,
-              "y": 104,
-              "label": "右 · 主",
-              "size": 0.5,
-              "color": "#7f8c84"
-            },
-            {
-              "type": "socket",
-              "x": 300.5,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 295,
-              "y": 0,
-              "w": 25.6,
-              "h": 24.6,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.5,
-              "label": "KC62",
-              "color": "#2f443c",
-              "size": 0.55
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 9,
-              "y0": 0,
-              "y1": 65.7,
-              "label": "65.7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 9,
-              "y0": 65.7,
-              "y1": 96.2,
-              "label": "30.5"
-            },
-            {
-              "type": "vent",
-              "x": 55.1,
-              "y": 10.5,
-              "w": 50,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "vent",
-              "x": 204.9,
-              "y": 10.5,
-              "w": 50,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "device",
-              "x": 227.8,
-              "y": 42.9,
-              "w": 27.2,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "device",
-              "x": 231.35,
-              "y": 40,
-              "w": 20.1,
-              "h": 11.5,
-              "label": "Switch 2",
-              "size": 0.45,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 228,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "rect",
-              "x": 121.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#8f978f",
-              "stroke": "none",
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 122.0,
-              "y": 10.4,
-              "w": 66,
-              "h": 27,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "closed"
-            },
-            {
-              "type": "vent",
-              "x": 126.5,
-              "y": 13.2,
-              "w": 57,
-              "h": 21.6,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 148,
-              "y": 10.4,
-              "w": 14,
-              "h": 1.1,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.5,
-              "when": "closed"
-            },
-            {
-              "type": "cavity",
-              "x": 121.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#ddd6c8",
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 140.15,
-              "y": 12,
-              "w": 29.7,
-              "h": 15.5,
-              "dashed": true,
-              "when": "open",
-              "label": "AIRPLATE T7（背板後）",
-              "size": 0.42,
-              "ly": 23.2
-            },
-            {
-              "type": "device",
-              "x": 135.6,
-              "y": 10.8,
-              "w": 38.8,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 123.4,
-              "y": 35.3,
-              "w": 2.2,
-              "h": 2.7,
-              "fill": "#55605a",
-              "stroke": "none",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 184.4,
-              "y": 35.3,
-              "w": 2.2,
-              "h": 2.7,
-              "fill": "#55605a",
-              "stroke": "none",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 122.0,
-              "y": 33.5,
-              "w": 66,
-              "h": 1.8,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 108,
-              "y": 47,
-              "label": "中格翻轉推入門：玩時門收進櫃內",
-              "anchor": "middle",
-              "size": 0.58
-            }
-          ],
-          "hcuts": [
-            0,
-            35,
-            50,
-            110,
-            120,
-            190,
-            200,
-            260,
-            275,
-            387.5
-          ],
-          "totalLabel": "387.5（原標）",
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 81,
-              "label": "Uni-Q 中心 · 示意"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            },
-            {
-              "y": 157.9,
-              "label": "TV 上緣"
-            },
-            {
-              "y": 270,
-              "label": "假天花底"
-            }
-          ]
-        },
-        {
-          "id": "console",
-          "name": "電視櫃正立面",
-          "kind": "front",
-          "detail": false,
-          "labels": true,
-          "font": 5.6,
-          "height": 72,
-          "noCeiling": true,
-          "width": 210,
-          "chain": 0,
-          "marginR": 7.5,
-          "units": [
-            {
-              "ref": "console",
-              "x": 0
-            }
-          ],
-          "under": [
-            {
-              "type": "wallpaper",
-              "x": -2,
-              "y": 0,
-              "w": 214,
-              "h": 72
-            }
-          ],
-          "extras": [
-            {
-              "type": "rect",
-              "x": 60.2,
-              "y": 8.2,
-              "w": 11.4,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
-            },
-            {
-              "type": "vent",
-              "x": 61.7,
-              "y": 10.5,
-              "w": 8.4,
-              "h": 25,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 138.4,
-              "y": 8.2,
-              "w": 11.4,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
-            },
-            {
-              "type": "vent",
-              "x": 139.9,
-              "y": 10.5,
-              "w": 8.4,
-              "h": 25,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "tv",
-              "cut": true,
-              "x": 21.65,
-              "y": 62.1,
-              "w": 166.7,
-              "h": 9.9,
-              "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定 · 下緣 62.1）",
-              "ly": 65.4,
-              "size": 0.7
-            },
-            {
-              "type": "toe-light",
-              "x": 1.8,
-              "w": 206.4,
-              "y": 8,
-              "p": 1.8
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 232,
-              "y0": 40,
-              "y1": 62.1,
-              "label": "22.1"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
-              "y": 2.2,
-              "label": "內退 10 · 3000K",
-              "size": 0.58,
-              "color": "#7a5a35",
-              "tvlight": true
-            },
-            {
-              "type": "vent",
-              "x": 5.1,
-              "y": 10.5,
-              "w": 50,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "vent",
-              "x": 154.9,
-              "y": 10.5,
-              "w": 50,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "device",
-              "x": 177.8,
-              "y": 42.9,
-              "w": 27.2,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "device",
-              "x": 181.35,
-              "y": 40,
-              "w": 20.1,
-              "h": 11.5,
-              "label": "Switch 2",
-              "size": 0.45,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 178,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "rect",
-              "x": 71.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#8f978f",
-              "stroke": "none",
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 72.0,
-              "y": 10.4,
-              "w": 66,
-              "h": 27,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "closed"
-            },
-            {
-              "type": "vent",
-              "x": 76.5,
-              "y": 13.2,
-              "w": 57,
-              "h": 21.6,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 98,
-              "y": 10.4,
-              "w": 14,
-              "h": 1.1,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.5,
-              "when": "closed"
-            },
-            {
-              "type": "cavity",
-              "x": 71.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#ddd6c8",
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 90.15,
-              "y": 12,
-              "w": 29.7,
-              "h": 15.5,
-              "dashed": true,
-              "when": "open",
-              "label": "AIRPLATE T7（背板後）",
-              "size": 0.42,
-              "ly": 23.2
-            },
-            {
-              "type": "device",
-              "x": 85.6,
-              "y": 10.8,
-              "w": 38.8,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 71.8,
-              "x1": 85.6,
-              "y": 15.2,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 124.4,
-              "x1": 138.2,
-              "y": 15.2,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 73.4,
-              "y": 35.3,
-              "w": 2.2,
-              "h": 2.7,
-              "fill": "#55605a",
-              "stroke": "none",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 134.4,
-              "y": 35.3,
-              "w": 2.2,
-              "h": 2.7,
-              "fill": "#55605a",
-              "stroke": "none",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 72.0,
-              "y": 33.5,
-              "w": 66,
-              "h": 1.8,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 128,
-              "y0": 19.7,
-              "y1": 33.5,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 92,
-              "y": 50,
-              "label": "平時（休眠）：中門關，同款直條格柵",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 92,
-              "y": 50,
-              "label": "玩：門翻平推進櫃內，前面全開、0 外伸",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 65,
-              "y": 3.4,
-              "label": "左柱",
-              "size": 0.5,
-              "color": "#7f8c84"
-            },
-            {
-              "type": "note",
-              "x": 145,
-              "y": 3.4,
-              "label": "右柱",
-              "size": 0.5,
-              "color": "#7f8c84"
-            }
-          ],
-          "hcuts": [
-            0,
-            60,
-            70,
-            140,
-            150,
-            210
-          ],
-          "totalLabel": "210",
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            }
-          ]
-        },
-        {
-          "id": "section",
-          "name": "側剖面 · 中格翻轉門",
-          "kind": "section",
-          "ref": "console-a-mid",
-          "extension": 40,
-          "drawerExtension": 35,
-          "labelRoom": 58,
-          "height": 172,
-          "noCeiling": true,
-          "wallAt": -5,
-          "under": [
-            {
-              "type": "lining",
-              "x": -5,
-              "y": 0,
-              "w": 5,
-              "h": 172
-            }
-          ],
-          "extras": [
-            {
-              "type": "toe-light",
-              "section": true,
-              "x": 35,
-              "y": 8,
-              "p": 1.8,
-              "front": 45,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "reach": 77
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  -2.6,
-                  16
-                ],
-                [
-                  -2.6,
-                  104
-                ],
-                [
-                  0,
-                  108
-                ]
-              ]
-            },
-            {
-              "type": "rect",
-              "id": "bracket",
-              "x": 0,
-              "y": 100,
-              "w": 1.5,
-              "h": 20,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "tv",
-              "side": true,
-              "x": 1.5,
-              "y": 62.1,
-              "w": 7.3,
-              "h": 95.8
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 132,
-              "label": "Xiaomi 75（厚 7.3＋壁架 1.5）",
-              "anchor": "start",
-              "size": 0.66
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 100,
-              "label": "Ø50 暗管在木作底板內",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 94,
-              "label": "上到電視背後嵌入盒",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": -2.5,
-              "y": 175,
-              "label": "木作 5",
-              "anchor": "middle",
-              "size": 0.55
-            },
-            {
-              "type": "cavity",
-              "x": 0.4,
-              "y": 38,
-              "w": 3,
-              "h": 2
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 50,
-              "ly": 1,
-              "label": "45° 鋁槽燈",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "toe-detail",
-              "x": 62,
-              "y": 63.5,
-              "k": 2.5,
-              "x0": 28,
-              "x1": 56,
-              "y0": -4,
-              "y1": 12.5,
-              "front": 45,
-              "recess": 10,
-              "under": 8,
-              "p": 1.8,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "eye": [
-                110,
-                227
-              ],
-              "plinthFill": "#c5cac1",
-              "labels": {
-                "title": "底燈大樣",
-                "led": "45° 鋁槽",
-                "recess": "內退 10",
-                "eye": "坐姿視線 110",
-                "angle": "45°"
-              },
-              "tvlight": true
-            },
-            {
-              "type": "rect",
-              "x": 8.2,
-              "y": 9.8,
-              "w": 1.2,
-              "h": 28.2,
-              "fill": "#d3c4aa",
-              "stroke": "#b9a98d",
-              "sw": 0.2
-            },
-            {
-              "type": "device",
-              "x": 4.9,
-              "y": 12,
-              "w": 3.3,
-              "h": 15.5,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "rect",
-              "x": 2.6,
-              "y": 36.3,
-              "w": 40.6,
-              "h": 1.3,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 42.2,
-              "y": 35.3,
-              "w": 1.6,
-              "h": 2.7,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "device",
-              "x": 20.4,
-              "y": 10.8,
-              "w": 21.6,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee"
-            },
-            {
-              "type": "clear",
-              "x0": 9.4,
-              "x1": 20.4,
-              "y": 24.5,
-              "label": "11"
-            },
-            {
-              "type": "device",
-              "x": 0.4,
-              "y": 33.3,
-              "w": 42.8,
-              "h": 4.7,
-              "dashed": true,
-              "fill": "none"
-            },
-            {
-              "type": "clear",
-              "x0": 0.4,
-              "x1": 43.2,
-              "y": 43.5,
-              "label": "停門區 42.8 不走線"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 46.6,
-              "y0": 33.3,
-              "y1": 38,
-              "label": "4.7",
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 43.2,
-              "y": 10.4,
-              "w": 1.8,
-              "h": 27,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 16.2,
-              "y": 33.5,
-              "w": 27,
-              "h": 1.8,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 43.2,
-              "y": 10.4,
-              "w": 1.8,
-              "h": 27,
-              "dashed": true,
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 45,
-              "y": 35.6,
-              "w": 27,
-              "h": 1.8,
-              "dashed": true,
-              "when": "open"
-            },
-            {
-              "type": "sweep",
-              "pts": [
-                [
-                  44.1,
-                  10.4
-                ],
-                [
-                  47.12,
-                  10.57
-                ],
-                [
-                  50.11,
-                  11.08
-                ],
-                [
-                  53.02,
-                  11.92
-                ],
-                [
-                  55.81,
-                  13.07
-                ],
-                [
-                  58.46,
-                  14.54
-                ],
-                [
-                  60.93,
-                  16.29
-                ],
-                [
-                  63.19,
-                  18.31
-                ],
-                [
-                  65.21,
-                  20.57
-                ],
-                [
-                  66.96,
-                  23.04
-                ],
-                [
-                  68.43,
-                  25.69
-                ],
-                [
-                  69.58,
-                  28.48
-                ],
-                [
-                  70.42,
-                  31.39
-                ],
-                [
-                  70.93,
-                  34.38
-                ],
-                [
-                  71.1,
-                  37.4
-                ]
-              ],
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 31,
-              "y0": 19.7,
-              "y1": 33.5,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 45,
-              "x1": 72,
-              "y": 41.5,
-              "label": "翻轉瞬間 27",
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  64,
-                  15.5
-                ],
-                [
-                  52,
-                  15.5
-                ],
-                [
-                  42.6,
-                  15.5
-                ]
-              ],
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  64,
-                  27
-                ],
-                [
-                  50,
-                  27
-                ],
-                [
-                  40,
-                  24
-                ],
-                [
-                  33,
-                  20.6
-                ]
-              ],
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  20,
-                  15
-                ],
-                [
-                  13,
-                  15
-                ],
-                [
-                  9.6,
-                  17.5
-                ],
-                [
-                  6.6,
-                  20
-                ],
-                [
-                  3.6,
-                  26
-                ],
-                [
-                  2,
-                  33
-                ],
-                [
-                  2,
-                  42.6
-                ]
-              ],
-              "warm": true,
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  20,
-                  15
-                ],
-                [
-                  13,
-                  15
-                ],
-                [
-                  9.6,
-                  17.5
-                ],
-                [
-                  6.6,
-                  20
-                ],
-                [
-                  3.6,
-                  26
-                ],
-                [
-                  2,
-                  33
-                ],
-                [
-                  2,
-                  42.6
-                ]
-              ],
-              "warm": true,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 30,
-              "y": 36.9,
-              "lx": 76,
-              "ly": 36,
-              "label": "Accuride CB1155 16 吋滑軌 40.6",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 25,
-              "y": 34.4,
-              "lx": 76,
-              "ly": 31.5,
-              "label": "玩：門翻平推入，停在 PS5 上方",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "callout",
-              "x": 44.1,
-              "y": 24,
-              "lx": 76,
-              "ly": 31.5,
-              "label": "平時：門關（休眠 0.3–3.6 W）",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 60,
-              "y": 27,
-              "lx": 76,
-              "ly": 27,
-              "label": "前面全開進風",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "callout",
-              "x": 6.6,
-              "y": 22,
-              "lx": 76,
-              "ly": 22.5,
-              "label": "背板後 AIRPLATE T7 溫控抽到後腔",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 40,
-              "y": 17,
-              "lx": 76,
-              "ly": 18,
-              "label": "PS5 Pro 橫放，後留 11",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 2,
-              "y": 39.5,
-              "lx": 12,
-              "ly": 54,
-              "label": "後腔 8.2 → 頂板後緣通風縫",
-              "size": 0.62
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  20.4,
-                  12.5
-                ],
-                [
-                  15,
-                  12.5
-                ],
-                [
-                  15,
-                  10.6
-                ],
-                [
-                  12,
-                  10.6
-                ]
-              ]
-            },
-            {
-              "type": "callout",
-              "x": 13,
-              "y": 10.6,
-              "lx": 76,
-              "ly": 13.5,
-              "label": "電源、HDMI 從右側板底孔進右立柱",
-              "size": 0.62
-            }
-          ],
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            }
-          ]
-        },
-        {
-          "id": "section-switch",
-          "name": "側剖面 · 右端 Switch 2",
-          "kind": "section",
-          "ref": "console",
-          "extension": 40,
-          "drawerExtension": 35,
-          "labelRoom": 58,
-          "height": 172,
-          "noCeiling": true,
-          "wallAt": -5,
-          "stateNames": {
-            "closed": "收合",
-            "open": "拉出右抽"
-          },
-          "under": [
-            {
-              "type": "lining",
-              "x": -5,
-              "y": 0,
-              "w": 5,
-              "h": 172
-            }
-          ],
-          "extras": [
-            {
-              "type": "toe-light",
-              "section": true,
-              "x": 35,
-              "y": 8,
-              "p": 1.8,
-              "front": 45,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "reach": 77
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  -2.6,
-                  16
-                ],
-                [
-                  -2.6,
-                  104
-                ],
-                [
-                  0,
-                  108
-                ]
-              ]
-            },
-            {
-              "type": "rect",
-              "id": "bracket",
-              "x": 0,
-              "y": 100,
-              "w": 1.5,
-              "h": 20,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "tv",
-              "side": true,
-              "x": 1.5,
-              "y": 62.1,
-              "w": 7.3,
-              "h": 95.8
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 132,
-              "label": "Xiaomi 75（厚 7.3＋壁架 1.5）",
-              "anchor": "start",
-              "size": 0.66
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 100,
-              "label": "Ø50 暗管在木作底板內",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 94,
-              "label": "上到電視背後嵌入盒",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": -2.5,
-              "y": 175,
-              "label": "木作 5",
-              "anchor": "middle",
-              "size": 0.55
-            },
-            {
-              "type": "cavity",
-              "x": 0.4,
-              "y": 38,
-              "w": 3,
-              "h": 2
-            },
-            {
-              "type": "device",
-              "x": 0.2,
-              "y": 26,
-              "w": 3.2,
-              "h": 4.3,
-              "tvlight": true
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  1.8,
-                  26
-                ],
-                [
-                  1.8,
-                  6.6
-                ],
-                [
-                  34.6,
-                  6.6
-                ]
-              ],
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 1.8,
-              "y": 28.2,
-              "lx": 50,
-              "ly": 37.5,
-              "label": "24V 驅動器",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 50,
-              "ly": 1,
-              "label": "45° 鋁槽燈",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 86,
-              "ly": 3,
-              "label": "底燈不動",
-              "when": "open",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "toe-detail",
-              "x": 62,
-              "y": 63.5,
-              "k": 2.5,
-              "x0": 28,
-              "x1": 56,
-              "y0": -4,
-              "y1": 12.5,
-              "front": 45,
-              "recess": 10,
-              "under": 8,
-              "p": 1.8,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "eye": [
-                110,
-                227
-              ],
-              "plinthFill": "#c5cac1",
-              "labels": {
-                "title": "底燈大樣",
-                "led": "45° 鋁槽",
-                "recess": "內退 10",
-                "eye": "坐姿視線 110",
-                "angle": "45°"
-              },
-              "tvlight": true
-            },
-            {
-              "type": "device",
-              "x": 6,
-              "y": 40,
-              "w": 4.9,
-              "h": 11.2,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "device",
-              "x": 7.75,
-              "y": 42.9,
-              "w": 1.4,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  6,
-                  41
-                ],
-                [
-                  1.9,
-                  41
-                ],
-                [
-                  1.9,
-                  34
-                ]
-              ]
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 14,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  8.45,
-                  55
-                ],
-                [
-                  8.45,
-                  59.5
-                ]
-              ],
-              "warm": true
-            },
-            {
-              "type": "callout",
-              "x": 10.9,
-              "y": 48,
-              "lx": 50,
-              "ly": 52,
-              "label": "Switch 2 底座在櫃面右端，拿起就走",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 3,
-              "y": 41,
-              "lx": 50,
-              "ly": 44,
-              "label": "線從頂板後緣通風縫下到後腔",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 30,
-              "y": 20,
-              "lx": 50,
-              "ly": 30.5,
-              "label": "右抽：手把、遊戲片",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 70,
-              "y": 20,
-              "lx": 86,
-              "ly": 21,
-              "label": "右抽全拉 35",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 45,
-              "x1": 80,
-              "y": 47,
-              "label": "全拉 35",
-              "when": "open"
-            }
-          ],
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            }
-          ]
-        }
-      ],
-      "spec": [
-        {
-          "zone": "天花 · 洗牆燈",
-          "h": "底 270",
-          "note": "局部假天花 30 寬、降 10，內嵌 3000K 可調光線性洗牆燈。"
-        },
-        {
-          "zone": "電視牆面",
-          "h": "387.5 · 到天花",
-          "note": "不打鑿：外加木作底板（厚 5）＋wabi-sabi 淡灰壁紙。"
-        },
-        {
-          "zone": "電視",
-          "h": "中心 110 · 下緣 62.1",
-          "note": "Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、25.6 kg、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），前緣離牆約 8.8"
-        },
-        {
-          "zone": "暗管",
-          "h": "Ø50",
-          "note": "藏木作層內，出口在右立柱（距櫃左端 145，仍在電視背後），直上電視背後嵌入盒（含 13A 插座）"
-        },
-        {
-          "zone": "HDMI",
-          "h": "3 × HDMI 2.1",
-          "note": "1 → PS5 Pro（4K120／VRR）· 2 eARC → KEF LS50 Wireless II · 3 → Switch 2"
-        },
-        {
-          "zone": "電視櫃",
-          "h": "210 × 45 × 40",
-          "note": "60｜10｜70｜10｜60：左抽網通 · 左立柱 · 中格翻轉門 · 右立柱 · 右抽收納；前緣距結構牆 50"
-        },
-        {
-          "zone": "立柱 ×2",
-          "h": "10 寬 · 41 深",
-          "note": "固定直條格柵面（可拆）。右柱：PS5 電源／HDMI、Ø50 管出口；左柱：網通與 KEF 線。中格內、中格後腔都不走線"
-        },
-        {
-          "zone": "中格門",
-          "h": "66 × 27 · 內嵌",
-          "note": "Accuride CB1155 Easy-Down 翻轉推入滑軌 16 吋（40.6，行程 29.6）鎖頂板下；門翻平推進櫃內，停在 PS5 上方；同款直條格柵、下緣指槽"
-        },
-        {
-          "zone": "中格 · PS5 Pro",
-          "h": "66.4 × 28.2",
-          "note": "PS5 Pro 橫放置中：左右 13.8、後 11；門收起時上方 13.8（滑軌＋門約 4.5，待確認），都過 Sony 10"
-        },
-        {
-          "zone": "外伸",
-          "h": "收好 0 · 翻轉瞬間 27",
-          "note": "玩時門在櫃內，走道 0 外伸；只有翻上那 2–3 秒外伸 27（離地 10–37）"
-        },
-        {
-          "zone": "通風",
-          "h": "前進後出",
-          "note": "玩時前面全開 66.4 × 23.7 → PS5 背面出風 → 背板 AIRPLATE T7（104 CFM、19 dBA、溫控）→ 後腔 → 頂板後緣通風縫"
-        },
-        {
-          "zone": "關門時機",
-          "h": "只在休眠",
-          "note": "PS5 Pro CFI-7021 休眠 0.3–3.6 W；遊戲 228–240 W 不關門（Sony：不放密閉櫃）"
-        },
-        {
-          "zone": "櫃後空腔",
-          "h": "8.2",
-          "note": "中格後方只走風：上段 4.7 是停門區（滑軌尾端），整格不走線；6 位 13A 延長座、底燈驅動器在右抽後腔"
-        },
-        {
-          "zone": "櫃面 · Switch 2",
-          "h": "頂約 54.5",
-          "note": "底座放右端；頂離電視下緣 7.6；線走頂板後緣通風縫"
-        },
-        {
-          "zone": "左抽 · 網通",
-          "h": "60 · 全拉 35",
-          "note": "UCG Ultra、USW Lite 8 PoE、Hub M3；摺疊線架隨抽屜進出"
-        },
-        {
-          "zone": "右抽 · 收納",
-          "h": "60 · 全拉 35",
-          "note": "手把、遊戲片；不接線"
-        },
-        {
-          "zone": "喇叭 · KEF LS50 Wireless II",
-          "h": "中心距 240 · 頂 96.2",
-          "note": "KEF S2 Floor Stand 高 65.7；離電視櫃 3.7、背距牆 14、前緣齊電視櫃"
-        },
-        {
-          "zone": "重低音 · KEF KC62",
-          "h": "25.6 × 24.8 × 24.6",
-          "note": "右腳架南側，貼牆 10；RCA 接主喇叭 Sub Out"
-        },
-        {
-          "zone": "喇叭電源與連線",
-          "h": "插座 30 · 出線口 10",
-          "note": "S-17／S-18／S-19 各一組 13A 雙孔；木作層 Ø32 暗管串兩支腳架與櫃後空腔"
-        },
-        {
-          "zone": "踢腳 · 底燈",
-          "h": "8 高 · 內退 10",
-          "note": "45° 鋁槽、乳白罩，兩端側板落地遮光；亮面地磚用 COB 無光點燈條"
-        },
-        {
-          "zone": "底燈電源",
-          "h": "24 V · 約 16.5 W",
-          "note": "驅動器在右抽後腔，拆右抽可換；牆面獨立開關。"
-        }
-      ],
-      "hardware": [
-        "Accuride CB1155 Easy-Down 翻轉門滑軌 16 吋一組（≤ 14 kg、門寬 ≤ 121.9）；頂板依安裝圖開槽。",
-        "AC Infinity AIRPLATE T7（2 風扇、104 CFM、19 dBA、溫控 6 段，開孔 25.7 × 13.6）裝中格背板後側，插後腔延長座。",
-        "磁吸童鎖：門關時與門收進櫃內時各一個（型號待確認）。",
-        "Blum LEGRABOX 全拉緩衝 NL 350（左、右抽）。",
-        "SIRIM 6 位 13A 延長座固定在右抽後腔牆面（右立柱當線槽）；後腔雙位插座離地 17。",
-        "底燈：45° 鋁槽 206＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。",
-        "左抽裝摺疊線架：網通設備電源＋網路線隨抽屜進出。"
-      ],
-      "rationale": [
-        "平時五片同款格柵、看不到主機",
-        "中格置中對電視中線，兩根立柱把線和停門區分開",
-        "玩時門收進櫃內，走道 0 外伸"
-      ],
-      "open_questions": [
-        "光纖終端位置",
-        "天花淨高、能否做局部假天花",
-        "壁紙型號與木作底板厚度"
-      ],
-      "risks": [
-        "翻門那 2–3 秒外伸 27；言言在旁時先等他走開",
-        "Switch 2 在櫃面，頂離電視下緣 7.6"
-      ]
-    },
-    "tv-console@console-b": {
-      "object_id": "tv-console",
-      "title": "電視牆 · B 中格橫推門",
-      "status": "design-proposal",
-      "viewpoint": "左為陽台門，右通玄關",
-      "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計（brochure 275）；洗牆燈假天花底 270",
-      "states": [
-        {
-          "id": "closed",
-          "name": "平時"
-        },
-        {
-          "id": "open",
-          "name": "玩遊戲"
-        }
-      ],
-      "units": {
-        "console": {
-          "w": 210,
-          "d": 45,
-          "h": 40,
-          "board": 1.8,
-          "noBack": true,
-          "bands": [
-            {
-              "kind": "plinth",
-              "h": 8,
-              "label": "踢腳",
-              "recess": 10,
-              "inset": 1.8,
-              "fill": "#c5cac1"
-            },
-            {
-              "kind": "drawers",
-              "h": 30,
-              "label": "抽屜 ×3",
-              "short": "中間抽屜",
-              "boxFrom": 8.2,
-              "boxTo": 40.7,
-              "boxLift": 2.8,
-              "boxH": 17.7,
-              "noLabel": true
-            },
-            {
-              "kind": "board",
-              "h": 2
-            }
-          ],
-          "fronts": [
-            {
-              "kind": "drawer",
-              "from": 8,
-              "to": 38,
-              "leaves": [
-                {
-                  "x": 0.4,
-                  "w": 69.4667
-                },
-                {
-                  "x": 140.1334,
-                  "w": 69.4667
-                }
-              ],
-              "notch": {
-                "w": 14,
-                "h": 3.5
-              },
-              "openLeaves": []
-            }
-          ]
-        },
-        "console-a-mid": {
-          "w": 70,
-          "d": 45,
-          "h": 40,
-          "board": 1.8,
-          "noBack": true,
-          "bands": [
-            {
-              "kind": "plinth",
-              "h": 8,
-              "label": "踢腳",
-              "recess": 10,
-              "inset": 1.8,
-              "fill": "#c5cac1"
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "open",
-              "h": 28.2,
-              "label": ""
-            },
-            {
-              "kind": "board",
-              "h": 2
-            }
-          ]
-        }
-      },
-      "views": [
-        {
-          "id": "wall",
-          "name": "空間規劃",
-          "kind": "front",
-          "detail": false,
-          "width": 387.5,
-          "font": 8,
-          "units": [
-            {
-              "ref": "console",
-              "x": 50
-            }
-          ],
-          "under": [
-            {
-              "type": "wallpaper",
-              "x": 0,
-              "y": 0,
-              "w": 387.5,
-              "h": 270,
-              "gaps": true,
-              "label": "木作底板＋wabi-sabi 淡灰壁紙",
-              "lx": 311,
-              "ly": 228,
-              "anchor": "middle",
-              "size": 0.62
-            },
-            {
-              "type": "wash",
-              "x": 0.8,
-              "y": 180,
-              "w": 385.9,
-              "h": 90,
-              "opacity": 0.42
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  163,
-                  28
-                ],
-                [
-                  163,
-                  98
-                ]
-              ],
-              "label": "Ø50 暗管",
-              "lx": 166,
-              "ly": 49,
-              "size": 0.55
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  35,
-                  10
-                ],
-                [
-                  35,
-                  15
-                ],
-                [
-                  275,
-                  15
-                ],
-                [
-                  275,
-                  10
-                ]
-              ]
-            }
-          ],
-          "extras": [
-            {
-              "type": "soffit",
-              "x": 0,
-              "y": 270,
-              "w": 387.5,
-              "h": 10,
-              "slot": [
-                0,
-                387.5
-              ],
-              "label": "局部假天花 · 線性洗牆燈 3000K",
-              "size": 0.6
-            },
-            {
-              "type": "tv",
-              "x": 71.65,
-              "y": 62.1,
-              "w": 166.7,
-              "h": 95.8,
-              "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定）",
-              "sub": "166.7 × 95.8 × 7.3",
-              "size": 0.78
-            },
-            {
-              "type": "toe-light",
-              "x": 51.8,
-              "w": 206.4,
-              "y": 8,
-              "p": 1.8
-            },
-            {
-              "type": "note",
-              "x": 155,
-              "y": 2.2,
-              "label": "底燈 3000K",
-              "anchor": "middle",
-              "size": 0.55,
-              "tvlight": true
-            },
-            {
-              "type": "clear",
-              "x0": 71.65,
-              "x1": 238.35,
-              "y": 162.9,
-              "label": "TV 166.7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 40,
-              "y1": 62.1,
-              "label": "22.1"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 330,
-              "y0": 0,
-              "y1": 40,
-              "label": "40"
-            },
-            {
-              "type": "note",
-              "x": 3,
-              "y": 140,
-              "label": "← 陽台玻璃門",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 384.5,
-              "y": 140,
-              "label": "玄關過道 →",
-              "anchor": "end",
-              "size": 0.62
-            },
-            {
-              "type": "socket",
-              "x": 27.7,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 31,
-              "y": 8.5,
-              "w": 8,
-              "h": 3,
-              "fill": "#55605a",
-              "stroke": "#2f443c",
-              "sw": 0.2
-            },
-            {
-              "type": "rect",
-              "x": 23.7,
-              "y": 0,
-              "w": 22.6,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.4
-            },
-            {
-              "type": "rect",
-              "x": 32.5,
-              "y": 1.2,
-              "w": 5,
-              "h": 63.3,
-              "fill": "#8a948e",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 25,
-              "y": 64.5,
-              "w": 20,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.3
-            },
-            {
-              "type": "rect",
-              "x": 25,
-              "y": 65.7,
-              "w": 20,
-              "h": 30.5,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.2
-            },
-            {
-              "type": "rect",
-              "x": 28.5,
-              "y": 74.5,
-              "w": 13,
-              "h": 13,
-              "fill": "#d9d6cc",
-              "stroke": "#55695f",
-              "sw": 0.25,
-              "rx": 6.5
-            },
-            {
-              "type": "rect",
-              "x": 33.4,
-              "y": 79.4,
-              "w": 3.2,
-              "h": 3.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 1.6
-            },
-            {
-              "type": "note",
-              "x": 35,
-              "y": 99,
-              "label": "LS50 Wireless II",
-              "size": 0.5,
-              "color": "#2f443c"
-            },
-            {
-              "type": "note",
-              "x": 35,
-              "y": 104,
-              "label": "左 · 副",
-              "size": 0.5,
-              "color": "#7f8c84"
-            },
-            {
-              "type": "socket",
-              "x": 267.7,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 271,
-              "y": 8.5,
-              "w": 8,
-              "h": 3,
-              "fill": "#55605a",
-              "stroke": "#2f443c",
-              "sw": 0.2
-            },
-            {
-              "type": "rect",
-              "x": 263.7,
-              "y": 0,
-              "w": 22.6,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.4
-            },
-            {
-              "type": "rect",
-              "x": 272.5,
-              "y": 1.2,
-              "w": 5,
-              "h": 63.3,
-              "fill": "#8a948e",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 265,
-              "y": 64.5,
-              "w": 20,
-              "h": 1.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.3
-            },
-            {
-              "type": "rect",
-              "x": 265,
-              "y": 65.7,
-              "w": 20,
-              "h": 30.5,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.2
-            },
-            {
-              "type": "rect",
-              "x": 268.5,
-              "y": 74.5,
-              "w": 13,
-              "h": 13,
-              "fill": "#d9d6cc",
-              "stroke": "#55695f",
-              "sw": 0.25,
-              "rx": 6.5
-            },
-            {
-              "type": "rect",
-              "x": 273.4,
-              "y": 79.4,
-              "w": 3.2,
-              "h": 3.2,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 1.6
-            },
-            {
-              "type": "note",
-              "x": 275,
-              "y": 99,
-              "label": "LS50 Wireless II",
-              "size": 0.5,
-              "color": "#2f443c"
-            },
-            {
-              "type": "note",
-              "x": 275,
-              "y": 104,
-              "label": "右 · 主",
-              "size": 0.5,
-              "color": "#7f8c84"
-            },
-            {
-              "type": "socket",
-              "x": 300.5,
-              "y": 25.7,
-              "w": 14.6,
-              "h": 8.6,
-              "n": 2
-            },
-            {
-              "type": "rect",
-              "x": 295,
-              "y": 0,
-              "w": 25.6,
-              "h": 24.6,
-              "fill": "#f4f3ee",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "rx": 1.5,
-              "label": "KC62",
-              "color": "#2f443c",
-              "size": 0.55
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 9,
-              "y0": 0,
-              "y1": 65.7,
-              "label": "65.7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 9,
-              "y0": 65.7,
-              "y1": 96.2,
-              "label": "30.5"
-            },
-            {
-              "type": "vent",
-              "x": 55.13,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "vent",
-              "x": 194.87,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "device",
-              "x": 227.8,
-              "y": 42.9,
-              "w": 27.2,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "device",
-              "x": 231.35,
-              "y": 40,
-              "w": 20.1,
-              "h": 11.5,
-              "label": "Switch 2",
-              "size": 0.45,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 228,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "cavity",
-              "x": 121.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#ddd6c8",
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 140.15,
-              "y": 12,
-              "w": 29.7,
-              "h": 15.5,
-              "dashed": true,
-              "when": "open",
-              "label": "AIRPLATE T7（背板後）",
-              "size": 0.42,
-              "ly": 23.2
-            },
-            {
-              "type": "device",
-              "x": 135.6,
-              "y": 10.8,
-              "w": 38.8,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 120.27,
-              "y": 8.2,
-              "w": 69.47,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "closed"
-            },
-            {
-              "type": "vent",
-              "x": 125.0,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 186.87,
-              "y": 16,
-              "w": 0.9,
-              "h": 12,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.45,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 50.4,
-              "y": 8.2,
-              "w": 69.47,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "open"
-            },
-            {
-              "type": "vent",
-              "x": 55.13,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 117.0,
-              "y": 16,
-              "w": 0.9,
-              "h": 12,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.45,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 108,
-              "y": 47,
-              "label": "中格橫推門：玩時推到左抽前",
-              "anchor": "middle",
-              "size": 0.58
-            }
-          ],
-          "hcuts": [
-            0,
-            35,
-            50,
-            120,
-            190,
-            260,
-            275,
-            387.5
-          ],
-          "totalLabel": "387.5（原標）",
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 81,
-              "label": "Uni-Q 中心 · 示意"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            },
-            {
-              "y": 157.9,
-              "label": "TV 上緣"
-            },
-            {
-              "y": 270,
-              "label": "假天花底"
-            }
-          ]
-        },
-        {
-          "id": "console",
-          "name": "電視櫃正立面",
-          "kind": "front",
-          "detail": false,
-          "labels": true,
-          "font": 5.6,
-          "height": 72,
-          "noCeiling": true,
-          "width": 210,
-          "chain": 0,
-          "marginR": 7.5,
-          "units": [
-            {
-              "ref": "console",
-              "x": 0
-            }
-          ],
-          "under": [
-            {
-              "type": "wallpaper",
-              "x": -2,
-              "y": 0,
-              "w": 214,
-              "h": 72
-            }
-          ],
-          "extras": [
-            {
-              "type": "tv",
-              "cut": true,
-              "x": 21.65,
-              "y": 62.1,
-              "w": 166.7,
-              "h": 9.9,
-              "label": "Xiaomi TV S Pro Mini LED 75 2026（暫定 · 下緣 62.1）",
-              "ly": 65.4,
-              "size": 0.7
-            },
-            {
-              "type": "toe-light",
-              "x": 1.8,
-              "w": 206.4,
-              "y": 8,
-              "p": 1.8
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 232,
-              "y0": 40,
-              "y1": 62.1,
-              "label": "22.1"
-            },
-            {
-              "type": "note",
-              "x": 105.0,
-              "y": 2.2,
-              "label": "內退 10 · 3000K",
-              "size": 0.58,
-              "color": "#7a5a35",
-              "tvlight": true
-            },
-            {
-              "type": "vent",
-              "x": 5.13,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "vent",
-              "x": 144.87,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8
-            },
-            {
-              "type": "device",
-              "x": 177.8,
-              "y": 42.9,
-              "w": 27.2,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "device",
-              "x": 181.35,
-              "y": 40,
-              "w": 20.1,
-              "h": 11.5,
-              "label": "Switch 2",
-              "size": 0.45,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 178,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "cavity",
-              "x": 71.8,
-              "y": 9.8,
-              "w": 66.4,
-              "h": 28.2,
-              "fill": "#ddd6c8",
-              "when": "open"
-            },
-            {
-              "type": "device",
-              "x": 90.15,
-              "y": 12,
-              "w": 29.7,
-              "h": 15.5,
-              "dashed": true,
-              "when": "open",
-              "label": "AIRPLATE T7（背板後）",
-              "size": 0.42,
-              "ly": 23.2
-            },
-            {
-              "type": "device",
-              "x": 85.6,
-              "y": 10.8,
-              "w": 38.8,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 71.8,
-              "x1": 85.6,
-              "y": 15.2,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 124.4,
-              "x1": 138.2,
-              "y": 15.2,
-              "label": "13.8",
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 128,
-              "y0": 19.7,
-              "y1": 38,
-              "label": "18.3",
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 70.27,
-              "y": 8.2,
-              "w": 69.47,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "closed"
-            },
-            {
-              "type": "vent",
-              "x": 75.0,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 136.87,
-              "y": 16,
-              "w": 0.9,
-              "h": 12,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.45,
-              "when": "closed"
-            },
-            {
-              "type": "rect",
-              "x": 0.4,
-              "y": 8.2,
-              "w": 69.47,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "open"
-            },
-            {
-              "type": "vent",
-              "x": 5.130000000000001,
-              "y": 10.5,
-              "w": 60,
-              "h": 22,
-              "pitch": 1.6,
-              "slot": 0.8,
-              "when": "open"
-            },
-            {
-              "type": "rect",
-              "x": 67.0,
-              "y": 16,
-              "w": 0.9,
-              "h": 12,
-              "fill": "#9aa29c",
-              "stroke": "none",
-              "rx": 0.45,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 92,
-              "y": 50,
-              "label": "平時：橫推門蓋中格，左右抽內退 2.5",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 92,
-              "y": 50,
-              "label": "玩：門推到左抽前，左抽這時打不開",
-              "size": 0.62,
-              "when": "open"
-            }
-          ],
-          "hcuts": [
-            0,
-            70,
-            140,
-            210
-          ],
-          "totalLabel": "210",
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            }
-          ]
-        },
-        {
-          "id": "section",
-          "name": "側剖面 · 中格橫推門",
-          "kind": "section",
-          "ref": "console-a-mid",
-          "extension": 40,
-          "drawerExtension": 35,
-          "labelRoom": 58,
-          "height": 172,
-          "noCeiling": true,
-          "wallAt": -5,
-          "under": [
-            {
-              "type": "lining",
-              "x": -5,
-              "y": 0,
-              "w": 5,
-              "h": 172
-            }
-          ],
-          "extras": [
-            {
-              "type": "toe-light",
-              "section": true,
-              "x": 35,
-              "y": 8,
-              "p": 1.8,
-              "front": 45,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "reach": 77
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  -2.6,
-                  16
-                ],
-                [
-                  -2.6,
-                  104
-                ],
-                [
-                  0,
-                  108
-                ]
-              ]
-            },
-            {
-              "type": "rect",
-              "id": "bracket",
-              "x": 0,
-              "y": 100,
-              "w": 1.5,
-              "h": 20,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "tv",
-              "side": true,
-              "x": 1.5,
-              "y": 62.1,
-              "w": 7.3,
-              "h": 95.8
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 132,
-              "label": "Xiaomi 75（厚 7.3＋壁架 1.5）",
-              "anchor": "start",
-              "size": 0.66
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 100,
-              "label": "Ø50 暗管在木作底板內",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 94,
-              "label": "上到電視背後嵌入盒",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": -2.5,
-              "y": 175,
-              "label": "木作 5",
-              "anchor": "middle",
-              "size": 0.55
-            },
-            {
-              "type": "cavity",
-              "x": 0.4,
-              "y": 38,
-              "w": 3,
-              "h": 2
-            },
-            {
-              "type": "device",
-              "x": 0.2,
-              "y": 26,
-              "w": 3.2,
-              "h": 4.3,
-              "tvlight": true
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  1.8,
-                  26
-                ],
-                [
-                  1.8,
-                  6.6
-                ],
-                [
-                  34.6,
-                  6.6
-                ]
-              ],
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 1.8,
-              "y": 28.2,
-              "lx": 12,
-              "ly": 49,
-              "label": "24V 驅動器",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 50,
-              "ly": 1,
-              "label": "45° 鋁槽燈",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "toe-detail",
-              "x": 62,
-              "y": 63.5,
-              "k": 2.5,
-              "x0": 28,
-              "x1": 56,
-              "y0": -4,
-              "y1": 12.5,
-              "front": 45,
-              "recess": 10,
-              "under": 8,
-              "p": 1.8,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "eye": [
-                110,
-                227
-              ],
-              "plinthFill": "#c5cac1",
-              "labels": {
-                "title": "底燈大樣",
-                "led": "45° 鋁槽",
-                "recess": "內退 10",
-                "eye": "坐姿視線 110",
-                "angle": "45°"
-              },
-              "tvlight": true
-            },
-            {
-              "type": "rect",
-              "x": 8.2,
-              "y": 9.8,
-              "w": 1.2,
-              "h": 28.2,
-              "fill": "#d3c4aa",
-              "stroke": "#b9a98d",
-              "sw": 0.2
-            },
-            {
-              "type": "device",
-              "x": 4.9,
-              "y": 12,
-              "w": 3.3,
-              "h": 15.5,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "device",
-              "x": 20.4,
-              "y": 10.8,
-              "w": 21.6,
-              "h": 8.9,
-              "label": "PS5 Pro",
-              "size": 0.5,
-              "fill": "#f4f3ee"
-            },
-            {
-              "type": "clear",
-              "x0": 9.4,
-              "x1": 20.4,
-              "y": 24.5,
-              "label": "11"
-            },
-            {
-              "type": "rect",
-              "x": 43.2,
-              "y": 37.2,
-              "w": 1.8,
-              "h": 0.8,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "rect",
-              "x": 43.2,
-              "y": 8.2,
-              "w": 1.8,
-              "h": 29.6,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "when": "closed"
-            },
-            {
-              "type": "device",
-              "x": 43.2,
-              "y": 8.2,
-              "w": 1.8,
-              "h": 29.6,
-              "dashed": true,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 31,
-              "y0": 19.7,
-              "y1": 38,
-              "label": "18.3",
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  64,
-                  15.5
-                ],
-                [
-                  52,
-                  15.5
-                ],
-                [
-                  42.6,
-                  15.5
-                ]
-              ],
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  64,
-                  27
-                ],
-                [
-                  50,
-                  27
-                ],
-                [
-                  40,
-                  24
-                ],
-                [
-                  33,
-                  20.6
-                ]
-              ],
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  20,
-                  15
-                ],
-                [
-                  13,
-                  15
-                ],
-                [
-                  9.6,
-                  17.5
-                ],
-                [
-                  6.6,
-                  20
-                ],
-                [
-                  3.6,
-                  26
-                ],
-                [
-                  2,
-                  33
-                ],
-                [
-                  2,
-                  42.6
-                ]
-              ],
-              "warm": true,
-              "when": "open"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  20,
-                  15
-                ],
-                [
-                  13,
-                  15
-                ],
-                [
-                  9.6,
-                  17.5
-                ],
-                [
-                  6.6,
-                  20
-                ],
-                [
-                  3.6,
-                  26
-                ],
-                [
-                  2,
-                  33
-                ],
-                [
-                  2,
-                  42.6
-                ]
-              ],
-              "warm": true,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 44.1,
-              "y": 37.6,
-              "lx": 76,
-              "ly": 36,
-              "label": "Hettich SlideLine M 上軌（頂板下）",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 44.1,
-              "y": 24,
-              "lx": 76,
-              "ly": 31.5,
-              "label": "平時：橫推門關（休眠）",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 44.1,
-              "y": 24,
-              "lx": 76,
-              "ly": 31.5,
-              "label": "玩：門推到左抽前，0 外伸",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "callout",
-              "x": 60,
-              "y": 27,
-              "lx": 76,
-              "ly": 27,
-              "label": "前面全開進風",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "callout",
-              "x": 6.6,
-              "y": 22,
-              "lx": 76,
-              "ly": 22.5,
-              "label": "背板後 AIRPLATE T7 溫控抽到後腔",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 40,
-              "y": 11.5,
-              "lx": 76,
-              "ly": 18,
-              "label": "PS5 Pro 橫放，後留 11",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 2,
-              "y": 39.5,
-              "lx": 12,
-              "ly": 54,
-              "label": "後腔 8.2 → 頂板後緣通風縫",
-              "size": 0.62
-            }
-          ],
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            }
-          ]
-        },
-        {
-          "id": "section-switch",
-          "name": "側剖面 · 右端 Switch 2",
-          "kind": "section",
-          "ref": "console",
-          "extension": 40,
-          "drawerExtension": 35,
-          "labelRoom": 58,
-          "height": 172,
-          "noCeiling": true,
-          "wallAt": -5,
-          "stateNames": {
-            "closed": "收合",
-            "open": "拉出右抽"
-          },
-          "under": [
-            {
-              "type": "lining",
-              "x": -5,
-              "y": 0,
-              "w": 5,
-              "h": 172
-            }
-          ],
-          "extras": [
-            {
-              "type": "toe-light",
-              "section": true,
-              "x": 35,
-              "y": 8,
-              "p": 1.8,
-              "front": 45,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "reach": 77
-            },
-            {
-              "type": "conduit",
-              "pts": [
-                [
-                  -2.6,
-                  16
-                ],
-                [
-                  -2.6,
-                  104
-                ],
-                [
-                  0,
-                  108
-                ]
-              ]
-            },
-            {
-              "type": "rect",
-              "id": "bracket",
-              "x": 0,
-              "y": 100,
-              "w": 1.5,
-              "h": 20,
-              "fill": "#55605a",
-              "stroke": "none"
-            },
-            {
-              "type": "tv",
-              "side": true,
-              "x": 1.5,
-              "y": 62.1,
-              "w": 7.3,
-              "h": 95.8
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 132,
-              "label": "Xiaomi 75（厚 7.3＋壁架 1.5）",
-              "anchor": "start",
-              "size": 0.66
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 100,
-              "label": "Ø50 暗管在木作底板內",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": 12,
-              "y": 94,
-              "label": "上到電視背後嵌入盒",
-              "anchor": "start",
-              "size": 0.62
-            },
-            {
-              "type": "note",
-              "x": -2.5,
-              "y": 175,
-              "label": "木作 5",
-              "anchor": "middle",
-              "size": 0.55
-            },
-            {
-              "type": "cavity",
-              "x": 0.4,
-              "y": 38,
-              "w": 3,
-              "h": 2
-            },
-            {
-              "type": "device",
-              "x": 0.2,
-              "y": 26,
-              "w": 3.2,
-              "h": 4.3,
-              "tvlight": true
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  1.8,
-                  26
-                ],
-                [
-                  1.8,
-                  6.6
-                ],
-                [
-                  34.6,
-                  6.6
-                ]
-              ],
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 1.8,
-              "y": 28.2,
-              "lx": 50,
-              "ly": 37.5,
-              "label": "24V 驅動器",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 50,
-              "ly": 1,
-              "label": "45° 鋁槽燈",
-              "when": "closed",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "callout",
-              "x": 35.9,
-              "y": 7.1,
-              "lx": 86,
-              "ly": 3,
-              "label": "底燈不動",
-              "when": "open",
-              "size": 0.62,
-              "tvlight": true
-            },
-            {
-              "type": "toe-detail",
-              "x": 62,
-              "y": 63.5,
-              "k": 2.5,
-              "x0": 28,
-              "x1": 56,
-              "y0": -4,
-              "y1": 12.5,
-              "front": 45,
-              "recess": 10,
-              "under": 8,
-              "p": 1.8,
-              "board": 1.8,
-              "a1": 10,
-              "a2": 80,
-              "eye": [
-                110,
-                227
-              ],
-              "plinthFill": "#c5cac1",
-              "labels": {
-                "title": "底燈大樣",
-                "led": "45° 鋁槽",
-                "recess": "內退 10",
-                "eye": "坐姿視線 110",
-                "angle": "45°"
-              },
-              "tvlight": true
-            },
-            {
-              "type": "device",
-              "x": 6,
-              "y": 40,
-              "w": 4.9,
-              "h": 11.2,
-              "fill": "#e9ebe7"
-            },
-            {
-              "type": "device",
-              "x": 7.75,
-              "y": 42.9,
-              "w": 1.4,
-              "h": 11.6,
-              "fill": "#3d4743"
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  6,
-                  41
-                ],
-                [
-                  1.9,
-                  41
-                ],
-                [
-                  1.9,
-                  34
-                ]
-              ]
-            },
-            {
-              "type": "clear",
-              "vertical": true,
-              "x": 14,
-              "y0": 54.5,
-              "y1": 62.1,
-              "label": "7.6"
-            },
-            {
-              "type": "airflow",
-              "pts": [
-                [
-                  8.45,
-                  55
-                ],
-                [
-                  8.45,
-                  59.5
-                ]
-              ],
-              "warm": true
-            },
-            {
-              "type": "callout",
-              "x": 10.9,
-              "y": 48,
-              "lx": 50,
-              "ly": 52,
-              "label": "Switch 2 底座在櫃面右端，拿起就走",
-              "size": 0.62
-            },
-            {
-              "type": "callout",
-              "x": 3,
-              "y": 41,
-              "lx": 50,
-              "ly": 44,
-              "label": "線從頂板後緣通風縫下到後腔",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 30,
-              "y": 20,
-              "lx": 50,
-              "ly": 30.5,
-              "label": "右抽：手把、遊戲片",
-              "size": 0.62,
-              "when": "closed"
-            },
-            {
-              "type": "callout",
-              "x": 70,
-              "y": 20,
-              "lx": 86,
-              "ly": 21,
-              "label": "右抽全拉 35",
-              "size": 0.62,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 45,
-              "x1": 80,
-              "y": 47,
-              "label": "全拉 35",
-              "when": "open"
-            }
-          ],
-          "levels": [
-            {
-              "y": 40,
-              "label": "櫃面"
-            },
-            {
-              "y": 62.1,
-              "label": "TV 下緣"
-            },
-            {
-              "y": 110,
-              "label": "TV 中心"
-            }
-          ]
-        }
-      ],
-      "spec": [
-        {
-          "zone": "天花 · 洗牆燈",
-          "h": "底 270",
-          "note": "局部假天花 30 寬、降 10，內嵌 3000K 可調光線性洗牆燈。"
-        },
-        {
-          "zone": "電視牆面",
-          "h": "387.5 · 到天花",
-          "note": "不打鑿：外加木作底板（厚 5）＋wabi-sabi 淡灰壁紙。"
-        },
-        {
-          "zone": "電視",
-          "h": "中心 110 · 下緣 62.1",
-          "note": "Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、25.6 kg、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），前緣離牆約 8.8"
-        },
-        {
-          "zone": "暗管",
-          "h": "Ø50",
-          "note": "藏木作層內，從櫃後空腔直上電視背後嵌入盒（含 13A 插座）；所有線接電視背面"
-        },
-        {
-          "zone": "HDMI",
-          "h": "3 × HDMI 2.1",
-          "note": "1 → PS5 Pro（4K120／VRR）· 2 eARC → KEF LS50 Wireless II · 3 → Switch 2"
-        },
-        {
-          "zone": "電視櫃",
-          "h": "210 × 45 × 40",
-          "note": "左抽網通 · 中格橫推門 · 右抽收納，各 70；前緣距結構牆 50"
-        },
-        {
-          "zone": "中格門",
-          "h": "69.5 × 29.6 · 橫推",
-          "note": "Hettich SlideLine M 單軌、Silent System 軟關；玩時推到左抽前；同款直條格柵、右緣指槽"
-        },
-        {
-          "zone": "左右抽",
-          "h": "前板內退 2.5",
-          "note": "讓橫推門從前面通過；抽屜改 LEGRABOX NL 300"
-        },
-        {
-          "zone": "中格 · PS5 Pro",
-          "h": "66.4 × 28.2",
-          "note": "PS5 Pro 橫放置中：左右 13.8、上 18.3、後 11，都過 Sony 10"
-        },
-        {
-          "zone": "外伸",
-          "h": "0",
-          "note": "門只在櫃面前緣平面左右滑，任何時候都不伸進走道"
-        },
-        {
-          "zone": "通風",
-          "h": "前進後出",
-          "note": "玩時前面全開 66.4 × 28.2 → PS5 背面出風 → 背板 AIRPLATE T7（104 CFM、19 dBA、溫控）→ 後腔 → 頂板後緣通風縫"
-        },
-        {
-          "zone": "關門時機",
-          "h": "只在休眠",
-          "note": "PS5 Pro CFI-7021 休眠 0.3–3.6 W；遊戲 228–240 W 不關門（Sony：不放密閉櫃）"
-        },
-        {
-          "zone": "櫃後空腔",
-          "h": "8.2",
-          "note": "6 位 13A 延長座、底燈驅動器固定在後腔牆面；T7 控制器放後腔"
-        },
-        {
-          "zone": "櫃面 · Switch 2",
-          "h": "頂約 54.5",
-          "note": "底座放右端；頂離電視下緣 7.6；線走頂板後緣通風縫"
-        },
-        {
-          "zone": "左抽 · 網通",
-          "h": "全拉 35",
-          "note": "UCG Ultra、USW Lite 8 PoE、Hub M3；摺疊線架隨抽屜進出"
-        },
-        {
-          "zone": "右抽 · 收納",
-          "h": "全拉 35",
-          "note": "手把、遊戲片；不接線"
-        },
-        {
-          "zone": "喇叭 · KEF LS50 Wireless II",
-          "h": "中心距 240 · 頂 96.2",
-          "note": "KEF S2 Floor Stand 高 65.7；離電視櫃 3.7、背距牆 14、前緣齊電視櫃"
-        },
-        {
-          "zone": "重低音 · KEF KC62",
-          "h": "25.6 × 24.8 × 24.6",
-          "note": "右腳架南側，貼牆 10；RCA 接主喇叭 Sub Out"
-        },
-        {
-          "zone": "喇叭電源與連線",
-          "h": "插座 30 · 出線口 10",
-          "note": "S-17／S-18／S-19 各一組 13A 雙孔；木作層 Ø32 暗管串兩支腳架與櫃後空腔"
-        },
-        {
-          "zone": "踢腳 · 底燈",
-          "h": "8 高 · 內退 10",
-          "note": "45° 鋁槽、乳白罩，兩端側板落地遮光；亮面地磚用 COB 無光點燈條"
-        },
-        {
-          "zone": "底燈電源",
-          "h": "24 V · 約 16.5 W",
-          "note": "驅動器在後腔，拆右抽可換；牆面獨立開關。"
-        }
-      ],
-      "hardware": [
-        "Hettich SlideLine M 單軌橫推（門寬 30–180、≤ 30 kg、Silent System 軟關）；最小門高官方未列，待確認。",
-        "AC Infinity AIRPLATE T7（2 風扇、104 CFM、19 dBA、溫控 6 段，開孔 25.7 × 13.6）裝中格背板後側，插後腔延長座。",
-        "Blum LEGRABOX 全拉緩衝 NL 300（左、右抽，前板內退 2.5）。",
-        "SIRIM 6 位 13A 延長座固定在左格後腔牆面；後腔雙位插座離地 17。",
-        "底燈：45° 鋁槽 206＋COB 24V 3000K CRI≥90 8W/m；LEW 獨立迴路。",
-        "左抽裝摺疊線架：網通設備電源＋網路線隨抽屜進出。"
-      ],
-      "rationale": [
-        "任何時候 0 外伸",
-        "門平移，不翻不掀"
-      ],
-      "open_questions": [
-        "光纖終端位置",
-        "天花淨高、能否做局部假天花",
-        "壁紙型號與木作底板厚度"
-      ],
-      "risks": [
-        "玩時左抽被擋住打不開",
-        "正面變兩層（中門比左右抽凸 2.5）",
-        "SlideLine M 最小門高未公布，29.6 高待確認"
-      ]
     }
   },
   "layouts": [
@@ -22946,12 +19819,12 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 223.213,
-        "place": "電視櫃中間抽屜",
+        "y": 221.087,
+        "place": "電視櫃左中格（Switch 2 後方）",
         "mount": 30,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃中間抽屜，背板開散熱孔\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃左中格後方，插 S-20；Hub M3 由 USW Lite 8 PoE 供電\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
@@ -23447,6 +20320,30 @@
         "notes": "・鏡櫃吹風機門內，13A 附開關，給 Dyson 吹風機\n・浴室迴路須 30 mA RCD；與淋浴區距離由電工依 SS 638 確認\n・離地 140，鏡櫃內",
         "room": "bath2",
         "use": "吹風機"
+      },
+      {
+        "id": "sock-tv-l",
+        "code": "S-20",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 210.82,
+        "place": "電視牆 · 電視櫃線槽下",
+        "mount": 24,
+        "name": "插座 · 電視櫃左中格後",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・UCG Ultra、USW Lite 8 PoE、Switch 2 底座；Hub M3 走 PoE",
+        "use": "電視櫃"
+      },
+      {
+        "id": "sock-tv-r",
+        "code": "S-21",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 224.58,
+        "place": "電視牆 · 電視櫃線槽下",
+        "mount": 24,
+        "name": "插座 · 電視櫃右中格後",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・PS5 Pro、AIRPLATE T7、底燈驅動器",
+        "use": "電視櫃"
       }
     ],
     "runs": [
@@ -24241,9 +21138,9 @@
     {
       "id": "todo-living-av",
       "room": "living",
-      "text": "定遊戲機門：建議 A 翻轉推入門",
+      "text": "電視櫃四格橫推門",
       "research": "console-gaming",
-      "status": "open"
+      "status": "done"
     },
     {
       "id": "todo-living-cabinet",
@@ -24382,6 +21279,12 @@
       "id": "todo-bath1-mirror-doors",
       "room": "bath1",
       "text": "定主浴鏡櫃 3 門或 5 門",
+      "status": "open"
+    },
+    {
+      "id": "todo-living-console-finish",
+      "room": "living",
+      "text": "選電視櫃面材：門、抽屜、頂板同款木紋（色號）",
       "status": "open"
     }
   ],
@@ -24876,9 +21779,9 @@
     },
     "console-gaming": {
       "title": "電視櫃遊戲機收納：PS5 Pro 與 Switch 2",
-      "updated": "2026-11-03",
-      "summary": "選 A 中格翻轉推入門：Accuride CB1155 16 吋，門 66 × 27 翻平推進櫃內、停在 PS5 Pro 上方 13.8，玩時前面全開、走道 0 外伸（翻轉 2–3 秒外伸 27）；背板 AIRPLATE T7 溫控抽到後腔；線全走兩根 10 立柱（60｜10｜70｜10｜60），停門區不走線；門只在休眠（0.3–3.6 W）關。備選 B Hettich SlideLine M 橫推門，玩時推到左抽前。",
-      "body": "## 結論\n- **選：A 中格翻轉推入門。** 中格平時關門，玩時把門下緣拉出、翻到水平、往裡推，門停在頂板下、PS5 Pro 上方，走道 0 外伸；只有翻上那 2–3 秒外伸 27。五金用 Accuride CB1155 Easy-Down（翻轉門專用、液壓緩降，門寬 ≤ 121.9、≤ 14 kg），16 吋滑軌 40.6、行程 29.6，門 66 × 27 推得進去。門面跟左右抽同款直條格柵。\n- **散熱**：玩時門在櫃內、前面全開 66.4 × 23.7；PS5 背面出風 → 中格背板 AC Infinity AIRPLATE T7（104 CFM、19 dBA、溫控）→ 8.2 後腔 → 頂板後緣通風縫，不往電視吹。門只在休眠關（PS5 Pro CFI-7021 休眠 0.3–3.6 W），T7 插牆電、溫控，休眠下載更新也會轉。\n- **線全走兩根立柱，停門區不走線**：16 吋滑軌 40.6 佔滿中格頂下全深（停門區 42.8 × 4.7），線只要在上面就會被門壓（屋主現在的櫃就是這樣）。所以櫃體改 **60｜10｜70｜10｜60**：中格 70 仍對電視中線，兩側各一根 10 寬直條格柵立柱，右柱走 PS5 電源／HDMI 與 Ø50 管出口（改到距櫃左端 145，仍在電視背後），左柱走網通與 KEF 線；6 位延長座與底燈驅動器在右抽後腔。中格內與中格後方整格不走線；左右抽 70 → 60（各 −14%）。\n- **備選：B 中格橫推門**（Hettich SlideLine M，軟關）：玩時門推到左抽前，任何時候 0 外伸；代價是左右抽前板內退 2.5（抽屜改 NL 300）、正面變兩層，玩時左抽打不開，SlideLine M 最小門高官方未列（待確認）。\n\n## 提案總表（篩過，值得看的 6 個）\n| 提案 | 怎麼做 | 好 | 要接受的 |\n|---|---|---|---|\n| **A 翻轉推入門＋兩側走線柱（建議）** | 60｜10｜70｜10｜60，中格門翻平推進櫃內 | 置中、0 外伸、玩時前面全開 | 左右抽 70 → 60 |\n| A2 翻轉推入門＋後方隔板走線井 | 保留 3 × 70；中格門後 33 處做打孔隔板，後面 12 走線 | 正面不變 | 隔板要開滑軌缺口；PS5 後方約 8，略少於 Sony 的 10，靠隔板打孔出風 |\n| B 橫推門 | 中格門橫推到左抽前 | 任何時候 0 外伸 | 左右抽前板退 2.5；玩時左抽打不開 |\n| C 四等分 4 × 52.5 | 一格翻轉門放 PS5，隔壁格走線 | 你提的方向；線跟遊戲格徹底分開 | 遊戲格偏離電視中線 26，打開時看得出 |\n| D 不對稱 2＋1，全長連續格柵 | 遊戲格偏一側，正面一整片直條格柵蓋住所有縫 | 關門時最好看、最整齊 | 打開時偏 26；格柵門面成本高 |\n| E 搬到走道口 190 櫃 | PS5 直立放 190 櫃東端 45 寬格，15 m 認證光纖 HDMI 經天花到電視 | 電視櫃完全不用藏熱源 | 要先定 190 櫃；放光碟要走過去；玩時櫃門要開或打孔＋溫控風扇，4K120 先測再封天花 |\n\n## 我排掉的（不用看）\n- 雙片對開推拉：只開 32，比 PS5 寬 38.8 窄。\n- 270° 摺貼鉸鏈：鉸鏈側夾手，打開擋住兩側抽屜。\n- 下翻門、上掀門：伸進走道，言言會絆或撞。\n- 往上升／捲門／電動：門升到 68 會撞電視下緣 62.1；捲門要櫃高 ≥ 40。\n- 頂板掀蓋：上方只有 22。\n- 加深櫃 50–55：走道少 5–10，櫃子凸出喇叭腳架。\n- 半拉托盤：還是拉抽屜，伸出 25。\n- 電視背後假牆內嵌：要深 35，看電視距離從 186 變 151。\n- 電視牆旁塔櫃、沙發邊櫃：破壞電視牆對稱或地上走線。\n\n## 方案比較\n| 方案 | 開門時外伸 | 玩時散熱 | 判定 |\n|---|---|---|---|\n| A 翻轉推入門 | 收好 0（翻轉瞬間 27） | 前面全開 | 選 |\n| B 橫推門 | 0 | 前面全開 | 備選 |\n| 中格開放 | 0 | 全開 | 不選：屋主嫌醜 |\n| 整個抽屜拉出 | 35 | 全開 | 不選：屋主不要 |\n| 上掀門 AVENTOS HK-XS | 約 28（門停在離地 38–40） | 全開 | 不選：伸進走道 |\n| 頂板掀蓋 | 0 | 前面關 | 不選：上方只有 22 |\n| 下翻門 | 約 28（貼地） | 全開 | 不選：絆腳、言言會爬 |\n| 口袋門 | 0（轉門時 33） | 全開 | 不選：五金最小門高 ≥ 113 |\n| 捲門 RAUVOLET | 0 | 全開 | 不選：櫃高要 ≥ 40（不含踢腳） |\n| 關門＋格柵邊玩 | 0 | 不足 | 不選：Sony 不准密閉櫃 |\n\n## A 垂直怎麼疊\n- 中格內高 28.2（底板面 9.8 → 頂板底 38）。\n- PS5 Pro 橫放 8.9，頂 19.7。\n- 門收起：滑軌＋鉸鏈＋門約 4.5（待確認），門底約 33.5 → **PS5 上方 13.8**，過 Sony 10。\n- 左右 13.8、後 11 不變；玩時前面全開，所以上方不是唯一通風面。\n- 滑軌長 ≈ 門高 + 約 11：28 高的門只能用 16 吋（40.6），所以不能靠縮短滑軌讓出後方走線空間。\n\n## 不選的理由（數字）\n- **中格開放**：屋主嫌醜。\n- **拉出整個抽屜玩**：屋主不要；全拉 35 伸進走道。\n- **上掀門 Blum AVENTOS HK-XS**：櫃高 24–60 可用，但門掀起停在 86°，約 28 的門板橫在走道上方 38–40 高，正好是言言臉的高度。\n- **頂板掀蓋**：櫃面到電視下緣只有 22，45 深的頂板轉不起來。\n- **下翻門**：門板 28 平躺在走道地面高度，絆腳、會被當踏板。\n- **口袋門**：Blum REVEGO 門高 113–298、Hawa Concepta 185–285、Accuride 1332 門高 36–78 吋，都是高櫃用；兩側口袋還吃掉約 6.5 × 2。\n- **捲門 REHAU RAUVOLET**：單櫃設計指南要求櫃外高 ≥ 40（不含踢腳），我們 30。\n- **關門＋格柵邊玩**：Sony 說不要放密閉櫃；228–240 W 要守住 35 °C 進風，實際要 60–80 CFM 穿過門片，風扇標稱值都是無阻力風量。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 休眠 | 0.3–3.6 W | PlayStation ecodesign（CFI-7021） |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| 擺放 | 四周 ≥ 10 cm、不放密閉櫃 | PlayStation Support／EB Games |\n| CB1155 | ≤ 14 kg、門寬 ≤ 121.9、12–24 吋 | Accuride |\n| 16 吋行程 | 29.6 | Accuride 1155 安裝圖（Richelieu） |\n| AIRPLATE T7 | 104 CFM、19 dBA、開孔 25.7 × 13.6 | AC Infinity |\n| SlideLine M | 門寬 30–180、≤ 30 kg | Hettich |\n\n> ⚠️ 收起後滑軌＋門的疊高 4.5 是估值（Accuride 安裝圖要求頂板開槽，未列疊高），PS5 上方 13.8 以此計；若實際更厚，最少也有 PS5 頂到頂板底 18.3 − 疊高。\n\n> ⚠️ 翻門 2–3 秒會外伸 27（離地 10–37），言言在旁時先等他走開；收起位置與關門位置都加磁吸童鎖（型號待確認）。\n\n> ⚠️ 沒有 PS5 Pro 放在這種櫃內的公開實測；判斷依 Sony 說明書條件與換氣計算。",
+      "updated": "2026-11-04",
+      "summary": "屋主定四格：兩端抽屜、中間兩扇 50 寬橫推門（Hettich SlideLine M 雙軌、Silent System、嵌入式指槽），圓角端平面 R 7.5；PS5 Pro 在右格，玩時右門推到左門前、右格前面全開；Switch 2 底座與網通在左格；中間兩格後方 8.2 線槽＋頂板活動蓋 96.8 × 8.6，每格後方牆插 3 位。PS5 左右只有 4（Sony 建議 10），靠前面全開＋背板 AIRPLATE T7 補。",
+      "body": "## 結論\n- **屋主定的配置（照做）**：225 × 45 × 40，分格 圓角端 7.5｜抽屜 56｜門 50｜門 50｜抽屜 56｜圓角端 7.5（縫 0.3）。兩條抽屜／門縫對電視中線對稱；兩門重疊 3.2，中縫在中線左 1.6。\n- **門五金：Hettich SlideLine M 雙軌（overlay、Silent System）。** 官方門高 30–200、門寬 30–180（緩衝版 ≥ 45）、≤ 30 kg、門厚 16–25 mm，50 × 30 × 1.8 的門剛好在範圍內；型材裝在內箱上下板前緣，門跑在內箱前面，所以中間兩格內箱前緣退 5.4。前後門錯開約 2.6（雙軌型材圖未公開，待確認）。\n- **同平面（coplanar）五金不選**：Salice、Häfele F-Flush 等多為高櫃用，查不到 30 高門的官方適用數據。\n- **PS5 Pro 右格**：內寬 46.8、內高 26.4；橫放置中左右 4、上 17.5、後 8.6 到背板。玩時右門（前軌）推到左門前，前面開口 46。左右 4 低於 Sony 的 10 → 前面全開進風＋背板 AIRPLATE T7（溫控）抽到後槽、從線槽蓋靠牆 0.8 縫出；要 10 得門寬 59，改屋主尺寸，不做。\n- **左格**：Switch 2 底座放前面中間（插上主機頂 24.3、上方 11.9），後面 USW Lite 8 PoE＋UCG Ultra 疊放、Aqara Hub M3（PoE）。玩 Switch 2 時左門推到右門後。手把、遊戲片進兩端抽屜（LEGRABOX NL 350）。\n- **線**：中間兩格後方 8.2 線槽，頂板留活動蓋 96.8 × 8.6（同頂板、兩端 Ø2.5 指孔）；每格後方牆面 13A 雙孔＋單孔、中心離地 24；Ø50 電視暗管出口離地 31 進線槽；背板頂角 15 × 3 線口進格。\n- **圓角端**：解讀為前角垂直圓角（平面 R 7.5，像現在的櫃），頂板同半徑；端部內側一片隔板，抽屜不碰弧面。\n\n> ⚠️ 兩扇門一次只能開一格：玩 PS5 時左格（Switch 2）關著，反之亦然。\n\n> ⚠️ 沒有 PS5 Pro 放在這種櫃內的公開實測；判斷依 Sony 說明書條件與換氣路徑。\n\n## 先前方案（屋主已改）\n- 翻轉推入門（Accuride CB1155）、60｜10｜70｜10｜60 立柱、上掀門、頂板掀蓋、下翻門、口袋門、捲門都不再採用；屋主直接指定四格橫推門。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 休眠 | 0.3–3.6 W | PlayStation ecodesign（CFI-7021） |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| 擺放 | 四周 ≥ 10 cm、不放密閉櫃 | PlayStation Support／EB Games |\n| CB1155 | ≤ 14 kg、門寬 ≤ 121.9、12–24 吋 | Accuride |\n| 16 吋行程 | 29.6 | Accuride 1155 安裝圖（Richelieu） |\n| AIRPLATE T7 | 104 CFM、19 dBA、開孔 25.7 × 13.6 | AC Infinity |\n| SlideLine M | 門高 30–200、門寬 30–180（Silent ≥ 45）、≤ 30 kg、門厚 1.6–2.5 | Hettich 目錄／安裝說明 |\n| Switch 2 底座 | 20.1 × 11.5 × 5.12、內建風扇 | Nintendo Life |\n| UCG Ultra | 14.18 × 3 × 12.76、6.2 W | Scan |\n",
       "sources": [
         {
           "title": "PS5 Pro vs PS5 power consumption — Digital Foundry figures (Notebookcheck)",
@@ -24925,24 +21828,32 @@
           "url": "https://media.architectureau.com/media/files/SlideLineM_one-track%20Product%20flyer%20en.pdf"
         },
         {
-          "title": "Blum AVENTOS HK-XS programme",
-          "url": "https://www.blum.com/au/en/products/liftsystems/aventos-hk-xs/programme/"
-        },
-        {
-          "title": "Blum REVEGO programme",
-          "url": "https://www.blum.com/sg/en/products/pocketsystems/revego/programme/"
-        },
-        {
-          "title": "Accuride 1332 pocket door slide",
-          "url": "https://pdf.directindustry.com/pdf/accuride/1332/26400-758029.html"
-        },
-        {
-          "title": "REHAU RAUVOLET individual cabinet design",
-          "url": "https://www.rehau.com/downloads/565954/individual-cabinet-design.pdf"
-        },
-        {
           "title": "Xiaomi TV S Pro Mini LED 75 2026 Specs",
           "url": "https://www.mi.com/sg/product/xiaomi-tv-s-pro-mini-led-75-2026/specs"
+        },
+        {
+          "title": "Hettich sliding & folding door systems catalogue 2021 (SlideLine M data)",
+          "url": "https://web.hettich.com//fileadmin/Media_Center/07_Sliding_door_systems/01_Catalogues/Sliding_folding_door_systems_2021_HAU_en.pdf"
+        },
+        {
+          "title": "Hettich SlideLine M installation instructions (Rocheleau)",
+          "url": "https://rocheleau.fidelio.ca/Public/img/catalog/SlideLineM_noticedemontage_reccomplet.pdf"
+        },
+        {
+          "title": "Hettich SlideLine M profile set, overlay (Ostermann)",
+          "url": "https://www.ostermann.eu/en_GB/product/sliding-door-system-hettich-slideline-m-profile-set-overlay-door-position"
+        },
+        {
+          "title": "Nintendo Switch 2 dock size (Nintendo Life)",
+          "url": "https://www.nintendolife.com/guides/nintendo-switch-2-dock-size-hdmi-connections-guide-4k-upscale-rumours"
+        },
+        {
+          "title": "UniFi Cloud Gateway Ultra specs (Scan)",
+          "url": "https://www.scan.co.uk/products/ubiquiti-ucg-ultra-unifi-cloud-gateway-ultra-quad-core-arm-cortex-3gb-ram-16gb-storage"
+        },
+        {
+          "title": "Salice Slider M50 coplanar system",
+          "url": "https://tech-center.salice.com/en/products/coplanar-systems/slider-m50-flex/std-v01"
         }
       ]
     }

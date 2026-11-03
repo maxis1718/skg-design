@@ -452,7 +452,7 @@ function levels(g, view, x0, x1) {
 function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
-    if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e) || helperExtra(g, e)) continue;
+    if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e) || helperExtra(g, e) || lcExtra(g, e)) continue;
     if (e.type === 'lid') { lidExtra(g, e, state); continue; }
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
     const fsz = g.f * (e.size || .7);
@@ -825,6 +825,48 @@ function helperExtra(g, e) {
   return false;
 }
 
+// Living TV console (lc-*), R77. lc-end {x, y, w, h, side 'left'|'right'}: front view of a plan-rounded vertical end
+// (radius = w), shaded toward the outer edge with the tangent line where the curve meets the front.
+// lc-door {x, y, w, h, pull 'left'|'right', rear, ghost}: bypass sliding door face with a recessed vertical finger slot
+// near the pull edge; rear = the door in the back track (2.5 behind, darker outer edge); ghost = dashed (hidden position).
+// lc-top {x, y, w, h, r, fill}: plan outline with rounded FRONT corners only (plan y = 0 front, h toward the wall).
+// lc-hole {x, y, r, label}: circle (finger hole / grommet) in plan or elevation.
+function lcExtra(g, e) {
+  if (e.type === 'lc-end') {
+    const n = 6, k = e.w / n, out = e.side === 'left';
+    for (let i = 0; i < n; i++) {
+      const t = out ? (n - i) / n : (i + 1) / n;
+      g.rect(e.x + i * k, e.y, k + .02, e.h, {fill:'#8f9a92', 'fill-opacity':+(t * t * .26).toFixed(3), stroke:'none'});
+    }
+    const tx = out ? e.x + e.w : e.x;
+    g.line(tx, e.y, tx, e.y + e.h, {stroke:C.faint, 'stroke-width':.18});
+    return true;
+  }
+  if (e.type === 'lc-door') {
+    const a = e.ghost ? {fill:'none', stroke:C.faint, 'stroke-width':.25, 'stroke-dasharray':'1.4 1'} : {fill:e.rear ? '#f3f1ea' : C.front, stroke:C.line, 'stroke-width':.3};
+    g.rect(e.x, e.y, e.w, e.h, a);
+    if (!e.ghost) {
+      if (e.rear) g.rect(e.pull === 'left' ? e.x : e.x + e.w - .5, e.y, .5, e.h, {fill:'#c9ccc4', stroke:'none'});
+      const sx = e.pull === 'left' ? e.x + 1.8 : e.x + e.w - 3, sh = e.slot ?? 12;
+      g.rect(sx, e.y + (e.h - sh) / 2, 1.2, sh, {fill:'#9aa29c', stroke:'none', rx:.6});
+    }
+    if (e.label) g.text(e.lx ?? e.x + e.w / 2, e.ly ?? e.y + e.h / 2 - g.f * .3, e.label, {'text-anchor':'middle', fill:e.color || C.thin, 'font-size':g.f * (e.size || .6)});
+    return true;
+  }
+  if (e.type === 'lc-top') {
+    const {x, y, w, h} = e, r = e.r ?? 7.5;
+    g.path(`M${x} ${g.Y(y + h)}L${x} ${g.Y(y + r)}A${r} ${r} 0 0 0 ${x + r} ${g.Y(y)}L${x + w - r} ${g.Y(y)}A${r} ${r} 0 0 0 ${x + w} ${g.Y(y + r)}L${x + w} ${g.Y(y + h)}Z`,
+      {fill:e.fill || '#efe6d6', stroke:e.stroke || C.line, 'stroke-width':e.sw ?? .4, 'stroke-dasharray':e.dashed ? '1.4 1' : null});
+    return true;
+  }
+  if (e.type === 'lc-hole') {
+    g.out.push(`<circle cx="${e.x}" cy="${g.Y(e.y)}" r="${e.r}" ${attrs({fill:e.fill || '#fff', stroke:C.line, 'stroke-width':.25})}/>`);
+    if (e.label) g.text(e.lx ?? e.x, e.ly ?? e.y + e.r + g.f * .5, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .6)});
+    return true;
+  }
+  return false;
+}
+
 // Toe-kick light (TV console): 45° corner LED profile in the angle between the carcass underside and a recessed plinth face.
 // toe-light front: {x, w, y (carcass underside), p (profile size)} — lit diffuser bar + glow down to the floor.
 // toe-light section: {section:true, x (plinth face), y, p, front (drawer front line), board} — base board, profile, beam.
@@ -1099,6 +1141,7 @@ function renderSection(elev, view, state) {
 // Dimensions: hob width + side margins to the main cabinet, cabinet cuts, cut-out depth chain (front / cut-out / back) and
 // hob depth on the right, cut-out + hood widths above the wall; view.interior adds the main cabinet's clear width.
 function renderPlanTop(elev, view) {
+  if (!view.hob) return renderPlanGeneric(elev, view);
   const D = view.depth ?? 60, run = view.run, W = Math.max(...run.map(r => r.x + r.w)), f = view.font ?? 5.2, t = view.board ?? 1.8;
   const h = view.hob, c = h.cut, main = run.find(r => r.main), hood = view.hood;
   const m = {l: f * 1.2, r: f * 10.6, t: f * 7.6, b: f * (view.interior ? 7.2 : 5.6)};
@@ -1155,6 +1198,34 @@ function renderPlanTop(elev, view) {
   hdim(g, c.x, c.x + c.w, yt1, c.label || `${T('開孔')} ${fmt(c.w)} × ${fmt(c.d)}`);
   if (hood) hdim(g, hood.x, hood.x + hood.w, yt2, `${T('排油煙機')} ${fmt(hood.w)}`);
   if (h.label) g.text(W / 2, yt2 + f * 1.7, h.label, {'text-anchor':'middle', fill:C.line, 'font-size':f * .86, 'font-weight':600});
+  return svg([-m.l, -m.t, W + m.l + m.r, D + m.t + m.b], g.out, view.aria || elev.title);
+}
+
+// Generic top view (view.kind 'plan-top' without view.hob): x along the run, y = cm from the front (0, bottom) to the
+// back wall (view.depth, top). Draws view.under / view.extras in plan coordinates, the wall band above, view.hcuts
+// (front side, with view.totalLabel) and a right-hand depth chain view.vcuts [0 … depth].
+function renderPlanGeneric(elev, view) {
+  const D = view.depth ?? 45, W = view.width, f = view.font ?? 5.2;
+  const m = {l: f * (view.marginL ?? 1.4), r: f * (view.marginR ?? 5), t: f * (view.marginT ?? 3.2), b: f * (view.hcuts ? 5.6 : 2)};
+  const g = canvas(D, f);
+  g.rect(-m.l * .6, D, W + m.l * .6 + m.r * .5, 3.2, {fill:'url(#elev-wall)', stroke:'none'});
+  g.line(-m.l * .6, D, W + m.r * .5, D, {stroke:C.line, 'stroke-width':.6});
+  if (view.wallLabel) g.text(W / 2, D + 3.2 + f * .4, view.wallLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':f * .62});
+  extras(g, view.under, 'closed');
+  extras(g, view.extras, 'closed');
+  if (view.hcuts) {
+    const c = view.hcuts;
+    for (let i = 0; i < c.length - 1; i++) { const w = c[i + 1] - c[i]; hdim(g, c[i], c[i + 1], -f * 1.6, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
+    hdim(g, c[0], c[c.length - 1], -f * 3.6, view.totalLabel || fmt(c[c.length - 1] - c[0]), true, true);
+  }
+  if (view.vcuts) {
+    const x = W + f * .9, s = {stroke:C.dim, 'stroke-width':.25};
+    for (let i = 0; i < view.vcuts.length - 1; i++) {
+      const y0 = view.vcuts[i], y1 = view.vcuts[i + 1];
+      g.line(x, y0, x, y1, s); g.line(x - 1.2, y0, x + 1.2, y0, s); g.line(x - 1.2, y1, x + 1.2, y1, s);
+      g.text(x + 1.4, (y0 + y1) / 2 - f * .3, fmt(y1 - y0), {fill:C.dim, 'font-size':f * .7});
+    }
+  }
   return svg([-m.l, -m.t, W + m.l + m.r, D + m.t + m.b], g.out, view.aria || elev.title);
 }
 
