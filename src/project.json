@@ -1679,11 +1679,11 @@
         570.23,
         185.813,
         582.98,
-        249.593
+        252.427
       ],
       "plan_horizontal_cm": 45,
-      "plan_vertical_cm": 225,
-      "nominal_width_cm": 225,
+      "plan_vertical_cm": 235,
+      "nominal_width_cm": 235,
       "nominal_depth_cm": 45,
       "height_cm": 40,
       "status": "user-design",
@@ -1695,7 +1695,7 @@
       "source_note": "3 抽各 70，中抽放全部插座\n踢腳內退 10，3000K 洗地燈",
       "dimensions": {
         "w": {
-          "cm": 225,
+          "cm": 235,
           "status": "design"
         },
         "d": {
@@ -1842,9 +1842,9 @@
       "label": "TV",
       "bounds_pt": [
         582.22,
-        193.823,
+        195.238,
         582.98,
-        241.583
+        243.002
       ],
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
@@ -3959,10 +3959,10 @@
       "room_id": "living",
       "name": "空氣清淨機 Electrolux UltimateHome 300",
       "bounds_pt": [
-        574.93,
-        269.237,
-        581.563,
-        275.87
+        543.675,
+        272.092,
+        550.308,
+        278.725
       ],
       "dimensions": {
         "w": {
@@ -3981,8 +3981,9 @@
         "brand": "Electrolux",
         "model": "UltimateHome 300"
       },
-      "source_note": "・23.4 × 23.4 × 40.5，東牆重低音南側，離牆 5\n・背後插座 ×2（S-07、S-08）",
-      "status": "user-design"
+      "source_note": "・23.4 × 23.4 × 40.5，鋼琴東側凹位，離鋼琴、牆、過道角各 10\n・背後插座 S-07（離地 30）",
+      "status": "user-design",
+      "notes": "R79: moved from the east wall (the 235 console would push it to 354-378 and pinch the passage mouth to 77) into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so the passage mouth stays 82 / 81 to the KC62."
     },
     {
       "id": "kef-speaker-l",
@@ -3992,9 +3993,9 @@
       "label": "KEF LS50 Wireless II, left (secondary)",
       "bounds_pt": [
         570.195,
-        178.73,
+        178.362,
         579.011,
-        184.4
+        184.032
       ],
       "dimensions": {
         "w": {
@@ -4016,8 +4017,8 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 35 cm from the balcony glass; the 22.6 stand base spans 23.7-46.3 = 3.7 clear of the 20 cm curtain pocket face and 3.7 clear of the console north end (50). Pair 255 apart (R77), ≈79° to the centre seat (ear ≈195 from the wall); 10° toe-in would need +5 of wall per end, so stands stay square. Rear 14 cm from the feature wall, front flush with the console front; stand square to the wall (5° toe-in would cut the clearances to 2.4). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
-      "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 35，背距牆 14"
+      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass (R79: moved 1.3 north); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50), the exhaust side of the PS5 bay. Pair 266.3 apart (R79), ≈81° to the centre seat (ear ≈195 from the wall); 10° toe-in would need +5 of wall per end, so stands stay square. Rear 14 cm from the feature wall, front flush with the console front; stand square to the wall (5° toe-in would cut the clearances to 2.4). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
+      "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 33.7，背距牆 14"
     },
     {
       "id": "kef-speaker-r",
@@ -4027,9 +4028,9 @@
       "label": "KEF LS50 Wireless II, right (primary)",
       "bounds_pt": [
         570.195,
-        251.013,
+        253.844,
         579.011,
-        256.683
+        259.514
       ],
       "dimensions": {
         "w": {
@@ -4051,7 +4052,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 290 cm from the glass (axis 162.5 + 127.5), base 278.7-301.3 = 3.7 clear of the console south end (275); 106 diagonal to the piano corner; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 300 cm from the glass (R79: console 235, axis 167.5 + 132.5), base 288.7-311.3 = 3.7 clear of the console south end (285); 104.5 diagonal to the piano corner; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from The Frame One Connect (centre drawer), Cat6 from the USW Lite 8 PoE (optional, Wi-Fi works), inter-speaker cable to the left speaker, RCA sub out to the KC62. Power S-18.",
       "source_note": "主喇叭：KEF LS50 Wireless II on KEF S2 Floor Stand\n接 HDMI eARC、網路、KC62"
     },
     {
@@ -4062,9 +4063,9 @@
       "label": "Subwoofer KEF KC62",
       "bounds_pt": [
         573.115,
-        259.517,
+        262.349,
         580.145,
-        266.774
+        269.605
       ],
       "dimensions": {
         "w": {
@@ -4086,7 +4087,7 @@
       "height_cm": 24.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 310-335.6 cm from the glass: 8.7 cm from the primary stand base and 8.7 cm from the purifier. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, 320-345.6 cm from the glass (R79): 8.7 cm from the primary stand base; the purifier moved to the piano alcove (81 from its corner). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
       "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n貼牆 10，RCA 接主喇叭 Sub Out"
     },
     {
@@ -5472,12 +5473,32 @@
               "value": "30／50"
             },
             {
+              "label": "左腳架到電視櫃北端／窗簾盒",
+              "value": "5／2.4"
+            },
+            {
+              "label": "電視中心離玻璃",
+              "value": "167.5 · 對齊電視櫃，比沙發中心偏南 5"
+            },
+            {
+              "label": "喇叭中心距",
+              "value": "266.3 · 離玻璃 33.7／300"
+            },
+            {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "106 · 到電視櫃角 115"
+              "value": "104.5 · 到電視櫃圓角 113"
+            },
+            {
+              "label": "過道口牆角到重低音",
+              "value": "82"
+            },
+            {
+              "label": "清淨機到重低音",
+              "value": "81 · 清淨機離鋼琴、牆、過道角各 10"
             },
             {
               "label": "沙發到電視櫃",
-              "value": "90 · 拉抽剩 55 · 推門 0 外伸"
+              "value": "90 · 拉抽剩 55"
             },
             {
               "label": "PS5 Pro 左右／上／後",
@@ -5544,12 +5565,30 @@
           },
           {
             "line": [
+              566.5,
+              185.813,
+              566.5,
+              252.427
+            ],
+            "label": "235"
+          },
+          {
+            "line": [
               540.84,
               263.68,
               570.238,
-              257.048
+              259.883
             ],
-            "label": "106"
+            "label": "104.5"
+          },
+          {
+            "line": [
+              550.308,
+              272.092,
+              573.115,
+              269.605
+            ],
+            "label": "81"
           },
           {
             "line": [
@@ -5568,6 +5607,15 @@
               263.8
             ],
             "label": "57.6"
+          },
+          {
+            "line": [
+              587,
+              181.193,
+              587,
+              256.679
+            ],
+            "label": "266.3"
           }
         ]
       }
@@ -19824,19 +19872,19 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 221.087,
-        "place": "電視櫃左中格（Switch 2 後方）",
+        "y": 222.504,
+        "place": "電視櫃右中格後方",
         "mount": 30,
         "name": "網路主機 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃左中格後方，插 S-20；Hub M3 由 USW Lite 8 PoE 供電\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3：Zigbee／Thread／Matter 中樞，給開關與感應器\n・放電視櫃右中格後方，插 S-21；Hub M3 由 USW Lite 8 PoE 供電\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
         "code": "D-01",
         "kind": "data",
         "x": 582.2,
-        "y": 212.213,
+        "y": 215.0,
         "place": "電視牆 · 電視櫃後方",
         "mount": 30,
         "name": "網路孔 · 電視櫃",
@@ -20150,9 +20198,9 @@
         "id": "sock-purifier-1",
         "code": "S-07",
         "kind": "socket",
-        "x": 584.0,
-        "y": 270.853,
-        "place": "客廳東牆 · 清淨機後",
+        "x": 546.991,
+        "y": 281.2,
+        "place": "鋼琴東側凹位南牆 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機",
         "notes": "・13A 雙孔，離地 30（示意）\n・清淨機後方，貼牆不外露",
@@ -20164,10 +20212,10 @@
         "kind": "socket",
         "x": 584.0,
         "y": 274.255,
-        "place": "客廳東牆 · 清淨機後",
+        "place": "客廳東牆 · 重低音南側",
         "mount": 30,
         "name": "插座 · 清淨機（備用）",
-        "notes": "・13A 雙孔，離地 30（示意）\n・同一面牆第二組，給燈或其他電器",
+        "notes": "・13A 雙孔，離地 30（示意）\n・清淨機移到鋼琴旁後當備用，給燈或其他電器",
         "use": "備用"
       },
       {
@@ -20175,7 +20223,7 @@
         "code": "S-17",
         "kind": "socket",
         "x": 584.0,
-        "y": 181.565,
+        "y": 181.193,
         "place": "電視牆 · 左喇叭腳架後",
         "mount": 30,
         "name": "插座 · 左喇叭",
@@ -20187,7 +20235,7 @@
         "code": "S-18",
         "kind": "socket",
         "x": 584.0,
-        "y": 253.848,
+        "y": 256.679,
         "place": "電視牆 · 右喇叭腳架後",
         "mount": 30,
         "name": "插座 · 右主喇叭",
@@ -20199,7 +20247,7 @@
         "code": "S-19",
         "kind": "socket",
         "x": 584.0,
-        "y": 263.145,
+        "y": 265.977,
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
@@ -20331,11 +20379,11 @@
         "code": "S-20",
         "kind": "socket",
         "x": 584.0,
-        "y": 210.82,
+        "y": 211.367,
         "place": "電視牆 · 電視櫃線槽下",
         "mount": 24,
         "name": "插座 · 電視櫃左中格後",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・UCG Ultra、USW Lite 8 PoE、Switch 2 底座；Hub M3 走 PoE",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・底燈驅動器、備用",
         "use": "電視櫃"
       },
       {
@@ -20343,11 +20391,35 @@
         "code": "S-21",
         "kind": "socket",
         "x": 584.0,
-        "y": 224.58,
+        "y": 226.873,
         "place": "電視牆 · 電視櫃線槽下",
         "mount": 24,
         "name": "插座 · 電視櫃右中格後",
-        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・PS5 Pro、AIRPLATE T7、底燈驅動器",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 24，在線槽蓋下\n・UCG Ultra、USW Lite 8 PoE；Hub M3 走 PoE",
+        "use": "電視櫃"
+      },
+      {
+        "id": "sock-console-l",
+        "code": "S-22",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 195.777,
+        "place": "電視櫃左端格後方",
+        "mount": 15,
+        "name": "插座 · 電視櫃左端格（PS5）",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 15，在頂板下、門停放區之外\n・PS5 Pro；風扇走 PS5 USB",
+        "use": "電視櫃"
+      },
+      {
+        "id": "sock-console-r",
+        "code": "S-23",
+        "kind": "socket",
+        "x": 584.0,
+        "y": 242.463,
+        "place": "電視櫃右端格後方",
+        "mount": 15,
+        "name": "插座 · 電視櫃右端格（Switch 2）",
+        "notes": "・13A 雙孔＋單孔（3 位），中心離地 15，在頂板下、門停放區之外\n・Switch 2 底座、備用",
         "use": "電視櫃"
       }
     ],
@@ -20357,11 +20429,11 @@
         "path": [
           [
             575.2,
-            223.213
+            222.504
           ],
           [
             580,
-            223.213
+            222.504
           ],
           [
             580,
@@ -20446,15 +20518,15 @@
         "path": [
           [
             575.2,
-            223.213
+            222.504
           ],
           [
             575.2,
-            212.213
+            215.0
           ],
           [
             582.2,
-            212.213
+            215.0
           ]
         ]
       }
