@@ -1029,7 +1029,9 @@ function renderFront(elev, view, state) {
   if (view.hcuts) {
     const cuts = view.hcuts;
     const hit = (a, b) => fu.some(r => Math.abs(r.x - a) < .05 && Math.abs(r.x + r.u.w - b) < .05);
-    for (let i = 0; i < cuts.length - 1; i++) hdim(g, cuts[i], cuts[i + 1], -f * 1.6, fmt(cuts[i + 1] - cuts[i]), hit(cuts[i], cuts[i + 1]), hit(cuts[i], cuts[i + 1]));
+    // view.hcutsFit: drop a segment's label when it would not fit its span (e.g. 0.3 joints in a real cut chain).
+    const fits = (w, txt) => !view.hcutsFit || em(txt) * f * .74 <= w + .5;
+    for (let i = 0; i < cuts.length - 1; i++) { const w = cuts[i + 1] - cuts[i], txt = fmt(w); hdim(g, cuts[i], cuts[i + 1], -f * 1.6, fits(w, txt) ? txt : '', hit(cuts[i], cuts[i + 1]), hit(cuts[i], cuts[i + 1])); }
     hdim(g, cuts[0], cuts[cuts.length - 1], -f * 3.6, view.totalLabel || fmt(cuts[cuts.length - 1] - cuts[0]), true);
   }
   if (fr0) {
