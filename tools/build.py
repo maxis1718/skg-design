@@ -43,9 +43,9 @@ for fragment in dining:plan=plan.replace(fragment,'')
 tv_wall=re.findall(r'<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*/>',plan)
 assert len(tv_wall)==35
 for fragment in tv_wall:plan=plan.replace(fragment,'')
-# R21: study (440/441) and bath-2 (510/511) swing doors replaced by sliding doors (src/furniture-doors.svg).
-swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*/>',plan)
-assert len(swing_doors)==4
+# R21: study (440/441) swing door replaced by a sliding door (src/furniture-doors.svg). R77: bath-2 keeps the source swing door (510/511).
+swing_doors=re.findall(r'<path\b[^>]*data-source-path="(?:44[01])"[^>]*/>',plan)
+assert len(swing_doors)==2
 for fragment in swing_doors:plan=plan.replace(fragment,'')
 # Helper room: source bed symbol (714-727: body, pillow, blanket, headboard) replaced by src/furniture-helper.svg.
 helper_bed=re.findall(r'<path\b[^>]*data-source-path="(?:71[4-9]|72[0-7])"[^>]*/>',plan)

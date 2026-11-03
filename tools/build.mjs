@@ -36,9 +36,9 @@ for(const fragment of dining)plan=plan.replace(fragment,'');
 const tvWall=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:59[2-9]|60\d|610|56|61[5-9]|620|952|63[7-9]|64[0-3]|738)"[^>]*\/>/g)].map(m=>m[0]);
 if(tvWall.length!==35)throw new Error('Living TV-wall source index changed');
 for(const fragment of tvWall)plan=plan.replace(fragment,'');
-// R21: study (440 arc, 441 leaf) and bath-2 (510 arc, 511 leaf) swing doors → sliding doors in src/furniture-doors.svg; jambs kept.
-const swingDoors=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:44[01]|51[01])"[^>]*\/>/g)].map(m=>m[0]);
-if(swingDoors.length!==4)throw new Error('Door source index changed');
+// R21: study (440 arc, 441 leaf) swing door → sliding door in src/furniture-doors.svg; jambs kept. R77: bath-2 keeps the source swing door (510 arc, 511 leaf).
+const swingDoors=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:44[01])"[^>]*\/>/g)].map(m=>m[0]);
+if(swingDoors.length!==2)throw new Error('Door source index changed');
 for(const fragment of swingDoors)plan=plan.replace(fragment,'');
 // Helper room: source bed symbol (714–727: body, pillow, blanket, headboard) → built-in platform bed in src/furniture-helper.svg.
 const helperBed=[...plan.matchAll(/<path\b[^>]*data-source-path="(?:71[4-9]|72[0-7])"[^>]*\/>/g)].map(m=>m[0]);
