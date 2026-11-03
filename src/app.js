@@ -41,7 +41,7 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV console (R79): four exhaust schemes console-a..d for the left (PS5) flipper bay, default D (fluted timber north end + NF-A14). Elevations 'tv-console@console-a|b|c'; D uses the base elevations['tv-console'].
+// TV console (R80): 225 three sections; four north-end exhaust schemes console-a..d for the left game flipper bay, default D (solid-oak slats + NF-A14). Elevations 'tv-console@console-a|b|c'; D uses the base elevations['tv-console'].
 const LIVING_KEYS={a:'console-a',b:'console-b',c:'console-c',d:'console-d'};
 selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.d;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);

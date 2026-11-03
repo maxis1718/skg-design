@@ -18,8 +18,8 @@
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:3px;padding:2px;background:#fff;gap:2px;flex-wrap:wrap}
 .seg .tool{padding:5px 10px}
 .elev-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;align-items:start}
-.elev-figure{margin:0;background:#fff;border:1px solid #e7ebe3;border-radius:3px;padding:12px}
-.elev-svg{display:block;width:100%;height:auto;max-height:78vh}
+.elev-figure{min-width:0;margin:0;background:#fff;border:1px solid #e7ebe3;border-radius:3px;padding:12px}
+.elev-svg{display:block;width:100%;height:auto;max-height:78vh}.elev-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}.elev-scroll .elev-svg{max-height:none}
 .elev-figure figcaption{font-size:10px;color:#88917f;line-height:1.7;margin-top:8px}
 .elev-spec{min-width:0;font-size:12px;color:var(--ink)}
 .elev-row{border-top:1px solid var(--line);padding:9px 0}
@@ -36,7 +36,7 @@
 /* Per-elevation risks (elev.risks): red 需評估 list above 待確認. #b3261e on #fbfcf8 ≈ 6.3:1. */
 .elev-spec h4.elev-risk-title{color:#b3261e}.elev-spec ul.elev-risks{color:#b3261e;list-style:square}.elev-risks li::marker{color:#b3261e}
 .elev-go{border-color:var(--accent);color:var(--accent)}
-@media(max-width:900px){.elev-grid{grid-template-columns:1fr}.elev-controls{align-items:flex-start}}
+@media(max-width:900px){.elev-grid{grid-template-columns:minmax(0,1fr)}.elev-controls{align-items:flex-start}}
 @media(max-width:760px){.elev-block{padding:14px;margin-left:-4px;margin-right:-4px}.elev-figure{padding:6px}.elev-svg{max-height:none}.elev-head h3{font-size:15px}}
 @media print{.elev-controls{display:none}.elev-block{break-inside:avoid}}
 

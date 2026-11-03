@@ -888,6 +888,20 @@ function lcExtra(g, e) {
     for (const [dx, dy] of [[.9, .9], [s - .9, .9], [.9, s - .9], [s - .9, s - .9]]) g.out.push(`<circle cx="${+(e.x + dx).toFixed(2)}" cy="${+g.Y(e.y + dy).toFixed(2)}" r=".3" fill="#9aa39d"/>`);
     return true;
   }
+  // lc-poly {pts, fill, stroke, sw, dashed}: closed polygon (e.g. a chamfered door edge, a slat profile).
+  if (e.type === 'lc-poly') {
+    g.path(`M${e.pts.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}Z`, {fill:e.fill || 'none', stroke:e.stroke || C.line, 'stroke-width':e.sw ?? .25, 'stroke-dasharray':e.dashed ? '1.4 1' : null});
+    return true;
+  }
+  // lc-flow {x, y, r, dir 'out' (⊙ toward the viewer) | 'in' (⊗ away), warm, label}: airflow across the drawing plane.
+  if (e.type === 'lc-flow') {
+    const col = e.warm ? '#c9682e' : '#3f7fb0', r = e.r ?? 1.6, cy = g.Y(e.y);
+    g.out.push(`<circle cx="${e.x}" cy="${cy}" r="${r}" fill="#fff" fill-opacity=".85" stroke="${col}" stroke-width="${+(r * .16).toFixed(2)}"/>`);
+    if (e.dir === 'in') { const k = r * .58; g.path(`M${e.x - k} ${cy - k}L${e.x + k} ${cy + k}M${e.x - k} ${cy + k}L${e.x + k} ${cy - k}`, {stroke:col, 'stroke-width':+(r * .16).toFixed(2), fill:'none'}); }
+    else g.out.push(`<circle cx="${e.x}" cy="${cy}" r="${+(r * .3).toFixed(2)}" fill="${col}"/>`);
+    if (e.label) g.text(e.lx ?? e.x + r + .8, e.ly ?? e.y - g.f * (e.size || .6) * .35, e.label, {'text-anchor':e.anchor || 'start', fill:e.color || col, 'font-size':g.f * (e.size || .6)});
+    return true;
+  }
   if (e.type === 'lc-hole') {
     g.out.push(`<circle cx="${e.x}" cy="${g.Y(e.y)}" r="${e.r}" ${attrs({fill:e.fill || '#fff', stroke:C.line, 'stroke-width':.25})}/>`);
     if (e.label) g.text(e.lx ?? e.x, e.ly ?? e.y + e.r + g.f * .5, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .6)});
@@ -1270,8 +1284,16 @@ function liftSection(g, hx, hy, L, lift, f) {
   if (lift.label) g.text(hx + L * sn + 1.2, hy - L * cs + f * .9, lift.label, {fill:C.dim, 'font-size':f * .62});
 }
 
+// VIEW.legible (px, true = 9): the drawing never shrinks below the width at which its smallest label renders at that size;
+// on a narrow screen it scrolls sideways inside .elev-scroll instead (capped at VIEW.maxPx, default 1100).
+let VIEW = null;
 function svg(vb, out, label) {
-  return `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
+  const s = `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
+  if (!VIEW?.legible) return s;
+  const fonts = [...s.matchAll(/font-size="([\d.]+)"/g)].map(m => +m[1]).filter(v => v > 0), px = VIEW.legible === true ? 9 : VIEW.legible;
+  if (!fonts.length) return s;
+  const minPx = Math.min(VIEW.maxPx ?? 1100, Math.ceil(px * vb[2] / Math.min(...fonts)));
+  return `<div class="elev-scroll">${s.replace('<svg class="elev-svg"', `<svg class="elev-svg" data-min-px="${minPx}" style="min-width:${minPx}px"`)}</div>`;
 }
 
 function render(elev, viewId, state, translate) {
@@ -1282,6 +1304,7 @@ function render(elev, viewId, state, translate) {
   const fsIn = elev.frontStyle;
   FS = fsIn ? {...FRONT_STYLES.slab, ...(typeof fsIn === 'string' ? FRONT_STYLES[fsIn] : fsIn)} : null;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
+  VIEW = view;
   return view.kind === 'section' ? renderSection(elev, view, state) : view.kind === 'plan-top' ? renderPlanTop(elev, view) : renderFront(elev, view, state);
 }
 
