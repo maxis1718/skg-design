@@ -14,6 +14,8 @@ const C = {
 let T = s => s;
 // Current door state while rendering; extras with `when: 'open'|'closed'` only draw in that state (interiors, sockets).
 let ST = 'closed';
+// LW: stroke scale for dimension / airflow lines (view.lineScale, front views only — e.g. a small end elevation drawn with a small font).
+let LW = 1;
 // Elevation-level front style (elev.frontStyle), e.g. handleless slab fronts for the whole kitchen; null = classic fronts.
 let FS = null;
 // gap = reveal between fronts (0.3 = 3 mm); lip = wall-door overhang below the carcass (finger pull from below);
@@ -431,8 +433,8 @@ function leftChain(g, u, ox, oy, x, rc) {
   g.line(x - tick, oy + u.h, x + tick, oy + u.h, s);
 }
 function hdim(g, x0, x1, y, label, emphasize, strong) {
-  const s = {stroke:C.dim, 'stroke-width':strong ? .6 : .25};
-  g.line(x0, y, x1, y, s); g.line(x0, y - 1.2, x0, y + 1.2, s); g.line(x1, y - 1.2, x1, y + 1.2, s);
+  const s = {stroke:C.dim, 'stroke-width':(strong ? .6 : .25) * LW}, tk = 1.2 * Math.max(LW, .5);
+  g.line(x0, y, x1, y, s); g.line(x0, y - tk, x0, y + tk, s); g.line(x1, y - tk, x1, y + tk, s);
   g.text((x0 + x1) / 2, y + .9, label, {'text-anchor':'middle', fill:C.dim, 'font-size':g.f * (emphasize ? .85 : .74), 'font-weight':strong ? 600 : null});
 }
 // Focused unit(s) of a run view: accent tint + outline, and dashed extension lines from the unit edge to its height chain at x.
@@ -499,8 +501,8 @@ function extras(g, list, state = ST) {
     // Airflow arrow along e.pts: e.warm = exhaust (orange), otherwise intake (blue); arrowhead at the last point.
     if (e.type === 'airflow') {
       const col = e.color || (e.warm ? '#c9682e' : '#3f7fb0'), P = e.pts, [ax, ay] = P[P.length - 2], [bx, by] = P[P.length - 1];
-      g.path(`M${P.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}`, {fill:'none', stroke:col, 'stroke-width':.55, 'stroke-dasharray':'1.6 .9', 'stroke-linejoin':'round'});
-      const L = Math.hypot(bx - ax, by - ay) || 1, ux = (bx - ax) / L, uy = (by - ay) / L, k = e.head ?? 1.8;
+      g.path(`M${P.map(([x, y]) => `${x} ${g.Y(y)}`).join('L')}`, {fill:'none', stroke:col, 'stroke-width':.55 * LW, 'stroke-dasharray':`${+(1.6 * LW).toFixed(2)} ${+(.9 * LW).toFixed(2)}`, 'stroke-linejoin':'round'});
+      const L = Math.hypot(bx - ax, by - ay) || 1, ux = (bx - ax) / L, uy = (by - ay) / L, k = e.head ?? 1.8 * LW;
       const p1 = [bx - ux * k - uy * k * .55, by - uy * k + ux * k * .55], p2 = [bx - ux * k + uy * k * .55, by - uy * k - ux * k * .55];
       g.path(`M${bx} ${g.Y(by)}L${p1[0]} ${g.Y(p1[1])}L${p2[0]} ${g.Y(p2[1])}Z`, {fill:col, stroke:'none'});
       if (e.label) g.text(e.lx ?? bx, e.ly ?? by + fsz * .4, e.label, {'text-anchor':e.anchor || 'middle', fill:col, 'font-size':fsz});
@@ -534,9 +536,11 @@ function extras(g, list, state = ST) {
     }
     if (e.type === 'callout') {
       // Leader from the pointed feature (x, y) to a label at (lx, ly).
-      g.path(`M${e.x} ${g.Y(e.y)}L${e.lx - .8} ${g.Y(e.ly + fsz * .3)}`, {fill:'none', stroke:C.dim, 'stroke-width':.22});
-      g.rect(e.x - .5, e.y - .5, 1, 1, {fill:C.dim, stroke:'none', rx:.5});
-      g.text(e.lx, e.ly, e.label, {fill:e.color || C.line, 'font-size':fsz});
+      // e.anchor 'end': label ends at lx (leader meets it from the right).
+      const ae = e.anchor === 'end', dot = Math.min(1, g.f * .18);
+      g.path(`M${e.x} ${g.Y(e.y)}L${ae ? e.lx + .8 : e.lx - .8} ${g.Y(e.ly + fsz * .3)}`, {fill:'none', stroke:C.dim, 'stroke-width':Math.min(.22, g.f * .05)});
+      g.rect(e.x - dot / 2, e.y - dot / 2, dot, dot, {fill:C.dim, stroke:'none', rx:dot / 2});
+      g.text(e.lx, e.ly, e.label, {fill:e.color || C.line, 'font-size':fsz, 'text-anchor':ae ? 'end' : null});
       continue;
     }
     if (e.type === 'lining') {
@@ -627,9 +631,9 @@ function extras(g, list, state = ST) {
     } else if (e.type === 'note') {
       g.text(e.x, e.y, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .72)});
     } else if (e.type === 'clear') {
-      const s = {stroke:C.dim, 'stroke-width':.25};
+      const s = {stroke:C.dim, 'stroke-width':.25 * LW}, tk = 1.2 * Math.max(LW, .5);
       if (e.vertical) {
-        g.line(e.x, e.y0, e.x, e.y1, s); g.line(e.x - 1.2, e.y0, e.x + 1.2, e.y0, s); g.line(e.x - 1.2, e.y1, e.x + 1.2, e.y1, s);
+        g.line(e.x, e.y0, e.x, e.y1, s); g.line(e.x - tk, e.y0, e.x + tk, e.y0, s); g.line(e.x - tk, e.y1, e.x + tk, e.y1, s);
         if (e.rotate) g.vtext(e.x + g.f * .95, (e.y0 + e.y1) / 2, e.label, {fill:C.dim, 'font-size':g.f * .7});
         else g.text(e.x + 1.4, (e.y0 + e.y1) / 2 - g.f * .3, e.label, {fill:C.dim, 'font-size':g.f * .7});
       }
@@ -859,6 +863,31 @@ function lcExtra(g, e) {
       {fill:e.fill || '#efe6d6', stroke:e.stroke || C.line, 'stroke-width':e.sw ?? .4, 'stroke-dasharray':e.dashed ? '1.4 1' : null});
     return true;
   }
+  // lc-fan {x, y, s, dashed, kind}: square axial fan seen face-on (x, y = bottom-left, s = frame size). Default = Noctua
+  // (beige frame, brown blades); kind 't8' = AIRPLATE white plate with a hex grille; dashed = behind a panel (outline only).
+  if (e.type === 'lc-fan') {
+    const s = e.s ?? 14, cx = e.x + s / 2, cy = e.y + s / 2, rr = s * .45, t8 = e.kind === 't8';
+    const circ = (r, a) => g.out.push(`<circle cx="${+cx.toFixed(2)}" cy="${+g.Y(cy).toFixed(2)}" r="${+r.toFixed(2)}" ${attrs(a)}/>`);
+    if (e.dashed) { g.rect(e.x, e.y, s, s, {fill:'none', stroke:'#7b4b3a', 'stroke-width':.2, 'stroke-dasharray':'1 .7', rx:s * .06}); circ(rr, {fill:'none', stroke:'#7b4b3a', 'stroke-width':.18, 'stroke-dasharray':'1 .7'}); return true; }
+    g.rect(e.x, e.y, s, s, {fill:t8 ? '#f4f5f1' : '#d8c7a6', stroke:C.line, 'stroke-width':.25, rx:s * .06});
+    circ(rr, {fill:t8 ? '#cfd3ce' : '#7b4b3a', stroke:C.line, 'stroke-width':.2});
+    for (let i = 0; i < (t8 ? 0 : 7); i++) { const a = i * Math.PI * 2 / 7; g.path(`M${+cx.toFixed(2)} ${+g.Y(cy).toFixed(2)}Q${+(cx + rr * .7 * Math.cos(a + .6)).toFixed(2)} ${+g.Y(cy + rr * .7 * Math.sin(a + .6)).toFixed(2)} ${+(cx + rr * .95 * Math.cos(a)).toFixed(2)} ${+g.Y(cy + rr * .95 * Math.sin(a)).toFixed(2)}`, {fill:'none', stroke:'#a87a62', 'stroke-width':.35}); }
+    circ(s * .13, {fill:t8 ? '#9aa39d' : '#c9b38f', stroke:'none'});
+    for (const [dx, dy] of [[1, 1], [s - 1, 1], [1, s - 1], [s - 1, s - 1]]) circ(.35, {fill:C.dark, stroke:'none'});
+    if (e.label) g.text(e.lx ?? cx, e.ly ?? e.y - g.f * .9, e.label, {'text-anchor':'middle', fill:C.line, 'font-size':g.f * (e.size || .55)});
+    return true;
+  }
+  // lc-grille {x, y, s, cut}: AC Infinity AIRPLATE-style square plate (s) on a panel, circular hex-hole field ≈ the cut-out.
+  if (e.type === 'lc-grille') {
+    const s = e.s ?? 16, cx = e.x + s / 2, cy = e.y + s / 2, R = (e.cut ?? s * .8) * .48, p = s / 22;
+    g.rect(e.x, e.y, s, s, {fill:'#f7f7f4', stroke:C.line, 'stroke-width':.22, rx:s * .04});
+    for (let iy = -12; iy <= 12; iy++) for (let ix = -12; ix <= 12; ix++) {
+      const hx = cx + (ix + (iy % 2 ? .5 : 0)) * p, hy = cy + iy * p * .87;
+      if (Math.hypot(hx - cx, hy - cy) <= R) g.out.push(`<circle cx="${+hx.toFixed(2)}" cy="${+g.Y(hy).toFixed(2)}" r="${+(p * .36).toFixed(2)}" fill="#3a403c"/>`);
+    }
+    for (const [dx, dy] of [[.9, .9], [s - .9, .9], [.9, s - .9], [s - .9, s - .9]]) g.out.push(`<circle cx="${+(e.x + dx).toFixed(2)}" cy="${+g.Y(e.y + dy).toFixed(2)}" r=".3" fill="#9aa39d"/>`);
+    return true;
+  }
   if (e.type === 'lc-hole') {
     g.out.push(`<circle cx="${e.x}" cy="${g.Y(e.y)}" r="${e.r}" ${attrs({fill:e.fill || '#fff', stroke:C.line, 'stroke-width':.25})}/>`);
     if (e.label) g.text(e.lx ?? e.x, e.ly ?? e.y + e.r + g.f * .5, e.label, {'text-anchor':e.anchor || 'middle', fill:e.color || C.dim, 'font-size':g.f * (e.size || .6)});
@@ -947,6 +976,7 @@ function renderFront(elev, view, state) {
   const detail = view.detail !== false && units.length === 1;
   const labels = view.labels ?? detail;
   const f = view.font ?? Math.max(5.4, W / 24);
+  LW = view.lineScale ?? 1;
   const chainUnit = view.chain != null ? units[view.chain] : detail ? units[0] : null;
   // elev.focus = [unitRef…]: the selected object's unit(s) in a run view — tinted, with their own height chain
   // (replacing the view's right/left chain, on the nearer side), width emphasised in hcuts and a w × d × h caption.
@@ -1246,6 +1276,7 @@ function svg(vb, out, label) {
 
 function render(elev, viewId, state, translate) {
   T = typeof translate === 'function' ? translate : (s => s);
+  LW = 1;
   ST = state;
   // frontStyle: 'slab' (preset) or {style:'slab', gap, lip, groove, lipAbove} overrides; set on the including elevation.
   const fsIn = elev.frontStyle;

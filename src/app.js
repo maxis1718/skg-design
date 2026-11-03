@@ -41,9 +41,9 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV console (R77): one scheme, console-a (owner's four-section console: end drawers, two bypass sliding doors); the toolbar hides with <2 versions. Old ?console=b|c|d fall back to A. Elevations 'objectId@console-x' would override the living objects' elevation; the console itself uses elevations['tv-console'].
-const LIVING_KEYS={a:'console-a'};
-selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
+// TV console (R79): four exhaust schemes console-a..d for the left (PS5) flipper bay, default D (fluted timber north end + NF-A14). Elevations 'tv-console@console-a|b|c'; D uses the base elevations['tv-console'].
+const LIVING_KEYS={a:'console-a',b:'console-b',c:'console-c',d:'console-d'};
+selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.d;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
 function layoutSpec(){return (project.layouts||[]).find(l=>l.id===layoutId);}
