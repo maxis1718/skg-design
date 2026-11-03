@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R80",
+    "revision": "R81",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4872,6 +4872,10 @@
     {
       "id": "C88",
       "text": "電視櫃改 225 三格：左格翻轉推入門（Knape & Vogt）放 PS5 Pro＋轉 90° 的 Switch 2＋網通托盤，中、右兩個 LEGRABOX 抽屜，右端不開孔；頂板固定一整片＋ㄇ字活動蓋；左側板出風 A–D（建議 D 木格柵）；清淨機回東牆。"
+    },
+    {
+      "id": "C89",
+      "text": "電視櫃修正：電視線出口移到ㄇ字蓋板下、電視插座 S-24 在電視背後；翻轉門兩側墊木留 0.3 縫；網通尺寸與變壓器位置照官方規格；門寬標 69.6。"
     }
   ],
   "measurement_policy": {
@@ -37553,7 +37557,7 @@
     {
       "id": "todo-living-av",
       "room": "living",
-      "text": "定電視櫃散熱方案：A 不開孔／B AIRPLATE T8／C 細縫／D 實木格柵（建議 D）",
+      "text": "定電視櫃散熱方案：A 不開孔／B AIRPLATE T8／C 細縫／D 白橡實木格柵（建議 D）",
       "research": "console-gaming",
       "status": "open"
     },
@@ -37699,7 +37703,7 @@
     {
       "id": "todo-living-console-finish",
       "room": "living",
-      "text": "選電視櫃面材：面板、頂板木紋色號（D 的實木格柵染色對這個樣板）",
+      "text": "選電視櫃面材：面板、頂板木紋色號（D 的白橡格柵染色對這個樣板）",
       "status": "open"
     },
     {
