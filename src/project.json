@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R77",
+    "revision": "R78",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4859,6 +4859,10 @@
     {
       "id": "C85",
       "text": "客廳：電視櫃 225 四格（兩端抽屜、中間兩扇橫推門、圓角 R 7.5、頂板線槽）；北端離玻璃 50；補窗簾盒 20 雙軌；標鋼琴角斜向走道 106。"
+    },
+    {
+      "id": "C86",
+      "text": "全屋油漆 Nippon Paint Wall Arte NP N 1865 P；主臥改貼壁布（型號待提供）。"
     }
   ],
   "measurement_policy": {
@@ -5351,6 +5355,7 @@
             }
           ],
           "build": [
+            "主臥牆面貼壁布（不上漆）；其他房間牆面 Nippon Paint Wall Arte NP N 1865 P",
             "兩衣櫃到頂 272，掛桿 195、層板底 203，上方放 SKUBB 兩層",
             "左櫃落地門 8–272 每扇 6 鉸鍊；右櫃高門 76–272",
             "層板底 24 V LED＋PIR 感應，驅動器放可拆踢腳內",
@@ -21100,8 +21105,8 @@
     {
       "id": "todo-home-paint",
       "room": "floor",
-      "text": "選全屋牆面油漆色號",
-      "status": "open"
+      "text": "全屋油漆：Nippon Paint Wall Arte NP N 1865 P（現居 Wispy Bits NP N 1859 P）",
+      "status": "done"
     },
     {
       "id": "todo-smart-unifi",
@@ -21285,6 +21290,12 @@
       "id": "todo-living-console-finish",
       "room": "living",
       "text": "選電視櫃面材：門、抽屜、頂板同款木紋（色號）",
+      "status": "open"
+    },
+    {
+      "id": "todo-master-wallcovering",
+      "room": "master",
+      "text": "主臥貼壁布：同現居款，提供型號",
       "status": "open"
     }
   ],
