@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R85",
+    "revision": "R86",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4892,6 +4892,10 @@
     {
       "id": "C93",
       "text": "電視櫃改 230 四格（每片 53.4，中縫對電視中線）：左格翻門放 PS5 Pro＋轉 90° 的 Switch 2，其餘三格抽屜加 Blum AMBIA-LINE 分隔；清淨機移到鋼琴旁。"
+    },
+    {
+      "id": "C94",
+      "text": "電視櫃立面圖字級改回跟全站一致，拿掉手機專用放大。"
     }
   ],
   "measurement_policy": {
