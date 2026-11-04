@@ -1288,16 +1288,8 @@ function liftSection(g, hx, hy, L, lift, f) {
   if (lift.label) g.text(hx + L * sn + 1.2, hy - L * cs + f * .9, lift.label, {fill:C.dim, 'font-size':f * .62});
 }
 
-// VIEW.legible (px, true = 9): the drawing never shrinks below the width at which its smallest label renders at that size;
-// on a narrow screen it scrolls sideways inside .elev-scroll instead (capped at VIEW.maxPx, default 1100).
-let VIEW = null;
 function svg(vb, out, label) {
-  const s = `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
-  if (!VIEW?.legible) return s;
-  const fonts = [...s.matchAll(/font-size="([\d.]+)"/g)].map(m => +m[1]).filter(v => v > 0), px = VIEW.legible === true ? 9 : VIEW.legible;
-  if (!fonts.length) return s;
-  const minPx = Math.min(VIEW.maxPx ?? 1100, Math.ceil(px * vb[2] / Math.min(...fonts)));
-  return `<div class="elev-scroll">${s.replace('<svg class="elev-svg"', `<svg class="elev-svg" data-min-px="${minPx}" style="min-width:${minPx}px"`)}</div>`;
+  return `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
 }
 
 function render(elev, viewId, state, translate) {
@@ -1308,7 +1300,6 @@ function render(elev, viewId, state, translate) {
   const fsIn = elev.frontStyle;
   FS = fsIn ? {...FRONT_STYLES.slab, ...(typeof fsIn === 'string' ? FRONT_STYLES[fsIn] : fsIn)} : null;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
-  VIEW = view;
   return view.kind === 'section' ? renderSection(elev, view, state) : view.kind === 'plan-top' ? renderPlanTop(elev, view) : renderFront(elev, view, state);
 }
 

@@ -11483,8 +11483,7 @@
           "width": 330.0,
           "height": 162,
           "noCeiling": true,
-          "font": 18,
-          "legible": 9,
+          "font": 7.4,
           "marginR": 1,
           "units": [
             {
@@ -11902,8 +11901,7 @@
           "width": 230.0,
           "height": 56,
           "noCeiling": true,
-          "font": 10,
-          "legible": 9,
+          "font": 4.8,
           "marginR": 1,
           "units": [
             {
@@ -12174,11 +12172,10 @@
           "kind": "plan-top",
           "depth": 45.0,
           "width": 230.0,
-          "font": 9.5,
+          "font": 4.6,
           "marginR": 1.4,
           "marginL": 1.4,
           "marginT": 2.6,
-          "legible": 9,
           "wallLabel": "",
           "extras": [
             {
@@ -12722,9 +12719,8 @@
           "labelRoom": 60,
           "height": 48,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.8,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "平時",
@@ -12974,9 +12970,8 @@
           "labelRoom": 64,
           "height": 56,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.65,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "蓋上",
@@ -13183,7 +13178,7 @@
           "width": 45.0,
           "height": 50,
           "noCeiling": true,
-          "font": 3.4,
+          "font": 1.1,
           "marginR": 1,
           "lineScale": 0.5,
           "units": [
@@ -20365,8 +20360,7 @@
           "width": 330.0,
           "height": 162,
           "noCeiling": true,
-          "font": 18,
-          "legible": 9,
+          "font": 7.4,
           "marginR": 1,
           "units": [
             {
@@ -20784,8 +20778,7 @@
           "width": 230.0,
           "height": 56,
           "noCeiling": true,
-          "font": 10,
-          "legible": 9,
+          "font": 4.8,
           "marginR": 1,
           "units": [
             {
@@ -21056,11 +21049,10 @@
           "kind": "plan-top",
           "depth": 45.0,
           "width": 230.0,
-          "font": 9.5,
+          "font": 4.6,
           "marginR": 1.4,
           "marginL": 1.4,
           "marginT": 2.6,
-          "legible": 9,
           "wallLabel": "",
           "extras": [
             {
@@ -21604,9 +21596,8 @@
           "labelRoom": 60,
           "height": 48,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.8,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "平時",
@@ -21856,9 +21847,8 @@
           "labelRoom": 64,
           "height": 56,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.65,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "蓋上",
@@ -22065,7 +22055,7 @@
           "width": 45.0,
           "height": 50,
           "noCeiling": true,
-          "font": 3.4,
+          "font": 1.1,
           "marginR": 1,
           "lineScale": 0.5,
           "units": [
@@ -22384,8 +22374,7 @@
           "width": 330.0,
           "height": 162,
           "noCeiling": true,
-          "font": 18,
-          "legible": 9,
+          "font": 7.4,
           "marginR": 1,
           "units": [
             {
@@ -22803,8 +22792,7 @@
           "width": 230.0,
           "height": 56,
           "noCeiling": true,
-          "font": 10,
-          "legible": 9,
+          "font": 4.8,
           "marginR": 1,
           "units": [
             {
@@ -23075,11 +23063,10 @@
           "kind": "plan-top",
           "depth": 45.0,
           "width": 230.0,
-          "font": 9.5,
+          "font": 4.6,
           "marginR": 1.4,
           "marginL": 1.4,
           "marginT": 2.6,
-          "legible": 9,
           "wallLabel": "",
           "extras": [
             {
@@ -23623,9 +23610,8 @@
           "labelRoom": 60,
           "height": 48,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.8,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "平時",
@@ -23875,9 +23861,8 @@
           "labelRoom": 64,
           "height": 56,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.65,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "蓋上",
@@ -24084,7 +24069,7 @@
           "width": 45.0,
           "height": 50,
           "noCeiling": true,
-          "font": 3.4,
+          "font": 1.1,
           "marginR": 1,
           "lineScale": 0.5,
           "units": [
@@ -24431,8 +24416,7 @@
           "width": 330.0,
           "height": 162,
           "noCeiling": true,
-          "font": 18,
-          "legible": 9,
+          "font": 7.4,
           "marginR": 1,
           "units": [
             {
@@ -24850,8 +24834,7 @@
           "width": 230.0,
           "height": 56,
           "noCeiling": true,
-          "font": 10,
-          "legible": 9,
+          "font": 4.8,
           "marginR": 1,
           "units": [
             {
@@ -25122,11 +25105,10 @@
           "kind": "plan-top",
           "depth": 45.0,
           "width": 230.0,
-          "font": 9.5,
+          "font": 4.6,
           "marginR": 1.4,
           "marginL": 1.4,
           "marginT": 2.6,
-          "legible": 9,
           "wallLabel": "",
           "extras": [
             {
@@ -25670,9 +25652,8 @@
           "labelRoom": 60,
           "height": 48,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.8,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "平時",
@@ -25922,9 +25903,8 @@
           "labelRoom": 64,
           "height": 56,
           "noCeiling": true,
-          "font": 5.6,
+          "font": 2.65,
           "marginL": 1.4,
-          "legible": 8.5,
           "depthLabel": "45",
           "stateNames": {
             "closed": "蓋上",
@@ -26131,7 +26111,7 @@
           "width": 45.0,
           "height": 50,
           "noCeiling": true,
-          "font": 3.4,
+          "font": 1.1,
           "marginR": 1,
           "lineScale": 0.5,
           "units": [
