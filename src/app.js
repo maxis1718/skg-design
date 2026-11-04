@@ -84,9 +84,12 @@ function elevationBlock(){
  // specFirst: zones of the focused unit lead the spec list (run elevations shared by several objects).
  // A view may carry its own spec rows + verdict (hob plan views comparing products); plan views have no door states.
  const rank=z=>{const i=(e.specFirst||[]).indexOf(z.zone);return i<0?1e3:i;},spec=view.spec||[...e.spec].sort((a,b)=>rank(a)-rank(b)),plan=view.kind==='plan-top';
- return `<div class="elev-block" id="elevation"><div class="elev-head"><div><h3>${esc(e.title)}</h3>${e.viewpoint?`<p class="elev-viewpoint">${esc(e.viewpoint)}</p>`:''}</div><div class="elev-controls"><div class="seg" role="group" aria-label="${t('立面視圖')}">${e.views.map(v=>`<button class="tool ${v.id===view.id?'active':''}" data-elev-view="${esc(v.id)}" aria-pressed="${v.id===view.id}">${esc(v.name)}</button>`).join('')}</div>${plan&&!view.stateNames?'':`<div class="seg" role="group" aria-label="${t('門片狀態')}">${e.states.map(st=>`<button class="tool ${st.id===elevState?'active':''}" data-elev-state="${esc(st.id)}" aria-pressed="${st.id===elevState}">${esc(names[st.id]||st.name)}</button>`).join('')}</div>`}</div></div><div class="elev-grid"><figure class="elev-figure">${window.SKGElevation.render(e,view.id,elevState,t)}${(plan?view.caption:e.ceiling_note)?`<figcaption>${esc(plan?view.caption:e.ceiling_note)}</figcaption>`:''}</figure><div class="elev-spec">${e.risks?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t('需評估')}</h4><ul class="elev-risks">${e.risks.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}${view.verdict?`<p class="elev-verdict">${esc(view.verdict)}</p>`:''}<div class="detail-subhead"><h3>${view.spec?t('規格'):t('分區 · 由上到下')}</h3></div>${spec.map(z=>`<div class="elev-row${(e.specFirst||[]).includes(z.zone)?' is-focus':''}"><div><b>${esc(z.zone)}</b><span>${esc(z.h)}</span></div><p>${esc(z.note)}</p></div>`).join('')}${e.hardware?.length?`<h4>${t('五金與機電')}</h4>${list(e.hardware)}`:''}${e.rationale?.length?`<h4>${t('設計說明')}</h4>${list(e.rationale)}`:''}${e.open_questions?.length?`<h4>${t('待確認')}</h4><p class="elev-open">${e.open_questions.map(esc).join(t('、'))}</p>`:''}</div></div></div>`;
+ // R91: an object's elevation comes straight under the plan; its size/model sit at the top of the right column, the way back in the header.
+ const o=objectId&&object(objectId),r=o&&room(o.room_id),back=r?`<button type="button" class="elev-back" data-open-room="${esc(r.id)}">← ${esc(tf('回到{name}',{name:r.name}))}</button>`:'';
+ return `<div class="elev-block" id="elevation"><div class="elev-head"><div>${back}<h3>${esc(e.title)}</h3>${e.viewpoint?`<p class="elev-viewpoint">${esc(e.viewpoint)}</p>`:''}</div><div class="elev-controls"><div class="seg" role="group" aria-label="${t('立面視圖')}">${e.views.map(v=>`<button class="tool ${v.id===view.id?'active':''}" data-elev-view="${esc(v.id)}" aria-pressed="${v.id===view.id}">${esc(v.name)}</button>`).join('')}</div>${plan&&!view.stateNames?'':`<div class="seg" role="group" aria-label="${t('門片狀態')}">${e.states.map(st=>`<button class="tool ${st.id===elevState?'active':''}" data-elev-state="${esc(st.id)}" aria-pressed="${st.id===elevState}">${esc(names[st.id]||st.name)}</button>`).join('')}</div>`}</div></div><div class="elev-grid"><figure class="elev-figure">${window.SKGElevation.render(e,view.id,elevState,t)}${(plan?view.caption:e.ceiling_note)?`<figcaption>${esc(plan?view.caption:e.ceiling_note)}</figcaption>`:''}</figure><div class="elev-spec">${o?objInfo(o,e):''}${e.risks?.length?`<div class="elev-risk-callout" role="note"><h4 class="elev-risk-title">${t('需評估')}</h4><ul class="elev-risks">${e.risks.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}${view.verdict?`<p class="elev-verdict">${esc(view.verdict)}</p>`:''}<div class="detail-subhead"><h3>${view.spec?t('規格'):t('分區 · 由上到下')}</h3></div>${spec.map(z=>`<div class="elev-row${(e.specFirst||[]).includes(z.zone)?' is-focus':''}"><div><b>${esc(z.zone)}</b><span>${esc(z.h)}</span></div><p>${esc(z.note)}</p></div>`).join('')}${e.hardware?.length?`<h4>${t('五金與機電')}</h4>${list(e.hardware)}`:''}${e.rationale?.length?`<h4>${t('設計說明')}</h4>${list(e.rationale)}`:''}${e.open_questions?.length?`<h4>${t('待確認')}</h4><p class="elev-open">${e.open_questions.map(esc).join(t('、'))}</p>`:''}</div></div></div>`;
 }
 function bindElevation(){
+ $$('#elevation [data-open-room]').forEach(b=>b.onclick=()=>selectRoom(b.dataset.openRoom));
  $$('[data-elev-view]').forEach(b=>b.onclick=()=>{elevView[elevId()]=b.dataset.elevView;refreshElevation();});
  $$('[data-elev-state]').forEach(b=>b.onclick=()=>{elevState=b.dataset.elevState;refreshElevation();});
 }
@@ -406,15 +409,33 @@ function roomCard(r){
   return `<article class="room-card">${tag?`<p class="rc-tagline">${esc(tag)}</p>`:''}<div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
 }
 function powerList(pts){return `<section class="rc-sec rc-power"><h3>${esc(t('電點'))} <span class="rc-n">${pts.length}</span></h3><ul>${pts.map(p=>`<li><button type="button" class="rc-pt" data-room-power="${esc(p.id)}"><i class="pk pk-${esc(p.kind)}" aria-hidden="true"></i><span class="rc-pt-code">${esc(p.code)}</span><span class="rc-pt-name">${esc(p.name)}</span><span class="rc-pt-mount">${esc(powerMount(p))}</span></button></li>`).join('')}</ul></section>`;}
-function objectCard(o){
-  const r=room(o.room_id),a=actual(o),h=a.h??o.dimensions.h?.cm,dims=`${size(o)}${h!=null?` × ${num(h)}`:''}`;
+// R91: object facts (size, brand/model, extra notes). With an elevation they sit compactly at the top of its right column
+// (name only when the elevation title doesn't already carry it; no internal code; note lines that only restate size/model dropped).
+function objFacts(o){
+  const a=actual(o),h=a.h??o.dimensions.h?.cm,dims=`${size(o)}${h!=null?` × ${num(h)}`:''}`;
   const model=a.model&&a.brand&&String(a.model).toLowerCase().includes(String(a.brand).toLowerCase())?a.model:[a.brand,a.model].filter(Boolean).join(' ');
-  return `<article class="obj-card"><p class="eyebrow">${esc(o.code)}</p><h2>${esc(o.name)}</h2><div class="obj-size">${dims}<span>cm</span></div>${model?`<p class="obj-model">${esc(model)}</p>`:''}${o.source_note?`<p class="obj-note">${esc(o.source_note)}</p>`:''}${riskBox(o.risks)}<button type="button" class="obj-back" data-open-room="${esc(r.id)}">← ${esc(tf('回到{name}',{name:r.name}))}</button></article>`;
+  const words=[model,o.name].join(' ').toLowerCase().split(/[\s·（）()：:，,]+/).filter(Boolean).sort((x,y)=>y.length-x.length);
+  const notes=String(o.source_note||'').split('\n').map(x=>x.replace(/^[・•\-]\s*/,'').trim()).filter(x=>{if(!x)return false;let r=x.toLowerCase().replace(/\d+(?:\.\d+)?(?:\s*×\s*\d+(?:\.\d+)?)+/g,'');for(const w of words)r=r.split(w).join('');r=r.replace(/[\s·・，,。（）()：:\-–]+/g,'');return /\d/.test(r)||r.length>4;});
+  return {dims,model,notes};
+}
+// ctx = the elevation (title + spec): its drawing and zone list carry the detail, so only note lines with a number it doesn't show stay.
+function objInfo(o,ctx){
+  const title=ctx.title,nums=x=>String(x).match(/\d+(?:\.\d+)?/g)||[],known=new Set(nums(JSON.stringify([ctx.spec,ctx.views?.map(v=>v.spec),ctx.hardware,ctx.rationale]||'')));
+  const f=objFacts(o);nums(f.dims).forEach(v=>known.add(v));f.notes=f.notes.filter(x=>{const n=nums(x);return !ctx.spec||n.some(v=>!known.has(v));});
+  const segs=String(title||'').split(' · '),base=o.name.replace(/\s+[A-Z/]+$/,'');
+  const named=[o.name,base,o.name.split(' · ')[0]].some(n=>segs.some(g=>g.endsWith(n)));
+  const model=f.model&&!o.name.includes(f.model)?f.model:'';
+  return `<div class="obj-info">${named?'':`<b class="oi-name">${esc(o.name)}</b>`}<div class="oi-size">${f.dims}<span>cm</span></div>${model?`<p class="oi-model">${esc(model)}</p>`:''}${f.notes.length?`<ul class="oi-notes">${f.notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${riskBox(o.risks)}</div>`;
+}
+// Objects without an elevation: the same facts as a small card, with the way back to the room.
+function objectCard(o){
+  const r=room(o.room_id);
+  return `<article class="obj-card obj-compact"><div class="oc-head"><h3>${esc(o.name)}</h3><button type="button" class="obj-back" data-open-room="${esc(r.id)}">← ${esc(tf('回到{name}',{name:r.name}))}</button></div>${objInfo(o,{title:o.name})}</article>`;
 }
 function renderDetails(){
   const box=$('#details-content');
   if(isHome(roomId)){$('#elevation-slot').innerHTML='';box.innerHTML=homeCards();}
-  else{box.innerHTML=objectId&&object(objectId)?objectCard(object(objectId)):roomCard(room(roomId));$('#elevation-slot').innerHTML=elevationBlock();bindElevation();}
+  else{const o=objectId&&object(objectId),elev=elevationBlock();box.innerHTML=o?(elev?'':objectCard(o)):roomCard(room(roomId));$('#elevation-slot').innerHTML=elev;bindElevation();}
   $$('#details-content [data-open-room]').forEach(b=>b.onclick=()=>{const home=isHome(roomId);selectRoom(b.dataset.openRoom);if(home)scrollTo($('#main-panel'));});
   $$('#details-content [data-open-object]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.openObject);scrollTo($('#elevation')||$('#details-content'));});
   $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
