@@ -1561,7 +1561,6 @@
   "餐桌到過道": "Dining table to passage",
   "沙發到窗簾盒": "Sofa to curtain pocket",
   "餐桌到窗簾盒": "Dining table to curtain pocket",
-  "清淨機插座移到鋼琴旁凹位；原插座留作備用": "Purifier socket moves to the recess beside the piano; the old socket stays as a spare",
   "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器": "・The network cable from the fibre box comes out here and runs behind the console to the router in the left bay",
   "56.8–88.4；現有象印電子鍋（圖為 NS-ZAQ10）＋飯匙": "56.8–88.4; existing Zojirushi rice cooker (drawn as NS-ZAQ10) + paddle",
   "開口 56.5×60×55；現有烤箱（圖為 Bosch HBA534ES0A），兩側飾板封平。": "Opening 56.5×60×55; existing oven (drawn as Bosch HBA534ES0A), side fillers flush.",
@@ -1726,6 +1725,8 @@
   "全拉抽屜，各配分隔框＋止滑墊": "Full-extension drawers, each with a divider frame + anti-slip mat",
   "電視電源線能不能拔下": "Whether the TV power cord is detachable",
   "電視櫃抽屜後面留 13.1 走線空間通到兩端；中縫隔板在蓋板下整段退 10（插座在這裡），其餘隔板後下角開 10 × 8 缺口": "Behind the console drawers, a 13.1 cable space runs end to end; the centre partition under the lid is set back 10 full height (the socket sits there), the other partitions get a 10 × 8 notch at the rear bottom corner",
-  "電視櫃抽屜後面留 13.1 走線空間通到兩端；隔板後下角開 10 × 8 缺口": "Behind the console drawers, a 13.1 cable space runs end to end; each partition gets a 10 × 8 notch at the rear bottom corner"
+  "電視櫃抽屜後面留 13.1 走線空間通到兩端；隔板後下角開 10 × 8 缺口": "Behind the console drawers, a 13.1 cable space runs end to end; each partition gets a 10 × 8 notch at the rear bottom corner",
+  "清淨機插座在鋼琴旁凹位": "Purifier socket in the alcove beside the piano",
+  "點物件後直接看立面圖，尺寸型號放右欄；電視櫃抽屜改短、後方留通長走線（隔板開缺口），俯視圖加拉開抽屜；分區清單刪掉重複與歷史說明。": "Clicking an object now opens its elevation first, with size and model in the side column; console drawers shortened for a full-length rear cable channel (notched partitions), top view gains a drawer-open state; zone lists cut repeats and history."
  }
 }

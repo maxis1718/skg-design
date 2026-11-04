@@ -232,14 +232,22 @@ button.rc-pt:hover{background:var(--wash);filter:none}
 .rc-pt-name{min-width:0;overflow-wrap:anywhere}
 .rc-pt-mount{color:var(--muted);font-size:12.5px;white-space:nowrap}
 .rc-pt .pk{width:10px;height:10px}
-.obj-card h2{font-size:21px;line-height:1.45;margin:4px 0 2px}
-.obj-card .eyebrow{margin:0}
-.obj-size{font-size:28px;line-height:1.3;letter-spacing:-.5px;font-variant-numeric:tabular-nums;margin:6px 0 4px}
-.obj-size span{font-size:13px;letter-spacing:0;color:var(--muted);margin-left:4px}
-.obj-model{margin:0 0 6px;font-size:14px;font-weight:500;color:var(--teal);overflow-wrap:anywhere}
-.obj-note{margin:0 0 10px;font-size:14.5px;line-height:1.75;color:#525f4c;white-space:pre-line;max-width:42em}
-.obj-card .elev-risk-callout{margin:10px 0 4px;max-width:42em}
-.obj-back{margin-top:10px;border:1px solid #bacbb0;border-radius:3px;background:transparent;color:#466040;padding:8px 12px;font-size:14px}
+/* R91: object facts — compact block at the top of the elevation's right column; small card when there is no elevation */
+.obj-info{margin:0 0 16px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.obj-compact .obj-info{margin:0;padding:0;border:0}
+.oi-name{display:block;font-size:16px;font-weight:600;line-height:1.45;margin:0 0 2px}
+.oi-size{font-size:23px;line-height:1.3;font-variant-numeric:tabular-nums;letter-spacing:-.2px}
+.oi-size span{font-size:13px;color:var(--muted);margin-left:4px;letter-spacing:0}
+.oi-model{margin:2px 0 0;font-size:14px;font-weight:500;color:var(--teal);line-height:1.5;overflow-wrap:anywhere}
+.elev-spec ul.oi-notes,.oi-notes{margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:14px;line-height:1.65}
+.oi-notes li{margin:0 0 2px}
+.obj-info .elev-risk-callout{margin:10px 0 0}
+.obj-compact{max-width:560px;padding:14px 18px 16px!important}
+.oc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 4px}
+.oc-head h3{font-size:17px;font-weight:600;line-height:1.45}
+.obj-back,.elev-back{border:0;background:transparent;color:#466040;padding:2px 0;font-size:13px;white-space:nowrap}
+.obj-back:hover,.elev-back:hover{text-decoration:underline;filter:none}
+.elev-back{display:block;margin:-4px 0 4px}
 .home-rooms{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:22px}
 .home-room{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px 16px 14px;color:var(--ink);min-width:0;display:flex;flex-direction:column;gap:6px}
 .home-room:hover{background:#eaf0e5;filter:none}
