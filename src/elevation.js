@@ -1045,6 +1045,7 @@ function renderFront(elev, view, state) {
 // Side section (depth axis horizontal; wall at x=0, room to the right). Pull-outs extend when state=open.
 // unit.pullout === 'whole' moves every band above the plinth (and the full-height front) together.
 // view.depthLabel overrides the default depth dimension text (cabinet depth), e.g. for a bed platform.
+// view.marginL (× font) overrides the left margin (default ≥ 6.2 font for level labels) — e.g. a concept section without levels.
 function renderSection(elev, view, state) {
   const u = elev.units[view.ref], B = bands(u), D = u.d, t = u.board ?? 1.8, ext = view.extension ?? 55;
   const whole = u.pullout === 'whole', open = state === 'open';
@@ -1053,7 +1054,7 @@ function renderSection(elev, view, state) {
   // Label room: at least view.labelRoom (default 16), widened so the longest tier / drawer label stays inside the drawing.
   const longest = Math.max(0, ...B.filter(b => b.kind === 'tier' || b.kind === 'drawers' || b.kind === 'cabinet' || b.kind === 'rack' || b.kind === 'toprack').map(b => em(b.short || b.label || '')));
   const W = D + ext + Math.max(view.labelRoom ?? 16, longest * f * .74 + 4);
-  const m = {l: Math.max(f * 6.2, levelMargin(view, f)) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
+  const m = {l: (view.marginL != null ? f * view.marginL : Math.max(f * 6.2, levelMargin(view, f))) + (view.wallAt ? 4 - view.wallAt : 0), r: view.chain ? f * 6 : f * 2, t: f * 2.4, b: f * 3.6};
   const g = canvas(H, f);
   levels(g, view, -m.l + f * .4, W);
   const wx = view.wallAt ?? 0; // structural wall face; a lining (feature-wall build-up) may sit between it and the cabinet back (x=0)
