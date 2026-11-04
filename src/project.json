@@ -1487,13 +1487,13 @@
           },
           {
             "label": "曬衣架",
-            "value": "重選中：SMARTLUX LITE 113 × 40 攤不開被子",
+            "value": "YU HOME SMARTLUX LITE 113 × 40 · 重選中",
             "status": "建議",
             "object": "drying-rack"
           },
           {
             "label": "鞦韆",
-            "value": "天花吊點 × 2，間距 48 · 座椅未選",
+            "value": "天花吊點 × 2，間距 48",
             "status": "建議",
             "object": "swing-hooks"
           }
@@ -1504,18 +1504,13 @@
             "value": "20"
           },
           {
-            "label": "鞦韆座椅兩側",
-            "value": "≈ 58"
-          },
-          {
             "label": "鞦韆前後擺幅",
             "value": "≥ 100"
           }
         ],
         "build": [
           "鞦韆吊點錨進結構樓板，每點額定 ≥ 150 kg",
-          "曬衣架長邊垂直玻璃門、置中於陽台深度，鎖混凝土天花",
-          "曬衣架電源從 S-09 迴路走 PVC 線槽上天花，線槽漆天花色"
+          "曬衣架鎖混凝土天花"
         ]
       }
     },
@@ -1612,7 +1607,7 @@
       "uncertainty_cm": null,
       "notes": "Length190cm annotated; depth60cm scaled. Crossed cabinet symbol, actual function/material not given.",
       "name": "走道口 190 櫃",
-      "source_note": "平面圖標 190 × 60 打叉櫃體，在走道口、鋼琴旁，用途未標",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 190,
@@ -1692,7 +1687,7 @@
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
-      "source_note": "220 × 45 × 40，三片門一樣寬\n左格翻門：PS5 Pro、Switch 2，下層放網路設備；右兩格抽屜，最右格較深\n底部內縮，暖光底燈",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 220,
@@ -1772,7 +1767,7 @@
       "notes": "Dahlia Sintered Stone Dining Table 150 x 90 x 75 cm (user-specified). Long axis N-S. R08: whole dining set moved toward the balcony so the north edge is 50 cm from the sliding-door glass line y171.64 (nobody walks there); south edge 125.1 cm to the corridor line y263.8 (was 87.6). Chairs: 2 per long side at quarter points; Stokke Tripp Trapp (46 W x 49 D x 79 H cm) at the balcony end drawn tucked (30 cm out; <= 40 when pulled out, leaving >= 10 to the glass); no chair at the corridor end.",
       "physical_drawing_indices": [],
       "name": "餐桌",
-      "source_note": "・Dahlia Sintered Stone Dining Table 150 × 90 × 75（岩板）\n・兒童椅 Stokke Tripp Trapp 46 × 49 × 79",
+      "source_note": "兒童椅 Stokke Tripp Trapp 46 × 49 × 79",
       "dimensions": {
         "w": {
           "cm": 150,
@@ -1812,7 +1807,7 @@
       "uncertainty_cm": null,
       "notes": "YU HOME SMARTLUX LITE ceiling rack, 113 x 40 x 6.6 cm, one-piece hanging frame (no telescopic rods), no fan or heater. Long axis N-S across the balcony depth, west edge kept 20 cm from the cabinet doors, centred in depth (y144.04). Overhead: dashed.",
       "name": "曬衣架",
-      "source_note": "YU HOME SMARTLUX LITE 113 × 40 × 6.6\n一體框不伸縮，無風扇、無電熱",
+      "source_note": "一體框不伸縮，無風扇、無電熱",
       "dimensions": {
         "w": {
           "cm": 113,
@@ -1831,10 +1826,7 @@
         "model": "SMARTLUX LITE"
       },
       "code": "LIV-06",
-      "mount": "ceiling",
-      "risks": [
-        "曬衣架在收納櫃那端、風扇在陽台中間：衣物升到頂時與扇葉的距離待確認"
-      ]
+      "mount": "ceiling"
     },
     {
       "id": "living-tv",
@@ -1849,21 +1841,21 @@
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
       "nominal_width_cm": 168.5,
-      "nominal_depth_cm": 2.7,
-      "height_cm": 96.5,
+      "nominal_depth_cm": 7.3,
+      "height_cm": 95.8,
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "Xiaomi TV S Pro Mini LED 75 2026 (tentative), 1667 x 958 x 73 mm, Vogel's TVM 5605 wall mount (~88 mm off the wall), centre 110.",
       "mount": "wall",
       "name": "電視",
-      "source_note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）166.7 × 95.8 × 7.3\nVogel's TVM 5605 壁掛，離牆約 8.8",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 166.7,
           "status": "design"
         },
         "d": {
-          "cm": 2.7,
+          "cm": 7.3,
           "status": "design"
         }
       },
@@ -3915,7 +3907,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "105 W x 65 D x 104.5 H cabinet moved from the master balcony to the living-balcony NW corner: long side 105 against the west wall x428.4 (N-S, outer edge y120.64 to just north of the Dreame dock y150.44), 65 deep, front facing east.",
-      "source_note": "105 × 65 × 104.5\n長邊貼陽台端牆"
+      "source_note": ""
     },
     {
       "id": "swing-hooks",
@@ -3950,7 +3942,7 @@
       "uncertainty_cm": null,
       "mount": "ceiling",
       "notes": "Two ceiling hook points 48 cm apart on a N-S line, centre 120 cm from the east balcony wall x584.4 and mid-depth of the main band (y144.04, ~83 cm from the outer edge). Swing travels E-W along the balcony. Seat 50 x 40 is schematic; hook spacing slightly wider than the seat (engineerfix.com); clearance >= 50 each side (Lillagunga Classic manual), Freifrau asks 70 sides / 100 front-back. Anchor into the structural RC slab, rating >= 2x user + seat.",
-      "source_note": "吊點 × 2 間距 48，鞦韆沿陽台長邊擺\n中心距電視那端牆 120，在陽台深度中線"
+      "source_note": "中心距電視那端牆 120，在陽台深度中線"
     },
     {
       "id": "air-purifier",
@@ -3980,7 +3972,7 @@
         "brand": "Electrolux",
         "model": "UltimateHome 300"
       },
-      "source_note": "・23.4 × 23.4 × 40.5，鋼琴旁凹位，離鋼琴、牆、過道角各 10\n・背後插座 S-07（離地 30）",
+      "source_note": "離鋼琴、牆、過道角各 10",
       "status": "user-design",
       "notes": "R85 (owner decision): moved from the east wall into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so it stays out of the walking line. Narrowest point of the entry->sofa path = purifier NE corner to the KC62: scheme A 87.4 / B 85.4; passage corner to the KC62: A 92.9 / B 87.3 (R89: KEF stands and KC62 pushed toward the wall)."
     },
@@ -4017,7 +4009,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass = 126.3 north of the TV axis (scheme A: 160; scheme B 230: 131.3 north of 165) (mirror of the right stand); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50 in both schemes), the exhaust side of the game bay (D: slats at 1.0 m/s, room +6.5 K at the face). Pair 252.6 apart (B: 262.6); stands square to the wall. Rear 8 cm from the feature-wall face (R89: moved 6 toward the wall; LS50 Wireless II is rear-ported - KEF gives no minimum and its app compensates from '< 10 cm' to '> 50 cm', so set the KEF Connect wall distance to < 10 cm / Wall Mode; 8 leaves room for the rear-panel plugs to turn down the S2 column), front 5.9 behind the console front (the Uni-Q at ~81 sits well above the 40 console top, so nothing shadows it). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
-      "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 33.7，背離牆 8\nKEF Connect 離牆距離選 < 10 cm"
+      "source_note": "背離牆 8"
     },
     {
       "id": "kef-speaker-r",
@@ -4052,7 +4044,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 286.3 cm from the glass (scheme A: TV axis 160 + 126.3, mirror of the left stand), base 275-297.6 = 5 clear of the console south end (270); scheme B 230: 296.3; rear 8 cm from the feature-wall face (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18.",
-      "source_note": "主喇叭：KEF LS50 Wireless II on KEF S2 Floor Stand\n接 HDMI eARC、網路、KC62"
+      "source_note": "背離牆 8；KEF Connect 離牆距離選 < 10 cm"
     },
     {
       "id": "kef-sub",
@@ -4087,7 +4079,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), scheme A: 306.3-331.9 cm from the glass, 8.7 from the primary stand base; 92.9 to the entry-passage corner, 87.4 to the purifier in the piano alcove (scheme B 230: 316.3-341.9, 87.3 / 85.4); the side driver facing the right stand base is 8.7 from it (KEF: >= 7.7). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
-      "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n背離牆 6，背板 EQ 設 Wall；RCA 接主喇叭 Sub Out"
+      "source_note": "背離牆 6，背板 EQ 設 Wall；RCA 接主喇叭 Sub Out"
     },
     {
       "id": "living-curtain",
@@ -4121,7 +4113,7 @@
       "mount": "ceiling",
       "status": "user-design",
       "notes": "R55/R77: ceiling curtain pocket 20 deep along the whole balcony glass (560), double track — sheer on the glass side (≈6), blackout inside (≈14). All living clearances are measured from the pocket face (20 from the glass). Curtains manual (R69), hem 1 above the floor.",
-      "source_note": "天花窗簾盒深 20、沿陽台玻璃全長\n雙軌：紗簾靠玻璃、遮光在內；手動，離地 1"
+      "source_note": "紗簾靠玻璃、遮光在內；手動，離地 1"
     },
     {
       "id": "robot-vacuum",
@@ -4151,7 +4143,7 @@
         "brand": "Dreame",
         "model": "H14 Ultra"
       },
-      "source_note": "・含底座 35 × 35，背貼陽台端牆、牆垛旁，不碰玻璃門\n・背後低位插座（S-09）",
+      "source_note": "",
       "status": "user-design"
     },
     {
@@ -5542,7 +5534,7 @@
             },
             {
               "label": "五金",
-              "value": "抽屜 Blum LEGRABOX pure · BLUMOTION（中 NL 300、右 NL 400）；翻門 Knape & Vogt 8070PEZ-14",
+              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
               "status": "定",
               "object": "tv-console"
             },
@@ -5566,7 +5558,7 @@
             },
             {
               "label": "清淨機",
-              "value": "Electrolux UltimateHome 300 · 鋼琴旁凹位",
+              "value": "Electrolux UltimateHome 300",
               "status": "定",
               "object": "air-purifier"
             },
@@ -5584,51 +5576,19 @@
             },
             {
               "label": "櫃體",
-              "value": "190 × 60 · 用途未定",
+              "value": "190 × 60",
               "status": "建議",
               "object": "living-cabinet"
             }
           ],
           "clearances": [
             {
-              "label": "電視櫃左側到窗簾盒／玻璃",
-              "value": "30／50"
-            },
-            {
               "label": "喇叭腳架到電視櫃兩端",
               "value": "各 5（左腳架離窗簾盒 2.4）"
             },
             {
-              "label": "喇叭、重低音背後到牆",
-              "value": "8／6（App 設靠牆）"
-            },
-            {
               "label": "電視中心離玻璃",
               "value": "160（沙發中心 162.5）"
-            },
-            {
-              "label": "喇叭中心距",
-              "value": "252.6"
-            },
-            {
-              "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "113.0（到電視櫃角 119.9）"
-            },
-            {
-              "label": "過道口牆角到重低音",
-              "value": "92.9"
-            },
-            {
-              "label": "清淨機到重低音（最窄）",
-              "value": "87.4（清淨機離鋼琴、牆各 10）"
-            },
-            {
-              "label": "沙發到電視櫃",
-              "value": "90（翻門打開時少 30）"
-            },
-            {
-              "label": "沙發到過道",
-              "value": "57.6"
             },
             {
               "label": "餐桌到過道",
@@ -5637,23 +5597,13 @@
             {
               "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
-            },
-            {
-              "label": "沙發到窗簾盒",
-              "value": "37.5"
-            },
-            {
-              "label": "餐桌到窗簾盒",
-              "value": "30"
             }
           ],
           "build": [
-            "牆插：左格背牆一組 3 × 13A 雙孔（一個帶 USB），給遊戲機和網路設備；中格後面、蓋板正下方一組插座＋網路孔，給電視和底燈",
             "暗管：電視背後一條直下到蓋板下（電視電源線＋HDMI）；另一條在牆內連兩個喇叭腳架，在蓋板下開口",
-            "清淨機插座在鋼琴旁凹位",
             "電視牆：木作底板＋淡灰壁紙到天花；壁掛位置加夾板補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "電視櫃中格抽屜後面留 13.1 走線空間通到左格，兩格間隔板後下角開 10 × 8 缺口；最右格後面不走線，裝背板，抽屜做深",
+            "電視櫃中格抽屜後面留走線空間通到左格，兩格間隔板後下角開 10 × 8 缺口；最右格裝背板，抽屜做深",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM＋溫控"
           ]
@@ -5776,7 +5726,7 @@
             },
             {
               "label": "五金",
-              "value": "抽屜 Blum LEGRABOX pure · BLUMOTION（NL 300 × 2、右 NL 400）；翻門 Knape & Vogt 8070PEZ-14",
+              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
               "status": "定",
               "object": "tv-console"
             },
@@ -5800,7 +5750,7 @@
             },
             {
               "label": "清淨機",
-              "value": "Electrolux UltimateHome 300 · 鋼琴旁凹位",
+              "value": "Electrolux UltimateHome 300",
               "status": "定",
               "object": "air-purifier"
             },
@@ -5818,51 +5768,19 @@
             },
             {
               "label": "櫃體",
-              "value": "190 × 60 · 用途未定",
+              "value": "190 × 60",
               "status": "建議",
               "object": "living-cabinet"
             }
           ],
           "clearances": [
             {
-              "label": "電視櫃左側到窗簾盒／玻璃",
-              "value": "30／50"
-            },
-            {
               "label": "喇叭腳架到電視櫃兩端",
               "value": "各 5（左腳架離窗簾盒 2.4）"
             },
             {
-              "label": "喇叭、重低音背後到牆",
-              "value": "8／6（App 設靠牆）"
-            },
-            {
               "label": "電視中心離玻璃",
               "value": "165（沙發中心 162.5）"
-            },
-            {
-              "label": "喇叭中心距",
-              "value": "262.6"
-            },
-            {
-              "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "111.0（到電視櫃角 115.3）"
-            },
-            {
-              "label": "過道口牆角到重低音",
-              "value": "87.3"
-            },
-            {
-              "label": "清淨機到重低音（最窄）",
-              "value": "85.4（清淨機離鋼琴、牆各 10）"
-            },
-            {
-              "label": "沙發到電視櫃",
-              "value": "90（翻門打開時少 30）"
-            },
-            {
-              "label": "沙發到過道",
-              "value": "57.6"
             },
             {
               "label": "餐桌到過道",
@@ -5871,23 +5789,13 @@
             {
               "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
-            },
-            {
-              "label": "沙發到窗簾盒",
-              "value": "37.5"
-            },
-            {
-              "label": "餐桌到窗簾盒",
-              "value": "30"
             }
           ],
           "build": [
-            "牆插：左格背牆一組 3 × 13A 雙孔（一個帶 USB），給遊戲機和網路設備；中間兩格後面、蓋板正下方一組插座＋網路孔，給電視和底燈",
             "暗管：電視背後一條直下到蓋板下（電視電源線＋HDMI）；另一條在牆內連兩個喇叭腳架，在蓋板下開口",
-            "清淨機插座在鋼琴旁凹位",
             "電視牆：木作底板＋淡灰壁紙到天花；壁掛位置加夾板補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "電視櫃中間兩格抽屜後面留 13.1 走線空間通到左格；中縫隔板在蓋板下整段退 10（插座在這裡），左格隔板後下角開 10 × 8 缺口；最右格後面不走線，裝背板，抽屜做深",
+            "電視櫃中間兩格抽屜後面留走線空間通到左格；中縫隔板在蓋板下整段退 10，左格隔板後下角開 10 × 8 缺口；最右格裝背板，抽屜做深",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM＋溫控"
           ]
@@ -5902,7 +5810,7 @@
             ],
             "plan_vertical_cm": 230,
             "nominal_width_cm": 230,
-            "source_note": "230 × 45 × 40，四片門一樣寬\n左格翻門：PS5 Pro、Switch 2，下層放網路設備；右三格抽屜，最右格較深\n底部內縮，暖光底燈",
+            "source_note": "",
             "notes": "Design R85 (concept): floor-standing console 230 W x 45 D x 40 H, four equal 53.4 fronts with the centre joint on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass (30 from the 20 cm curtain pocket); TV / console axis 165 from the glass (sofa stays 162.5, 2.5 off). Left (north) bay 57.0 between partitions: flipper door (Knape & Vogt 8070PEZ-14, packers 1.5 each side) sliding in under the top, PS5 Pro + Switch 2 dock turned 90 deg (about 4.5 clear each side) + network tray; north end = white-oak slats + quiet fan (schemes A full height / B mid-zone / C AIRPLATE / D slots); right three: LEGRABOX drawers (LW 49.3 / 51.9 / 52.9, each with an AMBIA-LINE 242 frame + anti-slip mat); south end blank. ㄇ cable lid 63.6 centred across the middle joint; the TV cord and HDMI drop through the Ø50 conduit (140.5 from the north end) to S-20 + D-01 right under the lid (centre 33). The two middle drawers LEGRABOX NL 300 (front 1.9 + 30) leave a 13.1 rear cable channel behind them and the left bay; P1 has a 10 x 8 rear-bottom notch, the centre partition P2 under the lid is set back 10 full height (S-20 straddles it). The channel ends at P3: nothing runs behind the right bay (Ø32 speaker conduit is inside the wall build-up), so it gets a 1.8 back panel (inside depth 41.3) and a LEGRABOX NL 400 drawer (Blum LT min = NL + 3 mm = 40.3). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Construction details: research console-gaming appendix.",
             "dimensions": {
               "w": {
@@ -5956,7 +5864,7 @@
           },
           "sock-console-l": {
             "y": 195.593,
-            "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），中心離地 22，距櫃左端 11.6–57.4\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇\n・在門收起的位置之下，線不經過門的停放區"
+            "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 11.6–57.4\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇"
           },
           "data-tv": {
             "y": 211.41,
@@ -19152,26 +19060,6 @@
               "label": "翻門收起",
               "size": 0.78,
               "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 80,
-              "y": 21.4,
-              "label": "前面進風",
-              "size": 0.78,
-              "anchor": "start",
-              "color": "#3f7fb0",
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 80,
-              "y": 4,
-              "label": "風扇從左側格柵排風",
-              "size": 0.78,
-              "anchor": "start",
-              "color": "#c9682e",
-              "when": "open"
             }
           ],
           "aria": "電視櫃左格剖面"
@@ -19702,45 +19590,24 @@
       "spec": [
         {
           "zone": "電視",
-          "h": "中心離地 110",
-          "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）壁掛"
-        },
-        {
-          "zone": "電視櫃",
-          "h": "220 × 45 × 40",
-          "note": "三片等寬、無把手"
-        },
-        {
-          "zone": "左格",
-          "h": "翻門 · 遊戲",
-          "note": "PS5 Pro＋Switch 2，下層托盤放路由器、交換器；玩遊戲時翻門收進櫃內"
-        },
-        {
-          "zone": "右兩格",
-          "h": "抽屜",
-          "note": "全拉抽屜；最右格後面不走線，抽屜較深"
-        },
-        {
-          "zone": "走線",
-          "h": "蓋板＋後方走線",
-          "note": "蓋板下有插座、網路孔、電視暗管出口；線沿抽屜後面走到左格"
+          "h": "",
+          "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）＋Vogel's TVM 5605 壁掛"
         },
         {
           "zone": "五金",
-          "h": "抽屜 · 翻門",
-          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S（中格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14（滾珠滑軌、自閉鉸鏈）"
+          "h": "",
+          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S（中格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14"
         },
         {
           "zone": "喇叭",
-          "h": "KEF × 2 · KC62",
-          "note": "KEF LS50 Wireless II＋S2 腳架；重低音 KC62"
+          "h": "",
+          "note": "KEF LS50 Wireless II × 2＋KEF S2 Floor Stand；KEF KC62"
         }
       ],
       "hardware": [],
       "rationale": [],
       "open_questions": [
-        "電視電源線能不能拔下",
-        "櫃面木紋色號"
+        "電視電源線能不能拔下"
       ],
       "risks": []
     },
@@ -21479,26 +21346,6 @@
               "label": "翻門收起",
               "size": 0.78,
               "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 80,
-              "y": 21.4,
-              "label": "前面進風",
-              "size": 0.78,
-              "anchor": "start",
-              "color": "#3f7fb0",
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 80,
-              "y": 4,
-              "label": "風扇從左側格柵排風",
-              "size": 0.78,
-              "anchor": "start",
-              "color": "#c9682e",
-              "when": "open"
             }
           ],
           "aria": "電視櫃左格剖面"
@@ -22029,45 +21876,24 @@
       "spec": [
         {
           "zone": "電視",
-          "h": "中心離地 110",
-          "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）壁掛"
-        },
-        {
-          "zone": "電視櫃",
-          "h": "230 × 45 × 40",
-          "note": "四片等寬、無把手"
-        },
-        {
-          "zone": "左格",
-          "h": "翻門 · 遊戲",
-          "note": "PS5 Pro＋Switch 2，下層托盤放路由器、交換器；玩遊戲時翻門收進櫃內"
-        },
-        {
-          "zone": "右三格",
-          "h": "抽屜",
-          "note": "全拉抽屜；最右格後面不走線，抽屜較深"
-        },
-        {
-          "zone": "走線",
-          "h": "蓋板＋後方走線",
-          "note": "蓋板下有插座、網路孔、電視暗管出口；線沿抽屜後面走到左格"
+          "h": "",
+          "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）＋Vogel's TVM 5605 壁掛"
         },
         {
           "zone": "五金",
-          "h": "抽屜 · 翻門",
-          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S × 2（中間兩格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14（滾珠滑軌、自閉鉸鏈）"
+          "h": "",
+          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S × 2（中間兩格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14"
         },
         {
           "zone": "喇叭",
-          "h": "KEF × 2 · KC62",
-          "note": "KEF LS50 Wireless II＋S2 腳架；重低音 KC62"
+          "h": "",
+          "note": "KEF LS50 Wireless II × 2＋KEF S2 Floor Stand；KEF KC62"
         }
       ],
       "hardware": [],
       "rationale": [],
       "open_questions": [
-        "電視電源線能不能拔下",
-        "櫃面木紋色號"
+        "電視電源線能不能拔下"
       ],
       "risks": []
     }
@@ -22439,7 +22265,7 @@
         "aim": 36,
         "name": "攝影機 · 客餐廳",
         "product": "Aqara Camera E1",
-        "notes": "・倒吊天花，App 內翻轉畫面\n・坐沙發看電視時在左後方，不入視線\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・供電 P-01，Wi-Fi 2.4 GHz 連線"
+        "notes": "・倒吊天花，App 內翻轉畫面\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・Wi-Fi 2.4 GHz 連線"
       },
       {
         "id": "sock-dining-n",
@@ -22450,7 +22276,7 @@
         "place": "餐桌牆 · 靠陽台端",
         "mount": 30,
         "name": "插座 · 餐桌靠陽台",
-        "notes": "・餐桌旁，給火鍋、筆電、桌燈\n・13A 雙孔，離地 30",
+        "notes": "・給火鍋、筆電、桌燈\n・13A 雙孔",
         "use": "餐桌"
       },
       {
@@ -22462,7 +22288,7 @@
         "place": "餐桌牆 · 靠過道端",
         "mount": 30,
         "name": "插座 · 餐桌靠過道",
-        "notes": "・13A 雙孔，離地 30",
+        "notes": "・13A 雙孔",
         "use": "餐桌"
       },
       {
@@ -22488,7 +22314,7 @@
         "aim": -120,
         "name": "攝影機 · 廚房門與玄關",
         "product": "Aqara Camera E1",
-        "notes": "・坐沙發時在右前方約 70°、5 m 外，多半被走道牆角擋住\n・預設看廚房門與走道，可轉到大門與客廳\n・不選第一個「?」：太靠近電視，看電視時一直在視線內\n・供電 P-02，Wi-Fi 2.4 GHz 連線"
+        "notes": "・預設看廚房門與走道，可轉到大門與客廳\n・Wi-Fi 2.4 GHz 連線"
       },
       {
         "id": "ceil-kid",
@@ -22548,7 +22374,7 @@
         "place": "主臥陽台 · 陽台門右側",
         "mount": 30,
         "name": "插座 · 主臥陽台",
-        "notes": "・戶外防水型，IP66 掀蓋\n・離地 30",
+        "notes": "・戶外防水型，IP66 掀蓋",
         "room": "master",
         "use": "陽台"
       },
@@ -22588,7 +22414,7 @@
         "mount": 10,
         "name": "網路設備 · 電視櫃",
         "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；UniFi Network 跑在本機；USB-C 5 V／3 A 變壓器\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：8 埠，4 埠 PoE+，共 52 W；外接 60 W 變壓器\n・PoE 負載：U7 Lite 2 × 13 W = 26 W，剩 26 W；主臥日後加第 3 顆仍夠\n・Aqara Hub M3 105 × 105 × 36.5 mm：Zigbee／Thread／Matter 中樞，給開關與感應器\n・三台平放在左端格 PS5 層板下的托盤（高 5、上方留 1.8）：USW、UCG 並排在前、Hub M3 在 USW 後面，網口朝後；USW 變壓器在 Switch 後方地面；Hub M3 由 USW Lite 8 PoE 供電；電源插 S-22\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
+        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；USB-C 5 V／3 A 變壓器\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：4 埠 PoE+，共 52 W；外接 60 W 變壓器\n・Aqara Hub M3 105 × 105 × 36.5 mm：由 USW Lite 8 PoE 供電\n・三台平放在 PS5 層板下的托盤（高 5、上方留 1.8）：USW、UCG 並排在前、Hub M3 在 USW 後面，網口朝後；電源插 S-22\n・光纖終端位置待確認：需一條 Cat6 從光纖盒拉到這裡"
       },
       {
         "id": "data-tv",
@@ -22644,7 +22470,7 @@
         "mount": "ceiling",
         "name": "Wi-Fi AP · 客廳鋼琴上方",
         "product": "UniFi U7 Lite",
-        "notes": "・Ø171.5 × 33 mm 白色圓盤，吸頂；PoE 供電，最大 13 W\n・客廳、餐桌、電視無牆阻隔，約 3–3.6 m，預估 −35 dBm\n・廚房隔一道約 8 cm 輕隔間，爐具、水槽約 3–3.6 m，預估 −39 dBm\n・女傭房床約 3.6 m、大門約 4.9 m，各隔兩道牆，預估 −56／−54 dBm\n・直立鋼琴不掀頂蓋，AP 在正上方不影響使用"
+        "notes": "・Ø171.5 × 33 mm 白色圓盤，吸頂；PoE 供電，最大 13 W\n・客廳、餐桌、電視無牆阻隔，約 3–3.6 m，預估 −35 dBm\n・廚房隔一道約 8 cm 輕隔間，爐具、水槽約 3–3.6 m，預估 −39 dBm\n・女傭房床約 3.6 m、大門約 4.9 m，各隔兩道牆，預估 −56／−54 dBm"
       },
       {
         "id": "ap-corridor",
@@ -22682,7 +22508,7 @@
             "鈕扣電池約 5 年，免拉線"
           ]
         ],
-        "notes": "・左鍵單擊「離家」：全屋燈、插座關\n・右鍵單擊「回家」；雙擊、長按在 Apple Home 自訂\n・場景由 HomePod mini 執行，不靠網際網路\n・離地 120，鎖在開關盒上，與客廳開關並排"
+        "notes": "・左鍵單擊「離家」：全屋燈、插座關\n・右鍵單擊「回家」；雙擊、長按在 Apple Home 自訂\n・鎖在開關盒上，與客廳開關並排"
       },
       {
         "id": "sw-living",
@@ -22704,7 +22530,7 @@
             "玄關燈、客廳主燈、餐桌吊燈、洗牆燈、電視櫃燈條"
           ]
         ],
-        "notes": "・離地 120；鍵數依燈光迴路調整"
+        "notes": ""
       },
       {
         "id": "sw-kitchen",
@@ -22881,7 +22707,7 @@
             "走廊燈"
           ]
         ],
-        "notes": "・離地 120\n・主臥門口可加無線開關 H1 做雙切"
+        "notes": "・主臥門口可加無線開關 H1 做雙切"
       },
       {
         "id": "sw-bath2",
@@ -22914,7 +22740,7 @@
         "place": "鋼琴旁凹位 · 清淨機後",
         "mount": 30,
         "name": "插座 · 清淨機",
-        "notes": "・13A 雙孔，離地 30\n・清淨機後方，貼牆不外露",
+        "notes": "・13A 雙孔\n・清淨機後方，貼牆不外露",
         "use": "清淨機"
       },
       {
@@ -22926,7 +22752,7 @@
         "place": "客廳電視牆 · 備用",
         "mount": 30,
         "name": "插座 · 電視牆（備用）",
-        "notes": "・13A 雙孔，離地 30\n・清淨機移到鋼琴旁後當備用，給燈或其他電器",
+        "notes": "・13A 雙孔",
         "use": "備用"
       },
       {
@@ -22938,7 +22764,7 @@
         "place": "電視牆 · 左喇叭腳架後",
         "mount": 30,
         "name": "插座 · 左喇叭",
-        "notes": "・13A 雙孔，離地 30，藏在腳架後\n・KEF 不建議接延長座，直接插牆\n・下方離地 10 出線口：喇叭連線從 Ø32 暗管出來",
+        "notes": "・13A 雙孔，藏在腳架後\n・KEF 不建議接延長座，直接插牆\n・下方離地 10 出線口：喇叭連線從 Ø32 暗管出來",
         "use": "喇叭"
       },
       {
@@ -22950,7 +22776,7 @@
         "place": "電視牆 · 右喇叭腳架後",
         "mount": 30,
         "name": "插座 · 右主喇叭",
-        "notes": "・13A 雙孔，離地 30，藏在腳架後\n・下方離地 10 出線口：HDMI eARC、喇叭連線、Cat6 從 Ø32 暗管出來",
+        "notes": "・13A 雙孔，藏在腳架後\n・下方離地 10 出線口：HDMI eARC、喇叭連線、Cat6 從 Ø32 暗管出來",
         "use": "喇叭"
       },
       {
@@ -22962,7 +22788,7 @@
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
-        "notes": "・13A 雙孔，離地 30，在 KC62 正上方\n・KC62 背離牆 6，插座在它上方，插頭有空間",
+        "notes": "・13A 雙孔，在 KC62 正上方",
         "use": "重低音"
       },
       {
@@ -22974,7 +22800,7 @@
         "place": "客廳陽台 · 拖地機底座後",
         "mount": 15,
         "name": "插座 · 拖地機 H14 Ultra",
-        "notes": "・13A，離地 15（低位，藏在底座後）\n・陽台用防水面板（IP66）",
+        "notes": "・13A，藏在底座後\n・防水面板（IP66）",
         "use": "拖地機 H14 Ultra"
       },
       {
@@ -22986,7 +22812,7 @@
         "place": "客廳陽台 · 曬衣架旁天花",
         "mount": "ceiling",
         "name": "天花電源 · 曬衣架",
-        "notes": "・曬衣架無電熱，一般 13A 插座即可，不用 FCU\n・從 S-09 插座迴路以線槽上天花到這裡，不接吊扇點\n・天花 IP66 戶外型 13A 插座，由配電箱斷路器關閉\n・線槽漆成天花色",
+        "notes": "・從 S-09 插座迴路以線槽上天花到這裡，不接吊扇點\n・天花 IP66 戶外型 13A 插座，由配電箱斷路器關閉\n・線槽漆成天花色",
         "room": "living-balcony",
         "use": "曬衣架"
       },
@@ -23106,7 +22932,7 @@
         "place": "電視櫃左端格背牆",
         "mount": 22,
         "name": "插座 · 電視櫃左端格",
-        "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），中心離地 22，距櫃左端 17.5–61.5\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇\n・在門收起的位置之下，線不經過門的停放區",
+        "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 17.5–61.5\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇",
         "use": "電視櫃"
       }
     ],

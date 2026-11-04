@@ -28,7 +28,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |
 | LIV-05 | `dining-table` | 餐桌 | 150 × 90 |
 | LIV-06 | `drying-rack` | 曬衣架 | 113 × 40 |
-| LIV-07 | `living-tv` | 電視 | 166.7 × 2.7 |
+| LIV-07 | `living-tv` | 電視 | 166.7 × 7.3 |
 | KIT-01 | `washer-dryer` | 洗烘衣機 W/D | 60 × 65 |
 | KIT-02 | `fridge` | 冰箱 F | 80 × 70 |
 | KIT-03 | `kitchen-upper-worktop` | Dry kitchen | 167.5 × 65 |
