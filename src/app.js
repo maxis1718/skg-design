@@ -42,8 +42,8 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
 // TV console (R82): 225 three sections, concept views; three north-end exhaust schemes console-b..d (B AIRPLATE T8 / C slots / D timber slats), default D; ?console=a (retired) → D. Elevations 'tv-console@console-b|c'; D uses the base elevations['tv-console'].
-const LIVING_KEYS={b:'console-b',c:'console-c',d:'console-d'};
-selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.d;
+const LIVING_KEYS={a:'console-d',b:'console-b',c:'console-c'}; // R83: displayed A = console-d (slats, recommended)
+selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
 function layoutSpec(){return (project.layouts||[]).find(l=>l.id===layoutId);}
@@ -419,9 +419,9 @@ function renderDetails(){
   $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
   $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{if(!showPower)$('#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
 }
-const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70'],[79,'R71'],[80,'R72'],[81,'R73'],[82,'R74'],[83,'R75'],[84,'R76'],[85,'R77'],[86,'R78'],[87,'R79'],[88,'R80'],[89,'R81']];
+const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70'],[79,'R71'],[80,'R72'],[81,'R73'],[82,'R74'],[83,'R75'],[84,'R76'],[85,'R77'],[86,'R78'],[87,'R79'],[88,'R80'],[89,'R81'],[90,'R82']];
 function buildReference(){
-  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R82'}</span>${esc(c.text)}</div>`).join('');
+  $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R83'}</span>${esc(c.text)}</div>`).join('');
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
