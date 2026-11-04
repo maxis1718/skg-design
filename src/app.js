@@ -41,8 +41,8 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV console (R85): 230 four sections, concept views; four north-end exhaust schemes ?console=a|b|c|d, default B (recommended). Elevations 'tv-console@console-e|b|c'; A (console-d) uses the base elevations['tv-console'].
-const LIVING_KEYS={a:'console-e',b:'console-d',c:'console-b',d:'console-c'}; // R84: displayed A = console-e (slats full height, recommended), B = console-d (slats mid zone), C = console-b (AIRPLATE), D = console-c (slots)
+// TV console (R87): two STRUCTURE schemes, both with the full-height slatted north end. A = console-3 (three sections 220, default; base data + elevations['tv-console']), B = console-4 (four sections 230; elevations['tv-console@console-4'] + objectOverrides / pointOverrides / runOverrides). ?console=a|b; old c/d → A.
+const LIVING_KEYS={a:'console-3',b:'console-4',c:'console-3',d:'console-3'}; // R87: c/d (old exhaust variants) fall back to A
 selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
 function kitchenVersions(){const rank=v=>{const i=KITCHEN_ORDER.indexOf(v.id);return i<0?99:i;};return [...(project.roomVersions?.kitchen||[])].sort((a,b)=>rank(a)-rank(b));}
@@ -56,7 +56,7 @@ function guestVersion(){const vs=guestVersions();return vs.find(v=>v.id===select
 function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===selectedVersions.kitchen)||vs.find(v=>v.id===KITCHEN_KEYS.a)||vs[0];}
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
 function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KEYS[k]===kitchenVersion()?.id);if(!key)return;const u=new URL(location.href);if(u.searchParams.get('kitchen')!==key){u.searchParams.set('kitchen',key);history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
-function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
+function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:o.room_id==='living'?livingVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
 function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
 const dimension=d=>num(d.cm);
@@ -117,7 +117,7 @@ function buildPlan(){
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
-const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o=masterVersion()?.pointOverrides?.[p.id];return o?{...p,...o}:p;});
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
@@ -150,7 +150,7 @@ function buildPower(){
     if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
       under.append(svgEl('path',{'data-kind':'camera',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
   }
-  for(const r of el.runs||[])under.append(svgEl('polyline',{'data-kind':'run',class:'power-run',points:r.path.map(q=>q.join(',')).join(' ')}));
+  for(const r of el.runs||[])under.append(svgEl('polyline',{'data-kind':'run',class:'power-run',points:(livingVersion()?.runOverrides?.[r.to]||r.path).map(q=>q.join(',')).join(' ')}));
   layer.append(under);
   const marks=svgEl('g',{class:'power-marks'});for(const p of pts)marks.append(powerGlyph(p));layer.append(marks);
   renderPowerLayer();
@@ -239,11 +239,12 @@ function renderLivingVersion(){
  seg.setAttribute('aria-label',t('切換電視櫃方案'));
  seg.innerHTML=livingVersions().map(x=>`<button type="button" class="tool ${x.id===v.id?'active':''}" data-living-version="${esc(x.id)}" aria-pressed="${x.id===v.id}" title="${esc(x.name)}">${esc(shortV(x.name))}</button>`).join('');
  $('#living-version-group').hidden=roomId!=='living'||livingVersions().length<2;
+ $$('[data-living-plan]').forEach(g=>g.toggleAttribute('hidden',g.dataset.livingPlan!==v.layout));
 }
 function chooseLivingVersion(id){
  if(!livingVersions().some(v=>v.id===id)||id===livingVersion()?.id)return;selectedVersions.living=id;
  const key=Object.keys(LIVING_KEYS).find(k=>LIVING_KEYS[k]===id),u=new URL(location.href);u.searchParams.set('console',key);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
- selectRoom(roomId,{keepObject:true});
+ buildPower();selectRoom(roomId,{keepObject:true});
 }
 function chooseMasterVersion(id){
  if(!masterVersions().some(v=>v.id===id)||id===masterVersion()?.id)return;selectedVersions.master=id;

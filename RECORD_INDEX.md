@@ -24,7 +24,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | --- | --- | --- | --- |
 | LIV-01 | `living-cabinet` | 走道口 190 櫃 | 190 × 60 |
 | LIV-02 | `piano` | 鋼琴 | 130 × 61 |
-| LIV-03 | `tv-console` | 電視櫃 | 230 × 45 |
+| LIV-03 | `tv-console` | 電視櫃 | 220 × 45 |
 | LIV-04 | `sofa` | 沙發 | 210 × 95 |
 | LIV-05 | `dining-table` | 餐桌 | 150 × 90 |
 | LIV-06 | `drying-rack` | 曬衣架 | 113 × 40 |
