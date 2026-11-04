@@ -1258,8 +1258,9 @@ function renderPlanGeneric(elev, view) {
   g.rect(-m.l * .6, D, W + m.l * .6 + m.r * .5, 3.2, {fill:'url(#elev-wall)', stroke:'none'});
   g.line(-m.l * .6, D, W + m.r * .5, D, {stroke:C.line, 'stroke-width':.6});
   if (view.wallLabel) g.text(W / 2, D + 3.2 + f * .4, view.wallLabel, {'text-anchor':'middle', fill:C.thin, 'font-size':f * .62});
-  extras(g, view.under, 'closed');
-  extras(g, view.extras, 'closed');
+  const st = view.stateNames ? ST : 'closed'; // a plan view with stateNames follows the state toggle (e.g. lid on / off)
+  extras(g, view.under, st);
+  extras(g, view.extras, st);
   if (view.hcuts) {
     const c = view.hcuts;
     for (let i = 0; i < c.length - 1; i++) { const w = c[i + 1] - c[i]; hdim(g, c[i], c[i + 1], -f * 1.6, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
