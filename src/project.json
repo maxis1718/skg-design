@@ -1677,9 +1677,9 @@
       "label": "TV console",
       "bounds_pt": [
         570.23,
-        186.522,
+        185.813,
         582.98,
-        248.884
+        248.175
       ],
       "plan_horizontal_cm": 45,
       "plan_vertical_cm": 220,
@@ -1688,7 +1688,7 @@
       "height_cm": 40,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R87 scheme A (concept, default): floor-standing console 220 W x 45 D x 40 H, three equal 67.9 fronts, the middle front centred on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 52.5 from the balcony glass (32.5 from the 20 cm curtain pocket), south end 272.5; TV / console / sofa axis all 162.5 from the glass. Left (north) bay 71.5 between partitions: flipper door (Knape & Vogt 8070PEZ-14, packers 1.5 each side) sliding in under the top, PS5 Pro (about 13 clear each side) + Switch 2 dock turned 90 deg + network tray; north end = full-height white-oak slats (outer band blind-backed) + NF-A14 on a thermostat; middle and right: LEGRABOX drawers (LW 63.9 / 67.5, each with an AMBIA-LINE 242 frame + anti-slip mat); south end blank. ㄇ cable lid 60 x 10 centred on the axis (x 80-140); no socket behind the TV - the TV cord and HDMI drop through the Ø50 conduit (135.5 from the north end) to S-20 + D-01 right under the lid (centre 33; middle back panel 10 off the wall, middle drawer NL 300). Scheme B (four sections, 230) lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Construction details: research console-gaming appendix.",
+      "notes": "Design R87 scheme A (concept, default): floor-standing console 220 W x 45 D x 40 H, three equal 67.9 fronts, the middle front centred on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass (30 from the 20 cm curtain pocket; R89: same as scheme B), south end 270; TV / console axis 160 from the glass (sofa stays 162.5, 2.5 off - the same tolerance scheme B accepts); the 10 cm it is shorter than B all goes to the entry walkway. Left (north) bay 71.5 between partitions: flipper door (Knape & Vogt 8070PEZ-14, packers 1.5 each side) sliding in under the top, PS5 Pro (about 13 clear each side) + Switch 2 dock turned 90 deg + network tray; north end = full-height white-oak slats (outer band blind-backed) + NF-A14 on a thermostat; middle and right: LEGRABOX drawers (LW 63.9 / 67.5, each with an AMBIA-LINE 242 frame + anti-slip mat); south end blank. ㄇ cable lid 60 x 10 centred on the axis (x 80-140); no socket behind the TV - the TV cord and HDMI drop through the Ø50 conduit (135.5 from the north end) to S-20 + D-01 right under the lid (centre 33; middle back panel 10 off the wall, middle drawer NL 300). Scheme B (four sections, 230) lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Construction details: research console-gaming appendix.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
@@ -1730,7 +1730,7 @@
       "height_cm": null,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred on the TV axis 162.5 cm from the glass (R77: moved 7.5 south with the 225 console): north end 57.5 from the glass = 37.5 to the curtain pocket, south end 57.6 to the corridor line y263.8 (piano front); front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
+      "notes": "User-supplied sofa W 210 x D 95 (replaces the 195 x 80 plan symbol, source paths 592-610 omitted at build). Faces the TV, centred 162.5 cm from the glass (R77: moved 7.5 south with the 225 console; R89: TV axis 160 in scheme A, 165 in scheme B - 2.5 off either way): north end 57.5 from the glass = 37.5 to the curtain pocket, south end 57.6 to the corridor line y263.8 (piano front); front 90.0 cm to the console front; back 149.9 cm from the dining-table east edge. Plan glyph is generic (arm/back widths not supplied).",
       "name": "沙發",
       "source_note": "扶手、靠背寬度未定，圖面示意",
       "dimensions": {
@@ -1842,9 +1842,9 @@
       "label": "TV",
       "bounds_pt": [
         582.22,
-        193.821,
+        193.112,
         582.98,
-        241.585
+        240.876
       ],
       "plan_horizontal_cm": 2.7,
       "plan_vertical_cm": 168.5,
@@ -3983,7 +3983,7 @@
       },
       "source_note": "・23.4 × 23.4 × 40.5，鋼琴旁凹位（鋼琴東側），離鋼琴、牆、過道角各 10\n・背後插座 S-07（離地 30）",
       "status": "user-design",
-      "notes": "R85 (owner decision): moved from the east wall into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so it stays out of the walking line. Narrowest point of the entry->sofa path = purifier NE corner to the KC62, 81.4; passage corner to the KC62 83.9."
+      "notes": "R85 (owner decision): moved from the east wall into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so it stays out of the walking line. Narrowest point of the entry->sofa path = purifier NE corner to the KC62: scheme A 87.4 / B 85.4; passage corner to the KC62: A 92.9 / B 87.3 (R89: KEF stands and KC62 pushed toward the wall)."
     },
     {
       "id": "kef-speaker-l",
@@ -3992,9 +3992,9 @@
       "name": "左喇叭 KEF LS50 Wireless II",
       "label": "KEF LS50 Wireless II, left (secondary)",
       "bounds_pt": [
-        570.195,
+        571.896,
         178.358,
-        579.011,
+        580.712,
         184.028
       ],
       "dimensions": {
@@ -4017,8 +4017,8 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass = 128.8 north of the TV axis (scheme A: 162.5; scheme B 230: 131.3 north of 165) (mirror of the right stand); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 7.5 clear of the console north end (scheme A 52.5; B: 5.0 to 50), the exhaust side of the game bay (D: slats at 1.0 m/s, room +6.5 K at the face). Pair 257.6 apart (B: 262.6); stands square to the wall. Rear 14 cm from the feature wall, front flush with the console front. Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
-      "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 33.7，背距牆 14"
+      "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass = 126.3 north of the TV axis (scheme A: 160; scheme B 230: 131.3 north of 165) (mirror of the right stand); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50 in both schemes), the exhaust side of the game bay (D: slats at 1.0 m/s, room +6.5 K at the face). Pair 252.6 apart (B: 262.6); stands square to the wall. Rear 8 cm from the feature-wall face (R89: moved 6 toward the wall; LS50 Wireless II is rear-ported - KEF gives no minimum and its app compensates from '< 10 cm' to '> 50 cm', so set the KEF Connect wall distance to < 10 cm / Wall Mode; 8 leaves room for the rear-panel plugs to turn down the S2 column), front 5.9 behind the console front (the Uni-Q at ~81 sits well above the 40 console top, so nothing shadows it). Power S-17; inter-speaker cable in the Ø32 conduit to the primary.",
+      "source_note": "KEF LS50 Wireless II on KEF S2 Floor Stand，頂 96.2\n中心距玻璃 33.7，背離牆 8\nKEF Connect 離牆距離選 < 10 cm"
     },
     {
       "id": "kef-speaker-r",
@@ -4027,10 +4027,10 @@
       "name": "右主喇叭 KEF LS50 Wireless II",
       "label": "KEF LS50 Wireless II, right (primary)",
       "bounds_pt": [
-        570.195,
-        251.378,
-        579.011,
-        257.048
+        571.896,
+        249.961,
+        580.712,
+        255.631
       ],
       "dimensions": {
         "w": {
@@ -4052,7 +4052,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 291.3 cm from the glass (scheme A: TV axis 162.5 + 128.8, mirror of the left stand), base 280-302.6 = 7.5 clear of the console south end (272.5); scheme B 230: 296.3; rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18.",
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 286.3 cm from the glass (scheme A: TV axis 160 + 126.3, mirror of the left stand), base 275-297.6 = 5 clear of the console south end (270); scheme B 230: 296.3; rear 8 cm from the feature-wall face (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18.",
       "source_note": "主喇叭：KEF LS50 Wireless II on KEF S2 Floor Stand\n接 HDMI eARC、網路、KC62"
     },
     {
@@ -4062,10 +4062,10 @@
       "name": "重低音 KEF KC62",
       "label": "Subwoofer KEF KC62",
       "bounds_pt": [
-        573.115,
-        259.883,
-        580.145,
-        267.139
+        574.249,
+        258.466,
+        581.279,
+        265.722
       ],
       "dimensions": {
         "w": {
@@ -4087,8 +4087,8 @@
       "height_cm": 24.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, scheme A: 311.3-336.9 cm from the glass, 8.7 from the primary stand base; 86.7 to the entry-passage corner, 82.3 to the purifier in the piano alcove (scheme B 230: 316.3-341.9, 83.9 / 81.4). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
-      "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n貼牆 10，RCA 接主喇叭 Sub Out"
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), scheme A: 306.3-331.9 cm from the glass, 8.7 from the primary stand base; 92.9 to the entry-passage corner, 87.4 to the purifier in the piano alcove (scheme B 230: 316.3-341.9, 87.3 / 85.4); the side driver facing the right stand base is 8.7 from it (KEF: >= 7.7). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "source_note": "KEF KC62 25.6 × 24.8 × 24.6\n背離牆 6，背板 EQ 設 Wall；RCA 接主喇叭 Sub Out"
     },
     {
       "id": "living-curtain",
@@ -5420,25 +5420,25 @@
               562,
               177.309,
               562,
-              186.522
+              185.813
             ],
-            "label": "32.5"
+            "label": "30"
           },
           {
             "line": [
               556,
               171.64,
               556,
-              186.522
+              185.813
             ],
-            "label": "52.5"
+            "label": "50"
           },
           {
             "line": [
               562,
-              186.522,
+              185.813,
               562,
-              248.884
+              248.175
             ],
             "label": "220"
           },
@@ -5446,19 +5446,19 @@
             "line": [
               540.84,
               263.68,
-              570.238,
-              257.416
+              571.939,
+              255.999
             ],
-            "label": "106.0"
+            "label": "113.0"
           },
           {
             "line": [
               550.308,
               272.092,
-              573.115,
-              267.139
+              574.249,
+              265.722
             ],
-            "label": "82.3"
+            "label": "87.4"
           },
           {
             "line": [
@@ -5483,9 +5483,9 @@
               595.5,
               181.193,
               595.5,
-              254.213
+              252.796
             ],
-            "label": "257.6"
+            "label": "252.6"
           }
         ],
         "plan": {
@@ -5581,31 +5581,35 @@
           "clearances": [
             {
               "label": "電視櫃左側到窗簾盒／玻璃",
-              "value": "32.5／52.5"
+              "value": "30／50"
             },
             {
               "label": "喇叭腳架到電視櫃兩端",
-              "value": "各 7.5（左腳架離窗簾盒 2.4）"
+              "value": "各 5（左腳架離窗簾盒 2.4）"
+            },
+            {
+              "label": "喇叭、重低音背後到牆",
+              "value": "8／6（App 設靠牆）"
             },
             {
               "label": "電視中心離玻璃",
-              "value": "162.5（和沙發中心對齊）"
+              "value": "160（沙發中心 162.5，差 2.5 看不出來）"
             },
             {
               "label": "喇叭中心距",
-              "value": "257.6（左右對稱）"
+              "value": "252.6（左右對稱）"
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "106.0（到電視櫃角 118.7）"
+              "value": "113.0（到電視櫃角 119.9）"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "86.7"
+              "value": "92.9"
             },
             {
               "label": "清淨機到重低音（最窄）",
-              "value": "82.3（清淨機離鋼琴、牆各 10）"
+              "value": "87.4（清淨機離鋼琴、牆各 10）"
             },
             {
               "label": "沙發到電視櫃",
@@ -5680,19 +5684,19 @@
             "line": [
               540.84,
               263.68,
-              570.238,
+              571.939,
               258.834
             ],
-            "label": "105.1"
+            "label": "111.0"
           },
           {
             "line": [
               550.308,
               272.092,
-              573.115,
+              574.249,
               268.557
             ],
-            "label": "81.4"
+            "label": "85.4"
           },
           {
             "line": [
@@ -5820,6 +5824,10 @@
               "value": "各 5（左腳架離窗簾盒 2.4）"
             },
             {
+              "label": "喇叭、重低音背後到牆",
+              "value": "8／6（App 設靠牆）"
+            },
+            {
               "label": "電視中心離玻璃",
               "value": "165（沙發中心 162.5，差 2.5 看不出來）"
             },
@@ -5829,15 +5837,15 @@
             },
             {
               "label": "鋼琴角到右腳架（斜向走道）",
-              "value": "105.1（到電視櫃角 115.3）"
+              "value": "111.0（到電視櫃角 115.3）"
             },
             {
               "label": "過道口牆角到重低音",
-              "value": "83.9"
+              "value": "87.3"
             },
             {
               "label": "清淨機到重低音（最窄）",
-              "value": "81.4（清淨機離鋼琴、牆各 10）"
+              "value": "85.4（清淨機離鋼琴、牆各 10）"
             },
             {
               "label": "沙發到電視櫃",
@@ -5902,25 +5910,25 @@
             ]
           },
           "kef-speaker-l": {
-            "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass = 131.3 north of the TV axis (R85: 165) (mirror of the right stand); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50), the exhaust side of the game bay (D: slats at 1.0 m/s, room +6.5 K at the face). Pair 262.6 apart; stands square to the wall. Rear 14 cm from the feature wall, front flush with the console front. Power S-17; inter-speaker cable in the Ø32 conduit to the primary."
+            "notes": "KEF LS50 Wireless II secondary (left channel) 200 W x 311 D x 305 H mm, 10.1 kg, on a KEF S2 Floor Stand (226 x 308 footprint, 657 high): top 96.2, Uni-Q centre ~81 (indicative). Centre 33.7 cm from the balcony glass = 131.3 north of the TV axis (R85: 165) (mirror of the right stand); the 22.6 stand base spans 22.4-45.0 = 2.4 clear of the 20 cm curtain pocket face and 5.0 clear of the console north end (50), the exhaust side of the game bay (D: slats at 1.0 m/s, room +6.5 K at the face). Pair 262.6 apart; stands square to the wall. Rear 8 cm from the feature-wall face (R89: moved 6 toward the wall; LS50 Wireless II is rear-ported - KEF gives no minimum and its app compensates from '< 10 cm' to '> 50 cm', so set the KEF Connect wall distance to < 10 cm / Wall Mode; 8 leaves room for the rear-panel plugs to turn down the S2 column), front 5.9 behind the console front (the Uni-Q at ~81 sits well above the 40 console top, so nothing shadows it). Power S-17; inter-speaker cable in the Ø32 conduit to the primary."
           },
           "kef-speaker-r": {
             "bounds_pt": [
-              570.195,
+              571.896,
               252.796,
-              579.011,
+              580.712,
               258.466
             ],
-            "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 296.3 cm from the glass (R85: TV axis 165 + 131.3, mirror of the left stand), base 285-307.6 = 5 clear of the console south end (280); rear 14 cm from the wall, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18."
+            "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 296.3 cm from the glass (R85: TV axis 165 + 131.3, mirror of the left stand), base 285-307.6 = 5 clear of the console south end (280); rear 8 cm from the feature-wall face (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18."
           },
           "kef-sub": {
             "bounds_pt": [
-              573.115,
+              574.249,
               261.3,
-              580.145,
+              581.279,
               268.557
             ],
-            "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor 10 cm from the feature wall, R85: 316.3-341.9 cm from the glass, 8.7 from the primary stand base; 83.9 to the entry-passage corner, 81.4 to the purifier in the piano alcove. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19."
+            "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), R85: 316.3-341.9 cm from the glass, 8.7 from the primary stand base; 87.3 to the entry-passage corner, 85.4 to the purifier in the piano alcove. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19."
           }
         },
         "pointOverrides": {
@@ -17762,7 +17770,7 @@
           "units": [
             {
               "ref": "console",
-              "x": 37.5
+              "x": 35.0
             }
           ],
           "under": [
@@ -17777,11 +17785,11 @@
               "type": "conduit",
               "pts": [
                 [
-                  173.0,
+                  170.5,
                   34.0
                 ],
                 [
-                  173.0,
+                  170.5,
                   62.1
                 ]
               ]
@@ -17790,7 +17798,7 @@
           "extras": [
             {
               "type": "tv",
-              "x": 64.15,
+              "x": 61.65,
               "y": 62.1,
               "w": 166.7,
               "h": 95.8,
@@ -17809,7 +17817,7 @@
             },
             {
               "type": "rect",
-              "x": 16.200000000000003,
+              "x": 16.2,
               "y": 1.2,
               "w": 5,
               "h": 63.3,
@@ -17818,7 +17826,7 @@
             },
             {
               "type": "rect",
-              "x": 8.700000000000001,
+              "x": 8.7,
               "y": 64.5,
               "w": 20,
               "h": 1.2,
@@ -17828,7 +17836,7 @@
             },
             {
               "type": "rect",
-              "x": 8.700000000000001,
+              "x": 8.7,
               "y": 65.7,
               "w": 20,
               "h": 30.5,
@@ -17860,7 +17868,7 @@
             },
             {
               "type": "note",
-              "x": 18.700000000000003,
+              "x": 18.7,
               "y": 100.5,
               "label": "KEF",
               "size": 0.8,
@@ -17868,7 +17876,7 @@
             },
             {
               "type": "rect",
-              "x": 265.0,
+              "x": 260.0,
               "y": 0,
               "w": 22.6,
               "h": 1.2,
@@ -17878,7 +17886,7 @@
             },
             {
               "type": "rect",
-              "x": 273.8,
+              "x": 268.8,
               "y": 1.2,
               "w": 5,
               "h": 63.3,
@@ -17887,7 +17895,7 @@
             },
             {
               "type": "rect",
-              "x": 266.3,
+              "x": 261.3,
               "y": 64.5,
               "w": 20,
               "h": 1.2,
@@ -17897,7 +17905,7 @@
             },
             {
               "type": "rect",
-              "x": 266.3,
+              "x": 261.3,
               "y": 65.7,
               "w": 20,
               "h": 30.5,
@@ -17908,7 +17916,7 @@
             },
             {
               "type": "rect",
-              "x": 269.8,
+              "x": 264.8,
               "y": 74.5,
               "w": 13,
               "h": 13,
@@ -17919,7 +17927,7 @@
             },
             {
               "type": "rect",
-              "x": 274.7,
+              "x": 269.7,
               "y": 79.4,
               "w": 3.2,
               "h": 3.2,
@@ -17929,7 +17937,7 @@
             },
             {
               "type": "note",
-              "x": 276.3,
+              "x": 271.3,
               "y": 100.5,
               "label": "KEF",
               "size": 0.8,
@@ -17937,7 +17945,7 @@
             },
             {
               "type": "rect",
-              "x": 296.3,
+              "x": 291.3,
               "y": 0,
               "w": 25.6,
               "h": 24.6,
@@ -17948,7 +17956,7 @@
             },
             {
               "type": "note",
-              "x": 309.1,
+              "x": 304.1,
               "y": 29.5,
               "label": "KC62",
               "size": 0.8,
@@ -17956,7 +17964,7 @@
             },
             {
               "type": "lc-end",
-              "x": 37.5,
+              "x": 35.0,
               "y": 8.0,
               "w": 7.5,
               "h": 30.2,
@@ -17964,7 +17972,7 @@
             },
             {
               "type": "lc-end",
-              "x": 250.0,
+              "x": 247.5,
               "y": 8.0,
               "w": 7.5,
               "h": 30.2,
@@ -17972,7 +17980,7 @@
             },
             {
               "type": "toe-light",
-              "x": 40.5,
+              "x": 38.0,
               "w": 214.0,
               "y": 8,
               "p": 1.8
@@ -17982,7 +17990,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 45.0,
+              "x": 42.5,
               "y": 9.8,
               "w": 70.033,
               "h": 28.4,
@@ -17993,7 +18001,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 45.0,
+              "x": 42.5,
               "y": 8.0,
               "w": 70.033,
               "h": 1.8,
@@ -18004,7 +18012,7 @@
               "sw": 0.3,
               "stroke": "#2f443c",
               "when": "open",
-              "x": 45.3,
+              "x": 42.8,
               "y": 31.8,
               "w": 67.933,
               "h": 1.9,
@@ -18015,7 +18023,7 @@
               "sw": 0.2,
               "stroke": "#b9a98d",
               "when": "open",
-              "x": 54.9,
+              "x": 52.4,
               "y": 14.8,
               "w": 42.0,
               "h": 1.2,
@@ -18026,7 +18034,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 54.9,
+              "x": 52.4,
               "y": 9.8,
               "w": 1.8,
               "h": 5.0,
@@ -18037,7 +18045,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 95.1,
+              "x": 92.6,
               "y": 9.8,
               "w": 1.8,
               "h": 5.0,
@@ -18048,7 +18056,7 @@
               "sw": 0.25,
               "stroke": "#5b6b8a",
               "when": "open",
-              "x": 57.4,
+              "x": 54.9,
               "y": 9.8,
               "w": 16.4,
               "h": 3.2,
@@ -18059,7 +18067,7 @@
               "sw": 0.25,
               "stroke": "#5b6b8a",
               "when": "open",
-              "x": 77.4,
+              "x": 74.9,
               "y": 9.8,
               "w": 14.2,
               "h": 3.0,
@@ -18067,7 +18075,7 @@
             },
             {
               "type": "device",
-              "x": 56.5,
+              "x": 54.0,
               "y": 16.0,
               "w": 38.8,
               "h": 8.9,
@@ -18079,7 +18087,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 56.9,
+              "x": 54.4,
               "y": 23.3,
               "w": 38.0,
               "h": 0.9,
@@ -18090,7 +18098,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 108.3,
+              "x": 105.8,
               "y": 9.8,
               "w": 5.1,
               "h": 11.5,
@@ -18101,7 +18109,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 109.5,
+              "x": 107.0,
               "y": 12.7,
               "w": 3.0,
               "h": 11.6,
@@ -18112,7 +18120,7 @@
               "sw": 0.3,
               "stroke": "none",
               "when": "open",
-              "x": 109.5,
+              "x": 107.0,
               "y": 23.1,
               "w": 3.0,
               "h": 1.2,
@@ -18122,11 +18130,11 @@
               "type": "sweep",
               "pts": [
                 [
-                  147.5,
+                  145.0,
                   0
                 ],
                 [
-                  147.5,
+                  145.0,
                   162
                 ]
               ],
@@ -18134,9 +18142,9 @@
             },
             {
               "type": "note",
-              "x": 145.5,
+              "x": 143.0,
               "y": 50.5,
-              "label": "電視對準沙發中間",
+              "label": "中間那片對準電視",
               "size": 0.7,
               "anchor": "end",
               "color": "#a96f47",
@@ -18144,8 +18152,8 @@
             },
             {
               "type": "clear",
-              "x0": 37.5,
-              "x1": 257.5,
+              "x0": 35.0,
+              "x1": 255.0,
               "y": -16,
               "label": "220"
             }
@@ -19606,7 +19614,7 @@
         {
           "zone": "電視櫃",
           "h": "220 × 45 × 40",
-          "note": "三片門一樣寬、沒有把手，中間那片對準電視；落地，底部內縮裝暖光燈；電視、電視櫃、沙發中間對齊"
+          "note": "三片門一樣寬、沒有把手，中間那片對準電視；落地，底部內縮裝暖光燈；電視和櫃子比沙發中間偏 2.5，看不出來"
         },
         {
           "zone": "左格",
@@ -22262,7 +22270,7 @@
         "code": "NET-00",
         "kind": "hub",
         "x": 575.2,
-        "y": 197.407,
+        "y": 196.698,
         "place": "電視櫃左端格 · PS5 下方托盤",
         "mount": 10,
         "name": "網路設備 · 電視櫃",
@@ -22274,7 +22282,7 @@
         "code": "D-01",
         "kind": "data",
         "x": 582.2,
-        "y": 211.212,
+        "y": 210.503,
         "place": "電視牆 · 蓋板正下方（插座左邊）",
         "mount": 33,
         "name": "網路孔 · 電視櫃",
@@ -22625,7 +22633,7 @@
         "code": "S-18",
         "kind": "socket",
         "x": 584.0,
-        "y": 254.213,
+        "y": 252.796,
         "place": "電視牆 · 右喇叭腳架後",
         "mount": 30,
         "name": "插座 · 右主喇叭",
@@ -22637,11 +22645,11 @@
         "code": "S-19",
         "kind": "socket",
         "x": 584.0,
-        "y": 263.511,
+        "y": 262.094,
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
-        "notes": "・13A 雙孔，離地 30，在 KC62 正上方\n・KC62 背距牆 10，插頭有空間",
+        "notes": "・13A 雙孔，離地 30，在 KC62 正上方\n・KC62 背離牆 6，插座在它上方，插頭有空間",
         "use": "重低音"
       },
       {
@@ -22769,7 +22777,7 @@
         "code": "S-20",
         "kind": "socket",
         "x": 584.0,
-        "y": 217.703,
+        "y": 216.994,
         "place": "電視牆 · 蓋板正下方（中格後）",
         "mount": 33,
         "name": "插座 · 電視櫃中格後",
@@ -22781,7 +22789,7 @@
         "code": "S-22",
         "kind": "socket",
         "x": 584.0,
-        "y": 197.719,
+        "y": 197.01,
         "place": "電視櫃左端格背牆",
         "mount": 22,
         "name": "插座 · 電視櫃左端格",
@@ -22795,11 +22803,11 @@
         "path": [
           [
             575.2,
-            199.845
+            199.136
           ],
           [
             580,
-            199.845
+            199.136
           ],
           [
             580,
@@ -22884,15 +22892,15 @@
         "path": [
           [
             575.2,
-            197.407
+            196.698
           ],
           [
             575.2,
-            211.212
+            210.503
           ],
           [
             582.2,
-            211.212
+            210.503
           ]
         ]
       }
@@ -24229,8 +24237,8 @@
     "console-gaming": {
       "title": "電視櫃：A 三格 220／B 四格 230、左格遊戲翻門、北端格柵散熱",
       "updated": "2026-11-04",
-      "summary": "兩案給 Patrick 看的示意：A 三格 220（預設；面板 67.9、PS5 每邊 ≈ 13、電視正對沙發）與 B 四格 230（面板 53.4、中縫對電視、抽屜較窄）；兩案左格都是翻門藏 PS5 Pro、Switch 2 與網路設備，左側整片白橡格柵＋內藏風扇、右側不開孔；電視背後不設插座，線經 Ø50 暗管落到 ㄇ 蓋板下的 S-20；清淨機在鋼琴旁。施工細節在文末附錄。",
-      "body": "## 結論\n- **兩案都能做，預設 A（三格 220）**。差別只在櫃體分格；兩案左側都是整片白橡格柵側板（外圈背後封黑板）＋NF-A14 溫控風扇、右側不開孔，左格都是 Knape & Vogt 8070PEZ-14 翻門遊戲格（PS5 Pro＋轉 90° 的 Switch 2＋網路設備托盤）。\n- **A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜，LW 63.9／67.5）；左格隔板間 71.5，PS5 左右各 ≈ 13（過 Sony 建議的 10）；左側退到離玻璃 52.5，電視、電視櫃、沙發三條中線都在 162.5；喇叭 33.7／291.3、KC62 311.3–336.9（同 R80，腳架各離櫃端 7.5）；斜向走道 106.0、最窄 82.3。代價：LG G6 77 只有 1.285 倍（< 1.3，Xiaomi 75 是 1.32）；抽屜寬，要靠分隔框分區。\n- **B 四格 230（R85）**：面板 53.4 × 4（左翻門＋三個抽屜，LW 49.3／51.9／52.9），中縫正對電視；PS5 左右只有 ≈ 4.5，靠前面全開進風＋左側風扇；電視偏沙發 2.5（看不出）；走道 105.1、最窄 81.4；兩款電視都過 1.3 倍。\n- **怎麼選**：PS5 兩側有餘裕、電視正對沙發、走道多 0.9 → A；抽屜窄好收、中縫對稱、日後換 77 吋 → B。\n- **兩案共用**：每個抽屜放 Blum AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板（ZC7Q0U0SH）＋agoform 止滑墊（A 的抽屜框靠一側後還剩 ≈ 36–40 長條）；ㄇ 蓋板置中在電視中線（A 60 × 10、x 80–140；B 63.6 × 10、x 83.2–146.8），S-20 與網路孔 D-01 在蓋板正下方、中心 33；電視背後不設插座，電源線＋HDMI 走 Ø50（距左端 A 135.5／B 140.5）；清淨機在鋼琴旁凹位。\n- **網路設備為什麼放在 PS5 下層**：路由器（UCG Ultra）、交換器（USW Lite 8 PoE）、Aqara Hub M3 全天開著約 20 W，UCG 環境上限 40 °C；左格是唯一有進風口＋溫控風扇的格，平時門關著也有風；抽屜後面的線槽只靠蓋板縫散熱，比較悶。網路線到 PS5、Switch 2 也最短。PS5 在托盤上，上方到收起的翻門仍有空間。\n- **左側格柵密度（R88 改）**：直條 2.0 寬 × 1.8 深、縫 1.2，11 根 12 縫（原 1.2／1.0、17 根）。出風區 30.7 × 23 開孔 ≈ 265 cm²（37.5 %），NF-A14 約 65 CFM 時縫口風速 ≈ 1.2 m/s，仍低於約 1.5 m/s 的風聲門檻（原 ≈ 1.0 m/s）；2.0／1.2 落在常見格柵板 1.5–2.5／1–1.5 的比例，3 m 外看是直紋木作、不像出風口；2.0 寬實木條較不易斷，1.2 縫吸塵器扁嘴伸得進去。風量估算，交屋 30 分鐘遊戲測試照做。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 抽屜 LW（內寬） | 63.9／67.5（≈ 60／64） | 49.3／51.9／52.9（≈ 46–49） |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 電視偏沙發 | 0（左側 52.5） | 2.5（左側 50） |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 ✗ | 1.38／1.34 |\n| 斜向走道／最窄 | 106.0／82.3 | 105.1／81.4 |\n| 喇叭中心距 | 257.6 | 262.6 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬；最窄 = 鋼琴旁清淨機到 KC62；斜向走道 = 鋼琴角到右喇叭腳架。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。翻門開合時向外掃 30（約 2 秒）。\n\n> ⚠️ 數值為依 Idelchik 局部阻力與風扇曲線的估算（PS5 Pro 自身風量 20–30 CFM 待實測）；KV 停放疊高 6.4 依型錄推算、14 吋行程未驗證（裁板前取得 KV 安裝說明 Fig. 2／8 或樣品實測，疊高若到 7.5 PS5 上方仍有 5.8）、AIRPLATE T8 的 230 V 轉接與兩台串聯未驗證、Switch 2 插座後高度 14.5 為估計（Nintendo 未公布）。交屋時做 30 分鐘遊戲測試：PS5 前面進風 ≤ 室溫 +2 K。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in、門厚 3/4\"、setback 門厚 + 1/4\" | Knape & Vogt 型錄／安裝圖 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12、383 g | Nintendo SG 規格 |\n| LEGRABOX | 40 kg（NL 270–600）、C 高 17.7 | Blum |\n| Noctua NF-A14 5V PWM | 82.5 CFM、2.08 mmH₂O、24.6 dBA | Noctua |\n| AC Infinity CONTROLLER 1 | 84／88／92／96 °F 四段、5V USB、≤ 10 W | AC Infinity |\n| UCG Ultra | 14.18 × 12.76 × 3.0、6.2 W、USB-C 5 V／3 A、環境 ≤ 40 °C | Ubiquiti |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17、外接 60 W 變壓器、環境 ≤ 40 °C | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65、PoE 或 USB-C、−10–50 °C | Aqara 說明書 |\n| Noctua NF-A9 5V PWM（不開孔版） | 92 × 92 × 25、5 V | Noctua |\n| AIRPLATE T8 White | 104 CFM（兩台）、開孔 12.8 × 12.8 | AC Infinity |\n| BS 1363 插腳 | 火／零 1.77、地 2.23 長 | BS 1363（Wikipedia） |\n| 13A 插頭面 | 5.0 × 5.15（BG PT13HW） | BG 規格書 |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n| LEGRABOX 內寬 | ≈ LW − 3.5（底板 LW − 35 mm） | Blum 型錄 |\n| AMBIA-LINE 抽屜框 242 | 273 × 242 × 50、NL ≥ 270（ZC7S300RSU） | Blum／Lincoln Sentry |\n| AMBIA-LINE 橫隔板 242 | ZC7Q0U0SH、彈簧夾 | Blum 型錄 |\n\n## 不選\n- **兩端翻門（R79）**：Switch／網通放南端就要在南端開孔，屋主不要；現在只有北端一格翻門。\n- **四格 225／235**：225 左格每邊只剩 ≈ 3.9；235 走道 104.4、最窄 80.8、電視偏沙發 5。\n- **四格 230 對齊沙發（北端 47.5）**：左腳架貼到窗簾盒面、離櫃只剩 2.5，做不到 ≥ 5。\n- **Accuride CB1155／1145**：門是收到櫃子「上面」的滑軌，不能停在頂板下。\n- **抽屜連頂板一起拉出**：頂板分段，五金下沉幾 mm 就看得出高低差，拒絕。\n- **橫推門（Hettich SlideLine M）**：中間改抽屜後不需要。\n- **PS5 背後隔板、單靠底部進風**：前面全開時不需要；隔板只會擋住拿取。\n- **AC Infinity AIRFRAME T7、淘寶扁口櫃體風扇**：一個太大、只能插電；一個查不到風量、靜壓、電壓。\n- **三格 225（R80–R84）**：屋主定 220；220 北端退到 52.5 後電視一樣正對沙發，喇叭、KC62 位置與 R80 相同。\n- **北端出風 AIRPLATE／兩道細縫／中段格柵（R82–R85 的方案切換）**：已定整片格柵；比較留在附錄。\n\n## 定案後施工細節\n> 示意圖定案後才用；R81 的施工層級內容原封搬到這裡。\n\n### 方案 A（三格 220）尺寸\n- 電視櫃 220 × 45 × 40 落地，北端離陽台玻璃 52.5（離窗簾盒 32.5）、南端 272.5，中線離玻璃 162.5 = 電視中線 = 沙發中線\n- 分格（距北端）：端 0–7.5｜F1 7.8–75.73｜F2 76.03–143.97｜F3 144.27–212.2｜端 212.5–220，縫 0.3；面板 67.93 × 29.9 × 1.9\n- 隔板：北端同 B；P1 77.53–79.33（在 F2 後 1.5）、P2 143.22–145.02（F2／F3 縫後）；格淨寬 71.5／63.9／67.5\n- 左格：PS5 Pro x 19.0–57.8（北 13.0、到 Switch 13.0），層板 x 17.4–59.4；Switch 2 底座轉 90° 在 x 70.8–75.9（到 P1 1.6）；翻門 67.9 × 29.9 × 1.9（≈ 3.1 kg，KV 上限 13.6 kg、門寬上限 106.7）\n- 抽屜：中格 LEGRABOX NL 300（LW 63.9，背板離牆 10 = 線槽），右格 NL 350（LW 67.5，背板離牆 4）\n- ㄇ 切口 x 80–140 × 深 10（置中 110），蓋板 59.7 × 9.85；S-20 x 97.9–122.1、D-01 x 82.8–91.4，中心 33；Ø50 出口距北端 135.5；S-22 x 17.5–61.5\n- 平面：喇叭中心 33.7／291.3（各離櫃端 7.5）、KC62 311.3–336.9；斜向走道 106.0、到櫃圓角 118.7；清淨機到 KC62 82.3、過道角到 KC62 86.7\n\n> 以下沿用 R85 方案 B（四格 230）的尺寸；A 做法相同，尺寸看上面。\n\n### 電視電源（R82 修正）\n- 電視背後不設插座：壁架只離牆 1.5，一般 13A 插頭塞不下。多數電視電源線在機身端是可拆的小插頭（C7／C8「8 字」或 C13），從下面把小頭穿上 Ø50 管接電視，插頭端插 ㄇ 蓋板正下方的 S-20（電源線可拆，待實機確認）。\n- 備案（只有實機電源線不可拆時）：在 5 cm 電視牆木作內做嵌入式插座盒，插頭平貼牆面。\n\n### 施工交代（原卡片）\n- 客廳窗簾盒：天花內嵌深 20、沿陽台玻璃全長 560，雙軌（紗簾靠玻璃、遮光在內）\n- 電視牆不打鑿：木作底板 5＋淡灰壁紙到天花\n- 電視背後嵌入盒（中心距電視櫃北端 140.5、離地 85）只當過線盒，不設插座；Ø50 暗管從盒直下，出口距北端 140.5、離地 34，在 ㄇ 蓋板範圍（83.2–146.8）內、避開缺口，掀蓋板線直落線槽；木作底板在壁架處加夾板背襯\n- 電視櫃 230 × 45 × 40 落地，北端離陽台玻璃 50、中線離玻璃 165（= 電視中線；沙發 162.5）；前角平面 R 7.5，頂板同半徑\n- 分格（距北端）：端 0–7.5｜F1 7.8–61.175｜F2 61.475–114.85｜F3 115.15–168.525｜F4 168.825–222.2｜端 222.5–230，縫 0.3（中縫 114.85–115.15 = 電視中線）；面板 53.375 × 29.9 × 1.9、8–37.9；頂板 1.8 在 38.2–40，一整片固定連續（抽屜全在頂板下，不連頂板拉出）；踢腳 8 內退 10、端部退 3\n- 隔板 1.8：北端 = 外板 0–1.8＋空腔 1.8–4.2＋內隔板 4.2–6.0；P1 62.975–64.775（F2 後）、P2 114.1–115.9（中縫後，只到中間背板）、P3 167.775–169.575（F3／F4 縫後）；南端實板不開孔；格淨寬 57.0／49.3／51.9／52.9\n- 左格翻門：Knape & Vogt 8070PEZ-14 裝左右上角（翻門模式），門 53.375 × 29.9 × 1.9（≈ 2.4 kg）停在頂板下 6.4、距前 0.5–30.4，此區不走線不放東西；門下緣 45° 倒角當手扣、頂緣指槽同抽屜\n- 滑軌安裝面：北內隔板（x 6.0）加 1.5 通長墊條 → 面在 x 7.5，與 R 7.5 角內面齊；P1（x 62.975）加 1.5 通長墊條 → 面在 x 61.475；墊條高 6.4（離地 31.8–38.2）、距前 7.5／1.9 到 41；門 7.8–61.175，左右縫各 0.3；8080 鉸鏈以墊條面定位\n- 裁板前：取得 KV 安裝說明 Fig. 2／8 或樣品滑軌，確認停放疊高 6.4 與行程 ≥ 30.4（待確認）；疊高若到 7.5，門停在離地 30.7，PS5 上方仍有 5.8、Switch 上方 6.4\n- 左格內部：PS5 層板 1.2（42 × 24，x 8.9–50.9、離地 14.8–16.0）架在兩條 1.8 立條上，PS5 Pro 在 x 10.5–49.3；下面是高 5 的網通盤（USW＋UCG 並排在前、Hub M3 在 USW 後面，上方留 1.8）；Switch 2 底座轉 90° 在 x 53.3–58.4（接口朝 P1）；USW 變壓器魔鬼氈固定在 Switch 後方地面（x 51–63、距前 31 起）；格底 y 2–6、x 9–57 開 48 × 4 六角孔鋁板＋磁吸濾網；背板貼牆，S-22 處開窗 48 × 11\n- 中間兩格：Blum LEGRABOX pure C 高 NL 300、BLUMOTION（LW 49.3／51.9），背板 1.8 離牆 10（= 線槽淨深 10，不開窗）；右格：NL 350（LW 52.9），背板離牆 4；三個抽屜各放 AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板 ZC7Q0U0SH，底鋪 agoform 止滑墊\n- 頂板後緣 ㄇ 切口 x 83.2–146.8 × 深 10（CNC，內角 R0.3），置中跨中縫；蓋板 = 活動木板（無五金）18 同木紋 1 片 63.3 × 9.85、陰影縫 1.5 mm，擱在兩端墊條、中間兩格背板上緣（距牆 10–11.8）與靠牆背條，1 mm 毛氈；後緣 6 × 2 R1 缺口在 x 99.1／130.9\n- P3、P2、P1 後下角開 4 × 10 缺口（距牆 0–4、離地 9.8–19.8）：HDMI／電源／Cat6 從線槽低走進左格；牆插 S-22 中心 22（3 × 13A 雙孔、一個 USB，x 11.6–57.4）、S-20 中心 33（13A 雙孔＋單孔 x 102.9–127.1，面板頂 ≈ 37.3，在蓋板底 38.2 下）；網路孔 D-01 在 ㄇ 蓋板下 x 86–94.6、中心 33\n- 北端外板做白橡實木框格柵（染色對櫃面樣板、霧面漆；採用整片版：無框做滿、外圈封黑背板，見下方「北端出風」）：框 18 厚，14 根 1.2 × 1.8 直條榫入上下框，13 道 1.0 通縫，區域距前 13–42.8、離地 10.5–33.5；內面貼 1 mm 黑色不鏽鋼防蟲網，空腔內面漆黑\n- 組裝：格柵框從空腔側鎖在端塊木條上，再裝內隔板（Confirmat 螺絲，可拆）；保養：格柵外面每月吸塵，空腔每年拆風扇從 Ø13.5 孔吸一次\n- 北端內隔板開 Ø13.5 孔（中心距前 36、離地 19）；NF-A14 5V PWM 裝格側（防震墊、NA-FG1-14 護網，4 顆螺絲可從格內拆），往外推；CONTROLLER 1 插 S-22 的 USB，探頭貼風扇，88 °F（31 °C）啟動（開／關、全速）\n- 交屋前 30 分鐘遊戲測試：PS5 前面進風口溫度 ≤ 室溫 +2 K\n- 踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器插 S-20，獨立開關\n- 電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈\n- Ø32 暗管：左腳架 ↔ 櫃後空腔 ↔ 右腳架，出線口離地 10\n\n### 分區規格（原立面）\n- **天花 · 洗牆燈**（底 270）：局部假天花 30 寬、降 10，內嵌 3000K 可調光線性洗牆燈。\n- **電視牆面**（387.5 · 到天花）：不打鑿：外加木作底板（厚 5）＋wabi-sabi 淡灰壁紙。\n- **電視**（中心 110 · 下緣 62.1）：Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），中線離玻璃 165 = 電視櫃中線（沙發 162.5）；電視背後不設插座，嵌入盒（距櫃北端 140.5、離地 85）只過線\n- **電視櫃**（230 × 45 × 40）：總長 = 端 7.5＋面 53.375 × 4＋縫 0.3 × 5＋端 7.5 = 230；縫中心 7.65／61.325／115／168.675／222.35，中縫 115 = 電視中線；面板 8–37.9、頂板 38.2–40、踢腳 8 內退 10；北端離玻璃 50\n- **面板 × 4**（53.4 × 29.9 × 1.9）：四面同款頂緣內凹指槽、無把手；翻門下緣另加隱藏 45° 倒角當手扣\n- **左格 · 遊戲**（隔板間 57.0、滑軌處 54.0 × 22.0（門下）× 41.3）：PS5 Pro 橫放在 1.2 層板上（x 10.5–49.3、前緣退 6）：北 4.5、到 Switch 4.0、上到停放的門 6.9、後 15.6；Switch 2 底座轉 90°（x 53.3–58.4，接口朝 P1、到 P1 4.6），主機頂 24.3、到門 7.5，主機連 Joy-Con 2 上提 1 往前抽出（底座實物待確認）\n- **翻門**（Knape & Vogt 8070PEZ-14）：14 吋翻門／入櫃滑軌（翻門模式，門收進櫃內），裝左右上角；門 53.4 × 29.9 × 1.9（≈ 2.4 kg，KV 上限 13.6 kg）停在頂板下 6.4（待確認）、距前 0.5–30.4；安裝面：北內隔板、P1 各 1.5 通長墊條（面 x 7.5／61.475），門左右縫各 0.3；開合時向外掃 30\n- **網通盤**（高 5 · 在 PS5 層板下）：USW Lite 8 PoE（16.37 × 9.96 × 3.17）＋UCG Ultra（14.18 × 12.76 × 3.0）平放並排在前、Aqara Hub M3（10.5 × 10.5 × 3.65，上限 50 °C）在 USW 後面，網口朝後、上方留 1.8；USW 外接 60 W 變壓器魔鬼氈固定在 Switch 後方地面，UCG 的 USB-C 變壓器直接插 S-22；D-01 在 ㄇ 蓋板下\n- **散熱**（前進 · 北端出）：北端外板 = 白橡實木框直條格柵：11 根 2.0 × 1.8、12 道 1.2 通縫（出風區 30.7 × 23，開孔 ≈ 265 cm²，≈ 1.2 m/s）；Noctua NF-A14 5V PWM＋NA-FG1-14 護網在內隔板格側（離格柵 4.2）往外推：≈ 65–69 CFM、1.0 m/s、出風室溫 +6.5 K\n- **門關時**（底部隱藏進風）：格底 y 2–6 開 48 × 4 六角孔鋁板（63 % 開孔），在踢腳內退處、燈前的格底下，沙發看不到；上面放磁吸濾網，開門從格內取出洗；網通 24 h ≈ 20 W 由溫控風扇帶走\n- **右三格**（抽屜 LW 49.3／51.9／52.9）：Blum LEGRABOX pure C 高（17.7）、全拉＋BLUMOTION、40 kg；中間兩格 NL 300（內深 31.3）、右格 NL 350（內深 37.3）；內寬 ≈ LW − 3.5；各放 AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板（ZC7Q0U0SH）、agoform 止滑墊；鋼側板不下垂\n- **線槽**（ㄇ 切口 63.6 × 10）：頂板後緣切口 x 83.2–146.8（置中跨中縫，兩端留實頂 > 80）；蓋板 18 同木紋 1 片 63.3 × 9.85、陰影縫 1.5 mm；後緣兩個 6 × 2 R1 缺口在 x 99.1／130.9 過線兼手扣\n- **走線**（背板離牆 10／4）：中間兩格背板離牆 10、右格 4 = 通長線槽；P3、P2、P1 後下角缺口 4 × 10；Ø50 電視暗管出口距北端 140.5、離地 34，在蓋板範圍內，掀蓋板線直落線槽；HDMI、Cat6 低走：線槽 → P1 → 左格後方，不經翻門停放區\n- **牆插**（S-22 · S-20 · D-01）：S-22 左格背牆：3 × 13A 雙孔（一個帶 USB-A／C）、中心 22、x 11.6–57.4，供 PS5、Switch 2、USW 變壓器、UCG 變壓器＋備用 2，USB 給 CONTROLLER 1；S-20 在蓋板正下方：13A 雙孔＋單孔、中心 33、置中在中縫（掀蓋板從上插拔），供電視、底燈驅動器、蓋板上充電、備用；網路孔 D-01 在 S-20 左邊；南端不需插座\n- **喇叭 · KEF LS50 Wireless II**（中心距 262.6 · 頂 96.2）：KEF S2 Floor Stand 中心離玻璃 33.7／296.3，對電視中線左右各 131.3；兩腳架各離電視櫃端 5\n- **重低音 · KEF KC62**（25.6 × 24.8 × 24.6）：右腳架南側 316.3–341.9，貼牆 10；RCA 接主喇叭 Sub Out\n- **踢腳 · 底燈**（8 高 · 內退 10）：45° 鋁槽、乳白罩，3000K COB；驅動器插 S-20，獨立開關\n\n### 五金與機電\n- Knape & Vogt 8070PEZ-14 翻門／入櫃滑軌 × 1 組（翻門模式、8080 內嵌鉸鏈、門厚 3/4\"、≤ 30 lb）＋通長墊條 1.5／1.5\n- Blum LEGRABOX pure C 高 NL 300 × 2（LW 49.3／51.9）＋NL 350（右，LW 52.9）（全拉、BLUMOTION、40 kg）\n- Blum AMBIA-LINE 抽屜框 242（ZC7S300RSU）× 3＋AMBIA-LINE 橫隔板 242（ZC7Q0U0SH）× 3；agoform LEGRABOX 止滑墊 × 3（依 NL × 內寬裁）\n- Noctua NF-A14 5V PWM＋NA-FG1-14 護網；AC Infinity CONTROLLER 1（AC-PCA1，USB 溫控，開／關、全速 1500 rpm ≈ 24.6 dB(A)，設 88 °F／31 °C）插 S-22 的 USB\n- 格底進風：48 × 4 六角孔鋁板（63 % 開孔）＋磁吸濾網\n- 牆插：S-22 3 × 13A 雙孔（一個 USB）、S-20 13A 雙孔＋單孔；網路孔 D-01（蓋板下）\n- 底燈：45° 鋁槽＋COB 24V 3000K CRI≥90；LEW 獨立迴路。\n\n### 注意（原卡片）\n- 翻門開合時向外掃 30（約 2 秒）：言言在櫃前時慢慢開\n- 玩之前先把翻門推進去：門關著玩沒有驗證，PS5 可能過熱保護\n- KV 8070PEZ-14 停放疊高 6.4 與 14 吋行程未驗證：裁板前取得 KV 安裝說明 Fig. 2／8 或樣品滑軌實測（行程需 ≥ 29.9＋0.5）；疊高若到 7.5，PS5 上方仍有 5.8\n- Switch 2 側放抽取：上方只有 7.5，主機連 Joy-Con 2 上提往前抽；底座兩端開口待實物確認\n- 沙發南端到過道 57.6 → 沙發不可超過 210，邊几放北端\n- 左腳架離窗簾盒面 2.4 → 窗簾離地 1、不拖地\n\n### 機內淨距\n- PS5 Pro 北側／到 Switch／上／後：4.5／4.0／6.9／15.6（上 = 到收起的門）\n- Switch 2 接口側到 P1：4.6\n- Switch 2 頂到收起的門：7.5\n\n### 待確認\n- KV 8070PEZ-14 停放疊高（設計 6.4）與 14 吋行程：待 KV 安裝說明 Fig. 2／8 或樣品\n- Switch 2 插座後高度（估 14.5）\n- 櫃面木紋色號\n- 電視電源線機身端可拆（C7／C8 或 C13）\n\n### 北端出風（兩案共用，已定整片格柵）\n- **整片格柵（採用）**：格柵做滿整片側板（從頂板下陰影縫到踢腳線，前緣停在 R7.5 圓角），外圈直條背後封 6 mm 黑背板（假格柵），只留中段 30.7 × 23 出風，否則前角（離進風口 7.5）的熱風會被吸回 PS5；風量、溫升與中段格柵相同（≈ 65–69 CFM／+6.5 K）；風扇停了 PS5 進風約室溫 +2–4 K。\n- **氣流（玩時）**：整個前面進風 → PS5 前面 → 背後 15.6 的後腔 → NF-A14 裝在北端內隔板格側（離格柵 4.2、加 NA-FG1-14 護網）往外推 → 從北端側面橫向排出，不往上、不往電視背後。風扇退到格柵後讓氣流攤開（直接貼格柵會集中到 2.25 m/s、加 3–6 dB 葉片聲）；往外推讓整格微負壓，熱氣只從北端走。\n- **氣流（門關、平時）**：格底（踢腳內退處、燈前）隱藏 48 × 4 六角孔鋁板（63 % 開孔）＋磁吸濾網進風 → 網通盤 → 後腔 → 風扇；**AC Infinity CONTROLLER 1**（AC-PCA1，USB 溫控，88 °F／31 °C 啟動，開／關、全速）插 S-22 的 USB，網通 24 h 約 20 W，格內約室溫 +1 K。濾網只放這裡：玩時進風是整個前面，風速 < 0.3 m/s 不需要濾網。\n- **不開孔版的門關散熱**：左格背板改離牆 4（後方 11.6 ≥ Sony 10），背板右上 Noctua NF-A9 5V PWM（同一個 CONTROLLER 1）把網通熱氣推進背後線槽，經 P1 後上角 4 × 15 通風口到中格線槽，從蓋板陰影縫＋兩個缺口（≈ 36 cm²）出到電視背後；網通 ≈ 20 W，≈ 20 m³/h 即只升 ≈ 3 K（估），北端仍不開孔。\n- **格柵做法**：白橡實木框（18），11 根 2.0 × 1.8 直條、12 道 1.2 通縫（R88，原 14 根 1.2／13 道 1.0），染色對櫃面樣板；內面 1 mm 黑色不鏽鋼防蟲網，空腔漆黑。格柵從空腔側鎖在端塊木條上，再裝可拆的內隔板；保養：格柵外面每月吸塵，每年拆風扇從 Ø13.5 孔吸空腔。整片版：直條 11 根（2.0 寬、縫 1.2）做滿 1.1–37.5（距牆）、8.0–37.9 高，沒有上下框，中段出風區以外背後封 6 mm 黑背板。\n- **方案 B：PS5 每邊 4.5 為什麼夠**：PS5 Pro 前進後出，玩時翻門推進去，整個前面 53.4 × 22 = 1,175 cm² 進風（≈ 0.3 m/s），熱氣從背後 15.6 的後腔被北端 NF-A14 推出去，側邊只是通道；Sony 的 10 當參考。屋主現在 54 寬的格放 PS4 Pro 一直正常。交屋時照樣做 30 分鐘測試：PS5 前面進風 ≤ 室溫 +2 K。\n\n| **4 格 230（選）** | 53.4／49.3–52.9 | 57.0／≈ 4.5 | 105.1／81.4／2.5 |\n| 4 格 225 | 52.1／48.1–51.7 | 55.7／≈ 3.9 | 106.0／82.3／0 |\n| 4 格 235 | 54.6／50.6–54.2 | 58.2／≈ 4.8 | 104.4／80.8／5.0 |\n| 3 格 225（R80–R84） | 69.6／65.0–70.0 | 72.9／13.7 | 106.0／82.3／0 |\n| 3 格 220 | 67.9／63.3–68.3 | 71.2／12.8 | 107.2／83.5／2.5 |\n\n> 左格寬 = 隔板間（滑軌墊條各 1.5 只在頂板下 6.4 高的停門區，主機在它下面）；最窄 = 清淨機在鋼琴旁時到 KC62；偏沙發 = 電視中線離沙發中線。\n\n| 做法 | 北端板 | 出風（量／溫升） | 取捨 |\n|---|---|---|---|\n| 不開孔（已刪） | 不開孔，PS5 上方 1.2 導流板 | PS5 自身 ≈ 25 CFM／≈ +17 K | 最便宜；熱氣在電視前上升；門關時網通靠背板 NF-A9 排進線槽 |\n| AIRPLATE | AIRPLATE T8 White 16 × 16 × 2 台 | ≈ 42–46 CFM／+9–10 K | 白色方形面板看得到、要插電 |\n| 兩道細縫 | 兩道 2.5 × 23 細縫＋NF-A14 | ≈ 55 CFM／+7.9 K | 幾乎看不到；縫口 2.25 m/s 可能有風聲 |\n| 中段格柵 | 中段白橡實木格柵＋NF-A14 | ≈ 65–69 CFM／+6.5 K | 最涼最靜；上下留實木框，像出風窗 |\n| **整片格柵（採用）** | 格柵做滿整片側板，外圈背後封黑板＋NF-A14 | 同 B | 同 B 涼靜；整片直紋，看起來是設計 |\n\n\n### 長度比較（R85）\n| 做法 | 面寬／抽屜 LW | 左格寬／每邊 | 斜道／最窄／偏沙發 |\n|---|---|---|---|",
+      "summary": "兩案給 Patrick 看的示意：A 三格 220（預設；面板 67.9、PS5 每邊 ≈ 13、走道比 B 寬 2.0）與 B 四格 230（面板 53.4、中縫對電視、抽屜較窄）；兩案左格都是翻門藏 PS5 Pro、Switch 2 與網路設備，左側整片白橡格柵＋內藏風扇、右側不開孔；電視背後不設插座，線經 Ø50 暗管落到 ㄇ 蓋板下的 S-20；清淨機在鋼琴旁。施工細節在文末附錄。",
+      "body": "## 結論\n- **兩案都能做，預設 A（三格 220）**。差別只在櫃體分格；兩案左側都是整片白橡格柵側板（外圈背後封黑板）＋NF-A14 溫控風扇、右側不開孔，左格都是 Knape & Vogt 8070PEZ-14 翻門遊戲格（PS5 Pro＋轉 90° 的 Switch 2＋網路設備托盤）。\n- **A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜，LW 63.9／67.5）；左格隔板間 71.5，PS5 左右各 ≈ 13（過 Sony 建議的 10）；左側離玻璃 50（同 B），電視、電視櫃中線 160，沙發留在 162.5（偏 2.5，同 B 看不出來），比 B 短的 10 全給走道；喇叭 33.7／286.3、KC62 306.3–331.9（腳架各離櫃端 5，同 B）；斜向走道 113.0、最窄 87.4。代價：LG G6 77 只有 1.285 倍（< 1.3，Xiaomi 75 是 1.32）；抽屜寬，要靠分隔框分區。\n- **B 四格 230（R85）**：面板 53.4 × 4（左翻門＋三個抽屜，LW 49.3／51.9／52.9），中縫正對電視；PS5 左右只有 ≈ 4.5，靠前面全開進風＋左側風扇；電視偏沙發 2.5（看不出）；走道 111.0、最窄 85.4；兩款電視都過 1.3 倍。\n- **怎麼選**：PS5 兩側有餘裕、走道多 2.0 → A；抽屜窄好收、中縫對稱、日後換 77 吋 → B。\n- **兩案共用**：每個抽屜放 Blum AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板（ZC7Q0U0SH）＋agoform 止滑墊（A 的抽屜框靠一側後還剩 ≈ 36–40 長條）；ㄇ 蓋板置中在電視中線（A 60 × 10、x 80–140；B 63.6 × 10、x 83.2–146.8），S-20 與網路孔 D-01 在蓋板正下方、中心 33；電視背後不設插座，電源線＋HDMI 走 Ø50（距左端 A 135.5／B 140.5）；清淨機在鋼琴旁凹位。\n- **網路設備為什麼放在 PS5 下層**：路由器（UCG Ultra）、交換器（USW Lite 8 PoE）、Aqara Hub M3 全天開著約 20 W，UCG 環境上限 40 °C；左格是唯一有進風口＋溫控風扇的格，平時門關著也有風；抽屜後面的線槽只靠蓋板縫散熱，比較悶。網路線到 PS5、Switch 2 也最短。PS5 在托盤上，上方到收起的翻門仍有空間。\n- **左側格柵密度（R88 改）**：直條 2.0 寬 × 1.8 深、縫 1.2，11 根 12 縫（原 1.2／1.0、17 根）。出風區 30.7 × 23 開孔 ≈ 265 cm²（37.5 %），NF-A14 約 65 CFM 時縫口風速 ≈ 1.2 m/s，仍低於約 1.5 m/s 的風聲門檻（原 ≈ 1.0 m/s）；2.0／1.2 落在常見格柵板 1.5–2.5／1–1.5 的比例，3 m 外看是直紋木作、不像出風口；2.0 寬實木條較不易斷，1.2 縫吸塵器扁嘴伸得進去。風量估算，交屋 30 分鐘遊戲測試照做。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 抽屜 LW（內寬） | 63.9／67.5（≈ 60／64） | 49.3／51.9／52.9（≈ 46–49） |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 電視偏沙發 | 2.5（左側 50） | 2.5（左側 50） |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 ✗ | 1.38／1.34 |\n| 斜向走道／最窄 | 113.0／87.4 | 111.0／85.4 |\n| 喇叭中心距 | 252.6 | 262.6 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬；最窄 = 鋼琴旁清淨機到 KC62；斜向走道 = 鋼琴角到右喇叭腳架。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。翻門開合時向外掃 30（約 2 秒）。\n\n> ⚠️ 數值為依 Idelchik 局部阻力與風扇曲線的估算（PS5 Pro 自身風量 20–30 CFM 待實測）；KV 停放疊高 6.4 依型錄推算、14 吋行程未驗證（裁板前取得 KV 安裝說明 Fig. 2／8 或樣品實測，疊高若到 7.5 PS5 上方仍有 5.8）、AIRPLATE T8 的 230 V 轉接與兩台串聯未驗證、Switch 2 插座後高度 14.5 為估計（Nintendo 未公布）。交屋時做 30 分鐘遊戲測試：PS5 前面進風 ≤ 室溫 +2 K。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in、門厚 3/4\"、setback 門厚 + 1/4\" | Knape & Vogt 型錄／安裝圖 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12、383 g | Nintendo SG 規格 |\n| LEGRABOX | 40 kg（NL 270–600）、C 高 17.7 | Blum |\n| Noctua NF-A14 5V PWM | 82.5 CFM、2.08 mmH₂O、24.6 dBA | Noctua |\n| AC Infinity CONTROLLER 1 | 84／88／92／96 °F 四段、5V USB、≤ 10 W | AC Infinity |\n| UCG Ultra | 14.18 × 12.76 × 3.0、6.2 W、USB-C 5 V／3 A、環境 ≤ 40 °C | Ubiquiti |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17、外接 60 W 變壓器、環境 ≤ 40 °C | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65、PoE 或 USB-C、−10–50 °C | Aqara 說明書 |\n| Noctua NF-A9 5V PWM（不開孔版） | 92 × 92 × 25、5 V | Noctua |\n| AIRPLATE T8 White | 104 CFM（兩台）、開孔 12.8 × 12.8 | AC Infinity |\n| BS 1363 插腳 | 火／零 1.77、地 2.23 長 | BS 1363（Wikipedia） |\n| 13A 插頭面 | 5.0 × 5.15（BG PT13HW） | BG 規格書 |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n| LEGRABOX 內寬 | ≈ LW − 3.5（底板 LW − 35 mm） | Blum 型錄 |\n| AMBIA-LINE 抽屜框 242 | 273 × 242 × 50、NL ≥ 270（ZC7S300RSU） | Blum／Lincoln Sentry |\n| AMBIA-LINE 橫隔板 242 | ZC7Q0U0SH、彈簧夾 | Blum 型錄 |\n\n## 不選\n- **兩端翻門（R79）**：Switch／網通放南端就要在南端開孔，屋主不要；現在只有北端一格翻門。\n- **四格 225／235**：225 左格每邊只剩 ≈ 3.9；235 走道 104.4、最窄 80.8、電視偏沙發 5。\n- **四格 230 對齊沙發（北端 47.5）**：左腳架貼到窗簾盒面、離櫃只剩 2.5，做不到 ≥ 5。\n- **Accuride CB1155／1145**：門是收到櫃子「上面」的滑軌，不能停在頂板下。\n- **抽屜連頂板一起拉出**：頂板分段，五金下沉幾 mm 就看得出高低差，拒絕。\n- **橫推門（Hettich SlideLine M）**：中間改抽屜後不需要。\n- **PS5 背後隔板、單靠底部進風**：前面全開時不需要；隔板只會擋住拿取。\n- **AC Infinity AIRFRAME T7、淘寶扁口櫃體風扇**：一個太大、只能插電；一個查不到風量、靜壓、電壓。\n- **三格 225（R80–R84）**：屋主定 220；R89 起 220 左側和 B 一樣離玻璃 50，省下的長度給走道。\n- **北端出風 AIRPLATE／兩道細縫／中段格柵（R82–R85 的方案切換）**：已定整片格柵；比較留在附錄。\n\n## 定案後施工細節\n> 示意圖定案後才用；R81 的施工層級內容原封搬到這裡。\n\n### 方案 A（三格 220）尺寸\n- 電視櫃 220 × 45 × 40 落地，左端離陽台玻璃 50（離窗簾盒 30，同 B）、右端 270，中線離玻璃 160 = 電視中線（沙發 162.5，偏 2.5）\n- 分格（距北端）：端 0–7.5｜F1 7.8–75.73｜F2 76.03–143.97｜F3 144.27–212.2｜端 212.5–220，縫 0.3；面板 67.93 × 29.9 × 1.9\n- 隔板：北端同 B；P1 77.53–79.33（在 F2 後 1.5）、P2 143.22–145.02（F2／F3 縫後）；格淨寬 71.5／63.9／67.5\n- 左格：PS5 Pro x 19.0–57.8（北 13.0、到 Switch 13.0），層板 x 17.4–59.4；Switch 2 底座轉 90° 在 x 70.8–75.9（到 P1 1.6）；翻門 67.9 × 29.9 × 1.9（≈ 3.1 kg，KV 上限 13.6 kg、門寬上限 106.7）\n- 抽屜：中格 LEGRABOX NL 300（LW 63.9，背板離牆 10 = 線槽），右格 NL 350（LW 67.5，背板離牆 4）\n- ㄇ 切口 x 80–140 × 深 10（置中 110），蓋板 59.7 × 9.85；S-20 x 97.9–122.1、D-01 x 82.8–91.4，中心 33；Ø50 出口距北端 135.5；S-22 x 17.5–61.5\n- 平面：喇叭中心 33.7／286.3（各離櫃端 5）、KC62 306.3–331.9；斜向走道 113.0、到櫃圓角 119.9；清淨機到 KC62 87.4、過道角到 KC62 92.9；喇叭背離牆 8、KC62 背離牆 6\n\n> 以下沿用 R85 方案 B（四格 230）的尺寸；A 做法相同，尺寸看上面。\n\n### 電視電源（R82 修正）\n- 電視背後不設插座：壁架只離牆 1.5，一般 13A 插頭塞不下。多數電視電源線在機身端是可拆的小插頭（C7／C8「8 字」或 C13），從下面把小頭穿上 Ø50 管接電視，插頭端插 ㄇ 蓋板正下方的 S-20（電源線可拆，待實機確認）。\n- 備案（只有實機電源線不可拆時）：在 5 cm 電視牆木作內做嵌入式插座盒，插頭平貼牆面。\n\n### 施工交代（原卡片）\n- 客廳窗簾盒：天花內嵌深 20、沿陽台玻璃全長 560，雙軌（紗簾靠玻璃、遮光在內）\n- 電視牆不打鑿：木作底板 5＋淡灰壁紙到天花\n- 電視背後嵌入盒（中心距電視櫃北端 140.5、離地 85）只當過線盒，不設插座；Ø50 暗管從盒直下，出口距北端 140.5、離地 34，在 ㄇ 蓋板範圍（83.2–146.8）內、避開缺口，掀蓋板線直落線槽；木作底板在壁架處加夾板背襯\n- 電視櫃 230 × 45 × 40 落地，北端離陽台玻璃 50、中線離玻璃 165（= 電視中線；沙發 162.5）；前角平面 R 7.5，頂板同半徑\n- 分格（距北端）：端 0–7.5｜F1 7.8–61.175｜F2 61.475–114.85｜F3 115.15–168.525｜F4 168.825–222.2｜端 222.5–230，縫 0.3（中縫 114.85–115.15 = 電視中線）；面板 53.375 × 29.9 × 1.9、8–37.9；頂板 1.8 在 38.2–40，一整片固定連續（抽屜全在頂板下，不連頂板拉出）；踢腳 8 內退 10、端部退 3\n- 隔板 1.8：北端 = 外板 0–1.8＋空腔 1.8–4.2＋內隔板 4.2–6.0；P1 62.975–64.775（F2 後）、P2 114.1–115.9（中縫後，只到中間背板）、P3 167.775–169.575（F3／F4 縫後）；南端實板不開孔；格淨寬 57.0／49.3／51.9／52.9\n- 左格翻門：Knape & Vogt 8070PEZ-14 裝左右上角（翻門模式），門 53.375 × 29.9 × 1.9（≈ 2.4 kg）停在頂板下 6.4、距前 0.5–30.4，此區不走線不放東西；門下緣 45° 倒角當手扣、頂緣指槽同抽屜\n- 滑軌安裝面：北內隔板（x 6.0）加 1.5 通長墊條 → 面在 x 7.5，與 R 7.5 角內面齊；P1（x 62.975）加 1.5 通長墊條 → 面在 x 61.475；墊條高 6.4（離地 31.8–38.2）、距前 7.5／1.9 到 41；門 7.8–61.175，左右縫各 0.3；8080 鉸鏈以墊條面定位\n- 裁板前：取得 KV 安裝說明 Fig. 2／8 或樣品滑軌，確認停放疊高 6.4 與行程 ≥ 30.4（待確認）；疊高若到 7.5，門停在離地 30.7，PS5 上方仍有 5.8、Switch 上方 6.4\n- 左格內部：PS5 層板 1.2（42 × 24，x 8.9–50.9、離地 14.8–16.0）架在兩條 1.8 立條上，PS5 Pro 在 x 10.5–49.3；下面是高 5 的網通盤（USW＋UCG 並排在前、Hub M3 在 USW 後面，上方留 1.8）；Switch 2 底座轉 90° 在 x 53.3–58.4（接口朝 P1）；USW 變壓器魔鬼氈固定在 Switch 後方地面（x 51–63、距前 31 起）；格底 y 2–6、x 9–57 開 48 × 4 六角孔鋁板＋磁吸濾網；背板貼牆，S-22 處開窗 48 × 11\n- 中間兩格：Blum LEGRABOX pure C 高 NL 300、BLUMOTION（LW 49.3／51.9），背板 1.8 離牆 10（= 線槽淨深 10，不開窗）；右格：NL 350（LW 52.9），背板離牆 4；三個抽屜各放 AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板 ZC7Q0U0SH，底鋪 agoform 止滑墊\n- 頂板後緣 ㄇ 切口 x 83.2–146.8 × 深 10（CNC，內角 R0.3），置中跨中縫；蓋板 = 活動木板（無五金）18 同木紋 1 片 63.3 × 9.85、陰影縫 1.5 mm，擱在兩端墊條、中間兩格背板上緣（距牆 10–11.8）與靠牆背條，1 mm 毛氈；後緣 6 × 2 R1 缺口在 x 99.1／130.9\n- P3、P2、P1 後下角開 4 × 10 缺口（距牆 0–4、離地 9.8–19.8）：HDMI／電源／Cat6 從線槽低走進左格；牆插 S-22 中心 22（3 × 13A 雙孔、一個 USB，x 11.6–57.4）、S-20 中心 33（13A 雙孔＋單孔 x 102.9–127.1，面板頂 ≈ 37.3，在蓋板底 38.2 下）；網路孔 D-01 在 ㄇ 蓋板下 x 86–94.6、中心 33\n- 北端外板做白橡實木框格柵（染色對櫃面樣板、霧面漆；採用整片版：無框做滿、外圈封黑背板，見下方「北端出風」）：框 18 厚，14 根 1.2 × 1.8 直條榫入上下框，13 道 1.0 通縫，區域距前 13–42.8、離地 10.5–33.5；內面貼 1 mm 黑色不鏽鋼防蟲網，空腔內面漆黑\n- 組裝：格柵框從空腔側鎖在端塊木條上，再裝內隔板（Confirmat 螺絲，可拆）；保養：格柵外面每月吸塵，空腔每年拆風扇從 Ø13.5 孔吸一次\n- 北端內隔板開 Ø13.5 孔（中心距前 36、離地 19）；NF-A14 5V PWM 裝格側（防震墊、NA-FG1-14 護網，4 顆螺絲可從格內拆），往外推；CONTROLLER 1 插 S-22 的 USB，探頭貼風扇，88 °F（31 °C）啟動（開／關、全速）\n- 交屋前 30 分鐘遊戲測試：PS5 前面進風口溫度 ≤ 室溫 +2 K\n- 踢腳內退 10，45° 鋁槽 COB 3000K 燈條，驅動器插 S-20，獨立開關\n- 電視牆上方局部假天花寬 30、底 270，嵌 3000K 可調光洗牆燈\n- Ø32 暗管：左腳架 ↔ 櫃後空腔 ↔ 右腳架，出線口離地 10\n\n### 分區規格（原立面）\n- **天花 · 洗牆燈**（底 270）：局部假天花 30 寬、降 10，內嵌 3000K 可調光線性洗牆燈。\n- **電視牆面**（387.5 · 到天花）：不打鑿：外加木作底板（厚 5）＋wabi-sabi 淡灰壁紙。\n- **電視**（中心 110 · 下緣 62.1）：Xiaomi TV S Pro Mini LED 75 2026 166.7 × 95.8 × 7.3、VESA 400 × 300；Vogel's TVM 5605 壁架（厚 1.5），中線離玻璃 165 = 電視櫃中線（沙發 162.5）；電視背後不設插座，嵌入盒（距櫃北端 140.5、離地 85）只過線\n- **電視櫃**（230 × 45 × 40）：總長 = 端 7.5＋面 53.375 × 4＋縫 0.3 × 5＋端 7.5 = 230；縫中心 7.65／61.325／115／168.675／222.35，中縫 115 = 電視中線；面板 8–37.9、頂板 38.2–40、踢腳 8 內退 10；北端離玻璃 50\n- **面板 × 4**（53.4 × 29.9 × 1.9）：四面同款頂緣內凹指槽、無把手；翻門下緣另加隱藏 45° 倒角當手扣\n- **左格 · 遊戲**（隔板間 57.0、滑軌處 54.0 × 22.0（門下）× 41.3）：PS5 Pro 橫放在 1.2 層板上（x 10.5–49.3、前緣退 6）：北 4.5、到 Switch 4.0、上到停放的門 6.9、後 15.6；Switch 2 底座轉 90°（x 53.3–58.4，接口朝 P1、到 P1 4.6），主機頂 24.3、到門 7.5，主機連 Joy-Con 2 上提 1 往前抽出（底座實物待確認）\n- **翻門**（Knape & Vogt 8070PEZ-14）：14 吋翻門／入櫃滑軌（翻門模式，門收進櫃內），裝左右上角；門 53.4 × 29.9 × 1.9（≈ 2.4 kg，KV 上限 13.6 kg）停在頂板下 6.4（待確認）、距前 0.5–30.4；安裝面：北內隔板、P1 各 1.5 通長墊條（面 x 7.5／61.475），門左右縫各 0.3；開合時向外掃 30\n- **網通盤**（高 5 · 在 PS5 層板下）：USW Lite 8 PoE（16.37 × 9.96 × 3.17）＋UCG Ultra（14.18 × 12.76 × 3.0）平放並排在前、Aqara Hub M3（10.5 × 10.5 × 3.65，上限 50 °C）在 USW 後面，網口朝後、上方留 1.8；USW 外接 60 W 變壓器魔鬼氈固定在 Switch 後方地面，UCG 的 USB-C 變壓器直接插 S-22；D-01 在 ㄇ 蓋板下\n- **散熱**（前進 · 北端出）：北端外板 = 白橡實木框直條格柵：11 根 2.0 × 1.8、12 道 1.2 通縫（出風區 30.7 × 23，開孔 ≈ 265 cm²，≈ 1.2 m/s）；Noctua NF-A14 5V PWM＋NA-FG1-14 護網在內隔板格側（離格柵 4.2）往外推：≈ 65–69 CFM、1.0 m/s、出風室溫 +6.5 K\n- **門關時**（底部隱藏進風）：格底 y 2–6 開 48 × 4 六角孔鋁板（63 % 開孔），在踢腳內退處、燈前的格底下，沙發看不到；上面放磁吸濾網，開門從格內取出洗；網通 24 h ≈ 20 W 由溫控風扇帶走\n- **右三格**（抽屜 LW 49.3／51.9／52.9）：Blum LEGRABOX pure C 高（17.7）、全拉＋BLUMOTION、40 kg；中間兩格 NL 300（內深 31.3）、右格 NL 350（內深 37.3）；內寬 ≈ LW − 3.5；各放 AMBIA-LINE 抽屜框 242（ZC7S300RSU）＋橫隔板（ZC7Q0U0SH）、agoform 止滑墊；鋼側板不下垂\n- **線槽**（ㄇ 切口 63.6 × 10）：頂板後緣切口 x 83.2–146.8（置中跨中縫，兩端留實頂 > 80）；蓋板 18 同木紋 1 片 63.3 × 9.85、陰影縫 1.5 mm；後緣兩個 6 × 2 R1 缺口在 x 99.1／130.9 過線兼手扣\n- **走線**（背板離牆 10／4）：中間兩格背板離牆 10、右格 4 = 通長線槽；P3、P2、P1 後下角缺口 4 × 10；Ø50 電視暗管出口距北端 140.5、離地 34，在蓋板範圍內，掀蓋板線直落線槽；HDMI、Cat6 低走：線槽 → P1 → 左格後方，不經翻門停放區\n- **牆插**（S-22 · S-20 · D-01）：S-22 左格背牆：3 × 13A 雙孔（一個帶 USB-A／C）、中心 22、x 11.6–57.4，供 PS5、Switch 2、USW 變壓器、UCG 變壓器＋備用 2，USB 給 CONTROLLER 1；S-20 在蓋板正下方：13A 雙孔＋單孔、中心 33、置中在中縫（掀蓋板從上插拔），供電視、底燈驅動器、蓋板上充電、備用；網路孔 D-01 在 S-20 左邊；南端不需插座\n- **喇叭 · KEF LS50 Wireless II**（中心距 262.6 · 頂 96.2）：KEF S2 Floor Stand 中心離玻璃 33.7／296.3，對電視中線左右各 131.3；兩腳架各離電視櫃端 5\n- **重低音 · KEF KC62**（25.6 × 24.8 × 24.6）：右腳架南側 316.3–341.9，背離牆 6；RCA 接主喇叭 Sub Out\n- **踢腳 · 底燈**（8 高 · 內退 10）：45° 鋁槽、乳白罩，3000K COB；驅動器插 S-20，獨立開關\n\n### 五金與機電\n- Knape & Vogt 8070PEZ-14 翻門／入櫃滑軌 × 1 組（翻門模式、8080 內嵌鉸鏈、門厚 3/4\"、≤ 30 lb）＋通長墊條 1.5／1.5\n- Blum LEGRABOX pure C 高 NL 300 × 2（LW 49.3／51.9）＋NL 350（右，LW 52.9）（全拉、BLUMOTION、40 kg）\n- Blum AMBIA-LINE 抽屜框 242（ZC7S300RSU）× 3＋AMBIA-LINE 橫隔板 242（ZC7Q0U0SH）× 3；agoform LEGRABOX 止滑墊 × 3（依 NL × 內寬裁）\n- Noctua NF-A14 5V PWM＋NA-FG1-14 護網；AC Infinity CONTROLLER 1（AC-PCA1，USB 溫控，開／關、全速 1500 rpm ≈ 24.6 dB(A)，設 88 °F／31 °C）插 S-22 的 USB\n- 格底進風：48 × 4 六角孔鋁板（63 % 開孔）＋磁吸濾網\n- 牆插：S-22 3 × 13A 雙孔（一個 USB）、S-20 13A 雙孔＋單孔；網路孔 D-01（蓋板下）\n- 底燈：45° 鋁槽＋COB 24V 3000K CRI≥90；LEW 獨立迴路。\n\n### 注意（原卡片）\n- 翻門開合時向外掃 30（約 2 秒）：言言在櫃前時慢慢開\n- 玩之前先把翻門推進去：門關著玩沒有驗證，PS5 可能過熱保護\n- KV 8070PEZ-14 停放疊高 6.4 與 14 吋行程未驗證：裁板前取得 KV 安裝說明 Fig. 2／8 或樣品滑軌實測（行程需 ≥ 29.9＋0.5）；疊高若到 7.5，PS5 上方仍有 5.8\n- Switch 2 側放抽取：上方只有 7.5，主機連 Joy-Con 2 上提往前抽；底座兩端開口待實物確認\n- 沙發南端到過道 57.6 → 沙發不可超過 210，邊几放北端\n- 左腳架離窗簾盒面 2.4 → 窗簾離地 1、不拖地\n\n### 機內淨距\n- PS5 Pro 北側／到 Switch／上／後：4.5／4.0／6.9／15.6（上 = 到收起的門）\n- Switch 2 接口側到 P1：4.6\n- Switch 2 頂到收起的門：7.5\n\n### 待確認\n- KV 8070PEZ-14 停放疊高（設計 6.4）與 14 吋行程：待 KV 安裝說明 Fig. 2／8 或樣品\n- Switch 2 插座後高度（估 14.5）\n- 櫃面木紋色號\n- 電視電源線機身端可拆（C7／C8 或 C13）\n\n### 北端出風（兩案共用，已定整片格柵）\n- **整片格柵（採用）**：格柵做滿整片側板（從頂板下陰影縫到踢腳線，前緣停在 R7.5 圓角），外圈直條背後封 6 mm 黑背板（假格柵），只留中段 30.7 × 23 出風，否則前角（離進風口 7.5）的熱風會被吸回 PS5；風量、溫升與中段格柵相同（≈ 65–69 CFM／+6.5 K）；風扇停了 PS5 進風約室溫 +2–4 K。\n- **氣流（玩時）**：整個前面進風 → PS5 前面 → 背後 15.6 的後腔 → NF-A14 裝在北端內隔板格側（離格柵 4.2、加 NA-FG1-14 護網）往外推 → 從北端側面橫向排出，不往上、不往電視背後。風扇退到格柵後讓氣流攤開（直接貼格柵會集中到 2.25 m/s、加 3–6 dB 葉片聲）；往外推讓整格微負壓，熱氣只從北端走。\n- **氣流（門關、平時）**：格底（踢腳內退處、燈前）隱藏 48 × 4 六角孔鋁板（63 % 開孔）＋磁吸濾網進風 → 網通盤 → 後腔 → 風扇；**AC Infinity CONTROLLER 1**（AC-PCA1，USB 溫控，88 °F／31 °C 啟動，開／關、全速）插 S-22 的 USB，網通 24 h 約 20 W，格內約室溫 +1 K。濾網只放這裡：玩時進風是整個前面，風速 < 0.3 m/s 不需要濾網。\n- **不開孔版的門關散熱**：左格背板改離牆 4（後方 11.6 ≥ Sony 10），背板右上 Noctua NF-A9 5V PWM（同一個 CONTROLLER 1）把網通熱氣推進背後線槽，經 P1 後上角 4 × 15 通風口到中格線槽，從蓋板陰影縫＋兩個缺口（≈ 36 cm²）出到電視背後；網通 ≈ 20 W，≈ 20 m³/h 即只升 ≈ 3 K（估），北端仍不開孔。\n- **格柵做法**：白橡實木框（18），11 根 2.0 × 1.8 直條、12 道 1.2 通縫（R88，原 14 根 1.2／13 道 1.0），染色對櫃面樣板；內面 1 mm 黑色不鏽鋼防蟲網，空腔漆黑。格柵從空腔側鎖在端塊木條上，再裝可拆的內隔板；保養：格柵外面每月吸塵，每年拆風扇從 Ø13.5 孔吸空腔。整片版：直條 11 根（2.0 寬、縫 1.2）做滿 1.1–37.5（距牆）、8.0–37.9 高，沒有上下框，中段出風區以外背後封 6 mm 黑背板。\n- **方案 B：PS5 每邊 4.5 為什麼夠**：PS5 Pro 前進後出，玩時翻門推進去，整個前面 53.4 × 22 = 1,175 cm² 進風（≈ 0.3 m/s），熱氣從背後 15.6 的後腔被北端 NF-A14 推出去，側邊只是通道；Sony 的 10 當參考。屋主現在 54 寬的格放 PS4 Pro 一直正常。交屋時照樣做 30 分鐘測試：PS5 前面進風 ≤ 室溫 +2 K。\n\n| **4 格 230（選）** | 53.4／49.3–52.9 | 57.0／≈ 4.5 | 105.1／81.4／2.5 |\n| 4 格 225 | 52.1／48.1–51.7 | 55.7／≈ 3.9 | 106.0／82.3／0 |\n| 4 格 235 | 54.6／50.6–54.2 | 58.2／≈ 4.8 | 104.4／80.8／5.0 |\n| 3 格 225（R80–R84） | 69.6／65.0–70.0 | 72.9／13.7 | 106.0／82.3／0 |\n| 3 格 220 | 67.9／63.3–68.3 | 71.2／12.8 | 107.2／83.5／2.5 |\n\n> 左格寬 = 隔板間（滑軌墊條各 1.5 只在頂板下 6.4 高的停門區，主機在它下面）；最窄 = 清淨機在鋼琴旁時到 KC62；偏沙發 = 電視中線離沙發中線。\n\n| 做法 | 北端板 | 出風（量／溫升） | 取捨 |\n|---|---|---|---|\n| 不開孔（已刪） | 不開孔，PS5 上方 1.2 導流板 | PS5 自身 ≈ 25 CFM／≈ +17 K | 最便宜；熱氣在電視前上升；門關時網通靠背板 NF-A9 排進線槽 |\n| AIRPLATE | AIRPLATE T8 White 16 × 16 × 2 台 | ≈ 42–46 CFM／+9–10 K | 白色方形面板看得到、要插電 |\n| 兩道細縫 | 兩道 2.5 × 23 細縫＋NF-A14 | ≈ 55 CFM／+7.9 K | 幾乎看不到；縫口 2.25 m/s 可能有風聲 |\n| 中段格柵 | 中段白橡實木格柵＋NF-A14 | ≈ 65–69 CFM／+6.5 K | 最涼最靜；上下留實木框，像出風窗 |\n| **整片格柵（採用）** | 格柵做滿整片側板，外圈背後封黑板＋NF-A14 | 同 B | 同 B 涼靜；整片直紋，看起來是設計 |\n\n\n### 長度比較（R85）\n| 做法 | 面寬／抽屜 LW | 左格寬／每邊 | 斜道／最窄／偏沙發 |\n|---|---|---|---|",
       "sources": [
         {
           "title": "PS5 Pro vs PS5 power consumption — Digital Foundry figures (Notebookcheck)",
