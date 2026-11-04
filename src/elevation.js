@@ -1176,7 +1176,11 @@ function renderSection(elev, view, state) {
   if (!u.noBack) g.rect(0, 0, back, top, {fill:C.board, stroke:'none'});
   extras(g, view.extras, state);
   if (view.chain) chain(g, u, 0, 0, W + f * .6, false);
-  hdim(g, 0, D, -f * 1.6, view.depthLabel || `${fmt(D)}（${T('櫃深')}）`, true);
+  // view.depthCuts [0 … D]: depth chain (e.g. rear cable space / drawer / front) above the overall depth.
+  const dc = view.depthCuts;
+  if (dc) for (let i = 0; i < dc.length - 1; i++) { const w = dc[i + 1] - dc[i]; hdim(g, dc[i], dc[i + 1], -f * 1.6, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
+  hdim(g, 0, D, -f * (dc ? 3.4 : 1.6), view.depthLabel || `${fmt(D)}（${T('櫃深')}）`, true);
+  if (dc) m.b += f * 1.8;
   return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
@@ -1253,7 +1257,9 @@ function renderPlanTop(elev, view) {
 // (front side, with view.totalLabel) and a right-hand depth chain view.vcuts [0 … depth].
 function renderPlanGeneric(elev, view) {
   const D = view.depth ?? 45, W = view.width, f = view.font ?? 5.2;
-  const m = {l: f * (view.marginL ?? 1.4), r: f * (view.marginR ?? 5), t: f * (view.marginT ?? 3.2), b: f * (view.hcuts ? 5.6 : 2)};
+  // view.openDrop: cm something pulled toward the room in the 'open' state (e.g. a drawer) — front dimensions move down by it.
+  const drop = view.stateNames && ST === 'open' ? view.openDrop ?? 0 : 0;
+  const m = {l: f * (view.marginL ?? 1.4), r: f * (view.marginR ?? 5), t: f * (view.marginT ?? 3.2), b: f * (view.hcuts ? 5.6 : 2) + drop};
   const g = canvas(D, f);
   g.rect(-m.l * .6, D, W + m.l * .6 + m.r * .5, 3.2, {fill:'url(#elev-wall)', stroke:'none'});
   g.line(-m.l * .6, D, W + m.r * .5, D, {stroke:C.line, 'stroke-width':.6});
@@ -1263,8 +1269,8 @@ function renderPlanGeneric(elev, view) {
   extras(g, view.extras, st);
   if (view.hcuts) {
     const c = view.hcuts;
-    for (let i = 0; i < c.length - 1; i++) { const w = c[i + 1] - c[i]; hdim(g, c[i], c[i + 1], -f * 1.6, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
-    hdim(g, c[0], c[c.length - 1], -f * 3.6, view.totalLabel || fmt(c[c.length - 1] - c[0]), true, true);
+    for (let i = 0; i < c.length - 1; i++) { const w = c[i + 1] - c[i]; hdim(g, c[i], c[i + 1], -f * 1.6 - drop, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
+    hdim(g, c[0], c[c.length - 1], -f * 3.6 - drop, view.totalLabel || fmt(c[c.length - 1] - c[0]), true, true);
   }
   if (view.vcuts) {
     const x = W + f * .9, s = {stroke:C.dim, 'stroke-width':.25};
