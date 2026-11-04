@@ -41,7 +41,7 @@ selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search)
 // Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
-// TV console (R84): 225 three sections, concept views; four north-end exhaust schemes ?console=a|b|c|d, default B (recommended). Elevations 'tv-console@console-e|b|c'; A (console-d) uses the base elevations['tv-console'].
+// TV console (R85): 230 four sections, concept views; four north-end exhaust schemes ?console=a|b|c|d, default B (recommended). Elevations 'tv-console@console-e|b|c'; A (console-d) uses the base elevations['tv-console'].
 const LIVING_KEYS={a:'console-e',b:'console-d',c:'console-b',d:'console-c'}; // R84: displayed A = console-e (slats full height, recommended), B = console-d (slats mid zone), C = console-b (AIRPLATE), D = console-c (slots)
 selectedVersions.living=LIVING_KEYS[(new URLSearchParams(location.search).get('console')||'').toLowerCase()]||LIVING_KEYS.a;
 const room=id=>project.rooms.find(r=>r.id===id), baseObject=id=>project.objects.find(o=>o.id===id);
