@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R94",
+    "revision": "R95",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4909,6 +4909,10 @@
     {
       "id": "C102",
       "text": "物件尺寸改標 W × H × D（含高度與深度）。"
+    },
+    {
+      "id": "C103",
+      "text": "全站精煉：刪掉重複、歷史、看圖就懂與已列在別處的資訊；淨距、施工交代、待確認只留真正影響施工或決定的項目。"
     }
   ],
   "measurement_policy": {
@@ -23621,7 +23625,7 @@
     {
       "id": "todo-home-paint",
       "room": "floor",
-      "text": "全屋油漆：Nippon Paint Wall Arte NP N 1865 P（現居 Wispy Bits NP N 1859 P）",
+      "text": "全屋油漆 Nippon Paint Wall Arte NP N 1865 P",
       "status": "done"
     },
     {
@@ -23697,7 +23701,7 @@
     {
       "id": "todo-kid-bed",
       "room": "kid",
-      "text": "定小孩房床位與床尺寸",
+      "text": "定小孩房床位與尺寸",
       "status": "open"
     },
     {
@@ -23805,13 +23809,13 @@
     {
       "id": "todo-living-console-finish",
       "room": "living",
-      "text": "選電視櫃面材：面板、頂板木紋色號（左側白橡格柵染色對這個樣板）",
+      "text": "選電視櫃面板、頂板木紋色號（左側白橡格柵照此染色）",
       "status": "open"
     },
     {
       "id": "todo-master-wallcovering",
       "room": "master",
-      "text": "主臥貼壁布：同現居款，提供型號",
+      "text": "提供主臥壁布型號（同現居款）",
       "status": "open"
     }
   ],
