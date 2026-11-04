@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R92",
+    "revision": "R93",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4920,6 +4920,10 @@
     {
       "id": "C100",
       "text": "電視櫃俯視「全部打開」含翻門；最右抽屜加深到 NL 400（後方走線止於前一格）；五金逐項列出（Blum LEGRABOX pure＋BLUMOTION、KV 8070 翻門）；側板改寫「只在風扇處開孔」。"
+    },
+    {
+      "id": "C101",
+      "text": "翻門五金 Knape & Vogt 8070PEZ-14 旁加 YouTube 影片連結。"
     }
   ],
   "measurement_policy": {
@@ -24794,6 +24798,11 @@
           "url": "https://www.blum.com/sg/en/products/boxsystems/legrabox/downloads-videos/"
         }
       ]
+    }
+  },
+  "links": {
+    "Knape & Vogt 8070PEZ-14": {
+      "youtube": "https://www.youtube.com/watch?v=Pctzar1EpA8"
     }
   }
 }
