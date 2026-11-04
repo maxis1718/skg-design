@@ -835,7 +835,7 @@
       "focus": "床位待規劃 · 原衣櫃 120 × 60",
       "plan": {
         "watch": [
-          "床位未定 → 床離窗至少 15，留給窗簾盒"
+          "床離窗至少 15，留給窗簾盒"
         ],
         "items": [
           {
@@ -1211,11 +1211,6 @@
           }
         ],
         "build": [
-          "鏡櫃深 19：背板 1.8＋內淨 15＋鏡門 2.2",
-          "全部鏡門左鉸鍊；入口端那扇限位 90°",
-          "中門中心對齊龍頭，鏡背貼除霧片",
-          "櫃底 LED 燈帶兼夜燈；6 mm 玻璃層板 ×3",
-          "吹風機在最左門內吊掛，底部放線材籃",
           "浴室迴路 30 mA RCD，插座位置依 SS 638"
         ]
       }
@@ -1328,7 +1323,6 @@
       "focus": "整面鏡櫃與洗手台、淋浴間",
       "plan": {
         "watch": [
-          "臉盆位置未定 → 50 寬鏡門中心跟著盆位調",
           "馬桶矮台的沖水面板與檢修口 → 鏡櫃底 115 要避開",
           "龍頭頂要低於鏡門下緣 115 → 較高就抬高櫃底"
         ],
@@ -1356,11 +1350,7 @@
           }
         ],
         "build": [
-          "門改 laminate 實心平開門，向浴室內開",
-          "鏡櫃深 19，馬桶段落在矮台 22 之內",
-          "全部鏡門左鉸鍊；馬桶端那扇限位 90°",
-          "洗手台門鏡背貼除霧片；櫃底 LED 燈帶兼夜燈",
-          "吹風機門內吊掛，底部放線材籃",
+          "門做 laminate 實心平開門，向浴室內開",
           "浴室迴路 30 mA RCD，插座位置依 SS 638"
         ]
       }
@@ -2369,7 +2359,7 @@
       "uncertainty_cm": null,
       "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
       "name": "主臥左側衣櫃",
-      "source_note": "90 × 60，落地雙開門 8–272\n褲架 ×3＋全寬內抽，掛衣淨高 96",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 90,
@@ -2408,7 +2398,7 @@
       "uncertainty_cm": null,
       "notes": "Wardrobe frontage runs vertically in plan; width90,depth60cm.",
       "name": "主臥右側衣櫃",
-      "source_note": "90 × 60，外抽 ×3＋高門 76–272\n掛衣淨高 117.2",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 90,
@@ -2487,7 +2477,7 @@
       "notes": "Bed 220 head-to-foot x 200 wide, headboard on the west wall, north edge on the 15 cm curtain-pocket line (y190.17-246.87). Storage drawers on both long sides and the foot (recorded only). Foot aisle to the east wall 70; reachable balcony glass east of the foot ~35 (x247.88-257.76). Source KING SIZE symbol paths 329-345 omitted at build; drawn in src/furniture-master.svg.",
       "physical_drawing_indices": [],
       "name": "主臥床",
-      "source_note": "220 × 200，兩長邊與床尾有收納抽屜",
+      "source_note": "兩長邊與床尾有收納抽屜",
       "dimensions": {
         "w": {
           "cm": 200,
@@ -2621,7 +2611,7 @@
         417
       ],
       "notes": "BATH 1 vanity counter along the right-hand wall: front line x252.12 (drawing408) to wall x266.28, y295-351.04 = about 197.7 x 50 cm. Oval basin centre y321.94 = 95 cm from the y295 end, basin about 53 x 33 cm. Thin line drawing409 at x262.08 = about 14.8 cm from the wall (likely the developer's overhead mirror-cabinet line; same 14.8 line as drawing455 in BATH 2). Mirror cabinet above is a design proposal: overall depth 19 (back 1.8 + clear 15 + mirror door 2.2), so it projects about 4 beyond drawing409.",
-      "source_note": "深 19（內淨 15），115–237\n鏡門全部可開，中門對齊龍頭"
+      "source_note": ""
     },
     {
       "id": "bath2-mirror-cabinet",
@@ -2659,7 +2649,7 @@
         455
       ],
       "notes": "BATH 2 west wall: wall face drawing144 x349.92 from the nib drawing135 (y274.48) to the south wall drawing177 (y322.6) = about 169.8 cm. Vanity alcove y274.48-299.92 (drawing454 front x366.12) = about 89.7 x 57.2 cm, no basin drawn. WC ledge y299.92-322.6, front x356.16 = about 80.0 x 22.0 cm; WC block drawing468/469 x356.16-361.8, y304.24-318.4 (50 wide, centre about 39.8 from the south wall), bowl to x376.08 (about 92 from the wall). Thin line drawing455 x354.12 runs the full wall, about 14.8 from the wall (likely the developer's overhead mirror-cabinet line). Hit area = full wall length x vanity depth; over the WC the cabinet itself is only 19 deep (design), inside the 22 ledge. Mirror cabinet: design proposal, overall depth 19 (back 1.8 + clear 15 + door 2.2), underside 115 across the whole wall.",
-      "source_note": "整面 169.8，深 19，115–237\n洗手台凹位 89.7 × 57＋馬桶矮台 80 × 22"
+      "source_note": ""
     },
     {
       "id": "kitchen-sink",
@@ -2915,7 +2905,7 @@
       "uncertainty_cm": null,
       "notes": "Width120/depth60cm are explicitly dimensioned.",
       "name": "小孩房衣櫃",
-      "source_note": "原圖衣櫃，位置不變",
+      "source_note": "",
       "dimensions": {
         "w": {
           "cm": 120,
@@ -3341,7 +3331,7 @@
         "brand": "OSIM",
         "model": "uLove 3 Well-Being Chair（OS-8218）"
       },
-      "source_note": "直立 76 × 127 × 116，躺平 185\n約 105 kg，平均 260 W",
+      "source_note": "躺平長 185\n約 105 kg，平均 260 W",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
@@ -3375,7 +3365,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "100 × 50，放 27 吋螢幕",
+      "source_note": "放 27 吋螢幕",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
@@ -3385,7 +3375,7 @@
       "id": "guest-desk-lb-c",
       "code": "GST-08",
       "room_id": "guest",
-      "name": "客房書桌（C）",
+      "name": "客房書桌",
       "bounds_pt": [
         407.18,
         196.07,
@@ -3422,7 +3412,7 @@
       "id": "guest-wardrobe-lb-c",
       "code": "GST-09",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（C）",
+      "name": "客房衣櫃",
       "bounds_pt": [
         402.93,
         213.07,
@@ -3446,7 +3436,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "59 × 60 訂製到頂，單門\n外抽 NL 500 可全拉",
+      "source_note": "",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
@@ -3470,7 +3460,7 @@
       "id": "guest-desk-lb-a",
       "code": "GST-10",
       "room_id": "guest",
-      "name": "客房書桌（A）",
+      "name": "客房書桌",
       "bounds_pt": [
         380.25,
         218.46,
@@ -3527,7 +3517,7 @@
       "id": "guest-wardrobe-lb-a",
       "code": "GST-11",
       "room_id": "guest",
-      "name": "客房訂製衣櫃（A）",
+      "name": "客房衣櫃",
       "bounds_pt": [
         400.1,
         212.79,
@@ -3551,7 +3541,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "70 × 60 訂製到頂，雙門\n外抽 NL 450，全拉後離床 26",
+      "source_note": "",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
@@ -3632,7 +3622,7 @@
       "id": "guest-chair-lb-a",
       "code": "GST-13",
       "room_id": "guest",
-      "name": "客房書椅（A）",
+      "name": "客房書椅",
       "bounds_pt": [
         383.79,
         204.29,
@@ -3656,7 +3646,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "四腳無輪、無扶手，座深 ≤ 45",
+      "source_note": "座深 ≤ 45",
       "status": "user-design",
       "onlyLayout": [
         "layout-b"
@@ -5403,14 +5393,11 @@
             }
           ],
           "build": [
-            "主臥牆面貼壁布（不上漆）；其他房間牆面 Nippon Paint Wall Arte NP N 1865 P",
-            "兩衣櫃到頂 272，掛桿 195、層板底 203，上方放 SKUBB 兩層",
-            "左櫃落地門 8–272 每扇 6 鉸鍊；右櫃高門 76–272",
-            "層板底 24 V LED＋PIR 感應，驅動器放可拆踢腳內",
+            "牆面貼壁布，不上漆",
+            "兩衣櫃到頂 272；天花若只有 275，收邊 8 現場裁到 3",
+            "層板底 24 V LED＋PIR 感應，驅動器在可拆踢腳內，櫃後留低位插座",
             "靠浴室那扇內貼全身鏡，鉸鍊側加 2.5 墊條",
-            "衣櫃後預留低位插座供 LED 驅動器",
-            "陽台門窗簾盒深 15，單軌遮光簾",
-            "天花若只有 275，衣櫃頂收邊 8 現場裁到 3"
+            "陽台門窗簾盒深 15，單軌遮光簾"
           ]
         }
       }
@@ -6004,7 +5991,6 @@
       "title": "主臥左側衣櫃",
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計；若 275，收邊 8 可吸收",
       "states": [
         {
           "id": "closed",
@@ -6122,7 +6108,7 @@
                 ],
                 "count": 9,
                 "width": 44,
-                "label": "襯衫、外套（垂掛淨高 96）"
+                "label": "襯衫、外套"
               }
             },
             {
@@ -6290,7 +6276,7 @@
                   100
                 ],
                 "count": 9,
-                "label": "襯衫、外套（垂掛淨高 117.2）"
+                "label": "襯衫、外套"
               }
             },
             {
@@ -6432,10 +6418,10 @@
         {
           "zone": "掛衣區",
           "h": "104",
-          "note": "掛桿 195，桿下淨高 96；襯衫、西裝外套。"
+          "note": "掛桿 195，桿下淨高 96"
         },
         {
-          "zone": "層板（藍線）",
+          "zone": "層板",
           "h": "1.8",
           "note": "面 99；無中隔板"
         },
@@ -6457,7 +6443,7 @@
         {
           "zone": "門片 · 落地雙開",
           "h": "264",
-          "note": "每扇 44.4 × 264（8–272）；鉸鍊 6 支＋防翹。"
+          "note": "每扇 44.4 × 264（8–272）"
         },
         {
           "zone": "踢腳",
@@ -6468,18 +6454,15 @@
       "hardware": [
         "內抽 Blum MOVENTO 760H5000S（NL 500、40 kg、BLUMOTION S）；褲架 Hettich 9162284 ×3（9 勾、15 kg、全拉、Silent System）",
         "門鉸 CLIP top BLUMOTION 110° 每扇 6 支＋門片矯正器；兩側牆 2.5 墊條，內抽與褲架避開鉸鍊。",
-        "全身鏡 5 mm 安全鏡 34.4 × 162（78–240）在靠浴室扇；LED 約 8 W，驅動器在踢腳。"
+        "全身鏡 5 mm 安全鏡 34.4 × 162（78–240）在靠浴室扇；LED 約 8 W"
       ],
       "rationale": [
-        "掛桿 195（現衣櫃 191 + 4）：太太伸手約 199，剛好",
-        "褲勾 63.4、底板 9.8：褲長約 104 以內對摺可掛；更長的掛右櫃（淨高 117.2）",
-        "靠浴室扇只開約 90°，故用墊條"
+        "掛桿 195：太太伸手約 199",
+        "褲勾 63.4、底板 9.8：褲長約 104 以內對摺可掛；更長的掛右櫃（淨高 117.2）"
       ],
       "open_questions": [
-        "天花淨高（280 或 brochure 275）",
-        "門片材質／Laminate 色號",
-        "浴室側門片能開幾度",
-        "Hettich 褲架長度與勾長（原廠圖）"
+        "天花淨高 280 或 275",
+        "Hettich 9162284 勾長"
       ],
       "sources": [
         "Vertical grip reach / stature percentiles: https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-34_36.htm , https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-1.htm",
@@ -6592,12 +6575,12 @@
             {
               "ref": "left",
               "x": 18,
-              "label": "MST-01 左櫃"
+              "label": "左櫃"
             },
             {
               "ref": "right",
               "x": 148,
-              "label": "MST-02 右櫃"
+              "label": "右櫃"
             }
           ],
           "width": 256,
@@ -6627,7 +6610,6 @@
       "title": "主臥右側衣櫃",
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計；若 275，收邊 8 可吸收",
       "states": [
         {
           "id": "closed",
@@ -6745,7 +6727,7 @@
                 ],
                 "count": 9,
                 "width": 44,
-                "label": "襯衫、外套（垂掛淨高 96）"
+                "label": "襯衫、外套"
               }
             },
             {
@@ -6913,7 +6895,7 @@
                   100
                 ],
                 "count": 9,
-                "label": "襯衫、外套（垂掛淨高 117.2）"
+                "label": "襯衫、外套"
               }
             },
             {
@@ -7055,7 +7037,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "24 V LED 鋁槽燈，PIR 人體感應：有人亮、離開自動滅"
+          "note": "24 V LED 鋁槽燈＋PIR 感應"
         },
         {
           "zone": "掛衣區",
@@ -7065,7 +7047,7 @@
         {
           "zone": "門片 · 雙開高門",
           "h": "196",
-          "note": "每櫃 2 扇 44.4 × 196（76–272），含上層收納；靠浴室扇內貼全身鏡。"
+          "note": "每扇 44.4 × 196（76–272）"
         },
         {
           "zone": "外抽屜 ×3",
@@ -7081,17 +7063,13 @@
       "hardware": [
         "抽屜 Blum LEGRABOX 全拉緩衝 NL 500；門鉸 CLIP top 110°，每扇 5 支。",
         "全身鏡 5 mm 安全鏡 34.4 × 162（高 78–240），貼靠浴室扇內側。",
-        "LED 約 8 W、CRI ≥ 90；驅動器在踢腳，櫃後低位插座請 LEW 預留。"
+        "LED 約 8 W、CRI ≥ 90；櫃後留低位插座"
       ],
       "rationale": [
-        "掛桿 195（現衣櫃 191 + 4）：太太伸手約 199，剛好",
-        "走道 130，兩側櫃門錯開開"
+        "掛桿 195：太太伸手約 199"
       ],
       "open_questions": [
-        "天花淨高（280 或 brochure 275）",
-        "門片材質／Laminate 色號",
-        "大衣是否一定要長掛",
-        "全身鏡放哪一扇"
+        "天花淨高 280 或 275"
       ],
       "sources": [
         "Vertical grip reach / stature percentiles: https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-34_36.htm , https://personal.cityu.edu.hk/meachan/Online%20Anthropometry/Chapter2/Ch2-1.htm",
@@ -7138,12 +7116,12 @@
             {
               "ref": "left",
               "x": 18,
-              "label": "MST-01 左櫃"
+              "label": "左櫃"
             },
             {
               "ref": "right",
               "x": 148,
-              "label": "MST-02 右櫃"
+              "label": "右櫃"
             }
           ],
           "width": 256,
@@ -9338,7 +9316,6 @@
       "title": "主浴鏡櫃",
       "status": "design-proposal",
       "ceiling_cm": 240,
-      "ceiling_note": "浴室天花暫以 240 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -10209,7 +10186,7 @@
         {
           "zone": "最右門 · 牙刷",
           "h": "S-06 128",
-          "note": "電動牙刷、保養品；S-06 shaver 2-pin 離地 128。"
+          "note": "S-06 shaver 2-pin 離地 128"
         },
         {
           "zone": "兩端收邊",
@@ -10235,17 +10212,13 @@
       "hardware": [
         "鏡門 4 mm 銀鏡＋18 mm 防潮板；Blum CLIP top 110° 每扇 3 支，70 門 4 支，下緣手扣。",
         "入口端那扇加開角限位，開到 90° 停，不撞牆。",
-        "S-15 13A 附開關、S-06 shaver 2-pin；燈帶、除霧片電源請 LEW 確認。"
+        "燈帶、除霧片電源由 LEW 配"
       ],
       "rationale": [
-        "全部鏡門都能開，沒有固定鏡。",
-        "中門中心 95 對齊龍頭；兩端門寬吸收現場差值。",
-        "Dyson 官方 stand 深 27.5 放不下，改櫃內吊掛；用後放涼、拔插頭。"
+        "兩端門寬吸收現場差值",
+        "Dyson 官方 stand 深 27.5 放不下，所以櫃內吊掛；用後放涼再收"
       ],
       "open_questions": [
-        "浴室天花與檢修口",
-        "檯面與龍頭高度",
-        "浴室 13A 插座與 RCCB",
         "牙刷充電插頭型式",
         "吹風機型號"
       ],
@@ -10256,9 +10229,6 @@
         "Dyson safety instructions: https://support.dyson.co.nz/support/hd01/supersonic-black-nickel/using-your-dyson-appliance/important-safety-instructions",
         "EMA RCCB requirement: https://www.ema.gov.sg/RCCB_Requirement.aspx",
         "BS 7671 section 701 summary: https://www.voltimum.co.uk/news/section-701-locations-containing-bath-or"
-      ],
-      "risks": [
-        "現有龍頭頂要低於鏡門下緣 115；龍頭高度待確認。"
       ]
     },
     "bath2-mirror-cabinet": {
@@ -10266,7 +10236,6 @@
       "title": "衛浴 2 整面鏡櫃",
       "status": "design-proposal",
       "ceiling_cm": 240,
-      "ceiling_note": "浴室天花暫以 240 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -10509,9 +10478,6 @@
           ]
         }
       },
-      "risks": [
-        "現有龍頭頂要低於鏡門下緣 115；龍頭高度待確認。"
-      ],
       "spec": [
         {
           "zone": "天花收邊",
@@ -10561,26 +10527,20 @@
         {
           "zone": "洗手台／馬桶",
           "h": "檯面 85、矮台 100",
-          "note": "高度待確認。"
+          "note": ""
         }
       ],
       "hardware": [
         "鏡門 4 mm 銀鏡＋18 mm 防潮板；Blum CLIP top 110° 每扇 3 支，下緣手扣。",
         "馬桶端那扇加開角限位，開到 90° 停，不撞牆。",
-        "S-16 13A 附開關離地 140；燈帶、除霧片電源請 LEW 確認。"
+        "燈帶、除霧片電源由 LEW 配"
       ],
       "rationale": [
-        "50 門中心 125.1 對齊龍頭，臉前整片鏡。",
-        "馬桶上方兩扇等寬 49.3。",
         "全部左鉸鏈：相鄰門可同時全開，牆垛端是開口邊"
       ],
       "open_questions": [
-        "矮台高度與沖水面板位置",
-        "隱藏水箱檢修口位置",
-        "臉盆位置與尺寸",
-        "龍頭高度",
-        "浴室天花與檢修口",
-        "浴室 13A 插座位置"
+        "檯面與矮台高度",
+        "浴室天花與檢修口"
       ],
       "sources": [
         "Geberit Duofix frame heights: https://catalog.international.geberit.com/en-ZA/systems/CH2_100901/products"
@@ -10588,7 +10548,7 @@
       "views": [
         {
           "id": "plan",
-          "name": "空間規劃",
+          "name": "正立面",
           "kind": "front",
           "detail": false,
           "labels": true,
@@ -13354,7 +13314,6 @@
       "title": "客房衣櫃 · 方案 B",
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -13419,8 +13378,7 @@
                   100
                 ],
                 "count": 6,
-                "width": 44,
-                "label": "垂掛淨高 117.2"
+                "width": 44
               }
             },
             {
@@ -13530,9 +13488,6 @@
           ]
         }
       },
-      "risks": [
-        "鉸鏈側緊貼走廊牆，門開約 90° 會碰牆：鉸鏈加開角限位或牆面防撞。"
-      ],
       "spec": [
         {
           "zone": "天花收邊",
@@ -13557,7 +13512,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈長 52，PIR 人體感應：有人亮、離開自動滅。"
+          "note": "LED 鋁槽燈長 52＋PIR 感應"
         },
         {
           "zone": "掛衣區",
@@ -13572,7 +13527,7 @@
         {
           "zone": "外抽屜 ×3",
           "h": "20／24／24",
-          "note": "內高 16／20／20；LEGRABOX NL 500，全拉 50，前方淨空 ≥ 60。"
+          "note": "內高 16／20／20；LEGRABOX NL 500"
         },
         {
           "zone": "踢腳",
@@ -13585,15 +13540,8 @@
         "全身鏡 5 mm 安全鏡 48.2 × 162，高 78–240。",
         "LED CRI ≥ 90；櫃後預留低位插座。"
       ],
-      "rationale": [
-        "各高度同主臥右櫃",
-        "內寬 55.4 放不下 69 寬收納箱，上層改 SKUBB 44 與 31 各一。"
-      ],
       "open_questions": [
-        "天花淨高 280 或 275",
-        "客人掛桿高度，可降至 185",
-        "門片色號",
-        "門內全身鏡"
+        "天花淨高 280 或 275"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -13695,7 +13643,6 @@
       "title": "客房衣櫃 · 方案 A",
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -13759,8 +13706,7 @@
                   92,
                   100
                 ],
-                "count": 6,
-                "label": "垂掛淨高 117.2"
+                "count": 6
               }
             },
             {
@@ -13881,10 +13827,6 @@
           ]
         }
       },
-      "risks": [
-        "抽屜全拉 45 後離床 26，可側身站著取物。",
-        "左扇緊貼側牆、右扇旁是書桌：兩扇鉸鏈都加開角限位，開到 90° 停。"
-      ],
       "spec": [
         {
           "zone": "天花收邊",
@@ -13909,7 +13851,7 @@
         {
           "zone": "感應燈",
           "h": "24 V",
-          "note": "LED 鋁槽燈，PIR 人體感應：有人亮、離開自動滅。"
+          "note": "LED 鋁槽燈＋PIR 感應"
         },
         {
           "zone": "掛衣區",
@@ -13924,7 +13866,7 @@
         {
           "zone": "外抽屜 ×3",
           "h": "20／24／24",
-          "note": "內高 16／20／20；LEGRABOX NL 450，全拉 45，離床剩 26；抽屜後方 11 留空。"
+          "note": "內高 16／20／20；LEGRABOX NL 450，抽屜後方 11 留空"
         },
         {
           "zone": "踢腳",
@@ -13938,15 +13880,10 @@
         "LED CRI ≥ 90；櫃後預留低位插座。"
       ],
       "rationale": [
-        "各高度同主臥右櫃",
-        "內寬 66.4 放不下 69 寬收納箱，低層改 SKUBB 44。",
         "到床 71：NL 500 全拉 50 只剩 21，用 NL 450 留 26。"
       ],
       "open_questions": [
-        "天花淨高 280 或 275",
-        "客人掛桿高度，可降至 185",
-        "門片色號",
-        "全身鏡放哪一扇"
+        "天花淨高 280 或 275"
       ],
       "sources": [
         "IKEA SKUBB 31x55x33: https://www.ikea.com/sg/en/p/skubb-box-white-40290371",
@@ -15339,7 +15276,6 @@
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -15409,8 +15345,7 @@
                   100
                 ],
                 "count": 6,
-                "width": 44,
-                "label": "垂掛淨高 117.2"
+                "width": 44
               }
             },
             {
@@ -15513,17 +15448,17 @@
         {
           "zone": "衣櫃",
           "h": "59 × 60",
-          "note": "單門，鉸鏈在走廊牆側；NL 500，前方淨空 ≥ 60。"
+          "note": ""
         },
         {
           "zone": "書桌",
           "h": "60 × 45",
-          "note": "活動書桌。"
+          "note": ""
         },
         {
           "zone": "床",
           "h": "194 × 154",
-          "note": "離窗 15；Tempur 床墊高 21。"
+          "note": ""
         }
       ],
       "views": [
@@ -15610,7 +15545,6 @@
       "wall": true,
       "status": "design-proposal",
       "ceiling_cm": 280,
-      "ceiling_note": "天花暫以 280 計，待現場確認。",
       "states": [
         {
           "id": "closed",
@@ -15679,8 +15613,7 @@
                   92,
                   100
                 ],
-                "count": 6,
-                "label": "垂掛淨高 117.2"
+                "count": 6
               }
             },
             {
@@ -15794,17 +15727,17 @@
         {
           "zone": "衣櫃",
           "h": "70 × 60",
-          "note": "雙門；NL 450，到床 71。"
+          "note": ""
         },
         {
           "zone": "書桌",
           "h": "70 × 40",
-          "note": "活動書桌；前緣到床 91。"
+          "note": ""
         },
         {
           "zone": "門",
           "h": "90",
-          "note": "開門範圍 10–100；書桌到開門範圍 7。"
+          "note": ""
         }
       ],
       "views": [
@@ -22035,7 +21968,7 @@
             ],
             "build": [
               "門做明裝拉門，裝在走道側",
-              "窗簾盒深 15，單軌遮光布簾"
+              "窗簾盒深 15，單軌遮光簾"
             ]
           }
         }
@@ -22117,9 +22050,8 @@
             ],
             "build": [
               "窗簾盒深 15，單軌遮光簾",
-              "衣櫃到頂 272，收邊 8 現場裁；掛桿 195、層板底 203",
+              "衣櫃到頂 272，收邊 8 現場裁",
               "衣櫃層板底 LED＋PIR 感應，驅動器放踢腳，櫃後留低位插座",
-              "衣櫃高門 76–272＋外抽 ×3（LEGRABOX NL 450）",
               "兩扇衣櫃門加開角限位 90°，不撞牆、不掃書桌"
             ]
           },
@@ -22185,10 +22117,9 @@
             ],
             "build": [
               "窗簾盒深 15，單軌遮光簾",
-              "衣櫃到頂 272，收邊 8 現場裁；掛桿 195、層板底 203",
+              "衣櫃到頂 272，收邊 8 現場裁",
               "衣櫃層板底 LED＋PIR 感應，驅動器放踢腳，櫃後留低位插座",
-              "衣櫃單門 76–272，鉸鍊在走廊牆側，加 90° 限位",
-              "外抽 ×3 用 LEGRABOX NL 500 可全拉"
+              "衣櫃門鉸鍊在走廊牆側，加 90° 限位"
             ]
           },
           "tagline": "窄衣櫃＋60 書桌"
@@ -22198,7 +22129,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，假天花內 13A 插座＋USB-C 變壓器，走 Wi-Fi，不走 PoE\n・智能開關：Aqara H1 有零線版，每房門邊一組，大門內場景按鈕\n・網路線虛線走向由水電依現場調整",
+    "summary": "・網路：UniFi U7 Lite ×2 吸頂（客廳鋼琴上方、走廊）＋Cloud Gateway Ultra＋USW Lite 8 PoE，主臥預留 Cat6\n・攝影機：Aqara Camera E1 ×3，走 Wi-Fi，電源在假天花內\n・開關：Aqara H1 EU 有零線，每房門邊一組；大門內場景按鈕\n・網路線走向由水電依現場調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -22350,7 +22281,7 @@
         "place": "主臥床頭 · 靠陽台側",
         "mount": 100,
         "name": "插座 · 床頭靠陽台",
-        "notes": "・床頭板上方，離陽台側牆 30、離地 100\n・13A 雙孔＋USB-C",
+        "notes": "・床頭板上方，離陽台側牆 30\n・13A 雙孔＋USB-C",
         "use": "床頭"
       },
       {
@@ -22362,7 +22293,7 @@
         "place": "主臥床頭 · 靠言言的床",
         "mount": 100,
         "name": "插座 · 床頭靠言言的床",
-        "notes": "・床頭板上方，離床緣 15，兼供言言的床夜燈\n・離地 100",
+        "notes": "・床頭板上方，離床緣 15，兼供言言的床夜燈",
         "use": "床頭"
       },
       {
@@ -22387,7 +22318,7 @@
         "place": "主浴鏡櫃內 · 外牆端",
         "mount": 128,
         "name": "刮鬍刀插座 · 主浴鏡櫃",
-        "notes": "・鏡櫃最右門內，給電動牙刷、刮鬍刀\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）\n・浴室迴路須 30 mA RCD；與淋浴區距離由電工依 SS 638 確認\n・離地 128，鏡櫃內",
+        "notes": "・鏡櫃最右門內\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）",
         "room": "bath1",
         "use": "刮鬍刀、牙刷"
       },
@@ -22400,7 +22331,7 @@
         "place": "主浴鏡櫃內 · 入口端",
         "mount": 140,
         "name": "插座 · 主浴吹風機",
-        "notes": "・鏡櫃最左門內，13A 附開關，給 Dyson 吹風機\n・浴室迴路須 30 mA RCD；與淋浴區距離由電工依 SS 638 確認\n・離地 140，鏡櫃內",
+        "notes": "・鏡櫃最左門內，13A 附開關",
         "room": "bath1",
         "use": "吹風機"
       },
@@ -22436,7 +22367,7 @@
         "place": "客房 · 書桌下（方案 A）",
         "mount": 30,
         "name": "網路孔 · 客房書桌",
-        "notes": "・方案 A 書桌下，離地 30，旁邊 S-11 插座在桌上 85\n・筆電或桌機有線上網"
+        "notes": ""
       },
       {
         "id": "data-s",
@@ -22447,7 +22378,7 @@
         "place": "書房 · 電腦桌旁",
         "mount": 30,
         "name": "網路孔 · 書房",
-        "notes": "・書房電腦有線上網\n・離地 30"
+        "notes": ""
       },
       {
         "id": "data-master",
@@ -22458,7 +22389,7 @@
         "place": "主臥天花 · 床尾走道上方",
         "mount": "ceiling",
         "name": "預留網路線 · 主臥天花",
-        "notes": "・預留一條 Cat6 收在天花內，先不裝 AP\n・兩顆 AP 已夠：主臥床頭預估 −48 dBm，最差的主臥陽台 −71 dBm\n・現在拉約 S$100–120；完工後再拉要開天花補漆，約 S$300 起\n・日後要加 AP：接上同款 U7 Lite 即可，PoE 預算夠"
+        "notes": "・Cat6 收在天花內，先不裝 AP\n・日後加 AP 接同款 U7 Lite，PoE 預算夠"
       },
       {
         "id": "ap-living",
@@ -22596,7 +22527,7 @@
             "主燈、衣櫃區燈"
           ]
         ],
-        "notes": "・離地 120\n・床頭另加無線開關 H1 一鍵關燈，不用拉線"
+        "notes": "・床頭另加無線開關 H1 一鍵關燈"
       },
       {
         "id": "sw-bath1",
@@ -22618,7 +22549,7 @@
             "燈、抽風機"
           ]
         ],
-        "notes": "・離淋浴區與浴缸 ≥ 60，位置由電工依 SS 638 確認\n・離地 120",
+        "notes": "・離淋浴區與浴缸 ≥ 60",
         "room": "bath1"
       },
       {
@@ -22641,7 +22572,7 @@
             "房間主燈"
           ]
         ],
-        "notes": "・離地 120；鍵數依燈光迴路調整"
+        "notes": "・鍵數依燈光迴路調整"
       },
       {
         "id": "sw-ne",
@@ -22663,7 +22594,7 @@
             "房間主燈"
           ]
         ],
-        "notes": "・離地 120；鍵數依燈光迴路調整"
+        "notes": "・鍵數依燈光迴路調整"
       },
       {
         "id": "sw-s",
@@ -22685,7 +22616,7 @@
             "房間主燈"
           ]
         ],
-        "notes": "・離地 120\n・開關放在拉門滑不到的那側"
+        "notes": "・放在拉門滑不到的那側"
       },
       {
         "id": "sw-corridor",
@@ -22825,7 +22756,7 @@
         "place": "客房 · 靠窗角",
         "mount": 30,
         "name": "插座 · 清淨機",
-        "notes": "・13A 雙孔，離地 30\n・給清淨機",
+        "notes": "・13A 雙孔",
         "use": "清淨機"
       },
       {
@@ -22837,7 +22768,7 @@
         "place": "客房 · 書桌",
         "mount": 85,
         "name": "插座 · 書桌",
-        "notes": "・13A 雙孔，桌面上方 85\n・書桌、檯燈、充電",
+        "notes": "・13A 雙孔",
         "use": "書桌"
       },
       {
@@ -22849,7 +22780,7 @@
         "place": "小孩房 · 清淨機後",
         "mount": 30,
         "name": "插座 · 小孩房清淨機",
-        "notes": "・13A 雙孔，離地 30\n・給 Dyson 風扇清淨機",
+        "notes": "・13A 雙孔",
         "use": "風扇清淨機"
       },
       {
@@ -22907,7 +22838,7 @@
         "place": "衛浴 2 鏡櫃內 · 吹風機門",
         "mount": 140,
         "name": "插座 · 衛浴 2 吹風機",
-        "notes": "・鏡櫃吹風機門內，13A 附開關，給 Dyson 吹風機\n・浴室迴路須 30 mA RCD；與淋浴區距離由電工依 SS 638 確認\n・離地 140，鏡櫃內",
+        "notes": "・鏡櫃吹風機門內，13A 附開關",
         "room": "bath2",
         "use": "吹風機"
       },
@@ -23392,14 +23323,14 @@
         {
           "id": "todo",
           "title": "待確認",
-          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・書房按摩椅離窗 10，窗簾盒 15：椅子往內移 ≥ 5\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP"
+          "text": "・光纖終端位置：要一條 Cat6 從光纖盒拉到電視櫃\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP"
         }
       ]
     }
   },
   "smart": {
     "title": "智能家居",
-    "summary": "Apple Home 為唯一日常 App；Aqara Hub M3 走 Zigbee 帶開關、感應器與燈條，已有的 HomePod mini 當家居中樞。Matter over Thread 留作退路，等新加坡本地貨成熟再擴充。",
+    "summary": "Apple Home 為唯一 App，已有的 HomePod mini 當中樞；Aqara Hub M3 以 Zigbee 帶開關、感應器與燈條。",
     "research": "smart-home",
     "categories": [
       {
@@ -23408,7 +23339,7 @@
         "kinds": [
           "hub"
         ],
-        "pick": "已有的 HomePod mini 當家居中樞（S$0）＋Aqara Hub M3 當 Zigbee 骨幹；The Frame 的 Apple TV App 不能當中樞",
+        "pick": "已有的 HomePod mini 當家居中樞＋Aqara Hub M3 當 Zigbee 骨幹",
         "options": [
           {
             "name": "HomePod mini（已有）+ Aqara Hub M3",

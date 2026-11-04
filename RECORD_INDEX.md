@@ -68,12 +68,12 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | GST-07 | `guest-bed-lb` | 客房床 | 154 × 194 |
 | STD-06 | `massage-chair-lb` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | STD-07 | `study-desk-lb` | 書房電腦桌 | 100 × 50 |
-| GST-08 | `guest-desk-lb-c` | 客房書桌（C） | 60 × 45 |
-| GST-09 | `guest-wardrobe-lb-c` | 客房訂製衣櫃（C） | 59 × 60 |
-| GST-10 | `guest-desk-lb-a` | 客房書桌（A） | 70 × 40 |
-| GST-11 | `guest-wardrobe-lb-a` | 客房訂製衣櫃（A） | 70 × 60 |
+| GST-08 | `guest-desk-lb-c` | 客房書桌 | 60 × 45 |
+| GST-09 | `guest-wardrobe-lb-c` | 客房衣櫃 | 59 × 60 |
+| GST-10 | `guest-desk-lb-a` | 客房書桌 | 70 × 40 |
+| GST-11 | `guest-wardrobe-lb-a` | 客房衣櫃 | 70 × 60 |
 | GST-12 | `guest-chair-a` | 客房書椅（A） | 45 × 45 |
-| GST-13 | `guest-chair-lb-a` | 客房書椅（A） | 45 × 45 |
+| GST-13 | `guest-chair-lb-a` | 客房書椅 | 45 × 45 |
 | GST-14 | `guest-wardrobe-b` | 客房訂製衣櫃（B） | 80 × 60 |
 | GST-15 | `guest-desk-b` | 客房木作書桌（B） | 60 × 40 |
 | GST-16 | `guest-chair-b` | 客房書椅（B） | 45 × 45 |
