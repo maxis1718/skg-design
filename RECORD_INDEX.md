@@ -32,7 +32,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KIT-01 | `washer-dryer` | 洗烘衣機 W/D | 60 × 65 |
 | KIT-02 | `fridge` | 冰箱 F | 80 × 70 |
 | KIT-03 | `kitchen-upper-worktop` | Dry kitchen | 167.5 × 65 |
-| KIT-21 | `coffee-machine` | 咖啡機（示意） | 8.4 × 33 |
+| KIT-21 | `coffee-machine` | 咖啡機 | 8.4 × 33 |
 | KIT-22 | `water-purifier` | 淨水器 Wells The One | 8.8 × 8.8 |
 | KIT-04 | `kitchen-lower-worktop` | Wet kitchen | 320.5 × 65 |
 | HLP-01 | `helper-bed` | 女傭房收納床台 | 107 × 205 |

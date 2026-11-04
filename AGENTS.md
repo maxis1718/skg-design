@@ -14,6 +14,7 @@
 10. **大任務派 subagents** 平行做，主線負責合併、驗證、上線。
 11. **改動屋主已定的設計（尺寸、位置、比例）先跟他討論**，給 A／B 選項與建議，不要直接改；設計常識要守住（例：電視櫃不可比電視窄）。
 12. **發現衝突就直接修**：會卡住、撞到、不合理的地方（例：窗簾盒 15 vs 按摩椅離窗 10），設計師自己做合理微調、套用到圖面，改完再告訴他；不要列成待拍板。只有改變他的設計意圖（換配置、換尺寸、換方案）才走第 11 條。
+13. **不用東南西北**（平面圖上方不是北）：電視櫃用面向電視的左／右，其他直接講物件（靠陽台那端、靠過道那端、床頭牆、門側）；圖面與房間卡不寫看圖就懂的說明，不加（示意）等多餘標註。
 
 
 - Current workflow: GitHub repo maxis1718/skg-design is authoritative. On 2026-10-16, after the user enabled Pages in GitHub settings, the repo was observed public (previously private); the agent did not change repo visibility. Source and assets are publicly readable. User controls Codex/Claude through an existing Telegram bridge on Mac mini. Edit sources, preview, check, commit/push, then deploy. No new cloud database or login service is needed. Ignore unpublished web/ prototype.
