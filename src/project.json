@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R95",
+    "revision": "R96",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4877,6 +4877,10 @@
     {
       "id": "C103",
       "text": "全站精煉：刪掉重複、歷史、看圖就懂與已列在別處的資訊；淨距、施工交代、待確認只留真正影響施工或決定的項目。"
+    },
+    {
+      "id": "C104",
+      "text": "電視櫃高 45，加尺寸標註、剖面同比例；抽屜後方放插座與走線、取消活動蓋板；PS5／Switch 插左格插座；左側風扇移到左後上方；房間卡拿掉定／建議、客廳待辦依優先排序、再刪一輪施工細節。"
     }
   ],
   "measurement_policy": {
@@ -23747,27 +23751,31 @@
       "room": "living",
       "text": "買 KEF LS50 Wireless II＋S2 落地腳架（Mineral White）",
       "research": "kef-audio",
-      "status": "open"
+      "status": "open",
+      "priority": 5
     },
     {
       "id": "todo-living-kc62",
       "room": "living",
       "text": "買 KEF KC62 重低音（Mineral White）",
       "research": "kef-audio",
-      "status": "open"
+      "status": "open",
+      "priority": 6
     },
     {
       "id": "todo-living-av",
       "room": "living",
       "text": "定電視櫃：A 三格 220／B 四格 230",
       "research": "console-gaming",
-      "status": "open"
+      "status": "open",
+      "priority": 1
     },
     {
       "id": "todo-living-cabinet",
       "room": "living",
       "text": "定走道口 190 櫃：做不做、做什麼用",
-      "status": "open"
+      "status": "open",
+      "priority": 4
     },
     {
       "id": "todo-kitchen-scheme",
@@ -23894,7 +23902,8 @@
       "room": "living",
       "text": "去 VivoCity 看 Xiaomi TV S Pro Mini LED 75 2026 實機",
       "research": "tv-xiaomi",
-      "status": "open"
+      "status": "open",
+      "priority": 3
     },
     {
       "id": "todo-bath1-mirror-doors",
@@ -23906,7 +23915,8 @@
       "id": "todo-living-console-finish",
       "room": "living",
       "text": "選電視櫃面板、頂板木紋色號（左側白橡格柵照此染色）",
-      "status": "open"
+      "status": "open",
+      "priority": 2
     },
     {
       "id": "todo-master-wallcovering",
@@ -24549,6 +24559,78 @@
         {
           "title": "Blum Singapore LEGRABOX",
           "url": "https://www.blum.com/sg/en/products/boxsystems/legrabox/downloads-videos/"
+        }
+      ]
+    },
+    "usb-fan": {
+      "title": "電視櫃 USB 排風扇",
+      "updated": "2026-11-05",
+      "summary": "選 Noctua NF-A12x25 5V PWM（120×25，56.6 CFM、21.4 dB(A)）＋USB 線中開關，接獨立 USB 牆插；PS5 Pro 230 W 要約 40 CFM 才能把溫升壓在 10 °C 內。備案 AC Infinity MULTIFAN S3（S$51，自帶開關）。15 mm 薄扇只省 1 cm，較吵且要升壓線，不選。",
+      "body": "## 結論\n- **選：Noctua NF-A12x25 5V PWM（120×120×25 mm）＋ 附贈 USB 供電線 ＋ USB-A 線中開關**，插獨立的 USB 牆插／USB 充電頭，不接 PS5。56.6 CFM、21.4 dB(A)、0.3 A，靜壓 2.07 mmH₂O，在木格柵後面最吃得住。\n- **要調速**：串一顆 Noctua NA-FC1 旋鈕（Noctua 官方確認可以串在 USB 供電線和 5V PWM 風扇之間）。不調速也行：全速 21.4 dB(A) 本來就安靜。\n- **最省事的備案：AC Infinity MULTIFAN S3**（120×25，52 CFM、18 dBA，USB 線上自帶 OFF＋3 段開關），desertcart.sg S$51。缺點：靜壓只有約 1 mmH₂O，隔格柵後實際風量掉得比 Noctua 多。\n- **不選 15 mm 薄扇**：NF-A12x15 PWM 只省 10 mm，風量差不多（55.4 CFM），但全速 23.9 dB(A) 比較吵、靜壓 1.53 比較低；而且是 12 V，要另加 USB 5 V→12 V 升壓線。\n- **不選 140 mm（NF-A14 5V PWM）**：風量最大（82.5 CFM），但外框剛好 140，放進約 14 cm 的風扇區沒有餘裕；24.6 dB(A) 也最吵。\n- **不選 MULTIFAN S7（雙 120）**：寬 24 cm，放不進 14 cm 的風扇區。\n\n## 風量夠不夠\n- 公式：CFM ≈ 1.76 × W ÷ ΔT(°C)。PS5 Pro 遊戲時約 230 W：\n  - 櫃內溫升 ≤ 10 °C → 約 **40 CFM**；≤ 15 °C → 約 27 CFM。\n- 型錄 CFM 是無阻力全速；放在木格柵後面，實際風量會打折（折多少待確認，抓 6–7 成）。\n- 玩的時候門是開的，前方補氣不成問題；這顆風扇主要是把 PS5 後方的熱氣抽出去，不讓它回流到前方進風口。\n- 判斷：NF-A12x25 5V 全速打 7 成 ≈ 40 CFM，剛好過線；S3 打 7 成 ≈ 36 CFM，差一點；薄扇要開全速才夠，就不安靜了。\n\n## 風扇比較\n| 型號 | 尺寸 mm | 風量 · 噪音 | 供電 · 價格 |\n|---|---|---|---|\n| Noctua NF-A12x25 5V PWM | 120×25 | 56.6 CFM · 21.4 dB(A) | 5V USB 0.3A · £28.96（SG 價待確認，Amazon SG 有售） |\n| AC Infinity MULTIFAN S3 | 120×25 | 52 CFM · 18 dBA | 5V USB 約 5W · S$51（desertcart.sg） |\n| Noctua NF-A14 5V PWM | 140×25 | 82.5 CFM · 24.6 dB(A) | 5V USB 0.198A · A$49（SG 價待確認，Amazon SG 有售） |\n| Noctua NF-A12x15 PWM | 120×15 | 55.4 CFM · 23.9 dB(A) | 12V，需 USB 升壓線 · 待確認 |\n| Thermalright TL-C12015B | 120×15 | 59 CFM · 26.1 dBA | 12V，需 USB 升壓線 · 待確認 |\n\n- 噪音數字各家量法不同（Noctua 和 AC Infinity 不能直接比大小）。\n- NF-A12x25 5V（非 PWM 版）和 NF-A14 5V（非 PWM 版）官網已標停產；買 PWM 版。\n\n## 開關／控制\n| 做法 | 優點 | 缺點 |\n|---|---|---|\n| USB-A 線中開關（通用款） | 最簡單、最便宜 | 只能開關，不能調速 |\n| Noctua NA-FC1 旋鈕 | 官方支援 5V PWM，可微調轉速 | 能否轉到 0 rpm 待確認；仍要另一個開關 |\n| AC Infinity CONTROLLER 1 | 溫控自動開關，5V USB，10 W 上限，US$19.99 | 官方只寫支援 AC Infinity 風扇；接 Noctua 待確認 |\n| USB 5V→12V 升壓線（Gebildet E1445） | 薄扇才需要，自帶開關＋旋鈕 | 0.4 A 上限，雜牌，品質待確認 |\n| 智慧插座控制 USB 充電頭 | 手機遠端開關 | 多一個裝置，沒必要 |\n\n- 電源：獨立的 USB 牆插（電視櫃內）或 5 V ≥1 A 的 USB 充電頭都行，風扇只吃 0.2–0.35 A。\n\n## 要先做的事\n- 量側板風扇區的實際淨尺寸：≥ 125 × 125 mm 才放得下 120 扇＋防震墊；深度要留 27 mm（扇 25＋防震墊）。\n- 風扇位置對齊 PS5 Pro 後方排風口，向外抽。\n- 跟 Patrick：電視櫃內預留一個 USB 牆插（或 13A 插座給充電頭），位置靠近風扇區，線走櫃內。\n",
+      "sources": [
+        {
+          "title": "Noctua NF-A12x25 5V PWM — specifications (Noctua)",
+          "url": "https://www.noctua.at/cn/products/nf-a12x25-5v-pwm/specifications"
+        },
+        {
+          "title": "Noctua NF-A12x25 5V — specifications, discontinued (Noctua)",
+          "url": "https://www.noctua.at/en/products/nf-a12x25-5v/specifications"
+        },
+        {
+          "title": "Noctua NF-A14 5V PWM — specifications (Noctua)",
+          "url": "https://www.noctua.at/cn/products/nf-a14-5v-pwm/specifications"
+        },
+        {
+          "title": "Noctua NF-A14 5V PWM — where to buy (lists amazon.sg)",
+          "url": "https://www.noctua.at/en/products/nf-a14-5v-pwm/buy"
+        },
+        {
+          "title": "Noctua NF-A14 5V — specifications, discontinued (Noctua)",
+          "url": "https://www.noctua.at/en/products/nf-a14-5v/specifications"
+        },
+        {
+          "title": "Noctua NF-A12x15 PWM — specifications (Noctua)",
+          "url": "https://www.noctua.at/en/products/nf-a12x15-pwm/specifications"
+        },
+        {
+          "title": "Noctua FAQ — NA-FC1 with 5V USB fans",
+          "url": "https://www.noctua.at/en/support/faqs/can-i-use-the-na-fc1-with-5v-usb-12v-and-24v-fans"
+        },
+        {
+          "title": "Noctua NA-FC1 — specifications",
+          "url": "https://www.noctua.at/en/products/na-fc1/specifications"
+        },
+        {
+          "title": "QuietPC — NF-A12x25 5V PWM (£28.96)",
+          "url": "https://www.quietpc.com/nf-a12x25-5v-pwm"
+        },
+        {
+          "title": "PCCaseGear — NF-A14 5V PWM (A$49)",
+          "url": "https://pccasegear.com/products/65800/noctua-nf-a14-5v-pwm-140mm-fan"
+        },
+        {
+          "title": "AC Infinity MULTIFAN S7 — specifications (AC Infinity)",
+          "url": "https://acinfinity.com/multifan-s7-quiet-usb-cooling-fan-dual-120mm/"
+        },
+        {
+          "title": "desertcart.sg — AC Infinity MULTIFAN S3 (S$51)",
+          "url": "https://www.desertcart.sg/products/48220191-ac-infinity-multifan-s3-quiet-120mm-usb-fan-ul-certified.md"
+        },
+        {
+          "title": "JB Hi-Fi — AC Infinity MULTIFAN S3 (52 CFM, 18 dBA)",
+          "url": "https://www.jbhifi.com.au/products/ac-infinity-multifan-s3-52-cfm-spot-cooler-usb-powered-quiet-fan-120mm"
+        },
+        {
+          "title": "AC Infinity CONTROLLER 1 — thermal trigger for USB fans",
+          "url": "https://www.acinfinity.com/smart-cooling/cabinet-fan-systems/controller-1-pre-set-thermal-trigger-for-usb-fans-and-devices/"
+        },
+        {
+          "title": "desertcart.sg — Gebildet USB 5V→12V step-up fan cable (E1445)",
+          "url": "https://www.desertcart.sg/products/681229496-12v-voltage-step-up-usb-to-3-pin-and-4"
+        },
+        {
+          "title": "Thermalright TL-C12015B — listing (59 CFM, 26.1 dBA)",
+          "url": "https://www.desertcart.com.cy/products/444458083-thermalrighttl-c12015b-120mm-slim-fan-15mm-thick-pwm-control-1800rpm"
         }
       ]
     }
