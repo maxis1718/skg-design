@@ -836,6 +836,22 @@ function helperExtra(g, e) {
 // lc-top {x, y, w, h, r, fill}: plan outline with rounded FRONT corners only (plan y = 0 front, h toward the wall).
 // lc-hole {x, y, r, label}: circle (finger hole / grommet) in plan or elevation.
 function lcExtra(g, e) {
+  // vchain {x, cuts [bottom … top], labels?, side 'left'|'right' (number side), total (true | label), gap, size, min}: vertical
+  // dimension chain with ticks at every cut; total adds an overall dimension one step further out.
+  if (e.type === 'vchain') {
+    const s = {stroke:C.dim, 'stroke-width':.25 * LW}, tk = 1.2 * Math.max(LW, .5), fs = g.f * (e.size || .74), L = e.side === 'left';
+    const draw = (x, c, lb) => {
+      g.line(x, c[0], x, c[c.length - 1], s);
+      for (const v of c) g.line(x - tk, v, x + tk, v, s);
+      for (let i = 0; i < c.length - 1; i++) {
+        const h = c[i + 1] - c[i], txt = lb?.[i] ?? fmt(h);
+        if (txt && h >= (e.min ?? fs * .9)) g.text(L ? x - 1.2 : x + 1.2, (c[i] + c[i + 1]) / 2 - fs * .35, txt, {fill:C.dim, 'font-size':fs, 'text-anchor':L ? 'end' : 'start'});
+      }
+    };
+    draw(e.x, e.cuts, e.labels);
+    if (e.total) draw(e.x + (L ? -1 : 1) * (e.gap ?? g.f * 2.4), [e.cuts[0], e.cuts[e.cuts.length - 1]], [e.total === true ? fmt(e.cuts[e.cuts.length - 1] - e.cuts[0]) : e.total]);
+    return true;
+  }
   if (e.type === 'lc-end') {
     const n = 6, k = e.w / n, out = e.side === 'left';
     for (let i = 0; i < n; i++) {
@@ -1039,7 +1055,7 @@ function renderFront(elev, view, state) {
     const cx = Math.min(Math.max((fx0 + fx1) / 2, half), W - half);
     g.text(cx, -f * (view.hcuts ? 5.6 : 3.6), txt, {'text-anchor':'middle', fill:C.dim, 'font-size':f * .85, 'font-weight':600});
   }
-  return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
+  return svg(frameBox(view, H) || [-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
 // Side section (depth axis horizontal; wall at x=0, room to the right). Pull-outs extend when state=open.
@@ -1181,7 +1197,7 @@ function renderSection(elev, view, state) {
   if (dc) for (let i = 0; i < dc.length - 1; i++) { const w = dc[i + 1] - dc[i]; hdim(g, dc[i], dc[i + 1], -f * 1.6, em(fmt(w)) * f * .74 > w + .5 ? '' : fmt(w)); }
   hdim(g, 0, D, -f * (dc ? 3.4 : 1.6), view.depthLabel || `${fmt(D)}（${T('櫃深')}）`, true);
   if (dc) m.b += f * 1.8;
-  return svg([-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
+  return svg(frameBox(view, H) || [-m.l, -m.t, W + m.l + m.r, H + m.t + m.b], g.out, view.aria || elev.title);
 }
 
 // Top view (plan) of a hob over its cabinet run (view.kind 'plan-top'). x = cm from the left edge of the run, y = cm from the
@@ -1294,6 +1310,8 @@ function liftSection(g, hx, hy, L, lift, f) {
   if (lift.label) g.text(hx + L * sn + 1.2, hy - L * cs + f * .9, lift.label, {fill:C.dim, 'font-size':f * .62});
 }
 
+// view.frame [x0, y0, x1, y1] (cm, floor-up): fixed viewBox, so several views (e.g. sections + end view) share one scale and floor line.
+function frameBox(view, H) { const fr = view.frame; return fr ? [fr[0], H - fr[3], fr[2] - fr[0], fr[3] - fr[1]] : null; }
 function svg(vb, out, label) {
   return `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
 }
