@@ -1634,10 +1634,10 @@
       "plan_vertical_cm": 220,
       "nominal_width_cm": 220,
       "nominal_depth_cm": 45,
-      "height_cm": 40,
+      "height_cm": 45,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R87 scheme A (concept, default): floor-standing console 220 W x 45 D x 40 H, three equal 67.9 fronts, the middle front centred on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass (30 from the 20 cm curtain pocket; R89: same as scheme B), south end 270; TV / console axis 160 from the glass (sofa stays 162.5, 2.5 off - the same tolerance scheme B accepts); the 10 cm it is shorter than B all goes to the entry walkway. Left (north) bay 71.5 between partitions: flipper door (Knape & Vogt 8070PEZ-14, packers 1.5 each side) sliding in under the top, PS5 Pro (about 13 clear each side) + Switch 2 dock turned 90 deg + network tray; north end = full-height white-oak slats (side panel open only at the fan) + NF-A14 on a thermostat; middle and right: LEGRABOX drawers (LW 63.9 / 67.5, each with an AMBIA-LINE 242 frame + anti-slip mat); south end blank. ㄇ cable lid 60 x 10 centred on the axis (x 80-140); the TV cord and HDMI drop through the Ø50 conduit (135.5 from the north end) to S-20 + D-01 right under the lid (centre 33). Middle drawer LEGRABOX NL 300 (front 1.9 + 30) leaves a 13.1 rear cable channel behind the middle and left bays; P1 has a 10 x 8 rear-bottom notch so HDMI / Ethernet reach the PS5 bay behind its tray. The channel ends at P2: nothing runs behind the right bay (no socket there; the Ø32 speaker conduit is inside the 5 cm wall build-up and opens under the lid), so the right bay gets a 1.8 back panel against the wall (inside depth 41.3) and a LEGRABOX NL 400 drawer (Blum LT min = NL + 3 mm = 40.3). Scheme B (four sections, 230) lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Construction details: research console-gaming appendix.",
+      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-14; door conceal 25.4 per the KV sheet, so 9.5 stays out when stowed - 8070PEZ-16 hides 30.5), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). No cable lid: the top is one board; TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch; socket access = pull the drawer out. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
@@ -5670,7 +5670,7 @@
             "plan_vertical_cm": 230,
             "nominal_width_cm": 230,
             "source_note": "",
-            "notes": "Design R85 (concept): floor-standing console 230 W x 45 D x 40 H, four equal 53.4 fronts with the centre joint on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass (30 from the 20 cm curtain pocket); TV / console axis 165 from the glass (sofa stays 162.5, 2.5 off). Left (north) bay 57.0 between partitions: flipper door (Knape & Vogt 8070PEZ-14, packers 1.5 each side) sliding in under the top, PS5 Pro + Switch 2 dock turned 90 deg (about 4.5 clear each side) + network tray; north end = white-oak slats + quiet fan (schemes A full height / B mid-zone / C AIRPLATE / D slots); right three: LEGRABOX drawers (LW 49.3 / 51.9 / 52.9, each with an AMBIA-LINE 242 frame + anti-slip mat); south end blank. ㄇ cable lid 63.6 centred across the middle joint; the TV cord and HDMI drop through the Ø50 conduit (140.5 from the north end) to S-20 + D-01 right under the lid (centre 33). The two middle drawers LEGRABOX NL 300 (front 1.9 + 30) leave a 13.1 rear cable channel behind them and the left bay; P1 has a 10 x 8 rear-bottom notch, the centre partition P2 under the lid is set back 10 full height (S-20 straddles it). The channel ends at P3: nothing runs behind the right bay (Ø32 speaker conduit is inside the wall build-up), so it gets a 1.8 back panel (inside depth 41.3) and a LEGRABOX NL 400 drawer (Blum LT min = NL + 3 mm = 40.3). Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg. Construction details: research console-gaming appendix.",
+            "notes": "Design R96 scheme B (concept): 230 W x 45 D x 45 H, four equal 53.4 fronts with the centre joint on the TV axis; TV / console axis 165. Left bay 57.0: same flipper door / PS5 Pro / Switch 2 / network tray / fan as A. The two middle drawers LEGRABOX pure C NL 300 leave a 13.1 rear space (S-20 straddles the centre partition, set back 10); right NL 400 with a back panel. No cable lid; HDMI runs through a 10 pass-through at the back of P1. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
             "dimensions": {
               "w": {
                 "cm": 230,
@@ -5723,7 +5723,7 @@
           },
           "sock-console-l": {
             "y": 195.593,
-            "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 11.6–57.4\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇"
+            "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 11.6–57.4\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給風扇"
           },
           "data-tv": {
             "y": 211.41,
@@ -17231,7 +17231,7 @@
         "console": {
           "w": 220.0,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "side": 0,
           "noBack": true,
@@ -17246,7 +17246,7 @@
             },
             {
               "kind": "open",
-              "h": 30.2,
+              "h": 35.2,
               "label": ""
             },
             {
@@ -17258,7 +17258,7 @@
             {
               "kind": "drawer",
               "from": 8.0,
-              "to": 37.9,
+              "to": 42.9,
               "grip": "groove",
               "groove": 1.6,
               "leaves": [
@@ -17284,7 +17284,7 @@
         "console-endbay": {
           "w": 71.5,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "noBack": true,
           "bands": [
@@ -17301,7 +17301,7 @@
             },
             {
               "kind": "open",
-              "h": 28.4,
+              "h": 33.4,
               "label": ""
             },
             {
@@ -17313,7 +17313,7 @@
         "console-drawer": {
           "w": 63.9,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "noBack": true,
           "bands": [
@@ -17330,7 +17330,7 @@
             },
             {
               "kind": "open",
-              "h": 28.4,
+              "h": 33.4,
               "label": ""
             },
             {
@@ -17342,12 +17342,12 @@
         "end-face": {
           "w": 45.0,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "noCarcass": true,
           "bands": [
             {
               "kind": "open",
-              "h": 40.0,
+              "h": 45.0,
               "label": ""
             }
           ]
@@ -17384,7 +17384,7 @@
               "pts": [
                 [
                   170.5,
-                  34.0
+                  39.0
                 ],
                 [
                   170.5,
@@ -17565,7 +17565,7 @@
               "x": 35.0,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "left"
             },
             {
@@ -17573,7 +17573,7 @@
               "x": 247.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
@@ -17591,7 +17591,7 @@
               "x": 42.5,
               "y": 9.8,
               "w": 70.033,
-              "h": 28.4,
+              "h": 33.4,
               "fill": "#ddd6c8"
             },
             {
@@ -17611,7 +17611,7 @@
               "stroke": "#2f443c",
               "when": "open",
               "x": 42.8,
-              "y": 31.8,
+              "y": 36.8,
               "w": 67.933,
               "h": 1.9,
               "fill": "#fbfaf5"
@@ -17740,10 +17740,54 @@
             },
             {
               "type": "clear",
+              "x0": 61.65,
+              "x1": 228.35,
+              "y": 161.2,
+              "label": "166.7"
+            },
+            {
+              "type": "vchain",
+              "x": 231.55,
+              "cuts": [
+                62.1,
+                157.9
+              ]
+            },
+            {
+              "type": "vchain",
+              "x": 52.15,
+              "cuts": [
+                45.0,
+                62.1
+              ]
+            },
+            {
+              "type": "clear",
+              "x0": 30.0,
+              "x1": 35.0,
+              "y": -7.5,
+              "label": "5"
+            },
+            {
+              "type": "clear",
               "x0": 35.0,
               "x1": 255.0,
-              "y": -16,
+              "y": -7.5,
               "label": "220"
+            },
+            {
+              "type": "clear",
+              "x0": 255.0,
+              "x1": 260.0,
+              "y": -7.5,
+              "label": "5"
+            },
+            {
+              "type": "clear",
+              "x0": 282.6,
+              "x1": 291.3,
+              "y": -7.5,
+              "label": "8.7"
             }
           ],
           "stateNames": {
@@ -17752,7 +17796,7 @@
           },
           "levels": [
             {
-              "y": 40,
+              "y": 45.0,
               "label": "櫃面"
             },
             {
@@ -17772,7 +17816,7 @@
           "height": 56,
           "noCeiling": true,
           "font": 4.8,
-          "marginR": 1,
+          "marginR": 4.6,
           "units": [
             {
               "ref": "console",
@@ -17794,7 +17838,7 @@
               "x": 0,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "left"
             },
             {
@@ -17802,7 +17846,7 @@
               "x": 212.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
@@ -17820,7 +17864,7 @@
               "x": 7.5,
               "y": 9.8,
               "w": 70.033,
-              "h": 28.4,
+              "h": 33.4,
               "fill": "#ddd6c8"
             },
             {
@@ -17840,7 +17884,7 @@
               "stroke": "#2f443c",
               "when": "open",
               "x": 7.8,
-              "y": 31.8,
+              "y": 36.8,
               "w": 67.933,
               "h": 1.9,
               "fill": "#fbfaf5"
@@ -17945,7 +17989,7 @@
             {
               "type": "note",
               "x": 41.77,
-              "y": 20.5,
+              "y": 24.5,
               "label": "翻門",
               "size": 0.8,
               "color": "#7f8c84",
@@ -17954,7 +17998,7 @@
             {
               "type": "note",
               "x": 110.0,
-              "y": 20.5,
+              "y": 24.5,
               "label": "抽屜",
               "size": 0.8,
               "color": "#7f8c84"
@@ -17962,7 +18006,7 @@
             {
               "type": "note",
               "x": 178.23,
-              "y": 20.5,
+              "y": 24.5,
               "label": "抽屜",
               "size": 0.8,
               "color": "#7f8c84"
@@ -17981,10 +18025,30 @@
               "x": 73.39999999999999,
               "y": 24.3,
               "lx": 100,
-              "ly": 45,
+              "ly": 48.5,
               "label": "Switch 2",
               "size": 0.8,
               "when": "open"
+            },
+            {
+              "type": "vchain",
+              "x": 223.0,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "total": true,
+              "gap": 6.5,
+              "size": 0.74
+            },
+            {
+              "type": "note",
+              "x": 226.3,
+              "y": 50.5,
+              "label": "深 45",
+              "size": 0.74,
+              "color": "#a96f47"
             }
           ],
           "hcuts": [
@@ -18048,17 +18112,6 @@
             },
             {
               "type": "rect",
-              "x": 80.0,
-              "y": 35.0,
-              "w": 60.0,
-              "h": 10.0,
-              "fill": "#ddd3bf",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "dashed": true
-            },
-            {
-              "type": "rect",
               "x": 0,
               "y": 12.0,
               "w": 1.8,
@@ -18072,7 +18125,7 @@
               "x": 77.533,
               "y": 1.9,
               "w": 1.8,
-              "h": 43.1,
+              "h": 33.1,
               "fill": "#d3c4aa",
               "stroke": "none"
             },
@@ -18131,7 +18184,7 @@
             {
               "type": "rect",
               "x": 4.2,
-              "y": 14.0,
+              "y": 30.2,
               "w": 2.5,
               "h": 14.0,
               "fill": "#7b4b3a",
@@ -18170,15 +18223,15 @@
               "pts": [
                 [
                   25.0,
-                  22
+                  37.2
                 ],
                 [
                   8,
-                  22
+                  37.2
                 ],
                 [
                   -8,
-                  22
+                  37.2
                 ]
               ],
               "warm": true,
@@ -18340,39 +18393,9 @@
               "y": 41.8,
               "lx": 138.5,
               "ly": 49.4,
-              "label": "電視暗管",
+              "label": "電視線（牆內）",
               "size": 0.74,
               "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 110.0,
-              "y": 35.7,
-              "label": "活動蓋板",
-              "size": 0.74,
-              "color": "#2f443c",
-              "when": "closed"
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  135.5,
-                  40.0
-                ],
-                [
-                  130.5,
-                  33.0
-                ],
-                [
-                  30.64,
-                  33.0
-                ],
-                [
-                  30.64,
-                  26.6
-                ]
-              ]
             },
             {
               "type": "device",
@@ -18408,7 +18431,7 @@
               "y": 33.4,
               "lx": 36.0,
               "ly": 49.4,
-              "label": "後方走線",
+              "label": "走線空間",
               "size": 0.74,
               "anchor": "end",
               "when": "closed"
@@ -18528,10 +18551,118 @@
             },
             {
               "type": "rect",
+              "x": 20.5,
+              "y": 41.2,
+              "w": 5.0,
+              "h": 2.9,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.4
+            },
+            {
+              "type": "rect",
+              "x": 53.5,
+              "y": 41.2,
+              "w": 5.0,
+              "h": 2.9,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.4
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  23.0,
+                  26.6
+                ],
+                [
+                  23.0,
+                  41.2
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  75.9,
+                  15.0
+                ],
+                [
+                  76.7,
+                  15.0
+                ],
+                [
+                  76.7,
+                  39.6
+                ],
+                [
+                  56.0,
+                  39.6
+                ],
+                [
+                  56.0,
+                  41.2
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  133.9,
+                  39.0
+                ],
+                [
+                  129.5,
+                  38.0
+                ],
+                [
+                  43.056,
+                  38.0
+                ],
+                [
+                  43.056,
+                  26.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  134.1,
+                  38.4
+                ],
+                [
+                  129.5,
+                  36.6
+                ],
+                [
+                  76.7,
+                  36.6
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "x": 78.433,
+              "y": 40.0,
+              "lx": 79.133,
+              "ly": 49.4,
+              "label": "過線",
+              "size": 0.74,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
               "x": 7.8,
-              "y": 0.5,
+              "y": 0,
               "w": 67.933,
-              "h": 29.9,
+              "h": 25.4,
               "fill": "none",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -18539,9 +18670,20 @@
               "when": "open"
             },
             {
+              "type": "rect",
+              "x": 7.8,
+              "y": -9.5,
+              "w": 67.933,
+              "h": 9.5,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
               "type": "note",
               "x": 41.767,
-              "y": -8.0,
+              "y": -6.05,
               "label": "翻門收起",
               "size": 0.74,
               "color": "#2f443c",
@@ -18572,11 +18714,11 @@
           "name": "左格剖面",
           "kind": "section",
           "ref": "console-endbay",
-          "extension": 32,
-          "labelRoom": 60,
-          "height": 48,
+          "extension": 16,
+          "labelRoom": 45,
+          "height": 50,
           "noCeiling": true,
-          "font": 2.8,
+          "font": 2.6,
           "marginL": 1.4,
           "depthLabel": "45",
           "stateNames": {
@@ -18597,14 +18739,66 @@
               "reach": 70
             },
             {
+              "type": "lc-fan",
+              "x": 0.7999999999999998,
+              "y": 22.6,
+              "s": 14.0,
+              "dashed": true
+            },
+            {
               "type": "rect",
-              "x": 15.0,
-              "y": 14.8,
-              "w": 24.0,
-              "h": 1.2,
-              "fill": "#d3c4aa",
-              "stroke": "#b9a98d",
-              "sw": 0.2
+              "x": 0,
+              "y": 17.7,
+              "w": 1.0,
+              "h": 8.6,
+              "fill": "#fff",
+              "stroke": "#a96f47",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 19.4,
+              "w": 2.8,
+              "h": 5.2,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.3
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  3.8,
+                  21.6
+                ],
+                [
+                  17.4,
+                  21.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  0.4,
+                  10.6
+                ],
+                [
+                  12.4,
+                  10.6
+                ],
+                [
+                  12.4,
+                  18.6
+                ],
+                [
+                  17.4,
+                  18.6
+                ]
+              ]
             },
             {
               "type": "rect",
@@ -18615,6 +18809,16 @@
               "fill": "#e9ebe7",
               "stroke": "#5b6b8a",
               "sw": 0.25
+            },
+            {
+              "type": "rect",
+              "x": 13.1,
+              "y": 14.8,
+              "w": 28.5,
+              "h": 1.2,
+              "fill": "#d3c4aa",
+              "stroke": "#b9a98d",
+              "sw": 0.2
             },
             {
               "type": "device",
@@ -18628,88 +18832,10 @@
             },
             {
               "type": "rect",
-              "x": 2.2,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.0,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 5.8,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 3.1,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.9,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  6.6,
-                  11.0
-                ],
-                [
-                  12.9,
-                  11.0
-                ],
-                [
-                  12.9,
-                  18.0
-                ],
-                [
-                  17.4,
-                  18.0
-                ]
-              ]
-            },
-            {
-              "type": "lc-fan",
-              "x": 2.0,
-              "y": 12.0,
-              "s": 14,
-              "dashed": true
-            },
-            {
-              "type": "rect",
               "x": 43.1,
               "y": 8.0,
               "w": 1.9,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -18720,7 +18846,7 @@
               "x": 43.1,
               "y": 8.0,
               "w": 1.9,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "none",
               "stroke": "#b9c2bb",
               "sw": 0.25,
@@ -18729,9 +18855,9 @@
             },
             {
               "type": "rect",
-              "x": 14.6,
-              "y": 31.8,
-              "w": 29.9,
+              "x": 19.6,
+              "y": 36.8,
+              "w": 34.9,
               "h": 1.9,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
@@ -18746,52 +18872,52 @@
                   8.0
                 ],
                 [
-                  48.9,
-                  8.26
+                  49.555,
+                  8.299
                 ],
                 [
-                  52.74,
-                  9.02
+                  54.033,
+                  9.189
                 ],
                 [
-                  56.44,
-                  10.28
+                  58.356,
+                  10.657
                 ],
                 [
-                  59.95,
-                  12.01
+                  62.45,
+                  12.676
                 ],
                 [
-                  63.2,
-                  14.18
+                  66.246,
+                  15.212
                 ],
                 [
-                  66.14,
-                  16.76
+                  69.678,
+                  18.222
                 ],
                 [
-                  68.72,
-                  19.7
+                  72.688,
+                  21.654
                 ],
                 [
-                  70.89,
-                  22.95
+                  75.224,
+                  25.45
                 ],
                 [
-                  72.62,
-                  26.46
+                  77.243,
+                  29.544
                 ],
                 [
-                  73.88,
-                  30.16
+                  78.711,
+                  33.867
                 ],
                 [
-                  74.64,
-                  34.0
+                  79.601,
+                  38.345
                 ],
                 [
-                  74.9,
-                  37.9
+                  79.9,
+                  42.9
                 ]
               ],
               "when": "open"
@@ -18800,11 +18926,11 @@
               "type": "airflow",
               "pts": [
                 [
-                  78,
+                  90,
                   20
                 ],
                 [
-                  40.2,
+                  46.5,
                   20
                 ]
               ],
@@ -18812,62 +18938,80 @@
               "head": 1.8
             },
             {
-              "type": "airflow",
-              "pts": [
-                [
-                  17.2,
-                  20
-                ],
-                [
-                  10.5,
-                  19.0
-                ]
-              ],
-              "warm": true,
-              "when": "open",
-              "head": 1.6
-            },
-            {
               "type": "lc-flow",
-              "x": 9.0,
-              "y": 19.0,
-              "dir": "out",
+              "x": 7.8,
+              "y": 29.6,
+              "dir": "in",
               "warm": true,
-              "r": 2.0,
+              "r": 1.6,
               "when": "open"
             },
             {
               "type": "callout",
               "x": 36.0,
               "y": 11.4,
-              "lx": 80,
-              "ly": 12.5,
+              "lx": 83,
+              "ly": 11.5,
               "label": "網路設備",
               "size": 0.78,
               "color": "#5b6b8a"
             },
             {
               "type": "callout",
+              "x": 14.2,
+              "y": 31.4,
+              "lx": 83,
+              "ly": 28.5,
+              "label": "風扇",
+              "size": 0.78
+            },
+            {
+              "type": "callout",
               "x": 44.0,
-              "y": 26,
-              "lx": 80,
-              "ly": 30,
+              "y": 36,
+              "lx": 83,
+              "ly": 38.5,
               "label": "翻門",
               "size": 0.78,
               "when": "closed"
             },
             {
               "type": "callout",
-              "x": 30.0,
-              "y": 33.2,
-              "lx": 80,
-              "ly": 39,
+              "x": 52.0,
+              "y": 37.7,
+              "lx": 83,
+              "ly": 41.5,
               "label": "翻門收起",
               "size": 0.78,
               "when": "open"
+            },
+            {
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                16,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
-          "aria": "電視櫃左格剖面"
+          "aria": "電視櫃左格剖面",
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
+          ],
+          "depthCuts": [
+            0,
+            13.1,
+            43.1,
+            45.0
+          ]
         },
         {
           "id": "section-mid",
@@ -18875,15 +19019,15 @@
           "kind": "section",
           "ref": "console-drawer",
           "extension": 16,
-          "labelRoom": 64,
-          "height": 56,
+          "labelRoom": 45,
+          "height": 50,
           "noCeiling": true,
-          "font": 2.65,
+          "font": 2.6,
           "marginL": 1.4,
           "depthLabel": "45",
           "stateNames": {
-            "closed": "蓋上",
-            "open": "拿開蓋板"
+            "closed": "平時",
+            "open": "拉出抽屜"
           },
           "extras": [
             {
@@ -18899,40 +19043,22 @@
               "reach": 56
             },
             {
-              "type": "rect",
-              "x": 0,
-              "y": 9.8,
-              "w": 10.0,
-              "h": 8.0,
-              "fill": "#f7f4ec",
-              "stroke": "#8f9a92",
-              "sw": 0.25,
-              "dashed": true
-            },
-            {
-              "type": "rect",
-              "x": 13.1,
-              "y": 10.4,
-              "w": 30.0,
-              "h": 17.7,
-              "fill": "#ece8de",
-              "stroke": "#8f9a92",
-              "sw": 0.25
-            },
-            {
-              "type": "rect",
-              "x": 43.1,
-              "y": 8.0,
-              "w": 1.9,
-              "h": 29.9,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
+              "type": "conduit",
+              "pts": [
+                [
+                  -2.0,
+                  52.0
+                ],
+                [
+                  -2.0,
+                  40.0
+                ]
+              ]
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 28.9,
+              "y": 28.7,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -18942,7 +19068,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 30.3,
+              "y": 30.4,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -18954,157 +19080,141 @@
               "type": "cable",
               "pts": [
                 [
-                  2.4,
-                  30.3
+                  -2.0,
+                  40.6
                 ],
                 [
                   2.4,
-                  13.0
+                  40.6
+                ],
+                [
+                  2.4,
+                  35.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  -2.0,
+                  39.6
+                ],
+                [
+                  6.4,
+                  39.6
+                ],
+                [
+                  6.4,
+                  10.6
+                ],
+                [
+                  9.6,
+                  10.6
                 ]
               ]
             },
             {
               "type": "rect",
-              "x": 0,
-              "y": 38.2,
-              "w": 10,
-              "h": 1.8,
-              "fill": "#e2d5bd",
+              "x": 13.1,
+              "y": 10.4,
+              "w": 30.0,
+              "h": 17.7,
+              "fill": "#ece8de",
+              "stroke": "#8f9a92",
+              "sw": 0.25,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 43.1,
+              "y": 8.0,
+              "w": 1.9,
+              "h": 34.9,
+              "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
               "when": "closed"
             },
             {
-              "type": "rect",
-              "x": 0,
-              "y": 38.2,
-              "w": 10,
-              "h": 1.8,
-              "fill": "#fff",
-              "stroke": "none",
-              "when": "open"
+              "type": "callout",
+              "x": 30,
+              "y": 19,
+              "lx": 83,
+              "ly": 18.5,
+              "label": "抽屜",
+              "size": 0.78,
+              "when": "closed"
             },
             {
               "type": "rect",
-              "x": 0,
-              "y": 51.0,
-              "w": 10,
-              "h": 1.8,
-              "fill": "none",
-              "stroke": "#7f8c84",
+              "x": 43.1,
+              "y": 10.4,
+              "w": 30.0,
+              "h": 17.7,
+              "fill": "#ece8de",
+              "stroke": "#8f9a92",
               "sw": 0.25,
-              "dashed": true,
               "when": "open"
             },
             {
-              "type": "airflow",
-              "pts": [
-                [
-                  8.0,
-                  50
-                ],
-                [
-                  8.0,
-                  34.5
-                ]
-              ],
-              "color": "#55695f",
-              "head": 2.0,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 0,
-              "x1": 10,
-              "y": 44.2,
-              "label": "10",
+              "type": "rect",
+              "x": 73.1,
+              "y": 8.0,
+              "w": 1.9,
+              "h": 34.9,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
               "when": "open"
             },
             {
               "type": "callout",
-              "x": 1.0,
-              "y": 36.6,
-              "lx": 64,
-              "ly": 45.5,
+              "x": 60,
+              "y": 19,
+              "lx": 83,
+              "ly": 18.5,
+              "label": "抽屜",
+              "size": 0.78,
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 45,
+              "x1": 75,
+              "y": 46.6,
+              "label": "全拉 30",
+              "when": "open"
+            },
+            {
+              "type": "callout",
+              "x": 3.8,
+              "y": 33.0,
+              "lx": 83,
+              "ly": 38.5,
               "label": "插座",
               "size": 0.78
             },
             {
               "type": "callout",
-              "x": 30,
-              "y": 19,
-              "lx": 64,
-              "ly": 21,
-              "label": "抽屜",
+              "x": 9.6,
+              "y": 26.0,
+              "lx": 83,
+              "ly": 28.5,
+              "label": "走線空間",
               "size": 0.78
             },
             {
-              "type": "rect",
-              "x": 2.8,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.6,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 6.4,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 3.7,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 5.5,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "callout",
-              "x": 9.0,
-              "y": 24,
-              "lx": 64,
-              "ly": 33,
-              "label": "後方走線",
-              "size": 0.78
-            },
-            {
-              "type": "callout",
-              "x": 9.4,
-              "y": 16.6,
-              "lx": 64,
-              "ly": 9,
-              "label": "隔板缺口",
-              "size": 0.78
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
           "aria": "電視櫃中格剖面",
@@ -19113,6 +19223,12 @@
             13.1,
             43.1,
             45.0
+          ],
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
           ]
         },
         {
@@ -19121,12 +19237,12 @@
           "kind": "front",
           "detail": false,
           "labels": false,
-          "width": 45.0,
+          "width": 100.0,
           "height": 50,
           "noCeiling": true,
-          "font": 1.1,
+          "font": 2.6,
           "marginR": 1,
-          "lineScale": 0.5,
+          "lineScale": 1,
           "units": [
             {
               "ref": "end-face",
@@ -19140,7 +19256,7 @@
               "x": -4,
               "y": 0,
               "w": 4,
-              "h": 44,
+              "h": 49,
               "fill": "#efe6d6",
               "stroke": "#7f8c84",
               "sw": 0.12
@@ -19160,7 +19276,7 @@
               "x": 0,
               "y": 8.0,
               "w": 45.0,
-              "h": 30.2,
+              "h": 35.2,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.18
@@ -19170,13 +19286,13 @@
               "x": 37.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 38.2,
+              "y": 43.2,
               "w": 45.0,
               "h": 1.8,
               "fill": "#efe6d6",
@@ -19195,7 +19311,7 @@
               "x": 0,
               "y": 8.0,
               "w": 37.5,
-              "h": 30.2,
+              "h": 35.2,
               "fill": "#ece3cf",
               "stroke": "#2f443c",
               "sw": 0.15
@@ -19205,14 +19321,14 @@
               "x": 1.1,
               "y": 8.0,
               "w": 36.4,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#2d322f",
               "stroke": "none"
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 37.9,
+              "y": 42.9,
               "w": 37.5,
               "h": 0.3,
               "fill": "#8f9a92",
@@ -19223,7 +19339,7 @@
               "x": 2.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19233,7 +19349,7 @@
               "x": 5.5,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19243,7 +19359,7 @@
               "x": 8.7,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19253,7 +19369,7 @@
               "x": 11.9,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19263,7 +19379,7 @@
               "x": 15.1,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19273,7 +19389,7 @@
               "x": 18.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19283,7 +19399,7 @@
               "x": 21.5,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19293,7 +19409,7 @@
               "x": 24.7,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19303,7 +19419,7 @@
               "x": 27.9,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19313,7 +19429,7 @@
               "x": 31.1,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -19323,73 +19439,80 @@
               "x": 34.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
             },
             {
               "type": "rect",
-              "x": 2.2,
-              "y": 10.5,
-              "w": 30.7,
-              "h": 23.0,
+              "x": 0.7999999999999998,
+              "y": 22.6,
+              "w": 14.0,
+              "h": 14.0,
               "fill": "none",
               "stroke": "#c9682e",
-              "sw": 0.22,
-              "dashed": true,
-              "when": "open"
+              "sw": 0.3,
+              "dashed": true
             },
             {
               "type": "lc-flow",
-              "x": 17.1,
-              "y": 16,
+              "x": 7.8,
+              "y": 29.6,
               "dir": "out",
               "warm": true,
-              "r": 1.5,
+              "r": 1.6,
               "when": "open"
             },
             {
-              "type": "lc-flow",
-              "x": 17.1,
-              "y": 23,
-              "dir": "out",
-              "warm": true,
-              "r": 1.5,
-              "when": "open"
+              "type": "callout",
+              "x": 14.4,
+              "y": 35.6,
+              "lx": 52,
+              "ly": 30,
+              "label": "風扇",
+              "size": 0.78
             },
             {
-              "type": "lc-flow",
-              "x": 17.1,
-              "y": 30,
-              "dir": "out",
-              "warm": true,
-              "r": 1.5,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 20.5,
-              "y": 43.5,
+              "type": "callout",
+              "x": 34.4,
+              "y": 14.0,
+              "lx": 52,
+              "ly": 13.5,
               "label": "整片木格柵",
-              "size": 0.8,
-              "color": "#2f443c"
+              "size": 0.78
             },
             {
-              "type": "note",
-              "x": 20.5,
-              "y": 3.2,
-              "label": "只在風扇處開孔",
-              "size": 0.62,
-              "color": "#c9682e",
-              "when": "open"
+              "type": "clear",
+              "x0": 0,
+              "x1": 45,
+              "y": -8.84,
+              "label": "45"
+            },
+            {
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
           "stateNames": {
             "closed": "平時",
             "open": "玩遊戲"
           },
-          "aria": "電視櫃左側"
+          "aria": "電視櫃左側",
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
+          ]
         }
       ],
       "spec": [
@@ -19401,7 +19524,7 @@
         {
           "zone": "五金",
           "h": "",
-          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S（中格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14"
+          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-14\n風扇 → Noctua NF-A14 5V PWM（USB）"
         },
         {
           "zone": "喇叭",
@@ -19414,7 +19537,10 @@
       "open_questions": [
         "電視電源線能不能拔下"
       ],
-      "risks": []
+      "risks": [
+        "日後若換 LG G6 77 吋，220 的櫃子只比電視寬一點，比例略窄",
+        "翻門高 34.9：Knape & Vogt 8070PEZ-14 只收得進 25.4，收起時露出約 9.5；8070PEZ-16 收得進 30.5（露 4.4），櫃內深夠裝"
+      ]
     },
     "tv-console@console-4": {
       "object_id": "tv-console",
@@ -19435,7 +19561,7 @@
         "console": {
           "w": 230.0,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "side": 0,
           "noBack": true,
@@ -19450,7 +19576,7 @@
             },
             {
               "kind": "open",
-              "h": 30.2,
+              "h": 35.2,
               "label": ""
             },
             {
@@ -19462,7 +19588,7 @@
             {
               "kind": "drawer",
               "from": 8.0,
-              "to": 37.9,
+              "to": 42.9,
               "grip": "groove",
               "groove": 1.6,
               "leaves": [
@@ -19492,7 +19618,7 @@
         "console-endbay": {
           "w": 56.98,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "noBack": true,
           "bands": [
@@ -19509,7 +19635,7 @@
             },
             {
               "kind": "open",
-              "h": 28.4,
+              "h": 33.4,
               "label": ""
             },
             {
@@ -19521,7 +19647,7 @@
         "console-drawer": {
           "w": 49.3,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "board": 1.8,
           "noBack": true,
           "bands": [
@@ -19538,7 +19664,7 @@
             },
             {
               "kind": "open",
-              "h": 28.4,
+              "h": 33.4,
               "label": ""
             },
             {
@@ -19550,12 +19676,12 @@
         "end-face": {
           "w": 45.0,
           "d": 45.0,
-          "h": 40.0,
+          "h": 45.0,
           "noCarcass": true,
           "bands": [
             {
               "kind": "open",
-              "h": 40.0,
+              "h": 45.0,
               "label": ""
             }
           ]
@@ -19592,7 +19718,7 @@
               "pts": [
                 [
                   175.5,
-                  34.0
+                  39.0
                 ],
                 [
                   175.5,
@@ -19773,7 +19899,7 @@
               "x": 35.0,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "left"
             },
             {
@@ -19781,7 +19907,7 @@
               "x": 257.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
@@ -19799,7 +19925,7 @@
               "x": 42.5,
               "y": 9.8,
               "w": 53.975,
-              "h": 28.4,
+              "h": 33.4,
               "fill": "#ddd6c8"
             },
             {
@@ -19819,7 +19945,7 @@
               "stroke": "#2f443c",
               "when": "open",
               "x": 42.8,
-              "y": 31.8,
+              "y": 36.8,
               "w": 53.375,
               "h": 1.9,
               "fill": "#fbfaf5"
@@ -19948,10 +20074,54 @@
             },
             {
               "type": "clear",
+              "x0": 66.65,
+              "x1": 233.35,
+              "y": 161.2,
+              "label": "166.7"
+            },
+            {
+              "type": "vchain",
+              "x": 236.55,
+              "cuts": [
+                62.1,
+                157.9
+              ]
+            },
+            {
+              "type": "vchain",
+              "x": 57.15,
+              "cuts": [
+                45.0,
+                62.1
+              ]
+            },
+            {
+              "type": "clear",
+              "x0": 30.0,
+              "x1": 35.0,
+              "y": -7.5,
+              "label": "5"
+            },
+            {
+              "type": "clear",
               "x0": 35.0,
               "x1": 265.0,
-              "y": -16,
+              "y": -7.5,
               "label": "230"
+            },
+            {
+              "type": "clear",
+              "x0": 265.0,
+              "x1": 270.0,
+              "y": -7.5,
+              "label": "5"
+            },
+            {
+              "type": "clear",
+              "x0": 292.6,
+              "x1": 301.3,
+              "y": -7.5,
+              "label": "8.7"
             }
           ],
           "stateNames": {
@@ -19960,7 +20130,7 @@
           },
           "levels": [
             {
-              "y": 40,
+              "y": 45.0,
               "label": "櫃面"
             },
             {
@@ -19980,7 +20150,7 @@
           "height": 56,
           "noCeiling": true,
           "font": 4.8,
-          "marginR": 1,
+          "marginR": 4.6,
           "units": [
             {
               "ref": "console",
@@ -20002,7 +20172,7 @@
               "x": 0,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "left"
             },
             {
@@ -20010,7 +20180,7 @@
               "x": 222.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
@@ -20028,7 +20198,7 @@
               "x": 7.5,
               "y": 9.8,
               "w": 53.975,
-              "h": 28.4,
+              "h": 33.4,
               "fill": "#ddd6c8"
             },
             {
@@ -20048,7 +20218,7 @@
               "stroke": "#2f443c",
               "when": "open",
               "x": 7.8,
-              "y": 31.8,
+              "y": 36.8,
               "w": 53.375,
               "h": 1.9,
               "fill": "#fbfaf5"
@@ -20153,7 +20323,7 @@
             {
               "type": "note",
               "x": 34.49,
-              "y": 20.5,
+              "y": 24.5,
               "label": "翻門",
               "size": 0.8,
               "color": "#7f8c84",
@@ -20162,7 +20332,7 @@
             {
               "type": "note",
               "x": 88.16,
-              "y": 20.5,
+              "y": 24.5,
               "label": "抽屜",
               "size": 0.8,
               "color": "#7f8c84"
@@ -20170,7 +20340,7 @@
             {
               "type": "note",
               "x": 141.84,
-              "y": 20.5,
+              "y": 24.5,
               "label": "抽屜",
               "size": 0.8,
               "color": "#7f8c84"
@@ -20178,7 +20348,7 @@
             {
               "type": "note",
               "x": 195.51,
-              "y": 20.5,
+              "y": 24.5,
               "label": "抽屜",
               "size": 0.8,
               "color": "#7f8c84"
@@ -20197,10 +20367,30 @@
               "x": 55.9,
               "y": 24.3,
               "lx": 80,
-              "ly": 45,
+              "ly": 48.5,
               "label": "Switch 2",
               "size": 0.8,
               "when": "open"
+            },
+            {
+              "type": "vchain",
+              "x": 233.0,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "total": true,
+              "gap": 6.5,
+              "size": 0.74
+            },
+            {
+              "type": "note",
+              "x": 236.3,
+              "y": 50.5,
+              "label": "深 45",
+              "size": 0.74,
+              "color": "#a96f47"
             }
           ],
           "hcuts": [
@@ -20266,17 +20456,6 @@
             },
             {
               "type": "rect",
-              "x": 83.2,
-              "y": 35.0,
-              "w": 63.6,
-              "h": 10.0,
-              "fill": "#ddd3bf",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "dashed": true
-            },
-            {
-              "type": "rect",
               "x": 0,
               "y": 12.0,
               "w": 1.8,
@@ -20290,7 +20469,7 @@
               "x": 62.975,
               "y": 1.9,
               "w": 1.8,
-              "h": 43.1,
+              "h": 33.1,
               "fill": "#d3c4aa",
               "stroke": "none"
             },
@@ -20358,7 +20537,7 @@
             {
               "type": "rect",
               "x": 4.2,
-              "y": 14.0,
+              "y": 30.2,
               "w": 2.5,
               "h": 14.0,
               "fill": "#7b4b3a",
@@ -20397,15 +20576,15 @@
               "pts": [
                 [
                   16.5,
-                  22
+                  37.2
                 ],
                 [
                   8,
-                  22
+                  37.2
                 ],
                 [
                   -8,
-                  22
+                  37.2
                 ]
               ],
               "warm": true,
@@ -20543,7 +20722,7 @@
               "type": "callout",
               "x": 90.3,
               "y": 41.2,
-              "lx": 60.0,
+              "lx": 51.975,
               "ly": 49.4,
               "label": "網路孔",
               "size": 0.74,
@@ -20567,39 +20746,9 @@
               "y": 41.8,
               "lx": 143.5,
               "ly": 49.4,
-              "label": "電視暗管",
+              "label": "電視線（牆內）",
               "size": 0.74,
               "when": "closed"
-            },
-            {
-              "type": "note",
-              "x": 115.0,
-              "y": 35.7,
-              "label": "活動蓋板",
-              "size": 0.74,
-              "color": "#2f443c",
-              "when": "closed"
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  140.5,
-                  40.0
-                ],
-                [
-                  135.5,
-                  33.0
-                ],
-                [
-                  22.14,
-                  33.0
-                ],
-                [
-                  22.14,
-                  26.6
-                ]
-              ]
             },
             {
               "type": "device",
@@ -20649,7 +20798,7 @@
               "y": 33.4,
               "lx": 28.0,
               "ly": 49.4,
-              "label": "後方走線",
+              "label": "走線空間",
               "size": 0.74,
               "anchor": "end",
               "when": "closed"
@@ -20812,10 +20961,118 @@
             },
             {
               "type": "rect",
+              "x": 16.0,
+              "y": 41.2,
+              "w": 5.0,
+              "h": 2.9,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.4
+            },
+            {
+              "type": "rect",
+              "x": 48.0,
+              "y": 41.2,
+              "w": 5.0,
+              "h": 2.9,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.4
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  18.5,
+                  26.6
+                ],
+                [
+                  18.5,
+                  41.2
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  58.4,
+                  15.0
+                ],
+                [
+                  59.2,
+                  15.0
+                ],
+                [
+                  59.2,
+                  39.6
+                ],
+                [
+                  50.5,
+                  39.6
+                ],
+                [
+                  50.5,
+                  41.2
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  138.9,
+                  39.0
+                ],
+                [
+                  134.5,
+                  38.0
+                ],
+                [
+                  34.556,
+                  38.0
+                ],
+                [
+                  34.556,
+                  26.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  139.1,
+                  38.4
+                ],
+                [
+                  134.5,
+                  36.6
+                ],
+                [
+                  59.2,
+                  36.6
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "x": 63.875,
+              "y": 40.0,
+              "lx": 64.575,
+              "ly": 49.4,
+              "label": "過線",
+              "size": 0.74,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
               "x": 7.8,
-              "y": 0.5,
+              "y": 0,
               "w": 53.375,
-              "h": 29.9,
+              "h": 25.4,
               "fill": "none",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -20823,9 +21080,20 @@
               "when": "open"
             },
             {
+              "type": "rect",
+              "x": 7.8,
+              "y": -9.5,
+              "w": 53.375,
+              "h": 9.5,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "when": "open"
+            },
+            {
               "type": "note",
               "x": 34.487,
-              "y": -8.0,
+              "y": -6.05,
               "label": "翻門收起",
               "size": 0.74,
               "color": "#2f443c",
@@ -20858,11 +21126,11 @@
           "name": "左格剖面",
           "kind": "section",
           "ref": "console-endbay",
-          "extension": 32,
-          "labelRoom": 60,
-          "height": 48,
+          "extension": 16,
+          "labelRoom": 45,
+          "height": 50,
           "noCeiling": true,
-          "font": 2.8,
+          "font": 2.6,
           "marginL": 1.4,
           "depthLabel": "45",
           "stateNames": {
@@ -20883,14 +21151,66 @@
               "reach": 70
             },
             {
+              "type": "lc-fan",
+              "x": 0.7999999999999998,
+              "y": 22.6,
+              "s": 14.0,
+              "dashed": true
+            },
+            {
               "type": "rect",
-              "x": 15.0,
-              "y": 14.8,
-              "w": 24.0,
-              "h": 1.2,
-              "fill": "#d3c4aa",
-              "stroke": "#b9a98d",
-              "sw": 0.2
+              "x": 0,
+              "y": 17.7,
+              "w": 1.0,
+              "h": 8.6,
+              "fill": "#fff",
+              "stroke": "#a96f47",
+              "sw": 0.3
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 19.4,
+              "w": 2.8,
+              "h": 5.2,
+              "fill": "#f4f3ee",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "rx": 0.3
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  3.8,
+                  21.6
+                ],
+                [
+                  17.4,
+                  21.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  0.4,
+                  10.6
+                ],
+                [
+                  12.4,
+                  10.6
+                ],
+                [
+                  12.4,
+                  18.6
+                ],
+                [
+                  17.4,
+                  18.6
+                ]
+              ]
             },
             {
               "type": "rect",
@@ -20901,6 +21221,16 @@
               "fill": "#e9ebe7",
               "stroke": "#5b6b8a",
               "sw": 0.25
+            },
+            {
+              "type": "rect",
+              "x": 13.1,
+              "y": 14.8,
+              "w": 28.5,
+              "h": 1.2,
+              "fill": "#d3c4aa",
+              "stroke": "#b9a98d",
+              "sw": 0.2
             },
             {
               "type": "device",
@@ -20914,88 +21244,10 @@
             },
             {
               "type": "rect",
-              "x": 2.2,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.0,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 5.8,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 3.1,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.9,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "cable",
-              "pts": [
-                [
-                  6.6,
-                  11.0
-                ],
-                [
-                  12.9,
-                  11.0
-                ],
-                [
-                  12.9,
-                  18.0
-                ],
-                [
-                  17.4,
-                  18.0
-                ]
-              ]
-            },
-            {
-              "type": "lc-fan",
-              "x": 2.0,
-              "y": 12.0,
-              "s": 14,
-              "dashed": true
-            },
-            {
-              "type": "rect",
               "x": 43.1,
               "y": 8.0,
               "w": 1.9,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -21006,7 +21258,7 @@
               "x": 43.1,
               "y": 8.0,
               "w": 1.9,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "none",
               "stroke": "#b9c2bb",
               "sw": 0.25,
@@ -21015,9 +21267,9 @@
             },
             {
               "type": "rect",
-              "x": 14.6,
-              "y": 31.8,
-              "w": 29.9,
+              "x": 19.6,
+              "y": 36.8,
+              "w": 34.9,
               "h": 1.9,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
@@ -21032,52 +21284,52 @@
                   8.0
                 ],
                 [
-                  48.9,
-                  8.26
+                  49.555,
+                  8.299
                 ],
                 [
-                  52.74,
-                  9.02
+                  54.033,
+                  9.189
                 ],
                 [
-                  56.44,
-                  10.28
+                  58.356,
+                  10.657
                 ],
                 [
-                  59.95,
-                  12.01
+                  62.45,
+                  12.676
                 ],
                 [
-                  63.2,
-                  14.18
+                  66.246,
+                  15.212
                 ],
                 [
-                  66.14,
-                  16.76
+                  69.678,
+                  18.222
                 ],
                 [
-                  68.72,
-                  19.7
+                  72.688,
+                  21.654
                 ],
                 [
-                  70.89,
-                  22.95
+                  75.224,
+                  25.45
                 ],
                 [
-                  72.62,
-                  26.46
+                  77.243,
+                  29.544
                 ],
                 [
-                  73.88,
-                  30.16
+                  78.711,
+                  33.867
                 ],
                 [
-                  74.64,
-                  34.0
+                  79.601,
+                  38.345
                 ],
                 [
-                  74.9,
-                  37.9
+                  79.9,
+                  42.9
                 ]
               ],
               "when": "open"
@@ -21086,11 +21338,11 @@
               "type": "airflow",
               "pts": [
                 [
-                  78,
+                  90,
                   20
                 ],
                 [
-                  40.2,
+                  46.5,
                   20
                 ]
               ],
@@ -21098,62 +21350,80 @@
               "head": 1.8
             },
             {
-              "type": "airflow",
-              "pts": [
-                [
-                  17.2,
-                  20
-                ],
-                [
-                  10.5,
-                  19.0
-                ]
-              ],
-              "warm": true,
-              "when": "open",
-              "head": 1.6
-            },
-            {
               "type": "lc-flow",
-              "x": 9.0,
-              "y": 19.0,
-              "dir": "out",
+              "x": 7.8,
+              "y": 29.6,
+              "dir": "in",
               "warm": true,
-              "r": 2.0,
+              "r": 1.6,
               "when": "open"
             },
             {
               "type": "callout",
               "x": 36.0,
               "y": 11.4,
-              "lx": 80,
-              "ly": 12.5,
+              "lx": 83,
+              "ly": 11.5,
               "label": "網路設備",
               "size": 0.78,
               "color": "#5b6b8a"
             },
             {
               "type": "callout",
+              "x": 14.2,
+              "y": 31.4,
+              "lx": 83,
+              "ly": 28.5,
+              "label": "風扇",
+              "size": 0.78
+            },
+            {
+              "type": "callout",
               "x": 44.0,
-              "y": 26,
-              "lx": 80,
-              "ly": 30,
+              "y": 36,
+              "lx": 83,
+              "ly": 38.5,
               "label": "翻門",
               "size": 0.78,
               "when": "closed"
             },
             {
               "type": "callout",
-              "x": 30.0,
-              "y": 33.2,
-              "lx": 80,
-              "ly": 39,
+              "x": 52.0,
+              "y": 37.7,
+              "lx": 83,
+              "ly": 41.5,
               "label": "翻門收起",
               "size": 0.78,
               "when": "open"
+            },
+            {
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                16,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
-          "aria": "電視櫃左格剖面"
+          "aria": "電視櫃左格剖面",
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
+          ],
+          "depthCuts": [
+            0,
+            13.1,
+            43.1,
+            45.0
+          ]
         },
         {
           "id": "section-mid",
@@ -21161,15 +21431,15 @@
           "kind": "section",
           "ref": "console-drawer",
           "extension": 16,
-          "labelRoom": 64,
-          "height": 56,
+          "labelRoom": 45,
+          "height": 50,
           "noCeiling": true,
-          "font": 2.65,
+          "font": 2.6,
           "marginL": 1.4,
           "depthLabel": "45",
           "stateNames": {
-            "closed": "蓋上",
-            "open": "拿開蓋板"
+            "closed": "平時",
+            "open": "拉出抽屜"
           },
           "extras": [
             {
@@ -21185,40 +21455,22 @@
               "reach": 56
             },
             {
-              "type": "rect",
-              "x": 0,
-              "y": 9.8,
-              "w": 10.0,
-              "h": 8.0,
-              "fill": "#f7f4ec",
-              "stroke": "#8f9a92",
-              "sw": 0.25,
-              "dashed": true
-            },
-            {
-              "type": "rect",
-              "x": 13.1,
-              "y": 10.4,
-              "w": 30.0,
-              "h": 17.7,
-              "fill": "#ece8de",
-              "stroke": "#8f9a92",
-              "sw": 0.25
-            },
-            {
-              "type": "rect",
-              "x": 43.1,
-              "y": 8.0,
-              "w": 1.9,
-              "h": 29.9,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.3
+              "type": "conduit",
+              "pts": [
+                [
+                  -2.0,
+                  52.0
+                ],
+                [
+                  -2.0,
+                  40.0
+                ]
+              ]
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 28.9,
+              "y": 28.7,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -21228,7 +21480,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 30.3,
+              "y": 30.4,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -21240,157 +21492,141 @@
               "type": "cable",
               "pts": [
                 [
-                  2.4,
-                  30.3
+                  -2.0,
+                  40.6
                 ],
                 [
                   2.4,
-                  13.0
+                  40.6
+                ],
+                [
+                  2.4,
+                  35.6
+                ]
+              ]
+            },
+            {
+              "type": "cable",
+              "pts": [
+                [
+                  -2.0,
+                  39.6
+                ],
+                [
+                  6.4,
+                  39.6
+                ],
+                [
+                  6.4,
+                  10.6
+                ],
+                [
+                  9.6,
+                  10.6
                 ]
               ]
             },
             {
               "type": "rect",
-              "x": 0,
-              "y": 38.2,
-              "w": 10,
-              "h": 1.8,
-              "fill": "#e2d5bd",
+              "x": 13.1,
+              "y": 10.4,
+              "w": 30.0,
+              "h": 17.7,
+              "fill": "#ece8de",
+              "stroke": "#8f9a92",
+              "sw": 0.25,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 43.1,
+              "y": 8.0,
+              "w": 1.9,
+              "h": 34.9,
+              "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
               "when": "closed"
             },
             {
-              "type": "rect",
-              "x": 0,
-              "y": 38.2,
-              "w": 10,
-              "h": 1.8,
-              "fill": "#fff",
-              "stroke": "none",
-              "when": "open"
+              "type": "callout",
+              "x": 30,
+              "y": 19,
+              "lx": 83,
+              "ly": 18.5,
+              "label": "抽屜",
+              "size": 0.78,
+              "when": "closed"
             },
             {
               "type": "rect",
-              "x": 0,
-              "y": 51.0,
-              "w": 10,
-              "h": 1.8,
-              "fill": "none",
-              "stroke": "#7f8c84",
+              "x": 43.1,
+              "y": 10.4,
+              "w": 30.0,
+              "h": 17.7,
+              "fill": "#ece8de",
+              "stroke": "#8f9a92",
               "sw": 0.25,
-              "dashed": true,
               "when": "open"
             },
             {
-              "type": "airflow",
-              "pts": [
-                [
-                  8.0,
-                  50
-                ],
-                [
-                  8.0,
-                  34.5
-                ]
-              ],
-              "color": "#55695f",
-              "head": 2.0,
-              "when": "open"
-            },
-            {
-              "type": "clear",
-              "x0": 0,
-              "x1": 10,
-              "y": 44.2,
-              "label": "10",
+              "type": "rect",
+              "x": 73.1,
+              "y": 8.0,
+              "w": 1.9,
+              "h": 34.9,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.3,
               "when": "open"
             },
             {
               "type": "callout",
-              "x": 1.0,
-              "y": 36.6,
-              "lx": 64,
-              "ly": 45.5,
+              "x": 60,
+              "y": 19,
+              "lx": 83,
+              "ly": 18.5,
+              "label": "抽屜",
+              "size": 0.78,
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 45,
+              "x1": 75,
+              "y": 46.6,
+              "label": "全拉 30",
+              "when": "open"
+            },
+            {
+              "type": "callout",
+              "x": 3.8,
+              "y": 33.0,
+              "lx": 83,
+              "ly": 38.5,
               "label": "插座",
               "size": 0.78
             },
             {
               "type": "callout",
-              "x": 30,
-              "y": 19,
-              "lx": 64,
-              "ly": 21,
-              "label": "抽屜",
+              "x": 9.6,
+              "y": 26.0,
+              "lx": 83,
+              "ly": 28.5,
+              "label": "走線空間",
               "size": 0.78
             },
             {
-              "type": "rect",
-              "x": 2.8,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 4.6,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 6.4,
-              "y": 9.8,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 3.7,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "rect",
-              "x": 5.5,
-              "y": 11.4,
-              "w": 1.6,
-              "h": 1.6,
-              "fill": "#4b5751",
-              "stroke": "none",
-              "rx": 0.8
-            },
-            {
-              "type": "callout",
-              "x": 9.0,
-              "y": 24,
-              "lx": 64,
-              "ly": 33,
-              "label": "後方走線",
-              "size": 0.78
-            },
-            {
-              "type": "callout",
-              "x": 9.4,
-              "y": 16.6,
-              "lx": 64,
-              "ly": 9,
-              "label": "隔板缺口",
-              "size": 0.78
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
           "aria": "電視櫃中格剖面",
@@ -21399,6 +21635,12 @@
             13.1,
             43.1,
             45.0
+          ],
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
           ]
         },
         {
@@ -21407,12 +21649,12 @@
           "kind": "front",
           "detail": false,
           "labels": false,
-          "width": 45.0,
+          "width": 100.0,
           "height": 50,
           "noCeiling": true,
-          "font": 1.1,
+          "font": 2.6,
           "marginR": 1,
-          "lineScale": 0.5,
+          "lineScale": 1,
           "units": [
             {
               "ref": "end-face",
@@ -21426,7 +21668,7 @@
               "x": -4,
               "y": 0,
               "w": 4,
-              "h": 44,
+              "h": 49,
               "fill": "#efe6d6",
               "stroke": "#7f8c84",
               "sw": 0.12
@@ -21446,7 +21688,7 @@
               "x": 0,
               "y": 8.0,
               "w": 45.0,
-              "h": 30.2,
+              "h": 35.2,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.18
@@ -21456,13 +21698,13 @@
               "x": 37.5,
               "y": 8.0,
               "w": 7.5,
-              "h": 30.2,
+              "h": 35.2,
               "side": "right"
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 38.2,
+              "y": 43.2,
               "w": 45.0,
               "h": 1.8,
               "fill": "#efe6d6",
@@ -21481,7 +21723,7 @@
               "x": 0,
               "y": 8.0,
               "w": 37.5,
-              "h": 30.2,
+              "h": 35.2,
               "fill": "#ece3cf",
               "stroke": "#2f443c",
               "sw": 0.15
@@ -21491,14 +21733,14 @@
               "x": 1.1,
               "y": 8.0,
               "w": 36.4,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#2d322f",
               "stroke": "none"
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 37.9,
+              "y": 42.9,
               "w": 37.5,
               "h": 0.3,
               "fill": "#8f9a92",
@@ -21509,7 +21751,7 @@
               "x": 2.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21519,7 +21761,7 @@
               "x": 5.5,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21529,7 +21771,7 @@
               "x": 8.7,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21539,7 +21781,7 @@
               "x": 11.9,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21549,7 +21791,7 @@
               "x": 15.1,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21559,7 +21801,7 @@
               "x": 18.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21569,7 +21811,7 @@
               "x": 21.5,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21579,7 +21821,7 @@
               "x": 24.7,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21589,7 +21831,7 @@
               "x": 27.9,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21599,7 +21841,7 @@
               "x": 31.1,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
@@ -21609,73 +21851,80 @@
               "x": 34.3,
               "y": 8.0,
               "w": 2.0,
-              "h": 29.9,
+              "h": 34.9,
               "fill": "#e3d6bb",
               "stroke": "#c4b08c",
               "sw": 0.06
             },
             {
               "type": "rect",
-              "x": 2.2,
-              "y": 10.5,
-              "w": 30.7,
-              "h": 23.0,
+              "x": 0.7999999999999998,
+              "y": 22.6,
+              "w": 14.0,
+              "h": 14.0,
               "fill": "none",
               "stroke": "#c9682e",
-              "sw": 0.22,
-              "dashed": true,
-              "when": "open"
+              "sw": 0.3,
+              "dashed": true
             },
             {
               "type": "lc-flow",
-              "x": 17.1,
-              "y": 16,
+              "x": 7.8,
+              "y": 29.6,
               "dir": "out",
               "warm": true,
-              "r": 1.5,
+              "r": 1.6,
               "when": "open"
             },
             {
-              "type": "lc-flow",
-              "x": 17.1,
-              "y": 23,
-              "dir": "out",
-              "warm": true,
-              "r": 1.5,
-              "when": "open"
+              "type": "callout",
+              "x": 14.4,
+              "y": 35.6,
+              "lx": 52,
+              "ly": 30,
+              "label": "風扇",
+              "size": 0.78
             },
             {
-              "type": "lc-flow",
-              "x": 17.1,
-              "y": 30,
-              "dir": "out",
-              "warm": true,
-              "r": 1.5,
-              "when": "open"
-            },
-            {
-              "type": "note",
-              "x": 20.5,
-              "y": 43.5,
+              "type": "callout",
+              "x": 34.4,
+              "y": 14.0,
+              "lx": 52,
+              "ly": 13.5,
               "label": "整片木格柵",
-              "size": 0.8,
-              "color": "#2f443c"
+              "size": 0.78
             },
             {
-              "type": "note",
-              "x": 20.5,
-              "y": 3.2,
-              "label": "只在風扇處開孔",
-              "size": 0.62,
-              "color": "#c9682e",
-              "when": "open"
+              "type": "clear",
+              "x0": 0,
+              "x1": 45,
+              "y": -8.84,
+              "label": "45"
+            },
+            {
+              "type": "vchain",
+              "x": -7,
+              "cuts": [
+                0,
+                8,
+                45.0
+              ],
+              "side": "left",
+              "total": true,
+              "size": 0.74
             }
           ],
           "stateNames": {
             "closed": "平時",
             "open": "玩遊戲"
           },
-          "aria": "電視櫃左側"
+          "aria": "電視櫃左側",
+          "frame": [
+            -20,
+            -12,
+            100,
+            50
+          ]
         }
       ],
       "spec": [
@@ -21687,7 +21936,7 @@
         {
           "zone": "五金",
           "h": "",
-          "note": "抽屜 → Blum LEGRABOX pure C 高，BLUMOTION S 緩衝，指槽開；滑軌 750.3001S × 2（中間兩格 NL 300）、750.4001S（右格 NL 400），40 kg\n分隔 → AMBIA-LINE 框 ZC7S300RSU＋橫隔 ZC7Q0U0SH＋agoform 止滑墊\n翻門 → Knape & Vogt 8070PEZ-14"
+          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中間兩格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-14\n風扇 → Noctua NF-A14 5V PWM（USB）"
         },
         {
           "zone": "喇叭",
@@ -21700,7 +21949,9 @@
       "open_questions": [
         "電視電源線能不能拔下"
       ],
-      "risks": []
+      "risks": [
+        "翻門高 34.9：Knape & Vogt 8070PEZ-14 只收得進 25.4，收起時露出約 9.5；8070PEZ-16 收得進 30.5（露 4.4），櫃內深夠裝"
+      ]
     }
   },
   "layouts": [
@@ -22712,7 +22963,7 @@
         "place": "電視櫃左端格背牆",
         "mount": 22,
         "name": "插座 · 電視櫃左端格",
-        "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 17.5–61.5\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給 CONTROLLER 1 與風扇",
+        "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 17.5–61.5\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給風扇",
         "use": "電視櫃"
       }
     ],
