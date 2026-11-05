@@ -1637,7 +1637,7 @@
       "height_cm": 45,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-14; door conceal 25.4 per the KV sheet, so 9.5 stays out when stowed - 8070PEZ-16 hides 30.5), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). No cable lid: the top is one board; TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch; socket access = pull the drawer out. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
+      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-16; door conceal 30.5 per the KV sheet, 4.4 stays out when stowed), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). No cable lid: the top is one board; TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch; socket access = pull the drawer out. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
@@ -5426,7 +5426,7 @@
             },
             {
               "label": "五金",
-              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
+              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-16",
               "object": "tv-console"
             },
             {
@@ -5485,7 +5485,7 @@
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
             "中格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
-            "左側風扇：Noctua NF-A14 5V PWM＋溫控"
+            "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         }
       },
@@ -5597,7 +5597,7 @@
             },
             {
               "label": "五金",
-              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
+              "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-16",
               "object": "tv-console"
             },
             {
@@ -5656,7 +5656,7 @@
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
             "中間兩格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
-            "左側風扇：Noctua NF-A14 5V PWM＋溫控"
+            "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         },
         "objectOverrides": {
@@ -18427,8 +18427,8 @@
             },
             {
               "type": "callout",
-              "x": 66.0,
-              "y": 33.4,
+              "x": 55.533,
+              "y": 37.0,
               "lx": 36.0,
               "ly": 49.4,
               "label": "走線空間",
@@ -18662,7 +18662,7 @@
               "x": 7.8,
               "y": 0,
               "w": 67.933,
-              "h": 25.4,
+              "h": 30.5,
               "fill": "none",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -18672,9 +18672,9 @@
             {
               "type": "rect",
               "x": 7.8,
-              "y": -9.5,
+              "y": -4.4,
               "w": 67.933,
-              "h": 9.5,
+              "h": 4.4,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -18683,7 +18683,7 @@
             {
               "type": "note",
               "x": 41.767,
-              "y": -6.05,
+              "y": -8.6,
               "label": "翻門收起",
               "size": 0.74,
               "color": "#2f443c",
@@ -18748,7 +18748,7 @@
             {
               "type": "rect",
               "x": 0,
-              "y": 17.7,
+              "y": 13.7,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -18758,7 +18758,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 19.4,
+              "y": 15.4,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -18771,11 +18771,11 @@
               "pts": [
                 [
                   3.8,
-                  21.6
+                  18.0
                 ],
                 [
                   17.4,
-                  21.6
+                  18.0
                 ]
               ]
             },
@@ -18792,11 +18792,11 @@
                 ],
                 [
                   12.4,
-                  18.6
+                  22.0
                 ],
                 [
                   17.4,
-                  18.6
+                  22.0
                 ]
               ]
             },
@@ -18855,7 +18855,7 @@
             },
             {
               "type": "rect",
-              "x": 19.6,
+              "x": 14.5,
               "y": 36.8,
               "w": 34.9,
               "h": 1.9,
@@ -18977,7 +18977,7 @@
             },
             {
               "type": "callout",
-              "x": 52.0,
+              "x": 47.0,
               "y": 37.7,
               "lx": 83,
               "ly": 41.5,
@@ -19524,7 +19524,7 @@
         {
           "zone": "五金",
           "h": "",
-          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-14\n風扇 → Noctua NF-A14 5V PWM（USB）"
+          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-16\n風扇 → Noctua NF-A14 5V PWM（USB）"
         },
         {
           "zone": "喇叭",
@@ -19538,8 +19538,7 @@
         "電視電源線能不能拔下"
       ],
       "risks": [
-        "日後若換 LG G6 77 吋，220 的櫃子只比電視寬一點，比例略窄",
-        "翻門高 34.9：Knape & Vogt 8070PEZ-14 只收得進 25.4，收起時露出約 9.5；8070PEZ-16 收得進 30.5（露 4.4），櫃內深夠裝"
+        "日後若換 LG G6 77 吋，220 的櫃子只比電視寬一點，比例略窄"
       ]
     },
     "tv-console@console-4": {
@@ -20794,8 +20793,8 @@
             },
             {
               "type": "callout",
-              "x": 56.0,
-              "y": 33.4,
+              "x": 40.975,
+              "y": 37.0,
               "lx": 28.0,
               "ly": 49.4,
               "label": "走線空間",
@@ -21072,7 +21071,7 @@
               "x": 7.8,
               "y": 0,
               "w": 53.375,
-              "h": 25.4,
+              "h": 30.5,
               "fill": "none",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -21082,9 +21081,9 @@
             {
               "type": "rect",
               "x": 7.8,
-              "y": -9.5,
+              "y": -4.4,
               "w": 53.375,
-              "h": 9.5,
+              "h": 4.4,
               "fill": "#fbfaf5",
               "stroke": "#2f443c",
               "sw": 0.3,
@@ -21093,7 +21092,7 @@
             {
               "type": "note",
               "x": 34.487,
-              "y": -6.05,
+              "y": -8.6,
               "label": "翻門收起",
               "size": 0.74,
               "color": "#2f443c",
@@ -21160,7 +21159,7 @@
             {
               "type": "rect",
               "x": 0,
-              "y": 17.7,
+              "y": 13.7,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -21170,7 +21169,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 19.4,
+              "y": 15.4,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -21183,11 +21182,11 @@
               "pts": [
                 [
                   3.8,
-                  21.6
+                  18.0
                 ],
                 [
                   17.4,
-                  21.6
+                  18.0
                 ]
               ]
             },
@@ -21204,11 +21203,11 @@
                 ],
                 [
                   12.4,
-                  18.6
+                  22.0
                 ],
                 [
                   17.4,
-                  18.6
+                  22.0
                 ]
               ]
             },
@@ -21267,7 +21266,7 @@
             },
             {
               "type": "rect",
-              "x": 19.6,
+              "x": 14.5,
               "y": 36.8,
               "w": 34.9,
               "h": 1.9,
@@ -21389,7 +21388,7 @@
             },
             {
               "type": "callout",
-              "x": 52.0,
+              "x": 47.0,
               "y": 37.7,
               "lx": 83,
               "ly": 41.5,
@@ -21936,7 +21935,7 @@
         {
           "zone": "五金",
           "h": "",
-          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中間兩格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-14\n風扇 → Noctua NF-A14 5V PWM（USB）"
+          "note": "抽屜 → Blum LEGRABOX pure C 高＋BLUMOTION（中間兩格 NL 300、右格 NL 400）\n分隔 → Blum AMBIA-LINE\n翻門 → Knape & Vogt 8070PEZ-16\n風扇 → Noctua NF-A14 5V PWM（USB）"
         },
         {
           "zone": "喇叭",
@@ -21949,9 +21948,7 @@
       "open_questions": [
         "電視電源線能不能拔下"
       ],
-      "risks": [
-        "翻門高 34.9：Knape & Vogt 8070PEZ-14 只收得進 25.4，收起時露出約 9.5；8070PEZ-16 收得進 30.5（露 4.4），櫃內深夠裝"
-      ]
+      "risks": []
     }
   },
   "layouts": [
@@ -22961,7 +22958,7 @@
         "x": 584.0,
         "y": 197.01,
         "place": "電視櫃左端格背牆",
-        "mount": 22,
+        "mount": 18,
         "name": "插座 · 電視櫃左端格",
         "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 17.5–61.5\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給風扇",
         "use": "電視櫃"
@@ -24554,7 +24551,7 @@
     }
   },
   "links": {
-    "Knape & Vogt 8070PEZ-14": {
+    "Knape & Vogt 8070PEZ-16": {
       "youtube": "https://www.youtube.com/watch?v=Pctzar1EpA8"
     }
   }
