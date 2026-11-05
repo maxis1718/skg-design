@@ -209,16 +209,12 @@ details>summary{font-size:15px}
 .rc-done .todo-item{font-size:13px}
 .rc-watch .elev-risk-callout{margin:0}.rc-watch h4.elev-risk-title{font-size:16px}.rc-watch .elev-risks li{font-size:15px;line-height:1.6}
 /* 配置: compact, quiet one-line rows; 建議 stands out */
-.rc-item{display:grid;grid-template-columns:4.2em minmax(0,1fr) auto;gap:10px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:5px 2px;color:#525f4c;font-size:13px;line-height:1.4;border-radius:0}
+.rc-item{display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:10px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:5px 2px;color:#525f4c;font-size:13px;line-height:1.4;border-radius:0}
 .rc-items li:first-child .rc-item{border-top:0}
 button.rc-item:hover{background:var(--wash);filter:none}
 .rc-label{color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
 .rc-value{min-width:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
 .rc-elev{margin-left:6px;font-size:11.5px;color:var(--teal);border-bottom:1px solid #acbaa4}
-.rc-chip{font-size:11px;line-height:1;padding:3px 0;white-space:nowrap}
-.rc-chip.is-decided{color:var(--teal);opacity:.75}
-.rc-chip.is-suggested{background:#c0682c;color:#fff;padding:4px 8px;border-radius:9px;font-weight:600}
-.rc-item:has(.is-suggested){color:var(--ink)}
 .rc-clear ul{display:flex;flex-wrap:wrap;gap:8px}
 .rc-clear li{display:flex;align-items:baseline;gap:8px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 9px;font-size:13px}
 .rc-clear li span{color:var(--muted)}.rc-clear li b{font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent)}
@@ -266,7 +262,7 @@ button.rc-pt:hover{background:var(--wash);filter:none}
  .obj-card{padding:22px 26px}
 }
 @media print{.room-card,.obj-card,.home-room{break-inside:avoid;box-shadow:none}}
-html[lang=en] .rc-item{grid-template-columns:6.6em minmax(0,1fr) auto}
+html[lang=en] .rc-item{grid-template-columns:6.6em minmax(0,1fr)}
 
 /* R73 ☑ todo panel */
 .todo-btn{position:relative}.todo-badge{position:absolute;top:-6px;right:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:#8a5a2b;color:#fff;font-size:10px;line-height:16px;font-weight:600}.todo-badge:empty{display:none}

@@ -841,18 +841,15 @@
           {
             "label": "衣櫃",
             "value": "120 × 60 · 原有",
-            "status": "定",
             "object": "kid-wardrobe"
           },
           {
             "label": "床",
-            "value": "位置與尺寸待定",
-            "status": "建議"
+            "value": "位置與尺寸待定"
           },
           {
             "label": "風扇清淨機",
             "value": "Dyson Purifier Cool Formaldehyde TP09",
-            "status": "定",
             "object": "kid-fan"
           }
         ],
@@ -1023,49 +1020,38 @@
       "focus": "收納床台、床頭電源、壁扇與床尾吊櫃",
       "elevation": "helper-wall",
       "plan": {
-        "watch": [
-          "窗外是冷氣平台 → 外機不要正對窗，避免熱風與噪音進房",
-          "床尾蓋掀起貼近窗 → 窗扇若卡到，撐桿限位開角"
-        ],
         "items": [
           {
             "label": "收納床台",
             "value": "107 × 205 × 38 · 上掀蓋 ×3",
-            "status": "定",
             "object": "helper-bed"
           },
           {
             "label": "床墊",
-            "value": "三折 107 × 190 × 10",
-            "status": "建議"
+            "value": "三折 107 × 190 × 10"
           },
           {
             "label": "壁扇",
             "value": "Mistral MWF1454DR-G 14 吋 DC",
-            "status": "定",
             "object": "helper-fan"
           },
           {
             "label": "吸頂燈",
-            "value": "IKEA BARLAST 25 cm 2700K",
-            "status": "定"
+            "value": "IKEA BARLAST 25 cm 2700K"
           },
           {
             "label": "閱讀壁燈",
             "value": "IKEA NYMÅNE＋SOLHETTA GU10 2700K",
-            "status": "定",
             "object": "helper-reading-lamp"
           },
           {
             "label": "床尾吊櫃",
             "value": "55 × 30 × 40 · 底 165",
-            "status": "定",
             "object": "helper-wall-cabinet"
           },
           {
             "label": "鏡子＋掛鉤",
             "value": "鏡 30 × 45 · 掛鉤 ×3 離地 160",
-            "status": "定",
             "object": "helper-mirror"
           }
         ],
@@ -1077,22 +1063,15 @@
           {
             "label": "站床上頭頂到吸頂燈",
             "value": "20"
-          },
-          {
-            "label": "門洞取物寬",
-            "value": "80"
           }
         ],
         "build": [
-          "床台牆到牆，牆凹 5 用封板補平，床頭固定段 15",
-          "三片上掀蓋鉸鍊在靠牆側，每片 2 支緩降撐桿，蓋下加橫肋",
-          "封板頂低 2 做手扣槽；不裝把手、不用按壓回彈",
-          "底板架高 2 通風，蓋子開通風孔",
+          "床台牆到牆，床頭固定段 15",
+          "三片上掀蓋鉸鍊在靠牆側，緩降撐桿；手扣槽開蓋，不裝把手",
           "床側牆是掀蓋翻轉範圍，牆上不裝任何東西",
-          "壁扇與吊櫃用膨脹螺絲鎖進牆體，不鎖石膏板",
-          "床頭牆離地 100 留閱讀壁燈出線盒，接 SW-11 左鍵",
-          "床頭牆開槽前先確認牆內與管道間無管線",
-          "窗做框內捲簾，不做窗簾盒；門下留 1.5 通風縫"
+          "床頭牆離地 100 留閱讀壁燈出線，接 SW-11 左鍵",
+          "窗做框內捲簾，不做窗簾盒；門下留 1.5 通風縫",
+          "冷氣外機不要正對女傭房窗"
         ]
       }
     },
@@ -1192,15 +1171,10 @@
       "number": "08",
       "focus": "洗手台與鏡櫃、淋浴間",
       "plan": {
-        "watch": [
-          "龍頭頂要低於鏡門下緣 115 → 現有龍頭較高就抬高櫃底",
-          "天花 240 與檢修口未確認 → 櫃頂 237，收邊 3 現場修"
-        ],
         "items": [
           {
             "label": "鏡櫃",
             "value": "197.7 寬 · 深 19 · 115–237，3 門或 5 門",
-            "status": "建議",
             "object": "bath1-mirror-cabinet"
           }
         ],
@@ -1211,7 +1185,7 @@
           }
         ],
         "build": [
-          "浴室迴路 30 mA RCD，插座位置依 SS 638"
+          "浴室迴路 30 mA RCD"
         ]
       }
     },
@@ -1322,21 +1296,15 @@
       "number": "09",
       "focus": "整面鏡櫃與洗手台、淋浴間",
       "plan": {
-        "watch": [
-          "馬桶矮台的沖水面板與檢修口 → 鏡櫃底 115 要避開",
-          "龍頭頂要低於鏡門下緣 115 → 較高就抬高櫃底"
-        ],
         "items": [
           {
             "label": "整面鏡櫃",
             "value": "169.8 寬 · 深 19 · 115–237，4 門",
-            "status": "建議",
             "object": "bath2-mirror-cabinet"
           },
           {
             "label": "臉盆",
-            "value": "尺寸與位置待定",
-            "status": "建議"
+            "value": "尺寸與位置待定"
           }
         ],
         "clearances": [
@@ -1351,7 +1319,7 @@
         ],
         "build": [
           "門做 laminate 實心平開門，向浴室內開",
-          "浴室迴路 30 mA RCD，插座位置依 SS 638"
+          "浴室迴路 30 mA RCD"
         ]
       }
     },
@@ -1458,33 +1426,29 @@
       "focus": "收納櫃、曬衣架與鞦韆吊點",
       "plan": {
         "watch": [
-          "端牆淨長約 105＝櫃寬 → 進場先量，再定櫃與拖地機位置",
-          "陽台中間吊扇可能碰到曬衣與鞦韆擺幅 → 定吊點前量扇葉外緣，各留 ≥ 30",
+          "端牆淨長約 105，與收納櫃同寬，零餘裕",
+          "吊扇要避開曬衣與鞦韆擺幅，各留 ≥ 30",
           "曬衣架是室內款 → 機身避開雨線"
         ],
         "items": [
           {
             "label": "收納櫃",
             "value": "105 × 65 × 104.5",
-            "status": "定",
             "object": "balcony-cabinet"
           },
           {
             "label": "拖地機",
             "value": "35 × 35 · Dreame H14 Ultra",
-            "status": "定",
             "object": "robot-vacuum"
           },
           {
             "label": "曬衣架",
             "value": "YU HOME SMARTLUX LITE 113 × 40 · 重選中",
-            "status": "建議",
             "object": "drying-rack"
           },
           {
             "label": "鞦韆",
             "value": "天花吊點 × 2，間距 48",
-            "status": "建議",
             "object": "swing-hooks"
           }
         ],
@@ -2012,7 +1976,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "・Nespresso Essenza Mini C 8.4 × 33 × 20.4\n・離冰箱側 5、離玻璃 8，後方留線孔",
+      "source_note": "Nespresso Essenza Mini C 8.4 × 33 × 20.4",
       "provenance_note": "Reference model only, not purchased. Dims from https://www.nespresso.com/ae/en/coffee-machines/original/essenza-mini-c (84 x 330 x 204 mm W x D x H). Placed 5 cm from the fridge-side end, 8 cm off the glass (Ø6 grommet behind it).",
       "status": "user-design",
       "onlyLayouts": [
@@ -2048,7 +2012,7 @@
         "brand": "Wells",
         "model": "The One（白）"
       },
-      "source_note": "Wells The One（白）：龍頭 Ø8.8 × 33.7，開孔 Ø3.8\n主機 18 × 35.2 × 32.5 放下方主機櫃",
+      "source_note": "Wells The One（白）：龍頭 Ø8.8 × 33.7\n主機 18 × 35.2 × 32.5 放下方主機櫃",
       "provenance_note": "User-chosen product; dims from https://wellsmalaysia.com/water-dispenser/wells-the-one/ (faucet 88 dia x 337 mm; body 180 W x 352 D x 325 H mm, 19 kg; 38 mm hole). HK listing https://hkele.com.hk/en/WELLS/THE-ONE-DB gives body 180 x 325 x 335 and a 35 mm hole, requires water inlet + drain and a dedicated socket near the main unit. Outlet height is not published. Placed 2026-10-17 at 38 cm from the fridge-side end so the outlet and pot zone sit over the main-unit cabinet (user request). Spout reach not published; drawn facing forward.",
       "status": "user-design",
       "onlyLayouts": [
@@ -2196,7 +2160,7 @@
       "notes": "Wall cabinet 55 W x 30 D x 40 H on the south wall, underside 165, against the east wall; the 52 on the window side is left for the wall fan and the curtain. The foot lid sweep stays below about 132 under it; seated head at the foot about 133.",
       "physical_drawing_indices": [],
       "name": "女傭房床尾吊櫃",
-      "source_note": "55 × 30 × 40，底 165，雙開門\n靠門側牆，靠窗側留給壁扇",
+      "source_note": "55 × 30 × 40，底 165，雙開門",
       "dimensions": {
         "w": {
           "cm": 55,
@@ -2744,7 +2708,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "Brandt BPI2638UB 58 × 51 · 開孔 56 × 49\n備選 Brandt BPI6603B 59 × 52",
+      "source_note": "Brandt BPI2638UB 58 × 51\n備選 Brandt BPI6603B 59 × 52",
       "status": "scaled-symbol"
     },
     {
@@ -2810,7 +2774,7 @@
         "brand": "Samsung",
         "model": "Bespoke AI Freestanding Dishwasher（SG：DW60CB750FAPSP，待確認）"
       },
-      "source_note": "・Samsung Bespoke AI 獨立式\n・開口 60，兩側 1.8 側板，整格 63.6",
+      "source_note": "Samsung Bespoke AI 獨立式",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink",
@@ -3962,7 +3926,7 @@
         "brand": "Electrolux",
         "model": "UltimateHome 300"
       },
-      "source_note": "離鋼琴、牆、過道角各 10",
+      "source_note": "",
       "status": "user-design",
       "notes": "R85 (owner decision): moved from the east wall into the 43.6 alcove between the piano east side (x540.84) and the entry-passage corner (x553.2), backed by the south wall: 10 to the piano, 10 to the wall, 10 to the passage-corner line; front 33.4 from the wall (piano 61), so it stays out of the walking line. Narrowest point of the entry->sofa path = purifier NE corner to the KC62: scheme A 87.4 / B 85.4; passage corner to the KC62: A 92.9 / B 87.3 (R89: KEF stands and KC62 pushed toward the wall)."
     },
@@ -4951,7 +4915,7 @@
                 "status": "design"
               }
             },
-            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式\n開孔 59.5 × 49，置中於 71.9 櫃"
+            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式"
           },
           "kitchen-hob": {
             "bounds_pt": [
@@ -4970,7 +4934,7 @@
                 "status": "design"
               }
             },
-            "source_note": "Brandt BPI2638UB 58 × 51 · 開孔 56 × 49\n備選 Brandt BPI6603B 59 × 52"
+            "source_note": "Brandt BPI2638UB 58 × 51\n備選 Brandt BPI6603B 59 × 52"
           },
           "appliance-tower": {
             "bounds_pt": [
@@ -4987,96 +4951,75 @@
             {
               "label": "Wet kitchen",
               "value": "320.5 · 岩板，面 90、厚 3",
-              "status": "定",
               "object": "kitchen-lower-worktop"
             },
             {
               "label": "門板",
-              "value": "白色細木紋霧面 laminate · 無把手",
-              "status": "定"
+              "value": "白色細木紋霧面 laminate · 無把手"
             },
             {
               "label": "爐具",
               "value": "58 × 51 · Brandt BPI2638UB",
-              "status": "建議",
               "object": "kitchen-hob"
             },
             {
               "label": "爐下櫃",
               "value": "80 · 餐具抽屜＋現有嵌入式烤箱",
-              "status": "定",
               "object": "kitchen-oven"
             },
             {
               "label": "窄拉籃",
               "value": "20 × 2",
-              "status": "定",
               "object": "spice-pullout"
             },
             {
               "label": "洗碗機",
               "value": "63.6 格 · Samsung Bespoke AI Freestanding Dishwasher",
-              "status": "定",
               "object": "dishwasher"
             },
             {
               "label": "水槽",
               "value": "櫃 71.9 · BLANCO PLEON 6",
-              "status": "建議",
               "object": "kitchen-sink"
             },
             {
               "label": "電器櫃",
               "value": "60 × 65 到天花",
-              "status": "定",
               "object": "appliance-tower"
             },
             {
               "label": "冰箱",
               "value": "68.5 × 73.8 × 183.3 · HITACHI R-HW620RS",
-              "status": "定",
               "object": "fridge"
             },
             {
               "label": "洗烘衣機",
               "value": "60 × 66 × 165.5 · LG WashTower",
-              "status": "定",
               "object": "washer-dryer"
             },
             {
               "label": "Dry kitchen",
               "value": "167.5 · Wells The One＋咖啡機，玻璃到天花",
-              "status": "定",
               "object": "kitchen-upper-worktop"
             }
           ],
           "clearances": [
             {
-              "label": "中間走道",
-              "value": "110"
-            },
-            {
               "label": "備菜區",
               "value": "99 · 80 款爐 90"
-            },
-            {
-              "label": "檯面到吊櫃",
-              "value": "75"
             }
           ],
           "build": [
             "下櫃門端起：收邊 5 · 拉籃 20 · 爐下 80 · 拉籃 20 · 洗碗機 63.6 · 水槽 71.9 · 電器櫃 60",
-            "吊櫃門 55 × 2＋41.25 × 2，整片側開到天花，CLIP top BLUMOTION",
+            "吊櫃門 55 × 2＋41.25 × 2，側開，CLIP top BLUMOTION",
             "電器櫃上櫃單門，鉸鏈在右",
-            "假天花暫以 240 計：吊櫃與電器櫃上櫃 165–237＋收邊 3，現場定天花後下料",
-            "岩板 12 mm 前緣斜接到 3，底 87（洗碗機開口需 > 86）",
-            "水槽櫃頂前後加橫撐托岩板；開孔用水槽原廠樣板",
-            "洗碗機兩側 1.8 落地側板，管線穿側板進水槽櫃",
-            "烤箱櫃底後方留散熱風口；爐具 32A 獨立迴路",
+            "吊櫃與電器櫃上櫃 165–237＋收邊 3（假天花暫以 240 計）",
+            "岩板 12 mm，前緣斜接成 3 厚，底 87",
+            "爐具 32A 獨立迴路",
             "排油煙機薄型 90，底 160，置中於爐上",
             "電器櫃拉出板 Blum MOVENTO 全拉、耐熱面材，每層後方 13A",
             "Dry kitchen 主機櫃另拉給排水；玻璃隔間到天花",
-            "洗衣機格兩側板鑽 Ø5 層板孔 152–187.2；洗衣機冰箱上櫃底 190.5、深 70"
+            "洗衣機、冰箱上櫃底 190.5、深 70"
           ]
         },
         "tagline": "電器櫃在女傭房端，水槽在窗下"
@@ -5113,7 +5056,7 @@
               525.38,
               350.55
             ],
-            "source_note": "Brandt BPI2638UB 58 × 51 · 開孔 56 × 49\n備選 Brandt BPI6603B 59 × 52",
+            "source_note": "Brandt BPI2638UB 58 × 51\n備選 Brandt BPI6603B 59 × 52",
             "dimensions": {
               "w": {
                 "cm": 59,
@@ -5159,7 +5102,7 @@
                 "status": "design"
               }
             },
-            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式\n開孔 59.5 × 49，在窗下"
+            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式"
           },
           "dishwasher": {
             "bounds_pt": [
@@ -5168,7 +5111,7 @@
               477.71,
               351.76
             ],
-            "source_note": "・Samsung Bespoke AI 獨立式\n・開口 60，兩側 1.8 側板，整格 63.6"
+            "source_note": "Samsung Bespoke AI 獨立式"
           }
         },
         "plan": {
@@ -5180,74 +5123,59 @@
             {
               "label": "Wet kitchen",
               "value": "320.5 · 岩板，面 90、厚 3",
-              "status": "定",
               "object": "kitchen-lower-worktop"
             },
             {
               "label": "門板",
-              "value": "白色細木紋霧面 laminate · 無把手",
-              "status": "定"
+              "value": "白色細木紋霧面 laminate · 無把手"
             },
             {
               "label": "爐具",
               "value": "58 × 51 · Brandt BPI2638UB",
-              "status": "建議",
               "object": "kitchen-hob"
             },
             {
               "label": "爐下櫃",
               "value": "80 · 餐具抽屜＋現有嵌入式烤箱",
-              "status": "定",
               "object": "kitchen-oven"
             },
             {
               "label": "窄拉籃",
               "value": "20 × 2",
-              "status": "定",
               "object": "spice-pullout"
             },
             {
               "label": "洗碗機",
               "value": "63.6 格 · Samsung Bespoke AI Freestanding Dishwasher",
-              "status": "定",
               "object": "dishwasher"
             },
             {
               "label": "水槽",
               "value": "櫃 76.9 · BLANCO PLEON 6",
-              "status": "建議",
               "object": "kitchen-sink"
             },
             {
               "label": "電器櫃",
               "value": "60 × 65 到天花",
-              "status": "定",
               "object": "appliance-tower"
             },
             {
               "label": "冰箱",
               "value": "68.5 × 73.8 × 183.3 · HITACHI R-HW620RS",
-              "status": "定",
               "object": "fridge"
             },
             {
               "label": "洗烘衣機",
               "value": "60 × 66 × 165.5 · LG WashTower",
-              "status": "定",
               "object": "washer-dryer"
             },
             {
               "label": "Dry kitchen",
               "value": "167.5 · Wells The One＋咖啡機，玻璃到天花",
-              "status": "定",
               "object": "kitchen-upper-worktop"
             }
           ],
           "clearances": [
-            {
-              "label": "中間走道",
-              "value": "110"
-            },
             {
               "label": "爐到電器櫃",
               "value": "30.5 · 80 款爐 21.5"
@@ -5257,15 +5185,13 @@
             "下櫃門端起：電器櫃 60 · 拉籃 20 · 爐下 80 · 拉籃 20 · 水槽 76.9 · 洗碗機 63.6",
             "吊櫃 66.25 × 2 到窗邊，窗右側到牆不做吊櫃",
             "電器櫃上櫃單門鉸鏈在牆側；朝爐側板用耐熱面材",
-            "假天花暫以 240 計：吊櫃與電器櫃上櫃 165–237＋收邊 3，現場定天花後下料",
-            "岩板 12 mm 前緣斜接到 3，底 87（洗碗機開口需 > 86）",
-            "水槽櫃頂前後加橫撐托岩板；開孔用水槽原廠樣板",
-            "洗碗機兩側 1.8 落地側板，管線穿側板進水槽櫃",
-            "烤箱櫃底後方留散熱風口；爐具 32A 獨立迴路",
+            "吊櫃與電器櫃上櫃 165–237＋收邊 3（假天花暫以 240 計）",
+            "岩板 12 mm，前緣斜接成 3 厚，底 87",
+            "爐具 32A 獨立迴路",
             "排油煙機薄型 90，底 160，置中於爐上",
             "電器櫃拉出板 Blum MOVENTO 全拉、耐熱面材，每層後方 13A",
             "Dry kitchen 主機櫃另拉給排水；玻璃隔間到天花",
-            "洗衣機格兩側板鑽 Ø5 層板孔 152–187.2；洗衣機冰箱上櫃底 190.5、深 70"
+            "洗衣機、冰箱上櫃底 190.5、深 70"
           ]
         },
         "tagline": "電器櫃移到門端左側"
@@ -5283,32 +5209,22 @@
             {
               "label": "Wet kitchen",
               "value": "320.5",
-              "status": "定",
               "object": "kitchen-lower-worktop"
             },
             {
               "label": "Dry kitchen",
               "value": "167.5",
-              "status": "定",
               "object": "kitchen-upper-worktop"
             },
             {
               "label": "冰箱",
               "value": "68.5 × 73.8 × 183.3 · HITACHI R-HW620RS",
-              "status": "定",
               "object": "fridge"
             },
             {
               "label": "洗烘衣機",
               "value": "60 × 66 × 165.5 · LG WashTower",
-              "status": "定",
               "object": "washer-dryer"
-            }
-          ],
-          "clearances": [
-            {
-              "label": "中間走道",
-              "value": "110"
             }
           ],
           "build": []
@@ -5357,32 +5273,27 @@
         "layout": "master-b",
         "plan": {
           "watch": [
-            "陽台門只能從床尾進，可用玻璃約 35 → 側身進出",
-            "房深 275 零餘裕 → 現場不足時窗簾盒縮到 12"
+            "陽台門只能從床尾進，可用玻璃約 35 → 側身進出"
           ],
           "items": [
             {
               "label": "床",
               "value": "220 × 200",
-              "status": "定",
               "object": "master-bed"
             },
             {
               "label": "言言的床",
               "value": "60 × 170",
-              "status": "定",
               "object": "master-crib"
             },
             {
               "label": "左衣櫃",
               "value": "90 × 60 · 落地門",
-              "status": "定",
               "object": "master-wardrobe-left"
             },
             {
               "label": "右衣櫃",
               "value": "90 × 60 · 外抽 ×3＋高門",
-              "status": "定",
               "object": "master-wardrobe-right"
             }
           ],
@@ -5398,9 +5309,9 @@
           ],
           "build": [
             "牆面貼壁布，不上漆",
-            "兩衣櫃到頂 272；天花若只有 275，收邊 8 現場裁到 3",
-            "層板底 24 V LED＋PIR 感應，驅動器在可拆踢腳內，櫃後留低位插座",
-            "靠浴室那扇內貼全身鏡，鉸鍊側加 2.5 墊條",
+            "兩衣櫃到頂 272",
+            "層板底 24 V LED＋PIR 感應，櫃後留低位插座",
+            "靠浴室那扇門內貼全身鏡",
             "陽台門窗簾盒深 15，單軌遮光簾"
           ]
         }
@@ -5487,88 +5398,70 @@
           }
         ],
         "plan": {
-          "watch": [
-            "翻門開關時會往外掃出約 30，言言在櫃前時慢慢開",
-            "翻門五金先拿樣品試裝，確認收起高度與行程再裁板",
-            "日後若換 LG G6 77 吋，220 的櫃子只比電視寬一點，比例略窄"
-          ],
           "items": [
             {
               "label": "電視",
               "value": "Xiaomi TV S Pro Mini LED 75 2026 · 壁掛（暫定）",
-              "status": "建議",
               "object": "living-tv"
             },
             {
               "label": "電視櫃",
-              "value": "220 × 45 × 40 · 三格等寬",
-              "status": "定",
+              "value": "220 × 45 × 45 · 三格等寬",
               "object": "tv-console"
             },
             {
               "label": "左格",
               "value": "翻門 · PS5 Pro＋Switch 2＋網路設備",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "右兩格",
               "value": "抽屜 · 分隔框＋止滑墊",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "走線",
-              "value": "櫃面後緣活動蓋板＋抽屜後方走線",
-              "status": "定",
+              "value": "抽屜後方放插座與走線，拉出抽屜就能插拔",
               "object": "tv-console"
             },
             {
               "label": "五金",
               "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "左側",
               "value": "整片木格柵到頂＋靜音風扇",
-              "status": "建議",
               "object": "tv-console"
             },
             {
               "label": "喇叭",
               "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand",
-              "status": "定",
               "object": "kef-speaker-l"
             },
             {
               "label": "重低音",
               "value": "KEF KC62",
-              "status": "建議",
               "object": "kef-sub"
             },
             {
               "label": "清淨機",
               "value": "Electrolux UltimateHome 300",
-              "status": "定",
               "object": "air-purifier"
             },
             {
               "label": "沙發",
               "value": "210 × 95",
-              "status": "定",
               "object": "sofa"
             },
             {
               "label": "餐桌",
               "value": "150 × 90 × 75 · Dahlia Sintered Stone Dining Table",
-              "status": "定",
               "object": "dining-table"
             },
             {
               "label": "櫃體",
               "value": "190 × 60",
-              "status": "建議",
               "object": "living-cabinet"
             }
           ],
@@ -5582,19 +5475,15 @@
               "value": "160（沙發中心 162.5）"
             },
             {
-              "label": "餐桌到過道",
-              "value": "125"
-            },
-            {
               "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
             }
           ],
           "build": [
-            "暗管：電視背後一條直下到蓋板下（電視電源線＋HDMI）；另一條在牆內連兩個喇叭腳架，在蓋板下開口",
-            "電視牆：木作底板＋淡灰壁紙到天花；壁掛位置加夾板補強",
+            "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
+            "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "電視櫃中格抽屜後面留走線空間通到左格，兩格間隔板後下角開 10 × 8 缺口；最右格裝背板，抽屜做深",
+            "中格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM＋溫控"
           ]
@@ -5680,87 +5569,70 @@
           }
         ],
         "plan": {
-          "watch": [
-            "翻門開關時會往外掃出約 30，言言在櫃前時慢慢開",
-            "翻門五金先拿樣品試裝，確認收起高度與行程再裁板"
-          ],
           "items": [
             {
               "label": "電視",
               "value": "Xiaomi TV S Pro Mini LED 75 2026 · 壁掛（暫定）",
-              "status": "建議",
               "object": "living-tv"
             },
             {
               "label": "電視櫃",
-              "value": "230 × 45 × 40 · 四格等寬",
-              "status": "定",
+              "value": "230 × 45 × 45 · 四格等寬",
               "object": "tv-console"
             },
             {
               "label": "左格",
               "value": "翻門 · PS5 Pro＋Switch 2＋網路設備",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "右三格",
               "value": "抽屜 · 分隔框＋止滑墊",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "走線",
-              "value": "櫃面後緣活動蓋板＋抽屜後方走線",
-              "status": "定",
+              "value": "抽屜後方放插座與走線，拉出抽屜就能插拔",
               "object": "tv-console"
             },
             {
               "label": "五金",
               "value": "抽屜 Blum LEGRABOX pure；翻門 Knape & Vogt 8070PEZ-14",
-              "status": "定",
               "object": "tv-console"
             },
             {
               "label": "左側",
               "value": "整片木格柵到頂＋靜音風扇",
-              "status": "建議",
               "object": "tv-console"
             },
             {
               "label": "喇叭",
               "value": "KEF LS50 Wireless II × 2 · KEF S2 Floor Stand",
-              "status": "定",
               "object": "kef-speaker-l"
             },
             {
               "label": "重低音",
               "value": "KEF KC62",
-              "status": "建議",
               "object": "kef-sub"
             },
             {
               "label": "清淨機",
               "value": "Electrolux UltimateHome 300",
-              "status": "定",
               "object": "air-purifier"
             },
             {
               "label": "沙發",
               "value": "210 × 95",
-              "status": "定",
               "object": "sofa"
             },
             {
               "label": "餐桌",
               "value": "150 × 90 × 75 · Dahlia Sintered Stone Dining Table",
-              "status": "定",
               "object": "dining-table"
             },
             {
               "label": "櫃體",
               "value": "190 × 60",
-              "status": "建議",
               "object": "living-cabinet"
             }
           ],
@@ -5774,19 +5646,15 @@
               "value": "165（沙發中心 162.5）"
             },
             {
-              "label": "餐桌到過道",
-              "value": "125"
-            },
-            {
               "label": "Tripp Trapp 拉出到窗簾盒",
               "value": "10"
             }
           ],
           "build": [
-            "暗管：電視背後一條直下到蓋板下（電視電源線＋HDMI）；另一條在牆內連兩個喇叭腳架，在蓋板下開口",
-            "電視牆：木作底板＋淡灰壁紙到天花；壁掛位置加夾板補強",
+            "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
+            "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "電視櫃中間兩格抽屜後面留走線空間通到左格；中縫隔板在蓋板下整段退 10，左格隔板後下角開 10 × 8 缺口；最右格裝背板，抽屜做深",
+            "中間兩格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM＋溫控"
           ]
@@ -5849,9 +5717,9 @@
           },
           "sock-tv-l": {
             "y": 218.412,
-            "notes": "・13A 雙孔＋單孔，在蓋板正下方、對準電視（櫃子中間的縫）\n・供電視、底燈、充電",
+            "notes": "・13A 雙孔＋單孔，在中間兩格抽屜後方、對準電視\n・供電視、底燈、充電",
             "name": "插座 · 電視櫃中縫後",
-            "place": "電視牆 · 蓋板正下方（中縫後）"
+            "place": "電視牆 · 中間兩格抽屜後方"
           },
           "sock-console-l": {
             "y": 195.593,
@@ -5860,7 +5728,7 @@
           "data-tv": {
             "y": 211.41,
             "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器",
-            "place": "電視牆 · 蓋板正下方（插座左邊）"
+            "place": "電視牆 · 插座左邊"
           },
           "hub": {
             "y": 194.289
@@ -21942,13 +21810,11 @@
               {
                 "label": "按摩椅",
                 "value": "OSIM uLove 3 Well-Being Chair（OS-8218）",
-                "status": "定",
                 "object": "massage-chair-lb"
               },
               {
                 "label": "電腦桌",
                 "value": "100 × 50",
-                "status": "建議",
                 "object": "study-desk-lb"
               }
             ],
@@ -21960,14 +21826,6 @@
               {
                 "label": "躺平到對面牆",
                 "value": "55"
-              },
-              {
-                "label": "按摩椅到窗",
-                "value": "15"
-              },
-              {
-                "label": "書桌到門洞",
-                "value": "95"
               }
             ],
             "build": [
@@ -22006,31 +21864,26 @@
               {
                 "label": "床",
                 "value": "154 × 194 淘寶床架 · Tempur® Prima SmartCool™ Firm Mattress - Queen Size 150 × 190 × 21",
-                "status": "定",
                 "object": "guest-bed-lb"
               },
               {
                 "label": "衣櫃",
                 "value": "70 × 60 · 到頂，雙門",
-                "status": "定",
                 "object": "guest-wardrobe-lb-a"
               },
               {
                 "label": "書桌",
                 "value": "70 × 40 · 活動書桌",
-                "status": "定",
                 "object": "guest-desk-lb-a"
               },
               {
                 "label": "書椅",
                 "value": "四腳無輪、無扶手",
-                "status": "定",
                 "object": "guest-chair-lb-a"
               },
               {
                 "label": "清淨機",
                 "value": "Electrolux UltimateHome 300",
-                "status": "定",
                 "object": "guest-purifier"
               }
             ],
@@ -22038,10 +21891,6 @@
               {
                 "label": "衣櫃到床",
                 "value": "71"
-              },
-              {
-                "label": "書桌到床",
-                "value": "91"
               },
               {
                 "label": "椅背到床",
@@ -22054,9 +21903,9 @@
             ],
             "build": [
               "窗簾盒深 15，單軌遮光簾",
-              "衣櫃到頂 272，收邊 8 現場裁",
-              "衣櫃層板底 LED＋PIR 感應，驅動器放踢腳，櫃後留低位插座",
-              "兩扇衣櫃門加開角限位 90°，不撞牆、不掃書桌"
+              "衣櫃到頂 272",
+              "衣櫃層板底 LED＋PIR 感應，櫃後留低位插座",
+              "兩扇衣櫃門加 90° 限位"
             ]
           },
           "tagline": "70 衣櫃＋70 書桌"
@@ -22087,25 +21936,21 @@
               {
                 "label": "床",
                 "value": "154 × 194 淘寶床架 · Tempur® Prima SmartCool™ Firm Mattress - Queen Size 150 × 190 × 21",
-                "status": "定",
                 "object": "guest-bed-lb"
               },
               {
                 "label": "衣櫃",
                 "value": "59 × 60 · 到頂，單門",
-                "status": "建議",
                 "object": "guest-wardrobe-lb-c"
               },
               {
                 "label": "書桌",
                 "value": "60 × 45 · 活動書桌",
-                "status": "建議",
                 "object": "guest-desk-lb-c"
               },
               {
                 "label": "清淨機",
                 "value": "Electrolux UltimateHome 300",
-                "status": "定",
                 "object": "guest-purifier"
               }
             ],
@@ -22121,8 +21966,8 @@
             ],
             "build": [
               "窗簾盒深 15，單軌遮光簾",
-              "衣櫃到頂 272，收邊 8 現場裁",
-              "衣櫃層板底 LED＋PIR 感應，驅動器放踢腳，櫃後留低位插座",
+              "衣櫃到頂 272",
+              "衣櫃層板底 LED＋PIR 感應，櫃後留低位插座",
               "衣櫃門鉸鍊在走廊牆側，加 90° 限位"
             ]
           },
@@ -22357,7 +22202,7 @@
         "kind": "data",
         "x": 582.2,
         "y": 210.503,
-        "place": "電視牆 · 蓋板正下方（插座左邊）",
+        "place": "電視牆 · 插座左邊",
         "mount": 33,
         "name": "網路孔 · 電視櫃",
         "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器"
@@ -22852,10 +22697,10 @@
         "kind": "socket",
         "x": 584.0,
         "y": 216.994,
-        "place": "電視牆 · 蓋板正下方（中格後）",
+        "place": "電視牆 · 中格抽屜後方",
         "mount": 33,
         "name": "插座 · 電視櫃中格後",
-        "notes": "・13A 雙孔＋單孔，在蓋板正下方、對準電視\n・供電視、底燈、充電",
+        "notes": "・13A 雙孔＋單孔，在中格抽屜後方、對準電視\n・供電視、底燈、充電",
         "use": "電視櫃"
       },
       {

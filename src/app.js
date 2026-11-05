@@ -387,7 +387,9 @@ function planFor(r){if(!r)return null;return versionFor(r)?.plan||r.plan||null;}
 const openTodos=id=>(project.todos||[]).filter(x=>x.room===id&&x.status!=='done').length;
 const roomPower=id=>powerPoints().filter(p=>powerRoom(p)===id).sort((a,b)=>String(a.code).localeCompare(String(b.code),'en',{numeric:true}));
 const scrollTo=el=>el?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
-const todosOf=id=>(project.todos||[]).filter(x=>x.room===id);
+// R96: todos may carry `priority` (1 = top); lower first, unset keep array order after the prioritised ones.
+const byPrio=(a,b)=>(a.priority??1e9)-(b.priority??1e9);
+const todosOf=id=>(project.todos||[]).filter(x=>x.room===id).sort(byPrio);
 const todoLi=x=>{const done=x.status==='done',r=x.research&&project.research?.[x.research];return `<li class="todo-item${done?' done':''}"><span class="todo-check" aria-hidden="true">${done?'✓':''}</span><span class="todo-text">${done?`<s>${esc(x.text)}</s>`:esc(x.text)}</span>${r?`<button type="button" class="research-link" data-research="${esc(x.research)}">${esc(t('調研 ↗'))}</button>`:''}</li>`;};
 // Home: each room = name + 「待拍板 n · 注意 n」 + its first open decisions (plan.summary is never shown).
 function homeCards(){
@@ -401,9 +403,9 @@ document.addEventListener('click',e=>{const a=e.target.closest?.('.yt-link');if(
 document.addEventListener('keydown',e=>{const a=e.target.closest?.('.yt-link');if(a&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.stopPropagation();window.open(a.dataset.href,'_blank','noopener');}},true);
 // Room card order: 待拍板 (todos) → 注意 (watch) → 配置 (items) → 淨距 → 施工交代 → 電點.
 function roomCard(r){
-  const p=planFor(r)||{},pts=roomPower(r.id),DEC=t('定'),all=todosOf(r.id),open=all.filter(x=>x.status!=='done'),done=all.filter(x=>x.status==='done');
-  const items=(p.items||[]).map(it=>{const o=it.object&&object(it.object),el=o&&elevationFor(it.object),chip=it.status?`<span class="rc-chip ${it.status===DEC||it.status==='定'?'is-decided':'is-suggested'}">${esc(it.status)}</span>`:'';
-    const body=`<span class="rc-label">${esc(it.label)}</span><span class="rc-value">${withLinks(esc(it.value))}${el?`<span class="rc-elev">${esc(t('立面 ↗'))}</span>`:''}</span>${chip}`;
+  const p=planFor(r)||{},pts=roomPower(r.id),all=todosOf(r.id),open=all.filter(x=>x.status!=='done'),done=all.filter(x=>x.status==='done');
+  const items=(p.items||[]).map(it=>{const o=it.object&&object(it.object),el=o&&elevationFor(it.object);
+    const body=`<span class="rc-label">${esc(it.label)}</span><span class="rc-value">${withLinks(esc(it.value))}${el?`<span class="rc-elev">${esc(t('立面 ↗'))}</span>`:''}</span>`;
     return `<li>${o?`<button type="button" class="rc-item" data-open-object="${esc(it.object)}" title="${esc(it.label+' · '+it.value)}">${body}</button>`:`<div class="rc-item">${body}</div>`}</li>`;}).join('');
   const sec=(cls,title,inner,n)=>inner?`<section class="rc-sec ${cls}"><h3>${esc(t(title))}${n?` <span class="rc-n">${n}</span>`:''}</h3>${inner}</section>`:'';
   const todos=all.length?`${open.length?`<ul class="todo-list">${open.map(todoLi).join('')}</ul>`:`<p class="rc-none">${esc(t('無待拍板'))}</p>`}${done.length?`<details class="rc-done"><summary>${esc(tf('已完成 {n}',{n:done.length}))}</summary><ul class="todo-list">${done.map(todoLi).join('')}</ul></details>`:''}`:'';
@@ -494,7 +496,7 @@ $('#brief-btn')?.addEventListener('click',()=>toggleBrief());$('#brief-close')?.
 $('#brief-list')?.addEventListener('click',e=>{const b=e.target.closest('[data-brief]');if(b){const[i,j]=b.dataset.brief.split(':').map(Number);jumpBrief(i,j);}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#brief-panel').hidden)toggleBrief(false);if(e.key==='Escape'&&!$('#todo-panel').hidden)toggleTodoPanel(false);});
 // R73 ☑ all open todos across rooms (things the owner must go see / choose), grouped by room in tab order.
-function allOpenTodos(){return (project.todos||[]).filter(x=>x.status!=='done');}
+function allOpenTodos(){return (project.todos||[]).filter(x=>x.status!=='done').sort(byPrio);}
 function renderTodoBadge(){const n=allOpenTodos().length,b=$('#todo-badge');if(b)b.textContent=n?String(n):'';}
 function renderTodoPanel(){const box=$('#todo-all');if(!box)return;const open=allOpenTodos(),order=['floor',...project.rooms.map(r=>r.id),SMART];const ids=[...new Set([...order.filter(id=>open.some(x=>x.room===id)),...open.map(x=>x.room)])];
  box.innerHTML=ids.map(id=>{const r=room(id),name=id===SMART?t('智能家居'):id==='floor'?t('全屋'):(r?r.name:id);return `<section class="todo-group"><div class="todo-group-head"><h3>${esc(name)}</h3><button type="button" class="tool" data-todo-room="${esc(id)}">${esc(t('看房間'))} →</button></div><ul class="todo-list">${open.filter(x=>x.room===id).map(todoLi).join('')}</ul></section>`;}).join('')||`<p>${esc(t('無待拍板'))}</p>`;}
