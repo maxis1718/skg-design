@@ -1637,7 +1637,7 @@
       "height_cm": 45,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-16; door conceal 30.5 per the KV sheet, 4.4 stays out when stowed), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). No cable lid: the top is one board; TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch; socket access = pull the drawer out. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
+      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-16; door conceal 30.5 per the KV sheet, 4.4 stays out when stowed), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). Hidden lid (R99): 60 x 10 slot in the top, 1 from the back edge, centred on the TV axis over the middle rear space (x 80-140); loose flush drop-in lid on a 0.6 rebate lip, finger notch R1.5 in its front edge (phone cable out). S-20 + D-01 sit directly under it (plate 34.2-42.8). TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
@@ -5433,7 +5433,7 @@
             },
             {
               "label": "走線",
-              "value": "抽屜後方放插座與走線，拉出抽屜就能插拔",
+              "value": "櫃面後緣隱藏式蓋板，下面是插座；抽屜後方走線",
               "object": "tv-console"
             },
             {
@@ -5495,7 +5495,7 @@
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
             "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "中格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
+            "中格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
@@ -5604,7 +5604,7 @@
             },
             {
               "label": "走線",
-              "value": "抽屜後方放插座與走線，拉出抽屜就能插拔",
+              "value": "櫃面後緣隱藏式蓋板，下面是插座；抽屜後方走線",
               "object": "tv-console"
             },
             {
@@ -5666,7 +5666,7 @@
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
             "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
             "電視櫃底部內縮，裝暖光燈條，獨立開關",
-            "中間兩格抽屜做短，後方放插座與走線；隔板後方留過線口通到左格",
+            "中間兩格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
@@ -5682,7 +5682,7 @@
             "plan_vertical_cm": 230,
             "nominal_width_cm": 230,
             "source_note": "",
-            "notes": "Design R96 scheme B (concept): 230 W x 45 D x 45 H, four equal 53.4 fronts with the centre joint on the TV axis; TV / console axis 165. Left bay 57.0: same flipper door / PS5 Pro / Switch 2 / network tray / fan as A. The two middle drawers LEGRABOX pure C NL 300 leave a 13.1 rear space (S-20 straddles the centre partition, set back 10); right NL 400 with a back panel. No cable lid; HDMI runs through a 10 pass-through at the back of P1. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
+            "notes": "Design R96 scheme B (concept): 230 W x 45 D x 45 H, four equal 53.4 fronts with the centre joint on the TV axis; TV / console axis 165. Left bay 57.0: same flipper door / PS5 Pro / Switch 2 / network tray / fan as A. The two middle drawers LEGRABOX pure C NL 300 leave a 13.1 rear space (S-20 straddles the centre partition, set back 10); right NL 400 with a back panel. Hidden lid 60 x 10 centred on the TV axis (x 85-145), same as A; D-01 at 88.0-96.6 under it. HDMI runs through a 10 pass-through at the back of P1. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
             "dimensions": {
               "w": {
                 "cm": 230,
@@ -5729,18 +5729,18 @@
           },
           "sock-tv-l": {
             "y": 218.412,
-            "notes": "・13A 雙孔＋單孔，在中間兩格抽屜後方、對準電視\n・供電視、底燈、充電",
+            "notes": "・13A 雙孔＋單孔，在隱藏式蓋板正下方、對準電視\n・供電視、底燈、充電",
             "name": "插座 · 電視櫃中縫後",
-            "place": "電視牆 · 中間兩格抽屜後方"
+            "place": "電視牆 · 隱藏式蓋板下"
           },
           "sock-console-l": {
             "y": 195.593,
             "notes": "・13A 雙孔 × 3（其一帶 USB-A／C），距櫃左端 11.6–57.4\n・PS5 Pro、Switch 2 變壓器、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A），剩 2 位備用；USB 給風扇"
           },
           "data-tv": {
-            "y": 211.41,
+            "y": 211.977,
             "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器",
-            "place": "電視牆 · 插座左邊"
+            "place": "電視牆 · 隱藏式蓋板下"
           },
           "hub": {
             "y": 194.289
@@ -18092,7 +18092,7 @@
           "font": 4.6,
           "marginR": 3.2,
           "marginL": 1.4,
-          "marginT": 2.6,
+          "marginT": 3.4,
           "wallLabel": "",
           "extras": [
             {
@@ -18700,6 +18700,102 @@
               "size": 0.74,
               "color": "#2f443c",
               "when": "open"
+            },
+            {
+              "type": "lc-poly",
+              "pts": [
+                [
+                  80.0,
+                  34.0
+                ],
+                [
+                  108.5,
+                  34.0
+                ],
+                [
+                  108.573,
+                  34.464
+                ],
+                [
+                  108.786,
+                  34.882
+                ],
+                [
+                  109.118,
+                  35.214
+                ],
+                [
+                  109.536,
+                  35.427
+                ],
+                [
+                  110.0,
+                  35.5
+                ],
+                [
+                  110.464,
+                  35.427
+                ],
+                [
+                  110.882,
+                  35.214
+                ],
+                [
+                  111.214,
+                  34.882
+                ],
+                [
+                  111.427,
+                  34.464
+                ],
+                [
+                  111.5,
+                  34.0
+                ],
+                [
+                  140.0,
+                  34.0
+                ],
+                [
+                  140.0,
+                  44.0
+                ],
+                [
+                  80.0,
+                  44.0
+                ]
+              ],
+              "fill": "none",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 80.0,
+              "y": 34.0,
+              "w": 60.0,
+              "h": 10.0,
+              "fill": "none",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 80.0,
+              "x1": 140.0,
+              "y": 55.0,
+              "label": "60"
+            },
+            {
+              "type": "note",
+              "x": 78.0,
+              "y": 53.8,
+              "label": "隱藏式蓋板",
+              "anchor": "end",
+              "size": 0.74
             }
           ],
           "hcuts": [
@@ -19063,14 +19159,14 @@
                 ],
                 [
                   -2.0,
-                  40.0
+                  31.6
                 ]
               ]
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 28.7,
+              "y": 34.2,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -19080,7 +19176,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 30.4,
+              "y": 35.9,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -19093,15 +19189,15 @@
               "pts": [
                 [
                   -2.0,
-                  40.6
+                  32.6
                 ],
                 [
                   2.4,
-                  40.6
+                  32.6
                 ],
                 [
                   2.4,
-                  35.6
+                  35.9
                 ]
               ]
             },
@@ -19110,11 +19206,11 @@
               "pts": [
                 [
                   -2.0,
-                  39.6
+                  32.0
                 ],
                 [
                   6.4,
-                  39.6
+                  32.0
                 ],
                 [
                   6.4,
@@ -19194,14 +19290,14 @@
               "type": "clear",
               "x0": 45,
               "x1": 75,
-              "y": 46.6,
+              "y": 32.5,
               "label": "全拉 30",
               "when": "open"
             },
             {
               "type": "callout",
               "x": 3.8,
-              "y": 33.0,
+              "y": 38.5,
               "lx": 83,
               "ly": 38.5,
               "label": "插座",
@@ -19227,6 +19323,45 @@
               "side": "left",
               "total": true,
               "size": 0.74
+            },
+            {
+              "type": "rect",
+              "x": 1.6,
+              "y": 43.2,
+              "w": 8.8,
+              "h": 0.6,
+              "fill": "#eef1ea",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 43.8,
+              "w": 10.0,
+              "h": 1.2,
+              "fill": "#efe6d6",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 43.8,
+              "w": 10.0,
+              "h": 1.2,
+              "fill": "#fff",
+              "stroke": "none",
+              "when": "open"
+            },
+            {
+              "type": "callout",
+              "x": 8.0,
+              "y": 44.4,
+              "lx": 83,
+              "ly": 46.5,
+              "label": "隱藏式蓋板",
+              "size": 0.78
             }
           ],
           "aria": "電視櫃中格剖面",
@@ -19532,6 +19667,11 @@
           "zone": "電視",
           "h": "",
           "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）＋Vogel's TVM 5605 壁掛"
+        },
+        {
+          "zone": "蓋板",
+          "h": "",
+          "note": "隱藏式蓋板 60 × 10：活動蓋放在止口上、與櫃面齊平，前緣指孔可出充電線"
         },
         {
           "zone": "五金",
@@ -20435,7 +20575,7 @@
           "font": 4.6,
           "marginR": 3.2,
           "marginL": 1.4,
-          "marginT": 2.6,
+          "marginT": 3.4,
           "wallLabel": "",
           "extras": [
             {
@@ -20633,7 +20773,7 @@
             },
             {
               "type": "rect",
-              "x": 86.0,
+              "x": 88.0,
               "y": 44.1,
               "w": 8.6,
               "h": 0.9,
@@ -20663,7 +20803,7 @@
             },
             {
               "type": "rect",
-              "x": 88.3,
+              "x": 90.3,
               "y": 41.2,
               "w": 4.0,
               "h": 2.9,
@@ -20731,7 +20871,7 @@
             },
             {
               "type": "callout",
-              "x": 90.3,
+              "x": 92.3,
               "y": 41.2,
               "lx": 51.975,
               "ly": 49.4,
@@ -21109,6 +21249,102 @@
               "size": 0.74,
               "color": "#2f443c",
               "when": "open"
+            },
+            {
+              "type": "lc-poly",
+              "pts": [
+                [
+                  85.0,
+                  34.0
+                ],
+                [
+                  113.5,
+                  34.0
+                ],
+                [
+                  113.573,
+                  34.464
+                ],
+                [
+                  113.786,
+                  34.882
+                ],
+                [
+                  114.118,
+                  35.214
+                ],
+                [
+                  114.536,
+                  35.427
+                ],
+                [
+                  115.0,
+                  35.5
+                ],
+                [
+                  115.464,
+                  35.427
+                ],
+                [
+                  115.882,
+                  35.214
+                ],
+                [
+                  116.214,
+                  34.882
+                ],
+                [
+                  116.427,
+                  34.464
+                ],
+                [
+                  116.5,
+                  34.0
+                ],
+                [
+                  145.0,
+                  34.0
+                ],
+                [
+                  145.0,
+                  44.0
+                ],
+                [
+                  85.0,
+                  44.0
+                ]
+              ],
+              "fill": "none",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 85.0,
+              "y": 34.0,
+              "w": 60.0,
+              "h": 10.0,
+              "fill": "none",
+              "stroke": "#2f443c",
+              "sw": 0.3,
+              "dashed": true,
+              "when": "open"
+            },
+            {
+              "type": "clear",
+              "x0": 85.0,
+              "x1": 145.0,
+              "y": 55.0,
+              "label": "60"
+            },
+            {
+              "type": "note",
+              "x": 83.0,
+              "y": 53.8,
+              "label": "隱藏式蓋板",
+              "anchor": "end",
+              "size": 0.74
             }
           ],
           "hcuts": [
@@ -21474,14 +21710,14 @@
                 ],
                 [
                   -2.0,
-                  40.0
+                  31.6
                 ]
               ]
             },
             {
               "type": "rect",
               "x": 0,
-              "y": 28.7,
+              "y": 34.2,
               "w": 1.0,
               "h": 8.6,
               "fill": "#fff",
@@ -21491,7 +21727,7 @@
             {
               "type": "rect",
               "x": 1.0,
-              "y": 30.4,
+              "y": 35.9,
               "w": 2.8,
               "h": 5.2,
               "fill": "#f4f3ee",
@@ -21504,15 +21740,15 @@
               "pts": [
                 [
                   -2.0,
-                  40.6
+                  32.6
                 ],
                 [
                   2.4,
-                  40.6
+                  32.6
                 ],
                 [
                   2.4,
-                  35.6
+                  35.9
                 ]
               ]
             },
@@ -21521,11 +21757,11 @@
               "pts": [
                 [
                   -2.0,
-                  39.6
+                  32.0
                 ],
                 [
                   6.4,
-                  39.6
+                  32.0
                 ],
                 [
                   6.4,
@@ -21605,14 +21841,14 @@
               "type": "clear",
               "x0": 45,
               "x1": 75,
-              "y": 46.6,
+              "y": 32.5,
               "label": "全拉 30",
               "when": "open"
             },
             {
               "type": "callout",
               "x": 3.8,
-              "y": 33.0,
+              "y": 38.5,
               "lx": 83,
               "ly": 38.5,
               "label": "插座",
@@ -21638,6 +21874,45 @@
               "side": "left",
               "total": true,
               "size": 0.74
+            },
+            {
+              "type": "rect",
+              "x": 1.6,
+              "y": 43.2,
+              "w": 8.8,
+              "h": 0.6,
+              "fill": "#eef1ea",
+              "stroke": "none"
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 43.8,
+              "w": 10.0,
+              "h": 1.2,
+              "fill": "#efe6d6",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "when": "closed"
+            },
+            {
+              "type": "rect",
+              "x": 1.0,
+              "y": 43.8,
+              "w": 10.0,
+              "h": 1.2,
+              "fill": "#fff",
+              "stroke": "none",
+              "when": "open"
+            },
+            {
+              "type": "callout",
+              "x": 8.0,
+              "y": 44.4,
+              "lx": 83,
+              "ly": 46.5,
+              "label": "隱藏式蓋板",
+              "size": 0.78
             }
           ],
           "aria": "電視櫃中格剖面",
@@ -21943,6 +22218,11 @@
           "zone": "電視",
           "h": "",
           "note": "Xiaomi TV S Pro Mini LED 75 2026（暫定）＋Vogel's TVM 5605 壁掛"
+        },
+        {
+          "zone": "蓋板",
+          "h": "",
+          "note": "隱藏式蓋板 60 × 10：活動蓋放在止口上、與櫃面齊平，前緣指孔可出充電線"
         },
         {
           "zone": "五金",
@@ -22462,8 +22742,8 @@
         "kind": "data",
         "x": 582.2,
         "y": 210.503,
-        "place": "電視牆 · 插座左邊",
-        "mount": 33,
+        "place": "電視牆 · 隱藏式蓋板下",
+        "mount": 38.5,
         "name": "網路孔 · 電視櫃",
         "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器"
       },
@@ -22957,10 +23237,10 @@
         "kind": "socket",
         "x": 584.0,
         "y": 216.994,
-        "place": "電視牆 · 中格抽屜後方",
-        "mount": 33,
+        "place": "電視牆 · 隱藏式蓋板下",
+        "mount": 38.5,
         "name": "插座 · 電視櫃中格後",
-        "notes": "・13A 雙孔＋單孔，在中格抽屜後方、對準電視\n・供電視、底燈、充電",
+        "notes": "・13A 雙孔＋單孔，在隱藏式蓋板正下方、對準電視\n・供電視、底燈、充電",
         "use": "電視櫃"
       },
       {
@@ -24434,8 +24714,8 @@
     "console-gaming": {
       "title": "電視櫃：A 三格 220／B 四格 230、左格遊戲翻門、左側風扇",
       "updated": "2026-11-05",
-      "summary": "預設 A 三格 220（B 四格 230）；櫃高 45、深 45。左格翻門（Knape & Vogt 8070PEZ-16）藏 PS5 Pro、Switch 2 與網路設備，插左格自己的插座；左側整片白橡格柵，只在左上後角的 Noctua NF-A14 5V PWM 處開孔。抽屜做短，後方 13.1 放插座與走線；電視電源與 HDMI 從牆內暗管進櫃，不從櫃面出線、不設蓋板。",
-      "body": "## 結論\n- **選 A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜），PS5 左右各 ≈ 13（過 Sony 建議的 10），電視正對沙發。B 四格 230 抽屜較窄、中縫對電視、換 LG G6 77 比例較好，但 PS5 每邊只剩 ≈ 4.5。\n- **櫃體**：220 × 45 × 45；踢腳 8 內退 10＋暖光燈條；面板 8.0–42.9（34.9 高）；頂板一整片。\n- **走線**：電視電源線＋HDMI 從電視背後經 Ø50 牆內暗管下到中格抽屜後方；中格抽屜 NL 300，後方 13.1 放 S-20、網路孔 D-01 與線；HDMI 經左格隔板後方過線口到 PS5、Switch 2。拉出抽屜就能插拔，線不需要從櫃面出來。喇叭線走牆內 Ø32。\n- **左格**：網路設備托盤（淨高 5）→ 層板面 16 → PS5 Pro 橫放；Switch 2 底座轉 90°；PS5、Switch 2、網路設備都插左格自己的 S-22（含一個 USB 給風扇）。\n- **散熱**：前面開門進冷風，PS5 後面出熱風往上，由左側板內面左上後角的 Noctua NF-A14 5V PWM（14 cm、USB）往外排；風扇頂在翻門滑軌墊條下（離牆 0.8–14.8、離地 22.6–36.6）；屋主自備 USB 開關。側板只在風扇處開孔，其餘是裝飾格柵。\n- **翻門**：Knape & Vogt 8070PEZ-16，門 34.9 高可收進 30.5，收起時露出約 4.4；櫃內深 43.1 ≥ 安裝需求 41.6。\n- **抽屜**：Blum LEGRABOX pure C 高＋BLUMOTION，中格 NL 300、右格 NL 400（右格後面不走線，裝背板）；每格 Blum AMBIA-LINE 分隔框＋止滑墊。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 | 1.38／1.34 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。交屋時做 30 分鐘遊戲測試。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070PEZ-16 | 門可收入 12\"（30.5）、櫃深 ≥ 16-3/8\"（41.6） | KV 安裝說明 |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in | KV 型錄 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12 | Nintendo SG |\n| LEGRABOX | 40 kg、C 高 17.7；F 高 24.1 只有 NL ≥ 450 | Blum |\n| LEGRABOX 最小櫃內深 | NL + 3 mm（NL 400 → 40.3） | Blum |\n| Noctua NF-A14 5V PWM | 140 × 140 × 25、82.5 CFM、24.6 dBA | Noctua |\n| UCG Ultra | 14.18 × 12.76 × 3.0、環境 ≤ 40 °C | Ubiquiti |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17 | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65 | Aqara |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n\n## 不選\n- **ㄇ 活動蓋板**：線不需要從櫃面出來；插座在抽屜後方，拉出抽屜插拔。\n- **Knape & Vogt 8070PEZ-14**：只收得進 25.4，門露出約 9.5。8070PEZ-18 要櫃深 46.7，放不下。\n- **Sugatsune IF-H360W-14**：收起時門凸出 35 mm，機構會撞 Switch 2／PS5。\n- **Accuride 1155 Easy-Down**：門收到櫃頂上面。\n- **LEGRABOX F 高**：NL 300 沒有 F 高。\n- **兩端翻門、四格 225／235**：右端要開孔，或 PS5 太擠、走道變窄。\n",
+      "summary": "預設 A 三格 220（B 四格 230）；櫃高 45、深 45。左格翻門（Knape & Vogt 8070PEZ-16）藏 PS5 Pro、Switch 2 與網路設備，插左格自己的插座；左側整片白橡格柵，只在左上後角的 Noctua NF-A14 5V PWM 處開孔。抽屜做短，後方 13.1 放插座與走線；電視電源與 HDMI 從牆內暗管進櫃；櫃面後緣隱藏式蓋板 60 × 10，下面是插座。",
+      "body": "## 結論\n- **選 A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜），PS5 左右各 ≈ 13（過 Sony 建議的 10），電視正對沙發。B 四格 230 抽屜較窄、中縫對電視、換 LG G6 77 比例較好，但 PS5 每邊只剩 ≈ 4.5。\n- **櫃體**：220 × 45 × 45；踢腳 8 內退 10＋暖光燈條；面板 8.0–42.9（34.9 高）；頂板後緣隱藏式蓋板 60 × 10（對準電視，活動蓋齊平、前緣指孔）。\n- **走線**：電視電源線＋HDMI 從電視背後經 Ø50 牆內暗管下到中格抽屜後方；中格抽屜 NL 300，後方 13.1 放 S-20、網路孔 D-01 與線；HDMI 經左格隔板後方過線口到 PS5、Switch 2。S-20、D-01 在隱藏式蓋板正下方，掀蓋就能插拔；手機充電線從指孔出來。喇叭線走牆內 Ø32。\n- **左格**：網路設備托盤（淨高 5）→ 層板面 16 → PS5 Pro 橫放；Switch 2 底座轉 90°；PS5、Switch 2、網路設備都插左格自己的 S-22（含一個 USB 給風扇）。\n- **散熱**：前面開門進冷風，PS5 後面出熱風往上，由左側板內面左上後角的 Noctua NF-A14 5V PWM（14 cm、USB）往外排；風扇頂在翻門滑軌墊條下（離牆 0.8–14.8、離地 22.6–36.6）；屋主自備 USB 開關。側板只在風扇處開孔，其餘是裝飾格柵。\n- **翻門**：Knape & Vogt 8070PEZ-16，門 34.9 高可收進 30.5，收起時露出約 4.4；櫃內深 43.1 ≥ 安裝需求 41.6。\n- **抽屜**：Blum LEGRABOX pure C 高＋BLUMOTION，中格 NL 300、右格 NL 400（右格後面不走線，裝背板）；每格 Blum AMBIA-LINE 分隔框＋止滑墊。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 | 1.38／1.34 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。交屋時做 30 分鐘遊戲測試。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070PEZ-16 | 門可收入 12\"（30.5）、櫃深 ≥ 16-3/8\"（41.6） | KV 安裝說明 |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in | KV 型錄 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12 | Nintendo SG |\n| LEGRABOX | 40 kg、C 高 17.7；F 高 24.1 只有 NL ≥ 450 | Blum |\n| LEGRABOX 最小櫃內深 | NL + 3 mm（NL 400 → 40.3） | Blum |\n| Noctua NF-A14 5V PWM | 140 × 140 × 25、82.5 CFM、24.6 dBA | Noctua |\n| UCG Ultra | 14.18 × 12.76 × 3.0、環境 ≤ 40 °C | Ubiquiti |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17 | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65 | Aqara |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n\n## 不選\n- **ㄇ 活動蓋板**：整條後緣開口太長；改小的隱藏式蓋板，只開在插座上方。\n- **Knape & Vogt 8070PEZ-14**：只收得進 25.4，門露出約 9.5。8070PEZ-18 要櫃深 46.7，放不下。\n- **Sugatsune IF-H360W-14**：收起時門凸出 35 mm，機構會撞 Switch 2／PS5。\n- **Accuride 1155 Easy-Down**：門收到櫃頂上面。\n- **LEGRABOX F 高**：NL 300 沒有 F 高。\n- **兩端翻門、四格 225／235**：右端要開孔，或 PS5 太擠、走道變窄。\n",
       "sources": [
         {
           "title": "PS5 Pro vs PS5 power consumption — Digital Foundry figures (Notebookcheck)",
