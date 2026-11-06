@@ -1609,20 +1609,7 @@
   "風扇開關": "Fan switch",
   "女傭房門鉸鏈方向：建議放洗衣機側（不擋電器櫃拉出板，裝卸洗衣時先關門）": "Helper room door hinge side: suggest washer side (keeps appliance tower pull-outs clear; close door when loading laundry)",
   "日常使用檢查：廚房檯面加兩組插座、書房與客房床頭加插座、女傭房門口加廚房燈開關、主臥門口加走廊燈開關；新增待拍板：女傭房門鉸鏈方向。": "Daily-use pass: two kitchen worktop sockets, study and guest bedside power, kitchen light switch at helper door, corridor light switch at master door; new decision: helper door hinge side.",
-  "側抽屜不可行：床寬等於房寬，抽屜只能從門洞往廚房拉，會擋門和走道。": "No side drawers: bed is room-wide, drawers would pull into the kitchen through the doorway.",
-  "內寬約 103、長 63.3；登機箱平放、收納箱、換季被。": "~103 internal W, 63.3 L; cabin bag flat, boxes, off-season bedding.",
-  "刮鬍刀插座 · 主浴鏡櫃": "Shaver socket · bath 1 mirror cab.",
-  "107 × 205 × 38 · 上掀蓋 ×3": "107 × 205 × 38 · 3 lift-up lids",
-  "陽台門窗簾盒深 15，單軌遮光簾": "Balcony-door curtain box D 15, single-track blackout",
-  "玄關燈、客廳主燈、餐桌吊燈、洗牆燈、電視櫃燈條": "Foyer, living main, dining pendant, wall washer, console strip",
-  "電視櫃底部內縮，裝暖光燈條，獨立開關": "Recessed console plinth, warm LED strip, own switch",
-  "雙鍵 ×2": "2-gang ×2",
-  "・床頭 SW-11 右鍵同控吸頂燈": "• Bedside SW-11 R key also on ceiling light",
-  "・主臥門口可加無線開關 H1 做雙切": "• Option: wireless H1 at master door for 2-way",
-  "S-06 shaver 2-pin 離地 128": "S-06 shaver 2-pin at 128",
-  "・鏡櫃最右門內\n・隔離變壓器型刮鬍刀插座（BS EN 61558-2-5）": "• Inside far-R mirror door\n• Isolating-transformer shaver socket (BS EN 61558-2-5)",
-  "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB": "Left fan: Noctua NF-A14 5V PWM (USB); left-bay sockets incl. 1 USB",
-  "・13A 雙孔＋單孔，在隱藏式蓋板正下方、對準電視\n・供電視、底燈、充電": "• 13A twin + single, right under hidden lid, on TV axis\n• TV, toe light, charging",
-  "左側格柵": "Left slatted panel"
+  "左側格柵": "Left slatted panel",
+  "英文版重寫給 Patrick：新加坡裝修常用詞、精簡；修正英文標籤重疊；「左側」分頁改「左側格柵」。": "English rewritten for the contractor in SG renovation terms; overlapping English labels fixed; \"Left side\" tab renamed \"Left slatted panel\"."
  }
 }
