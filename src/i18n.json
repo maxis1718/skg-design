@@ -1606,6 +1606,8 @@
   "雙鍵＋三鍵": "Double + triple",
   "電腦、螢幕": "Computer, monitor",
   "電視櫃底部內縮，裝暖光燈條；變壓器接固定迴路，由大門 SW-01 控制，不插 S-20": "Recessed TV console base with warm LED strip; driver on a fixed circuit switched at SW-01 by the main door, not plugged into S-20",
-  "風扇開關": "Fan switch"
+  "風扇開關": "Fan switch",
+  "女傭房門鉸鏈方向：建議放洗衣機側（不擋電器櫃拉出板，裝卸洗衣時先關門）": "Helper room door hinge side: suggest washer side (keeps appliance tower pull-outs clear; close door when loading laundry)",
+  "日常使用檢查：廚房檯面加兩組插座、書房與客房床頭加插座、女傭房門口加廚房燈開關、主臥門口加走廊燈開關；新增待拍板：女傭房門鉸鏈方向。": "Daily-use pass: two kitchen worktop sockets, study and guest bedside power, kitchen light switch at helper door, corridor light switch at master door; new decision: helper door hinge side."
  }
 }

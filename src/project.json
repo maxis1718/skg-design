@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R99",
+    "revision": "R100",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4895,6 +4895,10 @@
     {
       "id": "C107",
       "text": "電視櫃改回隱藏式蓋板：櫃面後緣 60 × 10 窄槽、活動蓋齊平帶指孔，插座在正下方。"
+    },
+    {
+      "id": "C108",
+      "text": "日常使用檢查：廚房檯面加兩組插座、書房與客房床頭加插座、女傭房門口加廚房燈開關、主臥門口加走廊燈開關；新增待拍板：女傭房門鉸鏈方向。"
     }
   ],
   "measurement_policy": {
@@ -24659,6 +24663,12 @@
       "id": "todo-master-wallcovering",
       "room": "master",
       "text": "提供主臥壁布型號（同現居款）",
+      "status": "open"
+    },
+    {
+      "id": "todo-helper-door-hinge",
+      "room": "helper",
+      "text": "女傭房門鉸鏈方向：建議放洗衣機側（不擋電器櫃拉出板，裝卸洗衣時先關門）",
       "status": "open"
     }
   ],
