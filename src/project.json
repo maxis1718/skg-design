@@ -11410,7 +11410,10 @@
               "y": 242.5,
               "label": "門端 →",
               "anchor": "end",
-              "size": 0.6
+              "size": 0.6,
+              "en": {
+                "x": 287
+              }
             }
           ],
           "hcuts": [
@@ -18607,7 +18610,11 @@
               "label": "插座",
               "size": 0.74,
               "anchor": "end",
-              "when": "closed"
+              "when": "closed",
+              "en": {
+                "lx": 107.0,
+                "anchor": "start"
+              }
             },
             {
               "type": "callout",
@@ -19611,7 +19618,7 @@
         },
         {
           "id": "end",
-          "name": "左側",
+          "name": "左側格柵",
           "kind": "front",
           "detail": false,
           "labels": false,
@@ -22183,7 +22190,7 @@
         },
         {
           "id": "end",
-          "name": "左側",
+          "name": "左側格柵",
           "kind": "front",
           "detail": false,
           "labels": false,
