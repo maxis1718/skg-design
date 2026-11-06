@@ -454,6 +454,8 @@ function levels(g, view, x0, x1) {
 function extras(g, list, state = ST) {
   for (let e of list || []) {
     if (e.when && e.when !== state) continue;
+    // e.en: English-only overrides (e.g. lx/ly/anchor) where the longer English label would collide.
+    if (e.en && typeof document !== 'undefined' && document.documentElement.lang === 'en') e = {...e, ...e.en};
     if (dryExtra(g, e) || toeExtra(g, e) || nwExtra(g, e) || helperExtra(g, e) || lcExtra(g, e)) continue;
     if (e.type === 'lid') { lidExtra(g, e, state); continue; }
     if (e.dxOpen && state === 'open') e = shift(e, e.dxOpen, 0);
