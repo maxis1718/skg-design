@@ -1017,13 +1017,13 @@
       "name": "女傭房",
       "english": "Helper’s room",
       "number": "07",
-      "focus": "收納床台、床頭電源、壁扇與床尾吊櫃",
+      "focus": "收納床台、床頭電源、壁扇與床尾層架",
       "elevation": "helper-wall",
       "plan": {
         "items": [
           {
             "label": "收納床台",
-            "value": "107 × 205 × 38 · 上掀蓋 ×3＋中段抽屜",
+            "value": "107 × 205 × 38 · 上掀蓋 ×3",
             "object": "helper-bed"
           },
           {
@@ -1045,8 +1045,8 @@
             "object": "helper-reading-lamp"
           },
           {
-            "label": "床尾吊櫃",
-            "value": "55 × 30 × 40 · 底 165",
+            "label": "床尾層架",
+            "value": "IKEA BURHULT / SIBBHULT Wall shelf 59x20 ×2 · 155／185",
             "object": "helper-wall-cabinet"
           },
           {
@@ -1057,8 +1057,8 @@
         ],
         "clearances": [
           {
-            "label": "坐床尾頭頂到吊櫃底",
-            "value": "32"
+            "label": "坐床尾頭頂到層板底",
+            "value": "20"
           },
           {
             "label": "站床上頭頂到吸頂燈",
@@ -1068,7 +1068,7 @@
         "build": [
           "床台牆到牆，床頭固定段 15",
           "三片上掀蓋鉸鍊在靠牆側，緩降撐桿；手扣槽開蓋，不裝把手",
-          "中段靠門側做抽屜 60 × 50、箱高 25，重型全拉滑軌，面板齊平；後半仍上掀",
+          "床尾牆靠門側裝 IKEA 層架 ×2，板面 155／185",
           "床側牆是掀蓋翻轉範圍，牆上不裝任何東西",
           "床頭牆離地 100 留閱讀壁燈出線，接 SW-11 左鍵",
           "窗做框內捲簾，不做窗簾盒；門下留 1.5 通風縫",
@@ -2145,31 +2145,31 @@
     {
       "id": "helper-wall-cabinet",
       "room_id": "helper",
-      "label": "Wall cabinet over the bed foot",
+      "label": "Open shelves over the bed foot",
       "bounds_pt": [
-        441.82,
-        333.3,
+        440.69,
+        336.13,
         457.32,
         341.8
       ],
-      "plan_horizontal_cm": 55.0,
-      "plan_vertical_cm": 30.0,
+      "plan_horizontal_cm": 59.0,
+      "plan_vertical_cm": 20.0,
       "nominal_width_cm": null,
       "nominal_depth_cm": null,
-      "height_cm": 40,
+      "height_cm": null,
       "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "Wall cabinet 55 W x 30 D x 40 H on the south wall, underside 165, against the east wall; the 52 on the window side is left for the wall fan and the curtain. The foot lid sweep stays below about 132 under it; seated head at the foot about 133.",
+      "notes": "Two IKEA BURHULT / SIBBHULT 59 × 20 wall shelves on the foot (south) wall, in the door-side corner (48–107 from the west wall), shelf tops 155 / 185. Replaces the R51 closed wall cabinet: daily items stay open. Brackets (18) bottom at 135.5, above the foot-lid sweep (≈131 at 75°); seated head at the foot ≈133 → 20 to the lower shelf.",
       "physical_drawing_indices": [],
-      "name": "女傭房床尾吊櫃",
-      "source_note": "55 × 30 × 40，底 165，雙開門",
+      "name": "女傭房床尾層架",
+      "source_note": "IKEA BURHULT / SIBBHULT Wall shelf 59x20 ×2，板面 155／185",
       "dimensions": {
         "w": {
-          "cm": 55,
+          "cm": 59,
           "status": "design"
         },
         "d": {
-          "cm": 30,
+          "cm": 20,
           "status": "design"
         }
       },
@@ -2741,7 +2741,7 @@
         "brand": null,
         "model": null
       },
-      "source_note": "外寬 60、內淨 55，到天花\n上櫃 · 微波 35 · 電鍋 38 · 電子鍋 31.6 · 鍋抽 45",
+      "source_note": "外寬 60、內淨 55，到天花\n上櫃 · 微波 35 · 電子鍋 31.6 · 電鍋 38 · 鍋抽 45",
       "status": "user-design",
       "onlyLayouts": [
         "window-sink",
@@ -5340,7 +5340,7 @@
             "兩衣櫃到頂 272",
             "層板底 24 V LED＋PIR 感應，櫃後留低位插座",
             "靠浴室那扇門內貼全身鏡",
-            "陽台門窗簾盒深 15，單軌拉繩遮光簾，繩固定在牆上張力器；簾收床頭端，拉繩在床尾端"
+            "陽台門窗簾盒深 15，單軌遮光簾"
           ]
         }
       }
@@ -5510,11 +5510,10 @@
           "build": [
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
             "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
-            "電視櫃底部內縮，裝暖光燈條；變壓器接固定迴路，由大門 SW-01 控制，不插 S-20",
+            "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
-            "左側風扇：Noctua NF-A14 5V PWM（USB），風扇預設常開；左格插座含一個 USB",
-            "左格放 Aqara Temperature and Humidity Sensor T1（經 Hub M3），超過 40°C 通知"
+            "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         }
       },
@@ -5682,11 +5681,10 @@
           "build": [
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
             "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
-            "電視櫃底部內縮，裝暖光燈條；變壓器接固定迴路，由大門 SW-01 控制，不插 S-20",
+            "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中間兩格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
             "天花：陽台窗簾盒（雙軌）；電視牆上方洗牆燈",
-            "左側風扇：Noctua NF-A14 5V PWM（USB），風扇預設常開；左格插座含一個 USB",
-            "左格放 Aqara Temperature and Humidity Sensor T1（經 Hub M3），超過 40°C 通知"
+            "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         },
         "objectOverrides": {
@@ -5838,14 +5836,14 @@
           "note": "47.2 × 28 機型頂留 5.4；久熱拉出散熱"
         },
         {
-          "zone": "中層 · 大同電鍋 15 人份",
-          "h": "淨高 38",
-          "note": "拉出蒸煮"
-        },
-        {
-          "zone": "下層 · 象印電子鍋＋飯匙",
+          "zone": "中層 · 象印電子鍋＋飯匙",
           "h": "淨高 31.6",
           "note": "現有，尺寸依 NS-ZAQ10"
+        },
+        {
+          "zone": "下層 · 大同電鍋 15 人份",
+          "h": "淨高 38",
+          "note": "拉出蒸煮"
         },
         {
           "zone": "鍋具抽屜",
@@ -7077,8 +7075,26 @@
             },
             {
               "kind": "tier",
+              "h": 38,
+              "label": "下層 · 大同電鍋 15 人份",
+              "short": "電鍋層",
+              "items": [
+                {
+                  "name": "大同電鍋",
+                  "w": 39,
+                  "h": 30,
+                  "sizeLabel": "39×30"
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
               "h": 31.6,
-              "label": "下層 · 象印電子鍋＋飯匙",
+              "label": "中層 · 象印電子鍋＋飯匙",
               "short": "電子鍋層",
               "items": [
                 {
@@ -7098,24 +7114,6 @@
                 }
               ],
               "gap": 2.5
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "tier",
-              "h": 38,
-              "label": "中層 · 大同電鍋 15 人份",
-              "short": "電鍋層",
-              "items": [
-                {
-                  "name": "大同電鍋",
-                  "w": 39,
-                  "h": 30,
-                  "sizeLabel": "39×30"
-                }
-              ]
             },
             {
               "kind": "board",
@@ -7579,7 +7577,7 @@
               "label": ""
             },
             {
-              "y": 90.2,
+              "y": 96.6,
               "label": ""
             },
             {
@@ -8085,8 +8083,26 @@
             },
             {
               "kind": "tier",
+              "h": 38,
+              "label": "下層 · 大同電鍋 15 人份",
+              "short": "電鍋層",
+              "items": [
+                {
+                  "name": "大同電鍋",
+                  "w": 39,
+                  "h": 30,
+                  "sizeLabel": "39×30"
+                }
+              ]
+            },
+            {
+              "kind": "board",
+              "h": 1.8
+            },
+            {
+              "kind": "tier",
               "h": 31.6,
-              "label": "下層 · 象印電子鍋＋飯匙",
+              "label": "中層 · 象印電子鍋＋飯匙",
               "short": "電子鍋層",
               "items": [
                 {
@@ -8106,24 +8122,6 @@
                 }
               ],
               "gap": 2.5
-            },
-            {
-              "kind": "board",
-              "h": 1.8
-            },
-            {
-              "kind": "tier",
-              "h": 38,
-              "label": "中層 · 大同電鍋 15 人份",
-              "short": "電鍋層",
-              "items": [
-                {
-                  "name": "大同電鍋",
-                  "w": 39,
-                  "h": 30,
-                  "sizeLabel": "39×30"
-                }
-              ]
             },
             {
               "kind": "board",
@@ -8538,7 +8536,7 @@
               "label": ""
             },
             {
-              "y": 90.2,
+              "y": 96.6,
               "label": ""
             },
             {
@@ -10186,7 +10184,7 @@
         {
           "zone": "最右門 · 牙刷",
           "h": "S-06 128",
-          "note": "S-06 13A 附開關＋USB-C，離地 128"
+          "note": "S-06 13A 單孔附開關，離地 128"
         },
         {
           "zone": "兩端收邊",
@@ -12037,14 +12035,14 @@
           "note": "47.2 × 28 機型頂留 5.4；久熱拉出散熱"
         },
         {
-          "zone": "中層 · 大同電鍋 15 人份",
-          "h": "淨高 38",
-          "note": "拉出蒸煮"
-        },
-        {
-          "zone": "下層 · 象印電子鍋＋飯匙",
+          "zone": "中層 · 象印電子鍋＋飯匙",
           "h": "淨高 31.6",
           "note": "現有，尺寸依 NS-ZAQ10"
+        },
+        {
+          "zone": "下層 · 大同電鍋 15 人份",
+          "h": "淨高 38",
+          "note": "拉出蒸煮"
         },
         {
           "zone": "鍋具抽屜",
@@ -15891,12 +15889,7 @@
         {
           "zone": "收納格 ×3",
           "h": "32.4",
-          "note": "內寬約 103、長 63.3；登機箱平放、收納箱、換季被。中段後半上掀，前半是抽屜。"
-        },
-        {
-          "zone": "中段抽屜",
-          "h": "箱高 25",
-          "note": "寬 60（沿床長）× 深 50，往門洞拉；重型全拉滑軌；面板與封板齊平，手扣槽。"
+          "note": "內寬約 103、長 63.3；登機箱平放、收納箱、換季被。"
         },
         {
           "zone": "底板",
@@ -15909,6 +15902,8 @@
         "每片靠牆側 3 個鉸鏈或 1 支長鉸鏈；蓋下加橫肋，跪坐不下陷。"
       ],
       "rationale": [
+        "日常用品放床尾牆的開放層架，一伸手就拿到；床底三格只放少用的（登機箱、換季被、收納箱）。",
+        "床頭維持在離門遠的一端：離門洞 80（另一端只有 45），看不到床頭；窗和壁扇在床尾，風從腳往上吹；S-13／SW-11 不用動。",
         "三片上掀：每片獨立開，三折床墊只折一段。",
         "不做整片掀床：107 × 190 連床墊太重，撐桿力大且開起來擋窗。",
         "床頭固定段 15 吸收 205 − 190。"
@@ -15917,6 +15912,1679 @@
         "窗台高度"
       ],
       "views": [
+        {
+          "id": "iso",
+          "name": "45° 透視",
+          "kind": "svg",
+          "viewBox": [
+            -92.0,
+            -350.5,
+            503.0,
+            426.4
+          ],
+          "items": [
+            {
+              "el": "path",
+              "d": "M0.0 -0.0L177.54 -102.5L177.54 -342.5L0.0 -240.0Z",
+              "fill": "#f1efe8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M177.54 -102.5L270.2 -49.0L270.2 -289.0L177.54 -342.5Z",
+              "fill": "#e9e6dd",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M138.65 -180.05L175.37 -201.25L175.37 -311.25L138.65 -290.05Z",
+              "fill": "#dde9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M157.01 -190.65L157.01 -300.65",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M206.55 -312.75L195.29 -304.25",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 1.2,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M209.15 -275.75L208.91 -279.01L208.21 -282.45L207.06 -285.96L205.5 -289.43L203.58 -292.75L201.35 -295.84L198.89 -298.59L196.26 -300.91L193.56 -302.75L190.85 -304.04L188.23 -304.74L185.76 -304.84L183.54 -304.32L181.62 -303.21L180.06 -301.54L178.91 -299.36L178.21 -296.74L177.97 -293.75L178.21 -290.49L178.91 -287.05L180.06 -283.54L181.62 -280.07L183.54 -276.75L185.76 -273.66L188.23 -270.91L190.85 -268.59L193.56 -266.75L196.26 -265.46L198.89 -264.76L201.35 -264.66L203.58 -265.18L205.5 -266.29L207.06 -267.96L208.21 -270.14L208.91 -272.76Z",
+              "fill": "#fbfbf8",
+              "stroke": "#2f443c",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M203.08 -279.25L202.94 -281.24L202.51 -283.34L201.81 -285.49L200.85 -287.61L199.68 -289.64L198.32 -291.53L196.81 -293.21L195.21 -294.63L193.56 -295.75L191.9 -296.54L190.3 -296.97L188.79 -297.03L187.43 -296.71L186.26 -296.03L185.31 -295.01L184.6 -293.68L184.18 -292.08L184.03 -290.25L184.18 -288.26L184.6 -286.16L185.31 -284.01L186.26 -281.89L187.43 -279.86L188.79 -277.97L190.3 -276.29L191.9 -274.87L193.56 -273.75L195.21 -272.96L196.81 -272.53L198.32 -272.47L199.68 -272.79L200.85 -273.47L201.81 -274.49L202.51 -275.82L202.94 -277.42Z",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "circle",
+              "cx": 193.56,
+              "cy": -284.75,
+              "r": 2,
+              "fill": "#4b5751"
+            },
+            {
+              "el": "path",
+              "d": "M223.0 -211.75L223.0 -229.75L207.41 -220.75",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M266.3 -186.75L266.3 -204.75L250.71 -195.75",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M201.78 -222.0L252.88 -192.5L252.88 -194.0L201.78 -223.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M252.88 -192.5L270.2 -202.5L270.2 -204.0L252.88 -194.0Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M201.78 -223.5L252.88 -194.0L270.2 -204.0L219.1 -233.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M223.0 -241.75L223.0 -259.75L207.41 -250.75",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M266.3 -216.75L266.3 -234.75L250.71 -225.75",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M201.78 -252.0L252.88 -222.5L252.88 -224.0L201.78 -253.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M252.88 -222.5L270.2 -232.5L270.2 -234.0L252.88 -224.0Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M201.78 -253.5L252.88 -224.0L270.2 -234.0L219.1 -263.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M206.98 -222.5L227.76 -210.5L227.76 -222.5L206.98 -234.5Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M227.76 -210.5L241.62 -218.5L241.62 -230.5L227.76 -222.5Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M206.98 -234.5L227.76 -222.5L241.62 -230.5L220.84 -242.5Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M206.98 -234.5L227.76 -222.5L227.76 -231.5L206.98 -243.5Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M227.76 -222.5L241.62 -230.5L241.62 -239.5L227.76 -231.5Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M206.98 -243.5L227.76 -231.5L241.62 -239.5L220.84 -251.5Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M230.36 -208.0L251.15 -196.0L251.15 -211.0L230.36 -223.0Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M251.15 -196.0L266.74 -205.0L266.74 -220.0L251.15 -211.0Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M230.36 -223.0L251.15 -211.0L266.74 -220.0L245.95 -232.0Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M209.58 -252.0L232.09 -239.0L232.09 -249.0L209.58 -262.0Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M232.09 -239.0L245.09 -246.5L245.09 -256.5L232.09 -249.0Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M209.58 -262.0L232.09 -249.0L245.09 -256.5L222.57 -269.5Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M238.16 -236.5L252.88 -228.0L252.88 -246.0L238.16 -254.5Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M252.88 -228.0L265.0 -235.0L265.0 -253.0L252.88 -246.0Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M238.16 -254.5L252.88 -246.0L265.0 -253.0L250.28 -261.5Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M125.03 -74.18L214.58 -22.48L267.86 -53.25L178.31 -104.95Z",
+              "fill": "#e2ddd2",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M125.03 -74.18L178.31 -104.95L178.31 -137.35L125.03 -106.58Z",
+              "fill": "#d6cebf",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M178.31 -104.95L267.86 -53.25L267.86 -85.65L178.31 -137.35Z",
+              "fill": "#ece6da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M133.37 -72.8L164.54 -54.8L164.54 -77.8L133.37 -95.8Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M164.54 -54.8L212.18 -82.3L212.18 -105.3L164.54 -77.8Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M133.37 -95.8L164.54 -77.8L212.18 -105.3L181.0 -123.3Z",
+              "fill": "#e8eef0",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M174.94 -52.8L214.77 -29.8L214.77 -44.0L174.94 -67.0Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M214.77 -29.8L258.08 -54.8L258.08 -69.0L214.77 -44.0Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M174.94 -67.0L214.77 -44.0L258.08 -69.0L218.24 -92.0Z",
+              "fill": "#f4efe4",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M122.82 -108.91L177.41 -140.43L201.39 -229.93L146.8 -198.42Z",
+              "fill": "#e8dfcd",
+              "stroke": "#2f443c",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M175.67 -109.42L183.0 -177.7",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 0.8,
+              "stroke-linecap": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M70.17 -42.52L159.72 9.18L213.02 -21.58L123.47 -73.28Z",
+              "fill": "#e2ddd2",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M70.17 -42.52L123.47 -73.28L123.47 -105.68L70.17 -74.92Z",
+              "fill": "#d6cebf",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M123.47 -73.28L213.02 -21.58L213.02 -53.98L123.47 -105.68Z",
+              "fill": "#ece6da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M78.81 -41.3L113.45 -21.3L113.45 -49.3L78.81 -69.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M113.45 -21.3L160.21 -48.3L160.21 -76.3L113.45 -49.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M78.81 -69.3L113.45 -49.3L160.21 -76.3L125.57 -96.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M120.38 -17.3L155.02 2.7L155.02 -25.3L120.38 -45.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M155.02 2.7L201.78 -24.3L201.78 -52.3L155.02 -25.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M120.38 -45.3L155.02 -25.3L201.78 -52.3L167.14 -72.3Z",
+              "fill": "#efe6d6",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M67.97 -77.24L122.56 -108.76L146.54 -198.27L91.95 -166.75Z",
+              "fill": "#e8dfcd",
+              "stroke": "#2f443c",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M120.83 -77.76L128.16 -146.04",
+              "fill": "none",
+              "stroke": "#4b5751",
+              "stroke-width": 0.8,
+              "stroke-linecap": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M0.0 -0.0L92.66 53.5L92.66 15.5L0.0 -38.0Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M92.66 53.5L105.66 46.0L105.66 8.0L92.66 15.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M0.0 -38.0L92.66 15.5L105.66 8.0L12.99 -45.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M12.99 -7.5L105.66 46.0L105.66 8.0L12.99 -45.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 46.0L160.5 14.34L160.5 -23.66L105.66 8.0Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M12.99 -45.5L105.66 8.0L160.5 -23.66L67.84 -77.16Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -45.5L105.66 7.0L105.66 -3.0L14.72 -55.5Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 7.0L158.74 -23.65L158.74 -33.65L105.66 -3.0Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -55.5L105.66 -3.0L158.74 -33.65L67.81 -86.15Z",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -55.5L105.66 -3.0L105.66 -13.0L14.72 -65.5Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 -3.0L158.74 -33.65L158.74 -43.65L105.66 -13.0Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -65.5L105.66 -13.0L158.74 -43.65L67.81 -96.15Z",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -65.5L105.66 -13.0L105.66 -23.0L14.72 -75.5Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 -13.0L158.74 -43.65L158.74 -53.65L105.66 -23.0Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M14.72 -75.5L105.66 -23.0L158.74 -53.65L67.81 -106.15Z",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M160.5 14.34L270.2 -49.0L270.2 -85.2L160.5 -21.87Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M215.35 -17.33L215.35 -53.53",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M0.0 -0.0L92.66 53.5L92.66 15.5L0.0 -38.0Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M92.66 53.5L270.2 -49.0L270.2 -87.0L92.66 15.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M0.0 -38.0L92.66 15.5L270.2 -87.0L177.54 -140.5Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 11.8L105.66 8.0L12.99 -45.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M160.5 -19.87L160.5 -23.66L67.84 -77.16",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M215.35 -51.53L215.35 -55.33L122.69 -108.83",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M12.99 -45.5L105.66 8.0L105.66 -2.0L12.99 -55.5Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M105.66 8.0L270.2 -87.0L270.2 -97.0L105.66 -2.0Z",
+              "fill": "#d6e0da",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M12.99 -55.5L105.66 -2.0L270.2 -97.0L177.54 -150.5Z",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M35.51 -46.5L90.93 -14.5L90.93 -21.5L35.51 -53.5Z",
+              "fill": "#f4f5f1",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M90.93 -14.5L109.12 -25.0L109.12 -32.0L90.93 -21.5Z",
+              "fill": "#f4f5f1",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M35.51 -53.5L90.93 -21.5L109.12 -32.0L53.69 -64.0Z",
+              "fill": "#f4f5f1",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M160.5 -23.66L160.5 -33.66L67.84 -87.16",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3,
+              "stroke-dasharray": "1.2 1",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M215.35 -55.33L215.35 -65.33L122.69 -118.83",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3,
+              "stroke-dasharray": "1.2 1",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M161.95 18.5L231.23 -21.5",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "path",
+              "d": "M161.95 16.5L161.95 20.5",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "path",
+              "d": "M231.23 -23.5L231.23 -19.5",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "text",
+              "x": 200.59,
+              "y": 7.5,
+              "font-size": 8.1,
+              "fill": "#a96f47",
+              "label": "門洞 80"
+            },
+            {
+              "el": "path",
+              "d": "M156.75 -290.5L121 -250.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "circle",
+              "cx": 156.75,
+              "cy": -290.5,
+              "r": 0.9,
+              "fill": "#7f8c84"
+            },
+            {
+              "el": "text",
+              "x": 120,
+              "y": -248,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "窗",
+              "text-anchor": "end"
+            },
+            {
+              "el": "path",
+              "d": "M193.56 -302.75L211 -297.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "circle",
+              "cx": 193.56,
+              "cy": -302.75,
+              "r": 0.9,
+              "fill": "#7f8c84"
+            },
+            {
+              "el": "text",
+              "x": 212,
+              "y": -295,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "壁扇 14 吋"
+            },
+            {
+              "el": "path",
+              "d": "M261.54 -229.0L285 -152.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "circle",
+              "cx": 261.54,
+              "cy": -229.0,
+              "r": 0.9,
+              "fill": "#7f8c84"
+            },
+            {
+              "el": "text",
+              "x": 286,
+              "y": -150,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "層架 ×2 · 板面 155／185"
+            },
+            {
+              "el": "path",
+              "d": "M261.54 -199.0L285 -137.82",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "circle",
+              "cx": 261.54,
+              "cy": -199.0,
+              "r": 0.9,
+              "fill": "#7f8c84"
+            },
+            {
+              "el": "text",
+              "x": 286,
+              "y": -136,
+              "font-size": 7.02,
+              "fill": "#2f443c",
+              "label": "IKEA BURHULT 59 × 20"
+            },
+            {
+              "el": "path",
+              "d": "M173.81 -214.01L106 -230.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "circle",
+              "cx": 173.81,
+              "cy": -214.01,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 105,
+              "y": -228,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "床尾蓋 · 掀起 75°",
+              "text-anchor": "end",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M119.25 -182.51L71 -192.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "circle",
+              "cx": 119.25,
+              "cy": -182.51,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 70,
+              "y": -190,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "中段蓋 · 掀起 75°",
+              "text-anchor": "end",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M101.32 -56.5L21 -130.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "circle",
+              "cx": 101.32,
+              "cy": -56.5,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 20,
+              "y": -128,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "三折床墊疊在床頭段",
+              "text-anchor": "end",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M188.79 -91.8L299 -62.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "circle",
+              "cx": 188.79,
+              "cy": -91.8,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 300,
+              "y": -60,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "登機箱平放",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M178.4 -38.8L299 -12.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "open"
+            },
+            {
+              "el": "circle",
+              "cx": 178.4,
+              "cy": -38.8,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 300,
+              "y": -10,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "收納箱 ×2",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M164.54 -73.0L299 -32.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "closed"
+            },
+            {
+              "el": "circle",
+              "cx": 164.54,
+              "cy": -73.0,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "closed"
+            },
+            {
+              "el": "text",
+              "x": 300,
+              "y": -30,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "三折床墊 107 × 190 × 10",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M72.75 -43.0L21 -102.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "when": "closed"
+            },
+            {
+              "el": "circle",
+              "cx": 72.75,
+              "cy": -43.0,
+              "r": 0.9,
+              "fill": "#7f8c84",
+              "when": "closed"
+            },
+            {
+              "el": "text",
+              "x": 20,
+              "y": -100,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "枕頭在離門遠的一端",
+              "text-anchor": "end",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M99.16 11.75L41 57.9",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "circle",
+              "cx": 99.16,
+              "cy": 11.75,
+              "r": 0.9,
+              "fill": "#7f8c84"
+            },
+            {
+              "el": "text",
+              "x": 40,
+              "y": 60,
+              "font-size": 8.1,
+              "fill": "#2f443c",
+              "label": "床頭固定段 15",
+              "text-anchor": "end"
+            },
+            {
+              "el": "text",
+              "x": 92.66,
+              "y": 65.5,
+              "font-size": 8.64,
+              "fill": "#a96f47",
+              "label": "床頭",
+              "text-anchor": "middle",
+              "font-weight": 600
+            },
+            {
+              "el": "text",
+              "x": 280.2,
+              "y": -45.0,
+              "font-size": 8.64,
+              "fill": "#a96f47",
+              "label": "床尾",
+              "font-weight": 600
+            }
+          ],
+          "aria": "女傭房 45° 透視：上掀蓋、床尾層架"
+        },
+        {
+          "id": "top",
+          "name": "俯視",
+          "kind": "svg",
+          "viewBox": [
+            -40,
+            -20,
+            190,
+            250
+          ],
+          "items": [
+            {
+              "el": "path",
+              "d": "M-4 -4L111 -4L111 0L-4 0Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M-4 205L111 205L111 209L-4 209Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M-4 0L0 0L0 160.1L-4 160.1Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M-4 202.5L0 202.5L0 205.0L-4 205.0Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M107 0L111 0L111 80L107 80Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M107 160L111 160L111 205L107 205Z",
+              "fill": "#4b5751",
+              "stroke": "none",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M-4 160.1L0 160.1L0 202.5L-4 202.5Z",
+              "fill": "#dde9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M-2 160.1L-2 202.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M0 0L107 0L107 205L0 205Z",
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0 15L107 15",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "path",
+              "d": "M0 78.33L107 78.33",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "path",
+              "d": "M0 141.67L107 141.67",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35
+            },
+            {
+              "el": "path",
+              "d": "M0.8 30.8325L3.2 30.8325",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0.8 62.4975L3.2 62.4975",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0.8 94.16499999999999L3.2 94.16499999999999",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0.8 125.835L3.2 125.835",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0.8 157.5025L3.2 157.5025",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M0.8 189.1675L3.2 189.1675",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1.1,
+              "stroke-linecap": "round"
+            },
+            {
+              "el": "path",
+              "d": "M1.5 16.5L105.5 16.5L105.5 203.5L1.5 203.5Z",
+              "fill": "none",
+              "stroke": "#b9c2bb",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.6 1.1",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M22 19L86 19L86 40L22 40Z",
+              "fill": "#f4f5f1",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "closed"
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": 31.5,
+              "font-size": 6.0,
+              "fill": "#7f8c84",
+              "label": "枕頭",
+              "text-anchor": "middle",
+              "when": "closed"
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": 112,
+              "font-size": 6.48,
+              "fill": "#7f8c84",
+              "label": "三折床墊 107 × 190",
+              "text-anchor": "middle",
+              "when": "closed"
+            },
+            {
+              "el": "path",
+              "d": "M1.5 16.5L105.5 16.5L105.5 76.8L1.5 76.8Z",
+              "fill": "#e7ede9",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": 49,
+              "font-size": 6.48,
+              "fill": "#2f443c",
+              "label": "床墊疊起",
+              "text-anchor": "middle",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M1.8 79.23L105.2 79.23L105.2 140.76999999999998L1.8 140.76999999999998Z",
+              "fill": "#e2ddd2",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M0 78.48L27.69363782596972 78.48L27.69363782596972 141.51999999999998L0 141.51999999999998Z",
+              "fill": "#e8dfcd",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 14.35,
+              "y": 112.0,
+              "font-size": 5.52,
+              "fill": "#2f443c",
+              "label": "掀起",
+              "text-anchor": "middle",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M1.8 142.57L105.2 142.57L105.2 204.10000000000002L1.8 204.10000000000002Z",
+              "fill": "#e2ddd2",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.25,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M0 141.82L27.69363782596972 141.82L27.69363782596972 204.85000000000002L0 204.85000000000002Z",
+              "fill": "#e8dfcd",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 14.35,
+              "y": 175.33,
+              "font-size": 5.52,
+              "fill": "#2f443c",
+              "label": "掀起",
+              "text-anchor": "middle",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M34 84L68 84L68 136L34 136Z",
+              "fill": "none",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.4 1",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M72 84L102 84L102 136L72 136Z",
+              "fill": "none",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.4 1",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 68,
+              "y": 112,
+              "font-size": 6.0,
+              "fill": "#2f443c",
+              "label": "收納箱 ×2",
+              "text-anchor": "middle",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M30 146L66 146L66 182L30 182Z",
+              "fill": "none",
+              "stroke": "#55695f",
+              "stroke-width": 0.3,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.4 1",
+              "when": "open"
+            },
+            {
+              "el": "text",
+              "x": 48,
+              "y": 166,
+              "font-size": 6.0,
+              "fill": "#2f443c",
+              "label": "登機箱",
+              "text-anchor": "middle",
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M48 185L107 185L107 205L48 205Z",
+              "fill": "#f6f4ee",
+              "stroke": "#2f443c",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.6 1"
+            },
+            {
+              "el": "text",
+              "x": 77.5,
+              "y": 197,
+              "font-size": 5.28,
+              "fill": "#2f443c",
+              "label": "層架 59 × 20 · 155／185",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "path",
+              "d": "M17 190L50 190L50 205L17 205Z",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.35,
+              "stroke-linejoin": "round",
+              "stroke-dasharray": "1.6 1"
+            },
+            {
+              "el": "text",
+              "x": 33.5,
+              "y": 199.5,
+              "font-size": 5.76,
+              "fill": "#7f8c84",
+              "label": "壁扇",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "path",
+              "d": "M106.3 167.4L106.3 197.4",
+              "fill": "none",
+              "stroke": "#2f443c",
+              "stroke-width": 1
+            },
+            {
+              "el": "text",
+              "x": 103,
+              "y": 183,
+              "font-size": 5.52,
+              "fill": "#7f8c84",
+              "label": "鏡",
+              "text-anchor": "end"
+            },
+            {
+              "el": "circle",
+              "cx": 105.8,
+              "cy": 44,
+              "r": 0.9,
+              "fill": "#2f443c"
+            },
+            {
+              "el": "circle",
+              "cx": 105.8,
+              "cy": 56,
+              "r": 0.9,
+              "fill": "#2f443c"
+            },
+            {
+              "el": "circle",
+              "cx": 105.8,
+              "cy": 68,
+              "r": 0.9,
+              "fill": "#2f443c"
+            },
+            {
+              "el": "text",
+              "x": 103,
+              "y": 58,
+              "font-size": 5.52,
+              "fill": "#7f8c84",
+              "label": "掛鉤",
+              "text-anchor": "end"
+            },
+            {
+              "el": "path",
+              "d": "M91.4 0.3L100.0 0.3L100.0 2.9L91.4 2.9Z",
+              "fill": "#fff",
+              "stroke": "#c96f4a",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "text",
+              "x": 95.7,
+              "y": 8.6,
+              "font-size": 5.04,
+              "fill": "#c96f4a",
+              "label": "S-13",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "path",
+              "d": "M72.7 0.3L79.10000000000001 0.3L79.10000000000001 2.9L72.7 2.9Z",
+              "fill": "#fff",
+              "stroke": "#6a4f97",
+              "stroke-width": 0.4,
+              "stroke-linejoin": "round"
+            },
+            {
+              "el": "text",
+              "x": 75.9,
+              "y": 8.6,
+              "font-size": 5.04,
+              "fill": "#6a4f97",
+              "label": "SW-11",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "path",
+              "d": "M111 80L111 160",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3,
+              "stroke-dasharray": "1.4 1"
+            },
+            {
+              "el": "text",
+              "x": 116,
+              "y": 122,
+              "font-size": 6.24,
+              "fill": "#a96f47",
+              "label": "門洞 80"
+            },
+            {
+              "el": "text",
+              "x": -8,
+              "y": 181.3,
+              "font-size": 6.0,
+              "fill": "#7f8c84",
+              "label": "窗",
+              "text-anchor": "end"
+            },
+            {
+              "el": "path",
+              "d": "M-14 0L-14 205",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M-15.4 0L-12.6 0",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M-15.4 15L-12.6 15",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M-15.4 78.33L-12.6 78.33",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M-15.4 141.67L-12.6 141.67",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M-15.4 205L-12.6 205",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "text",
+              "x": -16,
+              "y": 9.2,
+              "font-size": 5.76,
+              "fill": "#a96f47",
+              "label": "15",
+              "text-anchor": "end"
+            },
+            {
+              "el": "text",
+              "x": -16,
+              "y": 48.37,
+              "font-size": 5.76,
+              "fill": "#a96f47",
+              "label": "63.3",
+              "text-anchor": "end"
+            },
+            {
+              "el": "text",
+              "x": -16,
+              "y": 111.7,
+              "font-size": 5.76,
+              "fill": "#a96f47",
+              "label": "63.3",
+              "text-anchor": "end"
+            },
+            {
+              "el": "text",
+              "x": -16,
+              "y": 175.03,
+              "font-size": 5.76,
+              "fill": "#a96f47",
+              "label": "63.3",
+              "text-anchor": "end"
+            },
+            {
+              "el": "path",
+              "d": "M0 -10L107 -10",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M0 -11.4L0 -8.6",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "path",
+              "d": "M107 -11.4L107 -8.6",
+              "fill": "none",
+              "stroke": "#a96f47",
+              "stroke-width": 0.3
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": -12,
+              "font-size": 6.0,
+              "fill": "#a96f47",
+              "label": "107",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": 8.9,
+              "font-size": 5.28,
+              "fill": "#7f8c84",
+              "label": "床頭固定段",
+              "text-anchor": "middle"
+            },
+            {
+              "el": "text",
+              "x": 53.5,
+              "y": 223,
+              "font-size": 5.76,
+              "fill": "#2f443c",
+              "label": "床頭在離門遠的一端；床尾牆：層架＋壁扇",
+              "text-anchor": "middle"
+            }
+          ],
+          "aria": "女傭房俯視"
+        },
         {
           "id": "front",
           "name": "正立面",
@@ -16110,28 +17778,6 @@
               "x1": 125,
               "y": 150,
               "label": "門洞 80"
-            },
-            {
-              "type": "rect",
-              "x": 64.5,
-              "y": 5,
-              "w": 60,
-              "h": 28.5,
-              "fill": "#f6f4ee",
-              "stroke": "#2f443c",
-              "sw": 0.3,
-              "drawer": true,
-              "label": "抽屜"
-            },
-            {
-              "type": "rect",
-              "x": 84.5,
-              "y": 31.5,
-              "w": 20,
-              "h": 1.2,
-              "fill": "#b9b2a3",
-              "stroke": "none",
-              "drawer": true
             }
           ]
         },
@@ -16142,7 +17788,7 @@
           "ref": "main",
           "height": 160,
           "noCeiling": true,
-          "extension": 52,
+          "extension": 20,
           "labelRoom": 30,
           "levels": [
             {
@@ -16205,6 +17851,16 @@
               "stroke": "none"
             },
             {
+              "type": "rect",
+              "x": 105.2,
+              "y": 0,
+              "w": 1.8,
+              "h": 34.2,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35
+            },
+            {
               "type": "lid",
               "section": true,
               "hx": 0,
@@ -16235,9 +17891,9 @@
             {
               "type": "device",
               "when": "open",
-              "x": 8,
+              "x": 30,
               "y": 3.8,
-              "w": 40,
+              "w": 55,
               "h": 23,
               "dashed": true,
               "label": "登機箱平放"
@@ -16256,7 +17912,7 @@
               "x": 106.1,
               "y": 35.2,
               "lx": 112,
-              "ly": 41,
+              "ly": 28,
               "label": "手扣槽 2"
             },
             {
@@ -16272,92 +17928,13 @@
               "y": 110,
               "label": "門側",
               "anchor": "start"
-            },
-            {
-              "type": "rect",
-              "x": 105.2,
-              "y": 0,
-              "w": 1.8,
-              "h": 5,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "drawer": true
-            },
-            {
-              "type": "rect",
-              "x": 105.2,
-              "y": 33.5,
-              "w": 1.8,
-              "h": 0.7,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "drawer": true
-            },
-            {
-              "type": "rect",
-              "x": 55,
-              "y": 3.8,
-              "w": 1.8,
-              "h": 32.4,
-              "fill": "#d3c4aa",
-              "stroke": "none",
-              "drawer": true
-            },
-            {
-              "type": "rect",
-              "x": 57.5,
-              "y": 5.6,
-              "w": 47.7,
-              "h": 25,
-              "fill": "none",
-              "stroke": "#7f8c84",
-              "sw": 0.3,
-              "dashed": true,
-              "when": "closed",
-              "drawer": true
-            },
-            {
-              "type": "rect",
-              "x": 105.2,
-              "y": 5,
-              "w": 1.8,
-              "h": 28.5,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "closed",
-              "drawer": true
-            },
-            {
-              "type": "rect",
-              "x": 107.5,
-              "y": 5.6,
-              "w": 47.7,
-              "h": 25,
-              "fill": "#f6f4ee",
-              "stroke": "#7f8c84",
-              "sw": 0.3,
-              "when": "open",
-              "drawer": true,
-              "label": "抽屜全拉 50"
-            },
-            {
-              "type": "rect",
-              "x": 155.2,
-              "y": 5,
-              "w": 1.8,
-              "h": 28.5,
-              "fill": "#fbfaf5",
-              "stroke": "#2f443c",
-              "sw": 0.35,
-              "when": "open",
-              "drawer": true
             }
           ],
           "depthLabel": "床台寬 107"
         }
+      ],
+      "sources": [
+        "https://www.ikea.com/sg/en/p/burhult-sibbhult-wall-shelf-white-white-s69325964"
       ]
     },
     "washer-dryer": {
@@ -16572,25 +18149,36 @@
               "sub": "高度待確認"
             },
             {
-              "type": "rect",
-              "x": 0,
-              "y": 165,
-              "w": 30,
-              "h": 40,
-              "fill": "#fbfaf5",
-              "stroke": "#7f8c84",
-              "sw": 0.3,
-              "dashed": true,
-              "label": "吊櫃",
-              "size": 0.5
-            },
-            {
               "type": "h-fan",
               "side": true,
               "x": 0,
               "y": 206.5,
               "r": 18,
               "dir": 1
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 153.5,
+              "w": 20,
+              "h": 1.5,
+              "fill": "#fbfaf5",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true,
+              "label": "層架",
+              "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 183.5,
+              "w": 20,
+              "h": 1.5,
+              "fill": "#fbfaf5",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true
             }
           ],
           "extras": [
@@ -16989,13 +18577,7 @@
           "labels": true,
           "width": 107,
           "font": 5.4,
-          "units": [
-            {
-              "ref": "cab",
-              "x": 0,
-              "y": 165
-            }
-          ],
+          "units": [],
           "under": [
             {
               "type": "wall",
@@ -17091,13 +18673,124 @@
               "label": "轉角是窗",
               "anchor": "end",
               "size": 0.55
+            },
+            {
+              "type": "rect",
+              "x": 3.9,
+              "y": 135.5,
+              "w": 1.2,
+              "h": 18,
+              "fill": "#e4e6e2",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "shelf": true
+            },
+            {
+              "type": "rect",
+              "x": 53.9,
+              "y": 135.5,
+              "w": 1.2,
+              "h": 18,
+              "fill": "#e4e6e2",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "shelf": true
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 153.5,
+              "w": 59,
+              "h": 1.5,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "shelf": true
+            },
+            {
+              "type": "rect",
+              "x": 3.9,
+              "y": 165.5,
+              "w": 1.2,
+              "h": 18,
+              "fill": "#e4e6e2",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "shelf": true
+            },
+            {
+              "type": "rect",
+              "x": 53.9,
+              "y": 165.5,
+              "w": 1.2,
+              "h": 18,
+              "fill": "#e4e6e2",
+              "stroke": "#2f443c",
+              "sw": 0.25,
+              "shelf": true
+            },
+            {
+              "type": "rect",
+              "x": 0,
+              "y": 183.5,
+              "w": 59,
+              "h": 1.5,
+              "fill": "#fbfaf5",
+              "stroke": "#2f443c",
+              "sw": 0.35,
+              "shelf": true
+            },
+            {
+              "type": "device",
+              "x": 4,
+              "y": 155,
+              "w": 24,
+              "h": 12,
+              "fill": "#f4efe4",
+              "label": "衣物",
+              "shelf": true
+            },
+            {
+              "type": "device",
+              "x": 31,
+              "y": 155,
+              "w": 24,
+              "h": 15,
+              "fill": "#efe6d6",
+              "label": "盥洗籃",
+              "shelf": true
+            },
+            {
+              "type": "device",
+              "x": 6,
+              "y": 185,
+              "w": 26,
+              "h": 10,
+              "fill": "#e8eef0",
+              "label": "毛巾",
+              "shelf": true
+            },
+            {
+              "type": "device",
+              "x": 37,
+              "y": 185,
+              "w": 17,
+              "h": 18,
+              "fill": "#f4efe4",
+              "shelf": true
+            },
+            {
+              "type": "note",
+              "x": 29.5,
+              "y": 143,
+              "label": "IKEA BURHULT 59 × 20 ×2",
+              "size": 0.5,
+              "shelf": true
             }
           ],
           "hcuts": [
             0,
-            55,
-            57,
-            90,
+            59,
             107
           ],
           "totalLabel": "107",
@@ -17107,16 +18800,12 @@
               "label": "台面"
             },
             {
-              "y": 165,
-              "label": "櫃底"
+              "y": 155,
+              "label": "層板"
             },
             {
-              "y": 180,
-              "label": "扇底"
-            },
-            {
-              "y": 205,
-              "label": "櫃頂"
+              "y": 185,
+              "label": "層板"
             }
           ]
         },
@@ -17234,16 +18923,27 @@
             },
             {
               "type": "rect",
-              "x": 175,
-              "y": 165,
-              "w": 30,
-              "h": 40,
+              "x": 185,
+              "y": 153.5,
+              "w": 20,
+              "h": 1.5,
               "fill": "#fbfaf5",
               "stroke": "#7f8c84",
               "sw": 0.3,
               "dashed": true,
-              "label": "吊櫃",
+              "label": "層架",
               "size": 0.5
+            },
+            {
+              "type": "rect",
+              "x": 185,
+              "y": 183.5,
+              "w": 20,
+              "h": 1.5,
+              "fill": "#fbfaf5",
+              "stroke": "#7f8c84",
+              "sw": 0.3,
+              "dashed": true
             }
           ],
           "extras": [
@@ -17352,9 +19052,9 @@
           "note": "Mistral MWF1454DR-G 14 吋 DC；固定朝床中段往下吹，不擺頭"
         },
         {
-          "zone": "床尾吊櫃",
-          "h": "165–205",
-          "note": "55 × 30 × 40，雙開門、內一層板，下緣扣手"
+          "zone": "床尾層架",
+          "h": "155／185",
+          "note": "IKEA BURHULT / SIBBHULT Wall shelf, white/white, 59x20 cm ×2（693.259.64，S$4.90），每片 10 kg；靠門側牆角"
         },
         {
           "zone": "閱讀壁燈",
@@ -17376,13 +19076,15 @@
         "天花 240：站在床上頭頂約 213、舉手約 260，吸頂風扇扇葉底約 218、無葉風扇燈厚 15–25 都會撞頭 → 用壁扇。",
         "壁扇固定不擺頭：14 吋風到床頭散開約 60–80，蓋住床寬 107；擺頭反而時有時無。",
         "BARLAST 單色溫：H1 斷電再通電不會跳色；S$9.90，壞了整盞換。",
-        "吊櫃底 165：蓋子翻轉在吊櫃下方最高約 132；坐在床尾頭頂約 133。"
+        "層板 155／185：床尾蓋翻到 75° 最高約 131，托架底 135.5 不撞；坐在床尾頭頂約 133，到板底 20。"
       ],
       "open_questions": [
         "窗台高度與窗扇開法",
         "有無假天花"
       ],
-      "sources": []
+      "sources": [
+        "https://www.ikea.com/sg/en/p/burhult-sibbhult-wall-shelf-white-white-s69325964"
+      ]
     },
     "helper-fan": {
       "alias": "helper-wall",
@@ -18017,6 +19719,14 @@
               "x1": 291.3,
               "y": -7.5,
               "label": "8.7"
+            },
+            {
+              "type": "h-switch",
+              "x": 45.2,
+              "y": 90,
+              "n": 1,
+              "label": "SW-14",
+              "size": 0.62
             }
           ],
           "stateNames": {
@@ -20515,6 +22225,14 @@
               "x1": 301.3,
               "y": -7.5,
               "label": "8.7"
+            },
+            {
+              "type": "h-switch",
+              "x": 45.2,
+              "y": 90,
+              "n": 1,
+              "label": "SW-14",
+              "size": 0.62
             }
           ],
           "stateNames": {
@@ -22633,7 +24351,7 @@
             ],
             "build": [
               "門做明裝拉門，裝在走道側",
-              "窗簾盒深 15，單軌拉繩遮光簾，繩固定在牆上張力器；簾收按摩椅後，拉繩在另一端"
+              "窗簾盒深 15，單軌遮光簾"
             ]
           }
         }
@@ -22705,7 +24423,7 @@
               }
             ],
             "build": [
-              "窗簾盒深 15，單軌拉繩遮光簾，繩固定在牆上張力器；簾收床頭端，拉繩在床尾端",
+              "窗簾盒深 15，單軌遮光簾，簾收在床尾端",
               "衣櫃到頂 272",
               "衣櫃層板底 LED＋PIR 感應，櫃後留低位插座",
               "兩扇衣櫃門加 90° 限位"
@@ -22768,7 +24486,7 @@
               }
             ],
             "build": [
-              "窗簾盒深 15，單軌拉繩遮光簾，繩固定在牆上張力器；簾收床頭端，拉繩在床尾端",
+              "窗簾盒深 15，單軌遮光簾，簾收在床尾端",
               "衣櫃到頂 272",
               "衣櫃層板底 LED＋PIR 感應，櫃後留低位插座",
               "衣櫃門鉸鍊在走廊牆側，加 90° 限位"
@@ -22970,7 +24688,7 @@
         "place": "主浴鏡櫃內 · 外牆端",
         "mount": 128,
         "name": "插座 · 主浴鏡櫃",
-        "notes": "・鏡櫃最右門內\n・13A 附開關＋USB-C",
+        "notes": "・鏡櫃最右門內\n・13A 單孔附開關",
         "room": "bath1",
         "use": "刮鬍刀、牙刷"
       },
@@ -23132,18 +24850,40 @@
         "place": "大門內左手牆 · 場景按鈕上方",
         "mount": 120,
         "name": "開關 · 客餐廳",
-        "product": "Aqara H1 EU 有零線 · 雙鍵＋Aqara Smart Wall Switch H1 Triple Rocker (With Neutral) · QBKG32LM",
+        "product": "Aqara H1 EU 有零線 · 雙鍵",
         "specs": [
           [
             "鍵數",
-            "雙鍵＋三鍵"
+            "雙鍵 ×2"
           ],
           [
             "控制",
-            "玄關燈、客廳主燈、餐桌吊燈、洗牆燈、電視櫃底燈"
+            "玄關燈、客廳主燈、餐桌吊燈、洗牆燈"
           ]
         ],
-        "notes": "・電視櫃底燈變壓器接固定迴路，由這裡控制"
+        "notes": ""
+      },
+      {
+        "id": "sw-tv-toe",
+        "code": "SW-14",
+        "kind": "switch",
+        "x": 584.0,
+        "y": 188.71,
+        "place": "電視牆左端 · 喇叭與電視之間",
+        "mount": 90,
+        "name": "開關 · 電視櫃底燈",
+        "product": "Aqara H1 EU 有零線 · 單鍵",
+        "specs": [
+          [
+            "鍵數",
+            "單鍵"
+          ],
+          [
+            "控制",
+            "電視櫃底燈"
+          ]
+        ],
+        "notes": "・櫃面上 45、離櫃左端 10，站在櫃前伸手越過櫃面就按得到\n・不被左喇叭或窗簾擋住"
       },
       {
         "id": "sw-kitchen",
@@ -23657,7 +25397,7 @@
         "kind": "socket",
         "x": 448.34,
         "y": 339.2,
-        "place": "女傭房床尾 · 吊櫃上方",
+        "place": "女傭房床尾 · 層架上方",
         "mount": 220,
         "name": "插座 · 女傭房壁扇",
         "notes": "・13A 單孔帶開關，常開，壁扇用遙控\n・扇線短，不垂過床",

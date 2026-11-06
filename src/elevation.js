@@ -1318,6 +1318,18 @@ function svg(vb, out, label) {
   return `<svg class="elev-svg" viewBox="${vb.map(v => +v.toFixed(2)).join(' ')}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}" font-family="var(--sans), sans-serif">${defs()}${out.join('')}</svg>`;
 }
 
+// view.kind 'svg' (R102): a hand-drawn static view from data (e.g. an isometric) — view.viewBox [x, y, w, h] in plain SVG
+// coordinates (y down); view.items [{el 'path'|'rect'|'circle'|'text', when?, label (text only), …SVG attributes}].
+function renderSvgView(elev, view, state) {
+  const out = [];
+  for (const it of view.items || []) {
+    if (it.when && it.when !== state) continue;
+    const {el, when, label, ...a} = it;
+    out.push(el === 'text' ? `<text ${attrs(a)}>${esc(label)}</text>` : `<${el} ${attrs(a)}/>`);
+  }
+  return svg(view.viewBox, out, view.aria || elev.title || '');
+}
+
 function render(elev, viewId, state, translate) {
   T = typeof translate === 'function' ? translate : (s => s);
   LW = 1;
@@ -1326,7 +1338,7 @@ function render(elev, viewId, state, translate) {
   const fsIn = elev.frontStyle;
   FS = fsIn ? {...FRONT_STYLES.slab, ...(typeof fsIn === 'string' ? FRONT_STYLES[fsIn] : fsIn)} : null;
   const view = elev.views.find(v => v.id === viewId) || elev.views[0];
-  return view.kind === 'section' ? renderSection(elev, view, state) : view.kind === 'plan-top' ? renderPlanTop(elev, view) : renderFront(elev, view, state);
+  return view.kind === 'svg' ? renderSvgView(elev, view, state) : view.kind === 'section' ? renderSection(elev, view, state) : view.kind === 'plan-top' ? renderPlanTop(elev, view) : renderFront(elev, view, state);
 }
 
 window.SKGElevation = {render, bands, checkUnit};

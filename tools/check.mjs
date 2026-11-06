@@ -9,7 +9,7 @@ assert.deepEqual(d.roomVersions.living.map(v=>v.id),['console-3','console-4'],'l
 for(const v of d.roomVersions.master){for(const[id,p]of Object.entries(v.objectOverrides||{})){assert(d.objects.some(o=>o.id===id&&o.room_id==='master'));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}for(const id of Object.keys(v.pointOverrides||{}))assert(d.electrical.points.some(p=>p.id===id),'master pointOverride for unknown point '+id);}
 new vm.Script(fs.readFileSync(path.join(root,'src','app.js'),'utf8'));
 const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');assert(!html.includes('每一寸，都有依據。'));assert(!/class="[^"]*unit-stamp/.test(html));assert(!html.includes('/*__'));assert(!html.includes('SKG_CLOUD_ENABLED=true'));
-assert(html.includes('id="kitchen-sink-geometry"')&&html.includes('id="kitchen-hob-geometry"'));assert(html.includes('上層 · 微波爐'));assert(html.includes('中層 · 大同電鍋 15 人份'));assert(html.includes('window.SKGElevation'));
+assert(html.includes('id="kitchen-sink-geometry"')&&html.includes('id="kitchen-hob-geometry"'));assert(html.includes('上層 · 微波爐'));assert(html.includes('下層 · 大同電鍋 15 人份'));assert(html.includes('window.SKGElevation'));
 const sum=a=>a.reduce((s,b)=>s+b.h,0),E=d.elevations||{};
 const checkUnits=(id,units)=>{for(const[uid,u]of Object.entries(units)){assert(Math.abs(sum(u.bands)-u.h)<0.05,id+'/'+uid+' bands must sum to unit height');for(const f of u.fronts||[])assert(f.from>=0&&f.to<=u.h+0.01&&f.from<f.to,id+'/'+uid+' front out of range');}};
 const checkViews=(id,views,units)=>{for(const v of views){assert(v,id+' references a missing view');for(const r of v.units||(v.ref?[{ref:v.ref}]:[]))assert(units[r.ref],id+' view '+v.id+' missing unit '+r.ref);}};
