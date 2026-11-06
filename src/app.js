@@ -120,7 +120,7 @@ function buildPlan(){
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
-const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))&&(!p.onlyKitchen||p.onlyKitchen.includes(kitchenVersion()?.layout))&&(!p.onlyGuest||p.onlyGuest.includes(guestVersion()?.layout))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
@@ -270,11 +270,11 @@ function chooseLayout(id){
 function chooseGuestVersion(id){
  if(!guestVersions().some(v=>v.id===id)||id===guestVersion()?.id)return;selectedVersions.guest=id;
  const key=Object.keys(GUEST_KEYS).find(k=>GUEST_KEYS[k]===id),u=new URL(location.href);u.searchParams.set('guest',key);history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();
- selectRoom(roomId,{keepObject:true});
+ buildPower();selectRoom(roomId,{keepObject:true});
 }
 function chooseKitchenVersion(id){
  if(!kitchenVersions().some(v=>v.id===id)||id===kitchenVersion()?.id)return;selectedVersions.kitchen=id;
- syncKitchenURL();selectRoom(roomId,{keepObject:true});
+ syncKitchenURL();buildPower();selectRoom(roomId,{keepObject:true});
 }
 function dimensionLine(group,x1,y1,x2,y2,label,selected=false){
   const vertical=x1===x2, klass=selected?'selected-dim':'dimension-line', tklass=selected?'selected-dim-text':'dimension-text';
