@@ -270,3 +270,8 @@ html[lang=en] .rc-item{grid-template-columns:6.6em minmax(0,1fr)}
 
 .yt-link{display:inline-flex;vertical-align:-2px;margin-left:5px;cursor:pointer;line-height:0}
 .yt-link:hover svg rect{fill:#cc0000}
+
+.todo-filter{display:inline-flex;gap:4px;margin-left:auto;margin-right:12px}
+.todo-filter button{font:inherit;font-size:.85rem;padding:4px 12px;border:1px solid var(--line,#d9ddd5);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
+.todo-filter button i{font-style:normal;opacity:.6;font-size:.78rem}
+.todo-filter button[aria-pressed="true"]{background:var(--ink,#2f3a33);color:#fff;border-color:transparent}

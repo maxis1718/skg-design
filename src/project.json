@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R103",
+    "revision": "R104",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4911,6 +4911,10 @@
     {
       "id": "C111",
       "text": "客房掛桿降到 185；主浴鏡櫃加化妝燈；鋼琴加插座；喇叭腳架加防倒帶；女傭房 45° 透視圖改正方向；新增研究「隱形鐵窗」與待拍板。"
+    },
+    {
+      "id": "C112",
+      "text": "待拍板加「裝修／家具」篩選；水槽改下嵌式（建議 BLANCO SUBLINE 500-U）；不裝廚房安全門。"
     }
   ],
   "measurement_policy": {
@@ -4949,7 +4953,7 @@
                 "status": "design"
               }
             },
-            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式"
+            "source_note": "BLANCO SUBLINE 500-U 53 × 46，下嵌式"
           },
           "kitchen-hob": {
             "bounds_pt": [
@@ -5013,7 +5017,7 @@
             },
             {
               "label": "水槽",
-              "value": "櫃 71.9 · BLANCO PLEON 6",
+              "value": "櫃 71.9 · BLANCO SUBLINE 500-U 下嵌",
               "object": "kitchen-sink"
             },
             {
@@ -5137,7 +5141,7 @@
                 "status": "design"
               }
             },
-            "source_note": "BLANCO PLEON 6 外框 61.5 × 51，檯上式"
+            "source_note": "BLANCO SUBLINE 500-U 53 × 46，下嵌式"
           },
           "dishwasher": {
             "bounds_pt": [
@@ -5186,7 +5190,7 @@
             },
             {
               "label": "水槽",
-              "value": "櫃 76.9 · BLANCO PLEON 6",
+              "value": "櫃 76.9 · BLANCO SUBLINE 500-U 下嵌",
               "object": "kitchen-sink"
             },
             {
@@ -12575,7 +12579,7 @@
         {
           "zone": "水槽櫃",
           "h": "76.9",
-          "note": "雙門 38.45；PLEON 6 在窗下，開孔 59.5 離櫃內側 9／4.9；前半深層板放清潔用品。"
+          "note": "雙門 38.45；下嵌水槽在窗下；前半深層板放清潔用品。"
         },
         {
           "zone": "水槽右側檯面",
@@ -26407,25 +26411,29 @@
       "id": "todo-home-paint",
       "room": "floor",
       "text": "全屋油漆 Nippon Paint Wall Arte NP N 1865 P",
-      "status": "done"
+      "status": "done",
+      "kind": "furn"
     },
     {
       "id": "todo-smart-unifi",
       "room": "smart",
       "text": "買 UniFi U7 Lite ×2＋Cloud Gateway Ultra＋USW Lite 8 PoE（S$733，UI Store SG）",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-smart-icloud",
       "room": "smart",
       "text": "升級 iCloud+ 200 GB（3 台 E1 雲端錄影）",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-smart-all-off",
       "room": "smart",
       "text": "選大門場景按鈕：建議 Aqara Wireless Remote Switch H1 (Double Rocker)，S$45",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-living-kef",
@@ -26433,7 +26441,8 @@
       "text": "買 KEF LS50 Wireless II＋S2 落地腳架（Mineral White）",
       "research": "audio-compare",
       "status": "open",
-      "priority": 5
+      "priority": 5,
+      "kind": "furn"
     },
     {
       "id": "todo-living-kc62",
@@ -26441,7 +26450,8 @@
       "text": "買 KEF KC62 重低音（Mineral White）",
       "research": "kef-audio",
       "status": "open",
-      "priority": 6
+      "priority": 6,
+      "kind": "furn"
     },
     {
       "id": "todo-living-av",
@@ -26449,134 +26459,155 @@
       "text": "定電視櫃：A 三格 220／B 四格 230",
       "research": "console-gaming",
       "status": "open",
-      "priority": 1
+      "priority": 1,
+      "kind": "reno"
     },
     {
       "id": "todo-living-cabinet",
       "room": "living",
       "text": "定走道口 190 櫃：做不做、做什麼用",
       "status": "open",
-      "priority": 4
+      "priority": 4,
+      "kind": "reno"
     },
     {
       "id": "todo-kitchen-scheme",
       "room": "kitchen",
       "text": "定廚房方案 A",
-      "status": "done"
+      "status": "done",
+      "kind": "furn"
     },
     {
       "id": "todo-kitchen-sink",
       "room": "kitchen",
-      "text": "選水槽：建議 BLANCO PLEON 6（soft white／white）",
+      "text": "選下嵌式水槽：建議 BLANCO SUBLINE 500-U（SILGRANIT 53 × 46，white／soft white）",
       "research": "kitchen-sink",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-kitchen-laminate",
       "room": "kitchen",
       "text": "選櫃體 laminate 品牌與色號",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-master-wardrobe-laminate",
       "room": "master",
       "text": "選衣櫃門片 laminate 色號",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-kid-bed",
       "room": "kid",
       "text": "定小孩房床位與尺寸",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-study-desk",
       "room": "study",
       "text": "選 100 × 50 電腦桌",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-guest-scheme",
       "room": "guest",
       "text": "定客房方案 A",
-      "status": "done"
+      "status": "done",
+      "kind": "furn"
     },
     {
       "id": "todo-guest-wardrobe",
       "room": "guest",
       "text": "選衣櫃門片色號",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-guest-furniture",
       "room": "guest",
       "text": "淘寶買床架 154 × 194、Tempur 床墊、無輪書椅",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-helper-mattress",
       "room": "helper",
       "text": "選三折床墊型號與厚度",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-helper-board",
       "room": "helper",
       "text": "選床台板材與色號",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-helper-fan",
       "room": "helper",
       "text": "買 Mistral MWF1454DR-G 14 吋 DC 壁扇",
       "research": "helper-fan-light",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-helper-reading-lamp",
       "room": "helper",
       "text": "買 IKEA NYMÅNE 閱讀壁燈＋SOLHETTA GU10 2700K",
       "research": "helper-fan-light",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-helper-ceiling-light",
       "room": "helper",
       "text": "買 IKEA BARLAST 25 cm 吸頂燈",
       "research": "helper-fan-light",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-bath2-basin",
       "room": "bath2",
       "text": "選臉盆尺寸與盆位，再定鏡櫃門寬",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-living-balcony-drying-rack",
       "room": "living-balcony",
       "text": "重選曬衣架：被子攤得開、暖光夠亮",
       "research": "drying-rack",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-living-balcony-mcst",
       "room": "living-balcony",
       "text": "向管委會確認陽台天花可裝曬衣架",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
       "text": "選鞦韆座椅（兩側淨空 ≥ 50）",
-      "status": "open"
+      "status": "open",
+      "kind": "furn"
     },
     {
       "id": "todo-kitchen-hob",
       "room": "kitchen",
       "text": "選爐具：建議 Brandt BPI2638UB（備選 BPI6603B）",
       "research": "brandt-hob",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-living-tv",
@@ -26584,51 +26615,52 @@
       "text": "去 VivoCity 看 Xiaomi TV S Pro Mini LED 75 2026 實機",
       "research": "tv-xiaomi",
       "status": "open",
-      "priority": 3
+      "priority": 3,
+      "kind": "furn"
     },
     {
       "id": "todo-bath1-mirror-doors",
       "room": "bath1",
       "text": "定主浴鏡櫃 3 門或 5 門",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-living-console-finish",
       "room": "living",
       "text": "選電視櫃面板、頂板木紋色號（左側白橡格柵照此染色）",
       "status": "open",
-      "priority": 2
+      "priority": 2,
+      "kind": "reno"
     },
     {
       "id": "todo-master-wallcovering",
       "room": "master",
       "text": "提供主臥壁布型號（同現居款）",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-helper-door-hinge",
       "room": "helper",
       "text": "女傭房門鉸鏈方向：建議放洗衣機側（不擋電器櫃拉出板，裝卸洗衣時先關門）",
-      "status": "open"
-    },
-    {
-      "id": "todo-kitchen-gate",
-      "room": "kitchen",
-      "text": "廚房口要不要裝伸縮安全門（爐、烤箱、電器在言言高度）",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-master-rail",
       "room": "master",
       "text": "主臥掛桿 195：維持＋掛衣叉，或一側降到 180 方便 helper",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     },
     {
       "id": "todo-balcony-grille",
       "room": "living-balcony",
       "text": "兩個陽台隱形鐵窗：找 Endo、Diamond、CSA 報價，確認 MCST 規定",
       "research": "invisible-grille",
-      "status": "open"
+      "status": "open",
+      "kind": "reno"
     }
   ],
   "research": {
@@ -26739,8 +26771,8 @@
     "kitchen-sink": {
       "title": "廚房水槽選型",
       "updated": "2026-10-29",
-      "summary": "建議 BLANCO PLEON 6（white 521683）。因為盆內 54.5 × 40、深 22，Ø28 湯鍋放得進；檯上式，盆緣蓋住岩板切口；後緣整條龍頭平台自帶龍頭孔。原建議 Franke Box 54 改為備選。",
-      "body": "## 結論\n- **建議：BLANCO PLEON 6（white 521683）**（新加坡售價待確認；Blanco 經銷商 Hoe Kee）— 檯上式 SILGRANIT 單槽，盆內 54.5 × 40、深 22；盆緣蓋住岩板切口，不用磨切口邊；後緣整條龍頭平台自帶龍頭孔。\n- **顏色**：white 521683 附 3½\" InFino 排水組；soft white 527772 是「for coloured components」版，不附排水組，要另買配色排水組件。\n- **備選（原建議）：Franke Box BXX 210/110-54（127.0677.190）**（S$650／Econflo，網店顯示缺貨）— 想要不鏽鋼、下嵌、不怕重鍋敲時選它。盆 54 × 41、深 20，R12；龍頭要另在檯面開孔。\n- **不選：Franke Maris MRG 110-62** — 下嵌，官方要求檯面 ≥ 20 mm，1.2 岩板要加厚。\n- **不選：Blanco Solis 500-U、Subline 500-U** — 盆只有 50；Subline 500-U S$908 起。\n- **不選：Franke Mythos MYX 110-55、Box 210-72、Felix FEX 110-70、Solis 700-U** — 官方最小櫃 80，71.9 櫃放不下。\n\n## 評判標準\n- **盆內可用尺寸**：寬 ≥ 50、前後 ≥ 40、深 ≥ 18。Ø28 湯鍋連耳約 38，要能平放沖洗。\n- **櫃寬**：官方最小櫃 ≤ 71.9（方案 A 水槽櫃 71.9、方案 B 76.9）。PLEON 6 最小櫃 60，兩案都夠。\n- **配 1.2 岩板好不好做**：檯上式只切孔，切口被盆緣蓋住；下嵌要磨切口邊、黏固定件，岩板不是通體色還會露出切面。\n- **龍頭位置**：龍頭裝在水槽平台上，不用在岩板上再開孔。\n- **耐用與噪音**：花崗岩複合盆安靜、耐刮，但重鍋掉落可能崩角；不鏽鋼不怕敲、會有細刮痕。\n- **排水**：3½\" 排水；存水彎要有洗碗機排水接口。\n\n## 比較\n| 項目 | PLEON 6 | Box 54 | MRG 110-62 |\n|---|---|---|---|\n| 安裝 | 檯上式 | 下嵌 | 下嵌 |\n| 外框 | 61.5×51 | 58×45 | 65.3×43.3 |\n| 盆內 | 54.5×40×22 | 54×41×20 | 62×40×20 |\n| 轉角 | R15 | R12 | 待確認 |\n| 最小櫃 | 60 | 60 | 70 |\n| 材質 | SILGRANIT | 不鏽鋼 | Fragranite |\n| 龍頭孔 | 在水槽上 | 開檯面 | 開檯面 |\n| 檯面開孔 | 59.5×49 | 依樣板 | 依樣板 |\n| 新加坡價 | 待確認 | S$650 | 待確認 |\n\n## 要先做的事\n- **詢價下單**：WhatsApp Hoe Kee +65 8779 5626，報 BLANCO PLEON 6 white 521683 的價格與交期（官網只列 PLEON 8 S$642、PLEON 9 S$686，PLEON 6 要另問）。看實品：Hoe Kee Superstore，1 Jalan Berseh #01-09 to #01-13 New World Centre，每日 10:00–19:00。\n- **交給石材師傅**：用水槽隨附的樣板開孔 59.5 × 49；開孔前後的岩板窄條下方要有木作橫撐托住；盆緣下打中性矽利康封邊。\n- **交給木工**：水槽櫃頂部前後加兩條橫撐托岩板與水槽；洗碗機進排水管孔開在水槽櫃側板後方下緣；前半深層板避開存水彎。\n- **龍頭**：選單孔抽拉龍頭，裝在 PLEON 6 的龍頭孔；龍頭高度要避開窗扇開啟範圍。\n- **存水彎**：排水組不含存水彎，另買有洗碗機接口的款式。\n\n## 風險與待確認\n- PLEON 6 新加坡售價、現貨、保固**待確認**；歐洲參考價 €335（Hornbach 奧地利）。\n- 原廠固定夾適用的檯面厚度是否涵蓋 12 mm**待確認**；不涵蓋就由石材師傅在底面黏木條墊厚到夾具範圍。\n- PLEON 6 前後 51，檯面深度扣掉 51 後剩下的前後窄條要夠寬，檯面深度定案時一起核對。\n- 花崗岩複合盆重鍋掉落可能崩角。",
+      "summary": "已改下嵌式：建議 BLANCO SUBLINE 500-U。建議 BLANCO PLEON 6（white 521683）。因為盆內 54.5 × 40、深 22，Ø28 湯鍋放得進；檯上式，盆緣蓋住岩板切口；後緣整條龍頭平台自帶龍頭孔。原建議 Franke Box 54 改為備選。",
+      "body": "> ⚠️ 已改下嵌式：建議 BLANCO SUBLINE 500-U（SILGRANIT 53 × 46）。以下為原檯上式比較，僅供參考。\n\n## 結論\n- **建議：BLANCO PLEON 6（white 521683）**（新加坡售價待確認；Blanco 經銷商 Hoe Kee）— 檯上式 SILGRANIT 單槽，盆內 54.5 × 40、深 22；盆緣蓋住岩板切口，不用磨切口邊；後緣整條龍頭平台自帶龍頭孔。\n- **顏色**：white 521683 附 3½\" InFino 排水組；soft white 527772 是「for coloured components」版，不附排水組，要另買配色排水組件。\n- **備選（原建議）：Franke Box BXX 210/110-54（127.0677.190）**（S$650／Econflo，網店顯示缺貨）— 想要不鏽鋼、下嵌、不怕重鍋敲時選它。盆 54 × 41、深 20，R12；龍頭要另在檯面開孔。\n- **不選：Franke Maris MRG 110-62** — 下嵌，官方要求檯面 ≥ 20 mm，1.2 岩板要加厚。\n- **不選：Blanco Solis 500-U、Subline 500-U** — 盆只有 50；Subline 500-U S$908 起。\n- **不選：Franke Mythos MYX 110-55、Box 210-72、Felix FEX 110-70、Solis 700-U** — 官方最小櫃 80，71.9 櫃放不下。\n\n## 評判標準\n- **盆內可用尺寸**：寬 ≥ 50、前後 ≥ 40、深 ≥ 18。Ø28 湯鍋連耳約 38，要能平放沖洗。\n- **櫃寬**：官方最小櫃 ≤ 71.9（方案 A 水槽櫃 71.9、方案 B 76.9）。PLEON 6 最小櫃 60，兩案都夠。\n- **配 1.2 岩板好不好做**：檯上式只切孔，切口被盆緣蓋住；下嵌要磨切口邊、黏固定件，岩板不是通體色還會露出切面。\n- **龍頭位置**：龍頭裝在水槽平台上，不用在岩板上再開孔。\n- **耐用與噪音**：花崗岩複合盆安靜、耐刮，但重鍋掉落可能崩角；不鏽鋼不怕敲、會有細刮痕。\n- **排水**：3½\" 排水；存水彎要有洗碗機排水接口。\n\n## 比較\n| 項目 | PLEON 6 | Box 54 | MRG 110-62 |\n|---|---|---|---|\n| 安裝 | 檯上式 | 下嵌 | 下嵌 |\n| 外框 | 61.5×51 | 58×45 | 65.3×43.3 |\n| 盆內 | 54.5×40×22 | 54×41×20 | 62×40×20 |\n| 轉角 | R15 | R12 | 待確認 |\n| 最小櫃 | 60 | 60 | 70 |\n| 材質 | SILGRANIT | 不鏽鋼 | Fragranite |\n| 龍頭孔 | 在水槽上 | 開檯面 | 開檯面 |\n| 檯面開孔 | 59.5×49 | 依樣板 | 依樣板 |\n| 新加坡價 | 待確認 | S$650 | 待確認 |\n\n## 要先做的事\n- **詢價下單**：WhatsApp Hoe Kee +65 8779 5626，報 BLANCO PLEON 6 white 521683 的價格與交期（官網只列 PLEON 8 S$642、PLEON 9 S$686，PLEON 6 要另問）。看實品：Hoe Kee Superstore，1 Jalan Berseh #01-09 to #01-13 New World Centre，每日 10:00–19:00。\n- **交給石材師傅**：用水槽隨附的樣板開孔 59.5 × 49；開孔前後的岩板窄條下方要有木作橫撐托住；盆緣下打中性矽利康封邊。\n- **交給木工**：水槽櫃頂部前後加兩條橫撐托岩板與水槽；洗碗機進排水管孔開在水槽櫃側板後方下緣；前半深層板避開存水彎。\n- **龍頭**：選單孔抽拉龍頭，裝在 PLEON 6 的龍頭孔；龍頭高度要避開窗扇開啟範圍。\n- **存水彎**：排水組不含存水彎，另買有洗碗機接口的款式。\n\n## 風險與待確認\n- PLEON 6 新加坡售價、現貨、保固**待確認**；歐洲參考價 €335（Hornbach 奧地利）。\n- 原廠固定夾適用的檯面厚度是否涵蓋 12 mm**待確認**；不涵蓋就由石材師傅在底面黏木條墊厚到夾具範圍。\n- PLEON 6 前後 51，檯面深度扣掉 51 後剩下的前後窄條要夠寬，檯面深度定案時一起核對。\n- 花崗岩複合盆重鍋掉落可能崩角。",
       "sources": [
         {
           "title": "BLANCO PLEON 6 white, with tap hole, cut-out 59.5 × 49 – Hornbach",
