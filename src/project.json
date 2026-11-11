@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R104",
+    "revision": "R105",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4915,6 +4915,10 @@
     {
       "id": "C112",
       "text": "待拍板加「裝修／家具」篩選；水槽改下嵌式（建議 BLANCO SUBLINE 500-U）；不裝廚房安全門。"
+    },
+    {
+      "id": "C113",
+      "text": "新增待拍板：兩間浴室鏡櫃內部 PVC 色號。"
     }
   ],
   "measurement_policy": {
@@ -26659,6 +26663,13 @@
       "room": "living-balcony",
       "text": "兩個陽台隱形鐵窗：找 Endo、Diamond、CSA 報價，確認 MCST 規定",
       "research": "invisible-grille",
+      "status": "open",
+      "kind": "reno"
+    },
+    {
+      "id": "todo-bath-mirror-pvc",
+      "room": "bath1",
+      "text": "選兩間浴室鏡櫃內部 PVC 色號",
       "status": "open",
       "kind": "reno"
     }
