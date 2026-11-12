@@ -317,7 +317,8 @@ function renderDimensions(){
     }else if(id==='living'){
       // R77: room width moved out to the balcony side (the old y177 line read as a curtain; y177.3 is now the real 20 cm curtain-pocket face).
       dimensionLine(g,x0,164.5,x1,164.5,num(p.horizontal_cm));
-      dimensionLine(g,603,171.64,603,281.56,'387.5');
+      // R108: TV feature wall length — glass to the living-room line y263.8 (entrance ceiling step).
+      dimensionLine(g,603,171.64,603,263.8,'325');
     }
   }
   // Version-level clear dims (e.g. guest wardrobe ↔ bed) on the room view.

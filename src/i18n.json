@@ -752,7 +752,6 @@
   "爐台區立面": "Hob run",
   "牆": "Wall",
   "牙刷": "Toothbrush",
-  "牙刷充電插頭型式": "Toothbrush charger plug type",
   "牙刷門": "Toothbrush door",
   "物件": "Items",
   "玄關通道": "Entry passage",
@@ -1318,8 +1317,6 @@
   "衛浴 2 門外 · 走廊": "Outside bath 2 · corridor",
   "・放門外，門向浴室內開不擋\n・離地 120": "• Outside door (door opens in, won't cover it)\n• At 120",
   "鋼琴旁凹位 · 清淨機後": "Piano recess · behind purifier",
-  "客廳電視牆 · 備用": "TV wall · spare",
-  "插座 · 電視牆（備用）": "13A · TV wall (spare)",
   "客廳陽台 · 拖地機底座後": "Living balcony · behind floor-washer dock",
   "客廳陽台 · 曬衣架旁天花": "Living balcony · ceiling by drying rack",
   "客房 · 靠窗角": "Guest · window corner",
@@ -1410,7 +1407,6 @@
   "・13A 雙孔\n・清淨機後方，貼牆不外露": "• 13A twin\n• Behind purifier, hidden",
   "・13A 雙孔，藏在腳架後\n・KEF 不建議接延長座，直接插牆\n・下方離地 10 出線口：喇叭連線從 Ø32 暗管出來": "• 13A twin, behind stand\n• KEF: plug direct, no extension strip\n• Cable outlet at 10 below: speaker link from Ø32 conduit",
   "・13A 雙孔，藏在腳架後\n・下方離地 10 出線口：HDMI eARC、喇叭連線、Cat6 從 Ø32 暗管出來": "• 13A twin, behind stand\n• Cable outlet at 10 below: HDMI eARC, speaker link, Cat6 from Ø32 conduit",
-  "・13A 雙孔，在 KC62 正上方": "• 13A twin, right above KC62",
   "・13A，藏在底座後\n・防水面板（IP66）": "• 13A, behind dock\n• Weatherproof plate (IP66)",
   "・Ø171.5 × 33 mm 白色圓盤，吸頂；PoE 供電，最大 13 W\n・客廳、餐桌、電視無牆阻隔，約 3–3.6 m，預估 −35 dBm\n・廚房隔一道約 8 cm 輕隔間，爐具、水槽約 3–3.6 m，預估 −39 dBm\n・女傭房床約 3.6 m、大門約 4.9 m，各隔兩道牆，預估 −56／−54 dBm": "• Ø171.5 × 33 mm white disc, ceiling; PoE, 13 W max\n• Living, dining, TV open line of sight, ~3–3.6 m, est. −35 dBm\n• Kitchen via 1 ~8 cm partition, hob/sink ~3–3.6 m, est. −39 dBm\n• Helper bed ~3.6 m, main door ~4.9 m, 2 walls each, est. −56/−54 dBm",
   "・從 S-09 插座迴路以線槽上天花到這裡，不接吊扇點\n・天花 IP66 戶外型 13A 插座，由配電箱斷路器關閉\n・線槽漆成天花色": "• Trunking from S-09 socket circuit up to ceiling; not from ceiling-fan point\n• IP66 outdoor 13A on ceiling, isolated at DB\n• Trunking painted ceiling colour",
@@ -1485,7 +1481,6 @@
   "端牆淨長約 105，與收納櫃同寬，零餘裕": "End wall ~105 clear = cabinet width, zero tolerance",
   "衣櫃到頂 272": "Wardrobe to 272",
   "衣櫃層板底 LED＋PIR 感應，櫃後留低位插座": "Wardrobe LED under shelf + PIR; low 13A behind",
-  "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強": "TV wall: carpentry backing + pale grey wallpaper to ceiling; reinforce at bracket",
   "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架": "Concealed: TV power + HDMI from behind TV down into back of console; speaker cable in wall to both stands",
   "靠浴室那扇門內貼全身鏡": "Full-length mirror inside bathroom-side door",
   "日後若換 LG G6 77 吋，220 的櫃子只比電視寬一點，比例略窄": "If upgraded to LG G6 77\", a 220 console is barely wider than the TV — slightly narrow",
@@ -1685,6 +1680,10 @@
   "女傭房門改為待看：新增研究「女傭房門」（鋁百葉折門等比較與看樣地點）。": "Helper room door to be viewed: new research \"Helper room door\" (louvred bi-fold vs others, where to see).",
   "鏡門 ×3": "Mirror doors ×3",
   "197.7 寬 · 深 19 · 115–237，3 門": "197.7 W · 19 D · 115–237, 3 doors",
-  "主浴鏡櫃定案 3 門（方案 A），刪除 5 門方案。": "Master bath mirror cabinet decided: 3 doors (option A); 5-door option removed."
+  "主浴鏡櫃定案 3 門（方案 A），刪除 5 門方案。": "Master bath mirror cabinet decided: 3 doors (option A); 5-door option removed.",
+  "・13A 雙孔，在 KC62 上方，離陽台玻璃 315\n・面板整片在電視牆內（牆止於 325）": "• 13A twin above KC62, 315 from the balcony glass\n• Plate fully on the TV wall (wall ends at 325)",
+  "插座 · 玄關側白牆（備用）": "13A · plain wall, entrance side (spare)",
+  "玄關側白牆 · 備用": "Plain wall, entrance side · spare",
+  "電視牆：離陽台玻璃 0–325，到玄關天花降低處止；木作底板厚 5＋淡灰壁紙到天花，壁掛處補強": "TV wall: 0–325 from the balcony glass, stops where the entrance ceiling drops; 5 carpentry backing + pale grey wallpaper to ceiling; reinforce at bracket"
  }
 }

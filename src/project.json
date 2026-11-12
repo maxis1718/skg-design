@@ -1639,7 +1639,7 @@
       "height_cm": 45,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up; north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-16; door conceal 30.5 per the KV sheet, 4.4 stays out when stowed), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). Hidden lid (R99): 60 x 10 slot in the top, 1 from the back edge, centred on the TV axis over the middle rear space (x 80-140); loose flush drop-in lid on a 0.6 rebate lip, finger notch R1.5 in its front edge (phone cable out). S-20 + D-01 sit directly under it (plate 34.2-42.8). TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
+      "notes": "Design R96 scheme A (concept, default): floor-standing console 220 W x 45 D x 45 H (plinth 8 recessed 10, fronts 8.0-42.9), three equal 67.9 fronts, middle front on the TV axis, front corners R7.5, on a 5 cm feature-wall build-up (0-325 from the glass, ends at the entrance ceiling step, R108); north end 50 from the balcony glass, south end 270, TV / console axis 160. Left bay: flipper door 34.9 high (Knape & Vogt 8070PEZ-16; door conceal 30.5 per the KV sheet, 4.4 stays out when stowed), network tray (5 clear) on the bottom, PS5 Pro on a shelf at 16, Switch 2 dock turned 90 deg; PS5 / Switch / network plug into S-22 in the left bay (one USB outlet for the fan); left side = full white-oak slats, open only behind a Noctua NF-A14 5V PWM (14 cm, USB) at the upper-rear corner of the bay (0.8-14.8 from the wall, 22.6-36.6 high, below the flipper-slide strip). Middle and right: LEGRABOX pure C drawers (middle NL 300 leaves a 13.1 rear space for S-20 / D-01 and cables; right NL 400 with a back panel). Hidden lid (R99): 60 x 10 slot in the top, 1 from the back edge, centred on the TV axis over the middle rear space (x 80-140); loose flush drop-in lid on a 0.6 rebate lip, finger notch R1.5 in its front edge (phone cable out). S-20 + D-01 sit directly under it (plate 34.2-42.8). TV power + HDMI come down the Ø50 conduit into the middle rear space, HDMI runs through a 10 pass-through at the back of P1 to PS5 / Switch. Scheme B lives in roomVersions.living console-4 objectOverrides. Original console outline (paths 616-619, 952), the 10.2 cm rear band (56, 615, 620), the 120 cm TV symbol (637-643) and the corner circle (738) are omitted at build and replaced by src/furniture-living.svg.",
       "physical_drawing_indices": [],
       "wall_to_front_projection_cm": 50.0,
       "name": "電視櫃",
@@ -3999,7 +3999,7 @@
       "height_cm": 96.2,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 286.3 cm from the glass (scheme A: TV axis 160 + 126.3, mirror of the left stand), base 275-297.6 = 5 clear of the console south end (270); scheme B 230: 296.3; rear 8 cm from the feature-wall face (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18.",
+      "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 286.3 cm from the glass (scheme A: TV axis 160 + 126.3, mirror of the left stand), base 275-297.6 = 5 clear of the console south end (270); scheme B 230: 296.3; rear 8 cm from the feature-wall face (stand base ends 27.4 / B 17.4 before the wall end at 325) (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18.",
       "source_note": "背離牆 8；KEF Connect 離牆距離選 < 10 cm"
     },
     {
@@ -4034,7 +4034,7 @@
       "height_cm": 24.6,
       "status": "user-design",
       "uncertainty_cm": null,
-      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), scheme A: 306.3-331.9 cm from the glass, 8.7 from the primary stand base; 92.9 to the entry-passage corner, 87.4 to the purifier in the piano alcove (scheme B 230: 316.3-341.9, 87.3 / 85.4); the side driver facing the right stand base is 8.7 from it (KEF: >= 7.7). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19.",
+      "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), scheme A: 306.3-331.9 cm from the glass, 8.7 from the primary stand base; 92.9 to the entry-passage corner, 87.4 to the purifier in the piano alcove (scheme B 230: 316.3-341.9, 87.3 / 85.4); the side driver facing the right stand base is 8.7 from it (KEF: >= 7.7). Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19; R108: the feature wall ends 325 from the glass (entrance ceiling step), so the last 6.9 of the KC62 sits in front of the plain wall, 11 behind its back there (position unchanged; KEF needs no rear clearance).",
       "source_note": "背離牆 6，背板 EQ 設 Wall；RCA 接主喇叭 Sub Out"
     },
     {
@@ -5533,7 +5533,7 @@
           ],
           "build": [
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
-            "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
+            "電視牆：離陽台玻璃 0–325，到玄關天花降低處止；木作底板厚 5＋淡灰壁紙到天花，壁掛處補強",
             "喇叭腳架各用防倒帶固定到電視牆，木作底板在腳架後離地 50–75 加夾板",
             "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
@@ -5705,7 +5705,7 @@
           ],
           "build": [
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
-            "電視牆：木作底板＋淡灰壁紙到天花，壁掛處補強",
+            "電視牆：離陽台玻璃 0–325，到玄關天花降低處止；木作底板厚 5＋淡灰壁紙到天花，壁掛處補強",
             "喇叭腳架各用防倒帶固定到電視牆，木作底板在腳架後離地 50–75 加夾板",
             "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中間兩格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
@@ -5750,7 +5750,7 @@
               580.712,
               258.466
             ],
-            "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 296.3 cm from the glass (R85: TV axis 165 + 131.3, mirror of the left stand), base 285-307.6 = 5 clear of the console south end (280); rear 8 cm from the feature-wall face (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18."
+            "notes": "KEF LS50 Wireless II primary (right channel = KEF default) on a KEF S2 Floor Stand. Centre 296.3 cm from the glass (R85: TV axis 165 + 131.3, mirror of the left stand), base 285-307.6 = 5 clear of the console south end (280); rear 8 cm from the feature-wall face (stand base ends 17.4 before the wall end at 325) (R89, see the left stand), front 5.9 behind the console front, stand square to the wall. Inputs: HDMI eARC from the TV (HDMI 2), Cat6 from the USW Lite 8 PoE in the console left bay (optional, Wi-Fi works), inter-speaker cable to the left speaker in the Ø32 conduit, RCA sub out to the KC62. Power S-18."
           },
           "kef-sub": {
             "bounds_pt": [
@@ -5759,15 +5759,12 @@
               581.279,
               268.557
             ],
-            "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), R85: 316.3-341.9 cm from the glass, 8.7 from the primary stand base; 87.3 to the entry-passage corner, 85.4 to the purifier in the piano alcove. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19."
+            "notes": "KEF KC62 246 H x 256 W x 248 D mm (with feet and rear panel), 14 kg, 11-200 Hz ±3 dB, side-firing force-cancelling pair. On the floor, back 6 cm from the feature-wall face (R89: moved 4 toward the wall; KC62 is sealed and side-firing - KEF only asks for >= 77 mm between each driver and a wall, the back needs room just for the IEC and RCA plugs; rear EQ preset Wall), R85: 316.3-341.9 cm from the glass, 8.7 from the primary stand base; 87.3 to the entry-passage corner, 85.4 to the purifier in the piano alcove. Wired RCA from the LS50 Wireless II sub out (≈1 m, no KW1 needed). Placement EQ: Wall (or Apartment if neighbours complain). Power S-19; R108: the feature wall ends 325 from the glass (entrance ceiling step), so the last 16.9 of the KC62 sits in front of the plain wall, 11 behind its back there (position unchanged; KEF needs no rear clearance)."
           }
         },
         "pointOverrides": {
           "sock-kef-r": {
             "y": 255.631
-          },
-          "sock-kef-sub": {
-            "y": 264.928
           },
           "sock-tv-l": {
             "y": 218.412,
@@ -18875,10 +18872,19 @@
           ],
           "under": [
             {
+              "type": "rect",
+              "x": 310.0,
+              "y": 0,
+              "w": 20.0,
+              "h": 162,
+              "fill": "#f6f5f1",
+              "stroke": "none"
+            },
+            {
               "type": "wallpaper",
               "x": 0,
               "y": 0,
-              "w": 330.0,
+              "w": 310.0,
               "h": 162
             },
             {
@@ -18893,6 +18899,15 @@
                   62.1
                 ]
               ]
+            },
+            {
+              "type": "rect",
+              "x": 309.85,
+              "y": 0,
+              "w": 0.3,
+              "h": 162,
+              "fill": "#8a948e",
+              "stroke": "none"
             }
           ],
           "extras": [
@@ -21443,10 +21458,19 @@
           ],
           "under": [
             {
+              "type": "rect",
+              "x": 310.0,
+              "y": 0,
+              "w": 20.0,
+              "h": 162,
+              "fill": "#f6f5f1",
+              "stroke": "none"
+            },
+            {
               "type": "wallpaper",
               "x": 0,
               "y": 0,
-              "w": 330.0,
+              "w": 310.0,
               "h": 162
             },
             {
@@ -21461,6 +21485,15 @@
                   62.1
                 ]
               ]
+            },
+            {
+              "type": "rect",
+              "x": 309.85,
+              "y": 0,
+              "w": 0.3,
+              "h": 162,
+              "fill": "#8a948e",
+              "stroke": "none"
             }
           ],
           "extras": [
@@ -24891,9 +24924,9 @@
         "kind": "socket",
         "x": 584.0,
         "y": 274.622,
-        "place": "客廳電視牆 · 備用",
+        "place": "玄關側白牆 · 備用",
         "mount": 30,
-        "name": "插座 · 電視牆（備用）",
+        "name": "插座 · 玄關側白牆（備用）",
         "notes": "・13A 雙孔",
         "use": "備用"
       },
@@ -24926,11 +24959,11 @@
         "code": "S-19",
         "kind": "socket",
         "x": 584.0,
-        "y": 262.094,
+        "y": 260.931,
         "place": "電視牆 · 重低音後",
         "mount": 30,
         "name": "插座 · 重低音",
-        "notes": "・13A 雙孔，在 KC62 正上方",
+        "notes": "・13A 雙孔，在 KC62 上方，離陽台玻璃 315\n・面板整片在電視牆內（牆止於 325）",
         "use": "重低音"
       },
       {
