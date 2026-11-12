@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R107",
+    "revision": "R108",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4927,6 +4927,10 @@
     {
       "id": "C115",
       "text": "主浴鏡櫃定案 3 門（方案 A），刪除 5 門方案。"
+    },
+    {
+      "id": "C116",
+      "text": "電視牆造型牆改到玄關天花降低處止（離陽台玻璃 325）；重低音插座移進牆內；新增研究「客房床架」與床架、書椅待辦。"
     }
   ],
   "measurement_policy": {
@@ -26077,7 +26081,8 @@
     {
       "id": "todo-guest-furniture",
       "room": "guest",
-      "text": "淘寶買床架 154 × 194、Tempur 床墊、無輪書椅",
+      "text": "買客房床架（配 Tempur Queen 150 × 190 × 21，外框 ≤ 154 × 194）",
+      "research": "guest-bedframe",
       "status": "open",
       "kind": "furn"
     },
@@ -26209,6 +26214,13 @@
       "text": "選兩間浴室鏡櫃內部 PVC 色號",
       "status": "open",
       "kind": "reno"
+    },
+    {
+      "id": "todo-guest-chair",
+      "room": "guest",
+      "text": "買客房無輪書椅",
+      "status": "open",
+      "kind": "furn"
     }
   ],
   "research": {
@@ -27173,6 +27185,70 @@
         {
           "title": "Tiling.sg：2025 浴室門選擇",
           "url": "https://tiling.sg/toilet-doors-singapore"
+        }
+      ]
+    },
+    "guest-bedframe": {
+      "title": "客房床架",
+      "updated": "2026-11-13",
+      "summary": "選淘寶定製實木排骨架床架：外框 152 × 192（含床頭 ≤ 194）、排骨面高 27（床面約 48）、排骨寬 ≥ 7.5 間距 ≤ 7、有中樑中腳、梁下淨高 ≥ 11、無床尾板。新加坡現成 Queen 和 IKEA SG 床架都超過 154 × 194；Tempur 官方要求通風排骨底座、不可放地上、不用彈簧床座。",
+      "body": "## 結論\n- **選：淘寶/天貓「定製尺寸」實木排骨架床架（無床頭或貼牆薄床頭、帶腳、無床尾板），照下面規格下單。**\n  - 外框 152 × 192（含床頭 ≤ 194）；排骨面離地 27 → 床面約 48。\n  - 排骨條寬 ≥ 7.5、間距 ≤ 7（Tempur 英國上限 9）；中樑 + 中腳 ≥ 2；板條用橡膠托或卡扣，防異音。\n  - 邊梁、中樑下淨高 ≥ 11，掃地機器人可進。\n  - 側邊不高出排骨面，最多 1.5 擋邊，坐床沿不卡腿。\n  - 價格、集運費待確認。\n- **備選：新加坡木工照同規格訂做**（價格待確認），或原本看的淘寶 154 × 194 那款，只要它符合上面規格。\n- **不選：新加坡現成 Queen 床架。** 新加坡 Queen 床墊是 152 × 190，床架外框通常 162–167 × 200–205；IKEA SG Queen 是 150 × 200，外長 ≥ 200。兩者都超出 154 × 194。\n- **不選：200 長的床架或床座放 190 床墊。** 床尾會空出 10 的排骨，腳端踩到或坐到會凹。\n\n## Tempur 對床架的要求（官方）\n- **新加坡官方**：Tempur 床墊必須放在「通風底座，例如彈簧或排骨架」，防止濕氣累積；未依使用說明使用不在保固內。\n- **英國官方**：排骨間距 ≤ 9 cm；平台式底座也可以；要有腳、讓空氣流通，不要用床裙；直接放地上睡可能失去保固。\n- **美國官方**：排骨寬 ≥ 3 吋（7.6 cm）、間距 ≤ 4 吋（10 cm）；Queen 要有中間支撐、共 5–6 支腳；不要傳統彈簧床座（box spring），太軟；支撐不當可能讓保固失效。\n- **合起來的下單標準**：排骨寬 ≥ 7.5、間距 ≤ 7、有中樑和中腳、有腳離地、不用床裙、不用彈簧床座。\n- 保固：Harvey Norman SG 標示此款 10 年製造商保固。\n\n## 選項比較\n| 選項 | 外框（寬 × 長） | 床面高（+21） | 判斷 |\n|---|---|---|---|\n| 淘寶定製排骨架（推薦規格） | 152 × 192 | 約 48（排骨面 27） | 合格；價格待確認 |\n| 新加坡木工訂做 | 152 × 192（指定） | 約 48（指定） | 合格；價格待確認 |\n| 原淘寶 154 × 194 | 154 × 194 | 待確認 | 規格核對過才合格 |\n| IKEA LYNGÖR 排骨床座含腳 150 × 200（S$439） | 150 × 200 | 約 61（總高 40） | 太長、太高 |\n| IKEA TARVA 150 × 200（S$184） | 160 × 209 | 待確認 | 太寬、太長；床尾板 32 |\n| IKEA VEVELSTAD 150 × 200（S$169） | 156 × 207 | 待確認 | 太寬、太長；床尾板 27 |\n| HipVan Hiro Queen（S$199） | 176 × 202 | 約 41（排骨面 20） | 太寬、太長、太低 |\n| Castlery Miyo Queen（S$899 起） | 176 × 213 | 約 50（排骨面 29） | 太寬、太長 |\n| HipVan Leland Queen | 186 × 208 | 待確認 | 太寬、太長 |\n| TEMPUR Aspire 電動床座 Queen（HN S$3,599） | 150 × 190 | 待確認 | 尺寸合；貴、高度待確認，客房不需要 |\n\n## 高度怎麼算\n- 床面 46–50 減床墊 21 → 排骨面 25–29，取 27（床面約 48）。\n- 岳母約 164 cm，小腿長約 42–45，坐床沿腳平踩地、膝蓋略高於髖，起身最省力。\n- 記憶棉坐下會下陷約 2–3，實際坐高比 48 略低，所以不取下限 25。\n\n## 下單前確認\n- **外框**：寬 ≤ 152、長 ≤ 192；有床頭的話含床頭 ≤ 194（床頭厚 ≤ 2，或改掛牆床頭）。\n- **內淨尺寸**：若四周有擋邊，內淨 ≥ 151 × 191，Tempur 150 × 190 才放得進。\n- **排骨面高**：27（± 1），不是「床架總高」。\n- **淨高**：最低的梁（含中樑）下 ≥ 11；量自家掃地機器人機身高度（含雷射頭）再加 1。\n- **排骨**：寬 ≥ 7.5、間距 ≤ 7、厚 ≥ 1.5；實木或多層板，不要彎曲彈簧條。\n- **結構**：中樑 + 至少 2 支中腳；金屬接頭用螺栓不用卡扣；腳底加防滑墊。\n- **防異音**：排骨兩端有橡膠托或塑膠卡座；收貨後螺絲一週後再鎖一次。\n- **防滑**：沒有擋邊時，加一片透氣網格止滑墊；不要用不透氣的床墊保護板或床裙。\n- **運送**：淘寶集運到新加坡的運費、時間，及大件是否拆裝出貨，待確認。\n\n## 風險與待確認\n- 淘寶定製價格、運費、交期待確認。\n- 原淘寶 154 × 194 那款的排骨間距、排骨面高、梁下淨高待確認。\n- 掃地機器人型號與機身高度待確認。",
+      "sources": [
+        {
+          "title": "TEMPUR 新加坡保固條款（2021 年 9 月，通風底座要求）",
+          "url": "https://sg.tempur.com/on/demandware.static/-/Sites-tem_sg-Library/default/dw0f1d49b6/guarantee/SG-EN_TEMPUR_Guarantee_September_2021.pdf"
+        },
+        {
+          "title": "TEMPUR 新加坡產品保養與使用",
+          "url": "https://sg.tempur.com/your-new-product.html"
+        },
+        {
+          "title": "TEMPUR 英國：選擇床座（排骨間距 ≤ 9 cm）",
+          "url": "https://uk.tempur.com/choosing-the-right-bed-base.html"
+        },
+        {
+          "title": "Tempur-Pedic 美國：可用的床座（排骨寬 ≥ 3 吋、間距 ≤ 4 吋）",
+          "url": "https://help.tempurpedic.com/hc/en-us/articles/27172950284567-What-base-foundation-can-I-use-to-support-my-mattress"
+        },
+        {
+          "title": "Tempur Sealy 美國：核准的支撐系統（中間支撐、腳數）",
+          "url": "https://service.tempursealy.com/hc/en-us/articles/41783446550551-Approved-Support-Systems-for-Tempur-Pedic-Mattresses"
+        },
+        {
+          "title": "Harvey Norman SG：Tempur Prima SmartCool Firm Queen 150 × 190 × 21",
+          "url": "https://www.harveynorman.com.sg/bed-frames-and-mattresses/bedroom/mattresses-en/queen-en/tempur-prima-smartcool-firm-mattress-queen-size.html"
+        },
+        {
+          "title": "Harvey Norman SG：TEMPUR Aspire 電動床座 Queen",
+          "url": "https://www.harveynorman.com.sg/bed-frames-and-mattresses/bedroom/mattresses-en/queen-en/tempur-aspire-adjustable-bed-base-valid-for-purchase-with-a-tempur-mattress-queen-size.html"
+        },
+        {
+          "title": "IKEA SG：LYNGÖR 排骨床座含腳 150 × 200",
+          "url": "https://www.ikea.com/sg/en/p/lyngoer-slatted-mattress-base-incl-leg-dark-grey-s99608240/"
+        },
+        {
+          "title": "IKEA SG：TARVA 床架 150 × 200",
+          "url": "https://www.ikea.com/sg/en/p/tarva-bed-frame-pine-s39198514/"
+        },
+        {
+          "title": "IKEA SG：VEVELSTAD 床架 150 × 200",
+          "url": "https://www.ikea.com/sg/en/p/vevelstad-bed-frame-white-60506394"
+        },
+        {
+          "title": "HipVan：Hiro Queen 實木平台床",
+          "url": "https://www.hipvan.com/products/hiro-queen-wooden-platform-bed"
+        },
+        {
+          "title": "HipVan：Leland Queen 平台床",
+          "url": "https://www.hipvan.com/products/leland-queen-platform-bed"
+        },
+        {
+          "title": "Castlery SG：Miyo Build-Your-Own Bed",
+          "url": "https://www.castlery.com/sg/products/miyo-build-your-own-bed"
+        },
+        {
+          "title": "Megafurniture：新加坡 190 cm 床架怎麼選（Queen 152 × 190、外框多 10–15）",
+          "url": "https://megafurniture.sg/blogs/articles/190cm-bed-frame-how-to-choose-without-overspending"
         }
       ]
     }
