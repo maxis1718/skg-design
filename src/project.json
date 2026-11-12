@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R105",
+    "revision": "R106",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4919,6 +4919,10 @@
     {
       "id": "C113",
       "text": "新增待拍板：兩間浴室鏡櫃內部 PVC 色號。"
+    },
+    {
+      "id": "C114",
+      "text": "女傭房門改為待看：新增研究「女傭房門」（鋁百葉折門等比較與看樣地點）。"
     }
   ],
   "measurement_policy": {
@@ -26647,7 +26651,8 @@
     {
       "id": "todo-helper-door-hinge",
       "room": "helper",
-      "text": "女傭房門鉸鏈方向：建議放洗衣機側（不擋電器櫃拉出板，裝卸洗衣時先關門）",
+      "text": "去看女傭房門款式（百葉折門等），再定開向",
+      "research": "helper-door",
       "status": "open",
       "kind": "reno"
     },
@@ -27568,6 +27573,74 @@
         {
           "title": "HardwareZone：invisible grilles / diamond grilles 討論串",
           "url": "https://forums.hardwarezone.com.sg/threads/invisible-grilles-diamond-grilles.6597971/"
+        }
+      ]
+    },
+    "helper-door": {
+      "title": "女傭房門：百葉折疊門",
+      "updated": "2026-11-12",
+      "summary": "選鋁製百葉折疊門（aluminium louvre bi-fold），白色烤漆，兩片對折，上吊滑輪、地面不設軌道。開門時伸出約 40，平開門要 80；關門時也通風，鋁材不怕潮濕。Ho Ho Door 百葉折門標價 S$599；隱私不夠就做上百葉、下實心。80 寬報價和實際伸出量待確認。",
+      "body": "## 結論\n- **選：鋁製百葉折疊門（aluminium louvre bi-fold door），白色粉體烤漆，兩片對折，上吊滑輪＋下方定位銷，地面不設軌道。**\n  - 開門時兩片疊在一側，伸出約半個門寬（約 40）；平開門要整整 80 的迴轉空間。實際伸出量依門片數與門框，待廠商確認。\n  - 百葉關門時也通風；鋁材不怕潮濕、不會發霉變形。\n  - 價格：Ho Ho Door 標價 Premium Louvre Bifold S$599；HDDoor 鋁製百葉 slide & swing S$610–690（含安裝）。80 寬門洞報價待確認。\n- **隱私不夠時：上半百葉、下半實心（或壓克力）**。全百葉在低角度或室內開燈時可能看得到裡面，實際透視程度待看樣品。\n- **不選：PVC 折疊（手風琴）門**：便宜但鬆垮、關門聲大，看起來像臨時隔間。\n- **不選：木作百葉折門**：新加坡潮濕易變形、百葉縫難清，價格待確認。\n- **不選：橫拉穀倉門／暗袋門**：穀倉門要門旁約 80 牆面，正好是電器櫃或洗衣塔；暗袋門要拆牆做夾層，公寓牆體與 MCST 規定待確認。\n\n## 這種門叫什麼、怎麼做\n- **英文名**：louvred / louvre bi-fold door（新加坡業界也寫 louver），用在浴室時叫 bifold toilet door with louvre。照片那款是兩片固定橫向百葉。\n- **材質**：\n  - 鋁框粉體烤漆：本地主流，防水、防鏽、防白蟻。\n  - PVC／uPVC：較便宜。\n  - 實木／MDF 百葉：通常由木工訂做。\n- **構造**：\n  - 上軌道：滑輪通常承重。\n  - 下方：門框底部一支固定定位銷，或一條短的下軌道。\n  - 兩片之間：中間鉸鏈，常附「關門卡扣」。\n  - 門框：鋁框另計。\n  - 鎖：內側插銷或雙面鎖，例如 HDDoor Alulux 附雙面鎖。\n  - 五金：門片建議 ≤ 10 kg（Gripwell 系統資料）。\n- **尺寸**：組屋浴室標準約 3 × 7 ft（約 91 × 213）；HDDoor 可做到 3 × 7 ft，其他尺寸訂做。80 寬可行，實際尺寸待量。\n\n## 方案比較\n| 方案 | 通風／隱私 | 耐用／噪音／清潔 | 價格（S$）／開門所需空間 |\n|---|---|---|---|\n| **鋁製百葉折疊門** | 通風最好；固定斜百葉擋正面視線，低角度可能看得到 | 不怕潮；滑輪久了可能鬆，要上油；百葉縫要用刷子清 | 約 599（Ho Ho 標價）；伸出約 40 |\n| PVC 折疊（手風琴）門 | 不通風（實心）或只有小縫；不透光 | 輕薄易鬆，網友反映關門聲大 | 約 299（Ho Ho 標價）；疊在門邊，幾乎不佔空間 |\n| 木作百葉折疊門 | 同鋁百葉 | 潮濕易變形，要封漆；百葉縫難清 | 待確認；伸出約 40 |\n| 鋁製 slide & swing（可選百葉款） | 百葉款通風；實心款不通風 | 地面無軌道；機構比折門複雜 | 百葉款 610–690、一般款 399–599；仍要擺動空間 |\n| 橫拉／暗袋門 | 實心，不通風 | 暗袋門可能脫軌、維修要拆 | 待確認；橫拉門要門旁約 80 牆面 |\n| 一般平開門 | 實心，門底留縫才通風 | 最耐用、最安靜 | 鋁平開 690–899；要整扇 80 的迴轉空間 |\n\n## 在哪裡看、在哪裡買\n- **Ho Ho Door**：194 Pandan Loop #07-07（Pantech Business Hub），週一至五 10:00–16:30、週六 10:00–14:00；有 Premium Louvre Bifold 和 PVC 折疊門。\n- **HDDoor**：601 MacPherson Road，Grantral Mall #01-13；Alulux 鋁折門 S$490（含運送、安裝，保固 18 個月），鋁製百葉 slide & swing S$610–690。\n- **Door Lab**：Blk 642 Rowell Road #02-115；slide & swing S$418–768，沒列百葉款。\n- **Speedy Decor**：61 Woodlands Industrial Park E9（E9 Premium）；鋁折門 S$189–269，價格含丈量、安裝、拆舊門，沒列百葉款。\n- **Goodhill Enterprise**：30 Kranji Loop #04-01 TimMac @ Kranji；網站列有「Lourved」bi-fold，價格未列，可能偏工程／批發，待確認。\n- **Laminate Door Pte Ltd**：有 Alulux 鋁折門和百葉 slide & swing，地址、價格待確認。\n- 要求中提到的 Doorstudio、Toplink、Lian Hin、Sliding door SG：未查到可驗證的百葉折門網頁，不列。\n\n## 問 Patrick／廠商\n- 現有 80 是門框內淨寬還是牆洞寬？鋁折門要不要拆原本的木門框？\n- 門片往房內還是往廚房折？伸出量多少？會不會碰到床、電器櫃拉出板、WashTower 門？\n- 上吊滑輪和底部定位銷：地面要不要鑽孔？磁磚怎麼處理？\n- 百葉角度與葉片間距：站著和坐著能不能看到床？能不能做上百葉、下實心？\n- 內側鎖：要能從裡面上鎖，外面可緊急打開。\n- 白色烤漆色號要和廚房櫃、牆色一致。\n- 保固年限、滑輪耗材費用、多久能裝好。\n- MCST 換門要不要申請。\n\n## 風險與待確認\n- 80 寬尺寸的實際報價，各家都待確認。\n- 全百葉的實際隱私，需看樣品。\n- 百葉會積灰；靠近廚房，油煙可能附著在葉片上。\n- 洗碗機自動開門會撞女傭房門的問題，換成折門後要重新檢查。\n",
+      "sources": [
+        {
+          "title": "Ho Ho Door：浴室門（slide & swing、bifold、百葉、PVC）價目",
+          "url": "https://www.hohodoorsingapore.com/swing-sliding-door-singapore"
+        },
+        {
+          "title": "Ho Ho Door：2026 組屋浴室門選購指南（價格區間）",
+          "url": "https://www.hohodoorsingapore.com/single-post/best-toilet-door-for-hdb-bathrooms-in-singapore-2026-guide"
+        },
+        {
+          "title": "HDDoor：Alulux 鋁製折疊浴室門",
+          "url": "https://www.hddoor.com.sg/alulux-aluminium-bi-fold-toilet-door/"
+        },
+        {
+          "title": "HDDoor：Slide & swing 與百葉浴室門",
+          "url": "https://www.hddoor.com.sg/product-category/slide-and-swing-door/"
+        },
+        {
+          "title": "Door Lab：Slide & swing 浴室門",
+          "url": "https://www.doorlab.com.sg/vyy-swing-slide-toilet-door"
+        },
+        {
+          "title": "Speedy Decor：新加坡浴室門多少錢",
+          "url": "https://www.speedydecor.com/how-much-is-a-toilet-door-in-singapore/"
+        },
+        {
+          "title": "Goodhill Enterprise：Bi-fold door",
+          "url": "https://www.gsearch.com.sg/products-and-services/bi-fold-door/"
+        },
+        {
+          "title": "Laminate Door：浴室門類型比較",
+          "url": "https://hdblaminatedoor.blogspot.com/2025/11/what-type-of-toilet-door-is-best-for.html"
+        },
+        {
+          "title": "Gripwell：GKF111-MH 折疊門五金",
+          "url": "https://www.gripwell.com.sg/image/catalog/Gripwell/Engineered Access Hardware/Door Systems/GKF111-MH Folding Door System/Gripwell - GKF111-MH Folding Door System.pdf"
+        },
+        {
+          "title": "Lazada 指南：折疊門滑輪構造與更換",
+          "url": "https://home.lazada.sg/bifold-door-roller-replacement-essential-measurements-and-specs-to-check-sg/"
+        },
+        {
+          "title": "Houzz：為什麼選百葉門",
+          "url": "https://www.houzz.com.sg/magazine/why-get-louvred-doors-stsetivw-vs~129220307"
+        },
+        {
+          "title": "Qanvast：門的種類入門",
+          "url": "https://qanvast.com/sg/articles/doors-101-a-homeowners-guide-to-popular-types-of-doors-and-designs-3362"
+        },
+        {
+          "title": "RenoTalk：PVC 折疊門與手風琴門討論",
+          "url": "https://renotalk.com/forum/topic/39799-pvc-bifold-and-accordion-doors"
+        },
+        {
+          "title": "SG Doors：鋁製浴室門（折門、slide & swing、百葉）",
+          "url": "https://hashnode-hub.vercel.app/posts/68a948bb7744d6fe2640f9ce"
+        },
+        {
+          "title": "Tiling.sg：2025 浴室門選擇",
+          "url": "https://tiling.sg/toilet-doors-singapore"
         }
       ]
     }
