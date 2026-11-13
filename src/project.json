@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R109",
+    "revision": "R110",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4935,6 +4935,10 @@
     {
       "id": "C117",
       "text": "右上角加 🛋 家具尺寸清單（大型家具、家電 W × H × D，點了跳到物件）；家電尺寸改以產品實際尺寸顯示。"
+    },
+    {
+      "id": "C118",
+      "text": "家具尺寸清單只留洗碗機和冰箱。"
     }
   ],
   "measurement_policy": {
@@ -27263,23 +27267,7 @@
     }
   },
   "sizeList": [
-    "living-tv",
-    "sofa",
-    "dining-table",
-    "piano",
-    "kef-speaker-r",
-    "kef-sub",
-    "air-purifier",
-    "fridge",
-    "washer-dryer",
     "dishwasher",
-    "master-bed",
-    "master-crib",
-    "guest-bed-lb",
-    "guest-purifier",
-    "massage-chair-lb",
-    "kid-fan",
-    "robot-vacuum",
-    "drying-rack"
+    "fridge"
   ]
 }
