@@ -275,3 +275,10 @@ html[lang=en] .rc-item{grid-template-columns:6.6em minmax(0,1fr)}
 .todo-filter button{font:inherit;font-size:.85rem;padding:4px 12px;border:1px solid var(--line,#d9ddd5);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
 .todo-filter button i{font-style:normal;opacity:.6;font-size:.78rem}
 .todo-filter button[aria-pressed="true"]{background:var(--ink,#2f3a33);color:#fff;border-color:transparent}
+
+#size-all{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 28px}
+.size-list{list-style:none;margin:0;padding:0}
+.size-row{display:grid;grid-template-columns:1fr auto;gap:2px 12px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line,#e4e2d8);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
+.size-row:hover .size-name{text-decoration:underline}
+.size-dims{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--accent,#9b5a3c)}
+.size-model{grid-column:1/-1;font-size:.82em;opacity:.65}

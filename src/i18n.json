@@ -1703,6 +1703,9 @@
   "HipVan：Leland Queen 平台床": "HipVan — Leland Queen platform bed",
   "Castlery SG：Miyo Build-Your-Own Bed": "Castlery SG — Miyo Build-Your-Own Bed",
   "Megafurniture：新加坡 190 cm 床架怎麼選（Queen 152 × 190、外框多 10–15）": "Megafurniture — choosing a 190 cm bed frame (Queen 152 × 190, frame adds 10–15)",
-  "電視牆造型牆改到玄關天花降低處止（離陽台玻璃 325）；重低音插座移進牆內；新增研究「客房床架」與床架、書椅待辦。": "TV feature wall now stops where the entrance ceiling drops (325 from the balcony glass); sub socket moved onto the feature wall; new research \"Guest bed frame\" plus bed-frame and chair to-dos."
+  "電視牆造型牆改到玄關天花降低處止（離陽台玻璃 325）；重低音插座移進牆內；新增研究「客房床架」與床架、書椅待辦。": "TV feature wall now stops where the entrance ceiling drops (325 from the balcony glass); sub socket moved onto the feature wall; new research \"Guest bed frame\" plus bed-frame and chair to-dos.",
+  "家具尺寸": "Furniture sizes",
+  "家具尺寸 · W × H × D": "Furniture sizes · W × H × D",
+  "右上角加 🛋 家具尺寸清單（大型家具、家電 W × H × D，點了跳到物件）；家電尺寸改以產品實際尺寸顯示。": "New 🛋 furniture-size list (top right): big furniture and appliances in W × H × D, click to jump; appliances now show product size."
  }
 }

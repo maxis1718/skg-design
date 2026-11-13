@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R108",
+    "revision": "R109",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4931,6 +4931,10 @@
     {
       "id": "C116",
       "text": "電視牆造型牆改到玄關天花降低處止（離陽台玻璃 325）；重低音插座移進牆內；新增研究「客房床架」與床架、書椅待辦。"
+    },
+    {
+      "id": "C117",
+      "text": "右上角加 🛋 家具尺寸清單（大型家具、家電 W × H × D，點了跳到物件）；家電尺寸改以產品實際尺寸顯示。"
     }
   ],
   "measurement_policy": {
@@ -27257,5 +27261,25 @@
     "Knape & Vogt 8070PEZ-16": {
       "youtube": "https://www.youtube.com/watch?v=Pctzar1EpA8"
     }
-  }
+  },
+  "sizeList": [
+    "living-tv",
+    "sofa",
+    "dining-table",
+    "piano",
+    "kef-speaker-r",
+    "kef-sub",
+    "air-purifier",
+    "fridge",
+    "washer-dryer",
+    "dishwasher",
+    "master-bed",
+    "master-crib",
+    "guest-bed-lb",
+    "guest-purifier",
+    "massage-chair-lb",
+    "kid-fan",
+    "robot-vacuum",
+    "drying-rack"
+  ]
 }
