@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R110",
+    "revision": "R111",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4939,6 +4939,10 @@
     {
       "id": "C118",
       "text": "家具尺寸清單只留洗碗機和冰箱。"
+    },
+    {
+      "id": "C119",
+      "text": "新增待拍板：玄關鞋櫃抽屜換 Blum 滑軌。"
     }
   ],
   "measurement_policy": {
@@ -26229,6 +26233,13 @@
       "text": "買客房無輪書椅",
       "status": "open",
       "kind": "furn"
+    },
+    {
+      "id": "todo-entrance-shoe-drawers",
+      "room": "living",
+      "text": "玄關左側鞋櫃抽屜換 Blum 滑軌（現有前屋主訂製款不好拉）",
+      "status": "open",
+      "kind": "reno"
     }
   ],
   "research": {
