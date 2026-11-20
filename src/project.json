@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R116",
+    "revision": "R117",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4964,6 +4964,10 @@
     {
       "id": "C124",
       "text": "全屋燈光設計一次定案：各空間色溫、全屋同款防眩嵌燈、吊扇不帶燈、無假天花房間用局部 L-box、開關對應；新增研究「全屋燈光」。"
+    },
+    {
+      "id": "C125",
+      "text": "新增三項重要待拍板：書房櫃子做法、全屋 laminate 色號、全屋插座／CCTV／網路位置。"
     }
   ],
   "measurement_policy": {
@@ -26318,6 +26322,30 @@
       "text": "提供各房吊扇尺寸（目前佔位：客廳 52″、主臥 48″、其他 42″）",
       "status": "open",
       "kind": "furn"
+    },
+    {
+      "id": "todo-study-cabinet",
+      "room": "study",
+      "text": "確定書房櫃子怎麼做",
+      "status": "open",
+      "kind": "reno",
+      "priority": 1
+    },
+    {
+      "id": "todo-floor-laminate",
+      "room": "floor",
+      "text": "選全屋 laminate 色號（廚房、衣櫃、電視櫃、鏡櫃等）",
+      "status": "open",
+      "kind": "reno",
+      "priority": 1
+    },
+    {
+      "id": "todo-floor-points",
+      "room": "floor",
+      "text": "確認全屋插座、CCTV、網路孔位置",
+      "status": "open",
+      "kind": "reno",
+      "priority": 1
     }
   ],
   "research": {

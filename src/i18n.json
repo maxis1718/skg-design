@@ -1810,6 +1810,10 @@
   "全屋一次定案：色溫固定（客餐廳與書房 3500K、廚房與浴室 4000K、臥室走廊陽台 3000K、女傭房與閱讀燈 2700K）；全部嵌燈同一款深藏防眩 10 W Ø75，只差色溫與防水；吊扇一律不帶燈；沒有假天花的臥室與書房只在走道、門口做 60 寬局部假天花 260 放嵌燈；只有兩條 Aqara LED Strip T1 可調亮度。": "Whole home decided once: fixed CCT (living/dining and study 3500K, kitchen and baths 4000K, bedrooms, corridor and balconies 3000K, helper room and reading lamps 2700K); one deep anti-glare 10 W Ø75 downlight everywhere, varying only CCT and IP; no ceiling fan carries a light kit; bedrooms and study without false ceiling get a 60-wide local bulkhead at 260 over the aisle/door only; only two Aqara LED Strip T1 runs dim.",
   "臥室、小孩房、客房、書房做局部假天花 L-box 260 放嵌燈（約 S$1.5–2.5k，Patrick 報價）": "Bedrooms, kid room, guest, study: partial L-box false ceiling at 260 for downlights (~S$1.5–2.5k, quote from Patrick)",
   "提供各房吊扇尺寸（目前佔位：客廳 52″、主臥 48″、其他 42″）": "Give ceiling fan sizes per room (placeholders: living 52″, master 48″, others 42″)",
-  "全屋燈光設計一次定案：各空間色溫、全屋同款防眩嵌燈、吊扇不帶燈、無假天花房間用局部 L-box、開關對應；新增研究「全屋燈光」。": "Whole-home lighting decided once: CCT per space, one anti-glare downlight model, fans without light kits, partial L-box where no false ceiling, switch mapping; new research \"Lighting design\"."
+  "全屋燈光設計一次定案：各空間色溫、全屋同款防眩嵌燈、吊扇不帶燈、無假天花房間用局部 L-box、開關對應；新增研究「全屋燈光」。": "Whole-home lighting decided once: CCT per space, one anti-glare downlight model, fans without light kits, partial L-box where no false ceiling, switch mapping; new research \"Lighting design\".",
+  "確定書房櫃子怎麼做": "Decide the study cabinet design",
+  "選全屋 laminate 色號（廚房、衣櫃、電視櫃、鏡櫃等）": "Pick laminate colours for the whole home (kitchen, wardrobes, TV console, mirror cabinets…)",
+  "確認全屋插座、CCTV、網路孔位置": "Confirm all socket, CCTV and data point positions",
+  "新增三項重要待拍板：書房櫃子做法、全屋 laminate 色號、全屋插座／CCTV／網路位置。": "Three key decisions added: study cabinet, whole-home laminate colours, all socket/CCTV/data positions."
  }
 }
