@@ -167,7 +167,7 @@ function renderPowerLayer(){
   lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
-// R112 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,color}] = SW-01 keys, rooms {roomId: {ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label}, lights [{type down|cove|wash|pendant, group, x/y | line | x,y,w,l cm}], notes}}}.
+// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label}, lights [{type down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
 let showLight=new URLSearchParams(location.search).get('light')==='1';
 const lightRooms=()=>project.lighting?.rooms||{};
 const lightCol=g=>project.lighting?.groups?.find(x=>x.id===g)?.color||'#c98a00';
@@ -182,10 +182,13 @@ function buildLight(){
       for(let k=0;k<3;k++)b.append(svgEl('path',{d:`M-1 -2.2L-2.3 ${-(R-2.4)}Q0 ${-(R+.4)} 2.3 ${-(R-2.4)}L1 -2.2Z`,transform:`rotate(${k*120+30})`}));
       b.append(svgEl('circle',{class:'lf-hub',r:2.2}));g.append(b);top.append(svgEl('text',{class:'lf-label',x:f.x,y:f.y+R*.62},f.label));}
     for(const l of r.lights||[]){const c=lightCol(l.group);
-      if(l.type==='down'){const d=svgEl('g',{class:'ld',transform:`translate(${l.x} ${l.y})`});d.append(svgEl('circle',{r:2.1,fill:c,'fill-opacity':.16}),svgEl('circle',{r:1.25,fill:'#fff',stroke:c,'stroke-width':.5}),svgEl('circle',{r:.6,fill:c}));g.append(d);}
+      if(l.type==='down'){const d=svgEl('g',{class:'ld'+(l.surface?' ld-surface':''),transform:`translate(${l.x} ${l.y})`});if(l.ip)d.append(svgEl('circle',{class:'ld-ip',r:2.7}));d.append(svgEl('circle',{r:2.1,fill:c,'fill-opacity':.16}),svgEl('circle',{r:1.25,fill:'#fff',stroke:c,'stroke-width':.5}),svgEl('circle',{r:.6,fill:c}));g.append(d);}
       else if(l.line){g.append(svgEl('polyline',{class:'ll-glow',points:pts(l.line),stroke:c}),svgEl('polyline',{class:'ll ll-'+l.type,points:pts(l.line),stroke:c}));}
       else if(l.type==='pendant'){const w=l.w/cm,h=l.l/cm;g.append(svgEl('rect',{class:'lp',x:l.x-w/2,y:l.y-h/2,width:w,height:h,rx:w/2,fill:c,stroke:c}));}
+      else if(l.type==='ceil'){const R=l.d/2/cm;g.append(svgEl('circle',{class:'lcl',cx:l.x,cy:l.y,r:R,fill:c,stroke:c}),svgEl('circle',{cx:l.x,cy:l.y,r:.6,fill:c}));}
+      else if(l.type==='wall'){g.append(svgEl('rect',{class:'lw',x:l.x-1.1,y:l.y-1.1,width:2.2,height:2.2,rx:.4,fill:'#fff',stroke:c}),svgEl('circle',{cx:l.x,cy:l.y,r:.55,fill:c}));}
     }
+    if(r.cct)top.append(svgEl('text',{class:'lc-cct',x:r.cct.at[0],y:r.cct.at[1]},r.cct.k));
     g.append(top);layer.append(g);
   }
   renderLightLayer();
@@ -195,11 +198,14 @@ function renderLightLayer(){
   const L=project.lighting,here=isHome(roomId)?Object.keys(lightRooms()):lightRooms()[roomId]?[roomId]:[],on=showLight&&!!L;
   $('#light-layer').style.display=on?'':'none';$('#plan').classList.toggle('light-mode',on&&here.length>0);
   const lg=$('#light-legend'),blk=$('#light-block');lg.hidden=blk.hidden=!on||!here.length;if(lg.hidden){lg.innerHTML=blk.innerHTML='';return;}
-  const all=here.flatMap(id=>lightRooms()[id].lights||[]),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
-  for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id);for(const[ty,nm]of [['down','嵌燈'],['cove','燈槽'],['wash','洗牆燈'],['pendant','吊燈']]){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'?`${t(nm)} ${n} · ${gr.name}`:ty==='cove'?`${t(nm)} · ${gr.name}`:gr.name));}}
+  const all=here.flatMap(id=>lightRooms()[id].lights||[]).map(l=>l.surface?{...l,type:'surface'}:l),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
+  const TYPES=[['down','嵌燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
+  if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
+  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
   if(here.some(id=>lightRooms()[id].fan))chips.push(chip('fan','#24443b',t('吊扇 · 外圈內不放燈')));
   lg.innerHTML=chips.join('');
-  blk.innerHTML=here.map(id=>`<section><h3>${esc(L.title)}${isHome(roomId)?` · ${esc(room(id)?.name||id)}`:''}</h3><ul>${(lightRooms()[id].notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`).join('');
+  const cct=lr=>lr.cct?` · ${esc(lr.cct.k)}`:'';
+  blk.innerHTML=(isHome(roomId)&&L.principles?`<section><h3>${esc(t('燈光原則'))}</h3><ul>${L.principles.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`:'')+here.map(id=>{const lr=lightRooms()[id];return `<section><h3>${esc(L.title)}${isHome(roomId)?` · ${esc(lr.name||room(id)?.name||id)}`:''}${cct(lr)}</h3><ul>${(lr.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`;}).join('');
 }
 // 電與智能家居 record: shown under the plan on the whole-home view while ⚡ is on. `auto` sections are tables built from the visible points.
 const specOf=(p,k)=>(p.specs||[]).find(s=>s[0]===k)?.[1]??'';
