@@ -116,7 +116,7 @@ function buildPlan(){
     hit.addEventListener('pointerenter',e=>showTip(e,object(o.id)));hit.addEventListener('pointermove',positionTip);hit.addEventListener('pointerleave',hideTip);
     hit.addEventListener('click',e=>{e.stopPropagation();selectObject(o.id);hideTip();});$('#object-hits').append(hit);
   }
-  buildPower();
+  buildPower();buildLight();
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
@@ -166,6 +166,40 @@ function renderPowerLayer(){
   const lg=$('#power-legend');lg.hidden=!powerOn();
   lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
+}
+// R112 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,color}] = SW-01 keys, rooms {roomId: {ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label}, lights [{type down|cove|wash|pendant, group, x/y | line | x,y,w,l cm}], notes}}}.
+let showLight=new URLSearchParams(location.search).get('light')==='1';
+const lightRooms=()=>project.lighting?.rooms||{};
+const lightCol=g=>project.lighting?.groups?.find(x=>x.id===g)?.color||'#c98a00';
+function buildLight(){
+  const layer=$('#light-layer');if(!layer)return;layer.replaceChildren();if(!project.lighting)return renderLightLayer();
+  const cm=project.scale.nominal_cm_per_pt,pts=l=>l.map(p=>p.join(',')).join(' ');
+  for(const r of Object.values(lightRooms())){
+    const g=svgEl('g',{class:'light-room'}),top=svgEl('g');
+    for(const c of r.ceilings||[]){g.append(svgEl('polygon',{class:'lc lc-'+c.kind,points:pts(c.polygon)}));if(c.label&&c.at)top.append(svgEl('text',{class:'lc-label',x:c.at[0],y:c.at[1]},c.label));}
+    if(r.fan){const f=r.fan,R=f.d/2/cm,b=svgEl('g',{class:'lf-blades',transform:`translate(${f.x} ${f.y})`});
+      g.append(svgEl('circle',{class:'lf-clear',cx:f.x,cy:f.y,r:(f.d/2+f.clear)/cm}),svgEl('circle',{class:'lf-sweep',cx:f.x,cy:f.y,r:R}));
+      for(let k=0;k<3;k++)b.append(svgEl('path',{d:`M-1 -2.2L-2.3 ${-(R-2.4)}Q0 ${-(R+.4)} 2.3 ${-(R-2.4)}L1 -2.2Z`,transform:`rotate(${k*120+30})`}));
+      b.append(svgEl('circle',{class:'lf-hub',r:2.2}));g.append(b);top.append(svgEl('text',{class:'lf-label',x:f.x,y:f.y+R*.62},f.label));}
+    for(const l of r.lights||[]){const c=lightCol(l.group);
+      if(l.type==='down'){const d=svgEl('g',{class:'ld',transform:`translate(${l.x} ${l.y})`});d.append(svgEl('circle',{r:2.1,fill:c,'fill-opacity':.16}),svgEl('circle',{r:1.25,fill:'#fff',stroke:c,'stroke-width':.5}),svgEl('circle',{r:.6,fill:c}));g.append(d);}
+      else if(l.line){g.append(svgEl('polyline',{class:'ll-glow',points:pts(l.line),stroke:c}),svgEl('polyline',{class:'ll ll-'+l.type,points:pts(l.line),stroke:c}));}
+      else if(l.type==='pendant'){const w=l.w/cm,h=l.l/cm;g.append(svgEl('rect',{class:'lp',x:l.x-w/2,y:l.y-h/2,width:w,height:h,rx:w/2,fill:c,stroke:c}));}
+    }
+    g.append(top);layer.append(g);
+  }
+  renderLightLayer();
+}
+function renderLightLayer(){
+  const btn=$('#toggle-light');if(!btn)return;btn.classList.toggle('active',showLight);btn.setAttribute('aria-pressed',String(showLight));
+  const L=project.lighting,here=isHome(roomId)?Object.keys(lightRooms()):lightRooms()[roomId]?[roomId]:[],on=showLight&&!!L;
+  $('#light-layer').style.display=on?'':'none';$('#plan').classList.toggle('light-mode',on&&here.length>0);
+  const lg=$('#light-legend'),blk=$('#light-block');lg.hidden=blk.hidden=!on||!here.length;if(lg.hidden){lg.innerHTML=blk.innerHTML='';return;}
+  const all=here.flatMap(id=>lightRooms()[id].lights||[]),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
+  for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id);for(const[ty,nm]of [['down','筒燈'],['cove','燈槽'],['wash','洗牆燈'],['pendant','吊燈']]){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'?`${t(nm)} ${n} · ${gr.name}`:ty==='cove'?`${t(nm)} · ${gr.name}`:gr.name));}}
+  if(here.some(id=>lightRooms()[id].fan))chips.push(chip('fan','#24443b',t('吊扇 · 外圈內不放燈')));
+  lg.innerHTML=chips.join('');
+  blk.innerHTML=here.map(id=>`<section><h3>${esc(L.title)}${isHome(roomId)?` · ${esc(room(id)?.name||id)}`:''}</h3><ul>${(lightRooms()[id].notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`).join('');
 }
 // 電與智能家居 record: shown under the plan on the whole-home view while ⚡ is on. `auto` sections are tables built from the visible points.
 const specOf=(p,k)=>(p.specs||[]).find(s=>s[0]===k)?.[1]??'';
@@ -365,7 +399,7 @@ function selectRoom(id,{keepObject=false}={}){
   $$('[data-label-room]').forEach(z=>z.classList.toggle('muted',id!=='floor'&&z.dataset.labelRoom!==id));
   const grp=objectId&&object(objectId)?.group;$$('.object-hit').forEach(z=>z.classList.toggle('selected',z.dataset.object===objectId||(!!grp&&object(z.dataset.object)?.group===grp)));
   history.replaceState(null,'','#'+(objectId?'object-'+objectId:id));
-  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderSmart();renderTodos();hideTip();
+  renderKitchenVersion();renderDimensions();renderInspector();renderDetails();renderSmart();renderTodos();renderLightLayer();hideTip();
 }
 function selectObject(id,{scroll=false}={}){
   const o=object(id);if(!o)return;objectId=id;powerId=null;selectRoom(o.room_id,{keepObject:true});
@@ -455,6 +489,7 @@ function buildReference(){
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
 $('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
+$('#toggle-light').onclick=()=>{showLight=!showLight;const u=new URL(location.href);if(showLight)u.searchParams.set('light','1');else u.searchParams.delete('light');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderLightLayer();};
 $('#toggle-power').onclick=()=>{showPower=!showPower;powerId=null;const u=new URL(location.href);if(showPower)u.searchParams.set('power','1');else u.searchParams.delete('power');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderInspector();};
 $('#show-source').onclick=()=>{$('#source-dialog').showModal();};$('#close-source').onclick=()=>$('#source-dialog').close();
 $$('[data-source]').forEach(b=>b.onclick=()=>{$$('[data-source]').forEach(x=>x.classList.toggle('active',x===b));$('#source-image').src=originalSources[b.dataset.source];$('#source-caption').textContent=b.dataset.source==='new'?t('原圖標註為 mm。'):t('原始格局；原 PDF 左右鏡像。');});
@@ -468,7 +503,7 @@ $('#master-version').addEventListener('click',e=>{const b=e.target.closest('[dat
 $('#living-version').addEventListener('click',e=>{const b=e.target.closest('[data-living-version]');if(b)chooseLivingVersion(b.dataset.livingVersion);});
 $('.brand').addEventListener('click',e=>{e.preventDefault();selectRoom('floor');});
 // Static shell text: translate text nodes and a few attributes, remembering the Chinese source per node.
-const DYNAMIC='#smart-block,#brief-list,#todo-all,#todo-badge,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#tabs,#room-labels,#tooltip,#change-list,#kitchen-version,#drawing-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
+const DYNAMIC='#light-legend,#light-block,#smart-block,#brief-list,#todo-all,#todo-badge,#smart-record,#power-legend,#power-layer,#inspector,#details-content,#elevation-slot,#tabs,#room-labels,#tooltip,#change-list,#kitchen-version,#drawing-title,#source-caption,#todo-count,#todo-list,#research-title,#research-content,script,style';
 const staticText=new Map(),staticAttr=new Map();
 function applyStatic(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest(DYNAMIC)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
