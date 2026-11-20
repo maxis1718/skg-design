@@ -1814,6 +1814,8 @@
   "確定書房櫃子怎麼做": "Decide the study cabinet design",
   "選全屋 laminate 色號（廚房、衣櫃、電視櫃、鏡櫃等）": "Pick laminate colours for the whole home (kitchen, wardrobes, TV console, mirror cabinets…)",
   "確認全屋插座、CCTV、網路孔位置": "Confirm all socket, CCTV and data point positions",
-  "新增三項重要待拍板：書房櫃子做法、全屋 laminate 色號、全屋插座／CCTV／網路位置。": "Three key decisions added: study cabinet, whole-home laminate colours, all socket/CCTV/data positions."
+  "新增三項重要待拍板：書房櫃子做法、全屋 laminate 色號、全屋插座／CCTV／網路位置。": "Three key decisions added: study cabinet, whole-home laminate colours, all socket/CCTV/data positions.",
+  "重要": "Key",
+  "待拍板清單最上方加「重要」區：書房櫃子、全屋 laminate、全屋插座／CCTV／網路位置。": "To-decide list gets a \"Key\" section on top: study cabinet, laminate colours, all socket/CCTV/data positions."
  }
 }

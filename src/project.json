@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R117",
+    "revision": "R118",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4968,6 +4968,10 @@
     {
       "id": "C125",
       "text": "新增三項重要待拍板：書房櫃子做法、全屋 laminate 色號、全屋插座／CCTV／網路位置。"
+    },
+    {
+      "id": "C126",
+      "text": "待拍板清單最上方加「重要」區：書房櫃子、全屋 laminate、全屋插座／CCTV／網路位置。"
     }
   ],
   "measurement_policy": {
@@ -26329,7 +26333,8 @@
       "text": "確定書房櫃子怎麼做",
       "status": "open",
       "kind": "reno",
-      "priority": 1
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-floor-laminate",
@@ -26337,7 +26342,8 @@
       "text": "選全屋 laminate 色號（廚房、衣櫃、電視櫃、鏡櫃等）",
       "status": "open",
       "kind": "reno",
-      "priority": 1
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-floor-points",
@@ -26345,7 +26351,8 @@
       "text": "確認全屋插座、CCTV、網路孔位置",
       "status": "open",
       "kind": "reno",
-      "priority": 1
+      "priority": 1,
+      "pin": true
     }
   ],
   "research": {
