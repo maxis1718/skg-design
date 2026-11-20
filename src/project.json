@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R115",
+    "revision": "R116",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4960,6 +4960,10 @@
     {
       "id": "C123",
       "text": "嵌燈改固定 3500K，不用三色溫切換款；下單前先買樣品現場試。"
+    },
+    {
+      "id": "C124",
+      "text": "全屋燈光設計一次定案：各空間色溫、全屋同款防眩嵌燈、吊扇不帶燈、無假天花房間用局部 L-box、開關對應；新增研究「全屋燈光」。"
     }
   ],
   "measurement_policy": {
@@ -26297,6 +26301,21 @@
       "room": "floor",
       "text": "燈具下單前先買樣品現場試（嵌燈 A/B 型）",
       "research": "lighting-design",
+      "status": "open",
+      "kind": "furn"
+    },
+    {
+      "id": "todo-floor-lbox",
+      "room": "floor",
+      "text": "臥室、小孩房、客房、書房做局部假天花 L-box 260 放嵌燈（約 S$1.5–2.5k，Patrick 報價）",
+      "status": "open",
+      "kind": "reno",
+      "research": "lighting-design"
+    },
+    {
+      "id": "todo-floor-fans",
+      "room": "floor",
+      "text": "提供各房吊扇尺寸（目前佔位：客廳 52″、主臥 48″、其他 42″）",
       "status": "open",
       "kind": "furn"
     }
