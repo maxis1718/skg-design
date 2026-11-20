@@ -1732,6 +1732,7 @@
   "筒燈：深藏防眩嵌燈 10 W、開孔 Ø75、CRI ≥ 90、UGR < 19、無頻閃；全部 4000K，夠亮且開放空間色溫一致": "Downlights: deep-recessed anti-glare 10 W, cut-out Ø75, CRI ≥ 90, UGR < 19, flicker-free; all 4000K — bright, one colour temperature across the open plan",
   "開關 SW-01：玄關燈、客廳主燈（筒燈＋燈槽＋鋼琴燈）、餐桌吊燈、洗牆燈（Aqara LED Strip T1，常電，此鍵設無線）": "Switch SW-01: entrance, living main (downlights + cove + piano lights), dining pendant, wall washer (Aqara LED Strip T1, permanent power, key in wireless mode)",
   "餐桌吊燈": "Dining pendant",
-  "餐桌吊燈：長條 120 沿桌長向，燈底離桌面 75（離地 150）；餐桌上方不放筒燈，四角筒燈退到桌端外，人頭影子不落在桌面": "Dining pendant: linear 120 along the table, bottom 75 above the tabletop (150 AFF); no downlights over the table — corner downlights sit beyond the table ends so heads don't shadow the tabletop"
+  "餐桌吊燈：長條 120 沿桌長向，燈底離桌面 75（離地 150）；餐桌上方不放筒燈，四角筒燈退到桌端外，人頭影子不落在桌面": "Dining pendant: linear 120 along the table, bottom 75 above the tabletop (150 AFF); no downlights over the table — corner downlights sit beyond the table ends so heads don't shadow the tabletop",
+  "平面圖加 💡 天花燈光圖：客餐廳假天花、52 吋吊扇（尺寸待定）、15 盞防眩崁燈、燈槽、洗牆燈、餐桌線型吊燈；溝通重點按鈕改 📝。": "New 💡 ceiling/lighting layer: living-dining false ceiling, 52\" fan (size TBC), 15 anti-glare downlights, cove, wall washer, linear dining pendant; briefing button now 📝."
  }
 }
