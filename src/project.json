@@ -24000,6 +24000,2482 @@
         "電視電源線能不能拔下"
       ],
       "risks": []
+    },
+    "study-door": {
+      "wall": true,
+      "title": "書房門 · 四種做法",
+      "status": "design-proposal",
+      "states": [
+        {
+          "id": "closed",
+          "name": "關門"
+        },
+        {
+          "id": "open",
+          "name": "開門"
+        }
+      ],
+      "spec": [
+        {
+          "zone": "動線",
+          "h": "淨 86",
+          "note": "門片 90 向房內開，鉸鏈在書桌側；開到底貼著側牆那段 95 空牆，門尾離書桌 5；書椅、按摩椅都在弧外。"
+        },
+        {
+          "zone": "家具與牆面",
+          "h": "不佔",
+          "note": "門旁 145 牆和走廊牆都空出來，書房櫃可放 145 那面牆。"
+        },
+        {
+          "zone": "隔音與隱私",
+          "h": "最好",
+          "note": "實心門＋門框四周膠條＋門底自動落下密封條；按摩椅聲音和深夜燈光不漏到對面小孩房。"
+        },
+        {
+          "zone": "開關插座",
+          "h": "不動",
+          "note": "SW-08 留在原位（開門那側）；S-27、D-03、S-28 在書桌牆不受影響。"
+        },
+        {
+          "zone": "費用工期",
+          "h": "≈ S$500–800",
+          "note": "laminate 實心門＋門框＋五金＋密封條（同衛浴 2 平開門做法）；拆現有拉門與軌道、補牆，1 天。"
+        },
+        {
+          "zone": "外觀",
+          "h": "最清爽",
+          "note": "沒有門楣盒，門框頂在冷氣箱下方，不會兩個盒子疊在一起。"
+        },
+        {
+          "zone": "不選",
+          "h": "折門／外開",
+          "note": "折門縫多、不隔音，這裡平開已放得下；向走廊開會擋住 110 走廊和對面小孩房門。"
+        }
+      ],
+      "rationale": [
+        "圖面量：門洞牆到牆 100、牆厚 10；門洞一側到牆角 145，書桌那側到側牆只有 5；書桌離門牆 95；走廊 110；走廊牆往衛浴 2 門框 85、往主臥門只有 35，拉門不能往那邊滑。",
+        "現況（交屋照片）：明裝拉門裝在房內、往 145 牆那側滑，門楣盒頂到門上方的冷氣箱。",
+        "平開門鉸鏈放書桌側：開門貼側牆空牆，SW-08 在開門那側一伸手就按到；鉸鏈放另一側會擋住 SW-08 和 145 牆。"
+      ],
+      "open_questions": [
+        "現有拉門門片寬（估 105）",
+        "冷氣箱底離地高度（平開門框頂要在它下方）",
+        "門牆是混凝土還是輕隔間（D 才需要）"
+      ],
+      "views": [
+        {
+          "id": "a",
+          "name": "A 平開門",
+          "kind": "svg",
+          "viewBox": [
+            -30,
+            -168,
+            470,
+            476
+          ],
+          "items": [
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -168,
+              "width": 470,
+              "height": 476,
+              "fill": "#ffffff"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -120.2,
+              "width": 340.1,
+              "height": 110.0,
+              "fill": "#f6f5f1"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -120.2,
+              "width": 129.9,
+              "height": 110.0,
+              "fill": "#f1f0eb"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 250.2,
+              "height": 290.0,
+              "fill": "#eef3ea"
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 169.9,
+              "height": 300,
+              "fill": "#f3f3f0"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -130.0,
+              "width": 175.2,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -130.0,
+              "width": 30.1,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 275.2,
+              "y": -130.0,
+              "width": 5.0,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 370.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 375.1,
+              "y": -130.0,
+              "width": 64.9,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": -168,
+              "width": 19.9,
+              "height": 38.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": -10.2,
+              "width": 165.1,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -10.2,
+              "width": 84.7,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 329.8,
+              "y": -10.2,
+              "width": 4.6,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 417.0,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 422.1,
+              "y": -10.2,
+              "width": 17.9,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -19.9,
+              "width": 10.2,
+              "height": 9.7,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 290,
+              "width": 250.2,
+              "height": 10,
+              "fill": "#dfe9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 57.1,
+              "height": 27.5,
+              "fill": "#e6e3dc",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M270.1 0L327.2 27.5M327.2 0L270.1 27.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -19.9V-110.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -110.1A89.7 89.7 0 0 0 10.2 -19.9",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -219.7A89.7 89.7 0 0 0 150.3 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -219.7A89.7 89.7 0 0 1 370.0 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M417.0 0V82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M334.4 0A82.60000000000002 82.60000000000002 0 0 0 417.0 82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "rect",
+              "x": 200.0,
+              "y": 95.0,
+              "width": 50.0,
+              "height": 100.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7
+            },
+            {
+              "el": "rect",
+              "x": 239.0,
+              "y": 114.3,
+              "width": 4.0,
+              "height": 61.4,
+              "fill": "#d8dcd6",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 145.0,
+              "y": 120.0,
+              "width": 50.0,
+              "height": 50.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.6,
+              "rx": 4
+            },
+            {
+              "el": "path",
+              "d": "M149.0 124.0V166.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "rect",
+              "x": 113.0,
+              "y": 199.0,
+              "width": 127.0,
+              "height": 76.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7,
+              "rx": 3
+            },
+            {
+              "el": "path",
+              "d": "M240.0 207.5H143.0M240.0 266.5H143.0M215.0 207.5V266.5M143.0 199.0V275.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M113.0 199.0H55.0V275.0H113.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "path",
+              "d": "M2.0 282.0H248.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "5 2"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 123.1,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 145.0,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#0f766e"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 192.6,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "text",
+              "x": 70,
+              "y": 150,
+              "font-size": 11,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "書房"
+            },
+            {
+              "el": "text",
+              "x": 225,
+              "y": 150,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "書桌"
+            },
+            {
+              "el": "text",
+              "x": 170,
+              "y": 240,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "按摩椅"
+            },
+            {
+              "el": "text",
+              "x": 195,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "小孩房"
+            },
+            {
+              "el": "text",
+              "x": 325,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "客房"
+            },
+            {
+              "el": "text",
+              "x": 45,
+              "y": -60,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "主臥"
+            },
+            {
+              "el": "text",
+              "x": 375,
+              "y": 110,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "衛浴 2"
+            },
+            {
+              "el": "text",
+              "x": 178,
+              "y": -62,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "走廊"
+            },
+            {
+              "el": "path",
+              "d": "M127 -120.2V-10.2M124.5 -120.2H129.5M124.5 -10.2H129.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 130,
+              "y": -62.7,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "start",
+              "label": "110"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.0,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "path",
+              "d": "M240.0 0L150.3 0A89.69999999999999 89.69999999999999 0 0 0 240.0 89.69999999999999Z",
+              "fill": "#e8b04a",
+              "stroke": "#c98a00",
+              "stroke-width": 0.5,
+              "fill-opacity": 0.16,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "rect",
+              "x": 150.3,
+              "y": -6.6,
+              "width": 89.7,
+              "height": 4.0,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "closed"
+            },
+            {
+              "el": "rect",
+              "x": 236.0,
+              "y": 0,
+              "width": 4.0,
+              "height": 89.7,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "open"
+            },
+            {
+              "el": "rect",
+              "x": 135.7,
+              "y": 0,
+              "width": 8.6,
+              "height": 1.6,
+              "fill": "#2b6cb0"
+            },
+            {
+              "el": "text",
+              "x": 143,
+              "y": 11,
+              "font-size": 6.5,
+              "fill": "#2b6cb0",
+              "text-anchor": "end",
+              "label": "SW-08",
+              "font-weight": 600
+            },
+            {
+              "el": "path",
+              "d": "M232 89.69999999999999V95.0M229.5 89.69999999999999H234.5M229.5 95.0H234.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 229,
+              "y": 94.85,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "end",
+              "label": "5"
+            },
+            {
+              "el": "path",
+              "d": "M150.3 -26H236.0M150.3 -28.5V-23.5M236.0 -28.5V-23.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 193.15,
+              "y": -29,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "淨 86"
+            }
+          ],
+          "verdict": "選 A：關得最密、最便宜、開關插座都不用動；向內開的弧正好落在進門動線上，不佔任何家具位置。",
+          "spec": [
+            {
+              "zone": "動線",
+              "h": "淨 86",
+              "note": "門片 90 向房內開，鉸鏈在書桌側；開到底貼著側牆那段 95 空牆，門尾離書桌 5；書椅、按摩椅都在弧外。"
+            },
+            {
+              "zone": "家具與牆面",
+              "h": "不佔",
+              "note": "門旁 145 牆和走廊牆都空出來，書房櫃可放 145 那面牆。"
+            },
+            {
+              "zone": "隔音與隱私",
+              "h": "最好",
+              "note": "實心門＋門框四周膠條＋門底自動落下密封條；按摩椅聲音和深夜燈光不漏到對面小孩房。"
+            },
+            {
+              "zone": "開關插座",
+              "h": "不動",
+              "note": "SW-08 留在原位（開門那側）；S-27、D-03、S-28 在書桌牆不受影響。"
+            },
+            {
+              "zone": "費用工期",
+              "h": "≈ S$500–800",
+              "note": "laminate 實心門＋門框＋五金＋密封條（同衛浴 2 平開門做法）；拆現有拉門與軌道、補牆，1 天。"
+            },
+            {
+              "zone": "外觀",
+              "h": "最清爽",
+              "note": "沒有門楣盒，門框頂在冷氣箱下方，不會兩個盒子疊在一起。"
+            },
+            {
+              "zone": "不選",
+              "h": "折門／外開",
+              "note": "折門縫多、不隔音，這裡平開已放得下；向走廊開會擋住 110 走廊和對面小孩房門。"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "name": "B 現況拉門",
+          "kind": "svg",
+          "viewBox": [
+            -30,
+            -168,
+            470,
+            476
+          ],
+          "items": [
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -168,
+              "width": 470,
+              "height": 476,
+              "fill": "#ffffff"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -120.2,
+              "width": 340.1,
+              "height": 110.0,
+              "fill": "#f6f5f1"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -120.2,
+              "width": 129.9,
+              "height": 110.0,
+              "fill": "#f1f0eb"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 250.2,
+              "height": 290.0,
+              "fill": "#eef3ea"
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 169.9,
+              "height": 300,
+              "fill": "#f3f3f0"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -130.0,
+              "width": 175.2,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -130.0,
+              "width": 30.1,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 275.2,
+              "y": -130.0,
+              "width": 5.0,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 370.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 375.1,
+              "y": -130.0,
+              "width": 64.9,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": -168,
+              "width": 19.9,
+              "height": 38.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": -10.2,
+              "width": 165.1,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -10.2,
+              "width": 84.7,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 329.8,
+              "y": -10.2,
+              "width": 4.6,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 417.0,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 422.1,
+              "y": -10.2,
+              "width": 17.9,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -19.9,
+              "width": 10.2,
+              "height": 9.7,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 290,
+              "width": 250.2,
+              "height": 10,
+              "fill": "#dfe9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 57.1,
+              "height": 27.5,
+              "fill": "#e6e3dc",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M270.1 0L327.2 27.5M327.2 0L270.1 27.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -19.9V-110.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -110.1A89.7 89.7 0 0 0 10.2 -19.9",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -219.7A89.7 89.7 0 0 0 150.3 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -219.7A89.7 89.7 0 0 1 370.0 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M417.0 0V82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M334.4 0A82.60000000000002 82.60000000000002 0 0 0 417.0 82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "rect",
+              "x": 200.0,
+              "y": 95.0,
+              "width": 50.0,
+              "height": 100.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7
+            },
+            {
+              "el": "rect",
+              "x": 239.0,
+              "y": 114.3,
+              "width": 4.0,
+              "height": 61.4,
+              "fill": "#d8dcd6",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 145.0,
+              "y": 120.0,
+              "width": 50.0,
+              "height": 50.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.6,
+              "rx": 4
+            },
+            {
+              "el": "path",
+              "d": "M149.0 124.0V166.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "rect",
+              "x": 113.0,
+              "y": 199.0,
+              "width": 127.0,
+              "height": 76.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7,
+              "rx": 3
+            },
+            {
+              "el": "path",
+              "d": "M240.0 207.5H143.0M240.0 266.5H143.0M215.0 207.5V266.5M143.0 199.0V275.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M113.0 199.0H55.0V275.0H113.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "path",
+              "d": "M2.0 282.0H248.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "5 2"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 123.1,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 145.0,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#0f766e"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 192.6,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "text",
+              "x": 70,
+              "y": 150,
+              "font-size": 11,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "書房"
+            },
+            {
+              "el": "text",
+              "x": 225,
+              "y": 150,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "書桌"
+            },
+            {
+              "el": "text",
+              "x": 170,
+              "y": 240,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "按摩椅"
+            },
+            {
+              "el": "text",
+              "x": 195,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "小孩房"
+            },
+            {
+              "el": "text",
+              "x": 325,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "客房"
+            },
+            {
+              "el": "text",
+              "x": 45,
+              "y": -60,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "主臥"
+            },
+            {
+              "el": "text",
+              "x": 375,
+              "y": 110,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "衛浴 2"
+            },
+            {
+              "el": "text",
+              "x": 178,
+              "y": -62,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "走廊"
+            },
+            {
+              "el": "path",
+              "d": "M127 -120.2V-10.2M124.5 -120.2H129.5M124.5 -10.2H129.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 130,
+              "y": -62.7,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "start",
+              "label": "110"
+            },
+            {
+              "el": "rect",
+              "x": 42.7,
+              "y": 0,
+              "width": 105.0,
+              "height": 12,
+              "fill": "#e8b04a",
+              "fill-opacity": 0.2
+            },
+            {
+              "el": "rect",
+              "x": 0,
+              "y": 0,
+              "width": 250.2,
+              "height": 12,
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "4 2"
+            },
+            {
+              "el": "rect",
+              "x": 142.7,
+              "y": 3,
+              "width": 105.0,
+              "height": 4,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "closed"
+            },
+            {
+              "el": "rect",
+              "x": 42.7,
+              "y": 3,
+              "width": 105.0,
+              "height": 4,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "open"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 15,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#2b6cb0"
+            },
+            {
+              "el": "path",
+              "d": "M136.5 -2.0L143.5 5.0M136.5 5.0L143.5 -2.0",
+              "fill": "none",
+              "stroke": "#c0392b",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "text",
+              "x": 246.2,
+              "y": 30,
+              "font-size": 6.5,
+              "fill": "#2b6cb0",
+              "text-anchor": "end",
+              "label": "SW-08",
+              "font-weight": 600
+            },
+            {
+              "el": "path",
+              "d": "M0 22H42.69999999999999M0 19.5V24.5M42.69999999999999 19.5V24.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 21.349999999999994,
+              "y": 19.5,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "43"
+            },
+            {
+              "el": "path",
+              "d": "M147.7 -26H245.1M147.7 -28.5V-23.5M245.1 -28.5V-23.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 196.39999999999998,
+              "y": -29,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "淨 97"
+            }
+          ],
+          "verdict": "不選：最省事，但漏聲漏光，門片停放吃掉門旁 105 牆面，SW-08 也要移。",
+          "spec": [
+            {
+              "zone": "動線",
+              "h": "淨 97",
+              "note": "不佔迴轉空間，開口最寬。"
+            },
+            {
+              "zone": "家具與牆面",
+              "h": "剩 43",
+              "note": "門片停在門旁 145 牆上，這 105 不能放櫃、掛東西，只剩牆角 43。"
+            },
+            {
+              "zone": "隔音與隱私",
+              "h": "差",
+              "note": "明裝拉門四周約 1 的縫，按摩椅聲音和燈光漏到走廊、小孩房。"
+            },
+            {
+              "zone": "開關插座",
+              "h": "SW-08 要移",
+              "note": "原位被停放的門片擋住 → 移到書桌那面側牆，離牆角 15、離地 120。"
+            },
+            {
+              "zone": "費用工期",
+              "h": "≈ S$0–150",
+              "note": "保留現有門，只移開關、收好門楣盒。"
+            },
+            {
+              "zone": "外觀",
+              "h": "盒子相疊",
+              "note": "門楣盒一路頂到冷氣箱下，兩個盒子疊在門上方（如現況照片）。"
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "name": "C 走廊側拉門",
+          "kind": "svg",
+          "viewBox": [
+            -30,
+            -168,
+            470,
+            476
+          ],
+          "items": [
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -168,
+              "width": 470,
+              "height": 476,
+              "fill": "#ffffff"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -120.2,
+              "width": 340.1,
+              "height": 110.0,
+              "fill": "#f6f5f1"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -120.2,
+              "width": 129.9,
+              "height": 110.0,
+              "fill": "#f1f0eb"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 250.2,
+              "height": 290.0,
+              "fill": "#eef3ea"
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 169.9,
+              "height": 300,
+              "fill": "#f3f3f0"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -130.0,
+              "width": 175.2,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -130.0,
+              "width": 30.1,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 275.2,
+              "y": -130.0,
+              "width": 5.0,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 370.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 375.1,
+              "y": -130.0,
+              "width": 64.9,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": -168,
+              "width": 19.9,
+              "height": 38.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": -10.2,
+              "width": 165.1,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -10.2,
+              "width": 84.7,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 329.8,
+              "y": -10.2,
+              "width": 4.6,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 417.0,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 422.1,
+              "y": -10.2,
+              "width": 17.9,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -19.9,
+              "width": 10.2,
+              "height": 9.7,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 290,
+              "width": 250.2,
+              "height": 10,
+              "fill": "#dfe9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 57.1,
+              "height": 27.5,
+              "fill": "#e6e3dc",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M270.1 0L327.2 27.5M327.2 0L270.1 27.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -19.9V-110.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -110.1A89.7 89.7 0 0 0 10.2 -19.9",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -219.7A89.7 89.7 0 0 0 150.3 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -219.7A89.7 89.7 0 0 1 370.0 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M417.0 0V82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M334.4 0A82.60000000000002 82.60000000000002 0 0 0 417.0 82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "rect",
+              "x": 200.0,
+              "y": 95.0,
+              "width": 50.0,
+              "height": 100.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7
+            },
+            {
+              "el": "rect",
+              "x": 239.0,
+              "y": 114.3,
+              "width": 4.0,
+              "height": 61.4,
+              "fill": "#d8dcd6",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 145.0,
+              "y": 120.0,
+              "width": 50.0,
+              "height": 50.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.6,
+              "rx": 4
+            },
+            {
+              "el": "path",
+              "d": "M149.0 124.0V166.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "rect",
+              "x": 113.0,
+              "y": 199.0,
+              "width": 127.0,
+              "height": 76.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7,
+              "rx": 3
+            },
+            {
+              "el": "path",
+              "d": "M240.0 207.5H143.0M240.0 266.5H143.0M215.0 207.5V266.5M143.0 199.0V275.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M113.0 199.0H55.0V275.0H113.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "path",
+              "d": "M2.0 282.0H248.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "5 2"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 123.1,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 145.0,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#0f766e"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 192.6,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "text",
+              "x": 70,
+              "y": 150,
+              "font-size": 11,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "書房"
+            },
+            {
+              "el": "text",
+              "x": 225,
+              "y": 150,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "書桌"
+            },
+            {
+              "el": "text",
+              "x": 170,
+              "y": 240,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "按摩椅"
+            },
+            {
+              "el": "text",
+              "x": 195,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "小孩房"
+            },
+            {
+              "el": "text",
+              "x": 325,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "客房"
+            },
+            {
+              "el": "text",
+              "x": 45,
+              "y": -60,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "主臥"
+            },
+            {
+              "el": "text",
+              "x": 375,
+              "y": 110,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "衛浴 2"
+            },
+            {
+              "el": "text",
+              "x": 178,
+              "y": -62,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "走廊"
+            },
+            {
+              "el": "path",
+              "d": "M127 -120.2V-10.2M124.5 -120.2H129.5M124.5 -10.2H129.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 130,
+              "y": -62.7,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "start",
+              "label": "110"
+            },
+            {
+              "el": "rect",
+              "x": 224.8,
+              "y": -22.2,
+              "width": 105.0,
+              "height": 12.0,
+              "fill": "#e8b04a",
+              "fill-opacity": 0.22
+            },
+            {
+              "el": "rect",
+              "x": 142.7,
+              "y": -22.2,
+              "width": 187.1,
+              "height": 12.0,
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "4 2"
+            },
+            {
+              "el": "rect",
+              "x": 142.7,
+              "y": -17.2,
+              "width": 105.0,
+              "height": 4.0,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "closed"
+            },
+            {
+              "el": "rect",
+              "x": 224.8,
+              "y": -17.2,
+              "width": 105.0,
+              "height": 4.0,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "open"
+            },
+            {
+              "el": "rect",
+              "x": 135.7,
+              "y": 0,
+              "width": 8.6,
+              "height": 1.6,
+              "fill": "#2b6cb0"
+            },
+            {
+              "el": "text",
+              "x": 140,
+              "y": 11,
+              "font-size": 6.5,
+              "fill": "#2b6cb0",
+              "text-anchor": "middle",
+              "label": "SW-08",
+              "font-weight": 600
+            },
+            {
+              "el": "rect",
+              "x": 317.2,
+              "y": -11.8,
+              "width": 8.6,
+              "height": 1.6,
+              "fill": "#c0392b"
+            },
+            {
+              "el": "circle",
+              "cx": 321.5,
+              "cy": -11.2,
+              "r": 7,
+              "fill": "none",
+              "stroke": "#c0392b",
+              "stroke-width": 0.9
+            },
+            {
+              "el": "text",
+              "x": 321.5,
+              "y": -32.2,
+              "font-size": 6.5,
+              "fill": "#c0392b",
+              "text-anchor": "middle",
+              "label": "SW-10",
+              "font-weight": 600
+            },
+            {
+              "el": "rect",
+              "x": 424.1,
+              "y": -11.8,
+              "width": 8.6,
+              "height": 1.6,
+              "fill": "#2b6cb0"
+            },
+            {
+              "el": "text",
+              "x": 428.40000000000003,
+              "y": -15.2,
+              "font-size": 6.5,
+              "fill": "#2b6cb0",
+              "text-anchor": "middle",
+              "label": "SW-10",
+              "font-weight": 600
+            },
+            {
+              "el": "path",
+              "d": "M145.2 -40H224.8M145.2 -42.5V-37.5M224.8 -42.5V-37.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 185.0,
+              "y": -43,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "淨 80"
+            },
+            {
+              "el": "path",
+              "d": "M290 -120.2V-22.2M287.5 -120.2H292.5M287.5 -22.2H292.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 293,
+              "y": -68.7,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "start",
+              "label": "98"
+            }
+          ],
+          "verdict": "不選：房內牆面全空，但開口變窄、走廊多一個盒子，還擋到衛浴 2 開關。",
+          "spec": [
+            {
+              "zone": "動線",
+              "h": "淨 80",
+              "note": "走廊側只有 85 牆可停門片（到衛浴 2 門框止），105 門片停好仍擋 20 開口；走廊 110 在門楣處剩 98。"
+            },
+            {
+              "zone": "家具與牆面",
+              "h": "房內全空",
+              "note": "房內牆面不受影響。"
+            },
+            {
+              "zone": "隔音與隱私",
+              "h": "差",
+              "note": "同 B，四周有縫。"
+            },
+            {
+              "zone": "開關插座",
+              "h": "SW-10 要移",
+              "note": "衛浴 2 開關被停放的門片擋住 → 移到衛浴 2 門另一側；SW-08 不動。"
+            },
+            {
+              "zone": "費用工期",
+              "h": "≈ S$200–400",
+              "note": "拆裝門片、軌道改到走廊側、新門楣盒、補牆。"
+            },
+            {
+              "zone": "外觀",
+              "h": "走廊多盒子",
+              "note": "走廊多一條約 190 長的門楣盒，從書房門延伸到衛浴 2 門框。"
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "name": "D 暗袋門",
+          "kind": "svg",
+          "viewBox": [
+            -30,
+            -168,
+            470,
+            476
+          ],
+          "items": [
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -168,
+              "width": 470,
+              "height": 476,
+              "fill": "#ffffff"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -120.2,
+              "width": 340.1,
+              "height": 110.0,
+              "fill": "#f6f5f1"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -120.2,
+              "width": 129.9,
+              "height": 110.0,
+              "fill": "#f1f0eb"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 250.2,
+              "height": 290.0,
+              "fill": "#eef3ea"
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 169.9,
+              "height": 300,
+              "fill": "#f3f3f0"
+            },
+            {
+              "el": "rect",
+              "x": -30,
+              "y": -130.0,
+              "width": 175.2,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -130.0,
+              "width": 30.1,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 275.2,
+              "y": -130.0,
+              "width": 5.0,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 370.0,
+              "y": -130.0,
+              "width": 5.1,
+              "height": 9.8,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 375.1,
+              "y": -130.0,
+              "width": 64.9,
+              "height": 9.8,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": -168,
+              "width": 19.9,
+              "height": 38.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": -10.2,
+              "width": 165.1,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 245.1,
+              "y": -10.2,
+              "width": 84.7,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 329.8,
+              "y": -10.2,
+              "width": 4.6,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 417.0,
+              "y": -10.2,
+              "width": 5.1,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 422.1,
+              "y": -10.2,
+              "width": 17.9,
+              "height": 10.2,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 99.9,
+              "y": -19.9,
+              "width": 10.2,
+              "height": 9.7,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": -19.9,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 250.2,
+              "y": 0.0,
+              "width": 19.9,
+              "height": 300.0,
+              "fill": "#56625b"
+            },
+            {
+              "el": "rect",
+              "x": 0.0,
+              "y": 290,
+              "width": 250.2,
+              "height": 10,
+              "fill": "#dfe9ee",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 270.1,
+              "y": 0,
+              "width": 57.1,
+              "height": 27.5,
+              "fill": "#e6e3dc",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M270.1 0L327.2 27.5M327.2 0L270.1 27.5",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -19.9V-110.1",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M99.9 -110.1A89.7 89.7 0 0 0 10.2 -19.9",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M240.0 -219.7A89.7 89.7 0 0 0 150.3 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -130.0V-219.7",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M280.2 -219.7A89.7 89.7 0 0 1 370.0 -130.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "path",
+              "d": "M417.0 0V82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "path",
+              "d": "M334.4 0A82.60000000000002 82.60000000000002 0 0 0 417.0 82.60000000000002",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4,
+              "stroke-dasharray": "2 1.5"
+            },
+            {
+              "el": "rect",
+              "x": 200.0,
+              "y": 95.0,
+              "width": 50.0,
+              "height": 100.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7
+            },
+            {
+              "el": "rect",
+              "x": 239.0,
+              "y": 114.3,
+              "width": 4.0,
+              "height": 61.4,
+              "fill": "#d8dcd6",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "rect",
+              "x": 145.0,
+              "y": 120.0,
+              "width": 50.0,
+              "height": 50.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.6,
+              "rx": 4
+            },
+            {
+              "el": "path",
+              "d": "M149.0 124.0V166.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "rect",
+              "x": 113.0,
+              "y": 199.0,
+              "width": 127.0,
+              "height": 76.0,
+              "fill": "#fbfbf8",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.7,
+              "rx": 3
+            },
+            {
+              "el": "path",
+              "d": "M240.0 207.5H143.0M240.0 266.5H143.0M215.0 207.5V266.5M143.0 199.0V275.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.4
+            },
+            {
+              "el": "path",
+              "d": "M113.0 199.0H55.0V275.0H113.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "path",
+              "d": "M2.0 282.0H248.0",
+              "fill": "none",
+              "stroke": "#7f8c84",
+              "stroke-width": 0.5,
+              "stroke-dasharray": "5 2"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 123.1,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 145.0,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#0f766e"
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 192.6,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#c2410c"
+            },
+            {
+              "el": "text",
+              "x": 70,
+              "y": 150,
+              "font-size": 11,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "書房"
+            },
+            {
+              "el": "text",
+              "x": 225,
+              "y": 150,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "書桌"
+            },
+            {
+              "el": "text",
+              "x": 170,
+              "y": 240,
+              "font-size": 8,
+              "fill": "#4b5751",
+              "text-anchor": "middle",
+              "label": "按摩椅"
+            },
+            {
+              "el": "text",
+              "x": 195,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "小孩房"
+            },
+            {
+              "el": "text",
+              "x": 325,
+              "y": -146,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "客房"
+            },
+            {
+              "el": "text",
+              "x": 45,
+              "y": -60,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "主臥"
+            },
+            {
+              "el": "text",
+              "x": 375,
+              "y": 110,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "衛浴 2"
+            },
+            {
+              "el": "text",
+              "x": 178,
+              "y": -62,
+              "font-size": 9,
+              "fill": "#2f443c",
+              "text-anchor": "middle",
+              "label": "走廊"
+            },
+            {
+              "el": "path",
+              "d": "M127 -120.2V-10.2M124.5 -120.2H129.5M124.5 -10.2H129.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 130,
+              "y": -62.7,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "start",
+              "label": "110"
+            },
+            {
+              "el": "rect",
+              "x": 53.6,
+              "y": -10.2,
+              "width": 94.6,
+              "height": 10.2,
+              "fill": "#efe7d6",
+              "stroke": "#c98a00",
+              "stroke-width": 0.6,
+              "stroke-dasharray": "3 2"
+            },
+            {
+              "el": "rect",
+              "x": 145.2,
+              "y": -10.2,
+              "width": 3.0,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 240.8,
+              "y": -10.2,
+              "width": 4.3,
+              "height": 10.2,
+              "fill": "#cfc9bd"
+            },
+            {
+              "el": "rect",
+              "x": 148.2,
+              "y": -7.1,
+              "width": 92.6,
+              "height": 4.0,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "closed"
+            },
+            {
+              "el": "rect",
+              "x": 55.6,
+              "y": -7.1,
+              "width": 92.6,
+              "height": 4.0,
+              "fill": "#b9b2a6",
+              "stroke": "#4b5751",
+              "stroke-width": 0.5,
+              "when": "open"
+            },
+            {
+              "el": "path",
+              "d": "M136.5 -2.0L143.5 5.0M136.5 5.0L143.5 -2.0",
+              "fill": "none",
+              "stroke": "#c0392b",
+              "stroke-width": 1.2
+            },
+            {
+              "el": "rect",
+              "x": 248.6,
+              "y": 15,
+              "width": 1.6,
+              "height": 8.6,
+              "fill": "#2b6cb0"
+            },
+            {
+              "el": "text",
+              "x": 246.2,
+              "y": 30,
+              "font-size": 6.5,
+              "fill": "#2b6cb0",
+              "text-anchor": "end",
+              "label": "SW-08",
+              "font-weight": 600
+            },
+            {
+              "el": "circle",
+              "cx": 116.9,
+              "cy": -11.2,
+              "r": 6,
+              "fill": "none",
+              "stroke": "#c0392b",
+              "stroke-width": 0.9
+            },
+            {
+              "el": "text",
+              "x": 116.9,
+              "y": -32.2,
+              "font-size": 6.5,
+              "fill": "#c0392b",
+              "text-anchor": "middle",
+              "label": "SW-13",
+              "font-weight": 600
+            },
+            {
+              "el": "circle",
+              "cx": 105.0,
+              "cy": -14.2,
+              "r": 9,
+              "fill": "none",
+              "stroke": "#c0392b",
+              "stroke-width": 0.9
+            },
+            {
+              "el": "path",
+              "d": "M53.599999999999994 22H148.2M53.599999999999994 19.5V24.5M148.2 19.5V24.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 100.89999999999999,
+              "y": 19.5,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "暗袋 95"
+            },
+            {
+              "el": "path",
+              "d": "M148.2 -40H240.79999999999998M148.2 -42.5V-37.5M240.79999999999998 -42.5V-37.5",
+              "fill": "none",
+              "stroke": "#6b7280",
+              "stroke-width": 0.5
+            },
+            {
+              "el": "text",
+              "x": 194.5,
+              "y": -43,
+              "font-size": 7,
+              "fill": "#6b7280",
+              "text-anchor": "middle",
+              "label": "淨 89"
+            }
+          ],
+          "verdict": "不選：最好看，但要拆牆重做，還動到主臥門框和兩個開關。",
+          "spec": [
+            {
+              "zone": "動線",
+              "h": "淨 89",
+              "note": "門片收進門旁 145 牆內，不佔房內也不佔走廊。"
+            },
+            {
+              "zone": "家具與牆面",
+              "h": "暗袋段不能鎖",
+              "note": "暗袋約 95 那段牆兩面都不能鎖層板、開關、插座。"
+            },
+            {
+              "zone": "隔音與隱私",
+              "h": "普通",
+              "note": "比明裝好，仍不如平開門加密封條。"
+            },
+            {
+              "zone": "開關插座",
+              "h": "3 處受影響",
+              "note": "SW-08、走廊側 SW-13 要移；主臥門框固定在這段牆上，要另做加固。"
+            },
+            {
+              "zone": "費用工期",
+              "h": "≈ S$1,800–3,000",
+              "note": "牆 hack & rebuild、Eclisse 100 mm 牆用暗袋套件（門 926 × 2040）、門片、批土油漆；牆體材質與 MCST 是否准拆待確認。"
+            },
+            {
+              "zone": "外觀",
+              "h": "最乾淨",
+              "note": "沒有門楣盒，只看到門框。"
+            }
+          ]
+        }
+      ]
     }
   },
   "layouts": [
@@ -24132,7 +26608,8 @@
               "門做明裝拉門，裝在走道側",
               "窗簾盒深 15，單軌遮光簾"
             ]
-          }
+          },
+          "elevation": "study-door"
         }
       },
       "guestVersions": [
@@ -26324,6 +28801,15 @@
       "kind": "furn"
     },
     {
+      "id": "todo-study-door",
+      "room": "study",
+      "text": "定書房門做法（見方案）",
+      "research": "study-door",
+      "status": "open",
+      "priority": 1,
+      "kind": "reno"
+    },
+    {
       "id": "todo-study-cabinet",
       "room": "study",
       "text": "確定書房櫃子怎麼做",
@@ -27410,6 +29896,18 @@
         {
           "title": "Aqara H1 EU (with neutral)",
           "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
+        }
+      ]
+    },
+    "study-door": {
+      "title": "書房門做法",
+      "updated": "2026-11-20",
+      "summary": "選 A 向內平開門（鉸鏈在書桌側）：隔音隱私最好、開關插座都不動、門旁 145 牆空出來放櫃；B 保留房內拉門最省但漏聲且吃掉 105 牆面；C 走廊側拉門淨開只剩 80、擋衛浴 2 開關；D 暗袋門要拆牆。",
+      "body": "## 結論\n- **選 A：向內平開門，鉸鏈在書桌側。** laminate 實心門＋門框四周膠條＋門底自動落下密封條（automatic drop seal）。\n  - 按摩椅聲音、深夜燈光不漏到正對面的小孩房（兩門相距 110）。\n  - SW-08、S-27、D-03、S-28 都不用動；門旁 145 牆空出來，書房櫃可放這裡。\n  - 開門貼側牆那段 95 空牆，門尾離書桌 5；費用約 S$500–800（Patrick 報價）。\n- **不選 B（保留房內明裝拉門）**：免費，但四周有縫；門片停放吃掉 105 牆面，SW-08 要移，門楣盒疊在冷氣箱下。\n- **不選 C（拉門改到走廊側）**：走廊側只有 85 牆可停，淨開剩約 80；擋住衛浴 2 開關 SW-10；走廊多一條門楣盒。\n- **不選 D（暗袋門）**：要拆牆重做（Eclisse 有 100 mm 牆用套件），還動到主臥門框、SW-08、SW-13；約 S$1,800–3,000。\n\n## 比較\n| 方案 | 淨開 | 隔音 | 費用（S$） |\n|---|---|---|---|\n| **A 平開門（向內）** | ≈86 | 最好 | 500–800 |\n| B 現況拉門（房內） | ≈97 | 差 | 0–150 |\n| C 走廊側拉門 | ≈80 | 差 | 200–400 |\n| D 暗袋門 | ≈89 | 普通 | 1,800–3,000 |\n\n## 圖面量測\n- 門洞牆到牆 100、牆厚 10；門洞一側到牆角 145，書桌那側到側牆 5。\n- 書桌離門牆 95；走廊 110；走廊牆往衛浴 2 門框 85、往主臥門 35。\n\n## 待確認\n- 現有拉門門片寬（估 105）。\n- 冷氣箱底離地高度：平開門框頂要在它下方。\n- 門牆材質（只有 D 需要）。\n",
+      "sources": [
+        {
+          "title": "Eclisse Single Pocket Door Kit – 100mm finished wall, 926 × 2040 door",
+          "url": "https://www.ironmongerydirect.co.uk/product/eclisse-single-pocket-door-kit-100mm-finished-wall-thickness-926-x-2040mm-door-size-263450"
         }
       ]
     }
