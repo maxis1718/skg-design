@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R112",
+    "revision": "R113",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4946,7 +4946,11 @@
     },
     {
       "id": "C120",
-      "text": "平面圖加 💡 天花燈光圖：客餐廳假天花、52 吋吊扇（尺寸待定）、15 盞防眩崁燈、燈槽、洗牆燈、餐桌線型吊燈；溝通重點按鈕改 📝。"
+      "text": "平面圖加 💡 天花燈光圖：客餐廳假天花、52 吋吊扇（尺寸待定）、15 盞防眩嵌燈、燈槽、洗牆燈、餐桌線型吊燈；溝通重點按鈕改 📝。"
+    },
+    {
+      "id": "C121",
+      "text": "餐桌改用 2 盞嵌燈（取消吊燈）；用詞統一為「嵌燈」。"
     }
   ],
   "measurement_policy": {
@@ -5561,7 +5565,7 @@
             "喇叭腳架各用防倒帶固定到電視牆，木作底板在腳架後離地 50–75 加夾板",
             "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
-            "天花：四周假天花 260（窗簾盒雙軌、筒燈、電視牆洗牆燈槽）；沙發區中央留樓板高度加燈槽，吊扇鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
+            "天花：四周假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；沙發區中央留樓板高度加燈槽，吊扇鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         }
@@ -5737,7 +5741,7 @@
             "喇叭腳架各用防倒帶固定到電視牆，木作底板在腳架後離地 50–75 加夾板",
             "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
             "中間兩格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
-            "天花：四周假天花 260（窗簾盒雙軌、筒燈、電視牆洗牆燈槽）；沙發區中央留樓板高度加燈槽，吊扇鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
+            "天花：四周假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；沙發區中央留樓板高度加燈槽，吊扇鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB"
           ]
         },
@@ -24614,10 +24618,10 @@
           ],
           [
             "控制",
-            "玄關燈、客廳主燈、餐桌吊燈、洗牆燈"
+            "玄關燈、客廳主燈、餐桌燈、洗牆燈"
           ]
         ],
-        "notes": "・客廳主燈＝筒燈、燈槽、鋼琴燈\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關"
+        "notes": "・客廳主燈＝嵌燈、燈槽、鋼琴燈\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關"
       },
       {
         "id": "sw-tv-toe",
@@ -25878,19 +25882,19 @@
         "kinds": [
           "switch"
         ],
-        "pick": "主照明用普通 LED 筒燈＋H1 開關；只在電視牆、床頭用 Aqara LED Strip T1 做 Adaptive Lighting",
+        "pick": "主照明用普通 LED 嵌燈＋H1 開關；只在電視牆、床頭用 Aqara LED Strip T1 做 Adaptive Lighting",
         "options": [
           {
-            "name": "普通筒燈＋Aqara LED Strip T1",
+            "name": "普通嵌燈＋Aqara LED Strip T1",
             "verdict": "pick",
-            "summary": "筒燈壞了隨便換；燈條 S$69／2 m，Zigbee 進 M3，支援 HomeKit Adaptive Lighting",
+            "summary": "嵌燈壞了隨便換；燈條 S$69／2 m，Zigbee 進 M3，支援 HomeKit Adaptive Lighting",
             "details": "- 燈條電源要常電，不接在開關後面；用 H1 無線鍵控制\n- Adaptive Lighting 只在 M3 以 HomeKit 方式橋接時有\n- 燈條本身是 Zigbee 中繼"
           },
           {
             "name": "Philips Hue",
             "verdict": "alt",
             "summary": "燈具選擇最多、品質最好；但要多一台 Hue Bridge 與一套 App",
-            "details": "- 想做整屋調色溫筒燈時才值得"
+            "details": "- 想做整屋調色溫嵌燈時才值得"
           },
           {
             "name": "智能燈泡裝在一般開關後／Wi-Fi 燈泡",
@@ -26435,7 +26439,7 @@
       "title": "全屋智能家居方案",
       "updated": "2026-11-02",
       "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋已有的 HomePod mini 當家居中樞；網路用 UniFi＋Cloud Gateway Ultra；大門裝 Wireless Remote Switch H1 場景按鈕；不買 UPS。",
-      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi U7 Lite ×2＋Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE** — Gateway 取代 ISP 路由並跑 UniFi Network；沒有它，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **iCloud+ 200 GB**：3 台 E1 走 HKSV 的必要條件（50 GB 只能 1 台，200 GB 最多 5 台）；錄影不佔容量。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通筒燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由 HomePod mini 本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | U7 Lite ×2＋UCG Ultra＋USW Lite 8 PoE | S$733 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
+      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 3 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi U7 Lite ×2＋Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE** — Gateway 取代 ISP 路由並跑 UniFi Network；沒有它，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **iCloud+ 200 GB**：3 台 E1 走 HKSV 的必要條件（50 GB 只能 1 台，200 GB 最多 5 台）；錄影不佔容量。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通嵌燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由 HomePod mini 本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | U7 Lite ×2＋UCG Ultra＋USW Lite 8 PoE | S$733 |\n| 攝影機 ×3 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），3 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
       "sources": [
         {
           "title": "Apple: Set up HomePod, HomePod mini or Apple TV as a home hub",
@@ -27308,7 +27312,7 @@
       },
       {
         "id": "dining",
-        "name": "餐桌吊燈",
+        "name": "餐桌燈",
         "color": "#c2410c"
       },
       {
@@ -27574,23 +27578,28 @@
             ]
           },
           {
-            "id": "pendant",
-            "type": "pendant",
-            "group": "dining",
+            "id": "dn-16",
+            "type": "down",
             "x": 462.54,
-            "y": 207.07,
-            "w": 5,
-            "l": 120
+            "y": 196.44,
+            "group": "dining"
+          },
+          {
+            "id": "dn-17",
+            "type": "down",
+            "x": 462.54,
+            "y": 217.7,
+            "group": "dining"
           }
         ],
         "notes": [
-          "天花：樓板約 280（待現場確認）；四周假天花 260，藏窗簾盒（雙軌）與筒燈；沙發區中央保留樓板高度，四邊燈槽間接照明；玄關與鋼琴上方約 240（冷氣機，待確認）",
+          "天花：樓板約 280（待現場確認）；四周假天花 260，藏窗簾盒（雙軌）與嵌燈；沙發區中央保留樓板高度，四邊燈槽間接照明；玄關與鋼琴上方約 240（冷氣機，待確認）",
           "吊扇：52 吋（Ø132）先佔位，尺寸待屋主提供；中心在沙發靠背與電視櫃之間，葉片離地約 240；不帶燈；葉片外 30 內不放燈，避免閃爍與影子",
-          "筒燈：深藏防眩嵌燈 10 W、開孔 Ø75、CRI ≥ 90、UGR < 19、無頻閃；全部 4000K，夠亮且開放空間色溫一致",
-          "沙發正上方不放燈；坐沙發看電視，筒燈反光不落在螢幕上",
-          "餐桌吊燈：長條 120 沿桌長向，燈底離桌面 75（離地 150）；餐桌上方不放筒燈，四角筒燈退到桌端外，人頭影子不落在桌面",
+          "嵌燈：深藏防眩嵌燈 10 W、開孔 Ø75、CRI ≥ 90、UGR < 19、無頻閃；全部 4000K，夠亮且開放空間色溫一致",
+          "沙發正上方不放燈；坐沙發看電視，嵌燈反光不落在螢幕上",
+          "餐桌燈：桌子正上方沿長向 2 盞嵌燈（間距 75），廣角防眩，獨立一鍵",
           "目標亮度：客廳約 300 lux、餐桌面約 400 lux",
-          "開關 SW-01：玄關燈、客廳主燈（筒燈＋燈槽＋鋼琴燈）、餐桌吊燈、洗牆燈（Aqara LED Strip T1，常電，此鍵設無線）"
+          "開關 SW-01：玄關燈、客廳主燈（嵌燈＋燈槽＋鋼琴燈）、餐桌燈、洗牆燈（Aqara LED Strip T1，常電，此鍵設無線）"
         ]
       }
     }
