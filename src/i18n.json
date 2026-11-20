@@ -1729,11 +1729,12 @@
   "玄關燈": "Entrance",
   "目標亮度：客廳約 300 lux、餐桌面約 400 lux": "Target: living ≈300 lux, dining tabletop ≈400 lux",
   "嵌燈": "Downlights",
-  "嵌燈：深藏防眩嵌燈 10 W、開孔 Ø75、CRI ≥ 90、UGR < 19、無頻閃；全部 4000K，夠亮且開放空間色溫一致": "Downlights: deep-recessed anti-glare 10 W, cut-out Ø75, CRI ≥ 90, UGR < 19, flicker-free; all 4000K — bright, one colour temperature across the open plan",
   "開關 SW-01：玄關燈、客廳主燈（嵌燈＋燈槽＋鋼琴燈）、餐桌燈、洗牆燈（Aqara LED Strip T1，常電，此鍵設無線）": "Switch SW-01: entrance, living main (downlights + cove + piano lights), dining downlights, wall washer (Aqara LED Strip T1, permanent power, key in wireless mode)",
   "餐桌燈": "Dining lights",
   "平面圖加 💡 天花燈光圖：客餐廳假天花、52 吋吊扇（尺寸待定）、15 盞防眩嵌燈、燈槽、洗牆燈、餐桌線型吊燈；溝通重點按鈕改 📝。": "New 💡 ceiling/lighting layer: living-dining false ceiling, 52\" fan (size TBC), 15 anti-glare downlights, cove, wall washer, linear dining downlights; briefing button now 📝.",
   "餐桌燈：桌子正上方沿長向 2 盞嵌燈（間距 75），廣角防眩，獨立一鍵": "Dining: 2 recessed downlights over the table along its length (75 apart), wide beam, anti-glare, own key",
-  "餐桌改用 2 盞嵌燈（取消吊燈）；用詞統一為「嵌燈」。": "Dining now 2 recessed downlights (no pendant); wording unified to 嵌燈."
+  "餐桌改用 2 盞嵌燈（取消吊燈）；用詞統一為「嵌燈」。": "Dining now 2 recessed downlights (no pendant); wording unified to 嵌燈.",
+  "嵌燈：深藏防眩 10 W、開孔 Ø75、CRI ≥ 90（R9 > 50）、UGR < 19、無頻閃、色差 SDCM ≤ 3；客餐廳全部 3500K（燈槽、洗牆燈同色溫）；選三色溫可切換款；廚房另用 4000K": "Downlights: deep anti-glare 10 W, Ø75 cut-out, CRI ≥ 90 (R9 > 50), UGR < 19, flicker-free, SDCM ≤ 3; living/dining all 3500K (cove and wall washer too); CCT-switchable fittings; kitchen 4000K",
+  "客餐廳燈光改 3500K（含燈槽、洗牆燈），廚房 4000K；嵌燈規格補演色 R9、色差 SDCM。": "Living/dining lighting now 3500K (incl. cove and washer), kitchen 4000K; downlight spec adds R9 and SDCM."
  }
 }
