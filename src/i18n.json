@@ -1644,7 +1644,6 @@
   "燈光與天花": "Lighting & ceiling",
   "燈槽": "Cove",
   "玄關燈": "Entrance",
-  "目標亮度：客廳約 300 lux、餐桌面約 400 lux": "Target: living ≈300 lux, dining tabletop ≈400 lux",
   "嵌燈": "Downlights",
   "平面圖加 💡 天花燈光圖：客餐廳假天花、52 吋吊扇（尺寸待定）、15 盞防眩嵌燈、燈槽、洗牆燈、餐桌線型吊燈；溝通重點按鈕改 📝。": "New 💡 ceiling/lighting layer: living-dining false ceiling, 52\" fan (size TBC), 15 anti-glare downlights, cove, wall washer, linear dining downlights; briefing button now 📝.",
   "餐桌改用 2 盞嵌燈（取消吊燈）；用詞統一為「嵌燈」。": "Dining now 2 recessed downlights (no pendant); wording unified to 嵌燈.",
@@ -1862,6 +1861,9 @@
   "玄關燈、客廳燈、餐廳燈、洗牆燈": "Entrance, living, dining, wall washer",
   "・客廳燈＝沙發區嵌燈 5＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區周邊 5\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 5 sofa-zone downlights + 2 over piano\n• Dining = 2 over table + 5 around dining\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode",
   "客餐廳燈分兩區：客廳燈、餐廳燈各一鍵，可分開或全開；色溫維持 3500K、燈數不減。": "Living/dining lights split into two keys (living, dining); 3500K and fitting count unchanged.",
-  "嵌燈 A 型 ×17：客廳 5＋鋼琴 2、餐廳 5＋餐桌 2、玄關 3；客廳、餐廳各一鍵，可分區開或全開，3500K；沙發與鋼琴椅正上方不放燈，螢幕不反光": "Type A downlights ×17: living 5 + piano 2, dining 5 + table 2, entrance 3; living and dining on separate keys; 3500K; none directly over the sofa or piano bench, no screen reflections"
+  "嵌燈 A 型 ×17：客廳 5＋鋼琴 2、餐廳 5＋餐桌 2、玄關 3；客廳、餐廳各一鍵，可分區開或全開，3500K；沙發與鋼琴椅正上方不放燈，螢幕不反光": "Type A downlights ×17: living 5 + piano 2, dining 5 + table 2, entrance 3; living and dining on separate keys; 3500K; none directly over the sofa or piano bench, no screen reflections",
+  "亮度：每盞 ≥ 800 lm，客餐廳 14 盞約 11,000 lm（現居 CWT 約 10 × 600 ＝ 6,000 lm），目標客廳約 300 lux、餐桌面約 400 lux": "Brightness: ≥ 800 lm each; 14 fittings ≈ 11,000 lm for living/dining (current CWT ≈ 10 × 600 = 6,000 lm); target ≈ 300 lux living, ≈ 400 lux on the table",
+  "靠窗簾那排與靠廚房那排用可調角度款，往窗簾和牆面偏 15–20°，牆面亮、整體感覺更亮": "Rows by the curtain and by the kitchen use adjustable fittings tilted 15–20° toward curtain/wall: brighter walls, brighter-feeling room",
+  "客餐廳嵌燈補亮度規格（每盞 ≥ 800 lm，總量約為現居 1.8 倍）；靠窗簾與靠廚房兩排改可調角度款打牆面。": "Living/dining downlight output specified (≥ 800 lm each, ≈ 1.8× current home); curtain-side and kitchen-side rows adjustable to wash walls."
  }
 }
