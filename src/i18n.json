@@ -1861,6 +1861,7 @@
   "餐廳燈": "Dining lights",
   "玄關燈、客廳燈、餐廳燈、洗牆燈": "Entrance, living, dining, wall washer",
   "・客廳燈＝沙發區嵌燈 5＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區周邊 5\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 5 sofa-zone downlights + 2 over piano\n• Dining = 2 over table + 5 around dining\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode",
-  "客餐廳燈分兩區：客廳燈、餐廳燈各一鍵，可分開或全開；色溫維持 3500K、燈數不減。": "Living/dining lights split into two keys (living, dining); 3500K and fitting count unchanged."
+  "客餐廳燈分兩區：客廳燈、餐廳燈各一鍵，可分開或全開；色溫維持 3500K、燈數不減。": "Living/dining lights split into two keys (living, dining); 3500K and fitting count unchanged.",
+  "嵌燈 A 型 ×17：客廳 5＋鋼琴 2、餐廳 5＋餐桌 2、玄關 3；客廳、餐廳各一鍵，可分區開或全開，3500K；沙發與鋼琴椅正上方不放燈，螢幕不反光": "Type A downlights ×17: living 5 + piano 2, dining 5 + table 2, entrance 3; living and dining on separate keys; 3500K; none directly over the sofa or piano bench, no screen reflections"
  }
 }
