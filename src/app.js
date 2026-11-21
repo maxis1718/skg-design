@@ -62,7 +62,7 @@ const actual=o=>o.actual||{};
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
-const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[222,224],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[495,141],bath1:[237,315],bath2:[380,284]};
+const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[222,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 // A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
@@ -167,7 +167,7 @@ function renderPowerLayer(){
   lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
-// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label}, lights [{type down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
+// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
 let showLight=new URLSearchParams(location.search).get('light')==='1';
 const lightRooms=()=>project.lighting?.rooms||{};
 const lightCol=g=>project.lighting?.groups?.find(x=>x.id===g)?.color||'#c98a00';
@@ -179,10 +179,13 @@ function buildLight(){
     for(const c of r.ceilings||[]){g.append(svgEl('polygon',{class:'lc lc-'+c.kind,points:pts(c.polygon)}));if(c.label&&c.at)top.append(svgEl('text',{class:'lc-label',x:c.at[0],y:c.at[1]},c.label));}
     if(r.fan){const f=r.fan,R=f.d/2/cm,b=svgEl('g',{class:'lf-blades',transform:`translate(${f.x} ${f.y})`});
       g.append(svgEl('circle',{class:'lf-clear',cx:f.x,cy:f.y,r:(f.d/2+f.clear)/cm}),svgEl('circle',{class:'lf-sweep',cx:f.x,cy:f.y,r:R}));
-      for(let k=0;k<3;k++)b.append(svgEl('path',{d:`M-1 -2.2L-2.3 ${-(R-2.4)}Q0 ${-(R+.4)} 2.3 ${-(R-2.4)}L1 -2.2Z`,transform:`rotate(${k*120+30})`}));
+      const nb=f.blades||3;for(let k=0;k<nb;k++)b.append(svgEl('path',{d:`M-1 -2.2L-2.3 ${-(R-2.4)}Q0 ${-(R+.4)} 2.3 ${-(R-2.4)}L1 -2.2Z`,transform:`rotate(${k*360/nb+30})`}));
       b.append(svgEl('circle',{class:'lf-hub',r:2.2}));g.append(b);top.append(svgEl('text',{class:'lf-label',x:f.x,y:f.y+R*.62},f.label));}
     for(const l of r.lights||[]){const c=lightCol(l.group);
-      if(l.type==='down'){const d=svgEl('g',{class:'ld'+(l.surface?' ld-surface':''),transform:`translate(${l.x} ${l.y})`});if(l.ip)d.append(svgEl('circle',{class:'ld-ip',r:2.7}));d.append(svgEl('circle',{r:2.1,fill:c,'fill-opacity':.16}),svgEl('circle',{r:1.25,fill:'#fff',stroke:c,'stroke-width':.5}),svgEl('circle',{r:.6,fill:c}));g.append(d);}
+      if(l.type==='track'){const[a,z]=l.line;g.append(svgEl('line',{class:'lt-bar',x1:a[0],y1:a[1],x2:z[0],y2:z[1],stroke:c}));
+        for(const[x,y,ang]of l.spots||[]){const r=ang*Math.PI/180;g.append(svgEl('line',{class:'lt-aim',x1:x,y1:y,x2:(x+5.5*Math.cos(r)).toFixed(2),y2:(y+5.5*Math.sin(r)).toFixed(2),stroke:c}),svgEl('circle',{class:'lt-spot',cx:x,cy:y,r:1.05,stroke:c}));}}
+      else if(l.type==='fanlight'){g.append(svgEl('circle',{class:'lfl',cx:l.x,cy:l.y,r:l.d/2/cm,fill:c,stroke:c}));}
+      else if(l.type==='down'){const d=svgEl('g',{class:'ld'+(l.surface?' ld-surface':''),transform:`translate(${l.x} ${l.y})`});if(l.ip)d.append(svgEl('circle',{class:'ld-ip',r:2.7}));d.append(svgEl('circle',{r:2.1,fill:c,'fill-opacity':.16}),svgEl('circle',{r:1.25,fill:'#fff',stroke:c,'stroke-width':.5}),svgEl('circle',{r:.6,fill:c}));g.append(d);}
       else if(l.line){g.append(svgEl('polyline',{class:'ll-glow',points:pts(l.line),stroke:c}),svgEl('polyline',{class:'ll ll-'+l.type,points:pts(l.line),stroke:c}));}
       else if(l.type==='pendant'){const w=l.w/cm,h=l.l/cm;g.append(svgEl('rect',{class:'lp',x:l.x-w/2,y:l.y-h/2,width:w,height:h,rx:w/2,fill:c,stroke:c}));}
       else if(l.type==='ceil'){const R=l.d/2/cm;g.append(svgEl('circle',{class:'lcl',cx:l.x,cy:l.y,r:R,fill:c,stroke:c}),svgEl('circle',{cx:l.x,cy:l.y,r:.6,fill:c}));}
@@ -199,9 +202,9 @@ function renderLightLayer(){
   $('#light-layer').style.display=on?'':'none';$('#plan').classList.toggle('light-mode',on&&here.length>0);
   const lg=$('#light-legend'),blk=$('#light-block');lg.hidden=blk.hidden=!on||!here.length;if(lg.hidden){lg.innerHTML=blk.innerHTML='';return;}
   const all=here.flatMap(id=>lightRooms()[id].lights||[]).map(l=>l.surface?{...l,type:'surface'}:l),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
-  const TYPES=[['down','嵌燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
-  if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
-  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
+  const TYPES=[['down','嵌燈'],['track','軌道燈'],['fanlight','吊扇燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
+  if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'||ty==='track'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
+  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'||ty==='track'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
   if(here.some(id=>lightRooms()[id].fan))chips.push(chip('fan','#24443b',t('吊扇 · 外圈內不放燈')));
   lg.innerHTML=chips.join('');
   const cct=lr=>lr.cct?` · ${esc(lr.cct.k)}`:'';

@@ -88,6 +88,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | LBL-02 | `robot-vacuum` | 拖地機 Dreame H14 Ultra（含底座） | 35 × 35 |
 | KID-02 | `kid-fan` | 風扇清淨機 Dyson TP09 | 22 × 22 |
 | GST-21 | `guest-purifier` | 清淨機 Electrolux UltimateHome 300 | 23.4 × 23.4 |
+| LBL-04 | `balcony-fan` | 陽台吊扇（帶燈） | 112 × 112 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 
