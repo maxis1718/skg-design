@@ -1,6 +1,6 @@
-<!-- R21 (2026-10-24): study swing door replaced by a surface-mounted sliding door on the corridor side, sliding east. R77: bath 2 back to the source swing door (laminate solid door). Solid = closed, dashed = open. Units: PDF pt. -->
-<!-- Study: opening 315.96–341.4 (89.7); panel 93.7 (4 overlap west); open position stops at the bath-2 jamb 366.84 → clear ≈85.8 -->
-<path data-layout="study-slider-track" class="furnishing" d="M314.83 262.04H366.84" fill="none" stroke="currentColor" stroke-width="0.12"/>
-<path data-layout="study-slider-panel" class="furnishing" d="M314.83 262.39H341.4V263.52H314.83Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
-<path data-layout="study-slider-open" class="furnishing" d="M340.27 262.39H366.84V263.52H340.27Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="0.8 0.6"/>
-<path data-layout="study-slider-arrow" class="furnishing" d="M338.4 260.19H344.4M343.2 259.29L344.4 260.19L343.2 261.09" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<!-- R21 (2026-10-24) study slider; R77: bath 2 back to the source swing door (laminate solid door). R120: the existing surface-mounted slider hangs INSIDE the study (owner photo): pelmet over the track on the inside face of the door wall, panel ≈105 parks over the 145 wall towards the corner (left when facing the doorway from inside). Solid = closed, dashed = open. Units: PDF pt. -->
+<!-- Study: opening 314.52–342.84 (100); panel 313.81–343.57 closed (2.5 overlap each side), 285.46–315.23 open; track from the corner side to the desk-side wall -->
+<path data-layout="study-slider-track" class="furnishing" d="M273.93 269.23H343.94" fill="none" stroke="currentColor" stroke-width="0.12"/>
+<path data-layout="study-slider-panel" class="furnishing" d="M313.81 267.53H343.57V268.66H313.81Z" fill="none" stroke="currentColor" stroke-width="0.24"/>
+<path data-layout="study-slider-open" class="furnishing" d="M285.46 267.53H315.23V268.66H285.46Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-dasharray="0.8 0.6"/>
+<path data-layout="study-slider-arrow" class="furnishing" d="M319.81 270.65H313.81M315.01 269.75L313.81 270.65L315.01 271.55" fill="none" stroke="currentColor" stroke-width="0.12"/>
