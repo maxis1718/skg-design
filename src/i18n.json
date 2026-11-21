@@ -1868,6 +1868,8 @@
   "嵌燈 B 型 ×2，4000K，每盞約 1,000 lm（12 W），在廚房中間走道上方；檯面靠吊櫃下燈帶": "Type B downlights ×2, 4000K, ≈ 1,000 lm (12 W) each, over the kitchen aisle; worktop lit by the under-cabinet strip",
   "檯面亮度主要來自吊櫃下燈帶": "Worktop brightness mainly from the under-cabinet strip",
   "・客廳燈＝電視兩側 2＋走道 2＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區牆邊 2\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 2 by the TV + 2 walkway + 2 over piano\n• Dining = 2 over table + 2 by the dining wall\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode",
-  "燈位照屋主定案：客餐廳 6、走道 2、廚房 2。": "Light positions per owner: living/dining 6, walkway 2, kitchen 2."
+  "燈位照屋主定案：客餐廳 6、走道 2、廚房 2。": "Light positions per owner: living/dining 6, walkway 2, kitchen 2.",
+  "客廳櫃子加層板": "Add shelves to the living room cabinet",
+  "新增重要待辦：客廳櫃子加層板。": "New key to-do: add shelves to the living room cabinet."
  }
 }

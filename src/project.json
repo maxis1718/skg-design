@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R127",
+    "revision": "R128",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4864,6 +4864,10 @@
     {
       "id": "C135",
       "text": "燈位照屋主定案：客餐廳 6、走道 2、廚房 2。"
+    },
+    {
+      "id": "C136",
+      "text": "新增重要待辦：客廳櫃子加層板。"
     }
   ],
   "measurement_policy": {
@@ -27446,6 +27450,15 @@
       "id": "todo-floor-points",
       "room": "floor",
       "text": "確認全屋插座、CCTV、網路孔位置",
+      "status": "open",
+      "kind": "reno",
+      "priority": 1,
+      "pin": true
+    },
+    {
+      "id": "todo-living-cabinet-shelves",
+      "room": "living",
+      "text": "客廳櫃子加層板",
       "status": "open",
       "kind": "reno",
       "priority": 1,
