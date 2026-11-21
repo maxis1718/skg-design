@@ -1801,7 +1801,6 @@
   "天花：整片假天花 260（窗簾盒雙軌、嵌燈、洗牆燈槽）；玄關、鋼琴上方 240": "Ceiling: one-level false ceiling 260 (double-track curtain box, downlights, wall-washer slot); entrance and over the piano 240",
   "洗牆燈 Aqara LED Strip T1 固定 3500K，常電、無線鍵，晚上打 PS5 只留洗牆燈調到 20% 當背光": "Wall washer Aqara LED Strip T1 fixed 3500K, permanent power, wireless key; for PS5 at night only the washer stays on at 20% as bias light",
   "吊扇 52″（Ø132）2 葉、不帶燈，在餐桌與沙發之間；吊桿約 30 穿過假天花 260，葉片離地約 225": "Fan 52″ (Ø132), 2 blades, no light kit, between the dining table and the sofa; ≈30 down-rod through the 260 false ceiling, blades ≈225 AFF",
-  "光不穿過扇葉：嵌燈切光 35°，在葉片面的光錐半徑 25 → 離扇心 < 91 才會閃；最近的嵌燈 97、117，其餘 ≥ 137": "No light through the blades: 35° cut-off → cone radius 25 at the blade plane → strobing only if a downlight is < 91 from the fan centre; nearest are 97 and 117, the rest ≥ 137",
   "天花：整片假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；吊扇在餐桌與沙發之間，吊桿穿過假天花鎖樓板補強點；玄關、鋼琴上方 ≈ 240": "Ceiling: one-level false ceiling 260 (double-track curtain box, downlights, TV-wall washer slot); fan between the dining table and the sofa, down-rod through the false ceiling into a reinforced slab point; entrance and over piano ≈ 240",
   "52 吋（Ø132）2 葉 · 餐桌與沙發之間，葉片離地約 225 · 尺寸待屋主提供": "52\" (Ø132), 2 blades · between dining table and sofa, blades ≈225 AFF · size TBC by owner",
   "天花：不做假天花，原有燈位明裝 IKEA 白色軌道燈": "Ceiling: no false ceiling; IKEA white track light surface-mounted on the existing ceiling point",
@@ -1859,11 +1858,13 @@
   "客廳燈": "Living lights",
   "餐廳燈": "Dining lights",
   "玄關燈、客廳燈、餐廳燈、洗牆燈": "Entrance, living, dining, wall washer",
-  "・客廳燈＝沙發區嵌燈 5＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區周邊 5\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 5 sofa-zone downlights + 2 over piano\n• Dining = 2 over table + 5 around dining\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode",
   "客餐廳燈分兩區：客廳燈、餐廳燈各一鍵，可分開或全開；色溫維持 3500K、燈數不減。": "Living/dining lights split into two keys (living, dining); 3500K and fitting count unchanged.",
-  "嵌燈 A 型 ×17：客廳 5＋鋼琴 2、餐廳 5＋餐桌 2、玄關 3；客廳、餐廳各一鍵，可分區開或全開，3500K；沙發與鋼琴椅正上方不放燈，螢幕不反光": "Type A downlights ×17: living 5 + piano 2, dining 5 + table 2, entrance 3; living and dining on separate keys; 3500K; none directly over the sofa or piano bench, no screen reflections",
-  "亮度：每盞 ≥ 800 lm，客餐廳 14 盞約 11,000 lm（現居 CWT 約 10 × 600 ＝ 6,000 lm），目標客廳約 300 lux、餐桌面約 400 lux": "Brightness: ≥ 800 lm each; 14 fittings ≈ 11,000 lm for living/dining (current CWT ≈ 10 × 600 = 6,000 lm); target ≈ 300 lux living, ≈ 400 lux on the table",
   "靠窗簾那排與靠廚房那排用可調角度款，往窗簾和牆面偏 15–20°，牆面亮、整體感覺更亮": "Rows by the curtain and by the kitchen use adjustable fittings tilted 15–20° toward curtain/wall: brighter walls, brighter-feeling room",
-  "客餐廳嵌燈補亮度規格（每盞 ≥ 800 lm，總量約為現居 1.8 倍）；靠窗簾與靠廚房兩排改可調角度款打牆面。": "Living/dining downlight output specified (≥ 800 lm each, ≈ 1.8× current home); curtain-side and kitchen-side rows adjustable to wash walls."
+  "客餐廳嵌燈補亮度規格（每盞 ≥ 800 lm，總量約為現居 1.8 倍）；靠窗簾與靠廚房兩排改可調角度款打牆面。": "Living/dining downlight output specified (≥ 800 lm each, ≈ 1.8× current home); curtain-side and kitchen-side rows adjustable to wash walls.",
+  "嵌燈 A 型 ×15：客廳 4＋鋼琴 2、餐廳 4＋餐桌 2、玄關 3；客廳、餐廳各一鍵，可分區開或全開，3500K；沙發與鋼琴椅正上方不放燈，螢幕不反光": "Type A downlights ×15: living 4 + piano 2, dining 4 + table 2, entrance 3; living and dining on separate keys; 3500K; none directly over the sofa or piano bench, no screen reflections",
+  "亮度：每盞約 650 lm（8 W），客餐廳 12 盞約 7,800 lm，約現居 CWT（10 × 600 ＝ 6,000 lm）的 1.3 倍；晚上落地玻璃會吃光，留這點餘量": "Brightness: ≈ 650 lm (8 W) each; 12 fittings ≈ 7,800 lm for living/dining, ≈ 1.3× current CWT (10 × 600 = 6,000 lm); headroom for the dark glass at night",
+  "光不穿過扇葉：嵌燈切光 35°，在葉片面的光錐半徑 25 → 離扇心 < 91 才會閃；最近的嵌燈 97，其餘 ≥ 137": "No light through the blades: 35° cut-off → 25 cone radius at blade level → only fittings < 91 from the fan centre would flicker; nearest is 97, others ≥ 137",
+  "客餐廳嵌燈減為 12 盞、每盞約 650 lm（總量約現居 1.3 倍）。": "Living/dining downlights reduced to 12 at ≈ 650 lm each (≈ 1.3× current home).",
+  "・客廳燈＝沙發區嵌燈 4＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區周邊 4\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 4 sofa-zone downlights + 2 over piano\n• Dining = 2 over table + 4 around dining\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode"
  }
 }
