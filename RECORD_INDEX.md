@@ -59,17 +59,12 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | STD-04 | `study-wardrobe` | 書房衣櫃 | 120 × 60 |
 | STD-05 | `study-desk` | 書房電腦桌 | 100 × 50 |
 | STD-03 | `massage-chair` | 按摩椅 OSIM uLove 3 | 76 × 127 |
-| GST-01 | `guest-bed-c` | 客房床 C · MALM Queen | 166 × 209 |
-| GST-02 | `guest-desk-c` | 客房書桌 C | 60 × 45 |
-| GST-03 | `guest-wardrobe-c` | 客房衣櫃 C | 49 × 60 |
 | GST-04 | `guest-bed-a` | 客房床 A · MALM Queen | 166 × 209 |
 | GST-05 | `guest-desk-a` | 客房書桌 A | 70 × 40 |
 | GST-06 | `guest-wardrobe-a` | 客房衣櫃 A | 70 × 60 |
 | GST-07 | `guest-bed-lb` | 客房床 | 154 × 194 |
 | STD-06 | `massage-chair-lb` | 按摩椅 OSIM uLove 3 | 76 × 127 |
 | STD-07 | `study-desk-lb` | 書房電腦桌 | 100 × 50 |
-| GST-08 | `guest-desk-lb-c` | 客房書桌 | 60 × 45 |
-| GST-09 | `guest-wardrobe-lb-c` | 客房衣櫃 | 59 × 60 |
 | GST-10 | `guest-desk-lb-a` | 客房書桌 | 70 × 40 |
 | GST-11 | `guest-wardrobe-lb-a` | 客房衣櫃 | 70 × 60 |
 | GST-12 | `guest-chair-a` | 客房書椅（A） | 45 × 45 |

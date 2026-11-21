@@ -35,9 +35,9 @@ let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=n
 // Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
 const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
-// Guest-room scheme (R34 order): A = guest-a (loose wardrobe 70 + desk 70 × 40, default), B = guest-b (built-in wardrobe + desk), C = guest-c (narrow wardrobe + desk). URL ?guest=a|b|c.
-const GUEST_KEYS={a:'guest-a',b:'guest-c'}; // R71: old B removed; displayed B = guest-c
-selectedVersions.guest=GUEST_KEYS[({c:'b'}[(new URLSearchParams(location.search).get('guest')||'').toLowerCase()]||(new URLSearchParams(location.search).get('guest')||'').toLowerCase())]||GUEST_KEYS.a;
+// Guest room (R122): single scheme guest-a; the scheme toolbar hides (<2 versions) and any old ?guest= value falls back to it.
+const GUEST_KEYS={a:'guest-a'};
+selectedVersions.guest=GUEST_KEYS.a;
 // Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
 const MASTER_KEYS={a:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
