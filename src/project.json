@@ -25931,6 +25931,13 @@
       "kind": "reno",
       "priority": 1,
       "pin": true
+    },
+    {
+      "id": "todo-master-mattress-height",
+      "room": "master",
+      "text": "回去量床墊高度（主臥床、言言小床；定床頭插座與開關高度用）",
+      "status": "open",
+      "kind": "furn"
     }
   ],
   "research": {
