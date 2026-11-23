@@ -1577,7 +1577,7 @@
       "uncertainty_cm": null,
       "notes": "Length190cm annotated; depth60cm scaled. Crossed cabinet symbol, actual function/material not given.",
       "name": "走道口 190 櫃",
-      "source_note": "",
+      "source_note": "正中最上層放 Wi-Fi AP-01（UniFi Express 7），格內 S-41＋Cat6 面板\n門片木作／laminate，不用金屬、鏡面、鋁箔背板；留通風縫",
       "dimensions": {
         "w": {
           "cm": 190,
@@ -5526,7 +5526,7 @@
             },
             {
               "label": "櫃體",
-              "value": "190 × 60",
+              "value": "190 × 60 · 正中最上層放 Wi-Fi AP-01",
               "object": "living-cabinet"
             }
           ],
@@ -5561,7 +5561,8 @@
             "天花：整片假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；吊扇在餐桌與沙發之間，吊桿穿過假天花鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB",
             "插座：電視櫃中格蓋板下、左格各 13A 雙孔 × 2（左格其一帶 USB）；右喇叭與重低音共用一個 13A 雙孔",
-            "光纖盒到電視櫃 Cat6 ×2（一條備用）",
+            "光纖 ONT 放電視櫃左格；光纖盒到電視櫃 Cat6 ×1 備用",
+            "走道口 190 櫃（Wi-Fi AP-01＋閘道）：正中一格淨寬 ≥ 25，最上層層板面 ≥ 150 放 UniFi Express 7；格內後牆 13A 單孔 S-41＋Cat6 雙孔面板；電視櫃↔AP 格 Cat6 ×2（WAN、LAN）經假天花；門片只用木作／laminate，不用金屬、鏡面、鋁箔背板；頂板或背板留 ≥ 2 通風縫",
             "攝影機 P-01／02／03／08 各一條 Cat6 拉回電視櫃"
           ]
         }
@@ -5722,7 +5723,7 @@
             },
             {
               "label": "櫃體",
-              "value": "190 × 60",
+              "value": "190 × 60 · 正中最上層放 Wi-Fi AP-01",
               "object": "living-cabinet"
             }
           ],
@@ -5757,7 +5758,8 @@
             "天花：整片假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；吊扇在餐桌與沙發之間，吊桿穿過假天花鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB",
             "插座：電視櫃中格蓋板下、左格各 13A 雙孔 × 2（左格其一帶 USB）；右喇叭與重低音共用一個 13A 雙孔",
-            "光纖盒到電視櫃 Cat6 ×2（一條備用）",
+            "光纖 ONT 放電視櫃左格；光纖盒到電視櫃 Cat6 ×1 備用",
+            "走道口 190 櫃（Wi-Fi AP-01＋閘道）：正中一格淨寬 ≥ 25，最上層層板面 ≥ 150 放 UniFi Express 7；格內後牆 13A 單孔 S-41＋Cat6 雙孔面板；電視櫃↔AP 格 Cat6 ×2（WAN、LAN）經假天花；門片只用木作／laminate，不用金屬、鏡面、鋁箔背板；頂板或背板留 ≥ 2 通風縫",
             "攝影機 P-01／02／03／08 各一條 Cat6 拉回電視櫃"
           ]
         },
@@ -5816,17 +5818,17 @@
           },
           "sock-tv-l": {
             "y": 218.412,
-            "notes": "・13A 雙孔 × 2，在隱藏式蓋板正下方、對準電視\n・電視、電視盒、充電；拿開蓋板就插得到",
+            "notes": "・13A 雙孔 × 2，在隱藏式蓋板正下方、對準電視\n・電視、Apple TV、充電；拿開蓋板就插得到",
             "name": "插座 · 電視櫃中縫後",
             "place": "電視牆 · 隱藏式蓋板下"
           },
           "sock-console-l": {
             "y": 195.593,
-            "notes": "・13A 雙孔 × 2（其一帶 USB-A／C），距櫃左端 13.5–55\n・PS5 Pro、Switch 2、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A）各一孔；USB 給風扇"
+            "notes": "・13A 雙孔 × 2（其一帶 USB-A／C），距櫃左端 13.5–55\n・PS5 Pro、Switch 2、USW Lite 8 PoE 變壓器（60 W）、光纖 ONT 變壓器各一孔；USB 給風扇"
           },
           "data-tv": {
             "y": 211.977,
-            "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器",
+            "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的光纖 ONT",
             "place": "電視牆 · 隱藏式蓋板下"
           },
           "hub": {
@@ -5859,11 +5861,15 @@
             ],
             [
               580,
-              272.4
+              259
             ],
             [
-              522.4,
-              272.4
+              452.6,
+              259
+            ],
+            [
+              452.6,
+              271.5
             ]
           ]
         }
@@ -25500,7 +25506,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：UniFi U7 Lite ×3 吸頂（客廳鋼琴上方、走廊、主臥）＋Cloud Gateway Ultra＋USW Lite 8 PoE；家／訪客兩組 SSID\n・攝影機：Aqara Camera E1 ×4（玄關、客餐廳、廚房、小孩房），走 Wi-Fi，電源在假天花內\n・開關：Aqara H1 EU 有零線，每房門邊一組；大門內場景按鈕\n・網路線走向由水電依現場調整",
+    "summary": "・網路：UniFi Express 7 閘道＋客廳 AP（走道口 190 櫃）＋U7 Lite ×2 吸頂（走廊、主臥）＋USW Lite 8 PoE（電視櫃）；SSID 家（5 GHz）／家電（2.4 GHz）／訪客\n・攝影機：Aqara Camera E1 ×3（玄關、客餐廳、廚房）＋Camera Hub G350（小孩房），走 Wi-Fi，電源在假天花內\n・家居中樞：Apple TV 4K 有線接電視櫃（HomePod mini 待命）\n・開關：Aqara H1 EU 有零線，每房門邊一組；大門內場景按鈕\n・網路線走向由水電依現場調整",
     "sources": [
       {
         "label": "Aqara Camera E1 specs",
@@ -25515,12 +25521,12 @@
         "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
       },
       {
-        "label": "UniFi U6+",
-        "url": "https://techspecs.ui.com/unifi/wifi/u6-plus"
+        "label": "UniFi Express 7",
+        "url": "https://techspecs.ui.com/unifi/cloud-gateways/ux7"
       },
       {
-        "label": "UniFi Cloud Gateway Ultra",
-        "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
+        "label": "UniFi U6+",
+        "url": "https://techspecs.ui.com/unifi/wifi/u6-plus"
       },
       {
         "label": "UniFi USW Lite 8 PoE",
@@ -25553,7 +25559,7 @@
         "place": "客廳陽台門左側天花角",
         "mount": "ceiling",
         "name": "天花電源 · 客廳攝影機",
-        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機\n・此處若無假天花，改沿牆角走細線槽",
+        "notes": "・假天花內 13A 插座＋USB-A 5 V／2 A 變壓器＋A→C 線（USB-C PD 充電頭可能供不了 E1）\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機\n・此處若無假天花，改沿牆角走細線槽",
         "use": "攝影機"
       },
       {
@@ -25567,7 +25573,7 @@
         "aim": 36,
         "name": "攝影機 · 客餐廳",
         "product": "Aqara Camera E1",
-        "notes": "・倒吊天花，App 內翻轉畫面\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・關閉錄音\n・Wi-Fi 2.4 GHz 連線"
+        "notes": "・倒吊天花，App 內翻轉畫面\n・預設看客餐廳與玄關走道口，可轉到陽台門\n・關閉錄音\n・連「家電」SSID（2.4 GHz）"
       },
       {
         "id": "sock-dining-n",
@@ -25604,7 +25610,7 @@
         "place": "玄關走道天花",
         "mount": "ceiling",
         "name": "天花電源 · 玄關攝影機",
-        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
+        "notes": "・假天花內 13A 插座＋USB-A 5 V／2 A 變壓器＋A→C 線（USB-C PD 充電頭可能供不了 E1）\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
         "use": "攝影機"
       },
       {
@@ -25618,7 +25624,7 @@
         "aim": 107,
         "name": "攝影機 · 大門",
         "product": "Aqara Camera E1",
-        "notes": "・預設看大門進出\n・關閉錄音\n・Wi-Fi 2.4 GHz 連線"
+        "notes": "・預設看大門進出\n・關閉錄音\n・連「家電」SSID（2.4 GHz）"
       },
       {
         "id": "ceil-kid",
@@ -25629,7 +25635,7 @@
         "place": "小孩房靠窗天花角 · 清淨機那側",
         "mount": "ceiling",
         "name": "天花電源 · 小孩房攝影機",
-        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
+        "notes": "・假天花內 13A 插座＋USB 變壓器 ≥ 10 W（G350 盒內不附）\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
         "use": "攝影機"
       },
       {
@@ -25642,8 +25648,8 @@
         "mount": "ceiling",
         "aim": 120,
         "name": "攝影機 · 小孩房",
-        "product": "Aqara Camera E1",
-        "notes": "・靠窗天花角、背對窗：白天不逆光\n・離窗牆 25（避開窗簾盒）、離清淨機那面牆 10\n・預設朝房門看全房，不正對床；唯一開錄音（聽哭聲）\n・供電 P-03，Wi-Fi 2.4 GHz 連線"
+        "product": "Aqara Camera Hub G350",
+        "notes": "・靠窗天花角、背對窗：白天不逆光\n・離窗牆 25（避開窗簾盒）、離清淨機那面牆 10\n・預設朝房門看全房，不正對床；唯一開錄音（聽哭聲）\n・供電 P-03；雙頻 Wi-Fi 6，連「家」SSID（5 GHz 可）\n・哭聲偵測推播、實體鏡頭遮蔽、microSD 24 小時錄影；可當 Zigbee／Thread 備援中樞"
       },
       {
         "id": "ceil-kitchen",
@@ -25654,7 +25660,7 @@
         "place": "廚房天花 · 女傭房門那端",
         "mount": "ceiling",
         "name": "天花電源 · 廚房攝影機",
-        "notes": "・假天花內 13A 插座＋Aqara 原廠 5 V 2 A USB-C 變壓器\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
+        "notes": "・假天花內 13A 插座＋USB-A 5 V／2 A 變壓器＋A→C 線（USB-C PD 充電頭可能供不了 E1）\n・USB-C 線從底座旁出線孔穿出，線不外露\n・同點預埋一條 Cat6 拉回電視櫃，日後可換 PoE 攝影機",
         "use": "攝影機"
       },
       {
@@ -25668,7 +25674,7 @@
         "aim": 4,
         "name": "攝影機 · 廚房",
         "product": "Aqara Camera E1",
-        "notes": "・離女傭房門牆 10、對準門中線，背對女傭房朝廚房門\n・看爐具、水槽、廚房門；關閉錄音\n・Wi-Fi 2.4 GHz 連線"
+        "notes": "・離女傭房門牆 10、對準門中線，背對女傭房朝廚房門\n・看爐具、水槽、廚房門；關閉錄音\n・連「家電」SSID（2.4 GHz）"
       },
       {
         "id": "sock-bed-n",
@@ -25773,8 +25779,8 @@
         "place": "電視櫃左端格 · PS5 下方托盤",
         "mount": 10,
         "name": "網路設備 · 電視櫃",
-        "product": "UniFi Cloud Gateway Ultra + USW Lite 8 PoE + Aqara Hub M3",
-        "notes": "・Cloud Gateway Ultra 141.8 × 127.6 × 30 mm：取代 ISP 路由，光纖盒直接接它的 WAN；USB-C 5 V／3 A 變壓器\n・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：4 埠 PoE+，共 52 W；外接 60 W 變壓器\n・Aqara Hub M3 105 × 105 × 36.5 mm：USB-C 變壓器，網路線接交換器\n・三台平放在 PS5 層板下的托盤（高 5、上方留 1.8）：USW、UCG 並排在前、Hub M3 在 USW 後面，網口朝後；電源插 S-22\n・光纖盒位置待確認：拉 Cat6 ×2 到這裡（一條備用）"
+        "product": "UniFi USW Lite 8 PoE + 光纖 ONT + Aqara Hub M3",
+        "notes": "・USW Lite 8 PoE 163.7 × 99.6 × 31.7 mm：4 埠 PoE+，共 52 W（AP-02、AP-03 用 26 W）；外接 60 W 變壓器；上聯來自 190 櫃 Express 7 的 2.5G 埠\n・光纖 ONT（ISP 提供，尺寸待確認）：Cat6 接到 190 櫃 Express 7 的 10G WAN 埠\n・Aqara Hub M3 105 × 105 × 36.5 mm：USB-C 變壓器，網路線接交換器\n・三台平放在 PS5 層板下的托盤（高 5、上方留 1.8）：USW、ONT 並排在前、Hub M3 在 USW 後面，網口朝後；ONT 放不進就立在 PS5 後方；電源插 S-22\n・電視櫃↔190 櫃 Cat6 ×2（WAN、LAN）；光纖盒到這裡 Cat6 ×1 備用（光纖盒位置待確認）"
       },
       {
         "id": "data-tv",
@@ -25785,7 +25791,7 @@
         "place": "電視牆 · 隱藏式蓋板下",
         "mount": 38.5,
         "name": "網路孔 · 電視櫃",
-        "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的路由器"
+        "notes": "・光纖盒來的網路線在這裡出線，沿櫃子後面走到左格的光纖 ONT"
       },
       {
         "id": "data-ne",
@@ -25873,13 +25879,13 @@
         "id": "ap-living",
         "code": "AP-01",
         "kind": "ap",
-        "x": 522.4,
-        "y": 272.4,
-        "place": "客廳假天花 · 鋼琴上方",
-        "mount": "ceiling",
-        "name": "Wi-Fi AP · 客廳鋼琴上方",
-        "product": "UniFi U7 Lite",
-        "notes": "・Ø171.5 × 33 mm 白色圓盤，吸頂；PoE 供電，最大 13 W\n・客廳、餐桌、電視無牆阻隔，約 3–3.6 m，預估 −35 dBm\n・廚房隔一道約 8 cm 輕隔間，爐具、水槽約 3–3.6 m，預估 −39 dBm\n・女傭房床約 3.6 m、大門約 4.9 m，各隔兩道牆，預估 −56／−54 dBm"
+        "x": 452.6,
+        "y": 271.5,
+        "place": "走道口 190 櫃 · 正中最上層",
+        "mount": 150,
+        "name": "Wi-Fi AP＋閘道 · 走道口 190 櫃",
+        "product": "UniFi Express 7（閘道＋AP）",
+        "notes": "・桌上型 117 × 117 × 42.5 mm，平放在最上層層板（板面 ≥ 150），離側板、隔板 ≥ 5；櫃子正中，兩端各 95\n・閘道＋控制器＋客廳 AP：10G WAN 用 Cat6 接電視櫃的光纖 ONT，2.5G LAN 用 Cat6 接回電視櫃交換器；UniFi Network 跑在本機，管 AP-02、AP-03 與交換器\n・電源：原廠 USB-C 5 V／5 A 變壓器插格內 S-41，最大 22 W\n・不用 U7 Lite：吸頂型平放在櫃內，主波瓣朝上打到櫃頂\n・櫃門只用木作／laminate，不用金屬、鏡面、鋁箔背板；頂板或背板留通風縫\n・女傭房床頭只隔一道牆 −27 至 −35 dBm；客廳、餐桌、電視 −31 至 −37；廚房 −40／−47（爐具在洗烘塔後方）\n・電視、PS5 在電視櫃接 Cat6，客廳 Wi-Fi 只給手機、平板，穩就夠"
       },
       {
         "id": "ap-corridor",
@@ -26370,6 +26376,19 @@
         "gang": 2
       },
       {
+        "id": "sock-living-ap",
+        "code": "S-41",
+        "kind": "socket",
+        "gang": 1,
+        "x": 460.5,
+        "y": 274.0,
+        "mount": 160,
+        "place": "走道口 190 櫃 · AP 格後牆",
+        "name": "插座 · Wi-Fi AP",
+        "use": "Wi-Fi AP",
+        "notes": "・13A 單孔，AP 格後牆、層板面上約 10（層板 150 時離地約 160）\n・只插 Express 7 的 USB-C 變壓器；旁邊同高裝 Cat6 雙孔網路面板（WAN、LAN）"
+      },
+      {
         "id": "sock-kef-l",
         "code": "S-17",
         "kind": "socket",
@@ -26638,7 +26657,7 @@
         "place": "電視牆 · 隱藏式蓋板下",
         "mount": 38.5,
         "name": "插座 · 電視櫃中格後",
-        "notes": "・13A 雙孔 × 2，在隱藏式蓋板正下方、對準電視\n・電視、電視盒、充電；拿開蓋板就插得到",
+        "notes": "・13A 雙孔 × 2，在隱藏式蓋板正下方、對準電視\n・電視、Apple TV、充電；拿開蓋板就插得到",
         "use": "電視櫃",
         "gang": 2,
         "plates": 2
@@ -26652,7 +26671,7 @@
         "place": "電視櫃左端格背牆",
         "mount": 18,
         "name": "插座 · 電視櫃左端格",
-        "notes": "・13A 雙孔 × 2（其一帶 USB-A／C），距櫃左端 18–59\n・PS5 Pro、Switch 2、USW Lite 8 PoE 變壓器（60 W）、UCG Ultra 變壓器（USB-C 5 V／3 A）各一孔；USB 給風扇",
+        "notes": "・13A 雙孔 × 2（其一帶 USB-A／C），距櫃左端 18–59\n・PS5 Pro、Switch 2、USW Lite 8 PoE 變壓器（60 W）、光纖 ONT 變壓器各一孔；USB 給風扇",
         "use": "電視櫃",
         "gang": 2,
         "plates": 2
@@ -26685,11 +26704,15 @@
           ],
           [
             580,
-            272.4
+            259
           ],
           [
-            522.4,
-            272.4
+            452.6,
+            259
+          ],
+          [
+            452.6,
+            271.5
           ]
         ]
       },
@@ -26798,14 +26821,14 @@
             ],
             "rows": [
               [
-                "Wi-Fi AP ×3",
-                "U7 Lite · 客廳鋼琴上方、走廊、主臥天花",
-                "S$164 ×3"
+                "Wi-Fi AP ×2",
+                "U7 Lite · 走廊、主臥天花",
+                "S$164 ×2"
               ],
               [
-                "主路由",
-                "Cloud Gateway Ultra · 電視櫃左端格托盤",
-                "S$219"
+                "閘道＋AP",
+                "Express 7 · 走道口 190 櫃最上層",
+                "S$340"
               ],
               [
                 "PoE 交換器",
@@ -26814,25 +26837,25 @@
               ],
               [
                 "網路線",
-                "Cat6：AP ×3、電視、客房書桌、書房、攝影機 ×4；光纖盒到電視櫃 ×2（一條備用）",
+                "Cat6：AP-02／03、電視櫃↔190 櫃 ×2（WAN、LAN）、客房書桌、書房、攝影機 ×4；光纖盒到電視櫃 ×1 備用",
                 "約 S$100–120／點"
               ],
               [
                 "設備合計",
                 "",
-                "S$897"
+                "S$854"
               ]
             ]
           },
-          "text": "・選 UniFi：U7 Lite 吸頂只有 33 mm 厚、Wi-Fi 7、PoE 一條線供電，UniFi Network 跑在本機\n・U7 Lite 只有 2.4／5 GHz，沒有 6 GHz；手機與電視用 5 GHz 已夠\n・三顆 AP 同一組 SSID，5 GHz 用不重疊頻道；2.4 GHz 保留給 Camera E1\n・兩組 SSID：「家」給家人、岳母與 Apple Home 設備；「訪客」VLAN 20 給女傭與訪客，用戶隔離、只上網；不另切 IoT 網段\n・不選 Deco X50-PoE：便宜約 S$300，但 68.6 mm 厚方盒、Wi-Fi 6、每顆只有 2 個網口\n・要 Cloud Gateway：沒有它 AP 只能逐顆單獨設定，沒有快速漫遊、沒有遠端管理\n・購買：UI Store SG 官網（含 GST、原廠保固）；授權經銷 Win-Pro，38 Jalan Pemimpin #07-04 M38；未查到可看實機的門市",
+          "text": "・最少設備：Express 7 一台兼閘道、UniFi Network 控制器與客廳 AP；U7 Lite ×2 吸頂（33 mm、Wi-Fi 7、PoE 一條線）；USW Lite 8 PoE 供電給兩顆 U7 Lite\n・Express 7 桌上型 117 × 117 × 42.5 mm，平放在走道口 190 櫃最上層；U7 Lite 是吸頂型，平放櫃內主波瓣朝上打到櫃頂\n・接線：電視櫃的光纖 ONT → Cat6 → Express 7 10G WAN；Express 7 2.5G LAN → Cat6 → 電視櫃交換器\n・U7 Lite 只有 2.4／5 GHz；Express 7 多 6 GHz；電視、PS5、Apple TV 走 Cat6\n・三組 SSID：「家」5 GHz、「家電」只 2.4 GHz（E1、Hub M3、清淨機、拖地機）、「訪客」VLAN 20；家與家電同一網段，不切 IoT VLAN；設定清單見攝影機與 Wi-Fi 研究\n・不選 Deco X50-PoE：便宜約 S$300，但 68.6 mm 厚方盒、Wi-Fi 6、每顆只有 2 個網口\n・要 UniFi 閘道：沒有它 AP 只能逐顆單獨設定，沒有快速漫遊、沒有遠端管理；Express 7 兼任，不另買\n・購買：UI Store SG 官網（含 GST、原廠保固）；授權經銷 Win-Pro，38 Jalan Pemimpin #07-04 M38；未查到可看實機的門市",
           "sources": [
             {
               "label": "UniFi U7 Lite",
               "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
             },
             {
-              "label": "UniFi Cloud Gateway Ultra",
-              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
+              "label": "UniFi Express 7",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ux7"
             },
             {
               "label": "UniFi USW Lite 8 PoE",
@@ -26843,8 +26866,8 @@
               "url": "https://sg.store.ui.com/sg/en/products/u7-lite"
             },
             {
-              "label": "UI Store SG · UCG Ultra",
-              "url": "https://sg.store.ui.com/sg/en/products/ucg-ultra"
+              "label": "UI Store SG · Express 7",
+              "url": "https://sg.store.ui.com/sg/en/products/ux7"
             },
             {
               "label": "UI Store SG · USW Lite 8 PoE",
@@ -26881,33 +26904,33 @@
             "rows": [
               [
                 "客廳沙發、餐桌、電視",
-                "AP-01 · 2.9–3.6 m",
-                "0",
-                "−34 至 −35 dBm"
+                "AP-01 · 2.3–5.0 m",
+                "0 · 木櫃門",
+                "−31 至 −37 dBm"
               ],
               [
                 "廚房爐具、水槽",
-                "AP-01 · 3.1–3.6 m",
-                "1 · 輕隔間 8",
-                "−38／−39 dBm"
+                "AP-01 · 2.6–3.2 m",
+                "2／1＋洗烘塔",
+                "−40／−47 dBm"
               ],
               [
                 "女傭房床",
-                "AP-01 · 3.6 m",
-                "2",
-                "−56 dBm"
+                "AP-01 · 0.8–2.3 m",
+                "1",
+                "−27 至 −35 dBm"
               ],
               [
                 "大門玄關",
-                "AP-01 · 4.9 m",
+                "AP-01 · 5.6 m",
                 "2",
-                "−54 dBm"
+                "約 −50 dBm"
               ],
               [
                 "客廳陽台",
-                "AP-01 · 5.1 m",
+                "AP-01 · 4.8 m",
                 "1 · 玻璃門",
-                "−42 dBm"
+                "−40 dBm"
               ],
               [
                 "小孩房、客房、書房",
@@ -26941,11 +26964,15 @@
               ]
             ]
           },
-          "text": "・主臥裝 AP-03（原 D-04 線）：牆若是混凝土（每道 12 dB），只靠 AP-02 時主浴 −67、主臥靠陽台角 −72、主臥陽台 −83 dBm\n・AP-01 從廚房移到鋼琴上方：客廳、陽台更強，廚房 −32 → −38、女傭房 −44 → −56 dBm，都在可用範圍\n・估算：U7 Lite 5 GHz 24 dBm＋5 dBi，自由空間衰減，AP 天花對手機高差 1.8 m，再扣 6 dB 手機天線與遮擋\n・每道牆：≤ 8 cm 輕隔間 4 dB、10 cm 磚或預鑄 8 dB、≥ 15 cm 視為 RC 12 dB；牆厚由平面量得，材質待確認\n・6 GHz：U7 Lite 不支援；若換 U7 Pro（S$329），主臥床頭約 −57 dBm\n・官方標示每顆 115 m²，三顆 345 m²；全屋室內約 98 m²",
+          "text": "・主臥裝 AP-03（原 D-04 線）：牆若是混凝土（每道 12 dB），只靠 AP-02 時主浴 −67、主臥靠陽台角 −72、主臥陽台 −83 dBm\n・AP-01 從鋼琴上方天花移進走道口 190 櫃（Express 7）：女傭房 −56 → −27 至 −35、客廳 −31 至 −37 dBm；廚房爐具在洗烘塔後方 −47（水槽經女傭房 −40），混凝土牆下約 −55，手機仍夠用\n・估算：U7 Lite 5 GHz 24 dBm＋5 dBi，AP 天花對手機高差 1.8 m；Express 7 26 dBm＋7 dBi 扣木櫃門 3 dB，櫃頂對手機高差約 0.6 m；自由空間衰減，再扣 6 dB 手機天線與遮擋；洗烘塔、冰箱遮擋另扣約 10 dB\n・每道牆：≤ 8 cm 輕隔間 4 dB、10 cm 磚或預鑄 8 dB、≥ 15 cm 視為 RC 12 dB；牆厚由平面量得，材質待確認\n・6 GHz：U7 Lite 不支援；若換 U7 Pro（S$329），主臥床頭約 −57 dBm\n・官方標示 U7 Lite 每顆 115 m²、Express 7 160 m²，共 390 m²；全屋室內約 98 m²",
           "sources": [
             {
               "label": "UniFi U7 Lite",
               "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+            },
+            {
+              "label": "UniFi Express 7",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ux7"
             },
             {
               "label": "UI Store SG · U7 Pro",
@@ -26968,23 +26995,27 @@
               ],
               [
                 "AP 負載",
-                "3 × 13 = 39 W"
+                "2 × 13 = 26 W（AP-02、AP-03）"
               ],
               [
                 "餘量",
-                "13 W"
+                "26 W"
               ],
               [
                 "埠數",
-                "UCG Ultra 4 LAN（1 接交換器）＋交換器 8 埠（1 上聯）= 10：AP ×3、客房、書房、電視、PS5 Pro、KEF、Switch 2、Hub M3，剛好用滿"
+                "Express 7 兩個口（10G WAN 接 ONT、2.5G LAN 接交換器）＋交換器 8 埠（1 上聯）= 7：AP-02、AP-03、電視、PS5 Pro、Apple TV、KEF、Hub M3，用滿；Switch 2 走 Wi-Fi，客房 D-02、書房 D-03 先預埋不接，要用時加 5 埠小交換器"
               ]
             ]
           },
-          "text": "・攝影機不走 PoE，交換器只供 AP\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・攝影機預埋線日後換 PoE 時再加交換器",
+          "text": "・攝影機不走 PoE，交換器只供 AP-02、AP-03\n・AP-01 Express 7 用自己的 USB-C 變壓器（最大 22 W，插 S-41），不佔 PoE 預算\n・Aqara Hub M3 用 USB-C 變壓器，不佔 PoE 預算\n・攝影機預埋線日後換 PoE 時再加交換器",
           "sources": [
             {
               "label": "UniFi U7 Lite",
               "url": "https://techspecs.ui.com/unifi/wifi/u7-lite"
+            },
+            {
+              "label": "UniFi Express 7",
+              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ux7"
             },
             {
               "label": "UniFi USW Lite 8 PoE",
@@ -27008,12 +27039,12 @@
             "rows": [
               [
                 "機型",
-                "Aqara Camera E1 ×4",
+                "Aqara E1 ×3＋G350 ×1",
                 "例：UniFi G5 Flex ×4"
               ],
               [
                 "供電",
-                "5 V 2 A USB-C；假天花內 13A 插座＋原廠變壓器",
+                "5 V 2 A USB；假天花內 13A＋USB-A 變壓器（E1）／≥ 10 W（G350）",
                 "PoE 最大 4 W；一條 Cat6 供電加傳輸"
               ],
               [
@@ -27023,7 +27054,7 @@
               ],
               [
                 "連線",
-                "Wi-Fi 6 · 2.4 GHz；四顆串流只佔 AP 頻寬一小部分",
+                "E1 2.4 GHz（家電）、G350 5 GHz（家）；四台串流只佔 AP 頻寬一小部分",
                 "有線，不受 Wi-Fi 干擾"
               ],
               [
@@ -27034,7 +27065,7 @@
               [
                 "錄影與隱私",
                 "microSD ≤ 512 GB；HomeKit Secure Video",
-                "要 UniFi Protect：UCG Ultra 不支援，需改 UCG Max S$483＋SSD"
+                "要 UniFi Protect：Express 7 不支援，需另加 UCG Max S$483＋SSD"
               ],
               [
                 "生態",
@@ -27048,12 +27079,12 @@
               ],
               [
                 "約價",
-                "S$99／顆",
+                "E1 S$99、G350 S$299",
                 "S$219／顆＋錄影主機差價"
               ]
             ]
           },
-          "text": "・建議天花插座 + Wi-Fi：每顆省約 S$120，不用換錄影主機，留在 Apple Home\n・攝影機與 HomePod mini、Hub M3 放同一網段，不另切網段：HKSV 與 Apple Home 才找得到\n・每個攝影機點順便預埋一條 Cat6 拉回電視櫃，日後要換 PoE 不必拆天花\n・玄關、客餐廳、廚房、小孩房各一台，錄音只開小孩房；女傭房、浴室、客房、主臥、書房、走廊、陽台不裝",
+          "text": "・建議天花插座 + Wi-Fi：每顆省約 S$120，不用換錄影主機，留在 Apple Home\n・攝影機與 Apple TV、Hub M3 放同一網段，不另切網段：HKSV 與 Apple Home 才找得到\n・每個攝影機點順便預埋一條 Cat6 拉回電視櫃，日後要換 PoE 不必拆天花\n・玄關、客餐廳、廚房、小孩房各一台，錄音只開小孩房；女傭房、浴室、客房、主臥、書房、走廊、陽台不裝",
           "sources": [
             {
               "label": "Aqara Camera E1 specs",
@@ -27064,16 +27095,16 @@
               "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/cameras-en/security-cameras-en/aqara-e1-camera-white-ch-c01e.html"
             },
             {
+              "label": "MacRumors · Aqara Camera Hub G350 review",
+              "url": "https://macrumors.com/review/aqara-camera-hub-g350/"
+            },
+            {
               "label": "UniFi G5 Flex",
               "url": "https://techspecs.ui.com/unifi/cameras-nvrs/uvc-g5-flex"
             },
             {
               "label": "UI Store SG · G5 Flex",
               "url": "https://sg.store.ui.com/sg/en/products/uvc-g5-flex"
-            },
-            {
-              "label": "UniFi Cloud Gateway Ultra",
-              "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
             },
             {
               "label": "UniFi Cloud Gateway Max",
@@ -27121,7 +27152,7 @@
         {
           "id": "todo",
           "title": "待確認",
-          "text": "・光纖終端位置：Cat6 ×2 從光纖盒拉到電視櫃（一條備用）\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・客廳鋼琴上方有無假天花；沒有就沿天花角線走線槽到 AP"
+          "text": "・光纖盒位置：ONT 放電視櫃左格；光纖盒到電視櫃留 Cat6 ×1 備用\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・走道口 190 櫃高度：AP-01 放最上層，層板面 ≥ 150"
         }
       ]
     }
@@ -27137,19 +27168,19 @@
         "kinds": [
           "hub"
         ],
-        "pick": "已有的 HomePod mini 當家居中樞＋Aqara Hub M3 當 Zigbee 骨幹",
+        "pick": "Apple TV 4K 有線接電視櫃當家居中樞（HomePod mini 待命）＋Aqara Hub M3 當 Zigbee 骨幹",
         "options": [
           {
             "name": "HomePod mini（已有）+ Aqara Hub M3",
             "verdict": "pick",
-            "summary": "HomePod mini 跑遠端、自動化、HKSV 分析、Thread 與 Matter；M3 把 Aqara 設備橋接進 Apple Home",
-            "details": "- HomePod mini 設定好就自動成為家居中樞，不用另設\n- 內建 Thread 邊界路由器與 Matter 控制器；Adaptive Lighting、HKSV 都可用它當中樞\n- 只有 Wi-Fi、沒有網口：放客廳中央、靠近 AP，不塞進封閉櫃\n- Hub M3 S$289：Zigbee、Thread、Matter，可 PoE 供電；用 HomeKit QR 加入 Apple Home，不要再用 Matter 加一次\n- M3 的 Thread 加入 Apple 現有網路，避免分裂成兩個 Thread 網"
+            "summary": "HomePod mini 待命中樞與音響；M3 把 Aqara 設備橋接進 Apple Home",
+            "details": "- Apple TV 加入後自動成為主中樞，HomePod mini 轉待命\n- 內建 Thread 邊界路由器與 Matter 控制器；Adaptive Lighting、HKSV 都可用它當中樞\n- 只有 Wi-Fi、沒有網口：放客廳中央、靠近 AP，不塞進封閉櫃\n- Hub M3 S$289：Zigbee、Thread、Matter，可 PoE 供電；用 HomeKit QR 加入 Apple Home，不要再用 Matter 加一次\n- M3 的 Thread 加入 Apple 現有網路，避免分裂成兩個 Thread 網"
           },
           {
             "name": "Apple TV 4K（4th gen）有線版",
-            "verdict": "alt",
-            "summary": "S$399；只在 4 台 E1 的 HKSV 常漏錄或延遲、或 HomePod mini 常「無回應」時才買",
-            "details": "- Gigabit Ethernet，A19 晶片，HKSV 多台攝影機餘裕較大\n- 買了它自動成為主中樞，HomePod mini 轉待命，等於備援\n- 電視櫃預留的備用 Cat6 給它用"
+            "verdict": "pick",
+            "summary": "S$399；有線接交換器，HKSV 多台攝影機比 HomePod mini 穩",
+            "details": "- Gigabit Ethernet，A19 晶片，HKSV 多台攝影機餘裕較大\n- 買了它自動成為主中樞，HomePod mini 轉待命，等於備援\n- 放電視櫃中格、插 S-20；Cat6 接左格交換器（佔 1 埠）"
           },
           {
             "name": "Samsung The Frame 內建 Apple TV App／SmartThings",
@@ -27180,13 +27211,13 @@
           "hub",
           "run"
         ],
-        "pick": "UniFi：U7 Lite ×3 吸頂（客廳鋼琴上方、走廊、主臥）＋Cloud Gateway Ultra 取代 ISP 路由＋USW Lite 8 PoE 放電視櫃左端格托盤；家／訪客兩組 SSID",
+        "pick": "UniFi 最少組合：Express 7 當閘道＋客廳 AP（走道口 190 櫃）＋U7 Lite ×2 吸頂（走廊、主臥）＋USW Lite 8 PoE 放電視櫃左端格托盤；SSID 家／家電／訪客",
         "options": [
           {
-            "name": "UniFi U7 Lite ×3＋Cloud Gateway Ultra＋USW Lite 8 PoE",
+            "name": "UniFi Express 7（閘道＋AP）＋U7 Lite ×2＋USW Lite 8 PoE",
             "verdict": "pick",
-            "summary": "設備約 S$897；吸頂 33 mm 薄、Wi-Fi 7、一條 Cat6 供電加回程；混凝土牆下主臥仍 ≥ −50 dBm",
-            "details": "- AP-01 客廳鋼琴上方：客廳、餐桌、電視 −35 dBm，廚房 −39，女傭房床 −56，大門 −54\n- AP-02 走廊：小孩房、客房、書房 −40 至 −44 dBm\n- Cloud Gateway Ultra（S$219）：路由＋UniFi Network 控制器，光纖盒直接接它，ISP 路由不用\n- 有它才有快速漫遊、一個 App 管全部、遠端管理\n- USW Lite 8 PoE（S$186，4 埠 PoE+，52 W）放電視櫃左格網通盤\n- 買：UI Store SG 官網；或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）\n- AP-03 主臥床尾走道上方（原 D-04 線）：床頭約 −40、主浴約 −48、主臥陽台約 −50 dBm\n- Cat6：AP ×3、電視、客房書桌、書房、攝影機 ×4，另光纖盒到電視櫃 ×2（一條備用）\n- 三顆同一組 SSID；2.4 GHz 保留給 Camera E1，HomePod mini、攝影機同一網段\n- 「家」：家人、岳母、Apple Home 設備、電視；「訪客」VLAN 20：女傭與訪客，用戶隔離、只上網；不另切 IoT 網段\n- 估算假設與每道牆衰減見電與智能家居的覆蓋估算"
+            "summary": "設備約 S$854；Express 7 兼閘道與客廳 AP，放走道口櫃；U7 Lite 吸頂 33 mm、一條 Cat6 供電加回程；混凝土牆下主臥仍 ≥ −50 dBm",
+            "details": "- AP-01 Express 7（S$340）走道口 190 櫃最上層：閘道＋UniFi Network 控制器＋客廳 AP；女傭房床 −27 至 −35 dBm，客廳、餐桌、電視 −31 至 −37，廚房 −40／−47，大門約 −50\n- 接線：電視櫃光纖 ONT → Cat6 → Express 7 10G WAN；2.5G LAN → Cat6 → 電視櫃交換器；ISP 路由不用\n- AP-02 走廊（U7 Lite S$164）：小孩房、客房、書房 −40 至 −44 dBm\n- AP-03 主臥床尾走道上方（U7 Lite S$164，原 D-04 線）：床頭約 −40、主浴約 −48、主臥陽台約 −50 dBm\n- USW Lite 8 PoE（S$186，4 埠 PoE+，52 W）放電視櫃左格托盤：PoE 給兩顆 U7 Lite（26 W），電視、PS5、Apple TV 走有線\n- 有 UniFi 閘道才有快速漫遊、一個 App 管全部、遠端管理\n- 買：UI Store SG 官網；或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）\n- Cat6：AP-02／03、電視櫃↔190 櫃 ×2、客房書桌、書房、攝影機 ×4，另光纖盒到電視櫃 ×1 備用\n- SSID：「家」5 GHz；「家電」只 2.4 GHz（E1、Hub M3、清淨機、拖地機）；「訪客」VLAN 20 用戶隔離；家與家電同一網段\n- 設定清單與覆蓋估算見攝影機與 Wi-Fi 研究"
           },
           {
             "name": "UniFi U7 Pro",
@@ -27195,16 +27226,16 @@
             "details": "- 6 GHz 穿牆比 5 GHz 弱，主臥床頭約 −57 dBm\n- 同樣吸頂、同一條 Cat6，日後直接替換"
           },
           {
-            "name": "不買 Gateway：ISP 路由＋U7 Lite 獨立模式",
+            "name": "不買 UniFi 閘道：ISP 路由＋U7 Lite 獨立模式",
             "verdict": "no",
-            "summary": "省 S$219，但每顆 AP 要分開設定、沒有快速漫遊、沒有遠端管理",
+            "summary": "每顆 AP 要分開設定、沒有快速漫遊、沒有遠端管理",
             "details": "- UniFi 官方：獨立模式只能用手機 App 逐顆設定\n- 在 Mac mini 自架控制器可補回，但多一台要一直開著的機器"
           },
           {
-            "name": "UniFi Express 7",
+            "name": "另買 UniFi 閘道當路由（Express 7 只當 AP）",
             "verdict": "no",
-            "summary": "S$340，路由＋Wi-Fi 7 AP 二合一；放電視櫃抽屜裡當 AP 浪費，貴 S$121",
-            "details": "- 只要路由與控制器，Cloud Gateway Ultra 就夠"
+            "summary": "多 S$219、多一台；Express 7 本身就是閘道＋控制器",
+            "details": "- 屋主要最少設備：閘道由 Express 7 兼任"
           },
           {
             "name": "TP-Link Deco X50-PoE ×3＋TL-SG108PE",
@@ -27256,24 +27287,42 @@
           "camera",
           "ceiling-power"
         ],
-        "pick": "Aqara Camera E1 ×4（玄關、客餐廳、廚房、小孩房）吸頂，HomeKit Secure Video 加密錄到 iCloud，microSD 本機備份",
+        "pick": "Aqara Camera E1 ×3（玄關、客餐廳、廚房）＋Camera Hub G350（小孩房）吸頂，HomeKit Secure Video 加密錄到 iCloud，microSD 本機備份",
         "options": [
           {
-            "name": "Aqara Camera E1",
+            "name": "Aqara Camera E1 ×3",
             "verdict": "pick",
             "summary": "S$99，原生 HKSV、可轉向、microSD 最大 512 GB；直接出現在 Apple Home",
-            "details": "- iCloud+ 200 GB 已有，最多 5 台，4 台在額度內；錄影不佔 iCloud 容量\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 microSD 或 NAS\n- 只有 2.4 GHz Wi-Fi：AP 的 2.4 GHz 不能關\n- 小孩房：Apple Home 設「有人在家時關閉串流與錄影」；錄音只開這台\n- 女傭房、浴室、客房、主臥、書房、走廊、陽台不裝"
+            "details": "- 玄關、客餐廳、廚房；iCloud+ 200 GB 已有，最多 5 台，4 台在額度內；錄影不佔 iCloud 容量\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 microSD 或 NAS\n- 只有 2.4 GHz Wi-Fi：連「家電」SSID\n- 供電：USB-A 5 V／2 A 變壓器＋A→C 線；USB-C PD 充電頭可能供不了\n- 女傭房、浴室、客房、主臥、書房、走廊、陽台不裝"
+          },
+          {
+            "name": "Aqara Camera Hub G350",
+            "verdict": "pick",
+            "summary": "S$299，小孩房；雙頻 Wi-Fi 6、哭聲偵測、實體鏡頭遮蔽、microSD 24 小時錄影；可當 Zigbee／Thread 備援中樞",
+            "details": "- 盒內不附變壓器：P-03 用 ≥ 10 W USB 變壓器\n- HKSV 上限 1080p；雲台只能在 Aqara App 轉\n- 連「家」SSID（5 GHz 可）\n- Apple Home 設「有人在家時關閉串流與錄影」；錄音只開這台"
           },
           {
             "name": "UniFi Protect（G6 Instant / G5 Flex）",
-            "verdict": "alt",
-            "summary": "要 24 小時本機錄影與 PoE 時選；需把 Cloud Gateway Ultra 換成 Max",
-            "details": "- Ultra 不跑 Protect；Max 有 NVMe 槽，最多 2 TB\n- 不原生進 Apple Home，要另開 UniFi Protect App\n- 天花已預埋 Cat6，日後可換"
+            "verdict": "no",
+            "summary": "沒有原生 HomeKit（要 Scrypted／Homebridge 長期跑）；4 台加 Cloud Gateway Max 約 S$1,800",
+            "details": "- Express 7 不跑 Protect；要另加 Cloud Gateway Max（NVMe，最多 2 TB）\n- 天花已預埋 Cat6，日後可換"
+          },
+          {
+            "name": "TP-Link Tapo C225",
+            "verdict": "no",
+            "summary": "只有 C225／C125／TC73 支援 HKSV；Apple Home 裡最高 1080p、不能轉雲台；12 V 圓孔變壓器，天花供電要改",
+            "details": "- 多一個 Tapo App"
+          },
+          {
+            "name": "Eufy IndoorCam E30",
+            "verdict": "no",
+            "summary": "2022–23 曾在使用者不知情下上傳雲端、謊稱端對端加密",
+            "details": "- 有 HKSV，但隱私紀錄不及格"
           },
           {
             "name": "Matter 攝影機",
             "verdict": "no",
-            "summary": "Matter 1.5 已有攝影機規格，但 Apple Home 尚未支援（待確認）",
+            "summary": "Matter 1.5 已有攝影機規格，但 Apple Home（iOS 27）仍不支援",
             "details": "- 等 Apple 支援後再評估"
           }
         ]
@@ -27425,15 +27474,39 @@
     {
       "id": "todo-smart-unifi",
       "room": "smart",
-      "text": "買 UniFi U7 Lite ×3＋Cloud Gateway Ultra＋USW Lite 8 PoE（S$897，UI Store SG）",
+      "text": "買 UniFi Express 7＋U7 Lite ×2＋USW Lite 8 PoE（約 S$854，UI Store SG）",
       "status": "open",
       "kind": "furn",
       "research": "cctv-wifi"
     },
     {
+      "id": "todo-smart-unifi-setup",
+      "room": "smart",
+      "text": "UniFi 初次設定（照清單）",
+      "status": "open",
+      "kind": "furn",
+      "research": "cctv-wifi"
+    },
+    {
+      "id": "todo-smart-cameras",
+      "room": "smart",
+      "text": "買 Aqara Camera E1 ×3＋Camera Hub G350（約 S$596）",
+      "status": "open",
+      "kind": "furn",
+      "research": "cctv-wifi"
+    },
+    {
+      "id": "todo-smart-appletv",
+      "room": "smart",
+      "text": "買 Apple TV 4K（Wi-Fi + Ethernet，S$399）有線接電視櫃當家居中樞",
+      "status": "open",
+      "kind": "furn",
+      "research": "smart-home"
+    },
+    {
       "id": "todo-smart-icloud",
       "room": "smart",
-      "text": "iCloud+ 200 GB（已有，4 台 E1 在額度內）",
+      "text": "iCloud+ 200 GB（已有，4 台攝影機在額度內）",
       "status": "done",
       "kind": "furn"
     },
@@ -27474,7 +27547,7 @@
     {
       "id": "todo-living-cabinet",
       "room": "living",
-      "text": "定走道口 190 櫃：做不做、做什麼用",
+      "text": "定走道口 190 櫃高度與層板（最上層放 Wi-Fi AP-01，層板面 ≥ 150）",
       "status": "open",
       "priority": 4,
       "kind": "reno"
@@ -27954,8 +28027,8 @@
     "smart-home": {
       "title": "全屋智能家居方案",
       "updated": "2026-11-02",
-      "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋已有的 HomePod mini 當家居中樞；網路用 UniFi＋Cloud Gateway Ultra；大門裝 Wireless Remote Switch H1 場景按鈕；不買 UPS。",
-      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋已有的 HomePod mini 當家居中樞（S$0）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；HomePod mini 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **備選：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399，11 月 13 日上市）** — 只在 4 台 E1 的 HKSV 事件常漏錄或延遲、或 HomePod mini 常顯示「無回應」時才買；買了它自動成為主中樞，HomePod mini 轉待命。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi U7 Lite ×3＋Cloud Gateway Ultra（S$219）＋USW Lite 8 PoE** — Gateway 取代 ISP 路由並跑 UniFi Network；沒有它，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **iCloud+ 200 GB**：4 台 E1 走 HKSV 的必要條件（50 GB 只能 1 台，200 GB 最多 5 台）；錄影不佔容量。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1＋HKSV；插座 Tapo P110M；燈 普通嵌燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由 HomePod mini 本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台、能用已有的就不買**：HomePod mini＋M3；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | HomePod mini＋Hub M3 | S$0＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | U7 Lite ×3＋UCG Ultra＋USW Lite 8 PoE | S$897 |\n| 攝影機 ×4 | Camera E1 | S$99／個 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）＋1 條備用給日後的 Apple TV。\n- **HomePod mini 位置**：放客廳中央、靠近 AP，不塞進封閉櫃；它開機就自動當中樞，不用另設。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 25，2.4 GHz Wi-Fi 固定 1 或 6；HomePod mini、攝影機、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ HomePod mini 只有 Wi-Fi：Wi-Fi 掉線時遠端與 Apple Home 自動化停；牆上開關與 M3 本機自動化照常。\n> ⚠️ HKSV 分析在中樞上跑；Apple 未公布 HomePod mini 能處理幾台攝影機（待確認），4 台 E1 若常漏錄就是買 Apple TV 的訊號。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 E1 的 microSD。Camera E1 只有 2.4 GHz。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
+      "summary": "選 Apple Home 單一 App＋Aqara Hub M3 Zigbee 骨幹＋Apple TV 4K 有線當家居中樞（HomePod mini 待命）；網路用 UniFi Express 7 當閘道；大門裝 Wireless Remote Switch H1 場景按鈕；不買 UPS。",
+      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋Apple TV 4K 有線當家居中樞（S$399；已有的 HomePod mini 待命）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；Apple TV 負責遠端、自動化、HKSV 分析、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **家居中樞：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399）有線接電視櫃交換器（佔 1 埠）** — HKSV 多台攝影機時比 HomePod mini 穩；它自動成為主中樞，HomePod mini 轉待命。放電視櫃中格、插 S-20。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi Express 7（閘道＋客廳 AP）＋U7 Lite ×2＋USW Lite 8 PoE（約 S$854）** — Express 7 取代 ISP 路由並跑 UniFi Network；沒有 UniFi 閘道，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **iCloud+ 200 GB**：4 台攝影機（E1 ×3＋G350）走 HKSV 的必要條件（50 GB 只能 1 台，200 GB 最多 5 台）；錄影不佔容量。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera E1 ×3＋Camera Hub G350（小孩房）＋HKSV；插座 Tapo P110M；燈 普通嵌燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由家居中樞（Apple TV）本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請，不需 Aqara 帳號。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台**：Apple TV＋M3（HomePod mini 待命、G350 可當備援）；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）；攝影機要 HKSV。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、E1、M3）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | Apple TV 4K＋Hub M3 | S$399＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | Express 7＋U7 Lite ×2＋USW Lite 8 PoE | S$854 |\n| 攝影機 ×4 | E1 ×3＋G350 | S$596 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；電視櫃留 1 條 Cat6 給 M3（PoE）；Apple TV 接左格交換器。\n- **Apple TV 4K**：有線接交換器，加入後自動成為主中樞；HomePod mini 放客廳中央當待命中樞與音響。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；Zigbee 頻道 15 或 25，2.4 GHz Wi-Fi 固定 1／6／11（客廳／走廊／主臥）；Apple TV、HomePod mini、攝影機、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ 中樞是有線 Apple TV：Wi-Fi 掉線時遠端與 Apple Home 自動化照常；HomePod mini 只有 Wi-Fi，只當待命。\n> ⚠️ HKSV 分析在中樞上跑；Apple TV 4K 處理 4 台攝影機餘裕較大，HomePod mini 能處理幾台 Apple 未公布。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- HKSV 只錄事件，不錄 24 小時；連續錄影靠 microSD（G350 明確支援 24 小時）。Camera E1 只有 2.4 GHz（走「家電」SSID）。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 小孩房攝影機：設「有人在家時關閉串流與錄影」。\n",
       "sources": [
         {
           "title": "Apple: Set up HomePod, HomePod mini or Apple TV as a home hub",
@@ -28028,10 +28101,6 @@
         {
           "title": "Apple Hacks: Matter 1.5 camera support and Apple Home",
           "url": "https://www.apple-hacks.com/entry/matter-1-5-camera-support-apple-home"
-        },
-        {
-          "title": "Unihosted: Cloud Gateway Max vs Ultra",
-          "url": "https://www.unihosted.com/blog/cloud-gateway-max-vs-cloud-gateway-ultra-which-unifi-gateway-is-right-for-you"
         },
         {
           "title": "Harvey Norman SG: Tapo P110M",
@@ -28279,7 +28348,7 @@
       "title": "電視櫃：A 三格 220／B 四格 230、左格遊戲翻門、左側風扇",
       "updated": "2026-11-05",
       "summary": "預設 A 三格 220（B 四格 230）；櫃高 45、深 45。左格翻門（Knape & Vogt 8070PEZ-16）藏 PS5 Pro、Switch 2 與網路設備，插左格自己的插座；左側整片白橡格柵，只在左上後角的 Noctua NF-A14 5V PWM 處開孔。抽屜做短，後方 13.1 放插座與走線；電視電源與 HDMI 從牆內暗管進櫃，不從櫃面出線、不設蓋板。",
-      "body": "## 結論\n- **選 A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜），PS5 左右各 ≈ 13（過 Sony 建議的 10），電視正對沙發。B 四格 230 抽屜較窄、中縫對電視、換 LG G6 77 比例較好，但 PS5 每邊只剩 ≈ 4.5。\n- **櫃體**：220 × 45 × 45；踢腳 8 內退 10＋暖光燈條；面板 8.0–42.9（34.9 高）；頂板一整片。\n- **走線**：電視電源線＋HDMI 從電視背後經 Ø50 牆內暗管下到中格抽屜後方；中格抽屜 NL 300，後方 13.1 放 S-20、網路孔 D-01 與線；HDMI 經左格隔板後方過線口到 PS5、Switch 2。拉出抽屜就能插拔，線不需要從櫃面出來。喇叭線走牆內 Ø32。\n- **左格**：網路設備托盤（淨高 5）→ 層板面 16 → PS5 Pro 橫放；Switch 2 底座轉 90°；PS5、Switch 2、網路設備都插左格自己的 S-22（含一個 USB 給風扇）。\n- **散熱**：前面開門進冷風，PS5 後面出熱風往上，由左側板內面左上後角的 Noctua NF-A14 5V PWM（14 cm、USB）往外排；風扇頂在翻門滑軌墊條下（離牆 0.8–14.8、離地 22.6–36.6）；屋主自備 USB 開關。側板只在風扇處開孔，其餘是裝飾格柵。\n- **翻門**：Knape & Vogt 8070PEZ-16，門 34.9 高可收進 30.5，收起時露出約 4.4；櫃內深 43.1 ≥ 安裝需求 41.6。\n- **抽屜**：Blum LEGRABOX pure C 高＋BLUMOTION，中格 NL 300、右格 NL 400（右格後面不走線，裝背板）；每格 Blum AMBIA-LINE 分隔框＋止滑墊。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 | 1.38／1.34 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。交屋時做 30 分鐘遊戲測試。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070PEZ-16 | 門可收入 12\"（30.5）、櫃深 ≥ 16-3/8\"（41.6） | KV 安裝說明 |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in | KV 型錄 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12 | Nintendo SG |\n| LEGRABOX | 40 kg、C 高 17.7；F 高 24.1 只有 NL ≥ 450 | Blum |\n| LEGRABOX 最小櫃內深 | NL + 3 mm（NL 400 → 40.3） | Blum |\n| Noctua NF-A14 5V PWM | 140 × 140 × 25、82.5 CFM、24.6 dBA | Noctua |\n| UCG Ultra | 14.18 × 12.76 × 3.0、環境 ≤ 40 °C | Ubiquiti |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17 | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65 | Aqara |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n\n## 不選\n- **ㄇ 活動蓋板**：線不需要從櫃面出來；插座在抽屜後方，拉出抽屜插拔。\n- **Knape & Vogt 8070PEZ-14**：只收得進 25.4，門露出約 9.5。8070PEZ-18 要櫃深 46.7，放不下。\n- **Sugatsune IF-H360W-14**：收起時門凸出 35 mm，機構會撞 Switch 2／PS5。\n- **Accuride 1155 Easy-Down**：門收到櫃頂上面。\n- **LEGRABOX F 高**：NL 300 沒有 F 高。\n- **兩端翻門、四格 225／235**：右端要開孔，或 PS5 太擠、走道變窄。\n",
+      "body": "## 結論\n- **選 A 三格 220**：面板 67.9 × 3（左翻門＋兩個抽屜），PS5 左右各 ≈ 13（過 Sony 建議的 10），電視正對沙發。B 四格 230 抽屜較窄、中縫對電視、換 LG G6 77 比例較好，但 PS5 每邊只剩 ≈ 4.5。\n- **櫃體**：220 × 45 × 45；踢腳 8 內退 10＋暖光燈條；面板 8.0–42.9（34.9 高）；頂板一整片。\n- **走線**：電視電源線＋HDMI 從電視背後經 Ø50 牆內暗管下到中格抽屜後方；中格抽屜 NL 300，後方 13.1 放 S-20、網路孔 D-01 與線；HDMI 經左格隔板後方過線口到 PS5、Switch 2。拉出抽屜就能插拔，線不需要從櫃面出來。喇叭線走牆內 Ø32。\n- **左格**：網路設備托盤（淨高 5）→ 層板面 16 → PS5 Pro 橫放；Switch 2 底座轉 90°；PS5、Switch 2、網路設備都插左格自己的 S-22（含一個 USB 給風扇）。\n- **散熱**：前面開門進冷風，PS5 後面出熱風往上，由左側板內面左上後角的 Noctua NF-A14 5V PWM（14 cm、USB）往外排；風扇頂在翻門滑軌墊條下（離牆 0.8–14.8、離地 22.6–36.6）；屋主自備 USB 開關。側板只在風扇處開孔，其餘是裝飾格柵。\n- **翻門**：Knape & Vogt 8070PEZ-16，門 34.9 高可收進 30.5，收起時露出約 4.4；櫃內深 43.1 ≥ 安裝需求 41.6。\n- **抽屜**：Blum LEGRABOX pure C 高＋BLUMOTION，中格 NL 300、右格 NL 400（右格後面不走線，裝背板）；每格 Blum AMBIA-LINE 分隔框＋止滑墊。\n\n| 項目 | A 三格 220 | B 四格 230 |\n|---|---|---|\n| 面板 | 67.9 × 3 | 53.4 × 4 |\n| 左格／PS5 每邊 | 71.5／≈ 13 | 57.0／≈ 4.5 |\n| 1.3 倍（Xiaomi 75／LG G6 77） | 1.32／1.285 | 1.38／1.34 |\n\n> 1.3 倍 = 電視櫃長 ÷ 電視寬。\n\n> ⚠️ 門關著玩沒有驗證：玩之前先把翻門推進去。交屋時做 30 分鐘遊戲測試。\n\n## 數據\n| 項目 | 數值 | 來源 |\n|---|---|---|\n| PS5 Pro 遊戲功耗 | 228–240 W | Digital Foundry（Notebookcheck） |\n| PS5 Pro 進出風 | 前進、後出 | PlayStation Blog 拆解／PCGH |\n| 使用環境溫度 | 5–35 °C | 說明書規格（VGC） |\n| KV 8070PEZ-16 | 門可收入 12\"（30.5）、櫃深 ≥ 16-3/8\"（41.6） | KV 安裝說明 |\n| KV 8070 | 30 lb／門、門 ≤ 42 × 24 in | KV 型錄 |\n| Switch 2 底座 | 11.5 × 20.1 × 5.12 | Nintendo SG |\n| LEGRABOX | 40 kg、C 高 17.7；F 高 24.1 只有 NL ≥ 450 | Blum |\n| LEGRABOX 最小櫃內深 | NL + 3 mm（NL 400 → 40.3） | Blum |\n| Noctua NF-A14 5V PWM | 140 × 140 × 25、82.5 CFM、24.6 dBA | Noctua |\n| USW Lite 8 PoE | 16.37 × 9.96 × 3.17 | Ubiquiti |\n| Aqara Hub M3 | 10.5 × 10.5 × 3.65 | Aqara |\n| 13A 插頭含插腳深 | 4.3–5.0 | Vesternet |\n\n## 不選\n- **ㄇ 活動蓋板**：線不需要從櫃面出來；插座在抽屜後方，拉出抽屜插拔。\n- **Knape & Vogt 8070PEZ-14**：只收得進 25.4，門露出約 9.5。8070PEZ-18 要櫃深 46.7，放不下。\n- **Sugatsune IF-H360W-14**：收起時門凸出 35 mm，機構會撞 Switch 2／PS5。\n- **Accuride 1155 Easy-Down**：門收到櫃頂上面。\n- **LEGRABOX F 高**：NL 300 沒有 F 高。\n- **兩端翻門、四格 225／235**：右端要開孔，或 PS5 太擠、走道變窄。\n",
       "sources": [
         {
           "title": "PS5 Pro vs PS5 power consumption — Digital Foundry figures (Notebookcheck)",
@@ -28324,10 +28393,6 @@
         {
           "title": "Nintendo Switch 2 規格（Nintendo SG）",
           "url": "https://www.nintendo.com/sg/hardware/switch2/specs/"
-        },
-        {
-          "title": "UniFi Cloud Gateway Ultra 規格",
-          "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
         },
         {
           "title": "UniFi USW Lite 8 PoE 規格",
@@ -28882,8 +28947,8 @@
     "cctv-wifi": {
       "title": "攝影機與 Wi-Fi 配置",
       "updated": "2026-11-23",
-      "summary": "Aqara Camera E1 ×4＋HKSV（玄關改朝大門、廚房新增且背對女傭房門；女傭房、浴室、客房不裝）；UniFi U7 Lite ×3（主臥 D-04 改裝 AP-03）；家／訪客兩組 SSID，女傭走訪客 VLAN；設備約 S$1,373。",
-      "body": "## 結論\n- **攝影機：Aqara Camera E1 ×4（比現案 +1），Wi-Fi＋HomeKit Secure Video，不換 UniFi Protect。** 玄關（對大門）、客餐廳、廚房（新增）、小孩房；iCloud+ 200 GB 最多 5 台，4 台在額度內。\n- **這有問題 → 已改：CAM-02 現在朝廚房門（−120°）。** 廚房門與女傭房門在同一條走道軸線上，鏡頭穿過廚房直視女傭房門，門一開就拍進她房間；大門反而沒拍到。→ CAM-02 原位不動，改朝大門（約 107°）；廚房另加 CAM-04，裝在女傭房門那端的天花、背對女傭房門朝廚房門拍，物理上看不到她房內。\n- **不裝**：女傭房、兩間浴室、客房（岳母住）、主臥、書房、走廊、兩個陽台；也不裝在門外公共走廊。\n- **錄音**：只開小孩房（聽哭聲）；客餐廳、廚房、玄關關閉錄音，女傭講電話不錄。\n- **Wi-Fi：U7 Lite ×3。** AP-01 鋼琴上方、AP-02 走廊保留；主臥 D-04 預留線直接裝 AP-03。混凝土牆下主浴、主臥陽台角、主臥陽台只剩 −67 至 −83 dBm；多一顆 S$164，線已在。\n- **兩組 SSID**：「家」（家人、岳母、Apple Home／Aqara／攝影機、KEF、電視）＋「訪客」（女傭與訪客，獨立 VLAN、用戶隔離、只上網）。不另切 IoT VLAN。\n- **給 Patrick（木作前）**：新增 P-08 廚房天花 13A＋Cat6 預埋；光纖盒→電視櫃 Cat6 ×2；D-04 改 AP-03 吸頂。\n- **預算**：設備約 S$1,373（比現案多 S$263），線路點位依 Patrick 報價。\n\n## 法規：家中攝影機與女傭\n| 規定 | 來源 | 本案做法 |\n|---|---|---|\n| 雇主必須告知女傭家中所有攝影機的存在與位置 | MOM 國會書面答覆 2026-05-06 | 入職第一天書面列出 4 台位置、錄影時段與錄音設定，請她簽收 |\n| 不可裝在會損害女傭隱私的地方（換衣處、浴室） | MOM／SPF 回覆 2015 | 女傭房、兩間浴室不裝；廚房機背對女傭房門 |\n| 未經同意觀看、拍攝他人私密行為屬窺淫罪，最高監禁 2 年 | Penal Code s377BB | 同上；客房（岳母）也不裝 |\n| 個人或家庭用途不受 PDPA 義務約束 | PDPA s4(1)(a) | 家用不必貼告示，但上面三條照樣適用 |\n| 不可對鄰居造成不合理干擾；門外公共區要守 MCST by-laws | CDRA 2015（PropertyGuru 整理） | 大門機裝門內天花、向下對門扇，門開時只帶到門外一角 |\n\n## 攝影機配置\n| 編號 | 位置 · 朝向 | 看什麼 | 供電 |\n|---|---|---|---|\n| CAM-01 客餐廳（保留） | 陽台門旁天花角，朝客廳斜對角 | 沙發、餐桌、電視、玄關走道口 | P-01 |\n| CAM-02 玄關（改朝向） | 玄關天花原位，改朝大門約 107° | 進出、快遞、誰帶小孩出門 | P-02 |\n| CAM-03 小孩房（移到窗邊） | 靠窗天花角（清淨機那側），背對窗朝房門 | 全房、房門、床（不正對床；不逆光） | P-03 |\n| CAM-04 廚房（新增） | 廚房天花 240，女傭房門那端、離門牆 10、對準門中線，朝廚房門 | 爐具、水槽、廚房門；背後就是女傭房門牆 | P-08（新增） |\n\n- **安裝**：全部天花倒裝，App 翻轉畫面；E1 不適合垂直牆面裝。綁 HomeKit 後 Apple Home 不能手動轉向，預設位置在 Aqara Home 設好。\n- **錄影模式**：Apple Home「有人在家」→ 只串流（小孩房可關）；「全員離家」→ 串流並錄影。女傭不加入 Apple Home，所以家人都出門時自動錄。\n- **HKSV**：只錄事件、存 1080p，錄影不佔 iCloud 容量；中樞仍是 HomePod mini，4 台常漏錄或延遲時才買 Apple TV 4K 有線版。\n- **連續錄影**：每台插 microSD 128 GB，用 Aqara Home 做 24 小時錄影；綁 HomeKit 後是否仍可同時連續錄 → 待確認。\n- **夜視**：隱藏式紅外線，不朝玻璃門窗（反光）；有效距離待確認。\n- **隱私**：E1 有實體隱私模式（鏡頭轉向收起）與遮蔽區；遮蔽區綁 HomeKit 後是否作用在 HKSV 畫面 → 待確認，所以靠擺位，不靠遮蔽。\n\n> 💡 CAM-04 放在女傭房門那端、背對門：鏡頭 360° 水平轉也只會轉到門上方的牆，看不進她房間；這比放在廚房門那端加遮蔽可靠。\n\n## 為什麼不選 UniFi Protect\n| 項目 | Aqara E1＋HKSV（選） | UniFi Protect |\n|---|---|---|\n| 錄影主機 | 已有的 HomePod mini | Cloud Gateway Ultra 只跑 Network、不跑 Protect → 要換 Cloud Gateway Max（S$483，差 S$264）＋NVMe SSD |\n| 攝影機 | S$99／台，2K（HKSV 存 1080p），Wi-Fi 2.4 GHz | G6 Instant S$307／台，4K，也是 Wi-Fi；PoE 要另買 S$79 轉接器 |\n| 錄影 | 事件錄影存 iCloud＋microSD | 本機 24 小時連續，最多 2 TB |\n| App | Apple Home 一個 | UniFi Protect App；進 Apple Home 只能靠第三方 Homebridge |\n| 4 台約價 | S$396 | 約 S$1,490＋SSD |\n\n- 只有要 24 小時本機錄影當證據時才值得換；每個攝影機點已預埋 Cat6，日後換 PoE 機不必拆天花。\n- Aqara 自家 PoE 攝影機是戶外型，室內天花不選。\n\n## Wi-Fi：U7 Lite ×3\n| 位置 | AP | 原估 | 混凝土牆估 |\n|---|---|---|---|\n| 客廳、餐桌、電視 | AP-01 | −35 | −35 |\n| 廚房 | AP-01 | −39 | −47 |\n| 女傭房床 | AP-01 | −56 | −68（2.4 GHz 較穩） |\n| 大門 | AP-01 | −54 | −66 |\n| 小孩房、客房、書房 | AP-02 | −40 至 −44 | −44 至 −48 |\n| 主臥床頭 | AP-03 | −48（AP-02） | 約 −40 |\n| 主浴 | AP-03 | −59（AP-02） | 約 −48 |\n| 主臥陽台 | AP-03 | −71（AP-02） | 約 −50 |\n\n- 單位 dBm、5 GHz；沿用電與智能家居的估算法，每道牆由 8 改 12 dB（混凝土）；牆材待確認。\n- **AP-03 理由**：只靠 AP-02 時，混凝土牆下主浴 −67、主臥陽台角 −72、主臥陽台 −83；爸媽與言言睡主臥，線已拉、PoE 3 × 13 = 39 W 在 52 W 內。\n- **型號**：U7 Lite。U7 Pro 多 6 GHz，但 6 GHz 穿混凝土更差，不值 S$329；壁掛型不需要，天花都有 Cat6。\n- **位置**：AP-01 保持在吊扇掃風範圍外、鋼琴上方假天花面；AP-02 走廊假天花；AP-03 主臥床尾走道上方局部假天花（D-04）。AP 不進櫃、不進天花內。\n- **有線**：PS5 Pro、電視、KEF 主喇叭、Switch 2 底座、Hub M3 都在電視櫃，直接跳線；UCG Ultra 開 UPnP 給 PS5。\n- **埠數**：UCG Ultra 4 個 LAN（1 個接交換器）＋USW Lite 8 PoE 8 埠（1 個上聯）= 10 個可用；AP ×3、客房、書房、電視、PS5 Pro、KEF、Switch 2、Hub M3 = 10，剛好滿。攝影機預埋線日後換 PoE 時再加交換器。\n\n## 網路分組\n| 網路 | 誰 | 設定 |\n|---|---|---|\n| 家（預設網段） | 家人、岳母、HomePod mini、Hub M3、E1 ×4、KEF、電視、PS5 | 2.4／5 GHz 同名；2.4 GHz 不能關（E1 只有 2.4 GHz） |\n| 訪客（VLAN 20） | 女傭、訪客 | UniFi 訪客網路：用戶隔離、不能連家用網段；不限速（女傭視訊回家） |\n| 不設 IoT 網段 | — | HKSV、AirPlay、Apple Home 靠同網段 mDNS；切開要加 mDNS 轉發與防火牆例外，多一個故障點 |\n\n- 女傭在訪客網：看不到攝影機、不能投影，也碰不到家裡設備。岳母要投影到電視，放「家」。\n\n## 點位變更（木作前給 Patrick）\n| 點位 | 動作 | 位置 · 做法 | 理由 |\n|---|---|---|---|\n| CAM-01／P-01 | 保留 | 陽台門旁天花角 | 已涵蓋客餐廳 |\n| CAM-02／P-02 | 保留位置，改朝向 | 玄關天花原位，朝大門約 107° | 原朝向直視女傭房門，且拍不到大門 |\n| CAM-03／P-03 | 移位 | 小孩房靠窗天花角（清淨機那側），離窗牆 25、背對窗 | 門上方朝窗拍會逆光，白天只剩剪影 |\n| CAM-04／P-08 | 新增 | 廚房天花 240，女傭房門那端、離門牆 10、對準門中線；天花內 13A＋原廠 USB-C 變壓器＋Cat6 拉回電視櫃 | 廚房與爐具看護，背對女傭房 |\n| AP-01、AP-02 | 保留 | 鋼琴上方、走廊 | — |\n| D-04 → AP-03 | 改：現在就裝 U7 Lite | 主臥床尾走道上方，用原 Cat6 | 混凝土牆下主浴、主臥陽台不足 |\n| D-01／NET-00 | 保留＋加線 | 光纖盒到電視櫃 Cat6 ×2（一條備用）；光纖盒位置待確認 | 光纖直接進 UCG Ultra |\n| D-02、D-03 | 保留 | 客房書桌下、書房電腦桌旁 | — |\n| 攝影機預埋 Cat6 | 保留＋1 條 | P-01／02／03／08 各 1 條拉回電視櫃 | 日後換 PoE 不拆天花 |\n\n## 預算\n| 項目 | 數量 | 約價（含 GST） |\n|---|---|---|\n| Aqara Camera E1 | 4 | S$396 |\n| microSD 128 GB | 4 | 約 S$80（待確認） |\n| UniFi U7 Lite | 3 | S$492 |\n| Cloud Gateway Ultra | 1 | S$219 |\n| USW Lite 8 PoE | 1 | S$186 |\n| 設備合計 | — | 約 S$1,373 |\n| Cat6 | 11 條 | 約 S$100–120／點 |\n| 天花 13A 插座 | 4 | 依 Patrick 報價（待確認） |\n\n- 比現案多：E1 +1（S$99）、U7 Lite +1（S$164）、Cat6 +2（CAM-04 預埋、光纖備用；AP-03 沿用 D-04）、天花插座 +1。\n- iCloud+ 200 GB 已有，不另計。\n",
+      "summary": "Aqara Camera E1 ×3＋Camera Hub G350（小孩房）＋HKSV（玄關改朝大門、廚房新增且背對女傭房門；女傭房、浴室、客房不裝）；UniFi Express 7 當閘道與客廳 AP（走道口 190 櫃）＋U7 Lite ×2（走廊、主臥 AP-03）；SSID 家／家電／訪客，女傭走訪客 VLAN；中樞 Apple TV 有線；設備約 S$1,530。",
+      "body": "## 結論\n- **攝影機：Aqara Camera E1 ×3＋Camera Hub G350 ×1（比現案 +1），Wi-Fi＋HomeKit Secure Video，不換 UniFi Protect。** 玄關（對大門）、客餐廳、廚房（新增）用 E1；小孩房用 G350（雙頻 Wi-Fi 6、哭聲偵測、實體鏡頭遮蔽、microSD 24 小時、可當 Zigbee／Thread 備援中樞）；iCloud+ 200 GB 最多 5 台，4 台在額度內。\n- **這有問題 → 已改：CAM-02 現在朝廚房門（−120°）。** 廚房門與女傭房門在同一條走道軸線上，鏡頭穿過廚房直視女傭房門，門一開就拍進她房間；大門反而沒拍到。→ CAM-02 原位不動，改朝大門（約 107°）；廚房另加 CAM-04，裝在女傭房門那端的天花、背對女傭房門朝廚房門拍，物理上看不到她房內。\n- **不裝**：女傭房、兩間浴室、客房（岳母住）、主臥、書房、走廊、兩個陽台；也不裝在門外公共走廊。\n- **家居中樞：Apple TV 4K 有線接電視櫃交換器**，比 HomePod mini 穩；HomePod mini 轉待命（S$399，見智能家居）。\n- **錄音**：只開小孩房（聽哭聲）；客餐廳、廚房、玄關關閉錄音，女傭講電話不錄。\n- **Wi-Fi：U7 Lite ×2＋Express 7。** AP-01 改用 UniFi Express 7 兼閘道，放進走道口 190 櫃最上層：沙發看不到 AP，女傭房床頭只隔一道牆（−27 至 −35 dBm）；AP-02 走廊保留；主臥 D-04 預留線直接裝 AP-03。混凝土牆下主浴、主臥陽台角、主臥陽台只剩 −67 至 −83 dBm；多一顆 S$164，線已在。\n- **三組 SSID**：「家」5 GHz（家人、岳母、Apple TV、G350、KEF、電視）＋「家電」只 2.4 GHz（E1、Hub M3、清淨機、拖地機等）＋「訪客」（女傭與訪客，VLAN 20、用戶隔離、只上網）。家與家電同一網段，不切 IoT VLAN。\n- **給 Patrick（木作前）**：新增 P-08 廚房天花 13A＋Cat6 預埋；光纖盒→電視櫃 Cat6 ×1 備用（ONT 放電視櫃）；電視櫃↔190 櫃 Cat6 ×2（WAN、LAN）；D-04 改 AP-03 吸頂；AP-01 移進走道口 190 櫃：格內 13A 單孔 S-41＋Cat6 雙孔面板，門片木作／laminate（不用金屬、鏡面、鋁箔背板），留通風縫；P-01／02／08 用 USB-A 5 V／2 A 變壓器＋A→C 線，P-03 用 ≥ 10 W USB 變壓器。\n- **預算**：設備約 S$1,530（比現案多 S$420），線路點位依 Patrick 報價。\n\n## 法規：家中攝影機與女傭\n| 規定 | 來源 | 本案做法 |\n|---|---|---|\n| 雇主必須告知女傭家中所有攝影機的存在與位置 | MOM 國會書面答覆 2026-05-06 | 入職第一天書面列出 4 台位置、錄影時段與錄音設定，請她簽收 |\n| 不可裝在會損害女傭隱私的地方（換衣處、浴室） | MOM／SPF 回覆 2015 | 女傭房、兩間浴室不裝；廚房機背對女傭房門 |\n| 未經同意觀看、拍攝他人私密行為屬窺淫罪，最高監禁 2 年 | Penal Code s377BB | 同上；客房（岳母）也不裝 |\n| 個人或家庭用途不受 PDPA 義務約束 | PDPA s4(1)(a) | 家用不必貼告示，但上面三條照樣適用 |\n| 不可對鄰居造成不合理干擾；門外公共區要守 MCST by-laws | CDRA 2015（PropertyGuru 整理） | 大門機裝門內天花、向下對門扇，門開時只帶到門外一角 |\n\n## 攝影機配置\n| 編號 | 位置 · 朝向 | 看什麼 | 供電 |\n|---|---|---|---|\n| CAM-01 客餐廳（保留） | 陽台門旁天花角，朝客廳斜對角 | 沙發、餐桌、電視、玄關走道口 | P-01 |\n| CAM-02 玄關（改朝向） | 玄關天花原位，改朝大門約 107° | 進出、快遞、誰帶小孩出門 | P-02 |\n| CAM-03 小孩房（G350，移到窗邊） | 靠窗天花角（清淨機那側），背對窗朝房門 | 全房、房門、床（不正對床；不逆光） | P-03（≥ 10 W USB） |\n| CAM-04 廚房（新增） | 廚房天花 240，女傭房門那端、離門牆 10、對準門中線，朝廚房門 | 爐具、水槽、廚房門；背後就是女傭房門牆 | P-08（新增） |\n\n- **安裝**：全部天花倒裝，App 翻轉畫面；E1 不適合垂直牆面裝。綁 HomeKit 後 Apple Home 不能手動轉向，預設位置在 Aqara Home 設好。\n- **供電**：E1（P-01／02／08）用 USB-A 5 V／2 A 變壓器＋A→C 線，Lester Chan 實測 USB-C PD 充電頭供不了 E1；G350（P-03）盒內不附變壓器，用 ≥ 10 W USB 變壓器。\n- **錄影模式**：Apple Home「有人在家」→ 只串流（小孩房可關）；「全員離家」→ 串流並錄影。女傭不加入 Apple Home，所以家人都出門時自動錄。\n- **HKSV**：只錄事件、存 1080p，錄影不佔 iCloud 容量；中樞用 Apple TV 4K 有線，比 HomePod mini 穩。\n- **連續錄影**：每台插 microSD 128 GB，用 Aqara Home 做 24 小時錄影；綁 HomeKit 後是否仍可同時連續錄 → 待確認。\n- **夜視**：隱藏式紅外線，不朝玻璃門窗（反光）；有效距離待確認。\n- **隱私**：E1 有實體隱私模式（鏡頭轉向收起）與遮蔽區；遮蔽區綁 HomeKit 後是否作用在 HKSV 畫面 → 待確認，所以靠擺位，不靠遮蔽；G350 有實體鏡頭遮蔽。\n\n> 💡 CAM-04 放在女傭房門那端、背對門：鏡頭 360° 水平轉也只會轉到門上方的牆，看不進她房間；這比放在廚房門那端加遮蔽可靠。\n\n## 為什麼不選 UniFi Protect\n| 項目 | Aqara E1＋HKSV（選） | UniFi Protect |\n|---|---|---|\n| 錄影主機 | Apple TV 4K（有線） | Express 7 只跑 Network、不跑 Protect → 要另加 Cloud Gateway Max（S$483）＋NVMe SSD |\n| 攝影機 | S$99／台，2K（HKSV 存 1080p），Wi-Fi 2.4 GHz | G6 Instant S$307／台，4K，也是 Wi-Fi；PoE 要另買 S$79 轉接器 |\n| 錄影 | 事件錄影存 iCloud＋microSD | 本機 24 小時連續，最多 2 TB |\n| App | Apple Home 一個 | UniFi Protect App；進 Apple Home 只能靠第三方 Homebridge |\n| 4 台約價 | S$596（E1 ×3＋G350） | 約 S$1,800（含主機） |\n\n- 只有要 24 小時本機錄影當證據時才值得換；每個攝影機點已預埋 Cat6，日後換 PoE 機不必拆天花。\n- Aqara 自家 PoE 攝影機是戶外型，室內天花不選。\n\n## 攝影機品牌\n- **留 Aqara＋HKSV**：E1 ×3＋G350 ×1 約 S$596；同一個 Aqara App 也管 M3、燈條。\n- **不選 Tapo**：只有 C225／C125／TC73 支援 HKSV；Apple Home 裡最高 1080p、不能轉雲台；C225 用 12 V 圓孔變壓器，天花供電要改。\n- **不選 UniFi Protect**：沒有原生 HomeKit（要 Scrypted／Homebridge 長期跑），4 台加主機約 S$1,800。\n- **不選 Eufy**：2022–23 曾在使用者不知情下上傳雲端、謊稱端對端加密。\n- **Matter 攝影機**：Matter 1.5 已有規格，但 Apple Home（iOS 27）仍不支援。\n- **待實測**：E1 開 HKSV 後能否同時寫 microSD；G350 夜間哭聲推播延遲與誤報。\n\n## Wi-Fi：U7 Lite ×2＋Express 7\n| 位置 | AP | 原估 | 混凝土牆估 |\n|---|---|---|---|\n| 客廳、餐桌、電視 | AP-01 | −31 至 −37 | −31 至 −37 |\n| 廚房 | AP-01 | −40 至 −47 | −55 至 −56 |\n| 女傭房床 | AP-01 | −27 至 −35 | −35 至 −43 |\n| 大門 | AP-01 | −50 | −62 |\n| 小孩房、客房、書房 | AP-02 | −40 至 −44 | −44 至 −48 |\n| 主臥床頭 | AP-03 | −48（AP-02） | 約 −40 |\n| 主浴 | AP-03 | −59（AP-02） | 約 −48 |\n| 主臥陽台 | AP-03 | −71（AP-02） | 約 −50 |\n\n- 單位 dBm、5 GHz；沿用電與智能家居的估算法，每道牆由 8 改 12 dB（混凝土）；牆材待確認。\n- **AP-03 理由**：只靠 AP-02 時，混凝土牆下主浴 −67、主臥陽台角 −72、主臥陽台 −83；爸媽與言言睡主臥，線已拉、PoE 2 × 13 = 26 W 在 52 W 內（AP-01 用自己的變壓器）。\n- **型號**：AP-02、AP-03 用 U7 Lite；AP-01 用 Express 7（兼閘道，S$340）——它是桌上型，U7 Lite 吸頂型平放櫃內主波瓣會打向櫃頂。U7 Pro 多 6 GHz，但 6 GHz 穿混凝土更差，不值 S$329；壁掛型不需要，天花都有 Cat6。\n- **位置**：AP-01 在走道口 190 櫃正中最上層（板面 ≥ 150，離側板 ≥ 5），櫃門木作、留通風；AP-02 走廊假天花；AP-03 主臥床尾走道上方局部假天花（D-04）。AP 不進天花內。\n- **廚房**：洗烘塔、冰箱擋在櫃子與廚房之間，混凝土牆下爐具約 −55 dBm，比原案弱但手機夠用；CAM-04 走 2.4 GHz，穿牆較好。\n- **客廳只給手機、平板**：電視、PS5 在電視櫃接 Cat6，客廳 Wi-Fi 穩就夠。\n- **有線**：PS5 Pro、電視、Apple TV、KEF 主喇叭、Hub M3 在電視櫃直接跳線；Switch 2 走 Wi-Fi；Express 7 開 UPnP 給 PS5。\n- **埠數**：Express 7 兩個口都用掉（10G WAN 接 ONT、2.5G LAN 接交換器）；USW Lite 8 PoE 8 埠（1 個上聯）= 7 個可用：AP-02、AP-03、電視、PS5 Pro、Apple TV、KEF、Hub M3 = 7，用滿。這有問題 → 已改：Switch 2 走 Wi-Fi，客房 D-02、書房 D-03 先預埋不接，要用時加一台 5 埠小交換器。\n\n## 網路與 Wi-Fi 設定\n| SSID | 設定 |\n|---|---|\n| 家 | 5 GHz（6 GHz 選用）；WPA2／WPA3；MLO 關 |\n| 家電 | 只 2.4 GHz；只 WPA2；PMF、802.11r、BSS transition、multicast enhancement 全關；給 E1、Hub M3、清淨機、拖地機等 |\n| 訪客 | VLAN 20；用戶隔離 |\n\n- 家與家電同一網段（不切 IoT VLAN）：HomeKit、mDNS 直接通。\n- 2.4 GHz：20 MHz、固定頻道——客廳（Express 7）1、走廊 6、主臥 11；功率中／低。\n- 關閉自動與夜間頻道最佳化。\n- Aqara Hub M3 Zigbee：頻道 15 或 25。\n- 韌體：關自動更新、只裝正式版，新版出來約 2 週再升。\n- 女傭在訪客網：看不到攝影機、不能投影，也碰不到家裡設備。岳母要投影到電視，放「家」。\n\n## 點位變更（木作前給 Patrick）\n| 點位 | 動作 | 位置 · 做法 | 理由 |\n|---|---|---|---|\n| CAM-01／P-01 | 保留 | 陽台門旁天花角 | 已涵蓋客餐廳 |\n| CAM-02／P-02 | 保留位置，改朝向 | 玄關天花原位，朝大門約 107° | 原朝向直視女傭房門，且拍不到大門 |\n| CAM-03／P-03 | 移位、換 G350 | 小孩房靠窗天花角（清淨機那側），離窗牆 25、背對窗 | 門上方朝窗拍會逆光，白天只剩剪影 |\n| CAM-04／P-08 | 新增 | 廚房天花 240，女傭房門那端、離門牆 10、對準門中線；天花內 13A＋原廠 USB-C 變壓器＋Cat6 拉回電視櫃 | 廚房與爐具看護，背對女傭房 |\n| AP-01 | 改：移進櫃內、換 Express 7 兼閘道 | 走道口 190 櫃正中最上層；格內 S-41 單孔＋Cat6 雙孔面板，Cat6 ×2（WAN、LAN）拉回電視櫃 | 沙發看不到 AP；女傭房只隔一道牆 |\n| AP-02 | 保留 | 走廊 | — |\n| D-04 → AP-03 | 改：現在就裝 U7 Lite | 主臥床尾走道上方，用原 Cat6 | 混凝土牆下主浴、主臥陽台不足 |\n| D-01／NET-00 | 保留＋改線 | ONT 放電視櫃；電視櫃↔190 櫃 Cat6 ×2（WAN、LAN）；光纖盒到電視櫃 Cat6 ×1 備用（光纖盒位置待確認） | Express 7 在 190 櫃當閘道 |\n| D-02、D-03 | 保留 | 客房書桌下、書房電腦桌旁 | — |\n| 攝影機預埋 Cat6 | 保留＋1 條 | P-01／02／03／08 各 1 條拉回電視櫃 | 日後換 PoE 不拆天花 |\n\n## 預算\n| 項目 | 數量 | 約價（含 GST） |\n|---|---|---|\n| Aqara Camera E1 | 3 | S$297 |\n| Aqara Camera Hub G350 | 1 | S$299 |\n| microSD 128 GB | 4 | 約 S$80（待確認） |\n| UniFi U7 Lite | 2 | S$328 |\n| UniFi Express 7（閘道＋AP） | 1 | S$340 |\n| USW Lite 8 PoE | 1 | S$186 |\n| 設備合計 | — | 約 S$1,530 |\n| Cat6 | 11 條 | 約 S$100–120／點 |\n| 天花 13A 插座 | 4 | 依 Patrick 報價（待確認） |\n| 櫃內 13A 單孔 S-41 | 1 | 依 Patrick 報價（待確認） |\n\n- 比現案多：小孩房 G350（+S$299，E1 維持 3 台）、U7 Lite +1（S$164）、AP-01 改 Express 7 兼閘道（+S$176，閘道 −S$219）、Cat6 +2（CAM-04 預埋、190 櫃 WAN；AP-03 沿用 D-04）、天花插座 +1、櫃內插座 +1。\n- Apple TV 4K 家居中樞 S$399 另計（見智能家居）。\n- iCloud+ 200 GB 已有，不另計。\n",
       "sources": [
         {
           "title": "MOM：國會書面答覆 · 女傭隱私（2026-05-06）",
@@ -28914,14 +28979,6 @@
           "url": "https://singaporelegaladvice.com/cctvs-invasion-privacy/"
         },
         {
-          "title": "UniFi Cloud Gateway Ultra 規格（只列 Network）",
-          "url": "https://techspecs.ui.com/unifi/cloud-gateways/ucg-ultra"
-        },
-        {
-          "title": "iFeelTech：Cloud Gateway Ultra vs Max（Protect 與 NVMe）",
-          "url": "https://ifeeltech.com/blog/cloud-gateway-ultra-vs-ucg-max"
-        },
-        {
           "title": "UI Store SG · Cloud Gateway Max",
           "url": "https://sg.store.ui.com/sg/en/products/ucg-max"
         },
@@ -28936,6 +28993,14 @@
         {
           "title": "UI Store SG · U7 Lite",
           "url": "https://sg.store.ui.com/sg/en/products/u7-lite"
+        },
+        {
+          "title": "UniFi Express 7 規格",
+          "url": "https://techspecs.ui.com/unifi/cloud-gateways/ux7"
+        },
+        {
+          "title": "UI Store SG · Express 7",
+          "url": "https://sg.store.ui.com/sg/en/products/ux7"
         },
         {
           "title": "UniFi USW Lite 8 PoE 規格",
@@ -28972,6 +29037,50 @@
         {
           "title": "KEF LS50 Wireless II 常見問題",
           "url": "https://uk.kef.com/pages/ls50-wireless-2-faq"
+        },
+        {
+          "title": "Lester Chan: Aqara Camera E1 review (USB-A power)",
+          "url": "https://lesterchan.net/blog/2023/11/29/aqara-camera-e1-review/"
+        },
+        {
+          "title": "MacRumors: Aqara Camera Hub G350 review",
+          "url": "https://macrumors.com/review/aqara-camera-hub-g350/"
+        },
+        {
+          "title": "PassionHome: Aqara G3 vs G350 (Singapore price)",
+          "url": "https://passionhome.sg/aqara-camera-hub-g3-vs-g350-which-to-choose-singapore/"
+        },
+        {
+          "title": "Tapo FAQ: features in the Tapo and Home apps",
+          "url": "https://tapo.com/us/faqs/what-camera-features-are-available-in-the-tapo-and-home-apps"
+        },
+        {
+          "title": "TP-Link Community: C125, C225/TC73 support HSV",
+          "url": "https://community.tp-link.com/us/home/stories/detail/502242"
+        },
+        {
+          "title": "TP-Link SG: Tapo C225",
+          "url": "https://www.tp-link.com/sg/products/details/tapo-c225.html"
+        },
+        {
+          "title": "Scrypted: HomeKit docs",
+          "url": "https://docs.scrypted.app/homekit.html"
+        },
+        {
+          "title": "MacRumors: Anker Eufy camera security",
+          "url": "https://www.macrumors.com/2023/01/31/anker-eufy-camera-security"
+        },
+        {
+          "title": "MacRumors: Matter 1.5 camera support",
+          "url": "https://www.macrumors.com/2025/11/20/matter-1-5-camera-support/"
+        },
+        {
+          "title": "Matter Alpha: iOS 27 Apple Home",
+          "url": "https://www.matteralpha.com/industry-news/ios-27-apple-home-thread-1-4-4k-energy"
+        },
+        {
+          "title": "MacRumors forum: HKSV cameras — Apple TV as hub",
+          "url": "https://forums.macrumors.com/threads/homekit-secure-video-cameras-how-to-fix-things-when-it-goes-wrong.2476766/"
         }
       ]
     }
