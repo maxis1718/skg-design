@@ -2,7 +2,7 @@ import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';i
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const d=JSON.parse(fs.readFileSync(path.join(root,'src','project.json'),'utf8'));
 assert.equal(d.rooms.length,11);assert.equal(new Set(d.objects.map(o=>o.id)).size,d.objects.length);
 for(const o of d.objects){assert(d.rooms.some(r=>r.id===o.room_id));const b=o.bounds_pt;assert(b.length===4&&b.every(Number.isFinite)&&b[0]<b[2]&&b[1]<b[3]);for(const axis of ['w','d'])assert(o.dimensions[axis].cm>0);}
-assert.deepEqual(d.roomVersions.kitchen.map(v=>v.id).sort(),['kitchen-current','kitchen-tower-left','kitchen-window-sink'],'kitchen needs schemes A, B and original');
+assert.deepEqual(d.roomVersions.kitchen.map(v=>v.id),['kitchen-window-sink'],'kitchen has only scheme A (R134)');assert(!Object.keys(d.elevations).some(k=>k.endsWith('@tower-left')||k==='kitchen-b2')&&!d.electrical.points.some(p=>p.onlyKitchen)&&!d.objects.some(o=>o.onlyLayouts),'kitchen scheme B / original removed (R134)');
 for(const v of d.roomVersions.kitchen){for(const[id,p]of Object.entries(v.objectOverrides)){assert(d.objects.some(o=>o.id===id));assert(p.bounds_pt[0]<p.bounds_pt[2]&&p.bounds_pt[1]<p.bounds_pt[3]);}}
 assert.deepEqual(d.roomVersions.master.map(v=>v.id),['master-b'],'master has only scheme A (master-b)');
 assert.deepEqual((d.layouts[0].guestVersions||[]).map(v=>v.id),['guest-a'],'guest room has one scheme (R122)');assert(!d.objects.some(o=>(o.onlyGuest||[]).includes('guest-c'))&&!Object.keys(d.elevations).some(k=>/guest-(wardrobe|wall)(-lb)?-c$/.test(k)),'guest scheme B (guest-c) removed (R122)');
@@ -16,7 +16,7 @@ const checkUnits=(id,units)=>{for(const[uid,u]of Object.entries(units)){assert(M
 const checkViews=(id,views,units)=>{for(const v of views){assert(v,id+' references a missing view');for(const r of v.units||(v.ref?[{ref:v.ref}]:[]))assert(units[r.ref],id+' view '+v.id+' missing unit '+r.ref);}};
 for(const[id,e]of Object.entries(E)){
   if(e.shared){checkUnits(id,e.units);checkViews(id,e.views,e.units);continue;}
-  // 'objectId@layout' = layout-specific elevation (kitchen scheme B); the layout must exist in roomVersions.kitchen.
+  // 'objectId@layout' = layout-specific elevation (living console B); the layout must exist in roomVersions.kitchen.
   const[oid,lay]=id.split('@');assert(e.wall||d.objects.some(o=>o.id===oid),'elevation for unknown object '+id);if(lay)assert([...d.roomVersions.kitchen,...(d.roomVersions.living||[])].some(v=>v.layout===lay),'elevation for unknown layout '+id);
   if(e.alias)assert(E[e.alias]&&!E[e.alias].alias,id+' alias must point at a concrete elevation');
   const b=e.alias?{...E[e.alias],...e}:e,inc=b.include?E[b.include]:null;if(b.include)assert(inc?.shared,id+' include must be shared');

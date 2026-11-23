@@ -32,9 +32,9 @@ const SMART='smart',isHome=id=>id==='floor'||id===SMART;
 let smartCat=null,smartHover=null;
 // Power & network layer (⚡): off by default, URL ?power=1 is the only state. powerId = selected point.
 let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=null;
-// Kitchen scheme: A = kitchen-window-sink (default), B = kitchen-tower-left, original = kitchen-current. The URL (?kitchen=a|b|original) is the only selection state.
-const KITCHEN_KEYS={a:'kitchen-window-sink',b:'kitchen-tower-left',original:'kitchen-current'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
-let selectedVersions={kitchen:KITCHEN_KEYS[(new URLSearchParams(location.search).get('kitchen')||'').toLowerCase()]||KITCHEN_KEYS.a};
+// Kitchen (R134): single layout kitchen-window-sink (former scheme A); scheme B (tower-left) and the original view are gone, the toolbar hides (<2 versions) and any old ?kitchen= value falls back to it (and is dropped from the URL).
+const KITCHEN_KEYS={a:'kitchen-window-sink'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
+let selectedVersions={kitchen:KITCHEN_KEYS.a};
 // Guest room (R122): single scheme guest-a; the scheme toolbar hides (<2 versions) and any old ?guest= value falls back to it.
 const GUEST_KEYS={a:'guest-a'};
 selectedVersions.guest=GUEST_KEYS.a;
@@ -55,7 +55,7 @@ function livingVersion(){const vs=livingVersions();return vs.find(v=>v.id===sele
 function guestVersion(){const vs=guestVersions();return vs.find(v=>v.id===selectedVersions.guest)||vs[0];}
 function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===selectedVersions.kitchen)||vs.find(v=>v.id===KITCHEN_KEYS.a)||vs[0];}
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
-function syncKitchenURL(){const key=Object.keys(KITCHEN_KEYS).find(k=>KITCHEN_KEYS[k]===kitchenVersion()?.id);if(!key)return;const u=new URL(location.href);if(u.searchParams.get('kitchen')!==key){u.searchParams.set('kitchen',key);history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
+function syncKitchenURL(){const u=new URL(location.href);if(u.searchParams.has('kitchen')){u.searchParams.delete('kitchen');history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
 function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:o.room_id==='living'?livingVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
 function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
@@ -65,7 +65,7 @@ const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p
 const labelPositions={living:[490,249],kitchen:[514,318],helper:[442,320],master:[222,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
-// A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
+// A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (kitchen has a single layout since R134).
 // Living objects follow the TV-console scheme: 'objectId@console-x' (also through an alias such as living-tv → tv-console).
 const pickElev=(all,id)=>all[id+'@'+kitchenVersion()?.layout]||all[id+'@'+livingVersion()?.layout]||all[id];
 function elevationFor(id){
@@ -247,17 +247,29 @@ function powerSummary(){
   return `<h2>${esc(roomId===SMART?project.smart.title:el.title)}</h2><div class="power-counts">${counts||esc(t('沒有電點'))}</div>${roomId==='floor'?`<p class="inspector-text">${esc(el.summary)}</p>`:''}<div class="power-list">${rows}</div>${roomId==='floor'?`<p class="power-sources">${el.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`:''}`;
 }
 function bindPowerRows(){$$('[data-power-open]').forEach(b=>b.onclick=()=>selectPower(b.dataset.powerOpen));}
+// R134 hob: Brandt BPI2638UB 58 × 51 drawn from its object bounds — black glass, front control strip, 3 zones
+// (front left Ø21, rear left Ø16, centre right Ø28). Hob-local u = cm from the hob's left as seen from the front (door end),
+// v = cm from its front edge; the worktop front is towards smaller plan y and the door end towards larger plan x.
+const HOB_ZONES=[[13.5,17,10.5],[13.5,40,8],[41,26.5,14]],HOB_W=58;
+function drawHob(){
+ const g=$('#kitchen-hob-geometry');if(!g)return;g.replaceChildren();g.removeAttribute('transform');
+ const[x0,y0,x1,y1]=object('kitchen-hob').bounds_pt,s=(x1-x0)/HOB_W,P=(u,v)=>[x1-u*s,y0+v*s];
+ g.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,rx:.35,fill:'#2e3532',stroke:'#1c211f','stroke-width':.3}));
+ const[cx,cy]=P(17+24,1.5);g.append(svgEl('rect',{x:cx,y:cy,width:24*s,height:4.5*s,rx:.2,fill:'#46504c'}));
+ for(const[u,v,r]of HOB_ZONES){const[x,y]=P(u,v);g.append(svgEl('circle',{cx:x,cy:y,r:r*s,fill:'none',stroke:'#c9d2cd','stroke-width':.22}));g.append(svgEl('circle',{cx:x,cy:y,r:r*s*.62,fill:'none',stroke:'#c9d2cd','stroke-width':.14,'stroke-opacity':.6}));}
+}
 function renderKitchenVersion(){
  const version=kitchenVersion();if(!version)return;
  $('#kitchen-version').setAttribute('aria-label',t('切換廚房方案'));
  $('#kitchen-version').innerHTML=kitchenVersions().map(v=>`<button type="button" class="tool ${v.id===version.id?'active':''}" data-kitchen-version="${esc(v.id)}" aria-pressed="${v.id===version.id}" title="${esc(v.name)}">${esc(shortV(v.name))}</button>`).join('');
- const baseline={'kitchen-sink':[462.36,336.28,479.52,350.56],'kitchen-hob':[497.64,337.24,518.88,349.12]};
+ const baseline={'kitchen-sink':[462.36,336.28,479.52,350.56]};
  for(const[id,source]of Object.entries(baseline)){
    const target=object(id).bounds_pt,sx=(target[2]-target[0])/(source[2]-source[0]),sy=(target[3]-target[1])/(source[3]-source[1]);
    $('#'+id+'-geometry').setAttribute('transform',`translate(${target[0]} ${target[1]}) scale(${sx} ${sy}) translate(${-source[0]} ${-source[1]})`);
  }
- const towerLayouts=['window-sink','tower-left'],tower=$('#appliance-tower-geometry');tower.replaceChildren();tower.toggleAttribute('hidden',!towerLayouts.includes(version.layout));
- if(towerLayouts.includes(version.layout)){
+ drawHob();
+ const tower=$('#appliance-tower-geometry');tower.replaceChildren();tower.removeAttribute('hidden');
+ {
    const[x0,y0,x1,y1]=object('appliance-tower').bounds_pt;
    tower.append(svgEl('rect',{x:x0,y:y0,width:x1-x0,height:y1-y0,fill:'#d5c2a5','fill-opacity':'.65',stroke:'#8e704c','stroke-width':'.5'}));
    tower.append(svgEl('path',{d:`M${x0+2} ${y0+5}H${x1-2}M${x0+2} ${y0+9}H${x1-2}M${x0+2} ${y0+13}H${x1-2}`,stroke:'#8e704c','stroke-width':'.4'}));
