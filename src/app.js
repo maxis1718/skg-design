@@ -460,6 +460,7 @@ const YT_SVG='<svg viewBox="0 0 24 17" width="18" height="13" aria-hidden="true"
 function withLinks(html){const L=project.links||{};for(const k of Object.keys(L)){const u=L[k].youtube;if(!u)continue;const ek=esc(k);html=html.split(ek).join(`${ek}<span class="yt-link" role="link" tabindex="0" data-href="${esc(u)}" title="YouTube">${YT_SVG}</span>`);}return html;}
 document.addEventListener('click',e=>{const a=e.target.closest?.('.yt-link');if(!a)return;e.preventDefault();e.stopPropagation();window.open(a.dataset.href,'_blank','noopener');},true);
 document.addEventListener('keydown',e=>{const a=e.target.closest?.('.yt-link');if(a&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.stopPropagation();window.open(a.dataset.href,'_blank','noopener');}},true);
+// R138: room.research [ids] → research buttons at the top of the room card (label = research.short || title).
 // Room card order: 待拍板 (todos) → 注意 (watch) → 配置 (items) → 淨距 → 施工交代 → 電點.
 function roomCard(r){
   const p=planFor(r)||{},pts=roomPower(r.id),all=todosOf(r.id),open=all.filter(x=>x.status!=='done'),done=all.filter(x=>x.status==='done');
@@ -470,9 +471,10 @@ function roomCard(r){
   const todos=all.length?`${open.length?`<ul class="todo-list">${open.map(todoLi).join('')}</ul>`:`<p class="rc-none">${esc(t('無待拍板'))}</p>`}${done.length?`<details class="rc-done"><summary>${esc(tf('已完成 {n}',{n:done.length}))}</summary><ul class="todo-list">${done.map(todoLi).join('')}</ul></details>`:''}`:'';
   const main=`${sec('rc-todos','待拍板',todos,open.length)}${sec('rc-items','配置',items&&`<ul>${items}</ul>`)}${sec('rc-clear','淨距',(p.clearances||[]).length&&`<ul>${p.clearances.map(c=>`<li><span>${esc(c.label)}</span><b>${esc(c.value)}</b></li>`).join('')}</ul>`)}`;
   const side=`${p.watch?.length?`<div class="rc-watch">${riskBox(p.watch,'注意')}</div>`:''}${sec('rc-build','施工交代',(p.build||[]).length&&`<ul>${p.build.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}${pts.length?powerList(pts):''}`;
-  const tag=versionFor(r)?.tagline;
-  if(!main&&!side)return '';
-  return `<article class="room-card">${tag?`<p class="rc-tagline">${esc(tag)}</p>`:''}<div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
+  const tag=versionFor(r)?.tagline,res=(r.research||[]).filter(id=>project.research?.[id]);
+  const resRow=res.length?`<div class="rc-research">${res.map(id=>{const x=project.research[id];return `<button type="button" class="research-link rc-research-btn" data-research="${esc(id)}" title="${esc(x.title||id)}">${esc(x.short||x.title||id)} ↗</button>`;}).join('')}</div>`:'';
+  if(!main&&!side&&!resRow)return '';
+  return `<article class="room-card">${tag?`<p class="rc-tagline">${esc(tag)}</p>`:''}${resRow}<div class="rc-cols">${main?`<div class="rc-col rc-main">${main}</div>`:''}${side?`<div class="rc-col rc-side">${side}</div>`:''}</div></article>`;
 }
 function powerList(pts){return `<section class="rc-sec rc-power"><h3>${esc(t('電點'))} <span class="rc-n">${pts.length}</span></h3><ul>${pts.map(p=>`<li><button type="button" class="rc-pt" data-room-power="${esc(p.id)}"><i class="pk pk-${esc(p.kind)}" aria-hidden="true"></i><span class="rc-pt-code">${esc(p.code)}</span><span class="rc-pt-name">${esc(p.name)}</span><span class="rc-pt-mount">${esc(powerMount(p))}</span></button></li>`).join('')}</ul></section>`;}
 // R91: object facts (size, brand/model, extra notes). With an elevation they sit compactly at the top of its right column

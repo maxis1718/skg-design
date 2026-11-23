@@ -1076,7 +1076,10 @@
           "冷氣外機不要正對女傭房窗",
           "床墊木作完成後再買：寬 = 實測內寬 − 2（內寬 ≥ 109 用 SS 107 × 190），厚 ≤ 12"
         ]
-      }
+      },
+      "research": [
+        "helper-fan"
+      ]
     },
     {
       "id": "bath1",
@@ -25812,6 +25815,15 @@
       "kind": "reno"
     },
     {
+      "id": "todo-helper-fan-type",
+      "room": "helper",
+      "text": "定 helper 房風扇（吸頂無葉 vs 壁扇）",
+      "research": "helper-fan",
+      "status": "open",
+      "kind": "furn",
+      "priority": 1
+    },
+    {
       "id": "todo-master-rail",
       "room": "master",
       "text": "主臥掛桿 195：維持＋掛衣叉，或一側降到 180 方便 helper",
@@ -27182,6 +27194,51 @@
         {
           "title": "MacRumors forum: HKSV cameras — Apple TV as hub",
           "url": "https://forums.macrumors.com/threads/homekit-secure-video-cameras-how-to-fix-things-when-it-goes-wrong.2476766/"
+        }
+      ]
+    },
+    "helper-fan": {
+      "title": "女傭房吸頂風扇比較",
+      "short": "吊扇調研",
+      "updated": "2026-11-23",
+      "summary": "這間只能用全罩、厚 ≤ 13 cm 的貫流式吸頂無葉風扇燈：首選風生 風影標準款（50 × 50 × 13），次選雷士 NVC 2026 款（先確認厚度）。淘寶款都附燈、沒有新加坡 Safety Mark；不接受就維持現有 Mistral 壁扇（S$129，有 Safety Mark）。圖面暫不改，等屋主拍板。",
+      "body": "## 先講重點\n\n- **這間能用的吸頂扇只有一種：全罩式、機身厚度 ≤ 13 cm 的「吸頂無葉風扇燈」，而且要是貫流式、出風口有格柵。**\n  - 露葉吊扇、隱形（收合）扇葉、吸頂擺頭扇、Exhale 都不合格（原因見下方淨空計算）。\n- **淘寶這一類商品全部附燈、只有 CCC 認證，沒有新加坡 Safety Mark。** 吊扇屬於新加坡 CPS 列管商品，CPS 也勸消費者不要從海外買吊扇。買淘寶款等於接受這兩點。\n- 新加坡買得到、有認證的全罩薄型吸頂扇：**這次沒有找到。** 有 Safety Mark 的安全退路是現有設計的壁扇（表格第 16 項）。\n\n## 本房淨空（天花 240：屋主說與廚房同高，未實測）\n\n| 項目 | 計算 | 結果 |\n|---|---|---|\n| 站立面 | 牆到牆床台 38＋三折床墊 10 | 48 |\n| 站在床上的頭頂 | 48＋155／165 | 203／213 |\n| 舉手最高 | 48＋1.33 × 身高 | 254–267：**整片天花都摸得到 → 必須全罩** |\n| 坐起來的頭頂 | 48＋坐高約 0.52 × 身高 | 129–134 |\n| 能接受的機身厚度 | 240 − 213 − 頭頂至少留 14 | **≤ 13 cm** |\n| IEC 60335-2-80 第 7.12.1 條 | 葉片離站立面 > 230 → 天花要 ≥ 278 | 露葉吊扇不合格 |\n\n## 產品比較（16 項）\n\n淘寶連結都是**搜尋連結**（淘寶商品頁會變動）。運送一律用淘寶集運到新加坡：約 5–11 kg，海運估 S$15–35，另加 9% GST。\n\n| 產品 | 類型 · 尺寸 | 規格（低速噪音 · 電機 · 風速段數 · 遙控 · 燈） | 價格 · 運送 · 本房判定 |\n|---|---|---|---|\n| 1. **風生 風影 吸頂無葉風扇燈（標準款）** · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452181.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%A3%8E%E7%94%9F%20%E9%A3%8E%E5%BD%B1%20%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 全罩貫流式 · 50 × 50 × **13**，4.2 kg | < 40 dB（廠商自稱）· DC · 6 段＋60° 擺風 · 2.4G 遙控＋定時 · 有燈（55 W，3000–5700K） | 價格未標 · 集運 · **合格**（扇底 227，頭頂淨空 14） |\n| 2. 風生 風影 大長款 · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452188.html) | 全罩貫流式 · 94 × 62 × 13 | < 40 dB · DC · 6 段＋60° 擺風 · 遙控 · 有燈（108 W） | 價格未標 · 集運 · **不合格**：長 94 > 房寬 107 扣兩側餘量 |\n| 3. **雷士 NVC 無葉風扇燈（2026 款，卧室）** · [蘇寧規格](https://www.suning.com/itemcanshu/0070131346/12439030411.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%9B%B7%E5%A3%AB%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%8D%A7%E5%AE%A4) | 全罩（無葉）· 圓形，厚度未標 | 雷士無葉款自稱 27.4 dB（[評測](https://m.sohu.com/a/970332212_122471764)）· DC · 段數未標 · 遙控 · 有燈；31–40 W，適用 10–15 m²，保固 3 年 | ¥859（約 S$155）· 集運 · **待確認**：厚度要 ≤ 13 才可用 |\n| 4. 歐普 OPPLE 客棲 無葉風扇燈 · [淘寶搜尋](https://s.taobao.com/search?q=%E6%AC%A7%E6%99%AE%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%AE%A2%E6%A0%96) | 全罩（無葉）· 尺寸未標 | 變頻 · 噪音、段數未標 · 遙控 · 有燈 | 價格未標 · 集運 · **待確認**：客廳款，可能太大 |\n| 5. 公牛 GONEO ATTO GF19AT 無葉風扇燈 · [HomePro 規格](https://www.homepro.co.th/p/888232100001) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%85%AC%E7%89%9B%20GONEO%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20GF19AT) | 全罩（無葉）· 厚 **24.6**，9 kg | 噪音未標 · 段數未標 · 遙控 · 有燈（70 W） | 價格未標 · 集運 · **不合格**：扇底 215，正好在頭頂 |\n| 6. 公牛 GF39AT 強風無葉風扇燈 · [京東列表](https://www.jd.com/chanpin/445458.html) | 全罩 · 尺寸未標（比 GF19 大） | 91 W · 有燈 | 價格未標 · 集運 · **不合格**（推估比 GF19 更厚） |\n| 7. 三雄極光 御風 無葉風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) · [淘寶搜尋](https://s.taobao.com/search?q=%E4%B8%89%E9%9B%84%E6%9E%81%E5%85%89%20%E5%BE%A1%E9%A3%8E%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 無葉、360° 出風 · 尺寸未標 | 自稱高速仍很安靜（無 dB）· 有燈 | 價格未標 · 集運 · **不合格**：廠商建議層高 2.5–2.8 m |\n| 8. 松下中國 HHLZ8616 隱形風扇燈 · [京東列表](https://www.jd.com/hotitem/9855d629a624eaca9db0.html) | 隱形（收合）扇葉 | 自稱低噪 · 遙控調光 · 有燈 | 價格未標 · 集運 · **不合格**：扇葉轉動時展開外露 |\n| 9. 松下中國 HHLZ8321 風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) | 8 片露葉 · 厚約 18 | 56 W · 4 段 · App · 有燈 | 價格未標 · 集運 · **不合格**：露葉，建議層高 ≥ 2.4 m |\n| 10. 美的 隱形風扇燈（天貓）· [什麼值得買](https://www.smzdm.com/p/174817033/) | 隱形（收合）扇葉 · 尺寸未標 | 自稱靜音 · 有燈 | 約 ¥247（特價，已過期）· 集運 · **不合格**：扇葉外露 |\n| 11. 米家風扇燈 36 吋 · [小米 HK](https://www.mi.com/hk/product/mijia-ceiling-fan-with-light-36/) | 收合式扇葉 | 最低 23 dB(A) · 睡眠模式 · App · 有燈 | 價格未標 · 小米 HK 官網有售 · **不合格**：原廠要求天花 ≥ 2.6 m、葉片離地 ≥ 2.33 m |\n| 12. 美的 凉霸 B8P · [實測](https://post.smzdm.com/p/a4q7dvk7/) · [淘寶搜尋](https://s.taobao.com/search?q=%E7%BE%8E%E7%9A%84%20%E5%87%89%E9%9C%B8%20B8P) | 嵌入假天花 · 30 × 60，與天花齊平 | < 45 dB（實測運轉）· 185 m³/h · 125° 擺風 · 遙控 · 有燈 | ¥331–549 · 集運 · **條件式**：要有假天花，而且風弱、偏吵 |\n| 13. 奧普 AUPU 凉霸 F130 · [蘇寧規格](https://m.suning.com/itemcanshu/0000000000/000000012360189731.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%A5%A5%E6%99%AE%20%E5%87%89%E9%9C%B8%20F130) | 嵌入假天花 · 30 × 30 | 56 W · 噪音未標 · 遙控 | 價格未標 · 集運 · **條件式**：同上，是廚房用 |\n| 14. 艾美特 Airmate FL4005／鑽石 FD-40 吸頂擺頭扇 · [淘寶搜尋](https://s.taobao.com/search?q=%E8%89%BE%E7%BE%8E%E7%89%B9%20%E5%90%B8%E9%A1%B6%E6%89%87%20FL4005) | 網罩式 16 吋 · 厚度約 30+（推估） | AC · 3 段／調速器 · 多數無遙控 · 無燈 | 約 ¥150–180 · 集運 · **不合格**：太厚、AC 吵 |\n| 15. KDK M40RS 吸頂擺頭扇（新加坡）· [KDK SG](https://www.kdk.sg/products/orbital-fan-m40rs) | 網罩式 · Ø40 × **35** | AC · 5 段調速器 · 無遙控 · 無燈 | S$174–180 · 新加坡有 Safety Mark · **不合格**：扇底 205，會撞頭 |\n| 16. **Mistral MWF1454DR-G 14 吋 DC 壁扇（現有設計）** · [Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/dc-motor-fans/mistral-mwf1454dr-g-14-dc-wall-fan-with-remote-control.html) | 網罩式 · 壁掛 33 × 35.5 × 52.7 | dB 未公布 · DC · 5 段 · 遙控＋定時 · 無燈 | S$129 · 新加坡有 Safety Mark · **合格**（掛在床尾 180–233） |\n\n- 也查過但不列入：\n  - **Exhale 無葉吊扇**（新加坡 Elmark／Azora）：Ø86 × 18、11.4 kg、27–40 dB、無燈款 €690（[規格](https://exhale-fans.uk/ceiling-fan.html)）。旋轉盤外露，扇底 222 只離頭頂 9。\n  - **Mistral FLEXA 16 吋 DC 吸頂／壁掛兩用**：12 段＋睡眠模式、S$239（[Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/ceiling-fans-en/mistral-16-inch-dc-ceiling-wall-fan-with-remote-gun-metal-flexa-gm.html)），但機身長 54。\n  - **Lazada SG 雜牌無葉風扇燈**（ADDLON、NSWR、OSIZA，S$100–136，[列表](https://decoration.lazada.sg/bladeless-fan-light-in-a-26m-hdb-bedroom-clearance-fit-and-installation-guide-sg)）：厚度、dB、Safety Mark 都沒有標示。\n- **先鋒、格力**：淘寶只有落地扇、壁扇或露葉吊扇，沒有全罩吸頂款。搜尋連結：[先鋒](https://s.taobao.com/search?q=%E5%85%88%E9%94%8B%20%E5%90%B8%E9%A1%B6%E6%89%87)、[格力](https://s.taobao.com/search?q=%E6%A0%BC%E5%8A%9B%20%E5%90%B8%E9%A1%B6%E6%89%87)。\n- 想自己挑同類商品，可用這個[淘寶搜尋](https://s.taobao.com/search?q=%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E8%B4%AF%E6%B5%81%20%E8%B6%85%E8%96%84%20%E7%9B%B4%E6%B5%81)。條件：厚度 ≤ 13 cm、邊長 ≤ 55、出風口是格柵、不是隱形扇葉、DC、6 段以上、220 V。\n\n## 首選 3 款\n\n1. **風生 風影 吸頂無葉風扇燈（標準款）**：首選。這次查到的產品裡，只有它明確標示厚 13 且邊長 50，塞得進 107 寬的房間。另外是 DC、6 段、擺風、< 40 dB、遙控定時。缺點是小廠、有燈、沒有 Safety Mark。\n2. **雷士 NVC 無葉風扇燈 2026 款**（¥859）：大品牌，保固 3 年，評測中自稱 27.4 dB 最安靜。下單前一定要跟客服確認厚度 ≤ 13、直徑 ≤ 55，否則不買。\n3. **退路：Mistral MWF1454DR-G 壁扇**（S$129，現有設計）：全表唯一有新加坡 Safety Mark、又合格的選項。如果屋主不想接受「淘寶無認證＋附燈」，就維持壁扇。\n\n## 安裝位置（以首選 1 或 2 為準）\n\n- **位置**：用現有吸頂燈位 (442.2, 312.2) pt，取代 IKEA BARLAST。\n  - 離西牆、東牆各 53.5；離床頭牆 101、離床尾牆 105。\n  - 50 × 50 機身佔離床頭 76–126 的範圍，在胸腹上方，不在臉的正上方（枕頭在離床頭 15–45）。\n- **高度**：機身底 227。人站在床上時頭頂淨空 14（165 cm）至 24（155 cm）；坐起來約 93。\n- **周邊距離**：離窗所在的範圍（西牆、離床尾 2.5–45）水平約 34；離床尾層架 59。門頂 210 低於機身底，百葉折門不會碰到。\n- **風向**：擺風設 60°，左右擺，涵蓋 107 的床寬；風往床尾方向吹，不對臉。\n- **電源**：接現有吸頂燈出線，不用新增出線點。刪除 S-14（壁扇插座）與 HLP-02（壁扇）。\n- **控制**：這類產品的燈和風扇共用電源，牆上開關一關，風扇也停。\n  - SW-03 左鍵維持常開，燈和風扇都用遙控。\n  - SW-11 右鍵（無線同控吸頂燈）改成無作用，或取消。\n- **淨空檢查**：門、窗、層架都不衝突。房內沒有冷氣。\n\n## 跟 Patrick 說\n\n- 吸頂燈出線改接 4–5 kg 的風扇燈：要鎖到樓板。如果天花是假天花，就用吊筋鎖樓板，或在假天花內加夾板補強，不能只鎖在石膏板上。\n- 不用裝 S-14；床尾牆只留層架。\n- 確認女傭房天花實際高度、有沒有假天花；如果實際高度 < 238，就改回壁扇。\n\n## 待拍板\n\n- 選首選 1、首選 2，或維持壁扇。\n\n## 跟現有設計的衝突\n\n- 改吸頂款會取代 BARLAST：色溫從 2700K 變成 3000–5700K（可設成 3000K）。造型也是屋主說過不喜歡的「風扇燈」。\n- SW-11 右鍵的用途會消失。\n- 吊扇是 CPS 列管商品；淘寶款沒有 Safety Mark，海外購買也沒有本地保固（[CPS 列管清單](https://www.consumerproductsafety.gov.sg/suppliers/cpsr/list-of-controlled-goods/)、[CPS 吊扇安全須知](https://www.consumerproductsafety.gov.sg/images/product-safety-tips/safety-tips-on-ceiling-fans.pdf)）。",
+      "sources": [
+        {
+          "title": "IEC 60335-2-80:2015 樣本（7.12.1：葉片離地 > 2.3 m）",
+          "url": "https://cdn.standards.iteh.ai/samples/21527/cced7ce02f104623922fa30a8058f8af/IEC-60335-2-80-2015.pdf"
+        },
+        {
+          "title": "CPS：列管商品清單",
+          "url": "https://www.consumerproductsafety.gov.sg/suppliers/cpsr/list-of-controlled-goods/"
+        },
+        {
+          "title": "CPS：吊扇安全須知（PDF）",
+          "url": "https://www.consumerproductsafety.gov.sg/images/product-safety-tips/safety-tips-on-ceiling-fans.pdf"
+        },
+        {
+          "title": "風生 風影 吸頂無葉風扇燈（標準款）規格頁",
+          "url": "https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452181.html"
+        },
+        {
+          "title": "蘇寧：雷士 NVC 無葉風扇燈規格",
+          "url": "https://www.suning.com/itemcanshu/0070131346/12439030411.html"
+        },
+        {
+          "title": "KDK SG：M40RS 吸頂擺頭扇",
+          "url": "https://www.kdk.sg/products/orbital-fan-m40rs"
+        },
+        {
+          "title": "Harvey Norman SG：Mistral MWF1454DR-G 14 吋 DC 壁扇",
+          "url": "https://www.harveynorman.com.sg/home-appliances/fans/dc-motor-fans/mistral-mwf1454dr-g-14-dc-wall-fan-with-remote-control.html"
+        },
+        {
+          "title": "小米 HK：米家風扇燈 36 吋",
+          "url": "https://www.mi.com/hk/product/mijia-ceiling-fan-with-light-36/"
+        },
+        {
+          "title": "Exhale 無葉吊扇規格",
+          "url": "https://exhale-fans.uk/ceiling-fan.html"
         }
       ]
     }
