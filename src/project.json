@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R137",
+    "revision": "R138",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4928,6 +4928,10 @@
     {
       "id": "C145",
       "text": "洗烘塔後方加兩個單孔（洗、烘各一），冰箱後方一個單孔"
+    },
+    {
+      "id": "C146",
+      "text": "helper 房加「吊扇調研」按鈕：16 款比較、淨空計算與建議；新增待辦「定 helper 房風扇」"
     }
   ],
   "measurement_policy": {
