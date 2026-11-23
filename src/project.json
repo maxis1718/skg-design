@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R136",
+    "revision": "R137",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4921,6 +4921,10 @@
     {
       "id": "C144",
       "text": "電器櫃三個插座統一移到各層後牆右上角"
+    },
+    {
+      "id": "C145",
+      "text": "洗烘塔後方加兩個單孔（洗、烘各一），冰箱後方一個單孔"
     }
   ],
   "measurement_policy": {
@@ -24733,6 +24737,45 @@
         "name": "天花點 · 陽台吊扇",
         "notes": "・硬接線，接原本靠曬衣架那盞筒燈的線，明管約 50 到這裡\n・燈、扇兩路火線到 SW-16\n・吊扇鎖結構樓板",
         "use": "陽台吊扇"
+      },
+      {
+        "id": "sock-washtower-w",
+        "code": "S-43",
+        "kind": "socket",
+        "gang": 1,
+        "x": 465.5,
+        "y": 285.2,
+        "mount": 175,
+        "place": "洗烘塔後牆 · 機頂上方",
+        "name": "插座 · 洗衣機",
+        "use": "洗衣機",
+        "notes": "・13A 單孔，LG WashTower 洗衣機用\n・裝在機頂（165.5）上方，不用搬機就插得到；上方若有吊櫃，改裝在櫃內底部"
+      },
+      {
+        "id": "sock-washtower-d",
+        "code": "S-44",
+        "kind": "socket",
+        "gang": 1,
+        "x": 472.5,
+        "y": 285.2,
+        "mount": 175,
+        "place": "洗烘塔後牆 · 機頂上方",
+        "name": "插座 · 乾衣機",
+        "use": "乾衣機",
+        "notes": "・13A 單孔，LG WashTower 乾衣機用（洗、烘各一條電源線）\n・與 S-43 並排"
+      },
+      {
+        "id": "sock-fridge",
+        "code": "S-45",
+        "kind": "socket",
+        "gang": 1,
+        "x": 491.7,
+        "y": 285.2,
+        "mount": 170,
+        "place": "冰箱後牆 · 上段",
+        "name": "插座 · 冰箱",
+        "use": "冰箱",
+        "notes": "・13A 單孔，HITACHI R-HW620RS 專用\n・裝在冰箱背後上段（機身 183.3），避開底部壓縮機散熱"
       }
     ],
     "runs": [

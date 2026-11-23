@@ -1935,6 +1935,17 @@
   "插座上下改以平面為準：主臥床上側一個單孔、下側一個雙孔；小孩房床頭插座移到左上；客房左上改單孔；主臥 Wi‑Fi 移到入口天花": "Socket top/bottom now read as plan directions: master bed one single on the top side, one dual on the bottom side; kid bed socket moved to the top-left; guest top-left now a single; master Wi‑Fi moved to the entry ceiling",
   "・13A 單孔，層內後牆右上角（正面看），插頭在電器後方\n・拉出板全拉時線留 ≥ 60": "・13A single on the back wall top-right corner of the bay (seen from the front), behind the appliance\n・Cord slack ≥ 60 for the full pull-out",
   "每層後牆右上角一個 13A 單孔（S-38 電鍋層離地 88、S-39 電子鍋層 123、S-40 微波爐層 158），線留 ≥ 60；建議獨立迴路": "One 13A single at the top-right of each tier back wall (S-38 rice-cooker tier 88 AFF, S-39 Zojirushi tier 123, S-40 microwave tier 158), cord slack ≥ 60; separate circuit recommended",
-  "電器櫃三個插座統一移到各層後牆右上角": "Appliance tower: all three sockets moved to the top-right of each bay back wall"
+  "電器櫃三個插座統一移到各層後牆右上角": "Appliance tower: all three sockets moved to the top-right of each bay back wall",
+  "・13A 單孔，HITACHI R-HW620RS 專用\n・裝在冰箱背後上段（機身 183.3），避開底部壓縮機散熱": "・13A single, dedicated to the HITACHI R-HW620RS\n・Upper part of the wall behind the fridge (body 183.3), clear of the compressor at the bottom",
+  "・13A 單孔，LG WashTower 乾衣機用（洗、烘各一條電源線）\n・與 S-43 並排": "・13A single for the LG WashTower dryer (washer and dryer each have their own cord)\n・Side by side with S-43",
+  "・13A 單孔，LG WashTower 洗衣機用\n・裝在機頂（165.5）上方，不用搬機就插得到；上方若有吊櫃，改裝在櫃內底部": "・13A single for the LG WashTower washer\n・Above the unit top (165.5), reachable without moving the tower; if a wall cabinet sits above, put it inside the cabinet bottom",
+  "乾衣機": "Dryer",
+  "冰箱後牆 · 上段": "Fridge back wall · upper",
+  "插座 · 乾衣機": "Socket · dryer",
+  "插座 · 冰箱": "Socket · fridge",
+  "插座 · 洗衣機": "Socket · washer",
+  "洗烘塔後牆 · 機頂上方": "WashTower back wall · above the unit",
+  "洗衣機": "Washer",
+  "洗烘塔後方加兩個單孔（洗、烘各一），冰箱後方一個單孔": "Two singles behind the WashTower (washer + dryer) and one single behind the fridge"
  }
 }
