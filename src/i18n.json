@@ -1940,6 +1940,7 @@
   "廚房天花 240 女傭房門那端：P-08 13A＋USB-C 變壓器＋Cat6 拉回電視櫃（CAM-04）": "Kitchen ceiling 240 at the helper-door end: P-08 13A + USB-C adapter + Cat6 back to the TV console (CAM-04)",
   "光纖盒到電視櫃 Cat6 ×2（一條備用）": "Fibre box → TV console Cat6 ×2 (1 spare)",
   "攝影機 P-01／02／03／08 各一條 Cat6 拉回電視櫃": "Camera points P-01/02/03/08: one Cat6 each back to the TV console",
-  "床尾走道上方 AP-03 吸頂（U7 Lite），用原預留 Cat6": "AP-03 on the ceiling over the bed-foot aisle (U7 Lite), on the planned Cat6"
+  "床尾走道上方 AP-03 吸頂（U7 Lite），用原預留 Cat6": "AP-03 on the ceiling over the bed-foot aisle (U7 Lite), on the planned Cat6",
+  "攝影機與 Wi‑Fi 重整：玄關攝影機改朝大門、廚房加一支（拍不到 helper 房）；Wi‑Fi 改 3 台 U7 Lite，訪客網路給 helper／訪客": "CCTV & Wi‑Fi rework: foyer camera re-aimed at main door, kitchen camera added (no view into helper room); Wi‑Fi now 3 × U7 Lite, guest SSID for helper/visitors"
  }
 }
