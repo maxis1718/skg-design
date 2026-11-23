@@ -133,7 +133,7 @@ const powerRoom=p=>project.rooms.find(r=>inPoly(p.x,p.y,r.polygon_pt))?.id||p.ro
 function powerGlyph(p){
   const g=svgEl('g',{class:'power-mark','data-power':p.id,'data-kind':p.kind,transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
   const O='#d9731c',B='#2f68a6',C='#24443b',V='#6a4f97';
-  if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));const b=socketBadge(p);if(b)g.append(svgEl('text',{class:'pm-gang',x:2.1,y:-1.7},b));}
+  if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('path',{d:(p.gang||1)>1?'M-.85 -1v2M.85 -1v2':'M0 -1.15v2.3',stroke:O,'stroke-width':(p.gang||1)>1?.55:.7}));const b=socketBadge(p);if(b)g.append(svgEl('text',{class:'pm-gang',x:2.1,y:-1.7},b));}
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
@@ -167,7 +167,7 @@ function renderPowerLayer(){
   if(smart){const ks=smartKinds();layer.querySelectorAll('[data-kind]').forEach(el=>el.classList.toggle('smart-off',!ks.has(el.dataset.kind)));}
   $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
   const lg=$('#power-legend');lg.hidden=!powerOn();
-  lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-socket pk-twin"></i>${esc(t('2 = 雙孔'))}</span>`+(powerPoints().some(p=>p.existing)?`<span><i class="pk pk-socket pk-existing"></i>${esc(t('現有插座'))}</span>`:'')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
+  lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>k==='socket'?`<span><i class="pk pk-socket pk-single"></i>${esc(t('單孔插座'))}</span><span><i class="pk pk-socket pk-twin"></i>${esc(t('2 = 雙孔'))}</span>`:`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+(powerPoints().some(p=>p.existing)?`<span><i class="pk pk-socket pk-existing"></i>${esc(t('現有插座'))}</span>`:'')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
 // R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.

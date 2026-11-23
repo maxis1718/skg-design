@@ -5,12 +5,12 @@
 <path data-layout="lb-guest-bed-pillow" class="furnishing" d="M408.88 171.69H415.68Q416.53 171.69 416.53 172.54V189.54Q416.53 190.39 415.68 190.39H408.88Q408.03 190.39 408.03 189.54V172.54Q408.03 171.69 408.88 171.69Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-bed-duvet" class="furnishing" d="M400.09 149.01V192.68M398.39 149.01V192.68" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
 <path data-layout="lb-guest-curtain-track" class="furnishing" d="M350.49 147.03H419.37" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="2 0.8"/>
-<path data-layout="lb-massage-chair" class="furnishing" d="M306.38 323.09H340.4Q341.39 323.09 341.39 324.08V343.64Q341.39 344.63 340.4 344.63H306.38Q305.39 344.63 305.39 343.64V324.08Q305.39 323.09 306.38 323.09Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-arms" class="furnishing" d="M341.39 325.5H313.9M341.39 342.22H313.9" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-back" class="furnishing" d="M334.3 325.5V342.22" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-footrest" class="furnishing" d="M313.9 323.09V344.63" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
-<path data-layout="lb-massage-chair-recline" class="furnishing" d="M305.39 323.09H288.95V344.63H305.39" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
-<!-- R129: study desk moved to the wall opposite the door side (mirrored about the room centre), office chair faces it; massage chair unchanged by the window, backrest 10 off the door-side wall. -->
+<path data-layout="lb-massage-chair" class="furnishing" d="M277.19 323.09H311.21Q312.2 323.09 312.2 324.08V343.64Q312.2 344.63 311.21 344.63H277.19Q276.2 344.63 276.2 343.64V324.08Q276.2 323.09 277.19 323.09Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-arms" class="furnishing" d="M276.2 325.5H303.69M276.2 342.22H303.69" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-back" class="furnishing" d="M283.29 325.5V342.22" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-footrest" class="furnishing" d="M303.69 323.09V344.63" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
+<path data-layout="lb-massage-chair-recline" class="furnishing" d="M312.2 323.09H328.64V344.63H312.2" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round" stroke-dasharray="1 0.8"/>
+<!-- R129: study desk moved to the wall opposite the door side (mirrored about the room centre), office chair faces it; massage chair by the window. R132: chair turned — backrest 10 off the desk wall (head left), reclines towards the side wall. -->
 <path data-layout="lb-study-desk" class="furnishing" d="M273.36 293.61H287.54V321.95H273.36Z" fill="none" stroke="currentColor" stroke-width="0.24" stroke-linejoin="round"/>
 <path data-layout="lb-study-monitor" class="furnishing" d="M275.35 299.08H276.48V316.48H275.35Z" fill="none" stroke="currentColor" stroke-width="0.18" stroke-linejoin="round"/>
 <path data-layout="lb-study-monitor-stand" class="furnishing" d="M275.35 304.95H278.75V310.61H275.35Z" fill="none" stroke="currentColor" stroke-width="0.12" stroke-linejoin="round"/>
