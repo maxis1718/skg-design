@@ -62,7 +62,7 @@ const actual=o=>o.actual||{};
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
-const labelPositions={living:[507,249],kitchen:[514,318],helper:[442,320],master:[222,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
+const labelPositions={living:[490,249],kitchen:[514,318],helper:[442,320],master:[222,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 // A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (e.g. kitchen scheme B = tower-left).
@@ -124,13 +124,16 @@ const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout|
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
-const powerMount=p=>p.mount==='ceiling'?t('天花'):tf('離地 {h} cm',{h:p.mount});
+const powerMount=p=>p.mount==='ceiling'?t('天花'):p.mount==null?t('現有'):tf('離地 {h} cm',{h:p.mount});
+// R129: sockets carry gang (outlets per plate: 1 single / 2 twin) and plates (count, default 1); existing = developer-installed.
+const socketBadge=p=>p.kind!=='socket'?'':(p.plates||1)>1?`${p.plates}×${p.gang||1}`:(p.gang||1)>1?String(p.gang):'';
+const socketType=p=>{const g=t((p.gang||1)>1?'雙孔':'單孔');return (p.plates||1)>1?`${g} × ${p.plates}`:g;};
 function inPoly(x,y,poly){let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const[xi,yi]=poly[i],[xj,yj]=poly[j];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c;}return c;}
 const powerRoom=p=>project.rooms.find(r=>inPoly(p.x,p.y,r.polygon_pt))?.id||p.room||null;
 function powerGlyph(p){
   const g=svgEl('g',{class:'power-mark','data-power':p.id,'data-kind':p.kind,transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
   const O='#d9731c',B='#2f68a6',C='#24443b',V='#6a4f97';
-  if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));}
+  if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('path',{d:'M-.85 -1v2M.85 -1v2',stroke:O,'stroke-width':.55}));const b=socketBadge(p);if(b)g.append(svgEl('text',{class:'pm-gang',x:2.1,y:-1.7},b));}
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
@@ -164,7 +167,7 @@ function renderPowerLayer(){
   if(smart){const ks=smartKinds();layer.querySelectorAll('[data-kind]').forEach(el=>el.classList.toggle('smart-off',!ks.has(el.dataset.kind)));}
   $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
   const lg=$('#power-legend');lg.hidden=!powerOn();
-  lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
+  lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+`<span><i class="pk pk-socket pk-twin"></i>${esc(t('2 = 雙孔'))}</span>`+(powerPoints().some(p=>p.existing)?`<span><i class="pk pk-socket pk-existing"></i>${esc(t('現有插座'))}</span>`:'')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
 // R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
@@ -220,7 +223,7 @@ function recordAuto(kind){
   if(kind==='switch'){const ps=pts.filter(p=>p.kind==='scene'||p.kind==='switch');
     return recordTable([t('編號'),t('位置'),t('鍵數'),t('控制')],ps.map(p=>[open(p),p.place,specOf(p,t('鍵數'))||specOf(p,'鍵數'),specOf(p,t('控制'))||specOf(p,'控制')]),true);}
   if(kind==='power'){const ps=pts.filter(p=>['socket','ceiling-power'].includes(p.kind));
-    return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
+    return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,p.kind==='socket'?socketType(p):t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
   return '';
 }
 function renderSmartRecord(){
@@ -347,7 +350,7 @@ function renderDimensions(){
       if(geo==='NE'||roomId!=='floor'){const vx=geo==='NE'?x0+3:x1-3;dimensionLine(g,vx,y0,vx,y1,num(p.vertical_cm));}
     }else if(geo==='S'){
       dimensionLine(g,x0,363,x1,363,num(p.horizontal_cm));
-      const vx=id==='study'?x0+3:x1-3;dimensionLine(g,vx,y0,vx,y1,num(p.vertical_cm));
+      const vx=id==='study'?x1-1.6:x1-3;dimensionLine(g,vx,y0,vx,y1,num(p.vertical_cm));
     }else if(id==='kitchen'){
       dimensionLine(g,x0,365,x1,365,'320.5');
       if(roomId!=='floor')dimensionLine(g,x1-3,y0,x1-3,y1,num(p.vertical_cm));
@@ -419,7 +422,7 @@ function renderInspector(){
   const node=$('#inspector');renderPowerLayer();
   if(powerOn()&&powerId&&!objectId&&powerPoint(powerId)){
     const p=powerPoint(powerId);node.hidden=false;
-    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
+    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.kind==='socket'?`<div class="inspector-pair"><span>${t('插座')}</span><strong>${esc(socketType(p))}${p.existing?esc(t('，現有')):''}</strong></div>`:''}${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
     $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
   }
   const show=!objectId&&isHome(roomId)&&powerOn()&&!!project.electrical;node.hidden=!show;node.innerHTML=show?powerSummary():'';bindPowerRows();
