@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R132",
+    "revision": "R133",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4933,6 +4933,10 @@
     {
       "id": "C140",
       "text": "廚房爐邊只留一個雙孔、電器櫃每格一個單孔；刪鋼琴左端與電視牆備用插座；書房按摩椅改頭朝左；小孩房攝影機移到窗邊背光側；單孔插座改用單槽符號"
+    },
+    {
+      "id": "C141",
+      "text": "客廳 Wi‑Fi 移進走道 190 櫃，改用 UniFi Express 7 兼主機；網路改最小配置（Express 7＋2 台 U7 Lite＋8 埠 PoE 交換器）；加家電專用 2.4 GHz 網路與設定清單；小孩房攝影機改 Aqara G350；Apple TV 有線當家居中樞"
     }
   ],
   "measurement_policy": {
