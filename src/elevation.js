@@ -114,8 +114,10 @@ function drawUnit(g, u, ox, oy, state, detail, labels) {
     }
     if (b.kind === 'tier') {
       g.rect(ix + .4, y0, iw - .8, 1.6, {fill:C.board, stroke:C.thin, 'stroke-width':.2});
-      if (detail && !b.noSocket) g.rect(ix + 1.5, oy + b.y1 - 4.5, 3.6, 2.4, {fill:'#fff', stroke:C.thin, 'stroke-width':.2, rx:.4});
+      if (detail && !b.noSocket && !b.socket) g.rect(ix + 1.5, oy + b.y1 - 4.5, 3.6, 2.4, {fill:'#fff', stroke:C.thin, 'stroke-width':.2, rx:.4});
       if (!hidden(b)) placeItems(g, b.items || [], ix, iw, y0 + 1.6, detail, b.h - 1.6, b.align, b.gap);
+      // b.socket {x (from the unit's left), h (centre AFF), label}: back-wall socket of an open tier, drawn over the appliance.
+      if (b.socket) { socketMark(g, {x:ox + b.socket.x, y:oy + b.socket.h, gang:1}); if (b.socket.label) { const r = b.socket.x > u.w / 2; g.text(ox + b.socket.x + (r ? -5 : 5), oy + b.socket.h - g.f * .25, b.socket.label, {fill:C.dim, 'font-size':g.f * .55, ...(r ? {'text-anchor':'end'} : {})}); } }
       continue;
     }
     if (b.kind === 'boxes' || b.kind === 'cabinet') {
