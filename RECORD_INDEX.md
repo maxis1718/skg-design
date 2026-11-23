@@ -50,7 +50,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | BTH-02 | `bath2-mirror-cabinet` | 衛浴 2 洗手台＋整面鏡櫃 | 169.8 × 57.2 |
 | KIT-05 | `kitchen-sink` | 水槽 | 61 × 50 |
 | KIT-10 | `kitchen-oven` | 爐下烤箱 | 80 × 60 |
-| KIT-06 | `kitchen-hob` | 電磁爐 | 75 × 42 |
+| KIT-06 | `kitchen-hob` | 電磁爐 Brandt BPI2638UB | 75 × 42 |
 | KIT-07 | `appliance-tower` | 電器櫃 | 60 × 65 |
 | KIT-08 | `dishwasher` | 洗碗機 | 60 × 60 |
 | KIT-09 | `spice-pullout` | 窄拉籃 · 左 | 20 × 60 |
