@@ -1870,6 +1870,8 @@
   "・客廳燈＝電視兩側 2＋走道 2＋鋼琴上方 2\n・餐廳燈＝餐桌 2＋餐區牆邊 2\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關": "• Living = 2 by the TV + 2 walkway + 2 over piano\n• Dining = 2 over table + 2 by the dining wall\n• Wall washer is Aqara LED Strip T1, always powered; this key in wireless mode",
   "燈位照屋主定案：客餐廳 6、走道 2、廚房 2。": "Light positions per owner: living/dining 6, walkway 2, kitchen 2.",
   "客廳櫃子加層板": "Add shelves to the living room cabinet",
-  "新增重要待辦：客廳櫃子加層板。": "New key to-do: add shelves to the living room cabinet."
+  "新增重要待辦：客廳櫃子加層板。": "New key to-do: add shelves to the living room cabinet.",
+  "確認電視櫃長寬高": "Confirm TV console W × H × D",
+  "新增重要待辦：確認電視櫃長寬高。": "New key to-do: confirm TV console W × H × D."
  }
 }

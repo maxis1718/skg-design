@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R128",
+    "revision": "R129",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4868,6 +4868,10 @@
     {
       "id": "C136",
       "text": "新增重要待辦：客廳櫃子加層板。"
+    },
+    {
+      "id": "C137",
+      "text": "新增重要待辦：確認電視櫃長寬高。"
     }
   ],
   "measurement_policy": {
@@ -27459,6 +27463,15 @@
       "id": "todo-living-cabinet-shelves",
       "room": "living",
       "text": "客廳櫃子加層板",
+      "status": "open",
+      "kind": "reno",
+      "priority": 1,
+      "pin": true
+    },
+    {
+      "id": "todo-living-console-size",
+      "room": "living",
+      "text": "確認電視櫃長寬高",
       "status": "open",
       "kind": "reno",
       "priority": 1,
