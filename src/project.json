@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R134",
+    "revision": "R135",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4913,6 +4913,10 @@
     {
       "id": "C142",
       "text": "廚房只保留方案 A（刪方案 B 與原始切換）；電磁爐改 Brandt BPI2638UB 三口，加 32A 隔離開關"
+    },
+    {
+      "id": "C143",
+      "text": "插座上下改以平面為準：主臥床上側一個單孔、下側一個雙孔；小孩房床頭插座移到左上；客房左上改單孔；主臥 Wi‑Fi 移到入口天花"
     }
   ],
   "measurement_policy": {
