@@ -1931,6 +1931,7 @@
   "・32A 雙極隔離開關（double-pole isolator），接 Brandt BPI2638UB\n・配電箱拉 32A 專用迴路（32A 斷路器、6 mm² 線），只接爐具\n・爐具電線 130 cm、無插頭，經爐下櫃接到開關下方出線盒\n・離爐緣 13.7，吊櫃下、檯面上 20": "・32A double-pole isolator for the Brandt BPI2638UB\n・Dedicated 32A circuit from the DB (32A breaker, 6 mm² cable), hob only\n・Hob cable 130 cm, no plug: through the under-hob cab. to an outlet box below the isolator\n・13.7 from the hob edge, under the wall cab., 20 above the worktop",
   "買爐具 Brandt BPI2638UB（3 口）": "Buy hob Brandt BPI2638UB (3 zones)",
   "電磁爐：Brandt BPI2638UB（3 口）": "Induction hob: Brandt BPI2638UB (3 zones)",
-  "定 BPI2638UB：3 口（前左 21、後左 16、右中 28 cm），7.4 kW，32A 專用迴路＋雙極隔離開關 S-42；58 × 51 × 6，開孔 56 × 49。BPI6603B 只在拉不了 32A 時才用。": "BPI2638UB decided: 3 zones (front left 21, rear left 16, centre right 28 cm), 7.4 kW, dedicated 32A circuit + DP isolator S-42; 58 × 51 × 6, cut-out 56 × 49. BPI6603B only if 32A can’t be run."
+  "定 BPI2638UB：3 口（前左 21、後左 16、右中 28 cm），7.4 kW，32A 專用迴路＋雙極隔離開關 S-42；58 × 51 × 6，開孔 56 × 49。BPI6603B 只在拉不了 32A 時才用。": "BPI2638UB decided: 3 zones (front left 21, rear left 16, centre right 28 cm), 7.4 kW, dedicated 32A circuit + DP isolator S-42; 58 × 51 × 6, cut-out 56 × 49. BPI6603B only if 32A can’t be run.",
+  "廚房只保留方案 A（刪方案 B 與原始切換）；電磁爐改 Brandt BPI2638UB 三口，加 32A 隔離開關": "Kitchen keeps scheme A only (scheme B and original toggle removed); hob is now a Brandt BPI2638UB 3-zone induction with a 32A isolator"
  }
 }
