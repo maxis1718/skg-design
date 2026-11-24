@@ -156,7 +156,11 @@ function buildPower(){
     if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
       under.append(svgEl('path',{'data-kind':'camera',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
   }
-  for(const r of el.runs||[])under.append(svgEl('polyline',{'data-kind':'run',class:'power-run',points:(livingVersion()?.runOverrides?.[r.to]||r.path).map(q=>q.join(',')).join(' ')}));
+  // R142: runs may carry id (runOverrides key, else `to`), tag (cable label) and tags [[x,y,rot°?],…] = where the label is drawn (both ends).
+  const tags=svgEl('g',{class:'run-tags'});
+  for(const r of el.runs||[]){under.append(svgEl('polyline',{'data-kind':'run',class:'power-run',points:(livingVersion()?.runOverrides?.[r.id||r.to]||r.path).map(q=>q.join(',')).join(' ')}));
+    for(const[x,y,rot]of r.tag?r.tags||[]:[])tags.append(svgEl('text',{'data-kind':'run',class:'run-tag',x,y,...(rot?{transform:`rotate(${rot} ${x} ${y})`}:{})},r.tag));}
+  under.append(tags);
   layer.append(under);
   const marks=svgEl('g',{class:'power-marks'});for(const p of pts)marks.append(powerGlyph(p));layer.append(marks);
   renderPowerLayer();
