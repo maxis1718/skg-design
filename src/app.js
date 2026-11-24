@@ -26,12 +26,12 @@ const NS='http://www.w3.org/2000/svg';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:1});
 let elevView={},elevState='closed';
-let roomId='floor', objectId=null, showDims=true, showObjects=true;
+let roomId='floor', objectId=null, showDims=true;
 // Smart-home tab (#smart): not a room — whole-home plan with the ⚡ layer filtered to project.smart.categories[].kinds. smartCat = opened category, smartHover = hovered header.
 const SMART='smart',isHome=id=>id==='floor'||id===SMART;
 let smartCat=null,smartHover=null;
-// Power & network layer (⚡): off by default, URL ?power=1 is the only state. powerId = selected point.
-let showPower=new URLSearchParams(location.search).get('power')==='1', powerId=null;
+// ⚡ power layer (?power=1) and 📶 Wi-Fi/network layer (?net=1, R144): both off by default, independent; they share #power-layer and the point inspector. powerId = selected point.
+let showPower=new URLSearchParams(location.search).get('power')==='1', showNet=new URLSearchParams(location.search).get('net')==='1', powerId=null;
 // Kitchen (R134): single layout kitchen-window-sink (former scheme A); scheme B (tower-left) and the original view are gone, the toolbar hides (<2 versions) and any old ?kitchen= value falls back to it (and is dropped from the URL).
 const KITCHEN_KEYS={a:'kitchen-window-sink'},KITCHEN_ORDER=Object.values(KITCHEN_KEYS);
 let selectedVersions={kitchen:KITCHEN_KEYS.a};
@@ -123,7 +123,10 @@ const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影
 const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))&&(!p.onlyKitchen||p.onlyKitchen.includes(kitchenVersion()?.layout))&&(!p.onlyGuest||p.onlyGuest.includes(guestVersion()?.layout))&&(!p.onlyMaster||p.onlyMaster.includes(masterVersion()?.layout))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
-const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);
+const powerOn=()=>showPower||showNet||(roomId===SMART&&!!project.smart);
+// R144: network kinds (APs, data points, network gear, cameras, Cat6 runs) live on 📶; everything else (sockets, ceiling power, switches, scene) on ⚡.
+const NET_KINDS=new Set(['ap','data','hub','camera','run']),isNetKind=k=>NET_KINDS.has(k),layerOf=k=>isNetKind(k)?'net':'power';
+const kindOn=k=>(roomId===SMART&&!!project.smart)||(isNetKind(k)?showNet:showPower);
 const powerMount=p=>p.mount==='ceiling'?t('天花'):p.mount==null?t('現有'):tf('離地 {h} cm',{h:p.mount});
 // R129: sockets carry gang (outlets per plate: 1 single / 2 twin) and plates (count, default 1); existing = developer-installed.
 const socketBadge=p=>p.kind!=='socket'?'':(p.plates||1)>1?`${p.plates}×${p.gang||1}`:(p.gang||1)>1?String(p.gang):'';
@@ -131,17 +134,17 @@ const socketType=p=>{const g=t((p.gang||1)>1?'雙孔':'單孔');return (p.plates
 function inPoly(x,y,poly){let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const[xi,yi]=poly[i],[xj,yj]=poly[j];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c;}return c;}
 const powerRoom=p=>project.rooms.find(r=>inPoly(p.x,p.y,r.polygon_pt))?.id||p.room||null;
 function powerGlyph(p){
-  const g=svgEl('g',{class:'power-mark','data-power':p.id,'data-kind':p.kind,transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
+  const g=svgEl('g',{class:'power-mark','data-power':p.id,'data-kind':p.kind,'data-layer':layerOf(p.kind),transform:`translate(${p.x} ${p.y})`,tabindex:'0',role:'button','aria-label':`${p.name}${t('，')}${p.place}`});
   const O='#d9731c',B='#2f68a6',C='#24443b',V='#6a4f97';
   if(p.kind==='socket'){g.append(svgEl('circle',{r:2.6,fill:'#fff',stroke:O,'stroke-width':.75,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('path',{d:(p.gang||1)>1?'M-.85 -1v2M.85 -1v2':'M0 -1.15v2.3',stroke:O,'stroke-width':(p.gang||1)>1?.55:.7}));const b=socketBadge(p);if(b)g.append(svgEl('text',{class:'pm-gang',x:2.1,y:-1.7},b));}
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
-  else if(p.kind==='ap'){g.append(svgEl('circle',{r:3.3,fill:'#fff',stroke:B,'stroke-width':.75}),svgEl('circle',{r:1.5,fill:'none',stroke:B,'stroke-width':.5}),svgEl('circle',{r:.55,fill:B}));}
+  else if(p.kind==='ap'){g.append(svgEl('circle',{r:4.4,fill:'#fff',stroke:B,'stroke-width':.95}),svgEl('circle',{r:2,fill:'none',stroke:B,'stroke-width':.65}),svgEl('circle',{r:.75,fill:B}));}// R144: AP ≈ 1.33× the other marks
   else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
   else if(p.kind==='switch'){g.append(svgEl('rect',{x:-2.1,y:-2.1,width:4.2,height:4.2,rx:.5,fill:'#fff',stroke:V,'stroke-width':.6}),svgEl('rect',{x:-.55,y:-1.25,width:1.1,height:2.5,rx:.3,fill:V}));}
   else if(p.kind==='scene'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.6,fill:V}),svgEl('path',{d:'M-.95 -.75A1.3 1.3 0 1 0 .95 -.75M0 -1.5V0',fill:'none',stroke:'#fff','stroke-width':.45,'stroke-linecap':'round'}));}
   else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
-  g.append(svgEl('circle',{class:'pm-ring',r:p.kind==='ap'?4.6:4.1}),svgEl('circle',{class:'pm-hit',r:5}));
+  g.append(svgEl('circle',{class:'pm-ring',r:p.kind==='ap'?5.9:4.1}),svgEl('circle',{class:'pm-hit',r:p.kind==='ap'?6:5}));
   g.addEventListener('pointerenter',e=>showTip(e,{name:p.name,code:p.code}));g.addEventListener('pointermove',positionTip);g.addEventListener('pointerleave',hideTip);
   g.addEventListener('click',e=>{e.stopPropagation();hideTip();selectPower(p.id);});
   g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPower(p.id);}});
@@ -152,26 +155,35 @@ function buildPower(){
   const under=svgEl('g',{class:'power-under'});
   const pts=powerPoints();
   for(const p of pts){
-    if(p.kind==='ap')under.append(svgEl('circle',{'data-kind':'ap',cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
+    if(p.kind==='ap')under.append(svgEl('circle',{'data-kind':'ap','data-layer':'net',cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
     if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
-      under.append(svgEl('path',{'data-kind':'camera',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
+      under.append(svgEl('path',{'data-kind':'camera','data-layer':'net',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
   }
   // R142: runs may carry id (runOverrides key, else `to`), tag (cable label) and tags [[x,y,rot°?],…] = where the label is drawn (both ends).
   const tags=svgEl('g',{class:'run-tags'});
-  for(const r of el.runs||[]){under.append(svgEl('polyline',{'data-kind':'run',class:'power-run',points:(livingVersion()?.runOverrides?.[r.id||r.to]||r.path).map(q=>q.join(',')).join(' ')}));
-    for(const[x,y,rot]of r.tag?r.tags||[]:[])tags.append(svgEl('text',{'data-kind':'run',class:'run-tag',x,y,...(rot?{transform:`rotate(${rot} ${x} ${y})`}:{})},r.tag));}
+  for(const r of el.runs||[]){under.append(svgEl('polyline',{'data-kind':'run','data-layer':'net',class:'power-run',points:(livingVersion()?.runOverrides?.[r.id||r.to]||r.path).map(q=>q.join(',')).join(' ')}));
+    for(const[x,y,rot]of r.tag?r.tags||[]:[])tags.append(svgEl('text',{'data-kind':'run','data-layer':'net',class:'run-tag',x,y,...(rot?{transform:`rotate(${rot} ${x} ${y})`}:{})},r.tag));}
   under.append(tags);
+  // R144: points may carry labels [{text, off:[dx,dy] pt from the mark, anchor?}] = small equipment names drawn beside the mark on its layer (data box router / PoE switch, console switch).
+  for(const p of pts)for(const l of p.labels||[])under.append(svgEl('text',{'data-kind':p.kind,'data-layer':layerOf(p.kind),class:'pm-label',x:p.x+l.off[0],y:p.y+l.off[1],'text-anchor':l.anchor||'start'},l.text));
   layer.append(under);
   const marks=svgEl('g',{class:'power-marks'});for(const p of pts)marks.append(powerGlyph(p));layer.append(marks);
   renderPowerLayer();
 }
 function renderPowerLayer(){
-  const btn=$('#toggle-power');btn.classList.toggle('active',showPower);btn.setAttribute('aria-pressed',String(showPower));
+  for(const[id,on]of[['#toggle-power',showPower],['#toggle-net',showNet]]){const b=$(id);b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));}
   const layer=$('#power-layer'),smart=roomId===SMART&&!!project.smart;layer.style.display=powerOn()?'':'none';layer.classList.toggle('smart-mode',smart);
+  layer.classList.toggle('net-off',!smart&&!showNet);layer.classList.toggle('power-off',!smart&&!showPower);
   if(smart){const ks=smartKinds();layer.querySelectorAll('[data-kind]').forEach(el=>el.classList.toggle('smart-off',!ks.has(el.dataset.kind)));}
   $$('.power-mark').forEach(g=>g.classList.toggle('selected',g.dataset.power===powerId));
   const lg=$('#power-legend');lg.hidden=!powerOn();
-  lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>k==='socket'?`<span><i class="pk pk-socket pk-single"></i>${esc(t('單孔插座'))}</span><span><i class="pk pk-socket pk-twin"></i>${esc(t('2 = 雙孔'))}</span>`:`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+(powerPoints().some(p=>p.existing)?`<span><i class="pk pk-socket pk-existing"></i>${esc(t('現有插座'))}</span>`:'')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
+  const chip=(k,v,cls='')=>`<span><i class="pk pk-${k}${cls}"></i>${esc(t(v))}</span>`;
+  if(smart)lg.innerHTML=Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>chip(k,v)).join('');
+  else{// R144: one legend group per layer that is on
+    const pw=[chip('socket','單孔插座',' pk-single'),chip('socket','2 = 雙孔',' pk-twin'),...(powerPoints().some(p=>p.existing)?[chip('socket','現有插座',' pk-existing')]:[]),chip('ceiling-power',POWER_KINDS['ceiling-power']),chip('switch',POWER_KINDS.switch),chip('scene',POWER_KINDS.scene)];
+    const nt=[chip('ap',POWER_KINDS.ap),chip('hub',POWER_KINDS.hub),chip('data',POWER_KINDS.data),chip('camera',POWER_KINDS.camera),chip('run','網路線')];
+    const grp=(icon,name,cs)=>`<span class="lg-group"><b>${icon} ${esc(t(name))}</b>${cs.join('')}</span>`;
+    lg.innerHTML=(showPower?grp('⚡','電力',pw):'')+(showNet?grp('📶','Wi-Fi 與網路',nt):'');}
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
 // R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type twin(x,y,dir°,toWall cm,aims [°,°]; R141)|skylight(x,y,w,l cm,dir° = illuminant side,toWall cm,existing; R143)|track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
@@ -245,8 +257,9 @@ function recordAuto(kind){
 }
 function renderSmartRecord(){
   const node=$('#smart-record');if(!node)return;const rec=project.electrical?.record;
-  const on=showPower&&roomId==='floor'&&!!rec;node.hidden=!on;if(!on){node.innerHTML='';return;}
-  node.innerHTML=`<div class="section-heading"><h2>${esc(rec.title)}</h2><span>${esc(rec.asof)}</span></div><nav class="sr-nav">${rec.sections.map((s,i)=>`<a href="#sr-${esc(s.id)}">${i+1}. ${esc(s.title)}</a>`).join('')}</nav>`+rec.sections.map((s,i)=>`<section class="sr-block" id="sr-${esc(s.id)}"><h3><span>${i+1}</span>${esc(s.title)}</h3>${s.table?recordTable(s.table.head,s.table.rows):''}${s.auto?recordAuto(s.auto):''}${s.text?`<ul class="sr-text">${s.text.split('\n').map(l=>`<li>${esc(l.replace(/^・/,''))}</li>`).join('')}</ul>`:''}${s.sources?.length?`<p class="power-sources">${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join(' · ')}</p>`:''}</section>`).join('');
+  const on=(showPower||showNet)&&roomId==='floor'&&!!rec;node.hidden=!on;if(!on){node.innerHTML='';return;}
+  const NET_SECS=new Set(['net','coverage','poe','cam']),secs=rec.sections.filter(s=>s.id==='todo'||(NET_SECS.has(s.id)?showNet:showPower));
+  node.innerHTML=`<div class="section-heading"><h2>${esc(rec.title)}</h2><span>${esc(rec.asof)}</span></div><nav class="sr-nav">${secs.map((s,i)=>`<a href="#sr-${esc(s.id)}">${i+1}. ${esc(s.title)}</a>`).join('')}</nav>`+secs.map((s,i)=>`<section class="sr-block" id="sr-${esc(s.id)}"><h3><span>${i+1}</span>${esc(s.title)}</h3>${s.table?recordTable(s.table.head,s.table.rows):''}${s.auto?recordAuto(s.auto):''}${s.text?`<ul class="sr-text">${s.text.split('\n').map(l=>`<li>${esc(l.replace(/^・/,''))}</li>`).join('')}</ul>`:''}${s.sources?.length?`<p class="power-sources">${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join(' · ')}</p>`:''}</section>`).join('');
   node.querySelectorAll('[data-power-open]').forEach(b=>b.onclick=()=>{selectPower(b.dataset.powerOpen);$('#main-panel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});});
   node.querySelectorAll('.sr-nav a').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById(a.getAttribute('href').slice(1))?.scrollIntoView({behavior:'smooth',block:'start'});});
 }
@@ -257,11 +270,12 @@ function selectPower(id){
   if(matchMedia('(max-width:900px)').matches)$('#inspector').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function powerSummary(){
-  const el=project.electrical,sk=smartKinds(true),pts=powerPoints().filter(p=>roomId==='floor'||(roomId===SMART?sk.has(p.kind):powerRoom(p)===roomId));
+  const el=project.electrical,sk=smartKinds(true),pts=powerPoints().filter(p=>(roomId==='floor'||(roomId===SMART?sk.has(p.kind):powerRoom(p)===roomId))&&kindOn(p.kind));
   const kinds=Object.keys(POWER_KINDS).filter(k=>pts.some(p=>p.kind===k));
   const counts=kinds.map(k=>`<span><i class="pk pk-${k}"></i>${esc(t(POWER_KINDS[k]))} <b>${pts.filter(p=>p.kind===k).length}</b></span>`).join('');
   const rows=kinds.map(k=>pts.filter(p=>p.kind===k).map(p=>`<button class="power-row" data-power-open="${esc(p.id)}"><i class="pk pk-${k}"></i><span>${esc(p.name)}</span><small>${esc(p.code)}</small></button>`).join('')).join('');
-  return `<h2>${esc(roomId===SMART?project.smart.title:el.title)}</h2><div class="power-counts">${counts||esc(t('沒有電點'))}</div>${roomId==='floor'?`<p class="inspector-text">${esc(el.summary)}</p>`:''}<div class="power-list">${rows}</div>${roomId==='floor'?`<p class="power-sources">${el.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`:''}`;
+  const head=roomId===SMART?project.smart.title:showPower&&showNet?el.title:t(showNet?'Wi-Fi 與網路':'電力');
+  return `<h2>${esc(head)}</h2><div class="power-counts">${counts||esc(t('沒有電點'))}</div>${roomId==='floor'?`<p class="inspector-text">${esc(el.summary)}</p>`:''}<div class="power-list">${rows}</div>${roomId==='floor'?`<p class="power-sources">${el.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`:''}`;
 }
 function bindPowerRows(){$$('[data-power-open]').forEach(b=>b.onclick=()=>selectPower(b.dataset.powerOpen));}
 // R134 hob: Brandt BPI2638UB 58 × 51 drawn from its object bounds — black glass, front control strip, 3 zones
@@ -449,7 +463,7 @@ function selectObject(id,{scroll=false}={}){
 // R69: below the plan = power inspector (only for ⚡ points / home summary) + one card (home rooms / room plan / object) + elevation.
 function renderInspector(){
   const node=$('#inspector');renderPowerLayer();
-  if(powerOn()&&powerId&&!objectId&&powerPoint(powerId)){
+  if(powerOn()&&powerId&&!objectId&&powerPoint(powerId)&&kindOn(powerPoint(powerId).kind)){
     const p=powerPoint(powerId);node.hidden=false;
     node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.kind==='socket'?`<div class="inspector-pair"><span>${t('插座')}</span><strong>${esc(socketType(p))}${p.existing?esc(t('，現有')):''}</strong></div>`:''}${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
     $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
@@ -524,16 +538,16 @@ function renderDetails(){
   $$('#details-content [data-open-room]').forEach(b=>b.onclick=()=>{const home=isHome(roomId);selectRoom(b.dataset.openRoom);if(home)scrollTo($('#main-panel'));});
   $$('#details-content [data-open-object]').forEach(b=>b.onclick=()=>{selectObject(b.dataset.openObject);scrollTo($('#elevation')||$('#details-content'));});
   $$('#details-content [data-research]').forEach(b=>b.onclick=()=>openResearch(b.dataset.research));
-  $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{if(!showPower)$('#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
+  $$('#details-content [data-room-power]').forEach(b=>b.onclick=()=>{const net=isNetKind(powerPoint(b.dataset.roomPower)?.kind);if(!(net?showNet:showPower))$(net?'#toggle-net':'#toggle-power').click();selectPower(b.dataset.roomPower);$('#main-panel').scrollIntoView({behavior:'smooth',block:'start'});});
 }
 const REV=[[3,'R02'],[6,'R03'],[7,'R04'],[8,'R05'],[9,'R06'],[11,'R07'],[12,'R08'],[13,'R09'],[14,'R10'],[15,'R11'],[16,'R12'],[18,'R13'],[19,'R14'],[20,'R15'],[21,'R16'],[22,'R17'],[23,'R18'],[24,'R19'],[25,'R20'],[26,'R21'],[27,'R22'],[28,'R23'],[29,'R24'],[30,'R25'],[31,'R26'],[32,'R27'],[33,'R28'],[34,'R29'],[35,'R30'],[36,'R31'],[37,'R32'],[39,'R33'],[42,'R34'],[43,'R35'],[44,'R36'],[45,'R37'],[46,'R38'],[47,'R39'],[48,'R40'],[49,'R41'],[50,'R42'],[51,'R43'],[52,'R44'],[53,'R45'],[54,'R46'],[55,'R47'],[56,'R48'],[57,'R49'],[58,'R50'],[59,'R51'],[60,'R52'],[61,'R53'],[62,'R54'],[63,'R55'],[64,'R56'],[65,'R57'],[66,'R58'],[67,'R59'],[68,'R60'],[69,'R61'],[70,'R62'],[71,'R63'],[72,'R64'],[73,'R65'],[75,'R66'],[76,'R68'],[77,'R69'],[78,'R70'],[79,'R71'],[80,'R72'],[81,'R73'],[82,'R74'],[83,'R75'],[84,'R76'],[85,'R77'],[86,'R78'],[87,'R79'],[88,'R80'],[89,'R81'],[90,'R82'],[91,'R83'],[92,'R84'],[93,'R85'],[94,'R86'],[95,'R87'],[96,'R88'],[97,'R89'],[98,'R90'],[99,'R91'],[100,'R92'],[101,'R93'],[102,'R94'],[103,'R95'],[104,'R96'],[105,'R97'],[106,'R98'],[107,'R99'],[108,'R100'],[109,'R101'],[110,'R102'],[111,'R103'],[112,'R104'],[113,'R105'],[114,'R106'],[115,'R107'],[116,'R108'],[117,'R109'],[118,'R110'],[119,'R111'],[120,'R112'],[121,'R113'],[122,'R114'],[123,'R115'],[124,'R116'],[125,'R117'],[126,'R118'],[127,'R119'],[128,'R120'],[129,'R121'],[130,'R122'],[131,'R123'],[132,'R124'],[133,'R125'],[134,'R126'],[135,'R127'],[136,'R128'],[137,'R129'],[138,'R130'],[139,'R131'],[140,'R132'],[141,'R133'],[142,'R134'],[143,'R135'],[144,'R136'],[145,'R137'],[146,'R138'],[147,'R139'],[148,'R140'],[149,'R141'],[150,'R142']];
 function buildReference(){
   $('#change-list').innerHTML=project.changes.map(c=>`<div class="change-item"><span>${esc(c.id)} / ${REV.find(([n])=>Number(c.id.slice(1))<=n)?.[1]||'R143'}</span>${esc(c.text)}</div>`).join('');
 }
 $('#toggle-dims').onclick=()=>{showDims=!showDims;$('#toggle-dims').classList.toggle('active',showDims);$('#toggle-dims').setAttribute('aria-pressed',String(showDims));renderDimensions();$('#selected-dimensions').style.display=showDims?'':'none';};
-$('#toggle-objects').onclick=()=>{showObjects=!showObjects;$('#toggle-objects').classList.toggle('active',showObjects);$('#toggle-objects').setAttribute('aria-pressed',String(showObjects));$('#object-fills').style.display=showObjects?'':'none';$('#object-hits').style.display=showObjects?'':'none';hideTip();};
 $('#toggle-light').onclick=()=>{showLight=!showLight;const u=new URL(location.href);if(showLight)u.searchParams.set('light','1');else u.searchParams.delete('light');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderLightLayer();};
 $('#toggle-power').onclick=()=>{showPower=!showPower;powerId=null;const u=new URL(location.href);if(showPower)u.searchParams.set('power','1');else u.searchParams.delete('power');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderInspector();};
+$('#toggle-net').onclick=()=>{showNet=!showNet;powerId=null;const u=new URL(location.href);if(showNet)u.searchParams.set('net','1');else u.searchParams.delete('net');history.replaceState(null,'',u.pathname+u.search+u.hash);syncLangLinks();hideTip();renderInspector();};
 $('#show-source').onclick=()=>{$('#source-dialog').showModal();};$('#close-source').onclick=()=>$('#source-dialog').close();
 $$('[data-source]').forEach(b=>b.onclick=()=>{$$('[data-source]').forEach(x=>x.classList.toggle('active',x===b));$('#source-image').src=originalSources[b.dataset.source];$('#source-caption').textContent=b.dataset.source==='new'?t('原圖標註為 mm。'):t('原始格局；原 PDF 左右鏡像。');});
 $('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
@@ -632,5 +646,5 @@ buildTabs();buildPlan();buildReference();renderKitchenVersion();
 const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('object-')&&object(hash.slice(7)))selectObject(hash.slice(7));else selectRoom(room(hash)||(hash===SMART&&project.smart)?hash:'floor');
 {const rid=new URLSearchParams(location.search).get('research');if(rid)openResearch(rid);}
 // Expose a read-only snapshot for focused QA and efficient future updates.
-window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showObjects,showPower,powerId,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
+window.SKGAtlas={lang:()=>LANG,setLang,snapshot:()=>({roomId,objectId,showDims,showPower,showNet,powerId,selectedVersions:{...selectedVersions},project:structuredClone(project)})};
 })();
