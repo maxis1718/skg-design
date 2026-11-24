@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R142",
+    "revision": "R144",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4951,6 +4951,10 @@
     {
       "id": "C150",
       "text": "網路改成弱電箱集中：UCG Ultra＋USW Lite 8 PoE 放弱電箱，三台 U7 Lite（AP1 190 櫃、AP2 走廊中央、AP3 主臥門內）各一條 Cat6 PoE；電視櫃一條回線接 Flex Mini"
+    },
+    {
+      "id": "C152",
+      "text": "工具列拿掉家具篩選，新增 📶 Wi‑Fi 圖層與電力分開；AP 放大、標註路由器與 PoE 交換器；網路與攝影機依決策文件同步（UCG Ultra＋TL-SG1005P＋U7 Lite ×3、電視櫃 5 口交換器；G350 ×3 本機錄影）"
     }
   ],
   "measurement_policy": {
