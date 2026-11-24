@@ -170,7 +170,7 @@ function renderPowerLayer(){
   lg.innerHTML=smart?Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join(''):Object.entries(POWER_KINDS).map(([k,v])=>k==='socket'?`<span><i class="pk pk-socket pk-single"></i>${esc(t('單孔插座'))}</span><span><i class="pk pk-socket pk-twin"></i>${esc(t('2 = 雙孔'))}</span>`:`<span><i class="pk pk-${k}"></i>${esc(t(v))}</span>`).join('')+(powerPoints().some(p=>p.existing)?`<span><i class="pk pk-socket pk-existing"></i>${esc(t('現有插座'))}</span>`:'')+`<span><i class="pk pk-run"></i>${esc(t('網路線'))}</span>`;
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
-// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type twin(x,y,dir°,toWall cm,aims [°,°]; R141)|track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
+// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type twin(x,y,dir°,toWall cm,aims [°,°]; R141)|skylight(x,y,w,l cm,dir° = illuminant side,toWall cm,existing; R143)|track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
 let showLight=new URLSearchParams(location.search).get('light')==='1';
 const lightRooms=()=>project.lighting?.rooms||{};
 const lightCol=g=>project.lighting?.groups?.find(x=>x.id===g)?.color||'#c98a00';
@@ -199,6 +199,12 @@ function buildLight(){
           beams.append(svgEl('polygon',{points:[[hx.toFixed(2),hy.toFixed(2)],end(-8),end(8)].map(q=>q.join(',')).join(' '),fill:c}));
           const r=D+a*Math.PI/180;tw.append(svgEl('line',{class:'ltw-aim',x1:hx,y1:hy,x2:(hx+3.4*Math.cos(r)).toFixed(2),y2:(hy+3.4*Math.sin(r)).toFixed(2),stroke:c}),svgEl('circle',{class:'ltw-head',cx:hx.toFixed(2),cy:hy.toFixed(2),r:.95,stroke:c}));}
         g.append(beams,svgEl('rect',{class:'ltw-trim',x:l.x-1.5,y:l.y-2.9,width:3,height:5.8,rx:.7,transform:`rotate(${l.dir||0} ${l.x} ${l.y})`,stroke:c}),tw);}
+      else if(l.type==='skylight'){// R143 existing artificial skylight: w across × l along (cm), `dir`° = side the illuminant faces (towards the wall `toWall` cm from the panel edge); dashed = existing
+        const w=l.w/cm,h=l.l/cm,reach=(l.toWall||0)/cm,sk=svgEl('g',{class:'lsk'+(l.existing?' lsk-existing':''),transform:`translate(${l.x} ${l.y}) rotate(${l.dir||0})`});
+        if(reach)sk.append(svgEl('polygon',{class:'lsk-beam',points:`${w/2},${-h/2} ${w/2+reach},${-h/2-reach*.35} ${w/2+reach},${h/2+reach*.35} ${w/2},${h/2}`,fill:c}));
+        sk.append(svgEl('rect',{class:'lsk-body',x:-w/2,y:-h/2,width:w,height:h,fill:c,stroke:c}),svgEl('rect',{class:'lsk-sun',x:w/2-w*.34,y:-h/2+.5,width:w*.34-.5,height:h-1,fill:c}));
+        for(const k of [-1,0,1]){const y=k*h*.3;sk.append(svgEl('path',{class:'lsk-arrow',d:`M${w/2-1.6} ${y-1}L${w/2-.6} ${y}L${w/2-1.6} ${y+1}`,stroke:'#fff'}));}
+        sk.append(svgEl('text',{class:'lsk-label',x:-w*.12,y:0,transform:`rotate(${(l.dir||0)>90&&(l.dir||0)<270?90:-90} ${-w*.12} 0)`,fill:c},'Skylight'));g.append(sk);}
       if(l.tag&&l.tagAt)top.append(svgEl('text',{class:'ll-tag',x:l.tagAt[0],y:l.tagAt[1],fill:c,'text-anchor':l.tagAnchor||'middle'},t(l.tag)));
     }
     if(r.cct)top.append(svgEl('text',{class:'lc-cct',x:r.cct.at[0],y:r.cct.at[1]},r.cct.k));
@@ -212,9 +218,9 @@ function renderLightLayer(){
   $('#light-layer').style.display=on?'':'none';$('#plan').classList.toggle('light-mode',on&&here.length>0);
   const lg=$('#light-legend'),blk=$('#light-block');lg.hidden=blk.hidden=!on||!here.length;if(lg.hidden){lg.innerHTML=blk.innerHTML='';return;}
   const all=here.flatMap(id=>lightRooms()[id].lights||[]).map(l=>l.surface?{...l,type:'surface'}:l),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
-  const TYPES=[['down','嵌燈'],['track','軌道燈'],['fanlight','吊扇燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['twin','雙頭洗牆燈'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
-  if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'||ty==='track'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
-  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'||ty==='track'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
+  const TYPES=[['down','嵌燈'],['track','軌道燈'],['fanlight','吊扇燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['twin','雙頭洗牆燈'],['skylight','天窗燈（現有）'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
+  if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'||ty==='track'||ty==='skylight'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
+  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'||ty==='track'||ty==='skylight'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
   if(here.some(id=>lightRooms()[id].fan))chips.push(chip('fan','#24443b',t('吊扇 · 外圈內不放燈')));
   lg.innerHTML=chips.join('');
   const cct=lr=>lr.cct?` · ${esc(lr.cct.k)}`:'';
