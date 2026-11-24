@@ -38,8 +38,8 @@ let selectedVersions={kitchen:KITCHEN_KEYS.a};
 // Guest room (R122): single scheme guest-a; the scheme toolbar hides (<2 versions) and any old ?guest= value falls back to it.
 const GUEST_KEYS={a:'guest-a'};
 selectedVersions.guest=GUEST_KEYS.a;
-// Master-bedroom scheme: only master-b (displayed A, bed on the curtain line, cot south). R75 removed master-a (old B); ?master=b falls back to A. Versions may carry objectOverrides / pointOverrides.
-const MASTER_KEYS={a:'master-b'};
+// Master-bedroom schemes (R139): A = master-a (default: no co-sleeper, bed 15 further from the balcony, twin sockets both sides @70), B = master-b (bed on the curtain line + co-sleeper, pre-R139 layout). ?master=a|b. Versions may carry objectOverrides / pointOverrides; objects / points tagged onlyMaster [layout] show only in that scheme.
+const MASTER_KEYS={a:'master-a',b:'master-b'};
 selectedVersions.master=MASTER_KEYS[(new URLSearchParams(location.search).get('master')||'').toLowerCase()]||MASTER_KEYS.a;
 // TV console (R87): two STRUCTURE schemes, both with the full-height slatted north end. A = console-3 (three sections 220, default; base data + elevations['tv-console']), B = console-4 (four sections 230; elevations['tv-console@console-4'] + objectOverrides / pointOverrides / runOverrides). ?console=a|b; old c/d → A.
 const LIVING_KEYS={a:'console-3',b:'console-4',c:'console-3',d:'console-3'}; // R87: c/d (old exhaust variants) fall back to A
@@ -57,12 +57,12 @@ function kitchenVersion(){const vs=kitchenVersions();return vs.find(v=>v.id===se
 function syncLangLinks(){$$('[data-lang]').forEach(a=>{const u=new URL(location.href);u.searchParams.set('lang',a.dataset.lang);a.href=u.pathname+u.search+u.hash;});}
 function syncKitchenURL(){const u=new URL(location.href);if(u.searchParams.has('kitchen')){u.searchParams.delete('kitchen');history.replaceState(null,'',u.pathname+u.search+u.hash);}syncLangLinks();}
 function object(id){const o=baseObject(id);if(!o)return;const patch=o.room_id==='kitchen'?kitchenVersion()?.objectOverrides?.[id]:o.room_id==='master'?masterVersion()?.objectOverrides?.[id]:o.room_id==='living'?livingVersion()?.objectOverrides?.[id]:null;return patch?{...o,...patch,dimensions:patch.dimensions?{...o.dimensions,...patch.dimensions}:o.dimensions}:o;}
-function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))).map(o=>object(o.id));}
+function visibleObjects(){return project.objects.filter(o=>(!o.onlyLayouts||o.onlyLayouts.includes(kitchenVersion()?.layout))&&(!o.onlyGuest||o.onlyGuest.includes(guestVersion()?.layout))&&(!o.onlyMaster||o.onlyMaster.includes(masterVersion()?.layout))).map(o=>object(o.id));}
 const actual=o=>o.actual||{};
 const dimension=d=>num(d.cm);
 const size=o=>`${dimension(o.dimensions.w)} × ${dimension(o.dimensions.d)}`;
 const roomSize=r=>{const p=r.parts[0];return `${num(p.horizontal_cm)} × ${num(p.vertical_cm)}`;};
-const labelPositions={living:[490,249],kitchen:[514,318],helper:[442,320],master:[222,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
+const labelPositions={living:[490,249],kitchen:[514,318],helper:[442,320],master:[206,212],kid:[318,196],study:[378,196],guest:[309,312],'master-balcony':[240,150],'living-balcony':[470,160],bath1:[237,315],bath2:[380,284]};
 const originalSources={new:'/*__SOURCE_NEW__*/',original:'/*__SOURCE_OLD__*/'};
 function svgEl(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!=null)el.textContent=text;return el;}
 // A layout-specific entry 'objectId@layout' wins over the plain 'objectId' entry (kitchen has a single layout since R134).
@@ -120,7 +120,7 @@ function buildPlan(){
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
 const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
-const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))&&(!p.onlyKitchen||p.onlyKitchen.includes(kitchenVersion()?.layout))&&(!p.onlyGuest||p.onlyGuest.includes(guestVersion()?.layout))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
+const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))&&(!p.onlyKitchen||p.onlyKitchen.includes(kitchenVersion()?.layout))&&(!p.onlyGuest||p.onlyGuest.includes(guestVersion()?.layout))&&(!p.onlyMaster||p.onlyMaster.includes(masterVersion()?.layout))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||(roomId===SMART&&!!project.smart);

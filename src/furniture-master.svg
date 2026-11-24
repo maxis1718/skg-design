@@ -1,5 +1,15 @@
-<!-- Master bedroom (single scheme master-b, displayed 方案 A; owner's sketch scheme removed R75). Bed 220 (E–W) × 200 (N–S), headboard on the west wall; headboard band 8 (schematic); drawer fronts = 5-wide dashed bands along north, south and foot with division ticks (sides 3 × ≈70.7, foot 2 × 100); two minimal pillows. Co-sleeper (言言) 60 × 170. Replaces source bed paths 329–345. Units: PDF pt.
- Bed north edge on the curtain pocket line (y190.17–246.87); co-sleeper on the bed's south side x 0–170, south edge y263.8 → Bath 1 entry 60. -->
+<!-- Master bedroom (R139): two schemes toggled by [data-master-plan]. Bed 220 (E–W) × 200 (N–S), headboard on the west wall; headboard band 8 (schematic); drawer fronts = 5-wide dashed bands along north, south and foot with division ticks (sides 3 × ≈70.7, foot 2 × 100); two minimal pillows. Replaces source bed paths 329–345. Units: PDF pt.
+ A (master-a, default): no co-sleeper; same bed moved 15 cm (4.252 pt) away from the balcony → y194.42–251.12 (balcony side 30 incl. curtain 15, wardrobe side 45, bed-foot corner → right wardrobe corner 46).
+ B (master-b): bed north edge on the curtain pocket line (y190.17–246.87); co-sleeper (言言) 60 × 170 on the bed's south side x 0–170, south edge y263.8 → Bath 1 entry 60. -->
+<g id="master-plan-a" data-master-plan="master-a" hidden>
+<g transform="translate(0 4.252)"><g data-layout="master-bed-a" class="furnishing" fill="none" stroke="currentColor">
+<path d="M185.52 190.17H247.88V246.87H185.52Z" stroke-width="0.24" stroke-linejoin="round"/>
+<path d="M187.79 190.17V246.87" stroke-width="0.18"/>
+<path d="M187.79 191.59H246.46V245.45H187.79" stroke-width="0.1" stroke-dasharray="0.9 0.6"/>
+<path d="M207.83 190.17V191.59M227.88 190.17V191.59M207.83 245.45V246.87M227.88 245.45V246.87M246.46 218.52H247.88" stroke-width="0.12"/>
+<path d="M189.49 194.42H198.99Q199.84 194.42 199.84 195.27V213.41Q199.84 214.26 198.99 214.26H189.49Q188.64 214.26 188.64 213.41V195.27Q188.64 194.42 189.49 194.42ZM189.49 222.77H198.99Q199.84 222.77 199.84 223.62V241.76Q199.84 242.61 198.99 242.61H189.49Q188.64 242.61 188.64 241.76V223.62Q188.64 222.77 189.49 222.77Z" stroke-width="0.1"/>
+</g></g>
+</g>
 <g id="master-plan-b" data-master-plan="master-b">
 <g data-layout="master-bed" class="furnishing" fill="none" stroke="currentColor">
 <path d="M185.52 190.17H247.88V246.87H185.52Z" stroke-width="0.24" stroke-linejoin="round"/>
