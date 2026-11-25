@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R147",
+    "revision": "R148",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4922,6 +4922,10 @@
     {
       "id": "C155",
       "text": "電視櫃定案方案 A（三格 220）"
+    },
+    {
+      "id": "C156",
+      "text": "電視櫃刪除方案 B，只留三格 220；客廳不再有方案切換"
     }
   ],
   "measurement_policy": {
