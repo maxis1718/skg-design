@@ -1946,11 +1946,11 @@
   "待辦整理：拿掉 IKEA 軌道燈、吊扇尺寸、helper 相關與多餘 laminate 項目；依施工時程排優先級（1＝12/1 木工前、2＝12 月中檯面與裝燈前、3＝入住前採購、4＝入住後）": "Todos tidied: IKEA track lights, fan size, helper-related and extra laminate items removed; priorities set by works schedule (1 = before carpentry 1 Dec, 2 = before countertop/light install mid-Dec, 3 = purchases before move-in, 4 = after move-in)",
   "最重要": "Most important",
   "全屋頁最上方列出最重要的待辦（置頂＋優先 1），點了直接跳到該房間": "Home tab now lists the most important open todos (pinned + priority 1) at the top; tap one to jump to its room",
-  "❓ 從弱電箱拉 Cat6 × 3 到三台 AP（AP1 走道口 190 櫃、AP2 三房走道、AP3 主臥門內），兩端標 AP1／AP2／AP3": "❓ Cat6 × 3 from the DB box to the 3 access points (AP1 walkway 190 cabinet, AP2 bedroom corridor, AP3 inside master door); label both ends AP1/AP2/AP3",
-  "❓ 主臥床靠陽台那側：單孔改雙孔": "❓ Master bed, balcony side: change single socket to double",
-  "❓ 弱電箱內有幾個插座？需要 3 個（ONT、路由器、PoE 交換器）": "❓ How many sockets inside the DB box? Need 3 (ONT, router, PoE switch)",
   "Wi‑Fi 圖": "Wi‑Fi plan",
   "重點清單：拆除項目都已確認、拿掉；改列給 Patrick 確認的差異（AP 網路線 ×3、主臥陽台側雙孔、弱電箱插座數）；上方三個按鈕改成互斥切換": "Key points: hacking items confirmed and removed; now lists the changes for Patrick to confirm (3 AP Cat6 runs, master balcony-side double socket, DB-box socket count); the three header buttons are now mutually exclusive toggles",
-  "弱電箱": "DB box"
+  "弱電箱": "DB box",
+  "📌 Cat6 × 3：弱電箱到 3 個 access point": "📌 Cat6 × 3 from DB box to 3 access points",
+  "📌 主臥床靠陽台側：單孔改雙孔": "📌 Master bed, balcony side: single → double",
+  "📌 弱電箱內需要 3 個插座": "📌 DB box: need 3 sockets inside"
  }
 }
