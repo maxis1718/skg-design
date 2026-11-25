@@ -119,12 +119,12 @@ function buildPlan(){
   buildPower();buildLight();
 }
 // ⚡ layer: points sit on fixed plan geometry (pt); room membership is computed from the current room polygons, so layout swaps need no data change.
-const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',switch:'智能開關',scene:'場景按鈕'};
+const POWER_KINDS={socket:'插座','ceiling-power':'天花電源',camera:'攝影機',ap:'Wi-Fi AP',data:'網路孔',hub:'網路主機',scene:'場景按鈕'};
 const powerPoints=()=>(project.electrical?.points||[]).filter(p=>(!p.onlyLayout||p.onlyLayout.includes(layoutId))&&(!p.onlyKitchen||p.onlyKitchen.includes(kitchenVersion()?.layout))&&(!p.onlyGuest||p.onlyGuest.includes(guestVersion()?.layout))&&(!p.onlyMaster||p.onlyMaster.includes(masterVersion()?.layout))).map(p=>{const o={...masterVersion()?.pointOverrides?.[p.id],...livingVersion()?.pointOverrides?.[p.id]};return Object.keys(o).length?{...p,...o}:p;});
 const powerPoint=id=>powerPoints().find(p=>p.id===id);
 const smartKinds=(all=false)=>{const cs=project.smart?.categories||[],pick=all?null:smartHover||smartCat,sel=pick?cs.filter(c=>c.id===pick):cs;return new Set(sel.flatMap(c=>c.kinds||[]));};
 const powerOn=()=>showPower||showNet||(roomId===SMART&&!!project.smart);
-// R144: network kinds (APs, data points, network gear, cameras, Cat6 runs) live on 📶; everything else (sockets, ceiling power, switches, scene) on ⚡.
+// R144: network kinds (APs, data points, network gear, cameras, Cat6 runs) live on 📶; everything else (sockets, ceiling power, scene button) on ⚡.
 const NET_KINDS=new Set(['ap','data','hub','camera','run']),isNetKind=k=>NET_KINDS.has(k),layerOf=k=>isNetKind(k)?'net':'power';
 const kindOn=k=>(roomId===SMART&&!!project.smart)||(isNetKind(k)?showNet:showPower);
 const powerMount=p=>p.mount==='ceiling'?t('天花'):p.mount==null?t('現有'):tf('離地 {h} cm',{h:p.mount});
@@ -142,7 +142,6 @@ function powerGlyph(p){
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:4.4,fill:'#fff',stroke:B,'stroke-width':.95}),svgEl('circle',{r:2,fill:'none',stroke:B,'stroke-width':.65}),svgEl('circle',{r:.75,fill:B}));}// R144: AP ≈ 1.33× the other marks
   else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
-  else if(p.kind==='switch'){g.append(svgEl('rect',{x:-2.1,y:-2.1,width:4.2,height:4.2,rx:.5,fill:'#fff',stroke:V,'stroke-width':.6}),svgEl('rect',{x:-.55,y:-1.25,width:1.1,height:2.5,rx:.3,fill:V}));}
   else if(p.kind==='scene'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.6,fill:V}),svgEl('path',{d:'M-.95 -.75A1.3 1.3 0 1 0 .95 -.75M0 -1.5V0',fill:'none',stroke:'#fff','stroke-width':.45,'stroke-linecap':'round'}));}
   else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
   g.append(svgEl('circle',{class:'pm-ring',r:p.kind==='ap'?5.9:4.1}),svgEl('circle',{class:'pm-hit',r:p.kind==='ap'?6:5}));
@@ -181,13 +180,13 @@ function renderPowerLayer(){
   const chip=(k,v,cls='')=>`<span><i class="pk pk-${k}${cls}"></i>${esc(t(v))}</span>`;
   if(smart)lg.innerHTML=Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>chip(k,v)).join('');
   else{// R144: one legend group per layer that is on
-    const pw=[chip('socket','單孔插座',' pk-single'),chip('socket','2 = 雙孔',' pk-twin'),...(powerPoints().some(p=>p.existing&&p.kind==='socket')?[chip('socket','現有插座',' pk-existing')]:[]),chip('ceiling-power',POWER_KINDS['ceiling-power']),chip('switch',POWER_KINDS.switch),chip('scene',POWER_KINDS.scene)];
+    const pw=[chip('socket','單孔插座',' pk-single'),chip('socket','2 = 雙孔',' pk-twin'),...(powerPoints().some(p=>p.existing&&p.kind==='socket')?[chip('socket','現有插座',' pk-existing')]:[]),chip('ceiling-power',POWER_KINDS['ceiling-power']),chip('scene',POWER_KINDS.scene)];
     const nt=[chip('ap',POWER_KINDS.ap),chip('hub',POWER_KINDS.hub),chip('data',POWER_KINDS.data),...(powerPoints().some(p=>p.existing&&p.kind==='data')?[chip('data','現有網路孔',' pk-existing')]:[]),chip('camera',POWER_KINDS.camera),chip('run','網路線')];
     const grp=(icon,name,cs)=>`<span class="lg-group"><b>${icon} ${esc(t(name))}</b>${cs.join('')}</span>`;
     lg.innerHTML=(showPower?grp('⚡','電力',pw):'')+(showNet?grp('📶','Wi-Fi 與網路',nt):'');}
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
 }
-// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,sw,color}] = switch keys, principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type twin(x,y,dir°,toWall cm,aims [°,°]; R141)|skylight(x,y,w,l cm,dir° = illuminant side,toWall cm,existing; R143)|track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
+// R112/R116 💡 lighting layer (off by default, URL ?light=1): project.lighting {groups [{id,name,color}] = lighting circuits (R148: wall switches are planned by Patrick, no switch codes), principles, rooms {roomId|corridor: {name, cct {k,at}, ceilings [{kind drop|slab|low, label, at, polygon pt}], fan {x,y pt, d cm, clear cm, label, blades}, lights [{type twin(x,y,dir°,toWall cm,aims [°,°]; R141)|skylight(x,y,w,l cm,dir° = illuminant side,toWall cm,existing; R143)|track(line, spots [[x,y,aim°]])|fanlight(d cm)|down(ip,surface)|cove|wash|strip|pir|pendant|ceil(d cm)|wall, group, x/y | line | x,y,w,l cm}], notes}}}.
 let showLight=new URLSearchParams(location.search).get('light')==='1';
 const lightRooms=()=>project.lighting?.rooms||{};
 const lightCol=g=>project.lighting?.groups?.find(x=>x.id===g)?.color||'#c98a00';
@@ -237,21 +236,18 @@ function renderLightLayer(){
   const all=here.flatMap(id=>lightRooms()[id].lights||[]).map(l=>l.surface?{...l,type:'surface'}:l),chip=(cls,c,txt)=>`<span><i class="lk lk-${cls}" style="--c:${c}"></i>${esc(txt)}</span>`,chips=[];
   const TYPES=[['down','嵌燈'],['track','軌道燈'],['fanlight','吊扇燈'],['surface','明裝筒燈'],['cove','燈槽'],['wash','洗牆燈'],['twin','雙頭洗牆燈'],['skylight','天窗燈（現有）'],['strip','燈帶'],['pir','衣櫃感應燈'],['wall','壁燈'],['ceil','吸頂燈'],['pendant','吊燈']];
   if(isHome(roomId)){for(const[ty,nm]of TYPES){const n=all.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,'#8a6d1f',ty==='down'||ty==='surface'||ty==='track'||ty==='skylight'?`${t(nm)} ${n}`:t(nm)));}if(all.some(l=>l.ip))chips.push(chip('ip','#2b6cb0',t('防水')));}
-  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.sw?`${gr.sw} ${gr.name}`:gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'||ty==='track'||ty==='skylight'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
+  else for(const gr of L.groups){const ls=all.filter(l=>l.group===gr.id),k=gr.name;for(const[ty,nm]of TYPES){const n=ls.filter(l=>l.type===ty).length;if(n)chips.push(chip(ty,gr.color,ty==='down'||ty==='surface'||ty==='track'||ty==='skylight'?`${t(nm)} ${n} · ${k}`:`${t(nm)} · ${k}`));}}
   if(here.some(id=>lightRooms()[id].fan))chips.push(chip('fan','#24443b',t('吊扇 · 外圈內不放燈')));
   lg.innerHTML=chips.join('');
   const cct=lr=>lr.cct?` · ${esc(lr.cct.k)}`:'';
   blk.innerHTML=(isHome(roomId)&&L.principles?`<section><h3>${esc(t('燈光原則'))}</h3><ul>${L.principles.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`:'')+here.map(id=>{const lr=lightRooms()[id];return `<section><h3>${esc(L.title)}${isHome(roomId)?` · ${esc(lr.name||room(id)?.name||id)}`:''}${cct(lr)}</h3><ul>${(lr.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></section>`;}).join('');
 }
 // 電與智能家居 record: shown under the plan on the whole-home view while ⚡ is on. `auto` sections are tables built from the visible points.
-const specOf=(p,k)=>(p.specs||[]).find(s=>s[0]===k)?.[1]??'';
 function recordTable(head,rows,first=false){
   return `<div class="sr-table"><table><thead><tr>${head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>i===0&&first&&c&&typeof c==='object'?`<td><button class="sr-open" data-power-open="${esc(c.id)}"><i class="pk pk-${c.kind}"></i>${esc(c.label)}</button></td>`:`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 function recordAuto(kind){
   const pts=powerPoints(),open=p=>({id:p.id,kind:p.kind,label:p.code});
-  if(kind==='switch'){const ps=pts.filter(p=>p.kind==='scene'||p.kind==='switch');
-    return recordTable([t('編號'),t('位置'),t('鍵數'),t('控制')],ps.map(p=>[open(p),p.place,specOf(p,t('鍵數'))||specOf(p,'鍵數'),specOf(p,t('控制'))||specOf(p,'控制')]),true);}
   if(kind==='power'){const ps=pts.filter(p=>['socket','ceiling-power'].includes(p.kind));
     return recordTable([t('編號'),t('位置'),t('類型'),t('安裝'),t('用途')],ps.map(p=>[open(p),p.place,p.kind==='socket'?socketType(p):t(POWER_KINDS[p.kind]),powerMount(p),p.use||'']),true);}
   return '';

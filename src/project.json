@@ -1066,11 +1066,12 @@
           "三片上掀蓋鉸鍊在靠牆側，緩降撐桿；手扣槽開蓋，不裝把手",
           "床尾牆靠門側裝 IKEA 層架 ×2，板面 155／185",
           "床側牆是掀蓋翻轉範圍，牆上不裝任何東西",
-          "床頭牆離地 100 留閱讀壁燈出線，接 SW-11 左鍵",
+          "床頭牆離地 100 留閱讀壁燈出線，獨立一路",
           "窗做框內捲簾，不做窗簾盒；門下留 1.5 通風縫",
           "冷氣外機不要正對女傭房窗",
           "床墊木作完成後再買：寬 = 實測內寬 − 2（內寬 ≥ 109 用 SS 107 × 190），厚 ≤ 12",
-          "原吸頂燈位留一個天花出線點（開孔＋電源）給 4–5 kg 吸頂無葉風扇燈，之後再裝：鎖結構樓板；有假天花就用吊筋到樓板或內加夾板補強，不能只鎖石膏板；電源接 SW-03 左鍵；床尾牆不做插座"
+          "原吸頂燈位留一個天花出線點（開孔＋電源）給 4–5 kg 吸頂無葉風扇燈，之後再裝：鎖結構樓板；有假天花就用吊筋到樓板或內加夾板補強，不能只鎖石膏板；電源獨立一路、常開；床尾牆不做插座",
+          "開關位置與鍵數：由 Patrick 規劃；燈依下方燈光迴路分組"
         ]
       },
       "research": [
@@ -2246,7 +2247,7 @@
       "height_cm": null,
       "status": "design-proposal",
       "uncertainty_cm": null,
-      "notes": "IKEA NYMÅNE wall/reading lamp, wired-in (903.569.63) with a SOLHETTA GU10 2700K bulb, north wall west side at 100; hardwired to SW-11 left key.",
+      "notes": "IKEA NYMÅNE wall/reading lamp, wired-in (903.569.63) with a SOLHETTA GU10 2700K bulb, north wall west side at 100; hardwired on its own circuit.",
       "physical_drawing_indices": [],
       "name": "女傭房閱讀壁燈",
       "source_note": "IKEA NYMÅNE 嵌入式接線＋SOLHETTA GU10 2700K\n床頭牆靠窗側離地 100，照向枕頭",
@@ -5207,7 +5208,7 @@
             "陽台門窗簾盒深 15，單軌遮光簾",
             "AP-03 吸頂在主臥門開門扇範圍正上方的假天花（U7 Lite；離門牆 38、離兩側牆 ≥ 48），Cat6 AP3 從弱電箱經走廊假天花穿門頂牆，不走明線",
             "床頭插座照方案 A：床頭牆兩側各一個 13A 雙孔，在床寬外、不被床擋；S-03 靠陽台（離陽台牆 22.5，窗簾 15 與床緣之間）、S-04 靠衣櫃（離床緣 21），離地 70（床墊頂＋15，量床墊後再定）",
-            "SW-15 在 S-04 與床緣之間（離床緣 8），同高 70，摸黑一伸手就到"
+            "開關位置與鍵數：由 Patrick 規劃；燈依下方燈光迴路分組"
           ]
         }
       },
@@ -5218,7 +5219,7 @@
         "plan": {
           "watch": [
             "陽台門只能從床尾進，可用玻璃約 35 → 側身進出",
-            "床頭板高 ≤ 90：兩側插座與 SW-15 都在床頭板上方 100"
+            "床頭板高 ≤ 90：兩側插座都在床頭板上方 100"
           ],
           "items": [
             {
@@ -5260,7 +5261,8 @@
             "靠浴室那扇門內貼全身鏡",
             "陽台門窗簾盒深 15，單軌遮光簾",
             "AP-03 吸頂在主臥門開門扇範圍正上方的假天花（U7 Lite；離門牆 38、離兩側牆 ≥ 48），Cat6 AP3 從弱電箱經走廊假天花穿門頂牆，不走明線",
-            "插座照方案 A 施工；改定方案 B 才用本方案的 S-03 單孔／S-04 雙孔（床頭板上方 100）與 SW-15"
+            "插座照方案 A 施工；改定方案 B 才用本方案的 S-03 單孔／S-04 雙孔（床頭板上方 100）",
+            "開關位置與鍵數：由 Patrick 規劃；燈依下方燈光迴路分組"
           ]
         }
       }
@@ -5452,10 +5454,10 @@
             "電視線（牆內）：電視電源線＋HDMI 從電視背後下到電視櫃內後方；喇叭線在牆內連兩個喇叭腳架",
             "電視牆：離陽台玻璃 0–325，到玄關天花降低處止；木作底板厚 5＋淡灰壁紙到天花，壁掛處補強",
             "喇叭腳架各用防倒帶固定到電視牆，木作底板在腳架後離地 50–75 加夾板",
-            "電視櫃底部內縮，裝暖光燈條，由電視牆左端 SW-14 開關",
+            "電視櫃底部內縮，裝暖光燈條（電視櫃底燈，獨立一路）",
             "中格抽屜做短，後方走線；插座裝在櫃面隱藏式蓋板 60 × 10 正下方（對準電視）；隔板後方留過線口通到左格",
             "天花：整片假天花 260（窗簾盒雙軌、嵌燈、電視牆洗牆燈槽）；吊扇在餐桌與沙發之間，吊桿穿過假天花鎖樓板補強點；玄關、鋼琴上方 ≈ 240",
-            "電視牆雙頭洗牆燈（天花 260）：離電視牆面 60、對準電視中線（離玻璃 160）；開孔依實品（雙頭約 160 × 85），驅動放開孔旁假天花內、可從開孔取出；SW-01 雙鍵左鍵（電視牆燈）拉一路切換火線到燈位，不接調光器；裝好後兩頭各往外 40°、俯 55°，光斑下緣在螢幕上緣以上",
+            "電視牆雙頭洗牆燈（天花 260）：離電視牆面 60、對準電視中線（離玻璃 160）；開孔依實品（雙頭約 160 × 85），驅動放開孔旁假天花內、可從開孔取出；電視牆洗牆燈獨立一路切換火線到燈位，不接調光器；裝好後兩頭各往外 40°、俯 55°，光斑下緣在螢幕上緣以上",
             "鋼琴：天花 240 只開 1 個嵌燈孔，在鋼琴正中（離背牆約 31），7 W；接客廳燈迴路",
             "左側風扇：Noctua NF-A14 5V PWM（USB），左格插座含一個 USB",
             "插座：電視櫃中格蓋板下、左格各 13A 雙孔 × 2（左格其一帶 USB）；右喇叭與重低音共用一個 13A 雙孔",
@@ -5464,7 +5466,8 @@
             "攝影機 P-01／03／08：天花 13A 插座給 Apple 20W 變壓器；攝影機走 Wi-Fi，不拉 Cat6",
             "弱電箱（大門左側 DB 凹位；ONT 已裝在旁邊櫃子）：放 UCG Ultra、TL-SG1005P，與 ONT 平放層板、不疊放，不放進配電盤本體；13A 雙孔 × 2（S-46），ONT、UCG Ultra、TL-SG1005P 各一孔；箱門改百葉，或上下各留 ≥ 2 cm 通風縫",
             "新拉 Cat6 只有三條：從弱電箱經假天花各自拉到 AP1（190 櫃）、AP2（走廊）、AP3（主臥門內），PoE、不串接、不走明線，兩端貼標籤 AP1／AP2／AP3，接 TL-SG1005P PoE 埠 1–3",
-            "原有網路孔：電視牆 D-01、客房 D-02、書房 D-03 發展商已預埋到弱電箱，不用新拉、圖上不畫；在弱電箱跳線接 UCG Ultra LAN 2–4，兩端標 TV／D-02／D-03，通線測試"
+            "原有網路孔：電視牆 D-01、客房 D-02、書房 D-03 發展商已預埋到弱電箱，不用新拉、圖上不畫；在弱電箱跳線接 UCG Ultra LAN 2–4，兩端標 TV／D-02／D-03，通線測試",
+            "開關位置與鍵數：由 Patrick 規劃；燈依下方燈光迴路分組"
           ]
         }
       }
@@ -8380,7 +8383,7 @@
         {
           "zone": "中門兩側 · 化妝燈",
           "h": "120–200",
-          "note": "直條 LED ×2 嵌在中門兩側，CRI ≥ 90、4000K；SW-05 獨立一鍵"
+          "note": "直條 LED ×2 嵌在中門兩側，CRI ≥ 90、4000K；獨立一路"
         },
         {
           "zone": "最右門 · 牙刷",
@@ -12315,7 +12318,7 @@
       ],
       "rationale": [
         "日常用品放床尾牆的開放層架，一伸手就拿到；床底三格只放少用的（登機箱、換季被、收納箱）。",
-        "床頭維持在離門遠的一端：離門洞 80（另一端只有 45），看不到床頭；窗在床尾；S-13／SW-11 不用動。",
+        "床頭維持在離門遠的一端：離門洞 80（另一端只有 45），看不到床頭；窗在床尾；S-13 不用動。",
         "三片上掀：每片獨立開，三折床墊只折一段。",
         "不做整片掀床：107 × 190 連床墊太重，撐桿力大且開起來擋窗。",
         "床頭固定段 15 吸收 205 − 190。"
@@ -13733,23 +13736,6 @@
             },
             {
               "el": "path",
-              "d": "M72.7 0.3L79.10000000000001 0.3L79.10000000000001 2.9L72.7 2.9Z",
-              "fill": "#fff",
-              "stroke": "#6a4f97",
-              "stroke-width": 0.4,
-              "stroke-linejoin": "round"
-            },
-            {
-              "el": "text",
-              "x": 75.9,
-              "y": 8.6,
-              "font-size": 5.04,
-              "fill": "#6a4f97",
-              "label": "SW-11",
-              "text-anchor": "middle"
-            },
-            {
-              "el": "path",
               "d": "M111 80L111 160",
               "fill": "none",
               "stroke": "#a96f47",
@@ -14804,13 +14790,6 @@
               "label": "閱讀壁燈"
             },
             {
-              "type": "h-switch",
-              "x": 81,
-              "y": 78,
-              "n": 1,
-              "label": "SW-11"
-            },
-            {
               "type": "socket",
               "x": 93.7,
               "y": 55.7,
@@ -14845,10 +14824,6 @@
             {
               "y": 60,
               "label": "插座"
-            },
-            {
-              "y": 78,
-              "label": "開關"
             },
             {
               "y": 100,
@@ -15233,13 +15208,6 @@
               "h": 13
             },
             {
-              "type": "h-switch",
-              "x": 75,
-              "y": 120,
-              "n": 1,
-              "label": "SW-03"
-            },
-            {
               "type": "h-hook",
               "x": 42,
               "y": 160
@@ -15275,10 +15243,6 @@
             {
               "y": 38,
               "label": "台面"
-            },
-            {
-              "y": 120,
-              "label": "開關"
             },
             {
               "y": 160,
@@ -15327,11 +15291,6 @@
           "note": "IKEA NYMÅNE 嵌入式接線＋SOLHETTA GU10 2700K，照向枕頭"
         },
         {
-          "zone": "床頭開關 SW-11",
-          "h": "78",
-          "note": "Aqara H1 單鍵：閱讀壁燈；風扇燈用遙控。"
-        },
-        {
           "zone": "床頭插座 S-13",
           "h": "60",
           "note": "13A 雙孔＋USB-C"
@@ -15340,7 +15299,7 @@
       "rationale": [
         "天花 240：站在床上頭頂約 213、舉手約 260，整片天花都摸得到 → 只用全包覆、厚 ≤ 13 的吸頂無葉風扇燈：機身底 227，頭頂淨空 14。",
         "一個天花點同時給風和光：床尾牆不掛壁扇、不裝插座，只留層架。",
-        "SW-03 左鍵當電源常開，風速與燈用遙控；牆上一關，風扇也停。",
+        "風扇燈電源常開，風速與燈用遙控；牆上一關，風扇也停。",
         "層板 155／185：床尾蓋翻到 75° 最高約 131，托架底 135.5 不撞；坐在床尾頭頂約 133，到板底 20。"
       ],
       "open_questions": [
@@ -16015,14 +15974,6 @@
               "x1": 291.3,
               "y": -7.5,
               "label": "8.7"
-            },
-            {
-              "type": "h-switch",
-              "x": 45.2,
-              "y": 90,
-              "n": 1,
-              "label": "SW-14",
-              "size": 0.62
             },
             {
               "type": "rect",
@@ -18002,9 +17953,9 @@
           "note": "實心門＋門框四周膠條＋門底自動落下密封條；按摩椅聲音和深夜燈光不漏到對面小孩房。"
         },
         {
-          "zone": "開關插座",
-          "h": "SW-08 放門旁",
-          "note": "SW-08 放門洞旁 145 牆（開門那側），一伸手就按到；開著的門片貼住側牆，側牆不放開關。書桌和按摩椅插座都在對面牆，不受影響。"
+          "zone": "插座",
+          "h": "不動",
+          "note": "書桌和按摩椅插座都在對面牆，不受影響。"
         },
         {
           "zone": "費用工期",
@@ -18025,7 +17976,7 @@
       "rationale": [
         "圖面量：門洞牆到牆 100、牆厚 10；門洞一側到牆角 145，另一側到側牆只有 5；書桌在對面牆、離門牆 95；走廊 110；走廊牆往衛浴 2 門框 85、往主臥門只有 35，拉門不能往那邊滑。",
         "現況（交屋照片）：明裝拉門裝在房內；從房內面向門洞，門片往左滑、停在 145 牆上（往牆角那側），門楣盒頂到門上方的冷氣箱。",
-        "平開門鉸鏈放側牆那邊：開門貼側牆空牆，SW-08 在開門那側一伸手就按到；鉸鏈放另一側會擋住 SW-08 和 145 牆。"
+        "平開門鉸鏈放側牆那邊：開門貼側牆空牆，門旁 145 牆不被擋；鉸鏈放另一側會擋住 145 牆。"
       ],
       "open_questions": [
         "現有拉門門片寬（估 105）",
@@ -18539,24 +18490,6 @@
               "when": "open"
             },
             {
-              "el": "rect",
-              "x": 135.7,
-              "y": 0,
-              "width": 8.6,
-              "height": 1.6,
-              "fill": "#2b6cb0"
-            },
-            {
-              "el": "text",
-              "x": 143,
-              "y": 11,
-              "font-size": 6.5,
-              "fill": "#2b6cb0",
-              "text-anchor": "end",
-              "label": "SW-08",
-              "font-weight": 600
-            },
-            {
               "el": "path",
               "d": "M232 89.69999999999999V95.0M229.5 89.69999999999999H234.5M229.5 95.0H234.5",
               "fill": "none",
@@ -18598,9 +18531,9 @@
               "note": "實心門＋門框四周膠條＋門底自動落下密封條；按摩椅聲音和深夜燈光不漏到對面小孩房。"
             },
             {
-              "zone": "開關插座",
-              "h": "SW-08 放門旁",
-              "note": "SW-08 放門洞旁 145 牆（開門那側），一伸手就按到；開著的門片貼住側牆，側牆不放開關。書桌和按摩椅插座都在對面牆，不受影響。"
+              "zone": "插座",
+              "h": "不動",
+              "note": "書桌和按摩椅插座都在對面牆，不受影響。"
             },
             {
               "zone": "費用工期",
@@ -19120,24 +19053,6 @@
               "when": "open"
             },
             {
-              "el": "rect",
-              "x": 248.6,
-              "y": 15,
-              "width": 1.6,
-              "height": 8.6,
-              "fill": "#2b6cb0"
-            },
-            {
-              "el": "text",
-              "x": 246.2,
-              "y": 30,
-              "font-size": 6.5,
-              "fill": "#2b6cb0",
-              "text-anchor": "end",
-              "label": "SW-08",
-              "font-weight": 600
-            },
-            {
               "el": "path",
               "d": "M0 22H42.69999999999999M0 19.5V24.5M42.69999999999999 19.5V24.5",
               "fill": "none",
@@ -19188,9 +19103,9 @@
               "note": "明裝拉門四周約 1 的縫，按摩椅聲音和燈光漏到走廊、小孩房。"
             },
             {
-              "zone": "開關插座",
-              "h": "SW-08 在側牆",
-              "note": "門旁 145 牆被停放的門片擋住 → SW-08 放門洞旁側牆，離門牆 15、離地 120。"
+              "zone": "插座",
+              "h": "不動",
+              "note": "門片停在門旁 145 牆上，這段牆不能放開關插座；插座都在對面牆。"
             },
             {
               "zone": "費用工期",
@@ -19705,69 +19620,6 @@
               "when": "open"
             },
             {
-              "el": "rect",
-              "x": 248.6,
-              "y": 15,
-              "width": 1.6,
-              "height": 8.6,
-              "fill": "#2b6cb0"
-            },
-            {
-              "el": "text",
-              "x": 246.2,
-              "y": 30,
-              "font-size": 6.5,
-              "fill": "#2b6cb0",
-              "text-anchor": "end",
-              "label": "SW-08",
-              "font-weight": 600
-            },
-            {
-              "el": "rect",
-              "x": 317.2,
-              "y": -11.8,
-              "width": 8.6,
-              "height": 1.6,
-              "fill": "#c0392b"
-            },
-            {
-              "el": "circle",
-              "cx": 321.5,
-              "cy": -11.2,
-              "r": 7,
-              "fill": "none",
-              "stroke": "#c0392b",
-              "stroke-width": 0.9
-            },
-            {
-              "el": "text",
-              "x": 321.5,
-              "y": -32.2,
-              "font-size": 6.5,
-              "fill": "#c0392b",
-              "text-anchor": "middle",
-              "label": "SW-10",
-              "font-weight": 600
-            },
-            {
-              "el": "rect",
-              "x": 424.1,
-              "y": -11.8,
-              "width": 8.6,
-              "height": 1.6,
-              "fill": "#2b6cb0"
-            },
-            {
-              "el": "text",
-              "x": 428.40000000000003,
-              "y": -15.2,
-              "font-size": 6.5,
-              "fill": "#2b6cb0",
-              "text-anchor": "middle",
-              "label": "SW-10",
-              "font-weight": 600
-            },
-            {
               "el": "path",
               "d": "M145.2 -40H224.8M145.2 -42.5V-37.5M224.8 -42.5V-37.5",
               "fill": "none",
@@ -19800,7 +19652,7 @@
               "label": "98"
             }
           ],
-          "verdict": "不選：房內牆面全空，但開口變窄、走廊多一個盒子，還擋到衛浴 2 開關。",
+          "verdict": "不選：房內牆面全空，但開口變窄、走廊多一個盒子，還擋到衛浴 2 門旁牆面。",
           "spec": [
             {
               "zone": "動線",
@@ -19818,9 +19670,9 @@
               "note": "同 B，四周有縫。"
             },
             {
-              "zone": "開關插座",
-              "h": "SW-10 要移",
-              "note": "衛浴 2 開關被停放的門片擋住 → 移到衛浴 2 門另一側；SW-08 不動。"
+              "zone": "插座",
+              "h": "擋衛浴 2 門旁",
+              "note": "停放的門片擋住衛浴 2 門旁牆面。"
             },
             {
               "zone": "費用工期",
@@ -20342,43 +20194,6 @@
               "when": "open"
             },
             {
-              "el": "rect",
-              "x": 248.6,
-              "y": 15,
-              "width": 1.6,
-              "height": 8.6,
-              "fill": "#2b6cb0"
-            },
-            {
-              "el": "text",
-              "x": 246.2,
-              "y": 30,
-              "font-size": 6.5,
-              "fill": "#2b6cb0",
-              "text-anchor": "end",
-              "label": "SW-08",
-              "font-weight": 600
-            },
-            {
-              "el": "circle",
-              "cx": 116.9,
-              "cy": -11.2,
-              "r": 6,
-              "fill": "none",
-              "stroke": "#c0392b",
-              "stroke-width": 0.9
-            },
-            {
-              "el": "text",
-              "x": 116.9,
-              "y": -32.2,
-              "font-size": 6.5,
-              "fill": "#c0392b",
-              "text-anchor": "middle",
-              "label": "SW-13",
-              "font-weight": 600
-            },
-            {
               "el": "circle",
               "cx": 105.0,
               "cy": -14.2,
@@ -20420,7 +20235,7 @@
               "label": "淨 89"
             }
           ],
-          "verdict": "不選：最好看，但要拆牆重做，還動到主臥門框和 SW-13。",
+          "verdict": "不選：最好看，但要拆牆重做，還動到主臥門框。",
           "spec": [
             {
               "zone": "動線",
@@ -20438,9 +20253,9 @@
               "note": "比明裝好，仍不如平開門加密封條。"
             },
             {
-              "zone": "開關插座",
-              "h": "2 處受影響",
-              "note": "走廊側 SW-13 要移；主臥門框固定在這段牆上，要另做加固；SW-08 在側牆不受影響。"
+              "zone": "插座",
+              "h": "1 處受影響",
+              "note": "主臥門框固定在這段牆上，要另做加固。"
             },
             {
               "zone": "費用工期",
@@ -20688,7 +20503,7 @@
   ],
   "electrical": {
     "title": "電與網路",
-    "summary": "・網路：弱電箱放 UniFi Cloud Gateway Ultra 路由＋TP-Link TL-SG1005P PoE 交換器；U7 Lite ×3（走道口 190 櫃、走廊、主臥）各一條 Cat6、PoE 供電；新拉 Cat6 只有這三條；電視櫃、客房、書房用原有網路孔（已預埋到弱電箱），電視櫃接 5 口交換器；Wi-Fi 家／家電／訪客；約 S$801\n・攝影機：Aqara Camera Hub G350 ×3（客餐廳、廚房、小孩房）吸頂，走 Wi-Fi，24 小時錄影像加聲音到 microSD，用 Aqara App；電源在假天花內；約 S$1,683\n・家居中樞：Apple TV 4K 有線接電視櫃（HomePod mini 待命）\n・開關：Aqara H1 EU 有零線，每房門邊一組；大門內場景按鈕\n・網路線走向由水電依現場調整",
+    "summary": "・網路：弱電箱放 UniFi Cloud Gateway Ultra 路由＋TP-Link TL-SG1005P PoE 交換器；U7 Lite ×3（走道口 190 櫃、走廊、主臥）各一條 Cat6、PoE 供電；新拉 Cat6 只有這三條；電視櫃、客房、書房用原有網路孔（已預埋到弱電箱），電視櫃接 5 口交換器；Wi-Fi 家／家電／訪客；約 S$801\n・攝影機：Aqara Camera Hub G350 ×3（客餐廳、廚房、小孩房）吸頂，走 Wi-Fi，24 小時錄影像加聲音到 microSD，用 Aqara App；電源在假天花內；約 S$1,683\n・家居中樞：Apple TV 4K 有線接電視櫃（HomePod mini 待命）\n・開關：位置與鍵數由 Patrick 規劃；大門內場景按鈕\n・網路線走向由水電依現場調整",
     "sources": [
       {
         "label": "Aqara Camera Hub G350",
@@ -20705,14 +20520,6 @@
       {
         "label": "TP-Link TL-SG1005P",
         "url": "https://www.tp-link.com/en/business-networking/soho-switch-poe/tl-sg1005p/"
-      },
-      {
-        "label": "Aqara H1 EU (with neutral)",
-        "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
-      },
-      {
-        "label": "Aqara H2 EU",
-        "url": "https://www.smart-secure.co.uk/product/aqara-light-switch-h2-eu/"
       },
       {
         "label": "決策文件 · SKG 網路與攝影機方案比較",
@@ -20846,7 +20653,7 @@
         "place": "主臥床頭牆 · 靠衣櫃側床外",
         "mount": 100,
         "name": "插座 · 床頭靠衣櫃",
-        "notes": "・13A 雙孔，床頭牆上、床寬外：離床緣 21（SW-15 外側），不被床擋\n・離地 70 = 床墊頂約 55＋15，躺著伸手插得到；量完床墊高度再定\n・手機充電、床頭燈條變壓器（線沿床頭板後拉過來）",
+        "notes": "・13A 雙孔，床頭牆上、床寬外：離床緣 21，不被床擋\n・離地 70 = 床墊頂約 55＋15，躺著伸手插得到；量完床墊高度再定\n・手機充電、床頭燈條變壓器（線沿床頭板後拉過來）",
         "use": "床頭充電、床頭燈條",
         "gang": 2,
         "onlyMaster": [
@@ -21091,73 +20898,7 @@
             "鈕扣電池約 5 年，免拉線"
           ]
         ],
-        "notes": "・左鍵單擊「離家」：全屋燈、插座關\n・右鍵單擊「回家」；雙擊、長按在 Apple Home 自訂\n・鎖在開關盒上，與客廳開關並排"
-      },
-      {
-        "id": "sw-living",
-        "code": "SW-01",
-        "kind": "switch",
-        "x": 544.9,
-        "y": 383.5,
-        "place": "大門內左手牆 · 場景按鈕上方",
-        "mount": 120,
-        "name": "開關 · 客餐廳",
-        "product": "Aqara Smart Wall Switch H1 Triple Rocker (With Neutral) QBKG32LM＋Aqara H1 EU 有零線 · 雙鍵",
-        "specs": [
-          [
-            "鍵數",
-            "三鍵＋雙鍵（5 鍵）"
-          ],
-          [
-            "控制",
-            "玄關燈、客廳燈、餐廳燈；電視牆燈、洗牆燈"
-          ]
-        ],
-        "notes": "・三鍵：玄關燈、客廳燈、餐廳燈；雙鍵：電視牆燈、洗牆燈\n・玄關燈＝現有 skylight ×3（原有接線未知）\n・客廳燈＝電視兩側 2＋走道 2＋鋼琴正中 1\n・餐廳燈＝餐桌 2＋餐區牆邊 2\n・電視牆燈＝天花雙頭洗牆燈，有線，這鍵直接開關\n・洗牆燈是 Aqara LED Strip T1，常電；這鍵設為無線開關"
-      },
-      {
-        "id": "sw-tv-toe",
-        "code": "SW-14",
-        "kind": "switch",
-        "x": 584.0,
-        "y": 188.71,
-        "place": "電視牆左端 · 喇叭與電視之間",
-        "mount": 90,
-        "name": "開關 · 電視櫃底燈",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "電視櫃底燈"
-          ]
-        ],
-        "notes": "・櫃面上 45、離櫃左端 10，站在櫃前伸手越過櫃面就按得到\n・不被左喇叭或窗簾擋住"
-      },
-      {
-        "id": "sw-kitchen",
-        "code": "SW-02",
-        "kind": "switch",
-        "x": 549.6,
-        "y": 305,
-        "place": "廚房門內",
-        "mount": 120,
-        "name": "開關 · 廚房",
-        "product": "Aqara H1 EU 有零線 · 雙鍵",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "左：廚房主燈（嵌燈 ×6）；右：吊櫃下燈"
-          ]
-        ],
-        "notes": "・女傭房 SW-03 右鍵同控廚房主燈"
+        "notes": "・左鍵單擊「離家」：全屋燈、插座關\n・右鍵單擊「回家」；雙擊、長按在 Apple Home 自訂\n・鎖在開關盒上或背膠，跟 Patrick 排的牆面開關並排"
       },
       {
         "id": "sock-kitchen-25-a",
@@ -21225,208 +20966,6 @@
         "notes": "・13A 單孔，層內後牆右上角（正面看），插頭在電器後方\n・拉出板全拉時線留 ≥ 60"
       },
       {
-        "id": "sw-helper",
-        "code": "SW-03",
-        "kind": "switch",
-        "x": 455.6,
-        "y": 305.5,
-        "place": "女傭房門內",
-        "mount": 120,
-        "name": "開關 · 女傭房",
-        "product": "Aqara H1 EU 有零線 · 雙鍵",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "左：吸頂無葉風扇燈電源（常開）；右：廚房主燈"
-          ]
-        ],
-        "notes": "・左鍵是風扇燈電源，平常常開；風速、燈用遙控（牆上一關，風扇也停）\n・右鍵設為無線開關，同控 SW-02 廚房主燈"
-      },
-      {
-        "id": "sw-master",
-        "code": "SW-04",
-        "kind": "switch",
-        "x": 297.5,
-        "y": 234.6,
-        "place": "主臥門內",
-        "mount": 120,
-        "name": "開關 · 主臥",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "軌道燈"
-          ]
-        ],
-        "notes": "・床頭 SW-15 左鍵同控主燈"
-      },
-      {
-        "id": "sw-bath1",
-        "code": "SW-05",
-        "kind": "switch",
-        "x": 222.5,
-        "y": 297.5,
-        "place": "衛浴 1 門內",
-        "mount": 120,
-        "name": "開關 · 衛浴 1",
-        "product": "Aqara Smart Wall Switch H1 Triple Rocker (With Neutral) QBKG32LM",
-        "specs": [
-          [
-            "鍵數",
-            "三鍵"
-          ],
-          [
-            "控制",
-            "燈（嵌燈＋鏡櫃燈帶）、化妝燈、抽風機"
-          ]
-        ],
-        "notes": "・離淋浴區與浴缸 ≥ 60",
-        "room": "bath1"
-      },
-      {
-        "id": "sw-kid",
-        "code": "SW-06",
-        "kind": "switch",
-        "x": 311.5,
-        "y": 227.8,
-        "place": "小孩房門內",
-        "mount": 120,
-        "name": "開關 · 小孩房",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "軌道燈"
-          ]
-        ],
-        "notes": ""
-      },
-      {
-        "id": "sw-ne",
-        "code": "SW-07",
-        "kind": "switch",
-        "x": 381,
-        "y": 227.8,
-        "place": "客房門內",
-        "mount": 120,
-        "name": "開關 · 客房",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "軌道燈"
-          ]
-        ],
-        "notes": "・床邊 SW-12 同控"
-      },
-      {
-        "id": "sw-s",
-        "code": "SW-08",
-        "kind": "switch",
-        "x": 342.5,
-        "y": 272.15,
-        "place": "書房門內 · 側牆",
-        "mount": 120,
-        "name": "開關 · 書房",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "軌道燈"
-          ]
-        ],
-        "notes": "・門洞旁書桌那面側牆，離門牆 15；門旁 145 牆被停放的拉門擋住"
-      },
-      {
-        "id": "sw-corridor",
-        "code": "SW-09",
-        "kind": "switch",
-        "x": 423.6,
-        "y": 235.2,
-        "place": "走廊 · 客廳入口",
-        "mount": 120,
-        "name": "開關 · 走廊",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "走廊燈（嵌燈 ×3）"
-          ]
-        ],
-        "notes": "・主臥門外 SW-13 無線開關同控"
-      },
-      {
-        "id": "sw-master-door",
-        "code": "SW-13",
-        "kind": "switch",
-        "x": 306.5,
-        "y": 262.6,
-        "place": "主臥門外 · 走廊側",
-        "mount": 120,
-        "name": "無線開關 · 主臥門外",
-        "product": "Aqara Wireless Remote Switch H1 (Single Rocker) · WRS-R01",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "走廊燈（同控 SW-09）"
-          ]
-        ],
-        "notes": ""
-      },
-      {
-        "id": "sw-master-bed",
-        "code": "SW-15",
-        "kind": "switch",
-        "x": 186.4,
-        "y": 251.9,
-        "place": "主臥床頭牆 · 靠衣櫃側床外",
-        "mount": 100,
-        "name": "無線開關 · 主臥床頭",
-        "product": "Aqara Wireless Remote Switch H1 (Double Rocker) · WRS-R02",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "左：軌道燈（同控 SW-04）；右：床頭燈條（雙按 5% 夜燈）"
-          ]
-        ],
-        "notes": "・床寬外、離床緣 8，在 S-04 與床之間，離地 70：摸黑伸手就按到\n・床頭燈條 Aqara LED Strip T1 常電，變壓器插 S-04",
-        "onlyMaster": [
-          "master-a"
-        ]
-      },
-      {
         "id": "sock-bed-n-b",
         "code": "S-03",
         "kind": "socket",
@@ -21451,81 +20990,12 @@
         "place": "主臥床頭 · 靠言言的床那側",
         "mount": 100,
         "name": "插座 · 床頭靠言言的床",
-        "notes": "・13A 雙孔，床頭板上方，離地 100、離床緣 65（在 SW-15 內側）\n・躺著伸手插得到：手機充電、床頭燈條變壓器（線藏在床頭板後）\n・言言站在小床裡搆不到",
+        "notes": "・13A 雙孔，床頭板上方，離地 100、離床緣 65\n・躺著伸手插得到：手機充電、床頭燈條變壓器（線藏在床頭板後）\n・言言站在小床裡搆不到",
         "use": "床頭、床頭燈條",
         "gang": 2,
         "onlyMaster": [
           "master-b"
         ]
-      },
-      {
-        "id": "sw-master-bed-b",
-        "code": "SW-15",
-        "kind": "switch",
-        "x": 186.4,
-        "y": 233.264,
-        "place": "主臥床頭牆 · 言言的床那側",
-        "mount": 100,
-        "name": "無線開關 · 主臥床頭",
-        "product": "Aqara Wireless Remote Switch H1 (Double Rocker) · WRS-R02",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "左：軌道燈（同控 SW-04）；右：床頭燈條（雙按 5% 夜燈）"
-          ]
-        ],
-        "notes": "・在床寬內、床頭板上方，躺著伸手可及；不在言言的床上方，言言站起來按不到\n・床頭燈條 Aqara LED Strip T1 常電，變壓器插 S-04",
-        "onlyMaster": [
-          "master-b"
-        ]
-      },
-      {
-        "id": "sw-bfan",
-        "code": "SW-16",
-        "kind": "switch",
-        "x": 427.4,
-        "y": 186.0,
-        "place": "餐桌牆 · 陽台門旁",
-        "mount": 120,
-        "name": "開關 · 陽台吊扇",
-        "product": "Aqara H1 EU 有零線 · 雙鍵",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "左：吊扇燈；右：吊扇（風速用吊扇遙控）"
-          ]
-        ],
-        "notes": "・離玻璃 50，窗簾收在旁邊也按得到\n・陽台原有開關只剩鞦韆旁那盞筒燈"
-      },
-      {
-        "id": "sw-bath2",
-        "code": "SW-10",
-        "kind": "switch",
-        "x": 364.5,
-        "y": 261.6,
-        "place": "衛浴 2 門外 · 走廊",
-        "mount": 120,
-        "name": "開關 · 衛浴 2",
-        "product": "Aqara H1 EU 有零線 · 雙鍵",
-        "specs": [
-          [
-            "鍵數",
-            "雙鍵"
-          ],
-          [
-            "控制",
-            "燈（嵌燈＋鏡櫃燈帶）、抽風機"
-          ]
-        ],
-        "notes": "・放門外，門向浴室內開不擋\n・離地 120"
       },
       {
         "id": "sock-purifier-1",
@@ -21672,34 +21142,6 @@
         ]
       },
       {
-        "id": "sw-guest-bed-a",
-        "code": "SW-12",
-        "kind": "switch",
-        "x": 419.4,
-        "y": 203.0,
-        "place": "客房床頭側牆 · 床與衣櫃之間",
-        "mount": 75,
-        "name": "無線開關 · 客房床邊",
-        "product": "Aqara Wireless Remote Switch H1 (Single Rocker) · WRS-R01",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "軌道燈（同控 SW-07）"
-          ]
-        ],
-        "notes": "・躺著伸手可及",
-        "onlyLayout": [
-          "layout-b"
-        ],
-        "onlyGuest": [
-          "guest-a"
-        ]
-      },
-      {
         "id": "sock-kid-east",
         "code": "S-12",
         "kind": "socket",
@@ -21750,28 +21192,6 @@
         "notes": "・13A 雙孔＋USB-C，比床面高 12\n・在枕頭靠門側；手機放床頭固定段充電",
         "use": "床頭",
         "gang": 2
-      },
-      {
-        "id": "sw-helper-bed",
-        "code": "SW-11",
-        "kind": "switch",
-        "x": 448.6,
-        "y": 286.0,
-        "place": "女傭房床頭",
-        "mount": 78,
-        "name": "開關 · 女傭房床頭",
-        "product": "Aqara H1 EU 有零線 · 單鍵",
-        "specs": [
-          [
-            "鍵數",
-            "單鍵"
-          ],
-          [
-            "控制",
-            "閱讀壁燈"
-          ]
-        ],
-        "notes": "・躺著伸手可及\n・風扇燈用遙控，這裡不同控（遙控放床頭固定段）"
       },
       {
         "id": "sock-bath2-dryer",
@@ -21825,7 +21245,7 @@
         "place": "客廳陽台 · 天花中間",
         "mount": "ceiling",
         "name": "天花點 · 陽台吊扇",
-        "notes": "・硬接線，接原本靠曬衣架那盞筒燈的線，明管約 50 到這裡\n・燈、扇兩路火線到 SW-16\n・吊扇鎖結構樓板",
+        "notes": "・硬接線，接原本靠曬衣架那盞筒燈的線，明管約 50 到這裡\n・燈、扇分兩路火線\n・吊扇鎖結構樓板",
         "use": "陽台吊扇"
       },
       {
@@ -22310,34 +21730,6 @@
           ]
         },
         {
-          "id": "switch",
-          "title": "智能開關",
-          "auto": "switch",
-          "text": "・Aqara H1 EU 有零線版：WS-EUK03 單鍵、WS-EUK04 雙鍵；85.8 × 86 mm，100–250 V，Zigbee 3.0，電阻負載 8 A\n・裝在新加坡 86 方盒；Harvey Norman SG 有售，單鍵 S$55\n・每個開關盒要有零線 N：請電工拉到每個盒；無零線版有最低負載與閃燈問題\n・中樞 Aqara Hub M3，S$289，放電視櫃\n・不選 H2 EU：55 mm 模組框，不配英式盒",
-          "sources": [
-            {
-              "label": "Aqara H1 EU (with neutral)",
-              "url": "https://www.aqara.com/en/product/smart-wall-switch-h1-with-neutral/"
-            },
-            {
-              "label": "Aqara H1 EU 說明書",
-              "url": "https://www.123led.nl/pdf/LAQ00028.pdf"
-            },
-            {
-              "label": "Harvey Norman SG · H1 單鍵",
-              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-ligthing-and-plugs/aqara-h1-neutral-single-rocker-smart-wall-switch-white-ws-euk03.html"
-            },
-            {
-              "label": "Aqara H2 EU",
-              "url": "https://www.smart-secure.co.uk/product/aqara-light-switch-h2-eu/"
-            },
-            {
-              "label": "Harvey Norman SG · Hub M3",
-              "url": "https://www.harveynorman.com.sg/smart-tech-and-phones/smart-home/smart-hubs-en/aqara-m3-hub-black-hm-g01d.html"
-            }
-          ]
-        },
-        {
           "id": "power",
           "title": "插座與天花供電",
           "auto": "power"
@@ -22345,14 +21737,14 @@
         {
           "id": "todo",
           "title": "待確認",
-          "text": "・弱電箱：ONT 已裝在大門左側 DB 凹位旁的櫃子，路由器與 PoE 交換器放同處；StarHub 開通時確認不會換成光貓路由一體機\n・攝影機吸頂支架（1/4\"）還沒找到合適商品\n・開關盒有沒有零線\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・走道口 190 櫃最上格：放 U7 Lite（Ø17.2），格內淨寬、淨高 ≥ 20"
+          "text": "・弱電箱：ONT 已裝在大門左側 DB 凹位旁的櫃子，路由器與 PoE 交換器放同處；StarHub 開通時確認不會換成光貓路由一體機\n・攝影機吸頂支架（1/4\"）還沒找到合適商品\n・各房有沒有假天花；沒有就做到頂的窗簾盒\n・客廳 Tripp Trapp 拉出後距玻璃約 10，會碰窗簾：用餐時收椅，或窗簾盒改 15\n・走道口 190 櫃最上格：放 U7 Lite（Ø17.2），格內淨寬、淨高 ≥ 20"
         }
       ]
     }
   },
   "smart": {
     "title": "智能家居",
-    "summary": "Apple Home 管開關、燈與場景（Apple TV 4K 有線當中樞，HomePod mini 待命）；Aqara Hub M3 以 Zigbee 帶開關、感應器與燈條；攝影機用 Aqara App。",
+    "summary": "Apple Home 管燈與場景（Apple TV 4K 有線當中樞，HomePod mini 待命）；Aqara Hub M3 以 Zigbee 帶場景按鈕、感應器與燈條；攝影機用 Aqara App；牆面開關由 Patrick 規劃。",
     "research": "smart-home",
     "categories": [
       {
@@ -22445,37 +21837,18 @@
         ]
       },
       {
-        "id": "switch",
-        "name": "智能開關與場景按鈕",
+        "id": "scene",
+        "name": "場景按鈕",
         "kinds": [
-          "switch",
           "scene"
         ],
-        "pick": "Aqara H1 EU 有零線版：裝新加坡 86 方盒，按下直接切電，不靠網路；大門場景按鈕用 Aqara Wireless Remote Switch H1 (Double Rocker)",
+        "pick": "大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)；牆面開關位置、鍵數與型號由 Patrick 規劃",
         "options": [
-          {
-            "name": "Aqara H1 EU 有零線（WS-EUK03／WS-EUK04）",
-            "verdict": "pick",
-            "summary": "Zigbee 進 M3、再進 Apple Home；單鍵 S$55、雙鍵 S$60，Harvey Norman SG 有售",
-            "details": "- 86 mm 方盒，金屬框，過載保護只在有零線版\n- 斷電記憶可設定：復電後燈保持關\n- 有零線的開關同時是 Zigbee 中繼，感應器訊號更穩\n- 大門場景按鈕另用 Aqara Wireless Remote Switch H1 (Double Rocker)，見下\n- 每塊最多 2 迴路；客廳超過 2 迴路就並排兩個 86 盒"
-          },
           {
             "name": "Aqara Wireless Remote Switch H1 (Double Rocker) · WRS-R02",
             "verdict": "pick",
             "summary": "大門場景按鈕：S$45，Harvey Norman SG；Zigbee 進 M3，Apple Home 每鍵可設場景",
-            "details": "- 單擊、雙擊、長按、雙鍵同按，最多 7 個場景\n- 鈕扣電池約 5 年，免拉線；可鎖在開關盒上或背膠\n- 與 H1 開關同系列外觀，並排一致\n- 建議：左鍵單擊「離家」關全屋燈與插座，右鍵單擊「回家」"
-          },
-          {
-            "name": "Aqara Z1 Pro",
-            "verdict": "alt",
-            "summary": "S$77 起，有滑條與更多按鍵；想要玻璃面與多鍵時選",
-            "details": "- 同樣 Zigbee 進 M3；框是塑膠，H1 是金屬\n- 沒有調光"
-          },
-          {
-            "name": "Aqara H2 EU / SmartSetup Thread 開關",
-            "verdict": "no",
-            "summary": "H2 EU 用 55 mm 模組框，不配英式盒；SmartSetup 只在 Amazon.sg，保固不明",
-            "details": "- 兩者都是 Matter over Thread，可直進 Apple Home，但新加坡沒有穩定的本地售後\n- 無零線開關有最低負載與 LED 閃爍問題，一律用有零線"
+            "details": "- 單擊、雙擊、長按、雙鍵同按，最多 7 個場景\n- 鈕扣電池約 5 年，免拉線；可鎖在開關盒上或背膠\n- 建議：左鍵單擊「離家」關全屋燈與插座，右鍵單擊「回家」"
           }
         ]
       },
@@ -22557,16 +21930,14 @@
       {
         "id": "light",
         "name": "燈光",
-        "kinds": [
-          "switch"
-        ],
-        "pick": "主照明用普通 LED 嵌燈＋H1 開關；只有電視牆洗牆燈、主臥床頭燈條用 Aqara LED Strip T1 調亮度",
+        "kinds": [],
+        "pick": "主照明用普通 LED 嵌燈；只有電視牆燈條、主臥床頭燈條用 Aqara LED Strip T1 調亮度",
         "options": [
           {
             "name": "普通嵌燈＋Aqara LED Strip T1",
             "verdict": "pick",
             "summary": "嵌燈壞了隨便換；燈條 S$69／2 m，Zigbee 進 M3，支援 HomeKit Adaptive Lighting",
-            "details": "- 燈條電源要常電，不接在開關後面；用 H1 無線鍵控制\n- Adaptive Lighting 只在 M3 以 HomeKit 方式橋接時有\n- 燈條本身是 Zigbee 中繼"
+            "details": "- 燈條電源要常電，不接在開關後面；用無線按鈕或 Apple Home 控制\n- Adaptive Lighting 只在 M3 以 HomeKit 方式橋接時有\n- 燈條本身是 Zigbee 中繼"
           },
           {
             "name": "Philips Hue",
@@ -22594,7 +21965,7 @@
             "name": "Aqara Door & Window Sensor + Motion Sensor P1",
             "verdict": "pick",
             "summary": "P1 S$39，電池約 5 年；用於夜燈與出門提醒（門開＋無人→提示按「離家」）",
-            "details": "- 和開關同一個 Zigbee 網，不用 Thread 路由\n- 門窗感應器新加坡價格待確認"
+            "details": "- 和場景按鈕、燈條同一個 Zigbee 網，不用 Thread 路由\n- 門窗感應器新加坡價格待確認"
           },
           {
             "name": "Aqara Presence Sensor FP2",
@@ -22725,6 +22096,13 @@
       "id": "todo-smart-all-off",
       "room": "smart",
       "text": "選大門場景按鈕：建議 Aqara Wireless Remote Switch H1 (Double Rocker)，S$45",
+      "status": "open",
+      "kind": "furn"
+    },
+    {
+      "id": "todo-smart-switches",
+      "room": "smart",
+      "text": "開關型號與位置由 Patrick 規劃後再定",
       "status": "open",
       "kind": "furn"
     },
@@ -23052,7 +22430,7 @@
     {
       "id": "todo-master-mattress-height",
       "room": "master",
-      "text": "回去量床墊高度（主臥床、言言小床；定床頭插座與開關高度用）",
+      "text": "回去量床墊高度（主臥床、言言小床；定床頭插座高度用）",
       "status": "open",
       "kind": "furn"
     },
@@ -23246,7 +22624,7 @@
       "title": "全屋智能家居方案",
       "updated": "2026-11-25",
       "summary": "選 Apple Home 單一 App 管開關、燈與場景＋Aqara Hub M3 Zigbee 骨幹＋Apple TV 4K 有線當家居中樞（HomePod mini 待命）；攝影機 G350 ×3 用 Aqara App；網路用 UniFi Cloud Gateway Ultra＋TL-SG1005P 放弱電箱；大門裝 Wireless Remote Switch H1 場景按鈕；不買 UPS。",
-      "body": "## 結論\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋Apple TV 4K 有線當家居中樞（S$399；已有的 HomePod mini 待命）** — 開關、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；Apple TV 負責遠端、自動化、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **家居中樞：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399）有線接電視櫃 5 口交換器（佔 1 埠）** — 有線比只有 Wi-Fi 的 HomePod mini 穩；它自動成為主中樞，HomePod mini 轉待命。放電視櫃中格、插 S-20。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi Cloud Gateway Ultra＋TP-Link TL-SG1005P（弱電箱）＋U7 Lite ×3＋電視櫃 5 口交換器（約 S$801）** — UCG Ultra 取代 StarHub 附的 HB615 並跑 UniFi Network；細節見攝影機與 Wi-Fi 研究的決策文件；沒有 UniFi 閘道，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **攝影機不進 Apple Home**：Aqara Camera Hub G350 ×3 用 Aqara App，24 小時錄影像加聲音到 microSD、回家鏡頭收起；HKSV 只錄片段存 iCloud，不符合需求。\n- **各類**：開關 Aqara Smart Wall Switch H1 EU（有零線）；攝影機 Aqara Camera Hub G350 ×3（Aqara App）；插座 Tapo P110M；燈 普通嵌燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由家居中樞（Apple TV）本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請；只有攝影機用 Aqara App（管理員／成員）。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台**：Apple TV＋M3（HomePod mini 待命、G350 可當備援）；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、M3、G350）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | Apple TV 4K＋Hub M3 | S$399＋S$289 |\n| 開關 ×11 | H1 EU 有零線 | S$55–60／個 |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | UCG Ultra＋U7 Lite ×3＋TL-SG1005P＋5 口交換器 | 約 S$801 |\n| 攝影機 ×3 | G350 ×3＋變壓器＋512GB 卡 | 約 S$1,683 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **告訴電工（開關）**：每個開關盒拉零線 N；86 方盒、盒深 ≥ 35 mm；每塊 H1 最多 2 迴路。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；M3 與 Apple TV 接電視櫃左格 5 口交換器（M3、交換器各用自己的變壓器，插 S-22）。\n- **Apple TV 4K**：有線接電視櫃交換器，加入後自動成為主中樞；HomePod mini 放客廳中央當待命中樞與音響。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；在 M3 的 Network Information 查 Zigbee 頻道（使用者改不了），三台 AP 的 2.4 GHz 鎖在避開它、彼此不重疊的頻道，20 MHz；Apple TV、HomePod mini、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ 中樞是有線 Apple TV：Wi-Fi 掉線時遠端與 Apple Home 自動化照常；HomePod mini 只有 Wi-Fi，只當待命。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- 攝影機 24 小時錄影靠 G350 的 microSD；HKSV 只錄事件，所以不用。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 攝影機：在 Aqara App 設「有人在家時隱私模式」（鏡頭收起、停止錄影），每人各建一份自動化。\n",
+      "body": "## 結論\n> 2026-11-25：全屋牆面開關改由 Patrick 規劃位置、鍵數與型號；本頁原本的開關編號與位置已移除，其餘照舊。\n\n- **選：Apple Home 單一 App＋Aqara Hub M3（Zigbee 骨幹）＋Apple TV 4K 有線當家居中樞（S$399；已有的 HomePod mini 待命）** — 場景按鈕、感應器、燈條走 Zigbee 進 M3，以 HomeKit 橋接進 Apple Home；Apple TV 負責遠端、自動化、Thread 邊界路由與 Matter 控制。\n- **The Frame 不能取代中樞**：電視裡的 Apple TV 只是串流 App（加 AirPlay 2），Samsung 電視不會出現在 Apple Home 的家居中樞清單，也不是 Apple 的 Thread 邊界路由器；中樞只能是 HomePod、HomePod mini 或 Apple TV 盒子。The Frame 自帶 SmartThings 中樞（含 Matter／Thread），但那是第二套 App，不用。\n- **家居中樞：Apple TV 4K（第 4 代，A19，Wi-Fi + Ethernet，S$399）有線接電視櫃 5 口交換器（佔 1 埠）** — 有線比只有 Wi-Fi 的 HomePod mini 穩；它自動成為主中樞，HomePod mini 轉待命。放電視櫃中格、插 S-20。\n- **不加第二台 HomePod mini**：Apple 一次只用一台主中樞；M3 已是第二個 Thread 邊界路由器。想要臥室音響時再買。\n- **備選架構：全部 Matter over Thread 直連** — 86 盒 Thread 開關、英規 Thread 插座在新加坡幾乎沒有本地貨，等兩三年再轉。\n- **不選：Aqara Home 當主 App；再加 Hue／SwitchBot／Tuya 中樞** — 多一套帳號、多一個故障點。\n- **網路：UniFi Cloud Gateway Ultra＋TP-Link TL-SG1005P（弱電箱）＋U7 Lite ×3＋電視櫃 5 口交換器（約 S$801）** — UCG Ultra 取代 StarHub 附的 HB615 並跑 UniFi Network；細節見攝影機與 Wi-Fi 研究的決策文件；沒有 UniFi 閘道，AP 只能獨立模式逐顆設定、沒有快速漫遊與遠端管理。買：UI Store SG 官網，或授權經銷 Win-Pro（38 Jalan Pemimpin #07-04 M38）；未查到可看實機的門市。\n- **大門場景按鈕：Aqara Wireless Remote Switch H1 (Double Rocker)，S$45** — 每鍵單擊／雙擊／長按＋雙鍵同按，最多 7 個 Apple Home 場景；電池約 5 年，免拉線。\n- **不買 UPS**：新加坡 2024 年 SAIDI 0.26 分鐘／戶，一年平均停電不到 1 分鐘。\n- **攝影機不進 Apple Home**：Aqara Camera Hub G350 ×3 用 Aqara App，24 小時錄影像加聲音到 microSD、回家鏡頭收起；HKSV 只錄片段存 iCloud，不符合需求。\n- **各類**：開關由 Patrick 規劃後再定；攝影機 Aqara Camera Hub G350 ×3（Aqara App）；插座 Tapo P110M；燈 普通嵌燈＋Aqara LED Strip T1；感應器 Aqara 門窗＋Motion Sensor P1。\n\n## 評判標準\n- **斷網照常用**：牆上開關按下直接切電；場景按鈕由家居中樞（Apple TV）本機執行，不靠網際網路。\n- **單一 App、家人好分享**：日常只開 Apple Home，家人用 Apple 帳號邀請；只有攝影機用 Aqara App（管理員／成員）。\n- **新加坡現貨與保固**：BS 86 方盒、BS1363 插頭、本地 12–36 個月保固；水貨只在無替代時。\n- **中樞 ≤ 2 台**：Apple TV＋M3（HomePod mini 待命、G350 可當備援）；其他設備不得再要自己的中樞。\n- **Apple Home 原生功能**：Adaptive Lighting 要走 HomeKit 橋接（Matter 橋接會失去）。\n- **斷電恢復**：開關設斷電記憶，復電後燈保持關；不買 UPS（新加坡停電極少）。\n- **長期支援**：選已上市 ≥ 2 年、仍在更新的型號（H1、M3、G350）。\n\n## 比較\n| 標準 | Zigbee＋M3 | Thread 直連 | Aqara App |\n|---|---|---|---|\n| 日常 App | Apple Home | Apple Home | Aqara Home |\n| 中樞 | HomePod＋M3 | HomePod | M3 |\n| 斷網開燈 | 可 | 可 | 可 |\n| 86 盒開關 | H1 本地貨 | 幾乎無 | H1 本地貨 |\n| 自適應照明 | 有 | 有 | 無 |\n| 家人分享 | Apple 帳號 | Apple 帳號 | Aqara 帳號 |\n\n| 中樞 | HomePod mini | Apple TV 4K | The Frame |\n|---|---|---|---|\n| 當家居中樞 | 可 | 可 | 不可 |\n| Thread 邊界路由 | 有 | 有 | 僅 SmartThings |\n| 網路 | 只有 Wi-Fi | Ethernet | — |\n| 費用 | 已有 S$0 | S$399 | — |\n\n| 類別 | 選 | 約價 |\n|---|---|---|\n| 中樞 | Apple TV 4K＋Hub M3 | S$399＋S$289 |\n| 開關 | Patrick 規劃後再定 | — |\n| 場景按鈕 | Wireless Remote Switch H1 雙鍵 | S$45 |\n| 網路 | UCG Ultra＋U7 Lite ×3＋TL-SG1005P＋5 口交換器 | 約 S$801 |\n| 攝影機 ×3 | G350 ×3＋變壓器＋512GB 卡 | 約 S$1,683 |\n| 插座／燈條／感應器 | P110M／T1／P1 | S$19.90／69／39 |\n\n## 要先做的事\n- **開關**：位置、鍵數與型號由 Patrick 規劃；燈依燈光迴路分組。\n- **告訴電工（燈條與網路）**：燈條變壓器處留常電；M3 與 Apple TV 接電視櫃左格 5 口交換器（M3、交換器各用自己的變壓器，插 S-22）。\n- **Apple TV 4K**：有線接電視櫃交換器，加入後自動成為主中樞；HomePod mini 放客廳中央當待命中樞與音響。\n- **設定**：M3 用 HomeKit QR 加入 Apple Home，不再用 Matter 重複加；M3 的 Thread 加入 Apple 現有網路；在 M3 的 Network Information 查 Zigbee 頻道（使用者改不了），三台 AP 的 2.4 GHz 鎖在避開它、彼此不重疊的頻道，20 MHz；Apple TV、HomePod mini、插座放同一網段。\n- **大門場景按鈕**：Wireless Remote Switch H1 雙鍵，左鍵單擊「離家」（全屋燈、插座關），右鍵單擊「回家」，其餘自訂。\n\n## 風險與待確認\n> ⚠️ 中樞是有線 Apple TV：Wi-Fi 掉線時遠端與 Apple Home 自動化照常；HomePod mini 只有 Wi-Fi，只當待命。\n> ⚠️ HomePod mini 與 M3 都是 Thread 邊界路由器，M3 必須加入 Apple 網路，否則分裂成兩個 Thread 網。\n> ⚠️ Hub M3 是單點：壞了開關仍可手按，但 Aqara 設備（含場景按鈕）的 App 控制與自動化全停。\n- 攝影機 24 小時錄影靠 G350 的 microSD；HKSV 只錄事件，所以不用。\n- Apple Home 尚未支援 Matter 攝影機（2026-10，待確認）。\n- 攝影機：在 Aqara App 設「有人在家時隱私模式」（鏡頭收起、停止錄影），每人各建一份自動化。\n",
       "sources": [
         {
           "title": "Apple: Set up HomePod, HomePod mini or Apple TV as a home hub",
@@ -23366,7 +22744,7 @@
       "title": "女傭房風扇與燈",
       "updated": "2026-10-29",
       "summary": "2026-11-25 起風扇與吸頂燈改為吸頂無葉風扇燈（見吊扇調研），本頁只剩 IKEA NYMÅNE 閱讀燈有效。原結論：Mistral MWF1454DR-G 壁扇、IKEA BARLAST 吸頂燈。",
-      "body": "> 2026-11-25 更新：風扇與吸頂燈已改為吸頂無葉風扇燈（見「吊扇調研」）；本頁只剩 NYMÅNE 閱讀壁燈有效。\n\n## 結論\n- **吸頂風扇燈有問題 → 改用壁扇。**天花 240，站在床上頭頂約 213、舉手約 260；20 吋吸頂風扇燈高 21.5，扇葉底約 218，正在頭手高度。\n- **選風扇：Mistral MWF1454DR-G 14 吋 DC 壁扇**（S$129，Courts／Harvey Norman）— 33 寬塞得進床尾靠窗側；新加坡三腳插頭與 Safety Mark，不用轉接頭。\n- **選吸頂燈：IKEA BARLAST LED ceiling/wall lamp 25 cm 白色**（S$9.90，IKEA SG 505.259.96）— Ø25 × 6.7、910 lm、2700K、9.5 W、IP44，站著頭頂離燈約 20；單色溫、不可調光，H1 斷電再通電不跳色。\n- **不選：IKEA STOFTMOLN 24 cm** — IKEA SG 不賣。\n- **選閱讀燈：IKEA NYMÅNE Wall/reading lamp, wired-in inst**（S$25.90，不附燈泡）＋ SOLHETTA GU10 345 lm 可調光（S$4.90），接 SW-11 左鍵。\n- **風扇固定不擺頭：**14 吋的風吹到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭只會一陣有一陣無。安裝時朝床中段、往下斜。\n- **開關：**H1 EU 有零線雙鍵支援「轉為無線開關」，右鍵在 Aqara Home 設成無線開關，用自動化切門邊 SW-03 的吸頂燈。\n- **不選：20 吋吸頂風扇燈（¥244）** — 開放扇葉在頭頂高度。\n- **不選：無葉／隱形扇葉風扇燈** — GONEO ATTO GF19AT 高 24.6、9 kg，多數 15–25 厚，一樣在頭頂高度。\n- **不選：三色變光吸頂燈** — 靠開關斷電切色，和 H1 智能開關衝突。\n\n## 評判標準\n- **站在床上安全**：頭頂 213 上方沒有會轉的東西；天花燈具 ≤ 7 厚\n- **風向**：從床尾沿床長吹，不近距離對臉\n- **尺寸**：風扇寬 ≤ 35，放得進吊櫃與窗簾之間\n- **到手總價**：淘寶價＋9% GST＋運費，對比新加坡價；新加坡貴 2 倍以上才選淘寶\n- **插頭與安規**：插電電器要新加坡三腳插頭與 Safety Mark\n- **乾淨**：插座藏在吊櫃上方，線不垂過床\n\n## 到手總價\n| 品項 | 新加坡 | 淘寶同級到手 | 結論 |\n|---|---|---|---|\n| 14 吋 DC 壁扇 | S$129 | 約 S$55–70 | 新加坡 |\n| 閱讀壁燈 | S$30.80 | 約 S$20–25 | IKEA |\n| 吸頂燈 | S$9.90 | 約 S$12–18 | IKEA |\n\n- 壁扇淘寶約 ¥200–300 一台，加 GST 與 3–4 kg 運費約 S$55–70，便宜一半；但是中國插頭、沒有 Safety Mark，要轉接頭插在床尾高處，不值得\n- 兩盞燈 IKEA 都不比淘寶貴；BARLAST 內建 LED 約 25,000 小時，壞了 S$9.90 整盞換\n\n## 要先做的事\n- 告訴電工：S-14 13A 帶開關，床尾牆吊櫃上方離地 220、離床側牆 75；開關常開\n- 壁扇離床側牆 17、離地 180–233，鎖進牆體，朝床中段往下斜\n- 床頭牆離地 100 留 NYMÅNE 線盒接 SW-11 左鍵；天花中央留吸頂燈出線接 SW-03，BARLAST 為接線式，用 2 顆螺絲鎖天花\n- 吊櫃改 55 寬，靠門側牆\n\n## 風險與待確認\n- 床尾 35 上方有吊櫃與壁扇：坐著沒問題，站起來要在床中段\n- 窗扇若向內開會碰到壁扇，窗扇開法待確認\n- 淘寶價格是估算\n- BARLAST 是 IP44 浴室款，燈罩為乳白塑膠、外觀較樸素；門市庫存待確認\n",
+      "body": "> 2026-11-25 更新：風扇與吸頂燈已改為吸頂無葉風扇燈（見「吊扇調研」）；本頁只剩 NYMÅNE 閱讀壁燈有效。\n\n> 2026-11-25：全屋牆面開關改由 Patrick 規劃位置、鍵數與型號；本頁原本的開關編號與位置已移除，其餘照舊。\n\n## 結論\n- **吸頂風扇燈有問題 → 改用壁扇。**天花 240，站在床上頭頂約 213、舉手約 260；20 吋吸頂風扇燈高 21.5，扇葉底約 218，正在頭手高度。\n- **選風扇：Mistral MWF1454DR-G 14 吋 DC 壁扇**（S$129，Courts／Harvey Norman）— 33 寬塞得進床尾靠窗側；新加坡三腳插頭與 Safety Mark，不用轉接頭。\n- **選吸頂燈：IKEA BARLAST LED ceiling/wall lamp 25 cm 白色**（S$9.90，IKEA SG 505.259.96）— Ø25 × 6.7、910 lm、2700K、9.5 W、IP44，站著頭頂離燈約 20；單色溫、不可調光，H1 斷電再通電不跳色。\n- **不選：IKEA STOFTMOLN 24 cm** — IKEA SG 不賣。\n- **選閱讀燈：IKEA NYMÅNE Wall/reading lamp, wired-in inst**（S$25.90，不附燈泡）＋ SOLHETTA GU10 345 lm 可調光（S$4.90），獨立一路。\n- **風扇固定不擺頭：**14 吋的風吹到床頭已散開約 60–80 寬，蓋住床寬 107；擺頭只會一陣有一陣無。安裝時朝床中段、往下斜。\n- **開關：**H1 EU 有零線雙鍵支援「轉為無線開關」，右鍵在 Aqara Home 設成無線開關，用自動化切門邊開關的吸頂燈。\n- **不選：20 吋吸頂風扇燈（¥244）** — 開放扇葉在頭頂高度。\n- **不選：無葉／隱形扇葉風扇燈** — GONEO ATTO GF19AT 高 24.6、9 kg，多數 15–25 厚，一樣在頭頂高度。\n- **不選：三色變光吸頂燈** — 靠開關斷電切色，和 H1 智能開關衝突。\n\n## 評判標準\n- **站在床上安全**：頭頂 213 上方沒有會轉的東西；天花燈具 ≤ 7 厚\n- **風向**：從床尾沿床長吹，不近距離對臉\n- **尺寸**：風扇寬 ≤ 35，放得進吊櫃與窗簾之間\n- **到手總價**：淘寶價＋9% GST＋運費，對比新加坡價；新加坡貴 2 倍以上才選淘寶\n- **插頭與安規**：插電電器要新加坡三腳插頭與 Safety Mark\n- **乾淨**：插座藏在吊櫃上方，線不垂過床\n\n## 到手總價\n| 品項 | 新加坡 | 淘寶同級到手 | 結論 |\n|---|---|---|---|\n| 14 吋 DC 壁扇 | S$129 | 約 S$55–70 | 新加坡 |\n| 閱讀壁燈 | S$30.80 | 約 S$20–25 | IKEA |\n| 吸頂燈 | S$9.90 | 約 S$12–18 | IKEA |\n\n- 壁扇淘寶約 ¥200–300 一台，加 GST 與 3–4 kg 運費約 S$55–70，便宜一半；但是中國插頭、沒有 Safety Mark，要轉接頭插在床尾高處，不值得\n- 兩盞燈 IKEA 都不比淘寶貴；BARLAST 內建 LED 約 25,000 小時，壞了 S$9.90 整盞換\n\n## 要先做的事\n- 告訴電工：S-14 13A 帶開關，床尾牆吊櫃上方離地 220、離床側牆 75；開關常開\n- 壁扇離床側牆 17、離地 180–233，鎖進牆體，朝床中段往下斜\n- 床頭牆離地 100 留 NYMÅNE 線盒獨立一路；天花中央留吸頂燈出線另一路，BARLAST 為接線式，用 2 顆螺絲鎖天花\n- 吊櫃改 55 寬，靠門側牆\n\n## 風險與待確認\n- 床尾 35 上方有吊櫃與壁扇：坐著沒問題，站起來要在床中段\n- 窗扇若向內開會碰到壁扇，窗扇開法待確認\n- 淘寶價格是估算\n- BARLAST 是 IP44 浴室款，燈罩為乳白塑膠、外觀較樸素；門市庫存待確認\n",
       "sources": [
         {
           "title": "Mistral MWF1454DR-G 14\" DC Wall Fan – Harvey Norman SG",
@@ -24094,7 +23472,7 @@
       "title": "全屋燈光設計",
       "updated": "2026-11-25",
       "summary": "色溫固定（客餐廳與書房 3500K、廚房與浴室 4000K、臥室走廊陽台 3000K）；嵌燈同一款深藏防眩 10 W Ø75；臥室與書房不做假天花，原有燈位明裝 IKEA NYMÅNE 4 燈白色軌道燈；客廳吊扇 2 葉不帶燈、光不穿過扇葉；陽台吊扇 44″ 帶燈。",
-      "body": "## 結論\n- **色溫固定**：客餐廳、書房 3500K；廚房、浴室 4000K；臥室、走廊、陽台 3000K；女傭房與閱讀燈 2700K；化妝燈、衣櫃燈、鏡櫃燈帶 4000K。屋主只按實體開關，可調色溫要靠 App，和 Aqara H1 衝突。\n- **嵌燈同一款**（客餐廳、廚房、浴室、走廊）：深藏防眩 10 W、開孔 Ø75、光束約 50°、切光 35°、CRI ≥ 90（R9 > 50）、UGR < 19、無頻閃、SDCM ≤ 3；只差色溫（A 3500K／B 4000K／C 3000K）與防水（E IP65）。\n- **主臥、小孩房、客房、書房不做假天花**：原有燈位明裝 **IKEA NYMÅNE 4 燈白色軌道燈**（73 cm，S$49.90），不打槽、不降天花；燈頭打牆、衣櫃、書桌，不朝床頭。\n- **燈泡 GU10**：臥室 **Philips MASTER LED ExpertColor GU10 5.5-50W 930 36D**（3000K、CRI 97、375 lm，RS S$33.51 未稅）；書房 3500K：Philips 與 LEDVANCE 都沒有 3500K 高顯色 GU10 → 淘寶 GU10 3500K Ra ≥ 90（型號待確認）。\n- **吊扇**：客廳 52″ 2 葉不帶燈；客廳陽台 44″ 帶燈（戶外防潮 IP44 以上、3000K）。\n- **只開關、不調光**：要調亮度的只有兩條 Aqara LED Strip T1：電視牆洗牆燈（PS5 時 20%）、主臥床頭燈條（雙按 5% 夜燈）。\n- **亮度**：客廳 300、餐桌 400、檯面 500、洗手台 300、臥室 100–150、走廊 100 lux，都高於 IES 最低值。\n- **下單前先買嵌燈 A、B 各 1–2 盞樣品**，晚上現場看眩光與色溫。\n\n## 客餐廳\n- **構圖**：兩排嵌燈平行落地窗，離窗簾盒 20、離後側 40，對稱於電視與沙發中線；每排 3 盞、間距 170：餐區兩角（對稱於餐桌中線）＋沙發旁。餐桌 2 盞在餐桌中線上，吊扇在兩區之間留白。\n- **沙發與電視**：沙發上方、沙發到電視之間不放燈（拿掉電視櫃前 2 盞）；電視牆由洗牆燈照亮，看電視的視線裡沒有燈。\n- **電視牆雙頭洗牆燈**：天花 260，離牆 60、對準電視中線；2 × 7 W、24°、俯仰 ≥ 55°，兩頭外擺 40°、俯 55°，光斑在螢幕上緣以上；燈在螢幕的鏡像點約離地 234，沙發看不到反光。SW-01 自己一鍵（電視牆燈）；T1 留著當可調光背光。\n- **牆面亮**：兩排用可調角度款，往窗簾和牆偏 15–20°；鋼琴 1 盞在鋼琴正中（7 W ≈ 438 lm）。\n- **亮度**：9 × 650＋鋼琴 438 ≈ 6,290 lm；加洗牆燈 T1 ≈ 850、雙頭洗牆燈 ≈ 880 → ≈ 8,000 lm，現居 CWT（≈ 6,000 lm，屋主覺得 9 成夠）的 1.3 倍。\n\n| 場景 | 按鍵 |\n|---|---|\n| 看電視、PS5 | 洗牆燈（PS5 調 20%） |\n| 放鬆 | 客廳燈（電視兩側 2＋走道 2＋鋼琴 1）＋電視牆燈 |\n| 吃飯 | 餐廳燈（四角 4＋餐桌 2） |\n| 全亮 | 五鍵全開 |\n\n## 軌道燈（臥室、書房）\n| 型號 | 規格 | 價格 | 結論 |\n|---|---|---|---|\n| NYMÅNE 4 燈 白 | 73 cm、GU10 ×4 另購、每燈可轉 | S$49.90 | **選** |\n| KRUSNATE 4 燈 白 | 52 cm、GU10 ×4 | S$19.90 | 備選：短 21，燈頭擠 |\n| BÄVE LED 3／5 燈 白 | 內建 LED 2700K、不能換、未標 CRI | S$69.90／79.90 | 不選：色溫不對 |\n| SKURUP 3 燈 | 96 cm、GU10 | S$29.90 | 不選：只有黑色 |\n\n- 中心對準原有燈位，接線盒直接接燈座，不打槽；燈頭往外打，躺床只看到燈罩背面。\n- 每房 4 × 375 lm ≈ 1,500 lm，約 9 m² ≈ 150 lux。\n\n| 房間 | 方向 | 4 盞打哪裡 | 色溫 |\n|---|---|---|---|\n| 主臥 | 橫跨床寬 | 陽台門、床尾牆、入口、衣櫃走道 | 3000K |\n| 小孩房 | 平行窗 | 兩側牆、衣櫃、門口 | 3000K |\n| 客房 | 順著床 | 門口、床尾牆、書桌、衣櫃 | 3000K |\n| 書房 | 平行書桌 | 書桌 ×2 交叉、門口、窗簾 | 3500K |\n\n## 吊扇與光\n- **客廳**：葉片面離地約 225，在假天花 260 下 35。切光 35° 的光錐在葉片面半徑 25；扇半徑 66 → 嵌燈離扇心 < 91 光才穿過扇葉。最近的嵌燈 124 → 全過，不用移；扇換 56″ 門檻 96 仍過。洗牆燈與日光不經過扇葉上方。\n- **2 葉 vs 3 葉**：閃的頻率 = 葉片數 × 每秒轉數；2 葉轉得快但每圈只遮 2 次，兩者都在約 5–10 Hz，看得到。所以重點是光不穿過扇葉，跟葉片數無關；2 葉每次遮光較久，穿過時更明顯。\n- **陽台**：44″（Ø112），陽台正中往鞦韆側 13；葉尖離曬衣架 34、離鞦韆繩（擺到 ±100，葉片高度偏離吊點約 19）約 68、離外緣與玻璃牆各 27（48″ 只剩 22）。帶燈取代靠曬衣架那盞筒燈。新 SW-16（Aqara H1 雙鍵，餐桌牆靠陽台門）：左燈右扇，選扇要燈、扇分兩路接線。\n\n## 原則\n- **色溫交界**：相鄰空間最多差 500K；浴室關門看不到。\n- **眩光**：坐沙發、躺床、躺按摩椅的視線範圍內不放燈、不打燈頭；嵌燈離牆 40–80，照牆和櫃面。\n- **電視**：沙發正上方不放燈；打 PS5 只留洗牆燈 20%。\n- **頻閃**：驅動要無頻閃（IEEE 1789 無風險區，或 Pst ≤ 1、SVM ≤ 0.4），手機慢動作錄影檢查樣品。\n\n## 各房間\n| 房間 | 燈具 | 開關 | 色溫 |\n|---|---|---|---|\n| 客餐廳 | 嵌燈 A ×9（鋼琴 7 W）、雙頭洗牆燈、洗牆燈 T1、電視櫃底燈、吊扇 52″ | SW-01、SW-14 | 3500K |\n| 玄關 | 現有 skylight ×3（型號未知） | SW-01 | 未知 |\n| 廚房 | 嵌燈 B ×6、吊櫃下燈帶 | SW-02 | 4000K |\n| 女傭房 | 吸頂無葉風扇燈（型號待選）、NYMÅNE 閱讀燈 | SW-03、SW-11 | 3000K／閱讀 2700K |\n| 主臥 | 軌道燈、床頭 T1、衣櫃 PIR | SW-04、SW-15 | 3000K |\n| 衛浴 1 | 嵌燈 B ×2、E ×1、鏡櫃燈帶、化妝燈 | SW-05 | 4000K |\n| 衛浴 2 | 嵌燈 B ×2、E ×1、鏡櫃燈帶 | SW-10 | 4000K |\n| 小孩房 | 軌道燈 | SW-06 | 3000K |\n| 客房 | 軌道燈、NYMÅNE 閱讀燈、衣櫃 PIR | SW-07、SW-12 | 3000K |\n| 書房 | 軌道燈 | SW-08 | 3500K |\n| 走廊 | 嵌燈 C ×3 | SW-09、SW-13 | 3000K |\n| 客廳陽台 | 吊扇燈、明裝筒燈 F ×1 | SW-16、原有 | 3000K |\n| 主臥陽台 | 明裝筒燈 F ×1 | 原有 | 3000K |\n\n## 燈具表\n| 型號 | 規格 | 數量 | 參考 |\n|---|---|---|---|\n| A 嵌燈 3500K | 深藏防眩 10 W、Ø75、≈ 50°、CRI ≥ 90 | 9（鋼琴 7 W ×1） | 西顿 CDN 深杯防眩嵌入式筒灯（淘寶 ¥90–100），開孔待確認 |\n| B 嵌燈 4000K | 同 A，IP44 面蓋 | 10 | 同 A |\n| C 嵌燈 3000K | 同 A | 3 | 同 A |\n| E 淋浴嵌燈 4000K | 同 A，IP65 | 2 | 同品牌防水款 |\n| K 軌道燈 | IKEA NYMÅNE 4 燈 白 | 4 | S$49.90 |\n| G 燈泡 GU10 | 930 CRI 97 ×12；3500K Ra ≥ 90 ×4 | 16 | Philips ExpertColor／淘寶 |\n| U 燈帶 | 24 V COB CRI ≥ 90，鋁槽；廚房 4000K、電視櫃 3000K | ≈ 3 m | 淘寶 |\n| T 智能燈帶 | Aqara LED Strip T1 | 2 | S$69／2 m |\n| W 雙頭洗牆燈 3500K | 嵌入式雙頭可調 2 × 7 W、24°、俯仰 ≥ 55°、CRI ≥ 90、深藏防眩 | 1 | 淘寶雙頭格柵燈，型號待確認 |\n| S 天窗燈（現有） | PeseTech Skylight 系列；datasheet 30120W 每盞最高 3,600 lm，實際型號未知 | 3 | 已裝 |\n| P 衣櫃燈 | 24 V 鋁槽燈＋PIR 4000K | 3 | 木作附 |\n| R 閱讀壁燈 | IKEA NYMÅNE 接線式＋SOLHETTA 2700K | 2 | S$25.90＋燈泡 |\n| H 吸頂無葉風扇燈 | 全包覆、厚 ≤ 13（見吊扇調研） | 1 | 待選 |\n| F 陽台筒燈 | 明裝 IP65 3000K ≈ 10 W | 2 | 待確認 |\n| V 陽台吊扇 | 44″ 帶燈、IP44 以上 | 1 | 待選 |\n\n## 預算（燈具，不含電工）\n| 項目 | 估價 S$ | 備註 |\n|---|---|---|\n| 嵌燈 A/B/C/E 24 盞 | 480–590 | 淘寶＋9% GST＋運費 |\n| 雙頭洗牆燈 ×1 | 40–80 | 淘寶 |\n| IKEA NYMÅNE 4 燈 ×4 | ≈ 200 | |\n| GU10 燈泡 16 顆 | ≈ 480 | Philips 12 × 36.5（含 GST）＋淘寶 4 顆 |\n| 燈帶 U＋驅動 | 100–150 | |\n| T1 ×2＋延長 | ≈ 165 | |\n| IKEA 閱讀燈、吸頂燈 | ≈ 70 | |\n| 陽台筒燈 F ×2 | 40–80 | |\n| 陽台吊扇帶燈 | 300–600 | 待選 |\n| **合計** | **≈ 2,000–2,500** | |\n\n## 待確認\n- 嵌燈實際開孔、R9、頻閃，靠樣品驗證。\n- 玄關現有 skylight：型號、版本、原有接線未知；走廊亮度是否夠由屋主決定。\n- 雙頭洗牆燈要找俯仰 ≥ 55° 的款（多數只到 30°，30° 光會落在螢幕上）。\n- 原有天花燈位：圖上畫在房間中心，軌道燈中心對準實際燈位。\n- 客廳吊扇尺寸（52″ 佔位）；陽台樓板高度（以 280 計）。\n- 書房 3500K GU10 高顯色型號。",
+      "body": "## 結論\n> 2026-11-25：全屋牆面開關改由 Patrick 規劃位置、鍵數與型號；本頁原本的開關編號與位置已移除，其餘照舊。\n\n- **色溫固定**：客餐廳、書房 3500K；廚房、浴室 4000K；臥室、走廊、陽台 3000K；女傭房與閱讀燈 2700K；化妝燈、衣櫃燈、鏡櫃燈帶 4000K。屋主只按實體開關，可調色溫要靠 App，不採用。\n- **嵌燈同一款**（客餐廳、廚房、浴室、走廊）：深藏防眩 10 W、開孔 Ø75、光束約 50°、切光 35°、CRI ≥ 90（R9 > 50）、UGR < 19、無頻閃、SDCM ≤ 3；只差色溫（A 3500K／B 4000K／C 3000K）與防水（E IP65）。\n- **主臥、小孩房、客房、書房不做假天花**：原有燈位明裝 **IKEA NYMÅNE 4 燈白色軌道燈**（73 cm，S$49.90），不打槽、不降天花；燈頭打牆、衣櫃、書桌，不朝床頭。\n- **燈泡 GU10**：臥室 **Philips MASTER LED ExpertColor GU10 5.5-50W 930 36D**（3000K、CRI 97、375 lm，RS S$33.51 未稅）；書房 3500K：Philips 與 LEDVANCE 都沒有 3500K 高顯色 GU10 → 淘寶 GU10 3500K Ra ≥ 90（型號待確認）。\n- **吊扇**：客廳 52″ 2 葉不帶燈；客廳陽台 44″ 帶燈（戶外防潮 IP44 以上、3000K）。\n- **只開關、不調光**：要調亮度的只有兩條 Aqara LED Strip T1：電視牆洗牆燈（PS5 時 20%）、主臥床頭燈條（雙按 5% 夜燈）。\n- **亮度**：客廳 300、餐桌 400、檯面 500、洗手台 300、臥室 100–150、走廊 100 lux，都高於 IES 最低值。\n- **下單前先買嵌燈 A、B 各 1–2 盞樣品**，晚上現場看眩光與色溫。\n\n## 客餐廳\n- **構圖**：兩排嵌燈平行落地窗，離窗簾盒 20、離後側 40，對稱於電視與沙發中線；每排 3 盞、間距 170：餐區兩角（對稱於餐桌中線）＋沙發旁。餐桌 2 盞在餐桌中線上，吊扇在兩區之間留白。\n- **沙發與電視**：沙發上方、沙發到電視之間不放燈（拿掉電視櫃前 2 盞）；電視牆由洗牆燈照亮，看電視的視線裡沒有燈。\n- **電視牆雙頭洗牆燈**：天花 260，離牆 60、對準電視中線；2 × 7 W、24°、俯仰 ≥ 55°，兩頭外擺 40°、俯 55°，光斑在螢幕上緣以上；燈在螢幕的鏡像點約離地 234，沙發看不到反光。自己一個迴路（電視牆洗牆燈）；T1 留著當可調光背光。\n- **牆面亮**：兩排用可調角度款，往窗簾和牆偏 15–20°；鋼琴 1 盞在鋼琴正中（7 W ≈ 438 lm）。\n- **亮度**：9 × 650＋鋼琴 438 ≈ 6,290 lm；加洗牆燈 T1 ≈ 850、雙頭洗牆燈 ≈ 880 → ≈ 8,000 lm，現居 CWT（≈ 6,000 lm，屋主覺得 9 成夠）的 1.3 倍。\n\n| 場景 | 按鍵 |\n|---|---|\n| 看電視、PS5 | 洗牆燈（PS5 調 20%） |\n| 放鬆 | 客廳燈（電視兩側 2＋走道 2＋鋼琴 1）＋電視牆燈 |\n| 吃飯 | 餐廳燈（四角 4＋餐桌 2） |\n| 全亮 | 五鍵全開 |\n\n## 軌道燈（臥室、書房）\n| 型號 | 規格 | 價格 | 結論 |\n|---|---|---|---|\n| NYMÅNE 4 燈 白 | 73 cm、GU10 ×4 另購、每燈可轉 | S$49.90 | **選** |\n| KRUSNATE 4 燈 白 | 52 cm、GU10 ×4 | S$19.90 | 備選：短 21，燈頭擠 |\n| BÄVE LED 3／5 燈 白 | 內建 LED 2700K、不能換、未標 CRI | S$69.90／79.90 | 不選：色溫不對 |\n| SKURUP 3 燈 | 96 cm、GU10 | S$29.90 | 不選：只有黑色 |\n\n- 中心對準原有燈位，接線盒直接接燈座，不打槽；燈頭往外打，躺床只看到燈罩背面。\n- 每房 4 × 375 lm ≈ 1,500 lm，約 9 m² ≈ 150 lux。\n\n| 房間 | 方向 | 4 盞打哪裡 | 色溫 |\n|---|---|---|---|\n| 主臥 | 橫跨床寬 | 陽台門、床尾牆、入口、衣櫃走道 | 3000K |\n| 小孩房 | 平行窗 | 兩側牆、衣櫃、門口 | 3000K |\n| 客房 | 順著床 | 門口、床尾牆、書桌、衣櫃 | 3000K |\n| 書房 | 平行書桌 | 書桌 ×2 交叉、門口、窗簾 | 3500K |\n\n## 吊扇與光\n- **客廳**：葉片面離地約 225，在假天花 260 下 35。切光 35° 的光錐在葉片面半徑 25；扇半徑 66 → 嵌燈離扇心 < 91 光才穿過扇葉。最近的嵌燈 124 → 全過，不用移；扇換 56″ 門檻 96 仍過。洗牆燈與日光不經過扇葉上方。\n- **2 葉 vs 3 葉**：閃的頻率 = 葉片數 × 每秒轉數；2 葉轉得快但每圈只遮 2 次，兩者都在約 5–10 Hz，看得到。所以重點是光不穿過扇葉，跟葉片數無關；2 葉每次遮光較久，穿過時更明顯。\n- **陽台**：44″（Ø112），陽台正中往鞦韆側 13；葉尖離曬衣架 34、離鞦韆繩（擺到 ±100，葉片高度偏離吊點約 19）約 68、離外緣與玻璃牆各 27（48″ 只剩 22）。帶燈取代靠曬衣架那盞筒燈。燈、扇分兩路接線，選扇要支援。\n\n## 原則\n- **色溫交界**：相鄰空間最多差 500K；浴室關門看不到。\n- **眩光**：坐沙發、躺床、躺按摩椅的視線範圍內不放燈、不打燈頭；嵌燈離牆 40–80，照牆和櫃面。\n- **電視**：沙發正上方不放燈；打 PS5 只留洗牆燈 20%。\n- **頻閃**：驅動要無頻閃（IEEE 1789 無風險區，或 Pst ≤ 1、SVM ≤ 0.4），手機慢動作錄影檢查樣品。\n\n## 各房間\n| 房間 | 燈具 | 迴路 | 色溫 |\n|---|---|---|---|\n| 客餐廳 | 嵌燈 A ×9（鋼琴 7 W）、雙頭洗牆燈、洗牆燈 T1、電視櫃底燈、吊扇 52″ | 客廳燈、餐廳燈、電視牆洗牆燈、電視牆燈條、電視櫃底燈 | 3500K |\n| 玄關 | 現有 skylight ×3（型號未知） | 玄關燈 | 未知 |\n| 廚房 | 嵌燈 B ×6、吊櫃下燈帶 | 廚房主燈、吊櫃下燈 | 4000K |\n| 女傭房 | 吸頂無葉風扇燈（型號待選）、NYMÅNE 閱讀燈 | 風扇燈電源、閱讀壁燈 | 3000K／閱讀 2700K |\n| 主臥 | 軌道燈、床頭 T1、衣櫃 PIR | 主臥燈、床頭燈條 | 3000K |\n| 衛浴 1 | 嵌燈 B ×2、E ×1、鏡櫃燈帶、化妝燈 | 燈、化妝燈、抽風機 | 4000K |\n| 衛浴 2 | 嵌燈 B ×2、E ×1、鏡櫃燈帶 | 燈、抽風機 | 4000K |\n| 小孩房 | 軌道燈 | 主燈 | 3000K |\n| 客房 | 軌道燈、NYMÅNE 閱讀燈、衣櫃 PIR | 主燈；閱讀燈用燈上開關 | 3000K |\n| 書房 | 軌道燈 | 主燈 | 3500K |\n| 走廊 | 嵌燈 C ×3 | 走廊燈 | 3000K |\n| 客廳陽台 | 吊扇燈、明裝筒燈 F ×1 | 吊扇燈、吊扇、筒燈（原有開關） | 3000K |\n| 主臥陽台 | 明裝筒燈 F ×1 | 原有 | 3000K |\n\n## 燈具表\n| 型號 | 規格 | 數量 | 參考 |\n|---|---|---|---|\n| A 嵌燈 3500K | 深藏防眩 10 W、Ø75、≈ 50°、CRI ≥ 90 | 9（鋼琴 7 W ×1） | 西顿 CDN 深杯防眩嵌入式筒灯（淘寶 ¥90–100），開孔待確認 |\n| B 嵌燈 4000K | 同 A，IP44 面蓋 | 10 | 同 A |\n| C 嵌燈 3000K | 同 A | 3 | 同 A |\n| E 淋浴嵌燈 4000K | 同 A，IP65 | 2 | 同品牌防水款 |\n| K 軌道燈 | IKEA NYMÅNE 4 燈 白 | 4 | S$49.90 |\n| G 燈泡 GU10 | 930 CRI 97 ×12；3500K Ra ≥ 90 ×4 | 16 | Philips ExpertColor／淘寶 |\n| U 燈帶 | 24 V COB CRI ≥ 90，鋁槽；廚房 4000K、電視櫃 3000K | ≈ 3 m | 淘寶 |\n| T 智能燈帶 | Aqara LED Strip T1 | 2 | S$69／2 m |\n| W 雙頭洗牆燈 3500K | 嵌入式雙頭可調 2 × 7 W、24°、俯仰 ≥ 55°、CRI ≥ 90、深藏防眩 | 1 | 淘寶雙頭格柵燈，型號待確認 |\n| S 天窗燈（現有） | PeseTech Skylight 系列；datasheet 30120W 每盞最高 3,600 lm，實際型號未知 | 3 | 已裝 |\n| P 衣櫃燈 | 24 V 鋁槽燈＋PIR 4000K | 3 | 木作附 |\n| R 閱讀壁燈 | IKEA NYMÅNE 接線式＋SOLHETTA 2700K | 2 | S$25.90＋燈泡 |\n| H 吸頂無葉風扇燈 | 全包覆、厚 ≤ 13（見吊扇調研） | 1 | 待選 |\n| F 陽台筒燈 | 明裝 IP65 3000K ≈ 10 W | 2 | 待確認 |\n| V 陽台吊扇 | 44″ 帶燈、IP44 以上 | 1 | 待選 |\n\n## 預算（燈具，不含電工）\n| 項目 | 估價 S$ | 備註 |\n|---|---|---|\n| 嵌燈 A/B/C/E 24 盞 | 480–590 | 淘寶＋9% GST＋運費 |\n| 雙頭洗牆燈 ×1 | 40–80 | 淘寶 |\n| IKEA NYMÅNE 4 燈 ×4 | ≈ 200 | |\n| GU10 燈泡 16 顆 | ≈ 480 | Philips 12 × 36.5（含 GST）＋淘寶 4 顆 |\n| 燈帶 U＋驅動 | 100–150 | |\n| T1 ×2＋延長 | ≈ 165 | |\n| IKEA 閱讀燈、吸頂燈 | ≈ 70 | |\n| 陽台筒燈 F ×2 | 40–80 | |\n| 陽台吊扇帶燈 | 300–600 | 待選 |\n| **合計** | **≈ 2,000–2,500** | |\n\n## 待確認\n- 嵌燈實際開孔、R9、頻閃，靠樣品驗證。\n- 玄關現有 skylight：型號、版本、原有接線未知；走廊亮度是否夠由屋主決定。\n- 雙頭洗牆燈要找俯仰 ≥ 55° 的款（多數只到 30°，30° 光會落在螢幕上）。\n- 原有天花燈位：圖上畫在房間中心，軌道燈中心對準實際燈位。\n- 客廳吊扇尺寸（52″ 佔位）；陽台樓板高度（以 280 計）。\n- 書房 3500K GU10 高顯色型號。",
       "sources": [
         {
           "title": "US DOE Building America：High-Performance Lighting Strategy Guideline（引 IES Lighting Handbook 10th ed. 住宅照度表）",
@@ -24157,8 +23535,8 @@
     "study-door": {
       "title": "書房門做法",
       "updated": "2026-11-20",
-      "summary": "選 A 向內平開門（鉸鏈在側牆那邊）：隔音隱私最好、插座都不動、門旁 145 牆空出來放櫃；B 保留現況房內拉門最省但漏聲且吃掉 105 牆面；C 走廊側拉門淨開只剩 80、擋衛浴 2 開關；D 暗袋門要拆牆。",
-      "body": "## 結論\n- **選 A：向內平開門，鉸鏈在側牆那邊。** laminate 實心門＋門框四周膠條＋門底自動落下密封條（automatic drop seal）。\n  - 按摩椅聲音、深夜燈光不漏到正對面的小孩房（兩門相距 110）。\n  - 書桌、按摩椅插座都在對面牆，不用動；SW-08 放門洞旁 145 牆（開門那側）；這面牆其餘空出來，書房櫃可放這裡。\n  - 開門貼側牆空牆，書桌在對面牆；費用約 S$500–800（Patrick 報價）。\n- **不選 B（保留房內明裝拉門）**：免費，但四周有縫；門片停放吃掉 105 牆面，SW-08 只能放側牆，門楣盒疊在冷氣箱下。\n- **不選 C（拉門改到走廊側）**：走廊側只有 85 牆可停，淨開剩約 80；擋住衛浴 2 開關 SW-10；走廊多一條門楣盒。\n- **不選 D（暗袋門）**：要拆牆重做（Eclisse 有 100 mm 牆用套件），還動到主臥門框、SW-13；約 S$1,800–3,000。\n\n## 比較\n| 方案 | 淨開 | 隔音 | 費用（S$） |\n|---|---|---|---|\n| **A 平開門（向內）** | ≈86 | 最好 | 500–800 |\n| B 現況拉門（房內） | ≈97 | 差 | 0–150 |\n| C 走廊側拉門 | ≈80 | 差 | 200–400 |\n| D 暗袋門 | ≈89 | 普通 | 1,800–3,000 |\n\n## 圖面量測\n- 現況：拉門裝在房內；從房內面向門洞，門片往左停在 145 牆上（往牆角那側）。\n- 門洞牆到牆 100、牆厚 10；門洞一側到牆角 145，書桌那側到側牆 5。\n- 書桌離門牆 95；走廊 110；走廊牆往衛浴 2 門框 85、往主臥門 35。\n\n## 待確認\n- 現有拉門門片寬（估 105）。\n- 冷氣箱底離地高度：平開門框頂要在它下方。\n- 門牆材質（只有 D 需要）。\n",
+      "summary": "選 A 向內平開門（鉸鏈在側牆那邊）：隔音隱私最好、插座都不動、門旁 145 牆空出來放櫃；B 保留現況房內拉門最省但漏聲且吃掉 105 牆面；C 走廊側拉門淨開只剩 80、擋衛浴 2 門旁牆面；D 暗袋門要拆牆。",
+      "body": "## 結論\n> 2026-11-25：全屋牆面開關改由 Patrick 規劃位置、鍵數與型號；本頁原本的開關編號與位置已移除，其餘照舊。\n\n- **選 A：向內平開門，鉸鏈在側牆那邊。** laminate 實心門＋門框四周膠條＋門底自動落下密封條（automatic drop seal）。\n  - 按摩椅聲音、深夜燈光不漏到正對面的小孩房（兩門相距 110）。\n  - 書桌、按摩椅插座都在對面牆，不用動；門旁 145 牆空出來，書房櫃可放這裡。\n  - 開門貼側牆空牆，書桌在對面牆；費用約 S$500–800（Patrick 報價）。\n- **不選 B（保留房內明裝拉門）**：免費，但四周有縫；門片停放吃掉 105 牆面，門楣盒疊在冷氣箱下。\n- **不選 C（拉門改到走廊側）**：走廊側只有 85 牆可停，淨開剩約 80；擋住衛浴 2 門旁牆面；走廊多一條門楣盒。\n- **不選 D（暗袋門）**：要拆牆重做（Eclisse 有 100 mm 牆用套件），還動到主臥門框；約 S$1,800–3,000。\n\n## 比較\n| 方案 | 淨開 | 隔音 | 費用（S$） |\n|---|---|---|---|\n| **A 平開門（向內）** | ≈86 | 最好 | 500–800 |\n| B 現況拉門（房內） | ≈97 | 差 | 0–150 |\n| C 走廊側拉門 | ≈80 | 差 | 200–400 |\n| D 暗袋門 | ≈89 | 普通 | 1,800–3,000 |\n\n## 圖面量測\n- 現況：拉門裝在房內；從房內面向門洞，門片往左停在 145 牆上（往牆角那側）。\n- 門洞牆到牆 100、牆厚 10；門洞一側到牆角 145，書桌那側到側牆 5。\n- 書桌離門牆 95；走廊 110；走廊牆往衛浴 2 門框 85、往主臥門 35。\n\n## 待確認\n- 現有拉門門片寬（估 105）。\n- 冷氣箱底離地高度：平開門框頂要在它下方。\n- 門牆材質（只有 D 需要）。\n",
       "sources": [
         {
           "title": "Eclisse Single Pocket Door Kit – 100mm finished wall, 926 × 2040 door",
@@ -24295,7 +23673,7 @@
       "short": "吊扇調研",
       "updated": "2026-11-25",
       "summary": "屋主 2026-11-25 拍板：吸頂無葉風扇燈，原吸頂燈位留天花出線點，型號後選。只能用全包覆、厚 ≤ 13 cm 的貫流式：首選風生 風影標準款（50 × 50 × 13），次選雷士 NVC 2026 款（先確認厚度）；淘寶款都附燈、沒有新加坡 Safety Mark。",
-      "body": "## 屋主決定（2026-11-25）\n\n- **用吸頂無葉風扇燈**：水電階段在原吸頂燈位 (442.2, 312.2) 留一個天花出線點（開孔＋電源），型號之後從下表首選 1／2 挑（厚 ≤ 13、全包覆、低噪、可調風）。\n- 取消壁扇 HLP-02、插座 S-14、IKEA BARLAST；保留 NYMÅNE 閱讀壁燈。\n- SW-03 左鍵當風扇燈電源（常開），風扇與燈用遙控；SW-11 改單鍵，只控閱讀壁燈。\n\n## 先講重點\n\n- **這間能用的吸頂扇只有一種：全罩式、機身厚度 ≤ 13 cm 的「吸頂無葉風扇燈」，而且要是貫流式、出風口有格柵。**\n  - 露葉吊扇、隱形（收合）扇葉、吸頂擺頭扇、Exhale 都不合格（原因見下方淨空計算）。\n- **淘寶這一類商品全部附燈、只有 CCC 認證，沒有新加坡 Safety Mark。** 吊扇屬於新加坡 CPS 列管商品，CPS 也勸消費者不要從海外買吊扇。買淘寶款等於接受這兩點。\n- 新加坡買得到、有認證的全罩薄型吸頂扇：**這次沒有找到。** 有 Safety Mark 的安全退路是現有設計的壁扇（表格第 16 項）。\n\n## 本房淨空（天花 240：屋主說與廚房同高，未實測）\n\n| 項目 | 計算 | 結果 |\n|---|---|---|\n| 站立面 | 牆到牆床台 38＋三折床墊 10 | 48 |\n| 站在床上的頭頂 | 48＋155／165 | 203／213 |\n| 舉手最高 | 48＋1.33 × 身高 | 254–267：**整片天花都摸得到 → 必須全罩** |\n| 坐起來的頭頂 | 48＋坐高約 0.52 × 身高 | 129–134 |\n| 能接受的機身厚度 | 240 − 213 − 頭頂至少留 14 | **≤ 13 cm** |\n| IEC 60335-2-80 第 7.12.1 條 | 葉片離站立面 > 230 → 天花要 ≥ 278 | 露葉吊扇不合格 |\n\n## 產品比較（16 項）\n\n淘寶連結都是**搜尋連結**（淘寶商品頁會變動）。運送一律用淘寶集運到新加坡：約 5–11 kg，海運估 S$15–35，另加 9% GST。\n\n| 產品 | 類型 · 尺寸 | 規格（低速噪音 · 電機 · 風速段數 · 遙控 · 燈） | 價格 · 運送 · 本房判定 |\n|---|---|---|---|\n| 1. **風生 風影 吸頂無葉風扇燈（標準款）** · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452181.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%A3%8E%E7%94%9F%20%E9%A3%8E%E5%BD%B1%20%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 全罩貫流式 · 50 × 50 × **13**，4.2 kg | < 40 dB（廠商自稱）· DC · 6 段＋60° 擺風 · 2.4G 遙控＋定時 · 有燈（55 W，3000–5700K） | 價格未標 · 集運 · **合格**（扇底 227，頭頂淨空 14） |\n| 2. 風生 風影 大長款 · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452188.html) | 全罩貫流式 · 94 × 62 × 13 | < 40 dB · DC · 6 段＋60° 擺風 · 遙控 · 有燈（108 W） | 價格未標 · 集運 · **不合格**：長 94 > 房寬 107 扣兩側餘量 |\n| 3. **雷士 NVC 無葉風扇燈（2026 款，卧室）** · [蘇寧規格](https://www.suning.com/itemcanshu/0070131346/12439030411.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%9B%B7%E5%A3%AB%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%8D%A7%E5%AE%A4) | 全罩（無葉）· 圓形，厚度未標 | 雷士無葉款自稱 27.4 dB（[評測](https://m.sohu.com/a/970332212_122471764)）· DC · 段數未標 · 遙控 · 有燈；31–40 W，適用 10–15 m²，保固 3 年 | ¥859（約 S$155）· 集運 · **待確認**：厚度要 ≤ 13 才可用 |\n| 4. 歐普 OPPLE 客棲 無葉風扇燈 · [淘寶搜尋](https://s.taobao.com/search?q=%E6%AC%A7%E6%99%AE%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%AE%A2%E6%A0%96) | 全罩（無葉）· 尺寸未標 | 變頻 · 噪音、段數未標 · 遙控 · 有燈 | 價格未標 · 集運 · **待確認**：客廳款，可能太大 |\n| 5. 公牛 GONEO ATTO GF19AT 無葉風扇燈 · [HomePro 規格](https://www.homepro.co.th/p/888232100001) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%85%AC%E7%89%9B%20GONEO%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20GF19AT) | 全罩（無葉）· 厚 **24.6**，9 kg | 噪音未標 · 段數未標 · 遙控 · 有燈（70 W） | 價格未標 · 集運 · **不合格**：扇底 215，正好在頭頂 |\n| 6. 公牛 GF39AT 強風無葉風扇燈 · [京東列表](https://www.jd.com/chanpin/445458.html) | 全罩 · 尺寸未標（比 GF19 大） | 91 W · 有燈 | 價格未標 · 集運 · **不合格**（推估比 GF19 更厚） |\n| 7. 三雄極光 御風 無葉風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) · [淘寶搜尋](https://s.taobao.com/search?q=%E4%B8%89%E9%9B%84%E6%9E%81%E5%85%89%20%E5%BE%A1%E9%A3%8E%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 無葉、360° 出風 · 尺寸未標 | 自稱高速仍很安靜（無 dB）· 有燈 | 價格未標 · 集運 · **不合格**：廠商建議層高 2.5–2.8 m |\n| 8. 松下中國 HHLZ8616 隱形風扇燈 · [京東列表](https://www.jd.com/hotitem/9855d629a624eaca9db0.html) | 隱形（收合）扇葉 | 自稱低噪 · 遙控調光 · 有燈 | 價格未標 · 集運 · **不合格**：扇葉轉動時展開外露 |\n| 9. 松下中國 HHLZ8321 風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) | 8 片露葉 · 厚約 18 | 56 W · 4 段 · App · 有燈 | 價格未標 · 集運 · **不合格**：露葉，建議層高 ≥ 2.4 m |\n| 10. 美的 隱形風扇燈（天貓）· [什麼值得買](https://www.smzdm.com/p/174817033/) | 隱形（收合）扇葉 · 尺寸未標 | 自稱靜音 · 有燈 | 約 ¥247（特價，已過期）· 集運 · **不合格**：扇葉外露 |\n| 11. 米家風扇燈 36 吋 · [小米 HK](https://www.mi.com/hk/product/mijia-ceiling-fan-with-light-36/) | 收合式扇葉 | 最低 23 dB(A) · 睡眠模式 · App · 有燈 | 價格未標 · 小米 HK 官網有售 · **不合格**：原廠要求天花 ≥ 2.6 m、葉片離地 ≥ 2.33 m |\n| 12. 美的 凉霸 B8P · [實測](https://post.smzdm.com/p/a4q7dvk7/) · [淘寶搜尋](https://s.taobao.com/search?q=%E7%BE%8E%E7%9A%84%20%E5%87%89%E9%9C%B8%20B8P) | 嵌入假天花 · 30 × 60，與天花齊平 | < 45 dB（實測運轉）· 185 m³/h · 125° 擺風 · 遙控 · 有燈 | ¥331–549 · 集運 · **條件式**：要有假天花，而且風弱、偏吵 |\n| 13. 奧普 AUPU 凉霸 F130 · [蘇寧規格](https://m.suning.com/itemcanshu/0000000000/000000012360189731.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%A5%A5%E6%99%AE%20%E5%87%89%E9%9C%B8%20F130) | 嵌入假天花 · 30 × 30 | 56 W · 噪音未標 · 遙控 | 價格未標 · 集運 · **條件式**：同上，是廚房用 |\n| 14. 艾美特 Airmate FL4005／鑽石 FD-40 吸頂擺頭扇 · [淘寶搜尋](https://s.taobao.com/search?q=%E8%89%BE%E7%BE%8E%E7%89%B9%20%E5%90%B8%E9%A1%B6%E6%89%87%20FL4005) | 網罩式 16 吋 · 厚度約 30+（推估） | AC · 3 段／調速器 · 多數無遙控 · 無燈 | 約 ¥150–180 · 集運 · **不合格**：太厚、AC 吵 |\n| 15. KDK M40RS 吸頂擺頭扇（新加坡）· [KDK SG](https://www.kdk.sg/products/orbital-fan-m40rs) | 網罩式 · Ø40 × **35** | AC · 5 段調速器 · 無遙控 · 無燈 | S$174–180 · 新加坡有 Safety Mark · **不合格**：扇底 205，會撞頭 |\n| 16. **Mistral MWF1454DR-G 14 吋 DC 壁扇（現有設計）** · [Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/dc-motor-fans/mistral-mwf1454dr-g-14-dc-wall-fan-with-remote-control.html) | 網罩式 · 壁掛 33 × 35.5 × 52.7 | dB 未公布 · DC · 5 段 · 遙控＋定時 · 無燈 | S$129 · 新加坡有 Safety Mark · **合格**（掛在床尾 180–233） |\n\n- 也查過但不列入：\n  - **Exhale 無葉吊扇**（新加坡 Elmark／Azora）：Ø86 × 18、11.4 kg、27–40 dB、無燈款 €690（[規格](https://exhale-fans.uk/ceiling-fan.html)）。旋轉盤外露，扇底 222 只離頭頂 9。\n  - **Mistral FLEXA 16 吋 DC 吸頂／壁掛兩用**：12 段＋睡眠模式、S$239（[Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/ceiling-fans-en/mistral-16-inch-dc-ceiling-wall-fan-with-remote-gun-metal-flexa-gm.html)），但機身長 54。\n  - **Lazada SG 雜牌無葉風扇燈**（ADDLON、NSWR、OSIZA，S$100–136，[列表](https://decoration.lazada.sg/bladeless-fan-light-in-a-26m-hdb-bedroom-clearance-fit-and-installation-guide-sg)）：厚度、dB、Safety Mark 都沒有標示。\n- **先鋒、格力**：淘寶只有落地扇、壁扇或露葉吊扇，沒有全罩吸頂款。搜尋連結：[先鋒](https://s.taobao.com/search?q=%E5%85%88%E9%94%8B%20%E5%90%B8%E9%A1%B6%E6%89%87)、[格力](https://s.taobao.com/search?q=%E6%A0%BC%E5%8A%9B%20%E5%90%B8%E9%A1%B6%E6%89%87)。\n- 想自己挑同類商品，可用這個[淘寶搜尋](https://s.taobao.com/search?q=%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E8%B4%AF%E6%B5%81%20%E8%B6%85%E8%96%84%20%E7%9B%B4%E6%B5%81)。條件：厚度 ≤ 13 cm、邊長 ≤ 55、出風口是格柵、不是隱形扇葉、DC、6 段以上、220 V。\n\n## 首選 3 款\n\n1. **風生 風影 吸頂無葉風扇燈（標準款）**：首選。這次查到的產品裡，只有它明確標示厚 13 且邊長 50，塞得進 107 寬的房間。另外是 DC、6 段、擺風、< 40 dB、遙控定時。缺點是小廠、有燈、沒有 Safety Mark。\n2. **雷士 NVC 無葉風扇燈 2026 款**（¥859）：大品牌，保固 3 年，評測中自稱 27.4 dB 最安靜。下單前一定要跟客服確認厚度 ≤ 13、直徑 ≤ 55，否則不買。\n3. **退路：Mistral MWF1454DR-G 壁扇**（S$129，現有設計）：全表唯一有新加坡 Safety Mark、又合格的選項。如果屋主不想接受「淘寶無認證＋附燈」，就維持壁扇。\n\n## 安裝位置（以首選 1 或 2 為準）\n\n- **位置**：用現有吸頂燈位 (442.2, 312.2) pt，取代 IKEA BARLAST。\n  - 離西牆、東牆各 53.5；離床頭牆 101、離床尾牆 105。\n  - 50 × 50 機身佔離床頭 76–126 的範圍，在胸腹上方，不在臉的正上方（枕頭在離床頭 15–45）。\n- **高度**：機身底 227。人站在床上時頭頂淨空 14（165 cm）至 24（155 cm）；坐起來約 93。\n- **周邊距離**：離窗所在的範圍（西牆、離床尾 2.5–45）水平約 34；離床尾層架 59。門頂 210 低於機身底，百葉折門不會碰到。\n- **風向**：擺風設 60°，左右擺，涵蓋 107 的床寬；風往床尾方向吹，不對臉。\n- **電源**：接現有吸頂燈出線，不用新增出線點。刪除 S-14（壁扇插座）與 HLP-02（壁扇）。\n- **控制**：這類產品的燈和風扇共用電源，牆上開關一關，風扇也停。\n  - SW-03 左鍵維持常開，燈和風扇都用遙控。\n  - SW-11 右鍵（無線同控吸頂燈）改成無作用，或取消。\n- **淨空檢查**：門、窗、層架都不衝突。房內沒有冷氣。\n\n## 跟 Patrick 說\n\n- 吸頂燈出線改接 4–5 kg 的風扇燈：要鎖到樓板。如果天花是假天花，就用吊筋鎖樓板，或在假天花內加夾板補強，不能只鎖在石膏板上。\n- 不用裝 S-14；床尾牆只留層架。\n- 確認女傭房天花實際高度、有沒有假天花；如果實際高度 < 238，就改回壁扇。\n\n## 待拍板\n\n- 型號：首選 1 或首選 2（壁扇已不採用）。\n\n## 跟現有設計的衝突\n\n- 改吸頂款會取代 BARLAST：色溫從 2700K 變成 3000–5700K（可設成 3000K）。造型也是屋主說過不喜歡的「風扇燈」。\n- SW-11 右鍵的用途會消失。\n- 吊扇是 CPS 列管商品；淘寶款沒有 Safety Mark，海外購買也沒有本地保固（[CPS 列管清單](https://www.consumerproductsafety.gov.sg/suppliers/cpsr/list-of-controlled-goods/)、[CPS 吊扇安全須知](https://www.consumerproductsafety.gov.sg/images/product-safety-tips/safety-tips-on-ceiling-fans.pdf)）。",
+      "body": "## 屋主決定（2026-11-25）\n\n> 2026-11-25：全屋牆面開關改由 Patrick 規劃位置、鍵數與型號；本頁原本的開關編號與位置已移除，其餘照舊。\n\n- **用吸頂無葉風扇燈**：水電階段在原吸頂燈位 (442.2, 312.2) 留一個天花出線點（開孔＋電源），型號之後從下表首選 1／2 挑（厚 ≤ 13、全包覆、低噪、可調風）。\n- 取消壁扇 HLP-02、插座 S-14、IKEA BARLAST；保留 NYMÅNE 閱讀壁燈。\n- 風扇燈電源一路（常開），風扇與燈用遙控；閱讀壁燈一路。\n\n## 先講重點\n\n- **這間能用的吸頂扇只有一種：全罩式、機身厚度 ≤ 13 cm 的「吸頂無葉風扇燈」，而且要是貫流式、出風口有格柵。**\n  - 露葉吊扇、隱形（收合）扇葉、吸頂擺頭扇、Exhale 都不合格（原因見下方淨空計算）。\n- **淘寶這一類商品全部附燈、只有 CCC 認證，沒有新加坡 Safety Mark。** 吊扇屬於新加坡 CPS 列管商品，CPS 也勸消費者不要從海外買吊扇。買淘寶款等於接受這兩點。\n- 新加坡買得到、有認證的全罩薄型吸頂扇：**這次沒有找到。** 有 Safety Mark 的安全退路是現有設計的壁扇（表格第 16 項）。\n\n## 本房淨空（天花 240：屋主說與廚房同高，未實測）\n\n| 項目 | 計算 | 結果 |\n|---|---|---|\n| 站立面 | 牆到牆床台 38＋三折床墊 10 | 48 |\n| 站在床上的頭頂 | 48＋155／165 | 203／213 |\n| 舉手最高 | 48＋1.33 × 身高 | 254–267：**整片天花都摸得到 → 必須全罩** |\n| 坐起來的頭頂 | 48＋坐高約 0.52 × 身高 | 129–134 |\n| 能接受的機身厚度 | 240 − 213 − 頭頂至少留 14 | **≤ 13 cm** |\n| IEC 60335-2-80 第 7.12.1 條 | 葉片離站立面 > 230 → 天花要 ≥ 278 | 露葉吊扇不合格 |\n\n## 產品比較（16 項）\n\n淘寶連結都是**搜尋連結**（淘寶商品頁會變動）。運送一律用淘寶集運到新加坡：約 5–11 kg，海運估 S$15–35，另加 9% GST。\n\n| 產品 | 類型 · 尺寸 | 規格（低速噪音 · 電機 · 風速段數 · 遙控 · 燈） | 價格 · 運送 · 本房判定 |\n|---|---|---|---|\n| 1. **風生 風影 吸頂無葉風扇燈（標準款）** · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452181.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%A3%8E%E7%94%9F%20%E9%A3%8E%E5%BD%B1%20%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 全罩貫流式 · 50 × 50 × **13**，4.2 kg | < 40 dB（廠商自稱）· DC · 6 段＋60° 擺風 · 2.4G 遙控＋定時 · 有燈（55 W，3000–5700K） | 價格未標 · 集運 · **合格**（扇底 227，頭頂淨空 14） |\n| 2. 風生 風影 大長款 · [規格頁](https://b2b.alighting.com/exh/94PP3H8C4E/goodsinfo-452188.html) | 全罩貫流式 · 94 × 62 × 13 | < 40 dB · DC · 6 段＋60° 擺風 · 遙控 · 有燈（108 W） | 價格未標 · 集運 · **不合格**：長 94 > 房寬 107 扣兩側餘量 |\n| 3. **雷士 NVC 無葉風扇燈（2026 款，卧室）** · [蘇寧規格](https://www.suning.com/itemcanshu/0070131346/12439030411.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E9%9B%B7%E5%A3%AB%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%8D%A7%E5%AE%A4) | 全罩（無葉）· 圓形，厚度未標 | 雷士無葉款自稱 27.4 dB（[評測](https://m.sohu.com/a/970332212_122471764)）· DC · 段數未標 · 遙控 · 有燈；31–40 W，適用 10–15 m²，保固 3 年 | ¥859（約 S$155）· 集運 · **待確認**：厚度要 ≤ 13 才可用 |\n| 4. 歐普 OPPLE 客棲 無葉風扇燈 · [淘寶搜尋](https://s.taobao.com/search?q=%E6%AC%A7%E6%99%AE%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E5%AE%A2%E6%A0%96) | 全罩（無葉）· 尺寸未標 | 變頻 · 噪音、段數未標 · 遙控 · 有燈 | 價格未標 · 集運 · **待確認**：客廳款，可能太大 |\n| 5. 公牛 GONEO ATTO GF19AT 無葉風扇燈 · [HomePro 規格](https://www.homepro.co.th/p/888232100001) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%85%AC%E7%89%9B%20GONEO%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20GF19AT) | 全罩（無葉）· 厚 **24.6**，9 kg | 噪音未標 · 段數未標 · 遙控 · 有燈（70 W） | 價格未標 · 集運 · **不合格**：扇底 215，正好在頭頂 |\n| 6. 公牛 GF39AT 強風無葉風扇燈 · [京東列表](https://www.jd.com/chanpin/445458.html) | 全罩 · 尺寸未標（比 GF19 大） | 91 W · 有燈 | 價格未標 · 集運 · **不合格**（推估比 GF19 更厚） |\n| 7. 三雄極光 御風 無葉風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) · [淘寶搜尋](https://s.taobao.com/search?q=%E4%B8%89%E9%9B%84%E6%9E%81%E5%85%89%20%E5%BE%A1%E9%A3%8E%20%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF) | 無葉、360° 出風 · 尺寸未標 | 自稱高速仍很安靜（無 dB）· 有燈 | 價格未標 · 集運 · **不合格**：廠商建議層高 2.5–2.8 m |\n| 8. 松下中國 HHLZ8616 隱形風扇燈 · [京東列表](https://www.jd.com/hotitem/9855d629a624eaca9db0.html) | 隱形（收合）扇葉 | 自稱低噪 · 遙控調光 · 有燈 | 價格未標 · 集運 · **不合格**：扇葉轉動時展開外露 |\n| 9. 松下中國 HHLZ8321 風扇燈 · [介紹](https://www.sohu.com/a/1099454754_122950386) | 8 片露葉 · 厚約 18 | 56 W · 4 段 · App · 有燈 | 價格未標 · 集運 · **不合格**：露葉，建議層高 ≥ 2.4 m |\n| 10. 美的 隱形風扇燈（天貓）· [什麼值得買](https://www.smzdm.com/p/174817033/) | 隱形（收合）扇葉 · 尺寸未標 | 自稱靜音 · 有燈 | 約 ¥247（特價，已過期）· 集運 · **不合格**：扇葉外露 |\n| 11. 米家風扇燈 36 吋 · [小米 HK](https://www.mi.com/hk/product/mijia-ceiling-fan-with-light-36/) | 收合式扇葉 | 最低 23 dB(A) · 睡眠模式 · App · 有燈 | 價格未標 · 小米 HK 官網有售 · **不合格**：原廠要求天花 ≥ 2.6 m、葉片離地 ≥ 2.33 m |\n| 12. 美的 凉霸 B8P · [實測](https://post.smzdm.com/p/a4q7dvk7/) · [淘寶搜尋](https://s.taobao.com/search?q=%E7%BE%8E%E7%9A%84%20%E5%87%89%E9%9C%B8%20B8P) | 嵌入假天花 · 30 × 60，與天花齊平 | < 45 dB（實測運轉）· 185 m³/h · 125° 擺風 · 遙控 · 有燈 | ¥331–549 · 集運 · **條件式**：要有假天花，而且風弱、偏吵 |\n| 13. 奧普 AUPU 凉霸 F130 · [蘇寧規格](https://m.suning.com/itemcanshu/0000000000/000000012360189731.html) · [淘寶搜尋](https://s.taobao.com/search?q=%E5%A5%A5%E6%99%AE%20%E5%87%89%E9%9C%B8%20F130) | 嵌入假天花 · 30 × 30 | 56 W · 噪音未標 · 遙控 | 價格未標 · 集運 · **條件式**：同上，是廚房用 |\n| 14. 艾美特 Airmate FL4005／鑽石 FD-40 吸頂擺頭扇 · [淘寶搜尋](https://s.taobao.com/search?q=%E8%89%BE%E7%BE%8E%E7%89%B9%20%E5%90%B8%E9%A1%B6%E6%89%87%20FL4005) | 網罩式 16 吋 · 厚度約 30+（推估） | AC · 3 段／調速器 · 多數無遙控 · 無燈 | 約 ¥150–180 · 集運 · **不合格**：太厚、AC 吵 |\n| 15. KDK M40RS 吸頂擺頭扇（新加坡）· [KDK SG](https://www.kdk.sg/products/orbital-fan-m40rs) | 網罩式 · Ø40 × **35** | AC · 5 段調速器 · 無遙控 · 無燈 | S$174–180 · 新加坡有 Safety Mark · **不合格**：扇底 205，會撞頭 |\n| 16. **Mistral MWF1454DR-G 14 吋 DC 壁扇（現有設計）** · [Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/dc-motor-fans/mistral-mwf1454dr-g-14-dc-wall-fan-with-remote-control.html) | 網罩式 · 壁掛 33 × 35.5 × 52.7 | dB 未公布 · DC · 5 段 · 遙控＋定時 · 無燈 | S$129 · 新加坡有 Safety Mark · **合格**（掛在床尾 180–233） |\n\n- 也查過但不列入：\n  - **Exhale 無葉吊扇**（新加坡 Elmark／Azora）：Ø86 × 18、11.4 kg、27–40 dB、無燈款 €690（[規格](https://exhale-fans.uk/ceiling-fan.html)）。旋轉盤外露，扇底 222 只離頭頂 9。\n  - **Mistral FLEXA 16 吋 DC 吸頂／壁掛兩用**：12 段＋睡眠模式、S$239（[Harvey Norman](https://www.harveynorman.com.sg/home-appliances/fans/ceiling-fans-en/mistral-16-inch-dc-ceiling-wall-fan-with-remote-gun-metal-flexa-gm.html)），但機身長 54。\n  - **Lazada SG 雜牌無葉風扇燈**（ADDLON、NSWR、OSIZA，S$100–136，[列表](https://decoration.lazada.sg/bladeless-fan-light-in-a-26m-hdb-bedroom-clearance-fit-and-installation-guide-sg)）：厚度、dB、Safety Mark 都沒有標示。\n- **先鋒、格力**：淘寶只有落地扇、壁扇或露葉吊扇，沒有全罩吸頂款。搜尋連結：[先鋒](https://s.taobao.com/search?q=%E5%85%88%E9%94%8B%20%E5%90%B8%E9%A1%B6%E6%89%87)、[格力](https://s.taobao.com/search?q=%E6%A0%BC%E5%8A%9B%20%E5%90%B8%E9%A1%B6%E6%89%87)。\n- 想自己挑同類商品，可用這個[淘寶搜尋](https://s.taobao.com/search?q=%E5%90%B8%E9%A1%B6%E6%97%A0%E5%8F%B6%E9%A3%8E%E6%89%87%E7%81%AF%20%E8%B4%AF%E6%B5%81%20%E8%B6%85%E8%96%84%20%E7%9B%B4%E6%B5%81)。條件：厚度 ≤ 13 cm、邊長 ≤ 55、出風口是格柵、不是隱形扇葉、DC、6 段以上、220 V。\n\n## 首選 3 款\n\n1. **風生 風影 吸頂無葉風扇燈（標準款）**：首選。這次查到的產品裡，只有它明確標示厚 13 且邊長 50，塞得進 107 寬的房間。另外是 DC、6 段、擺風、< 40 dB、遙控定時。缺點是小廠、有燈、沒有 Safety Mark。\n2. **雷士 NVC 無葉風扇燈 2026 款**（¥859）：大品牌，保固 3 年，評測中自稱 27.4 dB 最安靜。下單前一定要跟客服確認厚度 ≤ 13、直徑 ≤ 55，否則不買。\n3. **退路：Mistral MWF1454DR-G 壁扇**（S$129，現有設計）：全表唯一有新加坡 Safety Mark、又合格的選項。如果屋主不想接受「淘寶無認證＋附燈」，就維持壁扇。\n\n## 安裝位置（以首選 1 或 2 為準）\n\n- **位置**：用現有吸頂燈位 (442.2, 312.2) pt，取代 IKEA BARLAST。\n  - 離西牆、東牆各 53.5；離床頭牆 101、離床尾牆 105。\n  - 50 × 50 機身佔離床頭 76–126 的範圍，在胸腹上方，不在臉的正上方（枕頭在離床頭 15–45）。\n- **高度**：機身底 227。人站在床上時頭頂淨空 14（165 cm）至 24（155 cm）；坐起來約 93。\n- **周邊距離**：離窗所在的範圍（西牆、離床尾 2.5–45）水平約 34；離床尾層架 59。門頂 210 低於機身底，百葉折門不會碰到。\n- **風向**：擺風設 60°，左右擺，涵蓋 107 的床寬；風往床尾方向吹，不對臉。\n- **電源**：接現有吸頂燈出線，不用新增出線點。刪除 S-14（壁扇插座）與 HLP-02（壁扇）。\n- **控制**：這類產品的燈和風扇共用電源，牆上開關一關，風扇也停。\n  - 風扇燈電源維持常開，燈和風扇都用遙控。\n  - 不另設無線同控鍵。\n- **淨空檢查**：門、窗、層架都不衝突。房內沒有冷氣。\n\n## 跟 Patrick 說\n\n- 吸頂燈出線改接 4–5 kg 的風扇燈：要鎖到樓板。如果天花是假天花，就用吊筋鎖樓板，或在假天花內加夾板補強，不能只鎖在石膏板上。\n- 不用裝 S-14；床尾牆只留層架。\n- 確認女傭房天花實際高度、有沒有假天花；如果實際高度 < 238，就改回壁扇。\n\n## 待拍板\n\n- 型號：首選 1 或首選 2（壁扇已不採用）。\n\n## 跟現有設計的衝突\n\n- 改吸頂款會取代 BARLAST：色溫從 2700K 變成 3000–5700K（可設成 3000K）。造型也是屋主說過不喜歡的「風扇燈」。\n- 原本同控吸頂燈的無線鍵用途會消失。\n- 吊扇是 CPS 列管商品；淘寶款沒有 Safety Mark，海外購買也沒有本地保固（[CPS 列管清單](https://www.consumerproductsafety.gov.sg/suppliers/cpsr/list-of-controlled-goods/)、[CPS 吊扇安全須知](https://www.consumerproductsafety.gov.sg/images/product-safety-tips/safety-tips-on-ceiling-fans.pdf)）。",
       "sources": [
         {
           "title": "IEC 60335-2-80:2015 樣本（7.12.1：葉片離地 > 2.3 m）",
@@ -24351,133 +23729,111 @@
       {
         "id": "main",
         "name": "客廳燈",
-        "sw": "SW-01",
         "color": "#c98a00"
       },
       {
         "id": "entry",
         "name": "玄關燈",
-        "sw": "SW-01",
         "color": "#3d7a5c"
       },
       {
         "id": "dining",
         "name": "餐廳燈",
-        "sw": "SW-01",
         "color": "#c2410c"
       },
       {
         "id": "tvwall",
-        "name": "電視牆燈",
-        "sw": "SW-01",
+        "name": "電視牆洗牆燈",
         "color": "#0e7490"
       },
       {
         "id": "wash",
-        "name": "洗牆燈",
-        "sw": "SW-01",
+        "name": "電視牆燈條",
         "color": "#7a4fb0"
       },
       {
         "id": "toe",
         "name": "電視櫃底燈",
-        "sw": "SW-14",
         "color": "#2b6cb0"
       },
       {
         "id": "k-main",
         "name": "廚房主燈",
-        "sw": "SW-02",
         "color": "#c98a00"
       },
       {
         "id": "k-uc",
         "name": "吊櫃下燈",
-        "sw": "SW-02",
         "color": "#c2410c"
       },
       {
         "id": "h-ceil",
-        "name": "吸頂無葉風扇燈",
-        "sw": "SW-03",
+        "name": "女傭房風扇燈",
         "color": "#c98a00"
       },
       {
         "id": "h-read",
-        "name": "閱讀壁燈",
-        "sw": "SW-11",
+        "name": "女傭房閱讀壁燈",
         "color": "#c2410c"
       },
       {
         "id": "m-main",
-        "name": "主燈",
-        "sw": "SW-04",
+        "name": "主臥燈",
         "color": "#c98a00"
       },
       {
         "id": "m-bed",
-        "name": "床頭燈條",
-        "sw": "SW-15",
+        "name": "主臥床頭燈條",
         "color": "#7a4fb0"
       },
       {
         "id": "b1-main",
-        "name": "燈",
-        "sw": "SW-05",
+        "name": "衛浴 1 燈",
         "color": "#c98a00"
       },
       {
         "id": "b1-mk",
-        "name": "化妝燈",
-        "sw": "SW-05",
+        "name": "衛浴 1 化妝燈",
         "color": "#c2410c"
       },
       {
         "id": "b2-main",
-        "name": "燈",
-        "sw": "SW-10",
+        "name": "衛浴 2 燈",
         "color": "#c98a00"
       },
       {
         "id": "kid",
-        "name": "房間主燈",
-        "sw": "SW-06",
+        "name": "小孩房燈",
         "color": "#c98a00"
       },
       {
         "id": "g-main",
-        "name": "房間主燈",
-        "sw": "SW-07",
+        "name": "客房燈",
         "color": "#c98a00"
       },
       {
         "id": "g-read",
-        "name": "閱讀壁燈",
-        "sw": "燈上開關",
+        "name": "客房閱讀壁燈",
         "color": "#c2410c"
       },
       {
         "id": "s-main",
-        "name": "房間主燈",
-        "sw": "SW-08",
+        "name": "書房燈",
         "color": "#c98a00"
       },
       {
         "id": "cor",
         "name": "走廊燈",
-        "sw": "SW-09",
         "color": "#c98a00"
       },
       {
         "id": "bal",
         "name": "陽台燈",
-        "sw": "原有開關",
         "color": "#0f766e"
       },
       {
         "id": "bal-fan",
-        "name": "吊扇燈",
-        "sw": "SW-16",
+        "name": "陽台吊扇燈",
         "color": "#b45309"
       },
       {
@@ -24735,7 +24091,7 @@
           "嵌燈 A 型 ×9，3500K：客餐廳 6（餐區牆邊 2、餐桌 2、電視兩側 2）、走道 2、鋼琴 1",
           "玄關：原本 3 盞嵌燈拿掉；畫上現有 skylight ×3（已裝，屋主 2026-11-25 標示位置）：一排沿玄關走道、長邊順走道，約 30 × 60（照屋主標示，型號、版本未知），中心離右側實牆 65、離廚房側 45；最靠門那盞離大門牆 20，彼此間隔約 25",
           "每盞 skylight 的發光面朝右側實牆，光打在牆上（datasheet：靠牆裝、發光方向朝牆）；圖上實色窄邊＋箭頭＝發光側，虛線框＝現有",
-          "SW-01 玄關燈鍵接現有 skylight；現場原有接線未知（是不是接在這一鍵、是不是常電）",
+          "玄關燈接現有 skylight；現場原有接線未知（接在哪個開關、是不是常電）",
           "skylight 亮度照 datasheet（PeseTech Skylight 30120W）：每盞最高 3,600 lm，3 盞最高 ≈ 10,800 lm；現場實際型號、版本未知，亮度屋主之後再決定",
           "電視兩側那 2 盞落在電視寬度外，不在螢幕正上方；沙發正上方不放燈；餐區牆邊 2 盞用可調角度款，往牆偏 15–20°",
           "鋼琴 1 盞在鋼琴正中（左右、前後都置中，離背牆約 31），7 W ≈ 438 lm：同款 3500K、CRI ≥ 90（R9 > 50）、UGR < 19，只是低一階瓦數；原本兩盞 1,300 lm → 438，譜架約 300 lux，夠看譜、不搶客廳",
@@ -24744,12 +24100,12 @@
           "雙頭洗牆燈規格：嵌入式雙頭可調 2 × 7 W、3500K、光束 24°、CRI ≥ 90（R9 > 50）、深藏防眩、無頻閃、不調光；燈頭俯仰要 ≥ 55°（多數雙頭格柵燈只到 30°，30° 光會落在螢幕上）",
           "淨空：離吊扇心 249（扇葉外 30 那圈外還有 153）；離電視兩側嵌燈 dn-5／6 各 120；離窗簾盒約 135、離玄關／鋼琴 240 低天花（冷氣）約 165，都不衝突",
           "洗牆燈 Aqara LED Strip T1（槽離牆 15）留著：固定 3500K、常電、無線鍵，是電視牆唯一能調光的光；看電影、打 PS5 調到 20% 當背光，雙頭洗牆燈不能調光、太亮，看電視時關",
-          "電視櫃底燈 3000K 燈帶，SW-14",
+          "電視櫃底燈 3000K 燈帶，獨立一路",
           "吊扇 52″（Ø132）2 葉、不帶燈，在餐桌與沙發之間；吊桿約 30 穿過假天花 260，葉片離地約 225",
           "光不穿過扇葉：嵌燈切光 35°，在葉片面的光錐半徑 25 → 離扇心 < 91 才會閃；最近的嵌燈 124",
           "亮度：嵌燈 9 × 650＋鋼琴 438 ≈ 6,290 lm；加洗牆燈 T1 ≈ 850、雙頭洗牆燈 2 × 438 ≈ 880 → ≈ 8,000 lm，約現居 CWT（約 6,000 lm）的 1.3 倍",
-          "場景：看電視、PS5＝洗牆燈；放鬆＝客廳燈＋電視牆燈；吃飯＝餐廳燈；全亮＝全開（餐廳燈＝餐區 4；客廳燈＝電視兩側 2＋走道 2＋鋼琴 1；電視牆燈＝雙頭洗牆燈）",
-          "電視牆燈在 SW-01 自己一鍵（有線）：不能調光、≈ 880 lm 打在螢幕上方，看電視時要能單獨關；放鬆時客廳燈＋電視牆燈就有亮牆，T1 留給看電視"
+          "場景：看電視、PS5＝電視牆燈條；放鬆＝客廳燈＋電視牆洗牆燈；吃飯＝餐廳燈；全亮＝全開（餐廳燈＝餐區 4；客廳燈＝電視兩側 2＋走道 2＋鋼琴 1）",
+          "電視牆洗牆燈自己一路（有線）：不能調光、≈ 880 lm 打在螢幕上方，看電視時要能單獨關；放鬆時客廳燈＋電視牆洗牆燈就有亮牆，T1 留給看電視"
         ],
         "cct": {
           "k": "3500K",
@@ -24822,7 +24178,7 @@
           }
         ],
         "notes": [
-          "嵌燈 C 型 3000K ×3，沿走廊中線，避開 AP-02；SW-09＋主臥門外 SW-13 同控",
+          "嵌燈 C 型 3000K ×3，沿走廊中線，避開 AP-02",
           "半夜帶言言去浴室：走廊 3 盞 10 W 3000K 夠用不刺眼；屋主暫不要感應夜燈"
         ]
       },
@@ -24899,7 +24255,7 @@
           "嵌燈 B 型 ×2，4000K，每盞約 1,000 lm（12 W），在廚房中間走道上方；檯面靠吊櫃下燈帶",
           "吊櫃下燈帶 4000K 照備菜區；爐具靠排油煙機燈",
           "檯面亮度主要來自吊櫃下燈帶",
-          "SW-02 左：廚房主燈（女傭房 SW-03 右鍵同控）；右：吊櫃下燈"
+          "廚房主燈、吊櫃下燈各一路"
         ]
       },
       "helper": {
@@ -24966,8 +24322,8 @@
           }
         ],
         "notes": [
-          "吸頂無葉風扇燈（型號待選，厚 ≤ 13、全包覆）在原吸頂燈位，燈設 3000K（這類產品多為 3000–5700K 可調）；SW-03 左鍵當電源常開，風扇與燈用遙控",
-          "閱讀壁燈 IKEA NYMÅNE＋SOLHETTA GU10 2700K，床頭 SW-11（單鍵）"
+          "吸頂無葉風扇燈（型號待選，厚 ≤ 13、全包覆）在原吸頂燈位，燈設 3000K（這類產品多為 3000–5700K 可調）；電源常開，風扇與燈用遙控",
+          "閱讀壁燈 IKEA NYMÅNE＋SOLHETTA GU10 2700K，床頭，獨立一路"
         ]
       },
       "master": {
@@ -25068,7 +24424,7 @@
           "入口凹位接走廊假天花 260（約 120 × 110），AP-03 吸頂在門扇上方，不加燈",
           "4 盞都朝床尾那側、背對床頭：陽台門、床尾牆、入口、兩衣櫃間走道（照亮兩側櫃門）；躺著只看到燈罩背面；A、B 兩案床都在燈下同一段，角度不用改",
           "GU10 3000K CRI 97（Philips MASTER LED ExpertColor 930）",
-          "床頭燈條 Aqara LED Strip T1 固定 2700K，藏在床頭板後往上打牆；床頭 SW-15 右鍵：單按開關、雙按 5% 夜燈（顧言言用）",
+          "床頭燈條 Aqara LED Strip T1 固定 2700K，藏在床頭板後往上打牆；常電，單按開關、雙按 5% 夜燈（顧言言用）",
           "衣櫃層板底 4000K 燈帶＋PIR，開門亮"
         ],
         "ceilings": [
@@ -25206,8 +24562,8 @@
         ],
         "notes": [
           "嵌燈 B 型 ×2（IP44）、淋浴間 E 型 ×1（IP65），4000K；洗手台前那盞離鏡面 50，不在頭頂正上方，臉上不落影",
-          "化妝燈：中門兩側直立燈 4000K、CRI ≥ 90，獨立一鍵；鏡櫃底燈帶跟主燈同鍵",
-          "SW-05：燈、化妝燈、抽風機"
+          "化妝燈：中門兩側直立燈 4000K、CRI ≥ 90，獨立一路；鏡櫃底燈帶跟主燈同一路",
+          "迴路：燈、化妝燈、抽風機"
         ]
       },
       "kid": {
@@ -25260,8 +24616,7 @@
         ],
         "notes": [
           "不做假天花：原有燈位明裝 IKEA NYMÅNE 4 燈白色軌道燈，平行窗；GU10 3000K CRI 97",
-          "燈頭打兩側牆、衣櫃、門口；床位定了再轉開，不對床頭",
-          "SW-06 一鍵"
+          "燈頭打兩側牆、衣櫃、門口；床位定了再轉開，不對床頭"
         ]
       },
       "guest": {
@@ -25335,7 +24690,7 @@
           }
         ],
         "notes": [
-          "不做假天花：原有燈位明裝 IKEA NYMÅNE 4 燈白色軌道燈，順著床；GU10 3000K CRI 97；SW-07＋床邊 SW-12",
+          "不做假天花：原有燈位明裝 IKEA NYMÅNE 4 燈白色軌道燈，順著床；GU10 3000K CRI 97",
           "燈頭打門口、床尾牆、書桌、衣櫃；不朝床頭",
           "床頭閱讀壁燈 IKEA NYMÅNE＋SOLHETTA 2700K，燈上有開關，伸手可及",
           "衣櫃層板底 4000K 燈帶＋PIR"
@@ -25392,7 +24747,7 @@
         "notes": [
           "不做假天花：原有燈位明裝 IKEA NYMÅNE 4 燈白色軌道燈，平行書桌（圖上直向，和客房橫向不同）；GU10 3500K",
           "兩端 2 盞交叉打書桌：人頭左右兩側來光，手和頭不投影；從背後高角度打下，鏡像落在螢幕上緣以上，不反光",
-          "中間 2 盞：1 盞門口、1 盞打窗簾（按摩椅腳那端）；都背對按摩椅頭部，躺平也不刺眼；SW-08 一鍵"
+          "中間 2 盞：1 盞門口、1 盞打窗簾（按摩椅腳那端）；都背對按摩椅頭部，躺平也不刺眼"
         ]
       },
       "bath2": {
@@ -25490,7 +24845,7 @@
         ],
         "notes": [
           "嵌燈 B 型 ×2（IP44）、淋浴間 E 型 ×1（IP65），4000K；洗手台前那盞離鏡面 50",
-          "鏡櫃底燈帶（兼夜燈）跟主燈同鍵；SW-10：燈、抽風機"
+          "鏡櫃底燈帶（兼夜燈）跟主燈同一路；迴路：燈、抽風機"
         ]
       },
       "living-balcony": {
@@ -25525,7 +24880,7 @@
           "吊扇 44″（Ø112）帶燈 3000K、戶外防潮 IP44 以上；陽台正中往鞦韆側 13，鎖樓板，葉片離地約 240",
           "葉尖離曬衣架 34、離鞦韆繩（擺到 ±100）約 68、離外緣與玻璃牆各 27",
           "吊扇燈取代靠曬衣架那盞筒燈；鞦韆旁明裝 IP65 筒燈 F 型 3000K ×1 留原有燈位與開關；曬衣架自帶燈",
-          "SW-16 左燈右扇"
+          "吊扇燈、吊扇分兩路"
         ],
         "fan": {
           "x": 510.0,
@@ -25566,7 +24921,7 @@
       "全部嵌燈同一款：深藏防眩 10 W、開孔 Ø75、CRI ≥ 90（R9 > 50）、UGR < 19、無頻閃、SDCM ≤ 3，只差色溫與防水",
       "客廳吊扇 2 葉不帶燈、陽台吊扇帶燈；葉片外 30 內不放嵌燈，光不穿過扇葉",
       "臥室與書房不做假天花：原有燈位明裝 IKEA 白色軌道燈，燈頭打牆、衣櫃、書桌，不朝床頭",
-      "開關只開關不調光（Aqara H1）；要調亮度的只有兩條 Aqara LED Strip T1：電視牆洗牆燈、主臥床頭燈條",
+      "只開關、不調光；要調亮度的只有兩條 Aqara LED Strip T1：電視牆燈條、主臥床頭燈條",
       "屋主喜歡亮：目標都遠高於 IES 最低值，客廳 300、餐桌 400、檯面 500、洗手台 300、臥室 100–150、走廊 100 lux"
     ]
   }
