@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R153",
+    "revision": "R154",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4947,6 +4947,10 @@
     {
       "id": "C161",
       "text": "Wi‑Fi 圖層拿掉 AP 的半透明背景"
+    },
+    {
+      "id": "C162",
+      "text": "Wi‑Fi 圖例：拿掉網路孔與現有網路孔（圖上也不畫）、網路主機改稱路由器、AP 圖示與平面圖一致"
     }
   ],
   "measurement_policy": {

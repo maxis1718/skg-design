@@ -645,7 +645,6 @@
   "細節": "Details",
   "網路 · UniFi": "Network · UniFi",
   "網路": "Network",
-  "網路主機": "Network hub",
   "網路孔": "Data",
   "網路定案 UniFi、拿掉方案切換並併入智能家居；客廳 AP 移到鋼琴上方；主臥預留 Cat6；客房網路孔移到書桌下；女傭房不做電動窗簾；陽台插座改拖地機 H14 Ultra。": "Network set to UniFi, scheme toggle removed and merged into Smart home; living AP moved above the piano; Cat6 pre-wired to the master; guest data jack under the desk; no motorised curtain in the helper's room; balcony socket renamed to the H14 Ultra floor washer.",
   "網路線": "Cat6",
@@ -1839,7 +1838,6 @@
   "📅 11/26 假天花": "📅 26 Nov: false ceiling",
   "📅 12 月初 木工開始製作（預計）": "📅 Early Dec: carpentry fabrication starts (planned)",
   "施工時程記到重點清單：11/24–26 電工與燈具、11/26 假天花、12 月初木工製作": "Works schedule added to the key list: electrical and lighting 24–26 Nov, false ceiling 26 Nov, carpentry fabrication early Dec",
-  "現有網路孔": "Existing data point",
   "收納床台、床頭電源、吸頂無葉風扇燈與床尾層架": "Storage platform bed, bedhead power, bladeless ceiling fan-light and foot-wall shelves",
   "吸頂無葉風扇燈": "Bladeless ceiling fan-light",
   "原吸頂燈位 · 型號待選（厚 ≤ 13、全包覆）": "At the ceiling-light point · model TBD (≤ 13 thick, fully enclosed)",
@@ -1958,6 +1956,8 @@
   "攝影機位置照原本（只改角度）；廚房那支移到洗烘塔角落；平面圖攝影機與 AP 範圍改成小示意": "Camera positions restored (only aims changed); kitchen camera moved to the WashTower corner; camera and AP coverage now drawn as small hints",
   "廚房天花 240 洗烘塔與女傭房牆角落（離女傭房牆 25、離上櫃門 43，在櫃門開門範圍外）：P-08 13A＋Apple 20W USB-C 變壓器（CAM-04 G350，走 Wi-Fi）": "Kitchen ceiling 240, WashTower/helper-wall corner (25 off the helper wall, 43 off the upper doors, clear of the door swing): P-08 13A + Apple 20W USB-C adaptor (CAM-04 G350, on Wi-Fi)",
   "小孩房攝影機順時針轉 30°（朝向 150°）": "Kid-room camera turned 30° clockwise (aim 150°)",
-  "Wi‑Fi 圖層拿掉 AP 的半透明背景": "Wi‑Fi layer: AP translucent halo removed"
+  "Wi‑Fi 圖層拿掉 AP 的半透明背景": "Wi‑Fi layer: AP translucent halo removed",
+  "路由器": "Router",
+  "Wi‑Fi 圖例：拿掉網路孔與現有網路孔（圖上也不畫）、網路主機改稱路由器、AP 圖示與平面圖一致": "Wi‑Fi legend: data points and existing data points removed (not drawn on the plan either); network hub renamed Router; AP legend icon matches the plan"
  }
 }
