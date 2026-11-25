@@ -156,8 +156,11 @@ function buildPower(){
   const pts=powerPoints();
   for(const p of pts){
     if(p.kind==='ap')under.append(svgEl('circle',{'data-kind':'ap','data-layer':'net',cx:p.x,cy:p.y,r:85,fill:'url(#ap-glow)'}));
-    if(p.kind==='camera'&&p.aim!=null){const R=46,h=45*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
-      under.append(svgEl('path',{'data-kind':'camera','data-layer':'net',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R} ${R} 0 0 1 ${pt(a+h)}Z`}));}
+    // R147: camera cone = aim° (0 = plan right, clockwise), fov° (horizontal, default 90), reach cm (default 46 pt); clipped to `clip` [[x,y]…] pt or the polygon of room `room` so it stops at the walls.
+    if(p.kind==='camera'&&p.aim!=null){const R=p.reach?p.reach/(project.scale?.nominal_cm_per_pt||3.5278):46,fov=p.fov||90,h=fov/2*Math.PI/180,a=p.aim*Math.PI/180,pt=k=>`${(p.x+R*Math.cos(k)).toFixed(2)} ${(p.y+R*Math.sin(k)).toFixed(2)}`;
+      const poly=p.clip||project.rooms.find(r=>r.id===p.room)?.polygon_pt,attrs={'data-kind':'camera','data-layer':'net',class:'cam-cone',d:`M${p.x} ${p.y}L${pt(a-h)}A${R.toFixed(2)} ${R.toFixed(2)} 0 ${fov>180?1:0} 1 ${pt(a+h)}Z`};
+      if(poly){const cid=`cam-clip-${p.id}`,cp=svgEl('clipPath',{id:cid});cp.append(svgEl('polygon',{points:poly.map(q=>q.join(',')).join(' ')}));under.append(cp);attrs['clip-path']=`url(#${cid})`;}
+      under.append(svgEl('path',attrs));}
   }
   // R142: runs may carry id (runOverrides key, else `to`), tag (cable label) and tags [[x,y,rot°?],…] = where the label is drawn (both ends).
   const tags=svgEl('g',{class:'run-tags'});
