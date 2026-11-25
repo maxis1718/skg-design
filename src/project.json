@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R152",
+    "revision": "R153",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4943,6 +4943,10 @@
     {
       "id": "C160",
       "text": "小孩房攝影機順時針轉 30°（朝向 150°）"
+    },
+    {
+      "id": "C161",
+      "text": "Wi‑Fi 圖層拿掉 AP 的半透明背景"
     }
   ],
   "measurement_policy": {
