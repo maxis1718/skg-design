@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R146",
+    "revision": "R147",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4918,6 +4918,10 @@
     {
       "id": "C154",
       "text": "helper 房改吸頂無葉風扇燈（天花留孔＋電源，壁扇與吸頂燈刪除）；攝影機只走 Wi‑Fi；網路圖只畫新拉到 AP1–3 的三條 Cat6，原有網路孔標為已預埋"
+    },
+    {
+      "id": "C155",
+      "text": "電視櫃定案方案 A（三格 220）"
     }
   ],
   "measurement_policy": {
@@ -25662,9 +25666,9 @@
     {
       "id": "todo-living-av",
       "room": "living",
-      "text": "定電視櫃：A 三格 220／B 四格 230",
+      "text": "定電視櫃：方案 A 三格 220（2026-11-25 定案）",
       "research": "console-gaming",
-      "status": "open",
+      "status": "done",
       "priority": 1,
       "kind": "reno"
     },
