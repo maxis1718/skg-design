@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R156",
+    "revision": "R157",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4959,6 +4959,10 @@
     {
       "id": "C164",
       "text": "全屋頁最上方列出最重要的待辦（置頂＋優先 1），點了直接跳到該房間"
+    },
+    {
+      "id": "C165",
+      "text": "重點清單：拆除項目都已確認、拿掉；改列給 Patrick 確認的差異（AP 網路線 ×3、主臥陽台側雙孔、弱電箱插座數）；上方三個按鈕改成互斥切換"
     }
   ],
   "measurement_policy": {
@@ -22060,49 +22064,30 @@
       "go": []
     },
     {
-      "text": "🔨 廚房兩側全拆，做電器高櫃，靠女傭房牆",
+      "text": "❓ 從弱電箱拉 Cat6 × 3 到三台 AP（AP1 走道口 190 櫃、AP2 三房走道、AP3 主臥門內），兩端標 AP1／AP2／AP3",
       "go": [
         {
-          "room": "kitchen",
-          "object": "kitchen-lower-worktop"
+          "room": "floor",
+          "layer": "net",
+          "label": "Wi‑Fi 圖"
         }
       ]
     },
     {
-      "text": "🔨 書房全拆",
+      "text": "❓ 主臥床靠陽台那側：單孔改雙孔",
       "go": [
         {
-          "room": "study"
+          "point": "sock-bed-n",
+          "label": "主臥"
         }
       ]
     },
     {
-      "text": "🔨 客房衣櫃拆掉重做",
+      "text": "❓ 弱電箱內有幾個插座？需要 3 個（ONT、路由器、PoE 交換器）",
       "go": [
         {
-          "room": "guest"
-        }
-      ]
-    },
-    {
-      "text": "🔨 兩間浴室鏡櫃拆掉重做",
-      "go": [
-        {
-          "room": "bath1",
-          "object": "bath1-mirror-cabinet"
-        },
-        {
-          "room": "bath2",
-          "object": "bath2-mirror-cabinet"
-        }
-      ]
-    },
-    {
-      "text": "🔨 主臥衣櫃拆掉重做",
-      "go": [
-        {
-          "room": "master",
-          "object": "master-wardrobe-left"
+          "point": "sock-netbox",
+          "label": "弱電箱"
         }
       ]
     }
