@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R148",
+    "revision": "R149",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4927,6 +4927,10 @@
     {
       "id": "C156",
       "text": "電視櫃刪除方案 B，只留三格 220；客廳不再有方案切換"
+    },
+    {
+      "id": "C157",
+      "text": "全屋牆面開關從圖上刪除，位置與鍵數交給 Patrick 規劃；燈光改以迴路名稱分組"
     }
   ],
   "measurement_policy": {
