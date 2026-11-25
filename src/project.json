@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R154",
+    "revision": "R155",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4951,6 +4951,10 @@
     {
       "id": "C162",
       "text": "Wi‑Fi 圖例：拿掉網路孔與現有網路孔（圖上也不畫）、網路主機改稱路由器、AP 圖示與平面圖一致"
+    },
+    {
+      "id": "C163",
+      "text": "待辦整理：拿掉 IKEA 軌道燈、吊扇尺寸、helper 相關與多餘 laminate 項目；依施工時程排優先級（1＝12/1 木工前、2＝12 月中檯面與裝燈前、3＝入住前採購、4＝入住後）"
     }
   ],
   "measurement_policy": {
@@ -22113,7 +22117,8 @@
       "text": "買 UCG Ultra＋TP-Link TL-SG1005P＋U7 Lite ×3＋電視櫃 5 口交換器（約 S$801；UI Store SG）",
       "status": "open",
       "kind": "furn",
-      "research": "cctv-wifi"
+      "research": "cctv-wifi",
+      "priority": 3
     },
     {
       "id": "todo-smart-unifi-setup",
@@ -22121,7 +22126,8 @@
       "text": "UniFi 初次設定：家／家電（IoT 相容）／訪客三個 Wi-Fi、查 M3 Zigbee 頻道後鎖 AP 2.4 GHz（20 MHz）、關自動更新與夜間換頻道、手機連訪客確認網段",
       "status": "open",
       "kind": "furn",
-      "research": "cctv-wifi"
+      "research": "cctv-wifi",
+      "priority": 4
     },
     {
       "id": "todo-smart-cameras",
@@ -22129,7 +22135,8 @@
       "text": "買 Aqara Camera Hub G350 ×3＋Apple 20W 英規變壓器 ×3＋SanDisk High Endurance 512GB ×3（約 S$1,683；吸頂支架未找到）",
       "status": "open",
       "kind": "furn",
-      "research": "cctv-wifi"
+      "research": "cctv-wifi",
+      "priority": 3
     },
     {
       "id": "todo-smart-g350-test",
@@ -22137,7 +22144,8 @@
       "status": "open",
       "kind": "furn",
       "research": "cctv-wifi",
-      "text": "G350 裝好實測：隱私模式鏡頭完全收起、Apple 20W 穩定供電、倒裝後預設點"
+      "text": "G350 裝好實測：隱私模式鏡頭完全收起、Apple 20W 穩定供電、倒裝後預設點",
+      "priority": 4
     },
     {
       "id": "todo-smart-appletv",
@@ -22145,21 +22153,24 @@
       "text": "買 Apple TV 4K（Wi-Fi + Ethernet，S$399）有線接電視櫃當家居中樞",
       "status": "open",
       "kind": "furn",
-      "research": "smart-home"
+      "research": "smart-home",
+      "priority": 3
     },
     {
       "id": "todo-smart-all-off",
       "room": "smart",
       "text": "選大門場景按鈕：建議 Aqara Wireless Remote Switch H1 (Double Rocker)，S$45",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 3
     },
     {
       "id": "todo-smart-switches",
       "room": "smart",
       "text": "開關型號與位置由 Patrick 規劃後再定",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 1
     },
     {
       "id": "todo-living-kef",
@@ -22167,7 +22178,7 @@
       "text": "買 KEF LS50 Wireless II＋S2 落地腳架（Mineral White）",
       "research": "audio-compare",
       "status": "open",
-      "priority": 5,
+      "priority": 3,
       "kind": "furn"
     },
     {
@@ -22176,7 +22187,7 @@
       "text": "買 KEF KC62 重低音（Mineral White）",
       "research": "kef-audio",
       "status": "open",
-      "priority": 6,
+      "priority": 3,
       "kind": "furn"
     },
     {
@@ -22193,7 +22204,7 @@
       "room": "living",
       "text": "定走道口 190 櫃最上格（直立放 Wi-Fi AP-01，格內淨寬、淨高 ≥ 20）",
       "status": "open",
-      "priority": 4,
+      "priority": 1,
       "kind": "reno"
     },
     {
@@ -22202,42 +22213,25 @@
       "text": "選下嵌式水槽：建議 BLANCO SUBLINE 500-U（SILGRANIT 53 × 46，white／soft white）",
       "research": "kitchen-sink",
       "status": "open",
-      "kind": "reno"
-    },
-    {
-      "id": "todo-kitchen-laminate",
-      "room": "kitchen",
-      "text": "選櫃體 laminate 品牌與色號",
-      "status": "open",
-      "kind": "reno"
-    },
-    {
-      "id": "todo-master-wardrobe-laminate",
-      "room": "master",
-      "text": "選衣櫃門片 laminate 色號",
-      "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-kid-bed",
       "room": "kid",
       "text": "定小孩房床位與尺寸",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-study-desk",
       "room": "study",
       "text": "選 100 × 50 電腦桌",
       "status": "open",
-      "kind": "furn"
-    },
-    {
-      "id": "todo-guest-wardrobe",
-      "room": "guest",
-      "text": "選衣櫃門片色號",
-      "status": "open",
-      "kind": "reno"
+      "kind": "furn",
+      "priority": 3
     },
     {
       "id": "todo-guest-furniture",
@@ -22245,36 +22239,25 @@
       "text": "買客房床架（配 Tempur Queen 150 × 190 × 21，外框 ≤ 154 × 194）",
       "research": "guest-bedframe",
       "status": "open",
-      "kind": "furn"
-    },
-    {
-      "id": "todo-helper-mattress",
-      "room": "helper",
-      "text": "選三折床墊型號與厚度",
-      "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 3
     },
     {
       "id": "todo-helper-board",
       "room": "helper",
       "text": "選床台板材與色號",
       "status": "open",
-      "kind": "reno"
-    },
-    {
-      "id": "todo-helper-reading-lamp",
-      "room": "helper",
-      "text": "買 IKEA NYMÅNE 閱讀壁燈＋SOLHETTA GU10 2700K",
-      "research": "helper-fan-light",
-      "status": "open",
-      "kind": "furn"
+      "kind": "reno",
+      "priority": 1
     },
     {
       "id": "todo-bath2-basin",
       "room": "bath2",
       "text": "選臉盆尺寸與盆位，再定鏡櫃門寬",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-living-balcony-drying-rack",
@@ -22282,21 +22265,24 @@
       "text": "重選曬衣架：被子攤得開、暖光夠亮",
       "research": "drying-rack",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-living-balcony-mcst",
       "room": "living-balcony",
       "text": "向管委會確認陽台天花可裝曬衣架",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
       "text": "選鞦韆座椅（兩側淨空 ≥ 50）",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 3
     },
     {
       "id": "todo-living-balcony-fan",
@@ -22304,7 +22290,8 @@
       "text": "選陽台吊扇（帶燈、戶外防潮）",
       "research": "lighting-design",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 2
     },
     {
       "id": "todo-kitchen-hob",
@@ -22312,7 +22299,8 @@
       "text": "買爐具 Brandt BPI2638UB（3 口）",
       "research": "brandt-hob",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-living-tv",
@@ -22328,15 +22316,17 @@
       "room": "living",
       "text": "選電視櫃面板、頂板木紋色號（左側白橡格柵照此染色）",
       "status": "open",
-      "priority": 2,
-      "kind": "reno"
+      "priority": 1,
+      "kind": "reno",
+      "pin": true
     },
     {
       "id": "todo-master-wallcovering",
       "room": "master",
       "text": "提供主臥壁布型號（同現居款）",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-helper-door-hinge",
@@ -22344,15 +22334,7 @@
       "text": "去看女傭房門款式（百葉折門等），再定開向",
       "research": "helper-door",
       "status": "open",
-      "kind": "reno"
-    },
-    {
-      "id": "todo-helper-fan-model",
-      "room": "helper",
-      "text": "選 helper 房吸頂無葉風扇燈型號（≤ 13 cm、全包覆、低噪、可調風）",
-      "research": "helper-fan",
-      "status": "open",
-      "kind": "furn",
+      "kind": "reno",
       "priority": 1
     },
     {
@@ -22364,40 +22346,29 @@
       "kind": "furn"
     },
     {
-      "id": "todo-master-rail",
-      "room": "master",
-      "text": "主臥掛桿 195：維持＋掛衣叉，或一側降到 180 方便 helper",
-      "status": "open",
-      "kind": "reno"
-    },
-    {
       "id": "todo-balcony-grille",
       "room": "living-balcony",
       "text": "兩個陽台隱形鐵窗：找 Endo、Diamond、CSA 報價，確認 MCST 規定",
       "research": "invisible-grille",
       "status": "open",
-      "kind": "reno"
-    },
-    {
-      "id": "todo-bath-mirror-pvc",
-      "room": "bath1",
-      "text": "選兩間浴室鏡櫃內部 PVC 色號",
-      "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     },
     {
       "id": "todo-guest-chair",
       "room": "guest",
       "text": "買客房無輪書椅",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 3
     },
     {
       "id": "todo-entrance-shoe-drawers",
       "room": "living",
       "text": "玄關左側鞋櫃抽屜換 Blum 滑軌（現有前屋主訂製款不好拉）",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 1
     },
     {
       "id": "todo-floor-lighting-samples",
@@ -22405,22 +22376,8 @@
       "text": "燈具下單前先買樣品現場試（嵌燈 A/B 型、雙頭洗牆燈俯仰 ≥ 55°）",
       "research": "lighting-design",
       "status": "open",
-      "kind": "furn"
-    },
-    {
-      "id": "todo-floor-track",
-      "room": "floor",
-      "text": "買各房 IKEA 白色軌道燈",
-      "research": "lighting-design",
-      "status": "open",
-      "kind": "furn"
-    },
-    {
-      "id": "todo-floor-fans",
-      "room": "floor",
-      "text": "提供客廳吊扇尺寸（目前佔位 52″）",
-      "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 2
     },
     {
       "id": "todo-study-door",
@@ -22443,7 +22400,7 @@
     {
       "id": "todo-floor-laminate",
       "room": "floor",
-      "text": "選全屋 laminate 色號（廚房、衣櫃、電視櫃、鏡櫃等）",
+      "text": "選 laminate 色號：廚房櫃體、兩間鏡櫃內部",
       "status": "open",
       "kind": "reno",
       "priority": 1,
@@ -22455,14 +22412,6 @@
       "text": "確認全屋插座、開關、CCTV、網路孔位置（2026-11-25 現場確認）",
       "status": "done",
       "kind": "reno"
-    },
-    {
-      "id": "todo-floor-cctv-notice",
-      "room": "floor",
-      "text": "告知 helper 每台攝影機位置，也錄聲音（MOM 規定）",
-      "research": "cctv-wifi",
-      "status": "open",
-      "kind": "furn"
     },
     {
       "id": "todo-living-cabinet-shelves",
@@ -22487,7 +22436,8 @@
       "room": "master",
       "text": "回去量床墊高度（主臥床、言言小床；定床頭插座高度用）",
       "status": "open",
-      "kind": "furn"
+      "kind": "furn",
+      "priority": 2
     },
     {
       "id": "todo-floor-corridor-brightness",
@@ -22495,7 +22445,8 @@
       "text": "走廊亮度是否足夠（只有 skylight）",
       "research": "lighting-design",
       "status": "open",
-      "kind": "reno"
+      "kind": "reno",
+      "priority": 2
     }
   ],
   "research": {
