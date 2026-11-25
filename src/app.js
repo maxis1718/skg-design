@@ -128,6 +128,7 @@ const powerOn=()=>showPower||showNet||(roomId===SMART&&!!project.smart);
 const NET_KINDS=new Set(['ap','data','hub','camera','run']),isNetKind=k=>NET_KINDS.has(k),layerOf=k=>isNetKind(k)?'net':'power';
 const kindOn=k=>(roomId===SMART&&!!project.smart)||(isNetKind(k)?showNet:showPower);
 const powerMount=p=>p.mount==='ceiling'?t('天花'):p.mount==null?t('現有'):tf('離地 {h} cm',{h:p.mount});
+// R146: data points may carry existing (developer-installed) → dashed plate + legend chip 現有網路孔.
 // R129: sockets carry gang (outlets per plate: 1 single / 2 twin) and plates (count, default 1); existing = developer-installed.
 const socketBadge=p=>p.kind!=='socket'?'':(p.plates||1)>1?`${p.plates}×${p.gang||1}`:(p.gang||1)>1?String(p.gang):'';
 const socketType=p=>{const g=t((p.gang||1)>1?'雙孔':'單孔');return (p.plates||1)>1?`${g} × ${p.plates}`:g;};
@@ -140,7 +141,7 @@ function powerGlyph(p){
   else if(p.kind==='ceiling-power'){g.append(svgEl('circle',{r:2.2,fill:O}),svgEl('circle',{r:.75,fill:'#fff'}));}
   else if(p.kind==='camera'){g.append(svgEl('circle',{r:2.8,fill:C}),svgEl('circle',{r:1.15,fill:'#fff'}),svgEl('circle',{r:.5,fill:C}));}
   else if(p.kind==='ap'){g.append(svgEl('circle',{r:4.4,fill:'#fff',stroke:B,'stroke-width':.95}),svgEl('circle',{r:2,fill:'none',stroke:B,'stroke-width':.65}),svgEl('circle',{r:.75,fill:B}));}// R144: AP ≈ 1.33× the other marks
-  else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
+  else if(p.kind==='data'){g.append(svgEl('rect',{x:-2.3,y:-2.3,width:4.6,height:4.6,rx:.5,fill:'#fff',stroke:B,'stroke-width':.65,...(p.existing?{'stroke-dasharray':'.9 .55'}:{})}),svgEl('rect',{x:-1.1,y:-.7,width:2.2,height:1.5,fill:B}));}
   else if(p.kind==='switch'){g.append(svgEl('rect',{x:-2.1,y:-2.1,width:4.2,height:4.2,rx:.5,fill:'#fff',stroke:V,'stroke-width':.6}),svgEl('rect',{x:-.55,y:-1.25,width:1.1,height:2.5,rx:.3,fill:V}));}
   else if(p.kind==='scene'){g.append(svgEl('rect',{x:-2.4,y:-2.4,width:4.8,height:4.8,rx:.6,fill:V}),svgEl('path',{d:'M-.95 -.75A1.3 1.3 0 1 0 .95 -.75M0 -1.5V0',fill:'none',stroke:'#fff','stroke-width':.45,'stroke-linecap':'round'}));}
   else if(p.kind==='hub'){g.append(svgEl('rect',{x:-3.3,y:-2.3,width:6.6,height:4.6,rx:.7,fill:B}),svgEl('path',{d:'M-1.8 0h.01M0 0h.01M1.8 0h.01',stroke:'#fff','stroke-width':.9,'stroke-linecap':'round'}));}
@@ -180,8 +181,8 @@ function renderPowerLayer(){
   const chip=(k,v,cls='')=>`<span><i class="pk pk-${k}${cls}"></i>${esc(t(v))}</span>`;
   if(smart)lg.innerHTML=Object.entries(POWER_KINDS).filter(([k])=>smartKinds(true).has(k)).map(([k,v])=>chip(k,v)).join('');
   else{// R144: one legend group per layer that is on
-    const pw=[chip('socket','單孔插座',' pk-single'),chip('socket','2 = 雙孔',' pk-twin'),...(powerPoints().some(p=>p.existing)?[chip('socket','現有插座',' pk-existing')]:[]),chip('ceiling-power',POWER_KINDS['ceiling-power']),chip('switch',POWER_KINDS.switch),chip('scene',POWER_KINDS.scene)];
-    const nt=[chip('ap',POWER_KINDS.ap),chip('hub',POWER_KINDS.hub),chip('data',POWER_KINDS.data),chip('camera',POWER_KINDS.camera),chip('run','網路線')];
+    const pw=[chip('socket','單孔插座',' pk-single'),chip('socket','2 = 雙孔',' pk-twin'),...(powerPoints().some(p=>p.existing&&p.kind==='socket')?[chip('socket','現有插座',' pk-existing')]:[]),chip('ceiling-power',POWER_KINDS['ceiling-power']),chip('switch',POWER_KINDS.switch),chip('scene',POWER_KINDS.scene)];
+    const nt=[chip('ap',POWER_KINDS.ap),chip('hub',POWER_KINDS.hub),chip('data',POWER_KINDS.data),...(powerPoints().some(p=>p.existing&&p.kind==='data')?[chip('data','現有網路孔',' pk-existing')]:[]),chip('camera',POWER_KINDS.camera),chip('run','網路線')];
     const grp=(icon,name,cs)=>`<span class="lg-group"><b>${icon} ${esc(t(name))}</b>${cs.join('')}</span>`;
     lg.innerHTML=(showPower?grp('⚡','電力',pw):'')+(showNet?grp('📶','Wi-Fi 與網路',nt):'');}
   $('#version-toolbar').hidden=$$('#version-toolbar .version-group').every(g=>g.hidden);renderSmartRecord();
@@ -465,7 +466,7 @@ function renderInspector(){
   const node=$('#inspector');renderPowerLayer();
   if(powerOn()&&powerId&&!objectId&&powerPoint(powerId)&&kindOn(powerPoint(powerId).kind)){
     const p=powerPoint(powerId);node.hidden=false;
-    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.kind==='socket'?`<div class="inspector-pair"><span>${t('插座')}</span><strong>${esc(socketType(p))}${p.existing?esc(t('，現有')):''}</strong></div>`:''}${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
+    node.innerHTML=`<p class="eyebrow">${esc(p.code)} · ${esc(t(POWER_KINDS[p.kind]))}</p><h2>${esc(p.name)}</h2><div class="inspector-note">${esc(p.place)}</div><div class="inspector-pair"><span>${t('安裝')}</span><strong>${esc(powerMount(p))}</strong></div>${p.kind==='socket'?`<div class="inspector-pair"><span>${t('插座')}</span><strong>${esc(socketType(p))}${p.existing?esc(t('，現有')):''}</strong></div>`:p.kind==='data'&&p.existing?`<div class="inspector-pair"><span>${t('網路孔')}</span><strong>${esc(t('現有'))}</strong></div>`:''}${p.product?`<div class="inspector-pair"><span>${t('型號')}</span><strong>${esc(p.product)}</strong></div>`:''}${(p.specs||[]).map(([k,v])=>`<div class="inspector-pair"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}<p class="inspector-text">${esc(p.notes)}</p><button class="inspector-button" id="power-back">${t('回到電與網路總覽')}</button>`;
     $('#power-back').onclick=()=>{powerId=null;renderInspector();};return;
   }
   const show=!objectId&&isHome(roomId)&&powerOn()&&!!project.electrical;node.hidden=!show;node.innerHTML=show?powerSummary():'';bindPowerRows();

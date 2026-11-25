@@ -7,7 +7,6 @@
 
 <!-- Helper room fit-out (wall-mounted, dashed = overhead): R102: south-wall open shelves IKEA BURHULT 59 × 20 ×2, tops 155 / 185 (x 48–107 from the west); Mistral 14" DC wall fan 17–50 from the west at 180–233, blowing north; mirror 30 on the east wall south of the door; 3 hooks east wall north of the door; reading lamp on the north wall; IKEA BARLAST Ø25 ceiling light at the room centre (ceiling 240, no ceiling fan). -->
 <path data-layout="helper-wall-cabinet" class="furnishing" d="M440.69 336.13H457.32V341.8H440.69Z" fill="none" stroke="currentColor" stroke-width="0.18" stroke-dasharray="1 0.7" stroke-linejoin="round"/>
-<g data-layout="helper-fan" class="furnishing" fill="none" stroke="currentColor"><path d="M431.9 334.2H441.28" stroke-width="0.5" stroke-linecap="round"/><path d="M435.58 334.2V341.5H437.58V334.2" stroke-width="0.14"/><path d="M436.58 333.06V321.16M435.58 322.29L436.58 321.16L437.58 322.29" stroke-width="0.12" stroke-dasharray="0.8 0.6"/></g>
 <path data-layout="helper-mirror" class="furnishing" d="M456.72 331.17V339.67" fill="none" stroke="currentColor" stroke-width="0.5"/>
 <g data-layout="helper-hooks" class="furnishing" fill="currentColor"><circle cx="456.42" cy="296.19" r="0.45"/><circle cx="456.42" cy="299.59" r="0.45"/><circle cx="456.42" cy="303" r="0.45"/></g>
 <g data-layout="helper-reading-lamp" class="furnishing" fill="none" stroke="currentColor" stroke-width="0.14"><path d="M430.53 283.72V284.22H432.13V283.72M431.33 284.22L433.93 287.12"/><circle cx="433.93" cy="287.12" r="0.9"/></g>
