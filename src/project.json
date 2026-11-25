@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R155",
+    "revision": "R156",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4955,6 +4955,10 @@
     {
       "id": "C163",
       "text": "待辦整理：拿掉 IKEA 軌道燈、吊扇尺寸、helper 相關與多餘 laminate 項目；依施工時程排優先級（1＝12/1 木工前、2＝12 月中檯面與裝燈前、3＝入住前採購、4＝入住後）"
+    },
+    {
+      "id": "C164",
+      "text": "全屋頁最上方列出最重要的待辦（置頂＋優先 1），點了直接跳到該房間"
     }
   ],
   "measurement_policy": {
@@ -22300,7 +22304,7 @@
       "research": "brandt-hob",
       "status": "open",
       "kind": "reno",
-      "priority": 2
+      "priority": 1
     },
     {
       "id": "todo-living-tv",
