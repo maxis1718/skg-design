@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R149",
+    "revision": "R150",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4931,6 +4931,10 @@
     {
       "id": "C157",
       "text": "全屋牆面開關從圖上刪除，位置與鍵數交給 Patrick 規劃；燈光改以迴路名稱分組"
+    },
+    {
+      "id": "C158",
+      "text": "攝影機重新定位：客餐廳斜拍餐桌到玄關走道口、小孩房斜拍全房、廚房在洗烘塔角落（避開上櫃門與 helper 房門）；天花電源點跟著移"
     }
   ],
   "measurement_policy": {
