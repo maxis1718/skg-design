@@ -1956,6 +1956,7 @@
   "攝影機重新定位：客餐廳斜拍餐桌到玄關走道口、小孩房斜拍全房、廚房在洗烘塔角落（避開上櫃門與 helper 房門）；天花電源點跟著移": "Cameras repositioned: living diagonal from dining to the foyer passage, kid room diagonal across the room, kitchen in the WashTower corner (clear of the upper door swing and the helper door); ceiling power points follow",
   "・天花倒裝，App 內翻轉畫面；倒裝後預設點會跑掉（已知 bug），裝好實測\n・預設朝斜對角（往沙發與玄關走道口），水平約 120°，背對陽台玻璃不逆光\n・24 小時錄影像加聲音，存 microSD，不上雲\n・有人在家時隱私模式：鏡頭捲進機身、停止錄影\n・連「家」Wi-Fi，走 5 GHz；供電 P-01": "• Ceiling-mounted upside down, image flipped in the app; presets shift when inverted (known bug) — test after install\n• Default aim: diagonally toward the sofa and the entrance passage, ~120° wide; back to the balcony glass, no backlight\n• 24/7 video + audio to microSD, no cloud\n• Privacy mode when the family is home: lens retracts into the body, recording stops\n• On the 家 (Home) Wi-Fi, 5 GHz; power P-01",
   "攝影機位置照原本（只改角度）；廚房那支移到洗烘塔角落；平面圖攝影機與 AP 範圍改成小示意": "Camera positions restored (only aims changed); kitchen camera moved to the WashTower corner; camera and AP coverage now drawn as small hints",
-  "廚房天花 240 洗烘塔與女傭房牆角落（離女傭房牆 25、離上櫃門 43，在櫃門開門範圍外）：P-08 13A＋Apple 20W USB-C 變壓器（CAM-04 G350，走 Wi-Fi）": "Kitchen ceiling 240, WashTower/helper-wall corner (25 off the helper wall, 43 off the upper doors, clear of the door swing): P-08 13A + Apple 20W USB-C adaptor (CAM-04 G350, on Wi-Fi)"
+  "廚房天花 240 洗烘塔與女傭房牆角落（離女傭房牆 25、離上櫃門 43，在櫃門開門範圍外）：P-08 13A＋Apple 20W USB-C 變壓器（CAM-04 G350，走 Wi-Fi）": "Kitchen ceiling 240, WashTower/helper-wall corner (25 off the helper wall, 43 off the upper doors, clear of the door swing): P-08 13A + Apple 20W USB-C adaptor (CAM-04 G350, on Wi-Fi)",
+  "小孩房攝影機順時針轉 30°（朝向 150°）": "Kid-room camera turned 30° clockwise (aim 150°)"
  }
 }
