@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R159",
+    "revision": "R160",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4972,6 +4972,10 @@
     {
       "id": "C167",
       "text": "插座只列最終配置：拿掉「現有」狀態與現場註記；書房桌下、桌面、按摩椅與小孩房備用插座刪除（現場沒有）；Cat6 三條已拉好，從重點清單拿掉"
+    },
+    {
+      "id": "C168",
+      "text": "待辦更新：書房櫃、電視櫃尺寸、燈具樣品、電視實機、客房床架完成；190 櫃最上格、鞋櫃 Blum、曬衣架、陽台吊扇、Apple TV 刪除；量床墊高度、invisible grille 改重要；攝影機變壓器不限 Apple"
     }
   ],
   "measurement_policy": {
@@ -22138,7 +22142,7 @@
     {
       "id": "todo-smart-cameras",
       "room": "smart",
-      "text": "買 Aqara Camera Hub G350 ×3＋Apple 20W 英規變壓器 ×3＋SanDisk High Endurance 512GB ×3（約 S$1,683；吸頂支架未找到）",
+      "text": "買 Aqara Camera Hub G350 ×3＋20W USB-C 英規變壓器 ×3（有 Safety Mark 即可，如 Anker／UGREEN）＋SanDisk High Endurance 512GB ×3（約 S$1,683；吸頂支架未找到）",
       "status": "open",
       "kind": "furn",
       "research": "cctv-wifi",
@@ -22150,17 +22154,8 @@
       "status": "open",
       "kind": "furn",
       "research": "cctv-wifi",
-      "text": "G350 裝好實測：隱私模式鏡頭完全收起、Apple 20W 穩定供電、倒裝後預設點",
+      "text": "G350 裝好實測：隱私模式鏡頭完全收起、20W 變壓器穩定供電、倒裝後預設點",
       "priority": 4
-    },
-    {
-      "id": "todo-smart-appletv",
-      "room": "smart",
-      "text": "買 Apple TV 4K（Wi-Fi + Ethernet，S$399）有線接電視櫃當家居中樞",
-      "status": "open",
-      "kind": "furn",
-      "research": "smart-home",
-      "priority": 3
     },
     {
       "id": "todo-smart-all-off",
@@ -22206,14 +22201,6 @@
       "kind": "reno"
     },
     {
-      "id": "todo-living-cabinet",
-      "room": "living",
-      "text": "定走道口 190 櫃最上格（直立放 Wi-Fi AP-01，格內淨寬、淨高 ≥ 20）",
-      "status": "open",
-      "priority": 1,
-      "kind": "reno"
-    },
-    {
       "id": "todo-kitchen-sink",
       "room": "kitchen",
       "text": "選下嵌式水槽：建議 BLANCO SUBLINE 500-U（SILGRANIT 53 × 46，white／soft white）",
@@ -22242,9 +22229,9 @@
     {
       "id": "todo-guest-furniture",
       "room": "guest",
-      "text": "買客房床架（配 Tempur Queen 150 × 190 × 21，外框 ≤ 154 × 194）",
+      "text": "買客房床架：交給 Andrea",
       "research": "guest-bedframe",
-      "status": "open",
+      "status": "done",
       "kind": "furn",
       "priority": 3
     },
@@ -22266,38 +22253,12 @@
       "pin": true
     },
     {
-      "id": "todo-living-balcony-drying-rack",
-      "room": "living-balcony",
-      "text": "重選曬衣架：被子攤得開、暖光夠亮",
-      "research": "drying-rack",
-      "status": "open",
-      "kind": "reno",
-      "priority": 2
-    },
-    {
-      "id": "todo-living-balcony-mcst",
-      "room": "living-balcony",
-      "text": "向管委會確認陽台天花可裝曬衣架",
-      "status": "open",
-      "kind": "reno",
-      "priority": 2
-    },
-    {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
       "text": "選鞦韆座椅（兩側淨空 ≥ 50）",
       "status": "open",
       "kind": "furn",
       "priority": 3
-    },
-    {
-      "id": "todo-living-balcony-fan",
-      "room": "living-balcony",
-      "text": "選陽台吊扇（帶燈、戶外防潮）",
-      "research": "lighting-design",
-      "status": "open",
-      "kind": "furn",
-      "priority": 2
     },
     {
       "id": "todo-kitchen-hob",
@@ -22313,7 +22274,7 @@
       "room": "living",
       "text": "去 VivoCity 看 Xiaomi TV S Pro Mini LED 75 2026 實機",
       "research": "tv-xiaomi",
-      "status": "open",
+      "status": "done",
       "priority": 3,
       "kind": "furn"
     },
@@ -22354,11 +22315,12 @@
     {
       "id": "todo-balcony-grille",
       "room": "living-balcony",
-      "text": "兩個陽台隱形鐵窗：找 Endo、Diamond、CSA 報價，確認 MCST 規定",
+      "text": "兩個陽台 invisible grille：找 Endo、Diamond、CSA 報價，確認 MCST 規定",
       "research": "invisible-grille",
       "status": "open",
       "kind": "reno",
-      "priority": 2
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-guest-chair",
@@ -22369,19 +22331,11 @@
       "priority": 3
     },
     {
-      "id": "todo-entrance-shoe-drawers",
-      "room": "living",
-      "text": "玄關左側鞋櫃抽屜換 Blum 滑軌（現有前屋主訂製款不好拉）",
-      "status": "open",
-      "kind": "reno",
-      "priority": 1
-    },
-    {
       "id": "todo-floor-lighting-samples",
       "room": "floor",
       "text": "燈具下單前先買樣品現場試（嵌燈 A/B 型、雙頭洗牆燈俯仰 ≥ 55°）",
       "research": "lighting-design",
-      "status": "open",
+      "status": "done",
       "kind": "furn",
       "priority": 2
     },
@@ -22398,10 +22352,9 @@
       "id": "todo-study-cabinet",
       "room": "study",
       "text": "確定書房櫃子怎麼做",
-      "status": "open",
+      "status": "done",
       "kind": "reno",
-      "priority": 1,
-      "pin": true
+      "priority": 1
     },
     {
       "id": "todo-floor-laminate",
@@ -22432,18 +22385,18 @@
       "id": "todo-living-console-size",
       "room": "living",
       "text": "確認電視櫃長寬高",
-      "status": "open",
+      "status": "done",
       "kind": "reno",
-      "priority": 1,
-      "pin": true
+      "priority": 1
     },
     {
       "id": "todo-master-mattress-height",
       "room": "master",
-      "text": "回去量床墊高度（主臥床、言言小床；定床頭插座高度用）",
+      "text": "量床墊高度",
       "status": "open",
       "kind": "furn",
-      "priority": 2
+      "priority": 1,
+      "pin": true
     },
     {
       "id": "todo-floor-corridor-brightness",
