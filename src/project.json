@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R160",
+    "revision": "R161",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4979,6 +4979,10 @@
     {
       "id": "C168",
       "text": "待辦更新：書房櫃、電視櫃尺寸、燈具樣品、電視實機、客房床架完成；190 櫃最上格、鞋櫃 Blum、曬衣架、陽台吊扇、Apple TV 刪除；量床墊高度、invisible grille 改重要；攝影機變壓器不限 Apple"
+    },
+    {
+      "id": "C169",
+      "text": "客廳陽台加「鞦韆調研」：吊環間距 48、擺幅上限 ±15°，建議單人兩點吊實木鞦韆（帶靠背與可拆兒童護欄）"
     }
   ],
   "measurement_policy": {
