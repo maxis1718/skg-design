@@ -1451,7 +1451,7 @@
           },
           {
             "label": "鞦韆",
-            "value": "天花吊點 × 2，間距 48",
+            "value": "天花吊環 × 2，間距 48 · 單人兩點式",
             "object": "swing-hooks"
           },
           {
@@ -1471,19 +1471,22 @@
           },
           {
             "label": "吊扇葉到鞦韆繩",
-            "value": "≈ 68"
+            "value": "≈ 78"
           },
           {
             "label": "鞦韆前後擺幅",
-            "value": "≥ 100"
+            "value": "±60（15°）· 背後離牆 32"
           }
         ],
         "build": [
-          "鞦韆吊點錨進結構樓板，每點額定 ≥ 150 kg",
+          "鞦韆吊環錨進結構樓板，每點額定 ≥ 200 kg；吊環面南北向",
           "曬衣架鎖混凝土天花，長邊平行玻璃門",
           "吊扇鎖樓板，葉片離地 ≥ 220"
         ]
-      }
+      },
+      "research": [
+        "balcony-swing"
+      ]
     },
     {
       "id": "master-balcony",
@@ -3699,7 +3702,7 @@
       "status": "user-design",
       "uncertainty_cm": null,
       "mount": "ceiling",
-      "notes": "Two ceiling hook points 48 cm apart on a N-S line, centre 120 cm from the east balcony wall x584.4 and mid-depth of the main band (y144.04, ~83 cm from the outer edge). Swing travels E-W along the balcony. Seat 50 x 40 is schematic; hook spacing slightly wider than the seat (engineerfix.com); clearance >= 50 each side (Lillagunga Classic manual), Freifrau asks 70 sides / 100 front-back. Anchor into the structural RC slab, rating >= 2x user + seat.",
+      "notes": "Two ceiling rings (installed by Patrick) 48 cm apart on a N-S line, centre 120 cm from the east end wall x584.4, mid-depth y144.04 (58.6 to the outer edge and to the glass). R161 research balcony-swing: single-seat two-point swing, seat 45-55 wide, facing west; pivot ~270, seat 45 -> L 225; cap the swing at +/-15 deg (seat +/-58), backrest then 32 from the end wall; ropes >= 78 from the fan blade tips; each ring >= 200 kg WLL. Seat 50 x 40 drawn schematic; zone ellipse = +/-88 swept seat.",
       "source_note": "中心距電視那端牆 120，在陽台深度中線"
     },
     {
@@ -4000,7 +4003,7 @@
       },
       "status": "user-design",
       "mount": "ceiling",
-      "notes": "44\" (Ø112) placeholder, integrated 3000K light, outdoor/damp-rated IP44+. Balcony middle (x506.4) shifted 13 cm towards the swing to x510.0: 34 cm from the drying rack, ≈68 cm from the swing ropes at blade height (rope offset ≈19 at ±100 swing), 27 cm to the outer edge and to the glass wall. Fixed to the slab, blades ≈240 AFF (≥ 220). Light replaces the rack-side surface downlight.",
+      "notes": "44\" (Ø112) placeholder, integrated 3000K light, outdoor/damp-rated IP44+. Balcony middle (x506.4) shifted 13 cm towards the swing to x510.0: 34 cm from the drying rack, ≈78 cm from the swing ropes at blade height (rope offset ≈8 at the ±15° swing cap, R161), 27 cm to the outer edge and to the glass wall. Fixed to the slab, blades ≈240 AFF (≥ 220). Light replaces the rack-side surface downlight.",
       "source_note": "",
       "uncertainty_cm": null
     }
@@ -22246,10 +22249,11 @@
     {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
-      "text": "選鞦韆座椅（兩側淨空 ≥ 50）",
+      "text": "選鞦韆：建議淘寶實木單人兩點鞦韆（帶靠背、可拆護欄，座寬 45–55，承重 ≥ 150 kg）",
       "status": "open",
       "kind": "furn",
-      "priority": 3
+      "priority": 3,
+      "research": "balcony-swing"
     },
     {
       "id": "todo-kitchen-hob",
@@ -23685,6 +23689,95 @@
           "url": "https://exhale-fans.uk/ceiling-fan.html"
         }
       ]
+    },
+    "balcony-swing": {
+      "title": "客廳陽台鞦韆",
+      "short": "鞦韆調研",
+      "updated": "2026-11-27",
+      "summary": "選單人「兩點吊」實木鞦韆：帶靠背、扶手、可拆兒童護欄，座寬 45–55，承重 ≥ 150 kg，淘寶買，連五金到手約 S$70–145。兩個吊環間距 48，只放得下單人兩點式。面向西坐，擺幅 ±15°（座椅前後 ±60）：背後離端牆 32，繩離吊扇葉 ≥ 78，座緣離玻璃與外緣各 57。備選：Lillagunga Grand（S$284）加一個幼兒座。最省：淘寶幼兒高背鞦韆。",
+      "body": "## 結論\n\n- **選：單人「兩點吊」實木鞦韆，帶靠背、扶手和可拆兒童護欄（成人兒童兩用）。** 規格：座寬 45–55，承重 ≥ 150 kg，繩可放到 ≥ 230，戶外繩。\n  - 淘寶買（[淘寶搜尋](https://s.taobao.com/search?q=%E5%AE%9E%E6%9C%A8%E7%A7%8B%E5%8D%83%20%E5%B8%A6%E9%9D%A0%E8%83%8C%E6%89%B6%E6%89%8B%20%E5%8F%AF%E6%8B%86%E6%8A%A4%E6%A0%8F%20%E6%88%90%E4%BA%BA%E5%84%BF%E7%AB%A5%E4%B8%A4%E7%94%A8)），常見 ¥200–450。加集運、9% GST 和五金，到手約 S$70–145。\n  - 為什麼：兩個吊環間距 48，正好配單人座的兩條繩，不用另加橫桿。靠背和扶手讓大人坐得久，裝上護欄言言也能坐。大人抱著言言一起坐約 110 kg，也在承重內。\n- **備選：Lillagunga Grand 橡木款**（[Finnish Design Shop SG](https://www.finnishdesignshop.com/en-sg/product/lillagunga-grand-swing-oak-grey)，S$284 含 GST），再加一個言言用的幼兒高背座，兩個座椅用同一組快扣換。\n  - 優點：新加坡買得到、做工好、繩長適用 2–2.8 m 天花、附轉環。\n  - 缺點：只承重 90 kg、沒有靠背、標示 14 歲以上，大人不能抱小孩一起坐。\n- **最省：淘寶幼兒高背三合一鞦韆**（[淘寶搜尋](https://s.taobao.com/search?q=%E5%84%BF%E7%AB%A5%E9%AB%98%E8%83%8C%E7%A7%8B%E5%8D%83%20%E4%B8%89%E5%90%88%E4%B8%80%20%E5%AE%A4%E5%86%85)），約 ¥60–150，先給言言用。大人要坐時，再加一塊實木平板座。\n- **不選**：雙人鞦韆、蛋椅、鳥巢鞦韆、吊床椅。這些都要 75 cm 以上的寬度，或者會原地轉，離玻璃門不到 50。\n\n## 吊點與陽台幾何\n\n圖面比例 1 pt = 3.528 cm；天花以 280 計（陽台沒有假天花）。\n\n| 項目 | 距離 | 說明 |\n|---|---|---|\n| 兩吊環間距 | 48 | 連線垂直玻璃門，鞦韆沿陽台長邊（東西）擺 |\n| 吊環中心到端牆（靠電視牆那端） | 120 | 往後擺的限制 |\n| 北吊環到外緣（隱形鐵窗） | 58.6 | |\n| 南吊環到玻璃門 | 58.6 | 門扇那段 63.6 |\n| 吊環中心到吊扇中心／葉尖 | 142／86 | 葉片離地約 240 |\n| 吊環中心到曬衣架近端 | 232 | 天花式曬衣架 |\n| 吊環中心到收納櫃、拖地機 | 365 | 在陽台另一端 |\n| 鞦韆旁 IP65 筒燈 | 往東 52，在北繩外 33 | 裝在天花上，不在擺動範圍 |\n\n## 擺動淨空\n\n- 吊環＋快扣＋轉環約 10 → 支點約在 270。座面離地 45 → 擺長 225。\n- 面向西坐（朝曬衣架和吊扇那側），背對端牆。座椅後緣加靠背約在繩後 30。\n\n| 擺角 | 座椅前後位移 | 座椅升高 | 背後離端牆 |\n|---|---|---|---|\n| 10° | 39 | 3 | 51 |\n| **15°** | **58** | **8** | **32** |\n| 20° | 77 | 14 | 13 |\n| 25° | 95 | 21 | 撞牆 |\n\n- **擺幅以 ±15° 為上限。** 這是坐著輕晃、推小孩的幅度。原本圖面畫的 ±100 會讓椅背撞到端牆，平面圖的擺動範圍已改成 ±15°。\n- **前方（西）**：擺到 15° 時腳伸到吊環前約 130，365 內地面上沒有東西。曬衣架降下來晾被子時，不要同時盪鞦韆。\n- **兩側**：座寬 50 時，座緣離外緣和玻璃門各 57.5，符合 ≥ 50（Lillagunga 手冊）。座寬 ≤ 65 都還合格。\n- **吊扇**：繩在 240 高的位置只偏 8（15°）到 14（25°），離葉尖 78–72。\n  - 坐著時頭頂約 140；3 歲站在座上舉手約 170。都碰不到葉片。\n  - 推鞦韆的人站在前方（西）面對面推，那裡就在吊扇下方，不要舉手過頭（180 cm 舉手約 239）。背後只剩 32，不能站人推。\n- **受力**：兩個吊點各分一半。擺到 15° 時，最低點張力是體重的 1.07 倍。\n  - 大人 85＋言言 15＋座椅 10 = 110 kg，每點約 59 kg；猛然坐下或跳上，衝擊算兩倍，約 120 kg。\n  - **每點額定 ≥ 200 kg**，才有餘裕。\n\n## 產品比較（18 項）\n\n淘寶連結都是**搜尋連結**（商品頁會變動），規格要以下單的那一頁為準。集運約 5–8 kg，海運估 S$10–20，另加 9% GST。\n\n| 產品 · 連結 | 類型 · 吊點 · 尺寸 | 承重 · 材質 · 繩長 | 價格 · 本陽台判定 |\n|---|---|---|---|\n| 1. **淘寶 实木秋千 带靠背扶手 可拆护栏** · [淘寶搜尋](https://s.taobao.com/search?q=%E5%AE%9E%E6%9C%A8%E7%A7%8B%E5%8D%83%20%E5%B8%A6%E9%9D%A0%E8%83%8C%E6%89%B6%E6%89%8B%20%E5%8F%AF%E6%8B%86%E6%8A%A4%E6%A0%8F%20%E6%88%90%E4%BA%BA%E5%84%BF%E7%AB%A5%E4%B8%A4%E7%94%A8) | 兩點 · 單人帶靠背扶手，座寬約 45–55（逐件看） | 多標 150–200 kg · 實木／碳化木 · 要能放到 ≥ 230 | ¥200–450 · **首選** |\n| 2. **Lillagunga Grand 橡木** · [Finnish Design Shop SG](https://www.finnishdesignshop.com/en-sg/product/lillagunga-grand-swing-oak-grey) | 兩點 · 平板 51.6 × 21.1，無靠背 | 90 kg · 上油橡木＋PP 繩 · 適用 2–2.8 m 天花，附轉環 | S$284 · **備選**（大人用，14 歲以上） |\n| 3. **淘寶 儿童高背秋千 三合一** · [淘寶搜尋](https://s.taobao.com/search?q=%E5%84%BF%E7%AB%A5%E9%AB%98%E8%83%8C%E7%A7%8B%E5%8D%83%20%E4%B8%89%E5%90%88%E4%B8%80%20%E5%AE%A4%E5%86%85) | 兩點 · 高背桶座＋前擋桿 | 參考 IFOYO 3-in-1：120 kg、繩 120–182（[Walmart](https://www.walmart.com/ip/IFOYO-3-in-1-Kids-Swing-Seat-Secure-Swing-Seat-High-Back-T-Bar-Detachable-Playground-Outdoor-Loaded-120kg-3-10-Years-Kids-Pink/5478846172)）· 塑膠＋尼龍 | ¥60–150 · **最省**（給言言；要加鏈放到 ≈ 235） |\n| 4. **淘寶 室内秋千 成人 实木 平板** · [淘寶搜尋](https://s.taobao.com/search?q=%E5%AE%A4%E5%86%85%E7%A7%8B%E5%8D%83%20%E6%88%90%E4%BA%BA%20%E5%AE%9E%E6%9C%A8%20%E5%B9%B3%E6%9D%BF) | 兩點 · 平板，無靠背 | 例：實木＋麻繩 200 kg、繩 135–220（[ManoMano](https://www.manomano.co.uk/p/solid-wood-swing-with-adjustable-jute-rope-length-135-220-cm-max-weight-200-kg-for-children-and-adults-v7110c-224838516)） | ¥50–100 · 可用；麻繩要換 PE 繩（濕氣會發霉） |\n| 5. **Lillagunga Classic** · [手冊 PDF](https://cdn.shopify.com/s/files/1/0687/0197/8853/files/Classic_manual.pdf) | 兩點 · 平板 46 × 18 | 60 kg · 樺木／橡木 · 繩 3.2–5.2 m | 不選：大人不能坐，不建議 3 歲以下 |\n| 6. **Freifrau Leya Swing Seat** · [einrichten-design](https://einrichten-design.com/leya-swing-seat-swing-chair-freifrau-manufaktur.html) · [手冊](https://Freifrau.com/PIM/Produkte/2022_FF_Swing%20Seat_Info.pdf) | 兩點 · 78 × 71 × 62 有扶手 | 110 kg · 鋼架＋布／皮 · 兩點吊要天花 ≥ 2.2 m | 約 US$2,160 起（未稅）· 不選：兩側只剩 44，自家手冊要 70 |\n| 7. **IKEA PS SVINGA** · [Gardenista](https://gardenista.com/products/ikea-ps-svinga-hanging-seat) | 座 74 × 39，吊繩 3 m，附橡膠減震 | 100 kg（220 lb） | US$69.99（舊款，IKEA SG 這次查不到）· 不選：座寬 74 |\n| 8. **relaxdays 鳥巢鞦韆 Ø100** · [ManoMano](https://www.manomano.co.uk/p/relaxdays-nest-swing-100-cm-round-kids-adults-max-load-150-kg-height-adjustable-outdoor-toy-multicoloured-71827018) | 兩繩 · 圓形 Ø100 | 150 kg · 鋼框＋Oxford 布 · 繩 91–163 | 不選：兩側只剩 32 |\n| 9. **淘寶 鸟巢秋千 儿童 室内** · [淘寶搜尋](https://s.taobao.com/search?q=%E9%B8%9F%E5%B7%A2%E7%A7%8B%E5%8D%83%20%E5%84%BF%E7%AB%A5%20%E5%AE%A4%E5%86%85) | 多為 Ø80–100 | — | 不選：同上 |\n| 10. **Outsunny 藤編蛋椅（附安裝包）** · [ManoMano](https://www.manomano.co.uk/p/outsunny-rattan-egg-chair-with-installation-kit-indoor-outdoor-swing-chair-87708357) | 單點 · 74 × 68 × 105，籃重 12 kg | 150 kg · 鋼＋PE 藤 · 附 150 鏈、360° 轉環、混凝土膨脹螺絲 | 不選：會轉，寬 74，離玻璃只剩 46 |\n| 11. **淘寶 藤编吊篮 吊椅 阳台** · [淘寶搜尋](https://s.taobao.com/search?q=%E8%97%A4%E7%BC%96%E5%90%8A%E7%AF%AE%20%E5%90%8A%E6%A4%85%20%E9%98%B3%E5%8F%B0) | 單點 · 約 Ø90–105，多附落地架 | 多標 150 kg · PE 藤 | 不選：同上，支架佔地 Ø100 以上 |\n| 12. **Y-STOP 編織吊床椅** · [desertcart SG](https://www.desertcart.sg/products/388358778-y-stop-hammock-chair-macrame-swing-max-330-lbs-hanging.md) | 單點 · 80 × 60 | 150 kg · 棉繩 | S$43（缺貨）· 不選：會轉；棉繩吸濕 |\n| 13. **Byer of Maine Panama 吊床椅** · [Massdrop](https://www.massdrop.com/buy/byer-of-maine-panama-hammock-chair) | 單點 · 橫桿寬 99，掛起來長 150 | 109 kg · 棉＋聚酯 | 不選：橫桿轉起來會碰玻璃 |\n| 14. **淘寶 吊床椅 阳台 成人** · [淘寶搜尋](https://s.taobao.com/search?q=%E5%90%8A%E5%BA%8A%E6%A4%85%20%E9%98%B3%E5%8F%B0%20%E6%88%90%E4%BA%BA) | 單點 · 約 80–100 寬 | — | 不選：同上 |\n| 15. **淘寶 双人秋千 吊椅 阳台** · [淘寶搜尋](https://s.taobao.com/search?q=%E5%8F%8C%E4%BA%BA%E7%A7%8B%E5%8D%83%20%E5%90%8A%E6%A4%85%20%E9%98%B3%E5%8F%B0) | 兩點 · 座寬 ≥ 110，吊點約 120 | — | 不選：吊環只有 48；兩側只剩約 22 |\n| 16. **HipVan Brianna Cocoon Swing Chair** · [HipVan](https://hipvan.com/products/brianna-cocoon-swing-chair) | 落地架 · 130 × 94 × 194 | 承重未標 · 鋼＋合成藤，可放有遮蔽的戶外 | S$499 · 不選：用不到吊環，架子寬 130 |\n| 17. **Lifestyle Garden ANCONA Hanging Egg Swing Chair** · [Harvey Norman SG](https://www.harveynorman.com.sg/furniture-en/outdoor-furniture/outdoor-lounges/lifestyle-garden-ancona-hanging-egg-swing-chair-black.html) | 蛋椅 · 76 × 74，高 200（含架） | 承重未標 · 粉體烤漆鋼＋聚酯編繩 | S$499（缺貨）· 不選：寬 76 |\n| 18. **Shopee SG／Lazada SG** · [Shopee 搜尋](https://shopee.sg/search?keyword=indoor%20swing%20chair) · [Lazada 搜尋](https://www.lazada.sg/catalog/?q=indoor%20swing) | 多為淘寶同款轉賣 | — | 通常比淘寶＋集運貴，同款直接買淘寶 |\n\nCastlery 這次沒有吊椅或鞦韆。IKEA SG 網站擋爬蟲，沒查到在售的吊椅。\n\n## 五金：吊環到座椅\n\n每個吊環由上往下：\n\n1. **吊環**（Patrick 已裝）。\n2. **316 不鏽鋼螺口快扣**，額定 ≥ 300 kg（[淘寶搜尋](https://s.taobao.com/search?q=316%E4%B8%8D%E9%94%88%E9%92%A2%20%E8%9E%BA%E5%8F%A3%20%E5%BF%AB%E6%8C%82%20%E6%89%BF%E9%87%8D)），鎖口要轉緊。\n3. **316 鞦韆轉環**，額定 ≥ 300 kg（[淘寶搜尋](https://s.taobao.com/search?q=316%E4%B8%8D%E9%94%88%E9%92%A2%20%E7%A7%8B%E5%8D%83%20%E8%BD%AC%E7%8E%AF%20%E6%89%BF%E9%87%8D)）：繩不會扭、不會吱吱響；Lillagunga 也附兩個。\n4. **316 短鏈約 30**（線徑 ≥ 5 mm）：掛在不同鏈環上就能調高低 ±15。鏈子在 200 以上，小孩摸不到，不會夾手。\n5. **座椅繩**：PE 或聚酯戶外繩，≥ 12 mm。不要棉繩、麻繩：濕氣會發霉、拉長。\n\n- **兩點鞦韆不加彈簧**：兩邊彈性不一樣，座椅會歪、上下彈。彈簧只給單點吊椅用（[吊椅安裝包例](https://www.bobshop.co.za/stainless-steel-hammock-chair-hanging-kit-ceiling-mount-spring-swivel-snap-hook-accessories/p/615144578)）。\n- **總長**：天花 280 − 五金約 10 − 座高 45，繩加座椅要約 225。很多商品附的繩只有 150–180，要加鏈或換繩。\n- 繩長兩邊要一樣，座椅要水平。吊點距等於或略寬於座椅兩繩距（[POLYWOOD](https://www.polywood.com/blog/outdoor-living/diy/how-to-hang-a-porch-swing/)）。\n\n## 言言的安全\n\n- 3 歲：裝上護欄（前擋桿、靠背、側欄），大人抱上去。座高放到 35–40（鏈子往下放一兩格），腳踩得到地。\n- 擺幅不超過 ±15°，只從前面推。\n- 手抓的是繩，不是鏈；邊角要圓；靠背不能有外露金屬。\n- 座椅離外緣 57，不要讓他把座椅當踏腳去攀欄杆。隱形鐵窗不算護欄（BCA），用完就收。\n\n## 收納\n\n- 兩個快扣一解，座椅連繩收進陽台收納櫃（105 × 65 × 104.5，座椅 50 × 40 放得下）。吊環留在 280 的天花，不顯眼。\n- 大雨、出國前收起來；靠墊不要整晚放在陽台。\n\n## 跟 Patrick 說\n\n- 確認兩個吊環都錨進結構樓板，不是只鎖在粉刷層。每點額定（WLL）≥ 200 kg，請他給吊環和錨栓的型號與額定。\n- 吊環面要南北向，也就是和兩環連線同方向，鞦韆才會順著東西擺。Freifrau 手冊：吊環要和擺動方向垂直（[手冊](https://Freifrau.com/PIM/Produkte/2022_FF_Swing%20Seat_Info.pdf)）。\n- 如果吊環的額定查不到，就換成 316 鞦韆吊座（底板加 4 顆膨脹螺栓）。\n\n## 待拍板\n\n- 首選（淘寶兩用實木鞦韆）或備選（Lillagunga Grand 加幼兒座）。\n",
+      "sources": [
+        {
+          "title": "Lillagunga Classic 手冊（承重 60 kg、兩側 ≥ 50、座高 ≥ 45、3 歲以下不適用）",
+          "url": "https://cdn.shopify.com/s/files/1/0687/0197/8853/files/Classic_manual.pdf"
+        },
+        {
+          "title": "Finnish Design Shop SG：Lillagunga Grand 橡木（S$284、90 kg、51.6 × 21.1）",
+          "url": "https://www.finnishdesignshop.com/en-sg/product/lillagunga-grand-swing-oak-grey"
+        },
+        {
+          "title": "Freifrau 鞦韆座安裝說明（110 kg、兩點／單點、淨空 70／100、吊環方向）",
+          "url": "https://Freifrau.com/PIM/Produkte/2022_FF_Swing%20Seat_Info.pdf"
+        },
+        {
+          "title": "einrichten-design：Freifrau Leya Swing Seat",
+          "url": "https://einrichten-design.com/leya-swing-seat-swing-chair-freifrau-manufaktur.html"
+        },
+        {
+          "title": "Gardenista：IKEA PS SVINGA",
+          "url": "https://gardenista.com/products/ikea-ps-svinga-hanging-seat"
+        },
+        {
+          "title": "Walmart：IFOYO 3-in-1 幼兒鞦韆（120 kg、繩 120–182）",
+          "url": "https://www.walmart.com/ip/IFOYO-3-in-1-Kids-Swing-Seat-Secure-Swing-Seat-High-Back-T-Bar-Detachable-Playground-Outdoor-Loaded-120kg-3-10-Years-Kids-Pink/5478846172"
+        },
+        {
+          "title": "ManoMano：實木平板鞦韆（200 kg、繩 135–220）",
+          "url": "https://www.manomano.co.uk/p/solid-wood-swing-with-adjustable-jute-rope-length-135-220-cm-max-weight-200-kg-for-children-and-adults-v7110c-224838516"
+        },
+        {
+          "title": "ManoMano：relaxdays 鳥巢鞦韆 Ø100（150 kg）",
+          "url": "https://www.manomano.co.uk/p/relaxdays-nest-swing-100-cm-round-kids-adults-max-load-150-kg-height-adjustable-outdoor-toy-multicoloured-71827018"
+        },
+        {
+          "title": "ManoMano：Outsunny 藤編蛋椅（150 kg、附安裝包）",
+          "url": "https://www.manomano.co.uk/p/outsunny-rattan-egg-chair-with-installation-kit-indoor-outdoor-swing-chair-87708357"
+        },
+        {
+          "title": "desertcart SG：Y-STOP 編織吊床椅",
+          "url": "https://www.desertcart.sg/products/388358778-y-stop-hammock-chair-macrame-swing-max-330-lbs-hanging.md"
+        },
+        {
+          "title": "Massdrop：Byer of Maine Panama 吊床椅",
+          "url": "https://www.massdrop.com/buy/byer-of-maine-panama-hammock-chair"
+        },
+        {
+          "title": "HipVan：Brianna Cocoon Swing Chair",
+          "url": "https://hipvan.com/products/brianna-cocoon-swing-chair"
+        },
+        {
+          "title": "Harvey Norman SG：Lifestyle Garden ANCONA Hanging Egg Swing Chair",
+          "url": "https://www.harveynorman.com.sg/furniture-en/outdoor-furniture/outdoor-lounges/lifestyle-garden-ancona-hanging-egg-swing-chair-black.html"
+        },
+        {
+          "title": "POLYWOOD：鞦韆怎麼吊（吊點距、前後淨空）",
+          "url": "https://www.polywood.com/blog/outdoor-living/diy/how-to-hang-a-porch-swing/"
+        },
+        {
+          "title": "吊椅安裝包例（304 底板、彈簧、轉環，約 227 kg）",
+          "url": "https://www.bobshop.co.za/stainless-steel-hammock-chair-hanging-kit-ceiling-mount-spring-swivel-snap-hook-accessories/p/615144578"
+        },
+        {
+          "title": "淘寶搜尋：实木秋千 带靠背扶手 可拆护栏",
+          "url": "https://s.taobao.com/search?q=%E5%AE%9E%E6%9C%A8%E7%A7%8B%E5%8D%83%20%E5%B8%A6%E9%9D%A0%E8%83%8C%E6%89%B6%E6%89%8B%20%E5%8F%AF%E6%8B%86%E6%8A%A4%E6%A0%8F%20%E6%88%90%E4%BA%BA%E5%84%BF%E7%AB%A5%E4%B8%A4%E7%94%A8"
+        },
+        {
+          "title": "淘寶搜尋：儿童高背秋千 三合一",
+          "url": "https://s.taobao.com/search?q=%E5%84%BF%E7%AB%A5%E9%AB%98%E8%83%8C%E7%A7%8B%E5%8D%83%20%E4%B8%89%E5%90%88%E4%B8%80%20%E5%AE%A4%E5%86%85"
+        },
+        {
+          "title": "淘寶搜尋：316 不鏽鋼鞦韆轉環",
+          "url": "https://s.taobao.com/search?q=316%E4%B8%8D%E9%94%88%E9%92%A2%20%E7%A7%8B%E5%8D%83%20%E8%BD%AC%E7%8E%AF%20%E6%89%BF%E9%87%8D"
+        },
+        {
+          "title": "Shopee SG 搜尋：indoor swing chair",
+          "url": "https://shopee.sg/search?keyword=indoor%20swing%20chair"
+        },
+        {
+          "title": "Lazada SG 搜尋：indoor swing",
+          "url": "https://www.lazada.sg/catalog/?q=indoor%20swing"
+        }
+      ]
     }
   },
   "links": {
@@ -24860,7 +24953,7 @@
         ],
         "notes": [
           "吊扇 44″（Ø112）帶燈 3000K、戶外防潮 IP44 以上；陽台正中往鞦韆側 13，鎖樓板，葉片離地約 240",
-          "葉尖離曬衣架 34、離鞦韆繩（擺到 ±100）約 68、離外緣與玻璃牆各 27",
+          "葉尖離曬衣架 34、離鞦韆繩（擺 ±15°）約 78、離外緣與玻璃牆各 27",
           "吊扇燈取代靠曬衣架那盞筒燈；鞦韆旁明裝 IP65 筒燈 F 型 3000K ×1 留原有燈位與開關；曬衣架自帶燈",
           "吊扇燈、吊扇分兩路"
         ],
