@@ -22244,15 +22244,6 @@
       "priority": 1
     },
     {
-      "id": "todo-bath2-basin",
-      "room": "bath2",
-      "text": "選臉盆尺寸與盆位，再定鏡櫃門寬",
-      "status": "open",
-      "kind": "reno",
-      "priority": 1,
-      "pin": true
-    },
-    {
       "id": "todo-living-balcony-swing-seat",
       "room": "living-balcony",
       "text": "選鞦韆座椅（兩側淨空 ≥ 50）",
