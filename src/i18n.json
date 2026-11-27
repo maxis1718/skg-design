@@ -1668,7 +1668,6 @@
   "天窗燈（現有）": "Skylight (existing)",
   "嵌燈 A 型 ×9，3500K：客餐廳 6（餐區牆邊 2、餐桌 2、電視兩側 2）、走道 2、鋼琴 1": "Type A downlights ×9, 3500K: living/dining 6 (dining wall 2, table 2, either side of the TV 2), walkway 2, piano 1",
   "每盞 skylight 的發光面朝右側實牆，光打在牆上（datasheet：靠牆裝、發光方向朝牆）；圖上實色窄邊＋箭頭＝發光側，虛線框＝現有": "Each skylight's illuminant side faces the solid right-hand wall and lights that wall (datasheet: mount close to the wall, illuminant direction against the wall); on the plan the solid narrow edge + arrows = illuminant side, dashed outline = existing",
-  "走廊亮度是否足夠（只有 skylight）": "Is the corridor bright enough (skylights only)?",
   "Wi-Fi 與網路": "Wi-Fi & network",
   "弱電箱 · 路由器與 PoE 交換器": "Data box · router and PoE switch",
   "UniFi Cloud Gateway Ultra + TP-Link TL-SG1005P + 光纖 ONT（已裝）": "UniFi Cloud Gateway Ultra + TP-Link TL-SG1005P + fibre ONT (installed)",

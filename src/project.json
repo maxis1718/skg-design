@@ -22399,15 +22399,6 @@
       "pin": true
     },
     {
-      "id": "todo-floor-corridor-brightness",
-      "room": "floor",
-      "text": "走廊亮度是否足夠（只有 skylight）",
-      "research": "lighting-design",
-      "status": "open",
-      "kind": "reno",
-      "priority": 2
-    },
-    {
       "id": "todo-kid-socket-window",
       "room": "kid",
       "text": "小孩房：進門最左前方、窗簾下（日後床頭角）加 1 個 13A 雙孔？→ 建議加：最近的現有插座在衣櫃旁約 2 m，雲朵燈、夜燈要長插",
