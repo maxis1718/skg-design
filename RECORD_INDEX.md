@@ -83,6 +83,7 @@ Source: `src/project.json`. Retrieve a single record with `python tools/records.
 | KID-02 | `kid-fan` | 風扇清淨機 Dyson TP09 | 22 × 22 |
 | GST-21 | `guest-purifier` | 清淨機 Electrolux UltimateHome 300 | 23.4 × 23.4 |
 | LBL-04 | `balcony-fan` | 陽台吊扇（帶燈） | 112 × 112 |
+| KID-03 | `kid-bed` | 言言的床 · Natty Bedside Bed | 167 × 90 |
 
 All actual W/D/H/brand/model fields are initially null. Keep source geometry and semantic dimension values synchronized. Full measurement provenance is under `reference/`.
 

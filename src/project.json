@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "SKG 空間規劃",
-    "revision": "R161",
+    "revision": "R162",
     "unit": "cm",
     "date": "2026-11-03"
   },
@@ -4006,6 +4006,37 @@
       "notes": "44\" (Ø112) placeholder, integrated 3000K light, outdoor/damp-rated IP44+. Balcony middle (x506.4) shifted 13 cm towards the swing to x510.0: 34 cm from the drying rack, ≈78 cm from the swing ropes at blade height (rope offset ≈8 at the ±15° swing cap, R161), 27 cm to the outer edge and to the glass wall. Fixed to the slab, blades ≈240 AFF (≥ 220). Light replaces the rack-side surface downlight.",
       "source_note": "",
       "uncertainty_cm": null
+    },
+    {
+      "id": "kid-bed",
+      "code": "KID-03",
+      "room_id": "kid",
+      "name": "言言的床 · Natty Bedside Bed",
+      "bounds_pt": [
+        273.36,
+        149.01,
+        320.7,
+        174.52
+      ],
+      "dimensions": {
+        "w": {
+          "cm": 167,
+          "status": "design"
+        },
+        "d": {
+          "cm": 90,
+          "status": "design"
+        }
+      },
+      "actual": {
+        "w": 167,
+        "d": 90,
+        "h": 68.5,
+        "brand": "Little Kingdom by Unisprings",
+        "model": "Natty Bedside Bed (AUS) Single"
+      },
+      "source_note": "167 × 90 × 68.5，床墊 160 × 79；靠左上角、長邊沿窗、離窗 15 留窗簾；可拆側護欄（虛線）",
+      "status": "user-design"
     }
   ],
   "source_dimensions": [
@@ -4983,6 +5014,10 @@
     {
       "id": "C169",
       "text": "客廳陽台加「鞦韆調研」：吊環間距 48、擺幅上限 ±15°，建議單人兩點吊實木鞦韆（帶靠背與可拆兒童護欄）"
+    },
+    {
+      "id": "C170",
+      "text": "小孩房試放 Natty 床（167 × 90）：左上角靠窗、橫放、離窗 15"
     }
   ],
   "measurement_policy": {
